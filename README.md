@@ -1,7 +1,7 @@
-<h1><center>Pruebas de penetracion</center></h1>
+																	<h1>Pruebas de penetracion</h1>
 
 
-<center>[![Pentesting.jpg](https://i.postimg.cc/j5knS9Sw/Pentesting.jpg)](https://postimg.cc/HcXkS65d)</center>
+									[![Pentesting.jpg](https://i.postimg.cc/j5knS9Sw/Pentesting.jpg)](https://postimg.cc/HcXkS65d)		
 
 	Reconocimiento 
 
