@@ -1,6 +1,8 @@
 Pruebas de penetracion 
 
 
+[![Pentesting.jpg](https://i.postimg.cc/j5knS9Sw/Pentesting.jpg)](https://postimg.cc/HcXkS65d)
+
 	Reconocimiento 
 
 		Es el primer paso en cualquier intervención de hacking. Consiste en recopilar información sobre los sistemas o redes objetivo para comprender a 
