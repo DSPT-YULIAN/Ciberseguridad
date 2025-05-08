@@ -3,74 +3,74 @@
 
 [![Pentesting.jpg](https://i.postimg.cc/j5knS9Sw/Pentesting.jpg)](https://postimg.cc/HcXkS65d)		
 
-	Reconocimiento 
+	<h1>Reconocimiento</h1> 
 
 		Es el primer paso en cualquier intervención de hacking. Consiste en recopilar información sobre los sistemas o redes objetivo para comprender a 
 		fondo el entorno que se pretende evaluar
 	
 	
-	Fase 1. Recomocimiento pasivo (No hay interacción directa con el objetivo)
+	<h1>Fase 1. Recomocimiento pasivo</h1> (No hay interacción directa con el objetivo)
 	
 		La principal forma de lograrlo es mediante Inteligencia de Fuentes Abiertas (OSINT) , que consiste en recopilar información sobre nuestro objetivo 
 		de fuentes públicas, incluido el sitio web público
 	
 	
-		Recopilacion de informacion: (OSINT)
+		<h2>Recopilacion de informacion: (OSINT)</h2>
 		
-				1. Personas
+				1. <h4>Personas</h4>
 				
 					• Empleados (Búsqueda en redes sociales o bases de datos públicas.)
 					• Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)
 					
-				2. Activos
+				2. <h4>Activos</h4>
 				
 					• Documentacion (Revisión de archivos públicos, repositorios, informes publicados.)
 					• Dominios (Identificación en registros WHOIS, búsquedas en Shodan y Osint)
 
-	Métodos			
+	<h2>Métodos</h2>			
 	
-		• Certificados SSL:  Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. 
+		•<h3>Certificados SSL:</h3>  Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. 
 		¡Un excelente lugar para encontrar nombres de dominio y subdominio!
 		
-		• Análisis del sitio web: Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. 
+		•<h3>Análisis del sitio web:</h3> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. 
 		Por ejemplo, revisar su página "Sobre nosotros" está bien. Adivinar rutas aleatorias en el sitio ( mytarget.com/admin ).
 		
-		• Consultas WHOIS: recuperación de información de registro de dominio.
+		•<h3>Consultas WHOIS:</h3> recuperación de información de registro de dominio.
 		
-		• Consultas DNS: recopilación de registros DNS, como registros MX, A y CNAME.
+		•<h3> Consultas DNS:</h3> recopilación de registros DNS, como registros MX, A y CNAME.
 		
-		• Motores de búsqueda: utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un 
+		•<h3>Motores de búsqueda:</h3> utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un 
 		reconocimiento activo para usted.
 		
-		• Informes disponibles públicamente: análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos 
+		•<h3> Informes disponibles públicamente:</h3> análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos 
 		disponibles públicamente.
 		
-		• Redes sociales: recopilación de información de plataformas de redes sociales.
+		•<h3> Redes sociales:</h3> recopilación de información de plataformas de redes sociales.
 
 
 
-	Herramientas:	
+	<h2>Herramientas:</h2>	
 	
 	
-				• Descubrimiento de dominios: crt.sh, dnsdumpster, subfinder, amass
+				•<h3>Descubrimiento de dominios:</h3> crt.sh, dnsdumpster, subfinder, amass
 			
-				• Analizadores de Techstack: Wappalyzer, BuiltWith, WhatRuns
+				•<h3>Analizadores de Techstack:</h3> Wappalyzer, BuiltWith, WhatRuns
 			
-				• Escáneres de Internet: Shodan, Censys, Netlas, Greynoise
+				•<h3>Escáneres de Internet:</h3> Shodan, Censys, Netlas, Greynoise
 			
-				• Archivos web: Wayback Machine, Common Crawl
+				•<h3>Archivos web:</h3> Wayback Machine, Common Crawl
 			
-				• Motores de búsqueda: Google, Bing, DuckDuckGo, Brave, Yandex, Baidu
+				•<h3>Motores de búsqueda:</h3> Google, Bing, DuckDuckGo, Brave, Yandex, Baidu
 		
 				
 ******************************************************************************************	
 
-	Enumeración
+	<h2>Enumeración<h2>
 
 		Es el proceso de extraer información más detallada sobre los activos que descubrimos durante nuestro reconocimiento inicial. 
 
 
-	Fase 2. Reconocimiento activo (Implica interacción directa con el objetivo)
+	<h1>Fase 2. Reconocimiento activo</h1> (Implica interacción directa con el objetivo)
 	
 	
 		Lo logramos pulsando (disparando paquetes) a nuestro objetivo, o pidiendo a otros que lo hagan por nosotros, y usando las respuestas para determinar 
@@ -187,7 +187,7 @@
 
 
 
-	Fase 3. Análisis de vulnerabilidades 
+	<h1>Fase 3. Análisis de vulnerabilidades</h1> 
 
 
 
@@ -210,7 +210,7 @@ Herramientas:
 
 
 
-	Fase 4 Explotacion 	
+	<h1>Fase 4 Explotacion</h1> 	
 	
 	
 	
