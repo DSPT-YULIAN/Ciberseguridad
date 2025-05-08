@@ -1,222 +1,68 @@
-<h1>Pruebas de penetracion</h1>
+![Aditya Vikram Singh Banner](https://raw.githubusercontent.com/AVS1508/AVS1508/master/assets/Aditya%20Vikram%20Singh%20Banner.jpg)
 
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Hey there! I'm Aditya</h2>
 
-[![Pentesting.jpg](https://i.postimg.cc/j5knS9Sw/Pentesting.jpg)](https://postimg.cc/HcXkS65d)		
+<!-- ## 👋 &nbsp;Hey there! I'm Aditya -->
 
-	<h1>Reconocimiento</h1> 
+### 👨🏻‍💻 &nbsp;About Me
 
-		Es el primer paso en cualquier intervención de hacking. Consiste en recopilar información sobre los sistemas o redes objetivo para comprender a 
-		fondo el entorno que se pretende evaluar
-	
-	
-	<h1>Fase 1. Recomocimiento pasivo</h1> (No hay interacción directa con el objetivo)
-	
-		La principal forma de lograrlo es mediante Inteligencia de Fuentes Abiertas (OSINT) , que consiste en recopilar información sobre nuestro objetivo 
-		de fuentes públicas, incluido el sitio web público
-	
-	
-		<h2>Recopilacion de informacion: (OSINT)</h2>
-		
-[![Imagen-de-Whats-App-2025-05-06-a-las-15-53-15-a8f77cad.jpg](https://i.postimg.cc/2yHRhJ54/Imagen-de-Whats-App-2025-05-06-a-las-15-53-15-a8f77cad.jpg)](https://postimg.cc/hQ75q2Tj)
-		
-				1. <h4>Personas</h4>
-				
-					• Empleados (Búsqueda en redes sociales o bases de datos públicas.)
-					• Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)
-					
-				2. <h4>Activos</h4>
-				
-					• Documentacion (Revisión de archivos públicos, repositorios, informes publicados.)
-					• Dominios (Identificación en registros WHOIS, búsquedas en Shodan y Osint)
+💡 &nbsp;I like to explore new technologies and develop software solutions and quick hacks.\
+🎓 &nbsp;I'm currently studying Computer Science and Mathematics at the University of Massachusetts Amherst.\
+🌱 &nbsp;I'm on track for learning more about Artificial Intelligence, Systems Design, and Cloud Architecture.\
+✍️ &nbsp;In my free time, I pursue Graphic Design and Blog Writing as hobbies/side hustles.\
+💬 &nbsp;Feel free to reach out to me for pro bono consulting and volunteering, or just for some interesting discussion.\
+✉️ &nbsp;You can shoot me an email at avsingh@umass.edu! I'll try to respond as soon as I can.\
+📄 &nbsp;Please have a look at my [Résumé](https://www.adityavsingh.com/resume.html) for more details about me. I'm open to feedback and suggestions!
 
-[![Imagen-de-Whats-App-2025-05-06-a-las-15-55-56-152b2bf8.jpg](https://i.postimg.cc/c4bGJV2W/Imagen-de-Whats-App-2025-05-06-a-las-15-55-56-152b2bf8.jpg)](https://postimg.cc/w7LGfb94)
-	<h2>Métodos</h2>			
-	
-		•<h3>Certificados SSL:</h3>  Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. 
-		¡Un excelente lugar para encontrar nombres de dominio y subdominio!
-		
-		•<h3>Análisis del sitio web:</h3> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. 
-		Por ejemplo, revisar su página "Sobre nosotros" está bien. Adivinar rutas aleatorias en el sitio ( mytarget.com/admin ).
-		
-		•<h3>Consultas WHOIS:</h3> recuperación de información de registro de dominio.
-		
-		•<h3> Consultas DNS:</h3> recopilación de registros DNS, como registros MX, A y CNAME.
-		
-		•<h3>Motores de búsqueda:</h3> utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un 
-		reconocimiento activo para usted.
-		
-		•<h3> Informes disponibles públicamente:</h3> análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos 
-		disponibles públicamente.
-		
-		•<h3> Redes sociales:</h3> recopilación de información de plataformas de redes sociales.
+<img alt="Night Coding" src="https://raw.githubusercontent.com/AVS1508/AVS1508/master/assets/Night-Coding.gif" align="right"/>
 
+### 🛠 &nbsp;Tech Stack
 
+![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)&nbsp;
+![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)&nbsp;
+![Java](https://img.shields.io/badge/-Java-05122A?style=flat&logo=Java&logoColor=FFA518)&nbsp;
+![C](https://img.shields.io/badge/-C-05122A?style=flat&logo=C&logoColor=A8B9CC)&nbsp;
+![C++](https://img.shields.io/badge/-C++-05122A?style=flat&logo=C%2B%2B&logoColor=00599C)&nbsp;
+![R (Statistics)](https://img.shields.io/badge/-R-05122A?style=flat&logo=R&logoColor=276DC3)\
+![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)&nbsp;
+![Node.js](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=node.js)&nbsp;
+![Django](https://img.shields.io/badge/-Django-05122A?style=flat&logo=django&logoColor=092E20)&nbsp;
+![Flask](https://img.shields.io/badge/-Flask-05122A?style=flat&logo=flask)&nbsp;
+![Bootstrap](https://img.shields.io/badge/-Bootstrap-05122A?style=flat&logo=bootstrap&logoColor=563D7C)\
+![HTML](https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5)&nbsp;
+![CSS](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6)&nbsp;
+![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
+![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp;
+![Markdown](https://img.shields.io/badge/-Markdown-05122A?style=flat&logo=markdown)\
+![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC)&nbsp;
+![RStudio](https://img.shields.io/badge/-RStudio-05122A?style=flat&logo=rstudio)&nbsp;
+![Eclipse](https://img.shields.io/badge/-Eclipse-05122A?style=flat&logo=eclipse-ide&logoColor=2C2255)\
+![Illustrator](https://img.shields.io/badge/-Illustrator-05122A?style=flat&logo=adobe-illustrator)&nbsp;
+![Photoshop](https://img.shields.io/badge/-Photoshop-05122A?style=flat&logo=adobe-photoshop)&nbsp;
+![InDesign](https://img.shields.io/badge/-InDesign-05122A?style=flat&logo=adobe-indesign)
 
-	<h2>Herramientas:</h2>	
-	
-	
-				•<h3>Descubrimiento de dominios:</h3> crt.sh, dnsdumpster, subfinder, amass
-			
-				•<h3>Analizadores de Techstack:</h3> Wappalyzer, BuiltWith, WhatRuns
-			
-				•<h3>Escáneres de Internet:</h3> Shodan, Censys, Netlas, Greynoise
-			
-				•<h3>Archivos web:</h3> Wayback Machine, Common Crawl
-			
-				•<h3>Motores de búsqueda:</h3> Google, Bing, DuckDuckGo, Brave, Yandex, Baidu
-				
-		
+### ⚙️ &nbsp;GitHub Analytics
 
+<p align="center">
+<a href="https://github.com/AVS1508">
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=AVS1508&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=AVS1508&layout=compact&langs_count=8&theme=algolia"/>
+</a>
+</p>
 
-[![Imagen-de-Whats-App-2025-05-02-a-las-07-06-01-8b1ea549.jpg](https://i.postimg.cc/G2Fb8qYQ/Imagen-de-Whats-App-2025-05-02-a-las-07-06-01-8b1ea549.jpg)](https://postimg.cc/FdHMwbTd)			
+### 🤝🏻 &nbsp;Connect with Me
 
+<p align="center">
+<a href="https://www.adityavsingh.com"><img src="https://img.shields.io/badge/-adityavsingh.com-3423A6?style=flat&logo=Google-Chrome&logoColor=white"/></a>
+<a href="https://linkedin.com/in/AVS1508"><img src="https://img.shields.io/badge/-Aditya%20Vikram%20Singh-0077B5?style=flat&logo=Linkedin&logoColor=white"/></a>
+<a href="mailto:avsingh@umass.edu"><img src="https://img.shields.io/badge/-avsingh@umass.edu-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
+<a href="https://instagram.com/adityavs_"><img src="https://img.shields.io/badge/-@adityavs__-E4405F?style=flat&logo=Instagram&logoColor=white"/></a>
+<a href="https://facebook.com/AVS1508"><img src="https://img.shields.io/badge/-@AVS1508-1877F2?style=flat&logo=Facebook&logoColor=white"/></a>
+<a href="https://www.pinterest.ca/AVS1508"><img src="https://img.shields.io/badge/-@AVS1508-BD081C?style=flat&logo=Pinterest&logoColor=white"/></a>
+<a href="https://www.behance.net/AVS1508"><img src="https://img.shields.io/badge/-@AVS1508-1769FF?style=flat&logo=Behance&logoColor=white"/></a>
+</p>
 
-	<h2>Enumeración<h2>
+-----
+Credits: [Aditya Vikram Singh](https://github.com/AVS1508)
 
-		Es el proceso de extraer información más detallada sobre los activos que descubrimos durante nuestro reconocimiento inicial. 
-
-
-	<h1>Fase 2. Reconocimiento activo</h1> (Implica interacción directa con el objetivo)
-	
-	
-		Lo logramos pulsando (disparando paquetes) a nuestro objetivo, o pidiendo a otros que lo hagan por nosotros, y usando las respuestas para determinar 
-		detalles específicos.
-	
-	
-
-		Escaneo de puertos
-
-
-				1. Activos
-				
-					• Infraestructura (Escaneo con herramientas como Nmap, Nessus, OpenVAS.)
-					• Dominios (Enumeración DNS con herramientas como DNSRecon o Sublist3r.)
-
-	Métodos
-
-
-		• Barrido de ping : envío de solicitudes de eco ICMP para identificar hosts activos.
-		
-		• Escaneo de puertos : uso de herramientas para escanear la infraestructura de destino para identificar puertos abiertos/sin filtrar y los servicios 
-		que se ejecutan en ellos.
-		
-		• Traceroute : Mapeo de la ruta que siguen los paquetes para llegar al destino. Esto nos ayuda a identificar otros sistemas y controles implementados, 
-		lo que nos permite comprender mejor la red.
-		
-		• Huella digital de servicio : identificación de las versiones específicas de los servicios que se ejecutan en puertos abiertos.
-		
-		• Captura de banners : captura de la respuesta inicial de los servicios para recopilar información sobre las versiones y configuraciones del software.
-
-
-
-	Tipos de enumeracion 
-	
-	
-		• Enumeración remota: lo hacemos a distancia. Este es el tipo de enumeración que sigue a nuestro reconocimiento inicial general. Escaneo con Nmap, la consulta de 
-		servicios con Netcat, o la obtención de información con SNMP.
-		
-		• Enumeración local: esto suele ocurrir después de la explotación, centrándose en los sistemas a los que hemos obtenido acceso y buscando datos confidenciales,
-		 privilegios adicionales o formas de acceder a otros sistemas. Herramientas como PowerShell, whoami, net user, y wmic permiten extraer información valiosa.
-		 
-		• Enumeración de hots: Es posible que haya encontrado sistemas específicos en el reconocimiento inicial que necesitan una exploración más detallada (remoto), 
-		o es posible que ya tenga acceso a una máquina y desee explorarla para ver qué información puede obtener y cómo podría ayudar a acceder a otros sistemas (local).
-		Herramientas como Fping, Masscan, y Angry IP Scanner son utilizadasSe enfoca en identificar dispositivos activos en una red. Técnicas como el ping sweep, el escaneo ARP
-		
-		
-		
-		• Enumeración de servicios: Tras identificar los servicios en ejecución (y sus posibles versiones) en un host, es hora de interactuar con ellos utilizando sus protocolos. 
-		Si no se encontró nada interesante ni vulnerable en las fases anteriores, aquí es donde profundizamos en los detalles y donde dedicaremos la mayor parte del tiempo.
-		
-		
-		
-		
-
-				• Enumeración NetBIOS : recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows.
-				
-				• Enumeración SNMP : Extracción de información de dispositivos que utilizan el Protocolo Simple de Administración de Red (SNMP). 
-				Permite extraer configuraciones de red, interfaces, direcciones IP y procesos en ejecución.
-				
-				• Enumeración LDAP : LDAP (Protocolo Ligero de Acceso a Directorios) se utiliza para acceder y mantener servicios de información de directorio 
-				distribuidos a través de una red IP. Permite extraer nombres de usuario, direcciones de correo electrónico, grupos, departamentos y servidores del directorio.
-				
-				• Transferencia de Zona DNS : La Transferencia de Zona DNS es un mecanismo que permite a los servidores DNS compartir información. Puede estar mal configurada, 
-				lo que permite a los atacantes recuperar archivos de zona DNS completos, que contienen información sobre el dominio y sus direcciones IP asociadas.
-				
-				• Enumeración NFS : NFS (Sistema de Archivos de Red) permite a los usuarios acceder a archivos en red como si estuvieran en sus discos locales. 
-				La enumeración puede revelar directorios y archivos compartidos.
-				
-				• Enumeración SMB : SMB (Bloque de Mensajes del Servidor) es un protocolo para compartir archivos, impresoras y otros recursos. La enumeración puede 
-				asignarte nombres de usuario, información de servicio, archivos, carpetas, impresoras: todo lo que vale la pena compartir.
-				
-				• Enumeración HTTP : HTTP (Protocolo de Transferencia de Hipertexto), utilizado para proporcionarnos ese excelente tráfico web. Además de la versión 
-				del servicio web, la enumeración de servidores web consiste en encontrar todas las rutas (archivos y directorios) que residen en ellos.
-
-
-
-	Herramientas:	
-	
-
-				• Escáneres de puertos: Nmap, Rustscan, Unicornscan, Masscan, Kiterunner
-				
-				• Descubrimiento de red: Netdiscover, SSB, SNMPwalk, ldapsearch, BloodHound
-				
-				• Descubrimiento de dominios: Dnsenum
-				
-				• Descubrimiento de contenido: Gobuster, Dirbuster, Feroxbuster
-				
-				• Pruebas de aplicaciones web: Burp Suite, OWASP ZAP, Nuclei
-				
-				• Análisis de vulnerabilidades: SQLmap, Nikto
-				
-				• Enumeración del sistema operativo: PEASS, enum4linux
-				
-				• Marcos de reconocimiento: Recon-ng, ReconFTW, rengine
-			
-					
-	
-	
-
-
-				1. enum4linux  // enum4linux -U [host]
-				
-						-U busca usuarios configurados
-						-S obtiene una lista de archivos compartidos
-						-G obtiene una lista de los grupos y sus miembros
-						-P enumera las políticas de contraseñas
-						-i obtiene una lista de impresoras
-						-a Combina las opciones -U, -S, -G, -P, -r, -o, -n, -i en un solo comando
-						
-						
-
-
-
-	<h1>Fase 3. Análisis de vulnerabilidades</h1> 
-
-
-Herramientas:
-
-
-		NMAP
-				1. Hacer ping al destino de ataque (host)
-				2. Identifique los puertos y servicios abiertos. nmap -sV (host)
-				3. Identificar el sistema operativo  sudo nmap -O (host) OS details
-				4. Utilice el guion de Nmap Vulners para buscar vulnerabilidades. nmap -sV --script vulners --script-args mincvss=4 (host)
-
-
-
-
-
-
-
-
-
-
-
-
-	<h1>Fase 4 Explotacion</h1> 	
-	
-	
-	
-	
-
-		2.Searchsploit
+Last Edited on: 11/12/2020
