@@ -3,8 +3,6 @@
   <img src="https://i.postimg.cc/j5knS9Sw/Pentesting.jpg" alt="Descripción de la imagen">
 </p>
 
-[![Pentesting.jpg](https://i.postimg.cc/j5knS9Sw/Pentesting.jpg)](https://postimg.cc/HcXkS65d)
-
 
 <!--horizontal divider(gradiant)-->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
@@ -18,21 +16,43 @@
 
 
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Hey there! I'm Aditya</h2>
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Reconocimiento</h2>
 
-<!-- ## 👋 &nbsp;Hey there! I'm Aditya -->
+<!-- ## Reconocimiento -->
 
-### 👨🏻‍💻 &nbsp;About Me
+<p> Es el primer paso en cualquier intervención de hacking. Consiste en recopilar información sobre los sistemas o redes objetivo para comprender a 
+	fondo el entorno que se pretende evaluar  </p>
 
-💡 &nbsp;I like to explore new technologies and develop software solutions and quick hacks.\
-🎓 &nbsp;I'm currently studying Computer Science and Mathematics at the University of Massachusetts Amherst.\
-🌱 &nbsp;I'm on track for learning more about Artificial Intelligence, Systems Design, and Cloud Architecture.\
-✍️ &nbsp;In my free time, I pursue Graphic Design and Blog Writing as hobbies/side hustles.\
-💬 &nbsp;Feel free to reach out to me for pro bono consulting and volunteering, or just for some interesting discussion.\
-✉️ &nbsp;You can shoot me an email at avsingh@umass.edu! I'll try to respond as soon as I can.\
-📄 &nbsp;Please have a look at my [Résumé](https://www.adityavsingh.com/resume.html) for more details about me. I'm open to feedback and suggestions!
 
-<img alt="Pentesting.jpg" src="https://i.postimg.cc/j5knS9Sw/Pentesting.jpg" align="center"/>
+### 👨🏻‍💻 &nbsp; Fase 1. Recomocimiento pasivo (No hay interacción directa con el objetivo)
+
+<p> La principal forma de lograrlo es mediante Inteligencia de Fuentes Abiertas (OSINT) , que consiste en recopilar información sobre nuestro objetivo 
+	de fuentes públicas, incluido el sitio web público  </p>
+
+
+###  Recopilacion de informacion: (OSINT)
+
+
+<p align="center">
+
+  <img src="(https://i.postimg.cc/2yHRhJ54/Imagen-de-Whats-App-2025-05-06-a-las-15-53-15-a8f77cad.jpg" alt="Descripción de la imagen">
+</p>
+
+</br>
+
+
+### 1. Personas
+
+		-  Empleados: (Búsqueda en redes sociales o bases de datos públicas.)
+		-  Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)
+
+
+### 2. Activos
+
+
+		-  Documentacion (Revisión de archivos públicos, repositorios, informes publicados.)
+		-  Dominios (Identificación en registros WHOIS, búsquedas en Shodan y Osint)
+
 
 ### 🛠 &nbsp;Tech Stack
 
