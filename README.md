@@ -65,33 +65,33 @@
 ### Metodos
 
 
-<p><h3>  • Certificados SSL:</h3> Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. 
+<p><b>  • Certificados SSL:</b> Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. 
 			¡Un excelente lugar para encontrar nombres de dominio y subdominio!</p>
 		
-<p><h3> • Análisis del sitio web:</h3> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. 
+<p><b> • Análisis del sitio web:</b> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. 
 			Por ejemplo, revisar su página "Sobre nosotros" está bien. Adivinar rutas aleatorias en el sitio ( mytarget.com/admin )</p>
 		
-<p><h3> • Consultas WHOIS:</h3> recuperación de información de registro de dominio.</p>
+<p><b> • Consultas WHOIS:</b> recuperación de información de registro de dominio.</p>
 	
-<p><h3> • Consultas DNS:</h3> recopilación de registros DNS, como registros MX, A y CNAME.</p>
+<p><b> • Consultas DNS:</b> recopilación de registros DNS, como registros MX, A y CNAME.</p>
 	
-<p><h3> • Motores de búsqueda:</h3> utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un 
+<p><b> • Motores de búsqueda:</b> utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un 
 			reconocimiento activo para usted.</p>
 			
-<p><h3>	• Informes disponibles públicamente:</h3> análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos 
-			disponibles públicamente.</p>
+<p><b> • Informes disponibles públicamente:</b> análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos 
+			disponibles públicamente.</b>
 	
-<p><h3> • Redes sociales:</h3> recopilación de información de plataformas de redes sociales.</p>
+<p><b> • Redes sociales:</h3> recopilación de información de plataformas de redes sociales.</p>
 
 
 ### 🛠 &nbsp;Herramientas
 
 
-<p> • <h3>Descubrimiento de dominios:</h3> crt.sh, dnsdumpster, subfinder, amass</p>
-<p> • <h3>Analizadores de Techstack:</h3> Wappalyzer, BuiltWith, WhatRuns)</p>
-<p> • <h3>Escáneres de Internet:</h3> Shodan, Censys, Netlas, Greynoise</p>
-<p> • <h3>Archivos web:</h3> Wayback Machine, Common Crawl</p>
-<p> • <h3>Motores de búsqueda:</h3> Google, Bing, DuckDuckGo, Brave, Yandex, Baidu</p>
+<p><b> • Descubrimiento de dominios:</b> crt.sh, dnsdumpster, subfinder, amass</p>
+<p><b> • Analizadores de Techstack:</b> Wappalyzer, BuiltWith, WhatRuns)</p>
+<p><b> • Escáneres de Internet:</b> Shodan, Censys, Netlas, Greynoise</p>
+<p><b> • Archivos web:</b> Wayback Machine, Common Crawl</p>
+<p><b> • Motores de búsqueda:</b> Google, Bing, DuckDuckGo, Brave, Yandex, Baidu</p>
 					
 <p align="center">
 
