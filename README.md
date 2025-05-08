@@ -66,7 +66,7 @@
 				•<h3>Motores de búsqueda:</h3> Google, Bing, DuckDuckGo, Brave, Yandex, Baidu
 				
 		
-*******************************************************************	
+
 
 [![Imagen-de-Whats-App-2025-05-02-a-las-07-06-01-8b1ea549.jpg](https://i.postimg.cc/G2Fb8qYQ/Imagen-de-Whats-App-2025-05-02-a-las-07-06-01-8b1ea549.jpg)](https://postimg.cc/FdHMwbTd)			
 
