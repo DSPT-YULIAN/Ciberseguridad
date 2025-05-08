@@ -10,7 +10,7 @@
 <!--h1 without bottom border-->
 <div id="user-content-toc">
   <ul align="center">
-    <summary><h1 style="display: inline-block">Penetration tests</h1></summary>
+    <summary><h1 style="display: inline-block">PENETRATION TESTS</h1></summary>
   </ul>
 </div>
 
@@ -46,16 +46,73 @@
 
 ### 1. Personas
 
-<p> • Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
-<p> • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
+	<p> • Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
+	<p> • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
 
 
 ### 2. Activos
 
-<p> • Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
-<p> • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
+	<p> • Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
+	<p> • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
 
-### 🛠 &nbsp;Tech Stack
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/c4bGJV2W/Recursos.jpg" alt="Descripción de la imagen">
+</p>
+
+
+### Metodos
+
+
+	<p><h3>  • Certificados SSL:</h3> Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. 
+			¡Un excelente lugar para encontrar nombres de dominio y subdominio!</p>
+		
+	<p><h3> • Análisis del sitio web:</h3> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. 
+			Por ejemplo, revisar su página "Sobre nosotros" está bien. Adivinar rutas aleatorias en el sitio ( mytarget.com/admin )</p>
+		
+	<p><h3> • Consultas WHOIS:</h3> recuperación de información de registro de dominio.</p>
+	
+	<p><h3> • Consultas DNS:</h3> recopilación de registros DNS, como registros MX, A y CNAME.</p>
+	
+	<p><h3> • Motores de búsqueda:</h3> utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un 
+			reconocimiento activo para usted.</p>
+			
+	<p><h3>	• Informes disponibles públicamente:</h3> análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos 
+			disponibles públicamente.</p>
+	
+	<p><h3> • Redes sociales:</h3> recopilación de información de plataformas de redes sociales.</p>
+
+
+### 🛠 &nbsp;Herramientas
+
+
+	<p> • <h3>Descubrimiento de dominios:</h3> crt.sh, dnsdumpster, subfinder, amass</p>
+	<p> • <h3>Analizadores de Techstack:</h3> Wappalyzer, BuiltWith, WhatRuns)</p>
+	<p> • <h3>Escáneres de Internet:</h3> Shodan, Censys, Netlas, Greynoise</p>
+	<p> • <h3>Archivos web:</h3> Wayback Machine, Common Crawl</p>
+	<p> • <h3>Motores de búsqueda:</h3> Google, Bing, DuckDuckGo, Brave, Yandex, Baidu</p>
+					
+<p align="center">
+
+  <img src="https://i.postimg.cc/kgsWrP5Q/reconocimiento-vs-enumeracion.jpg">
+</p>
+
+
+
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Enumeracion</h2>
+
+<!-- ## Enumeracion -->
+
+
+
+
+
+
+
+
+
+
 
 ![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)&nbsp;
 ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)&nbsp;
