@@ -1,4 +1,20 @@
-![Aditya Vikram Singh Banner](https://raw.githubusercontent.com/AVS1508/AVS1508/master/assets/Aditya%20Vikram%20Singh%20Banner.jpg)
+[![Pentesting.jpg](https://i.postimg.cc/j5knS9Sw/Pentesting.jpg)](https://postimg.cc/HcXkS65d)
+
+
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+<!--h1 without bottom border-->
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h1 style="display: inline-block">Penetration tests</h1></summary>
+  </ul>
+</div>
+
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Architects&pause=1000&color=F70707&width=435&lines=PENETRATION+TESTS" alt="Typing SVG" /></a>
+
+
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Hey there! I'm Aditya</h2>
 
