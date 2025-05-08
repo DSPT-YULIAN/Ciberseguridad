@@ -46,14 +46,14 @@
 
 ### 1. Personas
 
-	<p> • Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
-	<p> • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
+<p> • Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
+<p> • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
 
 
 ### 2. Activos
 
-	<p> • Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
-	<p> • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
+<p> • Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
+<p> • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
 
 
 <p align="center">
@@ -65,33 +65,33 @@
 ### Metodos
 
 
-	<p><h3>  • Certificados SSL:</h3> Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. 
+<p><h3>  • Certificados SSL:</h3> Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. 
 			¡Un excelente lugar para encontrar nombres de dominio y subdominio!</p>
 		
-	<p><h3> • Análisis del sitio web:</h3> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. 
+<p><h3> • Análisis del sitio web:</h3> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. 
 			Por ejemplo, revisar su página "Sobre nosotros" está bien. Adivinar rutas aleatorias en el sitio ( mytarget.com/admin )</p>
 		
-	<p><h3> • Consultas WHOIS:</h3> recuperación de información de registro de dominio.</p>
+<p><h3> • Consultas WHOIS:</h3> recuperación de información de registro de dominio.</p>
 	
-	<p><h3> • Consultas DNS:</h3> recopilación de registros DNS, como registros MX, A y CNAME.</p>
+<p><h3> • Consultas DNS:</h3> recopilación de registros DNS, como registros MX, A y CNAME.</p>
 	
-	<p><h3> • Motores de búsqueda:</h3> utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un 
+<p><h3> • Motores de búsqueda:</h3> utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un 
 			reconocimiento activo para usted.</p>
 			
-	<p><h3>	• Informes disponibles públicamente:</h3> análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos 
+<p><h3>	• Informes disponibles públicamente:</h3> análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos 
 			disponibles públicamente.</p>
 	
-	<p><h3> • Redes sociales:</h3> recopilación de información de plataformas de redes sociales.</p>
+<p><h3> • Redes sociales:</h3> recopilación de información de plataformas de redes sociales.</p>
 
 
 ### 🛠 &nbsp;Herramientas
 
 
-	<p> • <h3>Descubrimiento de dominios:</h3> crt.sh, dnsdumpster, subfinder, amass</p>
-	<p> • <h3>Analizadores de Techstack:</h3> Wappalyzer, BuiltWith, WhatRuns)</p>
-	<p> • <h3>Escáneres de Internet:</h3> Shodan, Censys, Netlas, Greynoise</p>
-	<p> • <h3>Archivos web:</h3> Wayback Machine, Common Crawl</p>
-	<p> • <h3>Motores de búsqueda:</h3> Google, Bing, DuckDuckGo, Brave, Yandex, Baidu</p>
+<p> • <h3>Descubrimiento de dominios:</h3> crt.sh, dnsdumpster, subfinder, amass</p>
+<p> • <h3>Analizadores de Techstack:</h3> Wappalyzer, BuiltWith, WhatRuns)</p>
+<p> • <h3>Escáneres de Internet:</h3> Shodan, Censys, Netlas, Greynoise</p>
+<p> • <h3>Archivos web:</h3> Wayback Machine, Common Crawl</p>
+<p> • <h3>Motores de búsqueda:</h3> Google, Bing, DuckDuckGo, Brave, Yandex, Baidu</p>
 					
 <p align="center">
 
