@@ -17,6 +17,8 @@
 	
 		<h2>Recopilacion de informacion: (OSINT)</h2>
 		
+[![Imagen-de-Whats-App-2025-05-06-a-las-15-53-15-a8f77cad.jpg](https://i.postimg.cc/2yHRhJ54/Imagen-de-Whats-App-2025-05-06-a-las-15-53-15-a8f77cad.jpg)](https://postimg.cc/hQ75q2Tj)
+		
 				1. <h4>Personas</h4>
 				
 					• Empleados (Búsqueda en redes sociales o bases de datos públicas.)
@@ -27,6 +29,7 @@
 					• Documentacion (Revisión de archivos públicos, repositorios, informes publicados.)
 					• Dominios (Identificación en registros WHOIS, búsquedas en Shodan y Osint)
 
+[![Imagen-de-Whats-App-2025-05-06-a-las-15-55-56-152b2bf8.jpg](https://i.postimg.cc/c4bGJV2W/Imagen-de-Whats-App-2025-05-06-a-las-15-55-56-152b2bf8.jpg)](https://postimg.cc/w7LGfb94)
 	<h2>Métodos</h2>			
 	
 		•<h3>Certificados SSL:</h3>  Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. 
