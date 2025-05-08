@@ -44,12 +44,10 @@
 
 </br>
 
-
-
 ### 1. Personas
 
-	 <p>• Empleados (Búsqueda en redes sociales o bases de datos públicas.)
-	    • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
+<p> Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
+<p> Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
 
 
 ### 2. Activos
