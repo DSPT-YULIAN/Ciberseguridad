@@ -46,16 +46,14 @@
 
 ### 1. Personas
 
-<p> Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
-<p> Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
+<p> • Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
+<p> • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
 
 
 ### 2. Activos
 
-
-	 <p>• Documentacion (Revisión de archivos públicos, repositorios, informes publicados.)
-	    • Dominios (Identificación en registros WHOIS, búsquedas en Shodan y Osint)</p>
-
+<p> • Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
+<p> • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
 
 ### 🛠 &nbsp;Tech Stack
 
