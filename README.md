@@ -181,17 +181,14 @@
 						-a Combina las opciones -U, -S, -G, -P, -r, -o, -n, -i en un solo comando
 						
 						
-						
-		
-
 
 
 
 	<h1>Fase 3. Análisis de vulnerabilidades</h1> 
 
 
-
 Herramientas:
+
 
 		NMAP
 				1. Hacer ping al destino de ataque (host)
@@ -217,29 +214,3 @@ Herramientas:
 	
 
 		2.Searchsploit
-
-
-
-
-
-
-
-
-
-
-
-
-root@kali:/usr/share/nmap/scripts# ls -1 snmp*
-snmp-brute.nse
-snmp-hh3c-logins.nse
-snmp-info.nse
-snmp-interfaces.nse
-snmp-ios-config.nse
-snmp-netstat.nse
-snmp-processes.nse
-snmp-sysdescr.nse
-snmp-win32-services.nse
-snmp-win32-shares.nse
-snmp-win32-software.nse
-snmp-win32-users.nse
-root@kali:/usr/share/nmap/scripts#
