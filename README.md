@@ -23,35 +23,40 @@
 <p> Es el primer paso en cualquier intervención de hacking. Consiste en recopilar información sobre los sistemas o redes objetivo para comprender a 
 	fondo el entorno que se pretende evaluar  </p>
 
+</br>
 
 ### 👨🏻‍💻 &nbsp; Fase 1. Recomocimiento pasivo (No hay interacción directa con el objetivo)
 
 <p> La principal forma de lograrlo es mediante Inteligencia de Fuentes Abiertas (OSINT) , que consiste en recopilar información sobre nuestro objetivo 
 	de fuentes públicas, incluido el sitio web público  </p>
 
+</br>
 
 ###  Recopilacion de informacion: (OSINT)
 
+</br>
 
 <p align="center">
 
-  <img src="(https://i.postimg.cc/2yHRhJ54/Imagen-de-Whats-App-2025-05-06-a-las-15-53-15-a8f77cad.jpg" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/2yHRhJ54/categorias-osint.jpg" alt="Descripción de la imagen">
 </p>
+
 
 </br>
 
 
+
 ### 1. Personas
 
-		-  Empleados: (Búsqueda en redes sociales o bases de datos públicas.)
-		-  Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)
+		<p> -  Empleados: (Búsqueda en redes sociales o bases de datos públicas.)</p>
+		<p> -  Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
 
 
 ### 2. Activos
 
 
-		-  Documentacion (Revisión de archivos públicos, repositorios, informes publicados.)
-		-  Dominios (Identificación en registros WHOIS, búsquedas en Shodan y Osint)
+		<p> -  Documentacion (Revisión de archivos públicos, repositorios, informes publicados.)</p>
+		<p> -  Dominios (Identificación en registros WHOIS, búsquedas en Shodan y Osint)</p>
 
 
 ### 🛠 &nbsp;Tech Stack
