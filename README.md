@@ -83,6 +83,7 @@
 	
 <p><b> • Redes sociales:</h3> recopilación de información de plataformas de redes sociales.</p>
 
+</br>
 
 ### 🛠 &nbsp;Herramientas
 
@@ -109,20 +110,20 @@
 
 <p> Es el proceso de extraer información más detallada sobre los activos que descubrimos durante nuestro reconocimiento inicial.</p>
 
-
+</br>
 ### 👨🏻‍💻 &nbsp; Fase 2. Recomocimiento activo (Implica interacción directa con el objetivo)
 
 
 <p> Lo logramos pulsando (disparando paquetes) a nuestro objetivo, o pidiendo a otros que lo hagan por nosotros, y usando las respuestas para determinar 
 	detalles específicos.  </p>
 
-
+</br>
 ### 1. Activos
 
 <p> • Infraestructura (Escaneo con herramientas como Nmap, Nessus, OpenVAS.)</p>
 <p> • Dominios (Enumeración DNS con herramientas como DNSRecon o Sublist3r.)</p>
 
-
+</br>
 ### Metodos
 
 
@@ -142,6 +143,7 @@
 <p><b> • Captura de banners:</b> captura de la respuesta inicial de los servicios para recopilar información sobre las versiones y configuraciones del software.</b>
 	
 
+</br>
 ### Tipos de enumeracion
 
 
@@ -158,7 +160,7 @@
 <p><b> • Enumeración de servicios:</b> LTras identificar los servicios en ejecución (y sus posibles versiones) en un host, es hora de interactuar con ellos utilizando sus protocolos. 
 		Si no se encontró nada interesante ni vulnerable en las fases anteriores, aquí es donde profundizamos en los detalles y donde dedicaremos la mayor parte del tiempo.</p>
 
-
+</br>
 <p>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp• Enumeración NetBIOS :recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows.</p>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp• Enumeración SNMP :Extracción de información de dispositivos que utilizan el Protocolo Simple de Administración de Red (SNMP). 
@@ -180,7 +182,7 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp• Enumeración HTTP :HTTP (Protocolo de Transferencia de Hipertexto), utilizado para proporcionarnos ese excelente tráfico web. Además de la versión 
 												del servicio web, la enumeración de servidores web consiste en encontrar todas las rutas (archivos y directorios) que residen en ellos.</p>
 
-
+</br>
 ### 🛠 &nbsp;Herramientas
 
 
@@ -194,7 +196,7 @@
 <p><b> • Enumeración del sistema operativo :</b> PEASS, enum4linux</p>
 <p><b> • Marcos de reconocimiento :</b> Marcos de reconocimiento: Recon-ng, ReconFTW, rengine</p>
 
-
+</br>
 ### 🛠 &nbsp;Herramientas recomendadas
 
 
