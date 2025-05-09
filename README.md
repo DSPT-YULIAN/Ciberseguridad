@@ -113,18 +113,20 @@
 </br>
 ### 👨🏻‍💻 &nbsp; Fase 2. Recomocimiento activo (Implica interacción directa con el objetivo)
 
-
+</br>
 <p> Lo logramos pulsando (disparando paquetes) a nuestro objetivo, o pidiendo a otros que lo hagan por nosotros, y usando las respuestas para determinar 
 	detalles específicos.  </p>
 
 </br>
 ### 1. Activos
+</br>
 
 <p> • Infraestructura (Escaneo con herramientas como Nmap, Nessus, OpenVAS.)</p>
 <p> • Dominios (Enumeración DNS con herramientas como DNSRecon o Sublist3r.)</p>
 
 </br>
 ### Metodos
+</br>
 
 
 <p><b>  • Barrido de ping :</b> envío de solicitudes de eco ICMP para identificar hosts activos.</p>
@@ -145,7 +147,7 @@
 
 </br>
 ### Tipos de enumeracion
-
+</br>
 
 <p><b> • Enumeración remota:</b> Lo hacemos a distancia. Este es el tipo de enumeración que sigue a nuestro reconocimiento inicial general. Escaneo con Nmap, la consulta de 
 		servicios con Netcat, o la obtención de información con SNMP.</p>
@@ -185,7 +187,7 @@
 </br>
 ### 🛠 &nbsp;Herramientas
 
-
+</br>
 
 <p><b> • Escáneres de puertos :</b> Nmap, Rustscan, Unicornscan, Masscan, Kiterunner</p>
 <p><b> • Descubrimiento de red :</b> Netdiscover, SSB, SNMPwalk, ldapsearch, BloodHound</p>
@@ -199,7 +201,7 @@
 </br>
 ### 🛠 &nbsp;Herramientas recomendadas
 
-
+</br>
 
 <p>&nbsp;&nbsp;<h3>1. enum4linux  // enum4linux -U [host]<h3></p>
 
