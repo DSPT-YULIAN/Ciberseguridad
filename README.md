@@ -99,18 +99,151 @@
 </p>
 
 
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Enumeracion</h2>
 
 <!-- ## Enumeracion -->
 
+<p> Es el proceso de extraer información más detallada sobre los activos que descubrimos durante nuestro reconocimiento inicial.</p>
+
+
+### 👨🏻‍💻 &nbsp; Fase 2. Recomocimiento activo (Implica interacción directa con el objetivo)
+
+
+<p> Lo logramos pulsando (disparando paquetes) a nuestro objetivo, o pidiendo a otros que lo hagan por nosotros, y usando las respuestas para determinar 
+	detalles específicos.  </p>
+
+
+### 1. Activos
+
+<p> • Infraestructura (Escaneo con herramientas como Nmap, Nessus, OpenVAS.)</p>
+<p> • Dominios (Enumeración DNS con herramientas como DNSRecon o Sublist3r.)</p>
+
+
+### Metodos
+
+
+<p><b>  • Barrido de ping :</b> envío de solicitudes de eco ICMP para identificar hosts activos.</p>
+		
+<p><b> • Escaneo de puertos:</b> uso de herramientas para escanear la infraestructura de destino para identificar puertos abiertos/sin filtrar y los servicios 
+		que se ejecutan en ellos.</p>
+		
+<p><b> • Tracerout:</b>Mapeo de la ruta que siguen los paquetes para llegar al destino. Esto nos ayuda a identificar otros sistemas y controles implementados, 
+		lo que nos permite comprender mejor la red.</p>
+	
+<p><b> • Huella digital de servicio:</b>identificación de las versiones específicas de los servicios que se ejecutan en puertos abiertos.</p>
+	
+<p><b> • Motores de búsqueda:</b> utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un 
+			reconocimiento activo para usted.</p>
+			
+<p><b> • Captura de banners:</b> captura de la respuesta inicial de los servicios para recopilar información sobre las versiones y configuraciones del software.</b>
+	
+
+### Tipos de enumeracion
+
+
+<p><b> • Enumeración remota:</b> Lo hacemos a distancia. Este es el tipo de enumeración que sigue a nuestro reconocimiento inicial general. Escaneo con Nmap, la consulta de 
+		servicios con Netcat, o la obtención de información con SNMP.</p>
+
+<p><b> • Enumeración local:</b> esto suele ocurrir después de la explotación, centrándose en los sistemas a los que hemos obtenido acceso y buscando datos confidenciales,
+		 privilegios adicionales o formas de acceder a otros sistemas. Herramientas como PowerShell, whoami, net user, y wmic permiten extraer información valiosa.</p>
+		
+<p><b> • Enumeración de hots:</b> Es posible que haya encontrado sistemas específicos en el reconocimiento inicial que necesitan una exploración más detallada (remoto), 
+		o es posible que ya tenga acceso a una máquina y desee explorarla para ver qué información puede obtener y cómo podría ayudar a acceder a otros sistemas (local).
+		Herramientas como Fping, Masscan, y Angry IP Scanner son utilizadasSe enfoca en identificar dispositivos activos en una red. Técnicas como el ping sweep, el escaneo ARP</p>
+		
+<p><b> • Enumeración de servicios:</b> LTras identificar los servicios en ejecución (y sus posibles versiones) en un host, es hora de interactuar con ellos utilizando sus protocolos. 
+		Si no se encontró nada interesante ni vulnerable en las fases anteriores, aquí es donde profundizamos en los detalles y donde dedicaremos la mayor parte del tiempo.</p>
+
+
+<p>&nbsp;&nbsp;• Enumeración NetBIOS :recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows.</p>
+
+<p>&nbsp;&nbsp;• Enumeración SNMP :Extracción de información de dispositivos que utilizan el Protocolo Simple de Administración de Red (SNMP). 
+				Permite extraer configuraciones de red, interfaces, direcciones IP y procesos en ejecución.</p>
+				
+<p>&nbsp;&nbsp;• Enumeración LDAP :LDAP (Protocolo Ligero de Acceso a Directorios) se utiliza para acceder y mantener servicios de información de directorio 
+				distribuidos a través de una red IP. Permite extraer nombres de usuario, direcciones de correo electrónico, grupos, departamentos y servidores del directorio.</p>
+				
+<p>&nbsp;&nbsp;• Transferencia de Zona DNS :La Transferencia de Zona DNS es un mecanismo que permite a los servidores DNS compartir información. Puede estar mal configurada, 
+				lo que permite a los atacantes recuperar archivos de zona DNS completos, que contienen información sobre el dominio y sus direcciones IP asociadas.</p>
+				
+<p>&nbsp;&nbsp;• Enumeración NFS :NFS (Sistema de Archivos de Red) permite a los usuarios acceder a archivos en red como si estuvieran en sus discos locales. 
+				La enumeración puede revelar directorios y archivos compartidos.</p>
+				
+<p>&nbsp;&nbsp;• Enumeración SMB :SMB (Bloque de Mensajes del Servidor) es un protocolo para compartir archivos, impresoras y otros recursos. La enumeración puede 
+				asignarte nombres de usuario, información de servicio, archivos, carpetas, impresoras: todo lo que vale la pena compartir.</p>
+				
+<p>&nbsp;&nbsp;• Enumeración HTTP :HTTP (Protocolo de Transferencia de Hipertexto), utilizado para proporcionarnos ese excelente tráfico web. Además de la versión 
+				del servicio web, la enumeración de servidores web consiste en encontrar todas las rutas (archivos y directorios) que residen en ellos.</p>
+
+
+### 🛠 &nbsp;Herramientas
 
 
 
+<p><b> • Escáneres de puertos :</b> Nmap, Rustscan, Unicornscan, Masscan, Kiterunner</p>
+<p><b> • Descubrimiento de red :</b> Netdiscover, SSB, SNMPwalk, ldapsearch, BloodHound</p>
+<p><b> • Descubrimiento de dominios:</b> Dnsenum</p>
+<p><b> • Descubrimiento de contenido :</b> Gobuster, Dirbuster, Feroxbuster</p>
+<p><b> • Pruebas de aplicaciones web :</b> Burp Suite, OWASP ZAP, Nuclei</p>
+<p><b> • Análisis de vulnerabilidades :</b> SQLmap, Nikto</p>
+<p><b> • Enumeración del sistema operativo :</b> PEASS, enum4linux</p>
+<p><b> • Marcos de reconocimiento :</b> Marcos de reconocimiento: Recon-ng, ReconFTW, rengine</p>
+
+
+### 🛠 &nbsp;Herramientas recomendadas
 
 
 
+<p>&nbsp;&nbsp;<h3>1. enum4linux  // enum4linux -U [host]<h3></p>
 
+<p>&nbsp;&nbsp;&nbsp;• -U busca usuarios configurados</p>
+<p>&nbsp;&nbsp;&nbsp;• -S obtiene una lista de archivos compartidos</p>
+<p>&nbsp;&nbsp;&nbsp;• -G obtiene una lista de los grupos y sus miembros</p>
+<p>&nbsp;&nbsp;&nbsp;• -P enumera las políticas de contraseñas</p>
+<p>&nbsp;&nbsp;&nbsp;• -i obtiene una lista de impresoras</p>
+<p>&nbsp;&nbsp;&nbsp;• -a Combina las opciones -U, -S, -G, -P, -r, -o, -n, -i en un solo comando</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/j5knS9Sw/Pentesting.jpg" alt="Descripción de la imagen">
+</p>
+
+
+### 👨🏻‍💻 &nbsp; Fase 3. Análisis de vulnerabilidades
+
+
+
+### 🛠 &nbsp;Herramientas recomendadas
+
+
+<p>&nbsp;&nbsp;<h3>NMAP<h3></p>
+
+
+<p>&nbsp;&nbsp;&nbsp;1. Hacer ping al destino de ataque (host)</p>
+<p>&nbsp;&nbsp;&nbsp;2. Identifique los puertos y servicios abiertos. nmap -sV (host)</p>
+<p>&nbsp;&nbsp;&nbsp;3. Identificar el sistema operativo  sudo nmap -O (host) OS details</p>
+<p>&nbsp;&nbsp;&nbsp;4. Utilice el guion de Nmap Vulners para buscar vulnerabilidades. nmap -sV --script vulners --script-args mincvss=4 (host)</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/j5knS9Sw/Pentesting.jpg" alt="Descripción de la imagen">
+</p>
+
+
+
+### 👨🏻‍💻 &nbsp; Fase 4. Explotacion
+
+
+### 🛠 &nbsp;Herramientas recomendadas
+
+
+<p>&nbsp;&nbsp;<h3>Searchsploit<h3></p>
 
 
 
