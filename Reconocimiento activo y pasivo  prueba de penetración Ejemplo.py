@@ -1,69 +1,4 @@
 
-
-Escenario de prueba de penetración 
-Tomemos un ejemplo para demostrar cómo podríamos integrar las herramientas mencionadas anteriormente. En esta evaluación simulada, nos centramos en Crybaby LLC. 
-Han indicado que todos sus activos están dentro del alcance y nos han proporcionado un nombre de dominio para comenzar: crybaby.it .
-
-
-
-Motores de búsqueda
-Herramienta: Google
-Resultado: Buscamos nuestro objetivo en Google y encontramos un subdominio, mail.crybaby.it. Probablemente sea un servidor de correo, pero aún no es un hallazgo importante. 
-Sigamos adelante.
-
-Descubrimiento de dominio
-Herramienta: dnsenum
-Resultado: Usando dnsenum, descubrimos mail.crybaby.it y un entorno de desarrollo, dev.crybaby.it. Este segundo parece interesante.
-
-Escaneo de puertos
-Herramienta: Nmap
-Resultado: No hay puertos abiertos en dev.crybaby.it, pero sí varios en mail.crybaby.it: puertos 80 (HTTP), 443 (HTTPS), 25 (SMTP) y 161/162 (SNMP). 
-Inesperadamente, hay un servidor web y un servicio SNMP. Analicemos SNMP.
-
-Descubrimiento de red
-Herramienta: SNMP Walk
-Resultado: Tenemos detalles sobre los dispositivos de red y sus configuraciones, incluyendo la cadena de comunidad (similar a una contraseña) utilizada para las consultas. 
-Esto podría ser útil más adelante. Ahora, exploremos el servicio web.
-
-Análisis de Techstack
-Herramienta: Wappalyzer
-Resultado: Encontramos una página de inicio de sesión en dev.crybaby.it. Wappalyzer muestra que ejecuta Apache, PHP, MySQL y algunos frameworks JavaScript populares, 
-pero no presenta vulnerabilidades conocidas. Es hora de investigar más a fondo.
-
-Pruebas de aplicaciones web
-Herramienta: Burp Suite
-Resultado: Con Burp Suite, revisamos las llamadas realizadas por el sitio web e identificamos posibles puntos de inyección SQL. ¡Genial! Intentemos aprovecharlos.
-
-Análisis de vulnerabilidad
-Herramienta: SQLmap
-Resultado: ¡Ejecutamos SQLmap y pudimos detectar y explotar algunas inyecciones SQL! ¡Eso va a aparecer en nuestro informe! ¡Genial! Lamentablemente, 
-no hemos encontrado ninguna cuenta de usuario que nos permita superar ese inicio de sesión. Repasemos el análisis y veamos si alguno de esos escáneres de internet ha identificado vulnerabilidades que nos permitan ahorrar tiempo en ese aspecto.
-
-
-Escaneo de Internet
-Herramienta: Shodan
-Resultado: ¡Claro que sí, Shodan! Al parecer, este servidor usa credenciales predeterminadas. O al menos, así era hace una semana cuando Shodan realizó el análisis. 
-Resulta que no funcionan. ¡Qué lástima! Pero, si prefieren usar credenciales predeterminadas, quizá haya otros sitios que las tengan...
-
-Archivos web
-Herramienta: Wayback Machine
-Resultado: Wayback Machine muestra una captura de pantalla de dev.crybaby.it/adm. Resulta que esta página sigue activa y las credenciales predeterminadas funcionan. 
-Ahora tenemos acceso a un área autenticada de la aplicación web, pero no al servidor.
-
-Descubrimiento de contenido
-Herramienta: Feroxbuster
-Resultado: ¡Feroxbuster nos encuentra una sección para subir archivos! Subir un archivo PHP nos da acceso a una consola remota, pero con privilegios limitados. 
-Veamos qué podemos hacer.
-
-Enumeración de hosts
-Herramienta: LinPEAS
-Resultado: LinPEAS proporciona un informe con código de colores de posibles vectores de escalada de privilegios. Nuestro usuario tiene privilegios SUID para /bin/cp, 
-lo que nos permite agregar un nuevo usuario con privilegios y obtener acceso completo.
-
-
-
-********************************************************************************************************
-
 Parte 1: Sitios web objetivo
 
 1. Navegar por el sitio WEB "rekt.systems"
@@ -135,6 +70,76 @@ Parte 5: Plataformas sociales
 
 	• Linkedln
 	• site:linkedin.com intext:rektsystems
+
+
+**************************************************************************************************************************
+
+
+Escenario de prueba de penetración 
+Tomemos un ejemplo para demostrar cómo podríamos integrar las herramientas mencionadas anteriormente. En esta evaluación simulada, nos centramos en Crybaby LLC. 
+Han indicado que todos sus activos están dentro del alcance y nos han proporcionado un nombre de dominio para comenzar: crybaby.it .
+
+
+
+Motores de búsqueda
+Herramienta: Google
+Resultado: Buscamos nuestro objetivo en Google y encontramos un subdominio, mail.crybaby.it. Probablemente sea un servidor de correo, pero aún no es un hallazgo importante. 
+Sigamos adelante.
+
+Descubrimiento de dominio
+Herramienta: dnsenum
+Resultado: Usando dnsenum, descubrimos mail.crybaby.it y un entorno de desarrollo, dev.crybaby.it. Este segundo parece interesante.
+
+Escaneo de puertos
+Herramienta: Nmap
+Resultado: No hay puertos abiertos en dev.crybaby.it, pero sí varios en mail.crybaby.it: puertos 80 (HTTP), 443 (HTTPS), 25 (SMTP) y 161/162 (SNMP). 
+Inesperadamente, hay un servidor web y un servicio SNMP. Analicemos SNMP.
+
+Descubrimiento de red
+Herramienta: SNMP Walk
+Resultado: Tenemos detalles sobre los dispositivos de red y sus configuraciones, incluyendo la cadena de comunidad (similar a una contraseña) utilizada para las consultas. 
+Esto podría ser útil más adelante. Ahora, exploremos el servicio web.
+
+Análisis de Techstack
+Herramienta: Wappalyzer
+Resultado: Encontramos una página de inicio de sesión en dev.crybaby.it. Wappalyzer muestra que ejecuta Apache, PHP, MySQL y algunos frameworks JavaScript populares, 
+pero no presenta vulnerabilidades conocidas. Es hora de investigar más a fondo.
+
+Pruebas de aplicaciones web
+Herramienta: Burp Suite
+Resultado: Con Burp Suite, revisamos las llamadas realizadas por el sitio web e identificamos posibles puntos de inyección SQL. ¡Genial! Intentemos aprovecharlos.
+
+Análisis de vulnerabilidad
+Herramienta: SQLmap
+Resultado: ¡Ejecutamos SQLmap y pudimos detectar y explotar algunas inyecciones SQL! ¡Eso va a aparecer en nuestro informe! ¡Genial! Lamentablemente, 
+no hemos encontrado ninguna cuenta de usuario que nos permita superar ese inicio de sesión. Repasemos el análisis y veamos si alguno de esos escáneres de internet ha identificado vulnerabilidades que nos permitan ahorrar tiempo en ese aspecto.
+
+
+Escaneo de Internet
+Herramienta: Shodan
+Resultado: ¡Claro que sí, Shodan! Al parecer, este servidor usa credenciales predeterminadas. O al menos, así era hace una semana cuando Shodan realizó el análisis. 
+Resulta que no funcionan. ¡Qué lástima! Pero, si prefieren usar credenciales predeterminadas, quizá haya otros sitios que las tengan...
+
+Archivos web
+Herramienta: Wayback Machine
+Resultado: Wayback Machine muestra una captura de pantalla de dev.crybaby.it/adm. Resulta que esta página sigue activa y las credenciales predeterminadas funcionan. 
+Ahora tenemos acceso a un área autenticada de la aplicación web, pero no al servidor.
+
+Descubrimiento de contenido
+Herramienta: Feroxbuster
+Resultado: ¡Feroxbuster nos encuentra una sección para subir archivos! Subir un archivo PHP nos da acceso a una consola remota, pero con privilegios limitados. 
+Veamos qué podemos hacer.
+
+Enumeración de hosts
+Herramienta: LinPEAS
+Resultado: LinPEAS proporciona un informe con código de colores de posibles vectores de escalada de privilegios. Nuestro usuario tiene privilegios SUID para /bin/cp, 
+lo que nos permite agregar un nuevo usuario con privilegios y obtener acceso completo.
+
+
+
+********************************************************************************************************
+
+
 	
 	
 	

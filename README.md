@@ -238,7 +238,136 @@
 
 
 
-### 👨🏻‍💻 &nbsp; Fase 4. Explotacion
+### 👨🏻‍💻 &nbsp; Fase 3. Explotacion
+
+
+<p>&nbsp;&nbsp;<h3>Ataques de red pasivos vs. activos<h3></p>
+
+
+
+### 👨🏻‍💻 &nbsp; Ataques pasivos
+
+
+<p> implican la monitorización o interceptación del tráfico de red sin alterar ni interferir con los datos transmitidos. El objetivo principal es recopilar información sobre la red o sus usuarios </p>
+
+<p><b>&nbsp;&nbsp;&nbsp; • Network Sniffing</b> Captura y análisis de paquetes de datos a medida que viajan a través de la red para extraer información útil. </p>
+<p><b>&nbsp;&nbsp;&nbsp; • Análisis de tráfico</b> Observación de patrones y volúmenes de tráfico para inferir información sensible, como los hábitos de comunicación de 
+los usuarios o la estructura de la red.</p>
+
+<p> En los ataques pasivos, el atacante pasa desapercibido, ya que no modifica ni interrumpe el tráfico de la red, como si se espiara una conversación. 
+"Cuanto más silencioso te vuelves, más puedes oír." - Ram Dass</p>
+
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+<p><b> • Above :</b> Identifica los protocolos en uso en una red y cualquier vulnerabilidad obvia.</p>
+<p><b> • Pcredz :</b> Identifica y extrae información confidencial del tráfico de red.</p>
+<p><b> • Wireshark :</b> La herramienta de rastreo y análisis de paquetes. Si no la conoces, familiarízate con ella</p>
+<p><b> • tcpdump :</b> Herramienta de captura de paquetes de línea de comandos. </p>
+<p><b> • Kismet  :</b> Rastreador pasivo para varias redes inalámbricas (Wi-Fi, Bluetooth, etc.).</p>
+
+
+
+### 👨🏻‍💻 &nbsp; Ataques de red activos
+
+
+<p>&nbsp;&nbsp;<h2>Tipos de ataque<h2></p>
+
+<p> Implican la modificación, interrupción o manipulación deliberada del tráfico o las comunicaciones de la red para lograr objetivos maliciosos. </p>
+
+<p><b>&nbsp;&nbsp;&nbsp;• Ataques Man-in-the-Middle (MitM)</b> : Interceptar y alterar la comunicación entre dos partes sin su conocimiento. </p>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2><b>Técnicas de intermediario (MiTM)<h2></b></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Ataque gemelo malvado :</b> configuración de un punto de acceso Wi-Fi falso para interceptar el tráfico.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Envenenamiento de caché ARP :</b> envío de mensajes ARP falsos para vincular su dirección MAC con la dirección IP de otro host.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Envenenamiento LLMNR/NBT-NS :</b> explotación de protocolos de red para interceptar y retransmitir tráfico de autenticación.</p>
+
+<p> Una vez que nos hemos posicionado en el medio, podemos empezar a rastrear el tráfico en busca de información confidencial. Si el tráfico está cifrado, podemos emplear técnicas como: </p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Debilitar el cifrado :</b> comprometer las capacidades de cifrado de un dispositivo de red</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Ataque de degradación: </b> aprovecha la compatibilidad con versiones anteriores de un sistema para obligarlo a utilizar una versión menos segura.</p>
+
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+<p><b> • SSLstrip+ :</b> Realizar ataques de degradación de HTTPS a HTTP.</p>
+<p><b> • Bettercap :</b> Marco de reconocimiento y explotación de redes tanto cableadas como inalámbricas</p>
+<p><b> • Respondedor :</b> Envenenar consultas LLMNR, NBT-NS y mDNS</p>
+<p><b> • Arpspoof :</b> Ataques de envenenamiento de caché ARP.</p>
+<p><b> • Aircrack-ng :</b> Conjunto de herramientas para atacar redes Wi-Fi.</p>
+<p><b> • Airgeddon :</b> Framework para atacar redes WiFi. Incluye ataques de gemelo malvado.</p>
+<p><b> • Fluxion :</b> Ataques MiTM contra redes Wi-Fi.</p>
+
+
+<p><b>&nbsp;&nbsp;&nbsp;• Ataques de denegación de servicio (DoS)</b> : Saturar una red o un servicio con tráfico excesivo para que no esté disponible para usuarios legítimos.</p>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2><b>Ataques de denegación de servicio (DoS)<h2></b></p>
+
+<p> La mayoría de los ataques DoS implican inundación, lo que significa saturar al objetivo con solicitudes. </p>
+
+
+### 👨🏻‍💻 &nbsp;Tipos
+
+<p>&nbsp;&nbsp;&nbsp;<h3><b>Basado en volumen:<h3></b></p>
+
+<p> Saturar el ancho de banda del sitio, medido en bps (bits por segundo), atacando las capas inferiores del modelo TCP/IP. </p>
+
+<p><b> • Inundaciones ICMP :</b> envío de muchos pings.</p>
+<p><b> • Inundaciones UDP :</b> envío de una gran cantidad de datos UDP.</p>
+
+
+<p>&nbsp;&nbsp;&nbsp;<h3><b>Basado en protocolo:<h3></b></p>
+
+<p> Consumir recursos del servidor o del nodo de red explotando las asignaciones del protocolo </p>
+
+
+<p><b> • Inundaciones SYN :</b> envío de muchos paquetes SYN para dejar conexiones TCP medio abiertas y, por lo tanto, exceder los recursos del servidor, impidiendo conexiones de usuarios legítimos.</p>
+<p><b> • Ataques de paquetes fragmentados : :</b>  envío de muchos paquetes fragmentados innecesariamente para llenar la cola/ventana TCP del objetivo.</p>
+<p><b> • Ataques Smurf :</b> envío de solicitudes ICMP a la dirección de transmisión, lo que hace que todas las máquinas en el dominio de transmisión respondan al objetivo.</p>
+
+<p>&nbsp;&nbsp;&nbsp;<h3><b>Basado en solicitudes:<h3></b></p>
+
+<p> Se centra en los servicios y aplicaciones de las capas superiores del modelo TCP/IP. Se mide en rps (solicitudes por segundo). </p>
+
+<p><b> • Ataques lentos y de bajo rendimientoP :</b> Ancho de banda bajo, solicitudes lentas para saturar todos los subprocesos de la aplicación.</p>
+<p><b> • Inundaciones GET/POST  :</b> Solicitudes constantes de contenido que consumen recursos de la aplicación.</p>
+
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+<p><b> • Hping3 :</b> una herramienta para crear y enviar paquetes TCP/UDP personalizados y ver respuestas.</p>
+<p><b> • DHCPig :</b> agota todas las direcciones en el grupo DHCP.</p>
+<p><b> • SlowLoris :</b> realiza ataques DoS lentos y de baja intensidad.</p>
+<p><b> • Yersinia  :</b> Un marco de ataque de capa 2.</p>
+
+
+<p><b>&nbsp;&nbsp;&nbsp;• Secuestro de sesión</b>: Tomar el control de una sesión activa entre dos partes para obtener acceso no autorizado a información o servicios.</p>
+<p><b>&nbsp;&nbsp;&nbsp;• Ataques de repetición</b>: Captura y retransmisión de datos válidos para crear efectos no autorizados u obtener acceso a los sistemas.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### 🛠 &nbsp;Herramientas recomendadas
