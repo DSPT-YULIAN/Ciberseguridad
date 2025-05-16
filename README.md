@@ -243,8 +243,16 @@
 
 ### 🛠 &nbsp;Herramientas recomendadas
 
+### 🛠 &nbsp;Vulnerabilidades
+
 
 <p>&nbsp;&nbsp;<h3>Searchsploit<h3></p>
+
+
+### 🛠 &nbsp;Ingenieria social 
+
+<p>&nbsp;&nbsp;<h3>Setoolkit<h3></p>
+<p>&nbsp;&nbsp;<h3>BeEF<h3></p>
 
 
 
