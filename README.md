@@ -125,10 +125,11 @@
 
 </br>
 ### Metodos
+
 </br>
 
 
-<p><b>  • Barrido de ping :</b> envío de solicitudes de eco ICMP para identificar hosts activos.</p>
+<p><b>  • Barrido de ping :</b></p><p>envío de solicitudes de eco ICMP para identificar hosts activos.</p>
 		
 <p><b> • Escaneo de puertos:</b> uso de herramientas para escanear la infraestructura de destino para identificar puertos abiertos/sin filtrar y los servicios 
 		que se ejecutan en ellos.</p>
