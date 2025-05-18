@@ -164,7 +164,7 @@
 <p><b> • Enumeración de servicios:</b> LTras identificar los servicios en ejecución (y sus posibles versiones) en un host, es hora de interactuar con ellos utilizando sus protocolos. 
 		Si no se encontró nada interesante ni vulnerable en las fases anteriores, aquí es donde profundizamos en los detalles y donde dedicaremos la mayor parte del tiempo.</p>
 
-</br>
+</br>   📌
 
 <p> 	» Enumeración NetBIOS :recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows.</p>
 
@@ -202,6 +202,7 @@
 <p><b> • Marcos de reconocimiento :</b> Marcos de reconocimiento: Recon-ng, ReconFTW, rengine</p>
 
 </br>
+
 ### 🛠 &nbsp;Herramientas recomendadas
 
 </br>
@@ -220,7 +221,7 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 
-### 👨🏻‍💻 &nbsp; Fase 3. Análisis de vulnerabilidades
+### 👨🏻‍💻 &nbsp; Fase 2. Análisis de vulnerabilidades
 
 
 
@@ -245,7 +246,6 @@
 
 
 <p>&nbsp;&nbsp;<h3>Ataques de red pasivos vs. activos<h3></p>
-
 
 
 ### 👨🏻‍💻 &nbsp; Ataques pasivos
@@ -275,25 +275,28 @@ los usuarios o la estructura de la red.</p>
 
 ### 👨🏻‍💻 &nbsp; Ataques de red activos
 
+</br>
 
-<p>&nbsp;&nbsp;<h2>Tipos de ataque<h2></p>
+### &nbsp; Tipos de ataque
+
+</br>
 
 <p> Implican la modificación, interrupción o manipulación deliberada del tráfico o las comunicaciones de la red para lograr objetivos maliciosos. </p>
 
 <p><b>&nbsp;&nbsp;&nbsp;• Ataques Man-in-the-Middle (MitM)</b> : Interceptar y alterar la comunicación entre dos partes sin su conocimiento. </p>
 
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2><b>Técnicas de intermediario (MiTM)<h2></b></p>
+### &nbsp; 1. Técnicas de intermediario (MiTM)
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Ataque gemelo malvado :</b> configuración de un punto de acceso Wi-Fi falso para interceptar el tráfico.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Envenenamiento de caché ARP :</b> envío de mensajes ARP falsos para vincular su dirección MAC con la dirección IP de otro host.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Envenenamiento LLMNR/NBT-NS :</b> explotación de protocolos de red para interceptar y retransmitir tráfico de autenticación.</p>
+<p><b>• Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
+<p><b>• Ataque gemelo malvado :</b> configuración de un punto de acceso Wi-Fi falso para interceptar el tráfico.</p>
+<p><b>• Envenenamiento de caché ARP :</b> envío de mensajes ARP falsos para vincular su dirección MAC con la dirección IP de otro host.</p>
+<p><b>• Envenenamiento LLMNR/NBT-NS :</b> explotación de protocolos de red para interceptar y retransmitir tráfico de autenticación.</p>
 
 <p> Una vez que nos hemos posicionado en el medio, podemos empezar a rastrear el tráfico en busca de información confidencial. Si el tráfico está cifrado, podemos emplear técnicas como: </p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Debilitar el cifrado :</b> comprometer las capacidades de cifrado de un dispositivo de red</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Ataque de degradación: </b> aprovecha la compatibilidad con versiones anteriores de un sistema para obligarlo a utilizar una versión menos segura.</p>
+<p><b>• Debilitar el cifrado :</b> comprometer las capacidades de cifrado de un dispositivo de red</p>
+<p><b>• Ataque de degradación: </b> aprovecha la compatibilidad con versiones anteriores de un sistema para obligarlo a utilizar una versión menos segura.</p>
 
 
 ### 🛠 &nbsp;Herramientas
@@ -309,17 +312,17 @@ los usuarios o la estructura de la red.</p>
 <p><b> • Fluxion :</b> Ataques MiTM contra redes Wi-Fi.</p>
 
 
-<p><b>&nbsp;&nbsp;&nbsp;• Ataques de denegación de servicio (DoS)</b> : Saturar una red o un servicio con tráfico excesivo para que no esté disponible para usuarios legítimos.</p>
+### &nbsp; 2. Ataques de denegación de servicio (DoS)
 
+</b> 
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2><b>Ataques de denegación de servicio (DoS)<h2></b></p>
-
-<p> La mayoría de los ataques DoS implican inundación, lo que significa saturar al objetivo con solicitudes. </p>
+<p>Saturar una red o un servicio con tráfico excesivo para que no esté disponible para usuarios legítimos.La mayoría de los ataques DoS implican inundación, 
+lo que significa saturar al objetivo con solicitudes. </p>
 
 
 ### 👨🏻‍💻 &nbsp;Tipos
 
-<p>&nbsp;&nbsp;&nbsp;<h3><b>Basado en volumen:<h3></b></p>
+###  Basado en volumen
 
 <p> Saturar el ancho de banda del sitio, medido en bps (bits por segundo), atacando las capas inferiores del modelo TCP/IP. </p>
 
@@ -327,7 +330,7 @@ los usuarios o la estructura de la red.</p>
 <p><b> • Inundaciones UDP :</b> envío de una gran cantidad de datos UDP.</p>
 
 
-<p>&nbsp;&nbsp;&nbsp;<h3><b>Basado en protocolo:<h3></b></p>
+###  Basado en protocolo
 
 <p> Consumir recursos del servidor o del nodo de red explotando las asignaciones del protocolo </p>
 
@@ -336,7 +339,7 @@ los usuarios o la estructura de la red.</p>
 <p><b> • Ataques de paquetes fragmentados : :</b>  envío de muchos paquetes fragmentados innecesariamente para llenar la cola/ventana TCP del objetivo.</p>
 <p><b> • Ataques Smurf :</b> envío de solicitudes ICMP a la dirección de transmisión, lo que hace que todas las máquinas en el dominio de transmisión respondan al objetivo.</p>
 
-<p>&nbsp;&nbsp;&nbsp;<h3><b>Basado en solicitudes:<h3></b></p>
+###  Basado en solicitudes
 
 <p> Se centra en los servicios y aplicaciones de las capas superiores del modelo TCP/IP. Se mide en rps (solicitudes por segundo). </p>
 
