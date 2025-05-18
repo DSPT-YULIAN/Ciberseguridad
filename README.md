@@ -115,7 +115,6 @@
 <p> Lo logramos pulsando (disparando paquetes) a nuestro objetivo, o pidiendo a otros que lo hagan por nosotros, y usando las respuestas para determinar 
 	detalles específicos.  </p>
 
-</br>
 
 ### 1. Activos
 </br>
@@ -124,12 +123,13 @@
 <p> • Dominios (Enumeración DNS con herramientas como DNSRecon o Sublist3r.)</p>
 
 </br>
-### Metodos
+
+### &nbsp; Metodos
 
 </br>
 
 
-<p><b>  • Barrido de ping :</b></p><p>envío de solicitudes de eco ICMP para identificar hosts activos.</p>
+<p><b>  • Barrido de ping :</b>envío de solicitudes de eco ICMP para identificar hosts activos.</p>
 		
 <p><b> • Escaneo de puertos:</b> uso de herramientas para escanear la infraestructura de destino para identificar puertos abiertos/sin filtrar y los servicios 
 		que se ejecutan en ellos.</p>
@@ -146,7 +146,9 @@
 	
 
 </br>
-### Tipos de enumeracion
+
+### &nbsp; Tipos de enumeracion
+
 </br>
 
 <p><b> • Enumeración remota:</b> Lo hacemos a distancia. Este es el tipo de enumeración que sigue a nuestro reconocimiento inicial general. Escaneo con Nmap, la consulta de 
@@ -163,28 +165,29 @@
 		Si no se encontró nada interesante ni vulnerable en las fases anteriores, aquí es donde profundizamos en los detalles y donde dedicaremos la mayor parte del tiempo.</p>
 
 </br>
-<p>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp• Enumeración NetBIOS :recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows.</p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp• Enumeración SNMP :Extracción de información de dispositivos que utilizan el Protocolo Simple de Administración de Red (SNMP). 
-												 Permite extraer configuraciones de red, interfaces, direcciones IP y procesos en ejecución.</p>
+<p> 	» Enumeración NetBIOS :recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows.</p>
+
+<p> 	» Enumeración SNMP :Extracción de información de dispositivos que utilizan el Protocolo Simple de Administración de Red (SNMP). 
+     	Permite extraer configuraciones de red, interfaces, direcciones IP y procesos en ejecución.</p>
 				
-<p>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp• Enumeración LDAP :LDAP (Protocolo Ligero de Acceso a Directorios) se utiliza para acceder y mantener servicios de información de directorio 
-												 distribuidos a través de una red IP. Permite extraer nombres de usuario, direcciones de correo electrónico, grupos, departamentos y servidores 
-												 del directorio.</p>
+<p>		» Enumeración LDAP :LDAP (Protocolo Ligero de Acceso a Directorios) se utiliza para acceder y mantener servicios de información de directorio 
+	 	distribuidos a través de una red IP. Permite extraer nombres de usuario, direcciones de correo electrónico, grupos, departamentos y servidores del directorio.</p>
 				
-<p>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp• Transferencia de Zona DNS :La Transferencia de Zona DNS es un mecanismo que permite a los servidores DNS compartir información. Puede estar mal configurada, 
-												 lo que permite a los atacantes recuperar archivos de zona DNS completos, que contienen información sobre el dominio y sus direcciones IP asociadas.</p>
+<p>		» Transferencia de Zona DNS :La Transferencia de Zona DNS es un mecanismo que permite a los servidores DNS compartir información. Puede estar mal configurada, 
+     	lo que permite a los atacantes recuperar archivos de zona DNS completos, que contienen información sobre el dominio y sus direcciones IP asociadas.</p>
 				
-<p>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp• Enumeración NFS :NFS (Sistema de Archivos de Red) permite a los usuarios acceder a archivos en red como si estuvieran en sus discos locales. 
-												 La enumeración puede revelar directorios y archivos compartidos.</p>
+<p>		» Enumeración NFS :NFS (Sistema de Archivos de Red) permite a los usuarios acceder a archivos en red como si estuvieran en sus discos locales. 
+	 	La enumeración puede revelar directorios y archivos compartidos.</p>
 				
-<p>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp• Enumeración SMB :SMB (Bloque de Mensajes del Servidor) es un protocolo para compartir archivos, impresoras y otros recursos. La enumeración puede 
-												asignarte nombres de usuario, información de servicio, archivos, carpetas, impresoras: todo lo que vale la pena compartir.</p>
+<p>		» Enumeración SMB :SMB (Bloque de Mensajes del Servidor) es un protocolo para compartir archivos, impresoras y otros recursos. La enumeración puede 
+    	asignarte nombres de usuario, información de servicio, archivos, carpetas, impresoras: todo lo que vale la pena compartir.</p>
 				
-<p>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp• Enumeración HTTP :HTTP (Protocolo de Transferencia de Hipertexto), utilizado para proporcionarnos ese excelente tráfico web. Además de la versión 
-												del servicio web, la enumeración de servidores web consiste en encontrar todas las rutas (archivos y directorios) que residen en ellos.</p>
+<p>		» Enumeración HTTP :HTTP (Protocolo de Transferencia de Hipertexto), utilizado para proporcionarnos ese excelente tráfico web. Además de la versión 
+     	del servicio web, la enumeración de servidores web consiste en encontrar todas las rutas (archivos y directorios) que residen en ellos.</p>
 
 </br>
+
 ### 🛠 &nbsp;Herramientas
 
 </br>
