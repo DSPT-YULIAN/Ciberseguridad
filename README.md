@@ -16,7 +16,7 @@
 
 
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Reconocimiento</h2>
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Reconocimiento y Enumeracion</h2>
 
 <!-- ## Reconocimiento -->
 
@@ -100,9 +100,6 @@
 </p>
 
 
-<!--horizontal divider(gradiant)-->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Enumeracion</h2>
 
@@ -111,13 +108,15 @@
 <p> Es el proceso de extraer información más detallada sobre los activos que descubrimos durante nuestro reconocimiento inicial.</p>
 
 </br>
-### 👨🏻‍💻 &nbsp; Fase 2. Recomocimiento activo (Implica interacción directa con el objetivo)
 
-</br>
+### 👨🏻‍💻 &nbsp; Fase 1. Recomocimiento activo (Implica interacción directa con el objetivo)
+
+
 <p> Lo logramos pulsando (disparando paquetes) a nuestro objetivo, o pidiendo a otros que lo hagan por nosotros, y usando las respuestas para determinar 
 	detalles específicos.  </p>
 
 </br>
+
 ### 1. Activos
 </br>
 
@@ -383,6 +382,9 @@ los usuarios o la estructura de la red.</p>
 <p>&nbsp;&nbsp;<h3>Setoolkit<h3></p>
 <p>&nbsp;&nbsp;<h3>BeEF<h3></p>
 
+
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 
 ![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)&nbsp;
