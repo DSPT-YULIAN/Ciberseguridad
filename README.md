@@ -223,6 +223,11 @@
 
 ### 👨🏻‍💻 &nbsp; Fase 2. Análisis de vulnerabilidades
 
+<p>Es un proceso automatizado que identifica las debilidades de seguridad conocidas en los sistemas, las redes o las aplicaciones. Estos análisis 
+generan informes en los que se enumeran las posibles vulnerabilidades en función de las firmas y las configuraciones, pero no confirman si esas 
+fallas pueden aprovecharse realmente.</p>
+
+
 
 
 ### 🛠 &nbsp;Herramientas recomendadas
@@ -361,13 +366,21 @@ lo que significa saturar al objetivo con solicitudes. </p>
 <p><b>&nbsp;&nbsp;&nbsp;• Ataques de repetición</b>: Captura y retransmisión de datos válidos para crear efectos no autorizados u obtener acceso a los sistemas.</p>
 
 
+### &nbsp;Vulnerabilidades y las explotaciones basados en la red
 
 
-
-
-
-
-
+<p>	• Ataques y explotaciones basados en la resolución de nombres de Windows</p>
+<p>	• Ataque de envenenamiento de caché DNS</p>
+<p>	• Ataques y explotaciones contra implementaciones de Server Message Block (SMB)</p>
+<p>	• Vulnerabilidades y explotaciones del Protocolo simple de administración de red (SNMP)</p>
+<p>	• Vulnerabilidades y explotaciones del Protocolo simple de transferencia de correo (SMTP)</p>
+<p>	• Vulnerabilidades y explotaciones del Protocolo de transferencia de archivos (FTP)</p>
+<p>	• Ataques de transferencia de hash</p>
+<p>	• Ataques en ruta (antes conocidos como ataques de intermediario [MITM])</p>
+<p>	• Ataques de eliminación de SSL</p>
+<p>	• Ataques de denegación de servicio (DoS) y de denegación de servicio distribuido (DDoS)</p>
+<p>	• Omisión del control de acceso a la red (NAC)</p>
+<p>	• Ataques de salto a la red de área local virtual (VLAN)</p>
 
 
 
