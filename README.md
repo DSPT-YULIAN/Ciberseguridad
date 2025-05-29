@@ -368,7 +368,6 @@ lo que significa saturar al objetivo con solicitudes. </p>
 
 ### &nbsp;Vulnerabilidades y las explotaciones basados en la red
 
-<<<<<<< HEAD
 
 <p>	• Ataques y explotaciones basados en la resolución de nombres de Windows</p>
 <p>	• Ataque de envenenamiento de caché DNS</p>
@@ -385,19 +384,61 @@ lo que significa saturar al objetivo con solicitudes. </p>
 
 
 
-
-
-
-
-
-=======
->>>>>>> 946ce83a7c6653112223686ae97f55d1d17230ab
 ### 🛠 &nbsp;Herramientas recomendadas
 
 ### 🛠 &nbsp;Vulnerabilidades
 
 
 <p>&nbsp;&nbsp;<h3>Searchsploit<h3></p>
+
+<p>	Es una herramienta de línea de comandos incluida en el framework Exploit-DB (Exploit Database), que permite buscar exploits y vulnerabilidades en una base de datos local.</p>
+
+
+
+<p>	1. Realizar un escaneo de detección de versiones de servicios y aplicaciones que se ejecutan en puertos abiertos de un sistema objetivo. (nmap -sV) </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/jSVdq6P5/1.png" alt="Descripción de la imagen">
+</p>
+
+
+<p>	2. Colocar el nombre del servicio del cual se quiere buscar el Exploi, teniendo en cuenta los puertos o servicios expuestos </p>
+
+
+<p> searchsploit [opciones] término de búsqueda  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/R0dMTj86/2.png" alt="Descripción de la imagen">
+</p>
+
+<p> 3 Descargar el exploit </p>
+
+<p> searchsploit -m [Nombre del exploit] </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nzLnS3bd/3.png" alt="Descripción de la imagen">
+</p>
+
+<p> Exploit descargado en el directorio selecionado </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/8k9TwdyH/4.png" alt="Descripción de la imagen">
+</p>
+
+<p> Base de datos de Exploit </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/t4HpGqGn/5.png" alt="Descripción de la imagen">
+</p>
+
+
+
 
 
 ### 🛠 &nbsp;Ingenieria social 
