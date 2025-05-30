@@ -207,14 +207,76 @@
 
 </br>
 
-<p>&nbsp;&nbsp;<h3>1. enum4linux  // enum4linux -U [host]<h3></p>
+<p>&nbsp;&nbsp;<h2> enum4linux  <h2></p>
 
-<p>&nbsp;&nbsp;&nbsp;• -U busca usuarios configurados</p>
-<p>&nbsp;&nbsp;&nbsp;• -S obtiene una lista de archivos compartidos</p>
-<p>&nbsp;&nbsp;&nbsp;• -G obtiene una lista de los grupos y sus miembros</p>
-<p>&nbsp;&nbsp;&nbsp;• -P enumera las políticas de contraseñas</p>
-<p>&nbsp;&nbsp;&nbsp;• -i obtiene una lista de impresoras</p>
-<p>&nbsp;&nbsp;&nbsp;• -a Combina las opciones -U, -S, -G, -P, -r, -o, -n, -i en un solo comando</p>
+<p>Enum4linux es una herramienta de enumeración para sistemas Windows que se utiliza principalmente para recopilar información sobre usuarios, grupos, recursos compartidos, políticas 
+y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de reconocimiento de un test de penetración para identificar posibles vectores de ataque en redes Windows.</p>
+
+
+<p>	enum4linux [host] </p>
+
+<p>Información sobre objetivos </p>
+<p>Enumerar grupo de trabajo/dominio</p>
+<p>Información sobre Nbtstat</p>
+<p>Comprobación de la sesión</p>
+<p>Obtención del SID de dominio</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/d1vRqR1c/1.png" alt="Descripción de la imagen">
+</p>
+
+<p>Información sobre el Sistema Operativo </p>
+<p>Usuarios</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/g0MRPCf8/2.png" alt="Descripción de la imagen">
+</p>
+
+<p>Enumeración de acciones </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zffbpdVB/3.png" alt="Descripción de la imagen">
+</p>
+
+<p>Informacion de politicas de contraseñas </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/PrzCHGDJ/4.png" alt="Descripción de la imagen">
+</p>
+
+<p>Grupos </p>
+<p>Enumerando usuarios usando SID  y nombre de usuario '', contraseña ''</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Hn1LG3sb/5.png" alt="Descripción de la imagen">
+</p>
+
+
+
+<p>opciones de uso: enum4linux -U [host]  </p>
+
+
+<p> •  -U obtener lista de usuarios </p>
+<p> •  -M obtener lista de máquinas </p>
+<p> •  -S obtener lista compartida </p>
+<p> •  -P obtener información sobre la política de contraseñas </p>
+<p> •  -G obtener lista de grupos y miembros </p>
+<p> •  -d ser detallado, se aplica a -U y -S </p>
+<p> •  -u user especifica el nombre de usuario a utilizar (por defecto «») </p> 
+<p> •  -p pass especificar la contraseña a utilizar (por defecto «») </p>
+<p> •  -i obtiene una lista de impresoras</p>
+<p> •  -a Combina las opciones -U, -S, -G, -P, -r, -o, -n, -i en un solo comando</p>
+<p> •  -k user Usuario(s) que existe(n) en el sistema remoto</p>
+<p> •  -o Obtener información del sistema operativo</p>
+<p> •  -n Hacer un nmblookup (similar a nbtstat)</p>
+<p> •  -v Verbose.  Muestra todos los comandos que se están ejecutando (net, rpcclient, etc.)</p>
+<p> •  -A Agresivo. Realiza comprobaciones de escritura en recursos compartidos, etc.</p>
 
 
 <!--horizontal divider(gradiant)-->
@@ -389,13 +451,13 @@ lo que significa saturar al objetivo con solicitudes. </p>
 ### 🛠 &nbsp;Vulnerabilidades
 
 
-<p>&nbsp;&nbsp;<h3>Searchsploit<h3></p>
+<p>&nbsp;&nbsp;<h2> Searchsploit<h2></p>
 
 <p>	Es una herramienta de línea de comandos incluida en el framework Exploit-DB (Exploit Database), que permite buscar exploits y vulnerabilidades en una base de datos local.</p>
 
+</br>
 
-
-<p>	1. Realizar un escaneo de detección de versiones de servicios y aplicaciones que se ejecutan en puertos abiertos de un sistema objetivo. (nmap -sV) </p>
+<p>	1. Realizar un escaneo de detección de versiones de servicios y aplicaciones que se ejecutan en puertos abiertos de un sistema objetivo. (nmap -sV). </p>
 
 <p align="center">
 
@@ -403,10 +465,10 @@ lo que significa saturar al objetivo con solicitudes. </p>
 </p>
 
 
-<p>	2. Colocar el nombre del servicio del cual se quiere buscar el Exploi, teniendo en cuenta los puertos o servicios expuestos </p>
+<p>	2. Colocar el nombre del servicio del cual se quiere buscar el exploit, teniendo en cuenta los puertos o servicios expuestos. </p>
 
 
-<p> searchsploit [opciones] término de búsqueda  </p>
+<p> • searchsploit [opciones] término de búsqueda.  </p>
 
 
 <p align="center">
@@ -414,29 +476,28 @@ lo que significa saturar al objetivo con solicitudes. </p>
   <img src="https://i.postimg.cc/R0dMTj86/2.png" alt="Descripción de la imagen">
 </p>
 
-<p> 3 Descargar el exploit </p>
+<p> 3 Descargar el exploit. </p>
 
-<p> searchsploit -m [Nombre del exploit] </p>
+<p> • searchsploit -m [Nombre del exploit]. </p>
 
 <p align="center">
 
   <img src="https://i.postimg.cc/nzLnS3bd/3.png" alt="Descripción de la imagen">
 </p>
 
-<p> Exploit descargado en el directorio selecionado </p>
+<p> Exploit descargado en el directorio selecionado. </p>
 
 <p align="center">
 
   <img src="https://i.postimg.cc/8k9TwdyH/4.png" alt="Descripción de la imagen">
 </p>
 
-<p> Base de datos de Exploit </p>
+<p> Base de datos de Exploit. </p>
 
 <p align="center">
 
   <img src="https://i.postimg.cc/t4HpGqGn/5.png" alt="Descripción de la imagen">
 </p>
-
 
 
 
@@ -449,4 +510,15 @@ lo que significa saturar al objetivo con solicitudes. </p>
 
 <!--horizontal divider(gradiant)-->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+
+
+### 👨🏻‍💻 &nbsp; Fase 4. Post-Explotacion
+
+
+<p>&nbsp;&nbsp;<h2> MSFVENOM <h2></p>
+
+<p>&nbsp;&nbsp;<h2> Meterpreter <h2></p>
+
+
 
