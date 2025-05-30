@@ -207,49 +207,51 @@
 
 </br>
 
-<p>&nbsp;&nbsp;<h2> enum4linux  <h2></p>
+### 🛠 &nbsp;enum4linux
+
+</br>
 
 <p>Enum4linux es una herramienta de enumeración para sistemas Windows que se utiliza principalmente para recopilar información sobre usuarios, grupos, recursos compartidos, políticas 
 y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de reconocimiento de un test de penetración para identificar posibles vectores de ataque en redes Windows.</p>
 
 
-<p>	enum4linux [host] </p>
+<p>&nbsp;&nbsp;&nbsp; enum4linux [host] </p>
 
-<p>Información sobre objetivos </p>
-<p>Enumerar grupo de trabajo/dominio</p>
-<p>Información sobre Nbtstat</p>
-<p>Comprobación de la sesión</p>
-<p>Obtención del SID de dominio</p>
+<p>	•	Información sobre objetivos </p>
+<p>	•	Enumerar grupo de trabajo/dominio</p>
+<p>	•	Información sobre Nbtstat</p>
+<p>	•	Comprobación de la sesión</p>
+<p>	•	Obtención del SID de dominio</p>
 
 <p align="center">
 
   <img src="https://i.postimg.cc/d1vRqR1c/1.png" alt="Descripción de la imagen">
 </p>
 
-<p>Información sobre el Sistema Operativo </p>
-<p>Usuarios</p>
+<p>	•	Información sobre el Sistema Operativo </p>
+<p>	•	Usuarios</p>
 
 <p align="center">
 
   <img src="https://i.postimg.cc/g0MRPCf8/2.png" alt="Descripción de la imagen">
 </p>
 
-<p>Enumeración de acciones </p>
+<p>	•	Enumeración de acciones </p>
 
 <p align="center">
 
   <img src="https://i.postimg.cc/zffbpdVB/3.png" alt="Descripción de la imagen">
 </p>
 
-<p>Informacion de politicas de contraseñas </p>
+<p>	•	Informacion de politicas de contraseñas </p>
 
 <p align="center">
 
   <img src="https://i.postimg.cc/PrzCHGDJ/4.png" alt="Descripción de la imagen">
 </p>
 
-<p>Grupos </p>
-<p>Enumerando usuarios usando SID  y nombre de usuario '', contraseña ''</p>
+<p>	•	Grupos </p>
+<p>	•	Enumerando usuarios usando SID  y nombre de usuario '', contraseña ''</p>
 
 
 <p align="center">
