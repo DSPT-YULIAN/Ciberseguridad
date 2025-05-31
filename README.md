@@ -355,6 +355,14 @@ los usuarios o la estructura de la red.</p>
 <p><b>&nbsp;&nbsp;&nbsp;• Ataques Man-in-the-Middle (MitM)</b> : Interceptar y alterar la comunicación entre dos partes sin su conocimiento. </p>
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/3xghnVqC/MITM.png" alt="Descripción de la imagen">
+</p>
+
+
+
+
 ### &nbsp; 1. Técnicas de intermediario (MiTM)
 
 <p><b>• Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
@@ -374,7 +382,9 @@ los usuarios o la estructura de la red.</p>
 
 <p><b> • SSLstrip+ :</b> Realizar ataques de degradación de HTTPS a HTTP.</p>
 <p><b> • Bettercap :</b> Marco de reconocimiento y explotación de redes tanto cableadas como inalámbricas</p>
-<p><b> • Respondedor :</b> Envenenar consultas LLMNR, NBT-NS y mDNS</p>
+<p><b> • Ettercap :</b> </p>
+<p><b> • Cain y abel :</b> </p>
+<p><b> • Mitmframwork :</b> Envenenar consultas LLMNR, NBT-NS y mDNS</p>
 <p><b> • Arpspoof :</b> Ataques de envenenamiento de caché ARP.</p>
 <p><b> • Aircrack-ng :</b> Conjunto de herramientas para atacar redes Wi-Fi.</p>
 <p><b> • Airgeddon :</b> Framework para atacar redes WiFi. Incluye ataques de gemelo malvado.</p>
@@ -397,23 +407,63 @@ lo que significa saturar al objetivo con solicitudes. </p>
 
 <p><b> • Inundaciones ICMP :</b> envío de muchos pings.</p>
 <p><b> • Inundaciones UDP :</b> envío de una gran cantidad de datos UDP.</p>
+<p><b> • Red de botnet :</b> Un _botnet _es un conjunto de máquinas comprometidas que el atacante puede manipular desde un sistema de comando y control (CnC o C2) para participar en un ataque de DDoS, 
+enviar correos electrónicos no deseados y realizar otras actividades ilícitas.</p>
 
+<p>La Figura muestra cómo un atacante puede utilizar una botnet para lanzar un ataque DDoS. La botnet está compuesta por terminales de usuario comprometidos (computadoras portátiles), enrutadores 
+inalámbricos domésticos y dispositivos de Internet de las cosas (IoT), como cámaras IP. </p>
+
+<p>El atacante envía instrucciones al C2; Posteriormente, el C2 envía instrucciones a los bots dentro de la botnet para lanzar el ataque DDoS contra el servidor víctima.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/WpWKsLz8/2.png" alt="Descripción de la imagen">
+</p>
 
 ###  Basado en protocolo
 
 <p> Consumir recursos del servidor o del nodo de red explotando las asignaciones del protocolo </p>
 
 
-<p><b> • Inundaciones SYN :</b> envío de muchos paquetes SYN para dejar conexiones TCP medio abiertas y, por lo tanto, exceder los recursos del servidor, impidiendo conexiones de usuarios legítimos.</p>
+<p><b> • Inundaciones SYN :</b>El atacante lanza un ataque DoS directo envío de muchos paquetes SYN para dejar conexiones TCP medio abiertas y, por lo tanto, exceder los recursos del servidor, 
+impidiendo conexiones de usuarios legítimos.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nhjfyV1q/1.png" alt="Descripción de la imagen">
+</p>
+
+<p>Ataques DoS y DDoS reflejados</p>
+
+<p>los atacantes envían a las fuentes paquetes falsos que parecen ser de la víctima y, luego, las fuentes se vuelven participantes involuntarios en el ataque reflejado al enviar el tráfico de respuesta a la víctima prevista.</p>
+
+<p> el atacante envía un paquete al host A. La dirección IP de origen es la dirección IP de la víctima (10.1.2.3) y la dirección IP de destino es la dirección IP del host A (10.1.1.8). Posteriormente, el host A envía un paquete 
+no deseado a la víctima. Si el atacante continúa enviando este tipo de paquetes, el Host A no solo inunda a la víctima, sino que la víctima también puede responder con paquetes innecesarios, lo que consume ancho de banda y recursos</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sxH7Z4qQ/3.png" alt="Descripción de la imagen">
+</p>
+
+
 <p><b> • Ataques de paquetes fragmentados : :</b>  envío de muchos paquetes fragmentados innecesariamente para llenar la cola/ventana TCP del objetivo.</p>
 <p><b> • Ataques Smurf :</b> envío de solicitudes ICMP a la dirección de transmisión, lo que hace que todas las máquinas en el dominio de transmisión respondan al objetivo.</p>
+<p><b> • Ataques DDoS de amplificación :</b> es una forma de ataque de DoS reflejado en el que el tráfico de respuesta (enviado por el participante involuntario) está compuesto por paquetes que son mucho más grandes que los enviados inicialmente por el atacante 
+(falsificando a la víctima). Un ejemplo de este tipo de ataque es un atacante que envía consultas de DNS a un servidor DNS abierto. Luego, el servidor DNS responde con un tamaño de paquete mucho mayor que los paquetes de consulta iniciales. 
+El resultado final es que la máquina de la víctima se ve inundada por paquetes grandes para los que nunca emitió consultas</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/xCC4rtvq/4.png" alt="Descripción de la imagen">
+</p>
 
 ###  Basado en solicitudes
 
 <p> Se centra en los servicios y aplicaciones de las capas superiores del modelo TCP/IP. Se mide en rps (solicitudes por segundo). </p>
 
 <p><b> • Ataques lentos y de bajo rendimientoP :</b> Ancho de banda bajo, solicitudes lentas para saturar todos los subprocesos de la aplicación.</p>
-<p><b> • Inundaciones GET/POST  :</b> Solicitudes constantes de contenido que consumen recursos de la aplicación.</p>
+<p><b> • Ataques DDoS de amplificación :</b> Solicitudes constantes de contenido que consumen recursos de la aplicación.</p>
 
 
 ### 🛠 &nbsp;Herramientas
@@ -453,7 +503,7 @@ lo que significa saturar al objetivo con solicitudes. </p>
 ### 🛠 &nbsp;Vulnerabilidades
 
 
-<p>&nbsp;&nbsp;<h2> Searchsploit<h2></p>
+### 🛠 &nbsp; Searchsploit
 
 <p>	Es una herramienta de línea de comandos incluida en el framework Exploit-DB (Exploit Database), que permite buscar exploits y vulnerabilidades en una base de datos local.</p>
 
@@ -506,8 +556,9 @@ lo que significa saturar al objetivo con solicitudes. </p>
 
 ### 🛠 &nbsp;Ingenieria social 
 
-<p>&nbsp;&nbsp;<h3>Setoolkit<h3></p>
-<p>&nbsp;&nbsp;<h3>BeEF<h3></p>
+### 🛠 &nbsp; Setoolkit
+
+### 🛠 &nbsp; BeEF
 
 
 <!--horizontal divider(gradiant)-->
@@ -518,9 +569,16 @@ lo que significa saturar al objetivo con solicitudes. </p>
 ### 👨🏻‍💻 &nbsp; Fase 4. Post-Explotacion
 
 
-<p>&nbsp;&nbsp;<h2> MSFVENOM <h2></p>
+### 🛠 &nbsp; MSFVENOM
 
-<p>&nbsp;&nbsp;<h2> Meterpreter <h2></p>
+### 🛠 &nbsp; Meterpreter
+
+### 🛠 &nbsp; Mimikatz
+
+
+
+
+
 
 
 
