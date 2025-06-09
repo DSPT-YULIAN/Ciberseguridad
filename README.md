@@ -222,33 +222,28 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <p>	•	Información sobre Nbtstat</p>
 <p>	•	Comprobación de la sesión</p>
 <p>	•	Obtención del SID de dominio</p>
+<p>	•	Información sobre el Sistema Operativo </p>
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/d1vRqR1c/1.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/cHc90Bmb/1.png" alt="Descripción de la imagen">
 </p>
 
-<p>	•	Información sobre el Sistema Operativo </p>
 <p>	•	Usuarios</p>
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/g0MRPCf8/2.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/yxQLS62h/2.png" alt="Descripción de la imagen">
 </p>
 
 <p>	•	Enumeración de acciones </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/zffbpdVB/3.png" alt="Descripción de la imagen">
-</p>
-
 <p>	•	Informacion de politicas de contraseñas </p>
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/PrzCHGDJ/4.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/WbzWcrJ5/3.png" alt="Descripción de la imagen">
 </p>
+
 
 <p>	•	Grupos </p>
 <p>	•	Enumerando usuarios usando SID  y nombre de usuario '', contraseña ''</p>
@@ -256,7 +251,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/Hn1LG3sb/5.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/s2YK44tg/4.png" alt="Descripción de la imagen">
 </p>
 
 
@@ -293,17 +288,78 @@ fallas pueden aprovecharse realmente.</p>
 
 
 
-
 ### 🛠 &nbsp;Herramientas recomendadas
 
 
-<p>&nbsp;&nbsp;<h3>NMAP<h3></p>
+### 🛠 &nbsp; Searchsploit
+
+<p>	Es una herramienta de línea de comandos incluida en el framework Exploit-DB (Exploit Database), que permite buscar exploits y vulnerabilidades en una base de datos local.</p>
+
+</br>
+
+<p>	1. Realizar un escaneo de detección de versiones de servicios y aplicaciones que se ejecutan en puertos abiertos de un sistema objetivo. (nmap -sV). </p>
+<p>	2. Colocar el nombre del servicio del cual se quiere buscar el exploit, teniendo en cuenta los puertos o servicios expuestos. </p>
+<p> &nbsp;&nbsp;&nbsp; • searchsploit [opciones] término de búsqueda.  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/LX4kBKtx/1.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> 3. Descargar el exploit. </p>
+
+<p >&nbsp;&nbsp;&nbsp; • searchsploit -m [Nombre del exploit]. </p>
+<p> Exploit descargado en el directorio selecionado. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/tgpFpQM9/3.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> Base de datos de Exploit. </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/t4HpGqGn/5.png" alt="Descripción de la imagen">
+</p>
+
+
+
+### 👨🏻‍💻 &nbsp; NMAP
+
 
 
 <p>&nbsp;&nbsp;&nbsp;1. Hacer ping al destino de ataque (host)</p>
 <p>&nbsp;&nbsp;&nbsp;2. Identifique los puertos y servicios abiertos. nmap -sV (host)</p>
 <p>&nbsp;&nbsp;&nbsp;3. Identificar el sistema operativo  sudo nmap -O (host) OS details</p>
 <p>&nbsp;&nbsp;&nbsp;4. Utilice el guion de Nmap Vulners para buscar vulnerabilidades. nmap -sV --script vulners --script-args mincvss=4 (host)</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/dVvB6xKZ/1.png" alt="Descripción de la imagen">
+</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/VsCW88fb/2.png" alt="Descripción de la imagen">
+</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MKJbZFH3/4.png" alt="Descripción de la imagen">
+</p>
+
+
+
 
 
 <!--horizontal divider(gradiant)-->
@@ -500,56 +556,7 @@ El resultado final es que la máquina de la víctima se ve inundada por paquetes
 
 ### 🛠 &nbsp;Herramientas recomendadas
 
-### 🛠 &nbsp;Vulnerabilidades
 
-
-### 🛠 &nbsp; Searchsploit
-
-<p>	Es una herramienta de línea de comandos incluida en el framework Exploit-DB (Exploit Database), que permite buscar exploits y vulnerabilidades en una base de datos local.</p>
-
-</br>
-
-<p>	1. Realizar un escaneo de detección de versiones de servicios y aplicaciones que se ejecutan en puertos abiertos de un sistema objetivo. (nmap -sV). </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/jSVdq6P5/1.png" alt="Descripción de la imagen">
-</p>
-
-
-<p>	2. Colocar el nombre del servicio del cual se quiere buscar el exploit, teniendo en cuenta los puertos o servicios expuestos. </p>
-
-
-<p> • searchsploit [opciones] término de búsqueda.  </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/R0dMTj86/2.png" alt="Descripción de la imagen">
-</p>
-
-<p> 3 Descargar el exploit. </p>
-
-<p> • searchsploit -m [Nombre del exploit]. </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/nzLnS3bd/3.png" alt="Descripción de la imagen">
-</p>
-
-<p> Exploit descargado en el directorio selecionado. </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/8k9TwdyH/4.png" alt="Descripción de la imagen">
-</p>
-
-<p> Base de datos de Exploit. </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/t4HpGqGn/5.png" alt="Descripción de la imagen">
-</p>
 
 
 
