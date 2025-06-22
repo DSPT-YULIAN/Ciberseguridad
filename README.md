@@ -25,7 +25,9 @@
 
 </br>
 
-### 👨🏻‍💻 &nbsp; Fase 1. Recomocimiento pasivo (No hay interacción directa con el objetivo)
+### 👨🏻‍💻 &nbsp; Fase 1. Recomocimiento
+
+### 👨🏻‍💻 &nbsp; Recomocimiento pasivo (No hay interacción directa con el objetivo)
 
 <p> La principal forma de lograrlo es mediante Inteligencia de Fuentes Abiertas (OSINT) , que consiste en recopilar información sobre nuestro objetivo 
 	de fuentes públicas, incluido el sitio web público  </p>
@@ -109,7 +111,7 @@
 
 </br>
 
-### 👨🏻‍💻 &nbsp; Fase 1. Recomocimiento activo (Implica interacción directa con el objetivo)
+### 👨🏻‍💻 &nbsp; Recomocimiento activo (Implica interacción directa con el objetivo)
 
 
 <p> Lo logramos pulsando (disparando paquetes) a nuestro objetivo, o pidiendo a otros que lo hagan por nosotros, y usando las respuestas para determinar 
@@ -280,7 +282,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 
-### 👨🏻‍💻 &nbsp; Fase 2. Análisis de vulnerabilidades
+### 👨🏻‍💻 &nbsp; Fase 2.Escaneo y Análisis de vulnerabilidades
 
 <p>Es un proceso automatizado que identifica las debilidades de seguridad conocidas en los sistemas, las redes o las aplicaciones. Estos análisis 
 generan informes en los que se enumeran las posibles vulnerabilidades en función de las firmas y las configuraciones, pero no confirman si esas 
@@ -526,6 +528,8 @@ El resultado final es que la máquina de la víctima se ve inundada por paquetes
 
 </br>
 
+
+
 <p><b> • Hping3 :</b> una herramienta para crear y enviar paquetes TCP/UDP personalizados y ver respuestas.</p>
 <p><b> • DHCPig :</b> agota todas las direcciones en el grupo DHCP.</p>
 <p><b> • SlowLoris :</b> realiza ataques DoS lentos y de baja intensidad.</p>
@@ -552,14 +556,42 @@ El resultado final es que la máquina de la víctima se ve inundada por paquetes
 <p>	• Omisión del control de acceso a la red (NAC)</p>
 <p>	• Ataques de salto a la red de área local virtual (VLAN)</p>
 
+### &nbsp;Ataques a redes WI-FI
+
+### &nbsp;Ataques contra WEP
+
+</br>
+
+<p>	WEP es susceptible a muchos ataques diferentes, se considera un protocolo inalámbrico obsoleto. ha sido derrotado durante décadas. WEP usa RC4 de una manera que permite a un atacante 
+descifrar la PSK con poco esfuerzo. El problema está relacionado con cómo WEP utiliza los IV en cada paquete. Cuando WEP usa RC4 para cifrar un paquete, anteponga el IV a la clave secreta 
+antes de incluir la clave en RC4. Posteriormente, un atacante tiene los primeros 3 bytes de una clave supuestamente “secreta” utilizada en cada paquete. Para recuperar el PSK, el atacante 
+solo necesita recopilar suficientes datos del aire. Un atacante puede acelerar este tipo de ataque inyectando paquetes ARP (porque la longitud es predecible), lo que permite que el atacante 
+recupere el PSK mucho más rápido. Después de recuperar la clave WEP, el atacante puede usarla para acceder a la red inalámbrica.</p>
+
+### &nbsp;Ataques contra WPA
+
+</br>
+
+<p>	Todas las versiones de WPA admiten diferentes métodos de autenticación, incluido PSK. WPA no es susceptible a los ataques IV que afectan a WEP; Sin embargo, es posible capturar el protocolo 
+de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructura inalámbrica y luego aplicar la fuerza bruta a la PSK de WPA.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/DZhK6SGF/1.png" alt="Descripción de la imagen">
+</p>
+
+<p><b>&nbsp;&nbsp;&nbsp; • Paso 1. </b> Un atacante monitorea la red Wi-Fi y encuentra clientes inalámbricos conectados al SSID de la red corporativa. </p>
+<p><b>&nbsp;&nbsp;&nbsp; • Paso 2. </b> El atacante envía paquetes DeAuth para desautenticar al cliente inalámbrico. </p>
+<p><b>&nbsp;&nbsp;&nbsp; • Paso 3. </b> El atacante captura el protocolo de enlace de cuatro vías WPA y descifra la PSK de WPA. (Es posible usar listas de palabras y herramientas como Aircrack-ng para realizar este ataque. </p>
+
+
+### &nbsp;Vulnerabilidades que afectan a WPA y WPA2
+
+### &nbsp;&nbsp; Estas vulnerabilidades, también denominadas KRACK (ataque de reinstalación de claves ) (https://www.krackattacks.com/)
+
 
 
 ### 🛠 &nbsp;Herramientas recomendadas
-
-
-
-
-
 
 ### 🛠 &nbsp;Ingenieria social 
 
