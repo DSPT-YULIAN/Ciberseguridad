@@ -16,7 +16,7 @@
 
 
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Reconocimiento y Enumeracion</h2>
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Reconocimiento</h2>
 
 <!-- ## Reconocimiento -->
 
@@ -25,9 +25,24 @@
 
 </br>
 
-### 👨🏻‍💻 &nbsp; Fase 1. Recomocimiento
 
-### 👨🏻‍💻 &nbsp; Recomocimiento pasivo (No hay interacción directa con el objetivo)
+
+<!--h1 without bottom border-->
+<div id="user-content-toc">
+  <ul align="left">
+    <summary><h2 style="display: inline-block">Fase 1. Recomocimiento pasivo y activo</h2></summary>
+  </ul>
+</div>
+
+
+
+<!--h1 without bottom border-->
+<div id="user-content-toc">
+  <ul align="left">
+    <summary><h4 style="display: inline-block">Recomocimiento pasivo (No hay interacción directa con el objetivo)</h4></summary>
+  </ul>
+</div>
+
 
 <p> La principal forma de lograrlo es mediante Inteligencia de Fuentes Abiertas (OSINT) , que consiste en recopilar información sobre nuestro objetivo 
 	de fuentes públicas, incluido el sitio web público  </p>
@@ -81,7 +96,7 @@
 			reconocimiento activo para usted.</p>
 			
 <p><b> • Informes disponibles públicamente:</b> análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos 
-			disponibles públicamente.</b>
+		disponibles públicamente.</b>
 	
 <p><b> • Redes sociales:</h3> recopilación de información de plataformas de redes sociales.</p>
 
@@ -91,38 +106,33 @@
 
 
 <p><b> • Descubrimiento de dominios:</b> crt.sh, dnsdumpster, subfinder, amass</p>
-<p><b> • Analizadores de Techstack:</b> Wappalyzer, BuiltWith, WhatRuns)</p>
+<p><b> • Analizadores de Techstack:</b> Wappalyzer, BuiltWith, WhatRuns</p>
 <p><b> • Escáneres de Internet:</b> Shodan, Censys, Netlas, Greynoise</p>
 <p><b> • Archivos web:</b> Wayback Machine, Common Crawl</p>
 <p><b> • Motores de búsqueda:</b> Google, Bing, DuckDuckGo, Brave, Yandex, Baidu</p>
-					
-<p align="center">
 
-  <img src="https://i.postimg.cc/kgsWrP5Q/reconocimiento-vs-enumeracion.jpg">
-</p>
-
-
-
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Enumeracion</h2>
-
-<!-- ## Enumeracion -->
-
-<p> Es el proceso de extraer información más detallada sobre los activos que descubrimos durante nuestro reconocimiento inicial.</p>
 
 </br>
+
+
+
+<!--h1 without bottom border-->
+<div id="user-content-toc">
+  <ul align="left">
+    <summary><h4 style="display: inline-block">Recomocimiento activo (Implica interacción directa con el objetivo)</h4></summary>
+  </ul>
+</div>
 
 ### 👨🏻‍💻 &nbsp; Recomocimiento activo (Implica interacción directa con el objetivo)
 
 
-<p> Lo logramos pulsando (disparando paquetes) a nuestro objetivo, o pidiendo a otros que lo hagan por nosotros, y usando las respuestas para determinar 
-	detalles específicos.  </p>
+<p> Recopilar información interactuando directamente con el objetivo (envío de paquetes, solicitudes, etc.)  </p>
 
 
-### 1. Activos
 </br>
 
-<p> • Infraestructura (Escaneo con herramientas como Nmap, Nessus, OpenVAS.)</p>
-<p> • Dominios (Enumeración DNS con herramientas como DNSRecon o Sublist3r.)</p>
+<p> • Puede ser detectado por el objetivo (deja rastro en logs).</p>
+<p> • Se enfoca en descubrir sistemas, servicios abiertos, topología de red, etc.</p>
 
 </br>
 
@@ -131,7 +141,7 @@
 </br>
 
 
-<p><b>  • Barrido de ping :</b>envío de solicitudes de eco ICMP para identificar hosts activos.</p>
+<p><b> • Barrido de ping :</b>envío de solicitudes de eco ICMP para identificar hosts activos.</p>
 		
 <p><b> • Escaneo de puertos:</b> uso de herramientas para escanear la infraestructura de destino para identificar puertos abiertos/sin filtrar y los servicios 
 		que se ejecutan en ellos.</p>
@@ -142,12 +152,41 @@
 <p><b> • Huella digital de servicio:</b>identificación de las versiones específicas de los servicios que se ejecutan en puertos abiertos.</p>
 	
 <p><b> • Motores de búsqueda:</b> utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un 
-			reconocimiento activo para usted.</p>
+		reconocimiento activo para usted.</p>
 			
 <p><b> • Captura de banners:</b> captura de la respuesta inicial de los servicios para recopilar información sobre las versiones y configuraciones del software.</b>
 	
 
 </br>
+
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+<p><b> • Escáneres de puertos :</b> Nmap, Rustscan, Unicornscan, Masscan, Kiterunner</p>
+<p><b> • Descubrimiento de red :</b> Netdiscover, SSB, SNMPwalk, ldapsearch, BloodHound</p>
+<p><b> • Descubrimiento de dominios:</b> Dnsenum</p>
+
+
+</br>
+					
+<p align="center">
+
+  <img src="https://i.postimg.cc/kgsWrP5Q/reconocimiento-vs-enumeracion.jpg">
+</p>
+
+
+
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Enumeracion</h2>
+
+
+### 👨🏻‍💻 &nbsp; Fase 2.Escaneo y Análisis de vulnerabilidades
+
+<!-- ## Enumeracion -->
+
+<p> Es el proceso de extraer información más detallada sobre los activos que descubrimos durante nuestro reconocimiento inicial.</p>
+
 
 ### &nbsp; Tipos de enumeracion
 
@@ -165,8 +204,6 @@
 		
 <p><b> • Enumeración de servicios:</b> LTras identificar los servicios en ejecución (y sus posibles versiones) en un host, es hora de interactuar con ellos utilizando sus protocolos. 
 		Si no se encontró nada interesante ni vulnerable en las fases anteriores, aquí es donde profundizamos en los detalles y donde dedicaremos la mayor parte del tiempo.</p>
-
-</br>   📌
 
 <p> 	» Enumeración NetBIOS :recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows.</p>
 
@@ -194,9 +231,6 @@
 
 </br>
 
-<p><b> • Escáneres de puertos :</b> Nmap, Rustscan, Unicornscan, Masscan, Kiterunner</p>
-<p><b> • Descubrimiento de red :</b> Netdiscover, SSB, SNMPwalk, ldapsearch, BloodHound</p>
-<p><b> • Descubrimiento de dominios:</b> Dnsenum</p>
 <p><b> • Descubrimiento de contenido :</b> Gobuster, Dirbuster, Feroxbuster</p>
 <p><b> • Pruebas de aplicaciones web :</b> Burp Suite, OWASP ZAP, Nuclei</p>
 <p><b> • Análisis de vulnerabilidades :</b> SQLmap, Nikto</p>
@@ -282,7 +316,6 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 
-### 👨🏻‍💻 &nbsp; Fase 2.Escaneo y Análisis de vulnerabilidades
 
 <p>Es un proceso automatizado que identifica las debilidades de seguridad conocidas en los sistemas, las redes o las aplicaciones. Estos análisis 
 generan informes en los que se enumeran las posibles vulnerabilidades en función de las firmas y las configuraciones, pero no confirman si esas 
