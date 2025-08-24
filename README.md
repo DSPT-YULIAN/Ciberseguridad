@@ -32,12 +32,12 @@
 </br>
 
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> Recomocimiento pasivo (No hay interacción directa con el objetivo) </h2>
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Recomocimiento pasivo (No hay interacción directa con el objetivo) </h2>
 
 
 
 <p> La principal forma de lograrlo es mediante Inteligencia de Fuentes Abiertas (OSINT) , que consiste en recopilar información sobre nuestro objetivo 
-	de fuentes públicas, incluido el sitio web público  </p>
+	de fuentes públicas, incluido el sitio web público de la organizacion </p>
 
 </br>
 
@@ -50,20 +50,7 @@
   <img src="https://i.postimg.cc/2yHRhJ54/categorias-osint.jpg" alt="Descripción de la imagen">
 </p>
 
-
 </br>
-
-### 1. Personas
-
-<p> • Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
-<p> • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
-
-
-### 2. Activos
-
-<p> • Empleados (Búsqueda en redes sociales o bases de datos públicas.)</p>
-<p> • Direcciones de correo (Obtención mediante filtraciones, buscadores, herramientas como Hunter.io.)</p>
-
 
 <p align="center">
 
@@ -74,44 +61,44 @@
 ### Metodos
 
 
-<p><b>  • Certificados SSL:</b> Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. 
-			¡Un excelente lugar para encontrar nombres de dominio y subdominio!</p>
+<p><b>  • Certificados SSL:</b></p>
+<p> Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. ¡Un excelente lugar para encontrar nombres de dominio y subdominio! </p>
+
 		
-<p><b> • Análisis del sitio web:</b> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. 
-			Por ejemplo, revisar su página "Sobre nosotros" está bien. Adivinar rutas aleatorias en el sitio ( mytarget.com/admin )</p>
-		
-<p><b> • Consultas WHOIS:</b> recuperación de información de registro de dominio.</p>
+<p><b> • Análisis del sitio web:</b></p>
+<p> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. Por ejemplo, revisar su página "Sobre nosotros". Adivinar rutas aleatorias en el sitio ejemplo ( mytarget.com/admin ) </p>
+
+<p><b> • Consultas WHOIS:</b></p>
+<p>recuperación de información de registro de dominio.</p>
 	
-<p><b> • Consultas DNS:</b> recopilación de registros DNS, como registros MX, A y CNAME.</p>
+<p><b> • Consultas DNS:</b></p>
+<p>recopilación de registros DNS, como registros MX, A y CNAME.</p>
 	
-<p><b> • Motores de búsqueda:</b> utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un 
-			reconocimiento activo para usted.</p>
+<p><b> • Motores de búsqueda:</b></p>
+<p>utilice motores de búsqueda para encontrar información sobre el objetivo de otras personas ya han realizado un reconocimiento activo.</p>
 			
-<p><b> • Informes disponibles públicamente:</b> análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos 
-		disponibles públicamente.</b>
-	
-<p><b> • Redes sociales:</h3> recopilación de información de plataformas de redes sociales.</p>
+<p><b> • Informes disponibles públicamente:</b></p>
+<p>análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b>
+
+<p><b> • Redes sociales:</b></p>
+<p>recopilación de información de plataformas de redes sociales.</p>
 
 </br>
 
 ### 🛠 &nbsp;Herramientas
 
 
-<p><b> • Descubrimiento de dominios:</b> crt.sh, dnsdumpster, subfinder, amass</p>
-<p><b> • Analizadores de Techstack:</b> Wappalyzer, BuiltWith, WhatRuns</p>
-<p><b> • Escáneres de Internet:</b> Shodan, Censys, Netlas, Greynoise</p>
-<p><b> • Archivos web:</b> Wayback Machine, Common Crawl</p>
-<p><b> • Motores de búsqueda:</b> Google, Bing, DuckDuckGo, Brave, Yandex, Baidu</p>
+<p><b> • Descubrimiento de dominios:</b> &nbsp; crt.sh, dnsdumpster, subfinder, amass</p>
+<p><b> • Analizadores de Techstack:</b> &nbsp; Wappalyzer, BuiltWith, WhatRuns</p>
+<p><b> • Escáneres de Internet:</b> &nbsp; Shodan, Censys, Netlas, Greynoise</p>
+<p><b> • Archivos web:</b> &nbsp; Wayback Machine, Common Crawl</p>
+<p><b> • Motores de búsqueda:</b> &nbsp; Google, Bing, DuckDuckGo, Brave, Yandex, Baidu</p>
 
 
 </br>
 
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> Recomocimiento activo (Implica interacción directa con el objetivo) </h2>
-
-
-
-### 👨🏻‍💻 &nbsp; Recomocimiento activo (Implica interacción directa con el objetivo)
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Recomocimiento activo (Implica interacción directa con el objetivo) </h2>
 
 
 <p> Recopilar información interactuando directamente con el objetivo (envío de paquetes, solicitudes, etc.)  </p>
@@ -129,20 +116,21 @@
 </br>
 
 
-<p><b> • Barrido de ping :</b>envío de solicitudes de eco ICMP para identificar hosts activos.</p>
+<p><b> • Barrido de ping :</b></p>  
+<p> Envío de solicitudes de eco ICMP para identificar hosts activos.</p>
 		
-<p><b> • Escaneo de puertos:</b> uso de herramientas para escanear la infraestructura de destino para identificar puertos abiertos/sin filtrar y los servicios 
-		que se ejecutan en ellos.</p>
+<p><b> • Escaneo de puertos:</b></p>
+<p>	Uso de herramientas para escanear la infraestructura de destino para identificar puertos abiertos/sin filtrar y los servicios que se ejecutan en ellos.</p>
 		
-<p><b> • Tracerout:</b>Mapeo de la ruta que siguen los paquetes para llegar al destino. Esto nos ayuda a identificar otros sistemas y controles implementados, 
-		lo que nos permite comprender mejor la red.</p>
+<p><b> • Tracerout:</b></p>
+<p> Mapeo de la ruta que siguen los paquetes para llegar al destino. Esto nos ayuda a identificar otros sistemas y controles implementados, lo que nos permite comprender mejor la red.</p>
 	
-<p><b> • Huella digital de servicio:</b>identificación de las versiones específicas de los servicios que se ejecutan en puertos abiertos.</p>
+<p><b> • Huella digital de servicio:</b></p>
+<p> Identificación de las versiones específicas de los servicios que se ejecutan en puertos abiertos.</p>
 	
-<p><b> • Motores de búsqueda:</b> utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un 
-		reconocimiento activo para usted.</p>
 			
-<p><b> • Captura de banners:</b> captura de la respuesta inicial de los servicios para recopilar información sobre las versiones y configuraciones del software.</b>
+<p><b> • Captura de banners:</b></p> 
+<p> Captura de la respuesta inicial de los servicios para recopilar información sobre las versiones y configuraciones del software.</b>
 	
 
 </br>
@@ -152,9 +140,9 @@
 
 </br>
 
-<p><b> • Escáneres de puertos :</b> Nmap, Rustscan, Unicornscan, Masscan, Kiterunner</p>
-<p><b> • Descubrimiento de red :</b> Netdiscover, SSB, SNMPwalk, ldapsearch, BloodHound</p>
-<p><b> • Descubrimiento de dominios:</b> Dnsenum</p>
+<p><b> • Escáneres de puertos :</b> &nbsp; Nmap, Rustscan, Unicornscan, Masscan, Kiterunner</p>
+<p><b> • Descubrimiento de red :</b> &nbsp;Netdiscover, SSB, SNMPwalk, ldapsearch, BloodHound</p>
+<p><b> • Descubrimiento de dominios:</b> &nbsp; Dnsenum</p>
 
 
 </br>
@@ -165,15 +153,23 @@
 </p>
 
 
+<!--h1 without bottom border-->
+<div id="user-content-toc">
+  <ul align="left">
+    <summary><h2 style="display: inline-block">Fase 2.Escaneo y Análisis de vulnerabilidades </h2></summary>
+  </ul>
+</div>
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Enumeracion</h2>
 
-
-### 👨🏻‍💻 &nbsp; Fase 2.Escaneo y Análisis de vulnerabilidades
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Enumeracion</h2>
 
 <!-- ## Enumeracion -->
 
-<p> Es el proceso de extraer información más detallada sobre los activos que descubrimos durante nuestro reconocimiento inicial.</p>
+<p> Extracción de información detallada sobre recursos específicos: usuarios, directorios, vulnerabilidades, etc.)</p>
+
+
+<p><b> • Motores de búsqueda:</b></p> 
+<p> Utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un reconocimiento activo para usted.</p>
 
 
 ### &nbsp; Tipos de enumeracion
