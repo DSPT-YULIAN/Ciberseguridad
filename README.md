@@ -16,7 +16,13 @@
 
 
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2>Reconocimiento</h2>
+<!--h1 without bottom border-->
+<div id="user-content-toc">
+  <ul align="left">
+    <summary><h2 style="display: inline-block">Fase 1. Recomocimiento pasivo y activo</h2></summary>
+  </ul>
+</div>
+
 
 <!-- ## Reconocimiento -->
 
@@ -26,22 +32,8 @@
 </br>
 
 
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> Recomocimiento pasivo (No hay interacción directa con el objetivo) </h2>
 
-<!--h1 without bottom border-->
-<div id="user-content-toc">
-  <ul align="left">
-    <summary><h2 style="display: inline-block">Fase 1. Recomocimiento pasivo y activo</h2></summary>
-  </ul>
-</div>
-
-
-
-<!--h1 without bottom border-->
-<div id="user-content-toc">
-  <ul align="left">
-    <summary><h4 style="display: inline-block">Recomocimiento pasivo (No hay interacción directa con el objetivo)</h4></summary>
-  </ul>
-</div>
 
 
 <p> La principal forma de lograrlo es mediante Inteligencia de Fuentes Abiertas (OSINT) , que consiste en recopilar información sobre nuestro objetivo 
@@ -115,13 +107,9 @@
 </br>
 
 
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> Recomocimiento activo (Implica interacción directa con el objetivo) </h2>
 
-<!--h1 without bottom border-->
-<div id="user-content-toc">
-  <ul align="left">
-    <summary><h4 style="display: inline-block">Recomocimiento activo (Implica interacción directa con el objetivo)</h4></summary>
-  </ul>
-</div>
+
 
 ### 👨🏻‍💻 &nbsp; Recomocimiento activo (Implica interacción directa con el objetivo)
 
