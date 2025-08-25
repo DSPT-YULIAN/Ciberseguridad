@@ -64,24 +64,20 @@
 <p><b>  • Certificados SSL:</b></p>
 <p> Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. ¡Un excelente lugar para encontrar nombres de dominio y subdominio! </p>
 
-		
 <p><b> • Análisis del sitio web:</b></p>
 <p> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. Por ejemplo, revisar su página "Sobre nosotros". Adivinar rutas aleatorias en el sitio ejemplo ( mytarget.com/admin ) </p>
 
 <p><b> • Consultas WHOIS:</b></p>
-<p>recuperación de información de registro de dominio.</p>
+<p> Recuperación de información de registro de dominio.</p>
 	
 <p><b> • Consultas DNS:</b></p>
-<p>recopilación de registros DNS, como registros MX, A y CNAME.</p>
+<p> Recopilación de registros DNS, como registros MX, A y CNAME.</p>
 	
-<p><b> • Motores de búsqueda:</b></p>
-<p>utilice motores de búsqueda para encontrar información sobre el objetivo de otras personas ya han realizado un reconocimiento activo.</p>
-			
 <p><b> • Informes disponibles públicamente:</b></p>
-<p>análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b>
+<p> Análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b>
 
 <p><b> • Redes sociales:</b></p>
-<p>recopilación de información de plataformas de redes sociales.</p>
+<p> Recopilación de información de plataformas de redes sociales.</p>
 
 </br>
 
@@ -103,7 +99,6 @@
 
 <p> Recopilar información interactuando directamente con el objetivo (envío de paquetes, solicitudes, etc.)  </p>
 
-
 </br>
 
 <p> • Puede ser detectado por el objetivo (deja rastro en logs).</p>
@@ -114,7 +109,6 @@
 ### &nbsp; Metodos
 
 </br>
-
 
 <p><b> • Barrido de ping :</b></p>  
 <p> Envío de solicitudes de eco ICMP para identificar hosts activos.</p>
@@ -146,6 +140,125 @@
 
 
 </br>
+
+### 🛠 &nbsp;Herramientas recomendadas
+
+</br>
+
+### 🛠 &nbsp;Nmap
+
+<p> Es una herramienta esencial en pruebas de penetración para el descubrimiento de hosts y servicios en una red. </p>
+
+
+<p>Reconocimiento Activo con NMAP</p>
+
+<p>Descubrir información básica sobre los sistemas objetivo, como hosts vivos, puertos abiertos y servicios, sin profundizar en detalles específicos.</p>
+
+
+<p><b> • Descubrimiento de hosts en una red :&nbsp; Detecta hosts vivos (sin escanear puertos).</b></p> 
+
+<p> El escaneo de deteccion de host (-sn) es enviar un paquete de solicitud de eco ICMP al destino, un TCP SYN al puerto 443, un TCP ACK al puerto 80 y una solicitud de marca de tiempo ICMP. Si el objetivo responde al eco de ICMP o a los paquetes mencionados anteriormente, se considera activo. un escaneo de este tipo para la detección de host de una subred completa a veces se denomina barrido de ping.</p> 
+
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/T2B41B89/5-1.png" alt="Descripción de la imagen">
+</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wTtwd27m/5.png" alt="Descripción de la imagen">
+</p>
+
+
+<p><b> •Escaneo de puertos abiertos :&nbsp; El escaneo (-sS) usa un escaneo SYN para identificar puertos abiertos de manera sigilosa. Sin completar la conexión TCP </b></p> 
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/xdy23nQn/5-2.png" alt="Descripción de la imagen">
+</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7YRCzMPw/5-5.png" alt="Descripción de la imagen">
+</p>
+
+
+
+<p><b> Detección de sistemas operativos y servicios básicos :&nbsp; Determina el sistema operativo y las versiones de servicios sin explotar vulnerabilidades. </b></p> 
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hvRZy71Y/5-3.png" alt="Descripción de la imagen">
+</p>
+
+
+<p><b> Evadir firewalls/IDS :&nbsp; Fragmentación de paquetes y timing lento y reducir la probabilidad de ser detectado.
+
+
+<p> •T0 (Paranoico) :&nbsp; muy lento, se usa para la evasión de IDS </p> 
+<p> •T1 (Furtivo) :&nbsp; bastante lento, se usa para la evasión de IDS </p> 
+<p> •T2 (Educado) :&nbsp; se ralentiza para consumir menos ancho de banda, se ejecuta aproximadamente 10 veces más lento que el valor predeterminado </p> 
+<p> •T3 (Normal) :&nbsp; predeterminado, un modelo de tiempo dinámico basado en la capacidad de respuesta del objetivo </p> 
+<p> •T4 (Agresivo) :&nbsp; supone una red rápida y confiable y puede abrumar a los objetivos </p> 
+<p> •T5 (Demente) :&nbsp; muy agresivo; probablemente abrumará a los objetivos o perderá los puertos abiertoswindows + enter abre terminal </p> 
+
+
+<p><b> Escaneo de conexión TCP (-sT) :&nbsp; Utiliza el mecanismo de red del sistema operativo subyacente para establecer una conexión TCP completa con el dispositivo de destino que se está escaneando. Dado que crea una conexión completa, crea más tráfico (y, por lo tanto, tarda más en ejecutarse).</b></p> 
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Hs8YqGH1/5-6.png" alt="Descripción de la imagen">
+</p></p>
+
+<p><b> Escaneo UDP (-sU) :&nbsp; si se intenta enumerar un servidor DNS, SNMP o DHCP. Todos estos servicios utilizan UDP para la comunicación entre el cliente y el servidor. Para escanear puertos UDP, Nmap envía un paquete UDP a todos los puertos especificados en la configuración de la línea de comandos. Espera la respuesta del destino. Si recibe un mensaje ICMP de puerto inaccesible, ese puerto se marca como cerrado. Si no se recibe respuesta del puerto UDP de destino, Nmap lo marca como abierto/filtrado</b></p> 
+
+<p>NOTA:&nbsp; Tenga en cuenta que los mensajes ICMP inaccesibles a veces pueden tener una velocidad limitada y, en ese caso, un escaneo de puerto UDP puede tardar mucho más. La limitación de velocidad ICMP se utiliza principalmente para limitar el comportamiento de gusanos o virus y normalmente debe configurarse para permitir que entre el 1 % y el 5 % del ancho de banda entrante disponible (a velocidades de 10 Mbps o 100 Mbps) o entre 100 kbps y 10 000 kbps (a velocidades de 1 Gbps o 10 Gbps) se utilice para el tráfico ICMP.</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/yYTgNgWy/5-7.png" alt="Descripción de la imagen">
+</p></p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/DwCsyJmb/5-8.png" alt="Descripción de la imagen">
+</p></p>
+
+
+<p><b> Escaneo TCP FIN (-sF) :&nbsp; En ocasiones, un filtro de red o un firewall puede detectar un escaneo SYN. En tales casos, es necesario emplear un tipo de paquete diferente en un escaneo de puertos. Con el escaneo TCP FIN, se envía un paquete FIN a un puerto de destino. Si el puerto está cerrado, el sistema de destino devuelve un paquete RST. Si no se recibe nada del puerto de destino, se puede considerar abierto, ya que el comportamiento normal sería ignorar el paquete FIN.</b></p> 
+
+<p>NOTA:&nbsp; Un escaneo TCP FIN no es útil cuando se escanean sistemas basados en Windows, ya que responden con paquetes RST, independientemente del estado del puerto.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wvD7J7x2/5-9.png" alt="Descripción de la imagen">
+</p></p>
+
+</br>
+
+ <img src="https://i.postimg.cc/bw28d4wH/5-10.png" alt="Descripción de la imagen">
+</p></p>
+
+
+<!---------------------------------------------------------------------------------------------------------------------- ## FASE 2 ------------------------------------------------------------------------------------------------------------------------------------------------->
+
 					
 <p align="center">
 
