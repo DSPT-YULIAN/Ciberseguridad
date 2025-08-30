@@ -193,7 +193,7 @@
 
 
 
-<p><b> Detección de sistemas operativos y servicios básicos :&nbsp; Determina el sistema operativo y las versiones de servicios sin explotar vulnerabilidades. </b></p> 
+<p><b> Detección de sistemas operativos (-O) y servicios básicos (-sV) :&nbsp; Determina el sistema operativo y las versiones de servicios sin explotar vulnerabilidades. </b></p> 
 
 </br>
 
@@ -212,6 +212,12 @@
 <p> •T3 (Normal) :&nbsp; predeterminado, un modelo de tiempo dinámico basado en la capacidad de respuesta del objetivo </p> 
 <p> •T4 (Agresivo) :&nbsp; supone una red rápida y confiable y puede abrumar a los objetivos </p> 
 <p> •T5 (Demente) :&nbsp; muy agresivo; probablemente abrumará a los objetivos o perderá los puertos abiertoswindows + enter abre terminal </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/SRyCxWLC/5-4.png" alt="Descripción de la imagen">
+</p>
 
 
 <p><b> Escaneo de conexión TCP (-sT) :&nbsp; Utiliza el mecanismo de red del sistema operativo subyacente para establecer una conexión TCP completa con el dispositivo de destino que se está escaneando. Dado que crea una conexión completa, crea más tráfico (y, por lo tanto, tarda más en ejecutarse).</b></p> 
@@ -259,20 +265,17 @@
 
 <!---------------------------------------------------------------------------------------------------------------------- ## FASE 2 ------------------------------------------------------------------------------------------------------------------------------------------------->
 
-					
-<p align="center">
 
-  <img src="https://i.postimg.cc/kgsWrP5Q/reconocimiento-vs-enumeracion.jpg">
-</p>
-
-
-<!--h1 without bottom border-->
 <div id="user-content-toc">
   <ul align="left">
     <summary><h2 style="display: inline-block">Fase 2.Escaneo y Análisis de vulnerabilidades </h2></summary>
   </ul>
 </div>
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/kgsWrP5Q/reconocimiento-vs-enumeracion.jpg">
+</p>
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Enumeracion</h2>
 
