@@ -288,14 +288,14 @@
 <p> Utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un reconocimiento activo para usted.</p>
 
 
-### &nbsp; Tipos de enumeracion
+### &nbsp; 🛠 &nbsp; Tipos de enumeracion
 
 </br>
 
 <p><b> • Enumeración remota:</b> Lo hacemos a distancia. Este es el tipo de enumeración que sigue a nuestro reconocimiento inicial general. Escaneo con Nmap, la consulta de 
 		servicios con Netcat, o la obtención de información con SNMP.</p>
 
-<p>NMAP Scripting Engine (NSE)</p>
+<p>&nbsp;&nbsp;&nbsp;NMAP Scripting Engine (NSE)</p>
 
 <p> El NSE permite a los usuarios automatizar y ampliar las capacidades de Nmap mediante scripts escritos en el lenguaje de programación Lua. Estos scripts pueden realizar tareas como detección de vulnerabilidades, recolección de información, explotación de servicios y más.</p>
 
@@ -304,20 +304,20 @@
 
 <p>Categorías de scripts:(NSE)</p>
 
-<p>Auth:&nbsp; Su objetivo principal es identificar configuraciones inseguras en los servicios como FTP, SSH, HTTP, SMB, etc. Tales como credenciales predeterminadas o vulnerabilidades relacionadas con la autenticación.</p>
+<p>(Auth):&nbsp; Su objetivo principal es identificar configuraciones inseguras en los servicios como FTP, SSH, HTTP, SMB, etc. Tales como credenciales predeterminadas o vulnerabilidades relacionadas con la autenticación.</p>
 
 </br>
 
  <img src="https://i.postimg.cc/Njyp9gD4/6.png" alt="Descripción de la imagen">
 
 </br>
+</br>
 
+<p>(Discovery):&nbsp; Para descubrimiento de hosts y servicios con mayor alcance y profundidad que un escanero comun.</p>
 
-<p>Discovery:&nbsp; Para descubrimiento de hosts y servicios con mayor alcance y profundidad que un escanero comun.</p>
-
-<p>Descubrir hosts activos en la red (ej. con ARP, ICMP).</p>
-<p>Enumerar servicios ocultos (ej. SNMP, SMB, DNS).</p>
-<p>Recopilar metadatos (ej. sistemas operativos, dispositivos IoT, información de DNS).</p>
+<p> • Descubrir hosts activos en la red (ej. con ARP, ICMP).</p>
+<p> • Enumerar servicios ocultos (ej. SNMP, SMB, DNS).</p>
+<p> • Recopilar metadatos (ej. sistemas operativos, dispositivos IoT, información de DNS).</p>
 
 
 </br>
@@ -340,12 +340,11 @@
  <img src="https://i.postimg.cc/d13JyHHr/6-4.png" alt="Descripción de la imagen">
 
 </br>
-
-
-<p>Exploit:&nbsp; Está diseñado para probar y explotar vulnerabilidades conocidas en sistemas o servicios. Su objetivo principal es verificar si un objetivo es vulnerable a un ataque específico, proporcionando una forma controlada de demostrar el riesgo</p>
-
 </br>
 
+<p>(Exploit):&nbsp; Está diseñado para probar y explotar vulnerabilidades conocidas en sistemas o servicios. Su objetivo principal es verificar si un objetivo es vulnerable a un ataque específico, proporcionando una forma controlada de demostrar el riesgo</p>
+
+</br>
 
  <img src="https://i.postimg.cc/L8sc8Yn0/6-5.png" alt="Descripción de la imagen">
 
@@ -362,9 +361,9 @@
  <img src="https://i.postimg.cc/5Nf5hD0f/6-7.png" alt="Descripción de la imagen">
 
 </br>
+</br>
 
-
-<p>Vuln:&nbsp; Diseñado para detectar vulnerabilidades conocidas en servicios, sistemas o aplicaciones</p>
+<p>(Vuln):&nbsp; Diseñado para detectar vulnerabilidades conocidas en servicios, sistemas o aplicaciones</p>
 
 </br>
 
@@ -375,8 +374,9 @@
  <img src="https://i.postimg.cc/XqCmBJmS/6-9.png" alt="Descripción de la imagen">
 
 </br>
+</br>
 
-<p>Brute:&nbsp; Diseñado para realizar ataques de fuerza bruta contra servicios de autenticación (como FTP, SSH, HTTP, SMB, etc.). Su objetivo es probar credenciales predeterminadas o débiles para identificar accesos no autorizados.</p>
+<p>(Brute):&nbsp; Diseñado para realizar ataques de fuerza bruta contra servicios de autenticación (como FTP, SSH, HTTP, SMB, etc.). Su objetivo es probar credenciales predeterminadas o débiles para identificar accesos no autorizados.</p>
 
 </br>
 
@@ -391,14 +391,15 @@
  <img src="https://i.postimg.cc/8CfRS66S/7-1.png" alt="Descripción de la imagen">
 
 </br>
+</br>
 
 
-<p>Safe:&nbsp; Diseñado para realizar pruebas no intrusivas y seguras en sistemas y servicios. A diferencia de los scripts vulno brute, los scripts safeestán pensados para no causar ningún daño o interrupción en los sistemas objetivo, lo que los hace ideales para:</p>
+<p>(Safe):&nbsp; Diseñado para realizar pruebas no intrusivas y seguras en sistemas y servicios. A diferencia de los scripts vulno brute, los scripts safeestán pensados para no causar ningún daño o interrupción en los sistemas objetivo, lo que los hace ideales para:</p>
 
 
-<p>Escaneos preliminares en entornos sensibles.</p>
-<p>Auditorías de cumplimiento donde se requiere minimizar riesgos.</p>
-<p>Verificación básica de servicios sin afectar su funcionamiento.</p>
+<p> • Escaneos preliminares en entornos sensibles.</p>
+<p> • Auditorías de cumplimiento donde se requiere minimizar riesgos.</p>
+<p> • Verificación básica de servicios sin afectar su funcionamiento.</p>
 
 </br>
 
@@ -406,8 +407,7 @@
 
 </br>
 
-<p><b> • Enumeración local:</b> esto suele ocurrir después de la explotación, centrándose en los sistemas a los que hemos obtenido acceso y buscando datos confidenciales,
-		 privilegios adicionales o formas de acceder a otros sistemas. Herramientas como PowerShell, whoami, net user, y wmic permiten extraer información valiosa.</p>
+<p><b> • Enumeración local:</b> esto suele ocurrir después de la explotación, centrándose en los sistemas a los que hemos obtenido acceso y buscando datos confidenciales,privilegios adicionales o formas de acceder a otros sistemas. Herramientas como PowerShell, whoami, net user, y wmic permiten extraer información valiosa.</p>
 		
 <p><b> • Enumeración de hots:</b> Es posible que haya encontrado sistemas específicos en el reconocimiento inicial que necesitan una exploración más detallada (remoto), 
 		o es posible que ya tenga acceso a una máquina y desee explorarla para ver qué información puede obtener y cómo podría ayudar a acceder a otros sistemas (local).
