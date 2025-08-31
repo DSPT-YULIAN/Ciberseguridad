@@ -295,6 +295,117 @@
 <p><b> • Enumeración remota:</b> Lo hacemos a distancia. Este es el tipo de enumeración que sigue a nuestro reconocimiento inicial general. Escaneo con Nmap, la consulta de 
 		servicios con Netcat, o la obtención de información con SNMP.</p>
 
+<p>NMAP Scripting Engine (NSE)</p>
+
+<p> El NSE permite a los usuarios automatizar y ampliar las capacidades de Nmap mediante scripts escritos en el lenguaje de programación Lua. Estos scripts pueden realizar tareas como detección de vulnerabilidades, recolección de información, explotación de servicios y más.</p>
+
+
+<p>Ejemplo de uso:&nbsp;  nmap --script (nombre_del_script) (objetivo) </p>
+
+<p>Categorías de scripts:(NSE)</p>
+
+<p>Auth:&nbsp; Su objetivo principal es identificar configuraciones inseguras en los servicios como FTP, SSH, HTTP, SMB, etc. Tales como credenciales predeterminadas o vulnerabilidades relacionadas con la autenticación.</p>
+
+</br>
+
+ <img src="https://i.postimg.cc/Njyp9gD4/6.png" alt="Descripción de la imagen">
+
+</br>
+
+
+<p>Discovery:&nbsp; Para descubrimiento de hosts y servicios con mayor alcance y profundidad que un escanero comun.</p>
+
+<p>Descubrir hosts activos en la red (ej. con ARP, ICMP).</p>
+<p>Enumerar servicios ocultos (ej. SNMP, SMB, DNS).</p>
+<p>Recopilar metadatos (ej. sistemas operativos, dispositivos IoT, información de DNS).</p>
+
+
+</br>
+
+ <img src="https://i.postimg.cc/7YGbc6N0/6-1.png" alt="Descripción de la imagen">
+
+</br>
+
+
+ <img src="https://i.postimg.cc/wBVBJs68/6-2.png" alt="Descripción de la imagen">
+
+</br>
+
+
+ <img src="https://i.postimg.cc/CMtxj0V1/6-3.png" alt="Descripción de la imagen">
+
+</br>
+
+
+ <img src="https://i.postimg.cc/d13JyHHr/6-4.png" alt="Descripción de la imagen">
+
+</br>
+
+
+<p>Exploit:&nbsp; Está diseñado para probar y explotar vulnerabilidades conocidas en sistemas o servicios. Su objetivo principal es verificar si un objetivo es vulnerable a un ataque específico, proporcionando una forma controlada de demostrar el riesgo</p>
+
+</br>
+
+
+ <img src="https://i.postimg.cc/L8sc8Yn0/6-5.png" alt="Descripción de la imagen">
+
+</br>
+
+ <img src="https://i.postimg.cc/9fRsy6Pd/6-6.png" alt="Descripción de la imagen">
+
+</br>
+
+<p>Ejemplo de script :&nbsp;  Exploit</p>
+
+</br>
+
+ <img src="https://i.postimg.cc/5Nf5hD0f/6-7.png" alt="Descripción de la imagen">
+
+</br>
+
+
+<p>Vuln:&nbsp; Diseñado para detectar vulnerabilidades conocidas en servicios, sistemas o aplicaciones</p>
+
+</br>
+
+ <img src="https://i.postimg.cc/j5CGKvhj/6-8.png" alt="Descripción de la imagen">
+
+</br>
+
+ <img src="https://i.postimg.cc/XqCmBJmS/6-9.png" alt="Descripción de la imagen">
+
+</br>
+
+<p>Brute:&nbsp; Diseñado para realizar ataques de fuerza bruta contra servicios de autenticación (como FTP, SSH, HTTP, SMB, etc.). Su objetivo es probar credenciales predeterminadas o débiles para identificar accesos no autorizados.</p>
+
+</br>
+
+ <img src="https://i.postimg.cc/VkGg1wZj/7.png" alt="Descripción de la imagen">
+
+</br>
+
+<p>Ejemplo de script :&nbsp;  Brute </p>
+
+</br>
+
+ <img src="https://i.postimg.cc/8CfRS66S/7-1.png" alt="Descripción de la imagen">
+
+</br>
+
+
+<p>Safe:&nbsp; Diseñado para realizar pruebas no intrusivas y seguras en sistemas y servicios. A diferencia de los scripts vulno brute, los scripts safeestán pensados para no causar ningún daño o interrupción en los sistemas objetivo, lo que los hace ideales para:</p>
+
+
+<p>Escaneos preliminares en entornos sensibles.</p>
+<p>Auditorías de cumplimiento donde se requiere minimizar riesgos.</p>
+<p>Verificación básica de servicios sin afectar su funcionamiento.</p>
+
+</br>
+
+ <img src="https://i.postimg.cc/G2Y6HtZ0/7-2.png" alt="Descripción de la imagen">
+
+</br>
+
 <p><b> • Enumeración local:</b> esto suele ocurrir después de la explotación, centrándose en los sistemas a los que hemos obtenido acceso y buscando datos confidenciales,
 		 privilegios adicionales o formas de acceder a otros sistemas. Herramientas como PowerShell, whoami, net user, y wmic permiten extraer información valiosa.</p>
 		
