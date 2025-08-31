@@ -288,14 +288,27 @@
 <p> Utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un reconocimiento activo para usted.</p>
 
 
-### &nbsp; 🛠 &nbsp; Tipos de enumeracion
+### &nbsp; &nbsp; Tipos de enumeracion
 
 </br>
 
 <p><b> • Enumeración remota:</b> Lo hacemos a distancia. Este es el tipo de enumeración que sigue a nuestro reconocimiento inicial general. Escaneo con Nmap, la consulta de 
 		servicios con Netcat, o la obtención de información con SNMP.</p>
 
-<p>&nbsp;&nbsp;&nbsp;NMAP Scripting Engine (NSE)</p>
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h3 style="display: inline-block">🛠 NMAP Scripting Engine (NSE) </h3></summary>
+  </ul>
+</div>
+
+
+</br>
+
+ <img src="https://i.postimg.cc/4xXgh65J/NMAP.png" alt="Descripción de la imagen">
+
+</br>
+
 
 <p> El NSE permite a los usuarios automatizar y ampliar las capacidades de Nmap mediante scripts escritos en el lenguaje de programación Lua. Estos scripts pueden realizar tareas como detección de vulnerabilidades, recolección de información, explotación de servicios y más.</p>
 
@@ -406,6 +419,17 @@
  <img src="https://i.postimg.cc/G2Y6HtZ0/7-2.png" alt="Descripción de la imagen">
 
 </br>
+
+
+<div id="user-content-toc">
+  <ul align="left">
+    <summary><h3 style="display: inline-block">🛠 NMAP Scripting Engine (NSE) </h3></summary>
+  </ul>
+</div>
+
+
+
+
 
 <p><b> • Enumeración local:</b> esto suele ocurrir después de la explotación, centrándose en los sistemas a los que hemos obtenido acceso y buscando datos confidenciales,privilegios adicionales o formas de acceder a otros sistemas. Herramientas como PowerShell, whoami, net user, y wmic permiten extraer información valiosa.</p>
 		
