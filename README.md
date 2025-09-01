@@ -301,8 +301,14 @@
     <summary><h3 style="display: inline-block">🛠 NMAP Scripting Engine (NSE) </h3></summary>
   </ul>
 </div>
- <img src="https://i.postimg.cc/4xXgh65J/NMAP.png" alt="Descripción de la imagen" align="center">
 
+ <p align="center">
+
+ <img src="https://i.postimg.cc/4xXgh65J/NMAP.png" alt="Descripción de la imagen">
+
+ </p>
+
+</br>
 </br>
 
 <p> El NSE permite a los usuarios automatizar y ampliar las capacidades de Nmap mediante scripts escritos en el lenguaje de programación Lua. Estos scripts pueden realizar tareas como detección de vulnerabilidades, recolección de información, explotación de servicios y más.</p>
@@ -421,8 +427,15 @@
     <summary><h3 style="display: inline-block">🛠 NETCAT </h3></summary>
   </ul>
 </div>
- <img src="https://i.postimg.cc/G3vVJB99/netcat.png" alt="Descripción de la imagen" align="center">
 
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/G3vVJB99/netcat.png" alt="Descripción de la imagen">
+
+ </p>
+
+</br>
 </br>
 
 <p>Netcat (nc) es una herramienta de red versátil conocida como el "navaja suiza" de las redes. Permite leer y escribir datos en conexiones de red usando protocolos TCP o UDP. Es ampliamente utilizado en pruebas de penetración, administración de redes y debugging.</p>
