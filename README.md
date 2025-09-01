@@ -264,7 +264,8 @@
 
 
 <!---------------------------------------------------------------------------------------------------------------------- ## FASE 2 ------------------------------------------------------------------------------------------------------------------------------------------------->
-
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <div id="user-content-toc">
   <ul align="left">
@@ -292,8 +293,7 @@
 
 </br>
 
-<p><b> • Enumeración remota:</b> Lo hacemos a distancia. Este es el tipo de enumeración que sigue a nuestro reconocimiento inicial general. Escaneo con Nmap, la consulta de 
-		servicios con Netcat, o la obtención de información con SNMP.</p>
+<p><b> • Enumeración remota:</b> Lo hacemos a distancia. Este es el tipo de enumeración que sigue a nuestro reconocimiento inicial general. Escaneo con Nmap, la consulta de servicios con Netcat, o la obtención de información con SNMP.</p>
 
 
 <div id="user-content-toc">
@@ -301,14 +301,9 @@
     <summary><h3 style="display: inline-block">🛠 NMAP Scripting Engine (NSE) </h3></summary>
   </ul>
 </div>
-
-
-</br>
-
- <img src="https://i.postimg.cc/4xXgh65J/NMAP.png" alt="Descripción de la imagen">
+ <img src="https://i.postimg.cc/4xXgh65J/NMAP.png" alt="Descripción de la imagen" align="center">
 
 </br>
-
 
 <p> El NSE permite a los usuarios automatizar y ampliar las capacidades de Nmap mediante scripts escritos en el lenguaje de programación Lua. Estos scripts pueden realizar tareas como detección de vulnerabilidades, recolección de información, explotación de servicios y más.</p>
 
@@ -422,10 +417,30 @@
 
 
 <div id="user-content-toc">
-  <ul align="left">
-    <summary><h3 style="display: inline-block">🛠 NMAP Scripting Engine (NSE) </h3></summary>
+  <ul align="center">
+    <summary><h3 style="display: inline-block">🛠 NETCAT </h3></summary>
   </ul>
 </div>
+ <img src="https://i.postimg.cc/G3vVJB99/netcat.png" alt="Descripción de la imagen" align="center">
+
+</br>
+
+<p>Netcat (nc) es una herramienta de red versátil conocida como el "navaja suiza" de las redes. Permite leer y escribir datos en conexiones de red usando protocolos TCP o UDP. Es ampliamente utilizado en pruebas de penetración, administración de redes y debugging.</p>
+
+
+<p> • Protocolos soportados: TCP y UDP.</p>
+<p> • Modos de operación:
+    &nbsp;   • Cliente: Conecta a un servidor remoto.
+    &nbsp;   • Servidor: Escucha en un puerto para aceptar conexiones entrantes.</p>
+<p> • Transferencia de datos: Permite enviar y recibir datos en texto plano o binarios.</p>
+<p> • Port forwarding y tunneling: Puede redirigir tráfico entre puertos o hosts.</p>
+<p> • Scripting: Se puede integrar con scripts para automatizar tareas.</p>
+<p> • Escaneo de puertos: Útil para verificar puertos abiertos en un host remoto.</p>
+
+
+
+
+
 
 
 
