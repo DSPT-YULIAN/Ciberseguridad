@@ -293,7 +293,12 @@
 
 </br>
 
-<p><b> • Enumeración remota:</b> Lo hacemos a distancia. Este es el tipo de enumeración que sigue a nuestro reconocimiento inicial general. Escaneo con Nmap, la consulta de servicios con Netcat, o la obtención de información con SNMP.</p>
+<p><h3> • Enumeración de Servicios de Red: </h3> Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
+
+
+<p>1.  Identificar servicios vulnerables: Al conocer la versión de un servicio, se pueden buscar vulnerabilidades conocidas asociadas a esa versión.</p>
+<p>2.  Determinar vectores de ataque: Por ejemplo, si un servicio como FTP o SMB está expuesto, podría ser explotado para ganar acceso inicial.</p>
+<p>3.  Mapear la red: Ayuda a entender la arquitectura de la red y cómo interactúan los sistemas entre sí.</p>
 
 
 <div id="user-content-toc">
@@ -325,7 +330,7 @@
  <img src="https://i.postimg.cc/Njyp9gD4/6.png" alt="Descripción de la imagen">
 
 </br>
-</br>
+
 
 <p>(Discovery):&nbsp; Para descubrimiento de hosts y servicios con mayor alcance y profundidad que un escanero comun.</p>
 
@@ -436,19 +441,64 @@
  </p>
 
 </br>
-</br>
+
 
 <p>Netcat (nc) es una herramienta de red versátil conocida como el "navaja suiza" de las redes. Permite leer y escribir datos en conexiones de red usando protocolos TCP o UDP. Es ampliamente utilizado en pruebas de penetración, administración de redes y debugging.</p>
 
+<p> &nbsp; &nbsp; Nota: El trafico no esta encriptado </p>
 
-<p> • Protocolos soportados: TCP y UDP.</p>
-<p> • Modos de operación:
-    &nbsp;   • Cliente: Conecta a un servidor remoto.
-    &nbsp;   • Servidor: Escucha en un puerto para aceptar conexiones entrantes.</p>
-<p> • Transferencia de datos: Permite enviar y recibir datos en texto plano o binarios.</p>
-<p> • Port forwarding y tunneling: Puede redirigir tráfico entre puertos o hosts.</p>
-<p> • Scripting: Se puede integrar con scripts para automatizar tareas.</p>
-<p> • Escaneo de puertos: Útil para verificar puertos abiertos en un host remoto.</p>
+<p> Usos comunes de NETCAT</p>
+
+<p> <h4> • Depuración de redes </h4> </p>
+<p>    &nbsp; &nbsp;  • Verifique si un puerto está abierto o cerrado.</p>
+<p>    &nbsp; &nbsp;  • Probar servicios de red (HTTP, SMTP, etc.).</p>
+
+<p> Syntax: nc -nv -w1 -z</p>
+<p> nc -zv (IP) (PUERTO) </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/LXd5G1Cn/1.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> &nbsp; &nbsp; NETCAT  no tiene incorporada la opcion de escanear varios host por lo tanto existen dos soluciones   </p>
+<p> &nbsp;  1. Bash scripts one-liner</p>
+<p> &nbsp;  2. Script en Phython  </p>
+<p> • -z: &nbsp; Modo de escaneo sin enviar datos, definir el rango de puertos a escanear sin establecer conexion completa </p>
+<p> • -v: &nbsp; Muestra informacion detallada de la conexion  "Sin -v no mostrara si el puerto esta abierto o cerrado" </p>
+<p> • -n: &nbsp; Evita la resolucion DNS (acelera el escaneo) Util cuando no se requiere resolver nombres de dominio </p>
+<p> • -u  &nbsp; Escaneo UDP (por defecto NETCAT usa TCP) </p>
+<p> • -w 1 &nbsp; Definir tiempo de espera para la conexion si el puerto no responde en "n" segundos pasa al siguiente </p>
+
+
+<p> • Transferencia de archivos : </p>
+<p>    &nbsp; &nbsp;  • Enviar o recibir archivos entre hosts.</p>
+
+<p> • Shell remoto: Permite enviar y recibir datos en texto plano o binarios.</p>
+<p>    &nbsp; &nbsp;  • Establecer una concha inversa o unir concha (útil en pruebas de penetración).</p>
+
+<p> • Proxy y tunelización.</p>
+<p>    &nbsp; &nbsp;  • Redirigir el tráfico a través de un host intermedio.</p>
+
+
+<p> • Creación de servidores simples :.</p>
+<p>    &nbsp; &nbsp;  • Servidor de chat, servidor HTTP básico, etc.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
