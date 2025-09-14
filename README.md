@@ -288,11 +288,9 @@
 <p><b> • Motores de búsqueda:</b></p> 
 <p> Utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un reconocimiento activo para usted.</p>
 
+</br>
 
-### &nbsp; &nbsp; Tipos de enumeracion
-
-
-<p><h2> • Enumeración de Servicios de Red: </h2> Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
+<p><h2> Enumeración de Servicios de Red: </h2> Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
 
 
 <p>1.  Identificar servicios vulnerables: Al conocer la versión de un servicio, se pueden buscar vulnerabilidades conocidas asociadas a esa versión.</p>
@@ -320,7 +318,7 @@
 
 <p>Ejemplo de uso:&nbsp;  nmap --script (nombre_del_script) (objetivo) </p>
 
-<p>Categorías de scripts:(NSE)</p>
+<h3>Categorías de scripts:(NSE)</h3>
 
 <p>(Auth):&nbsp; Su objetivo principal es identificar configuraciones inseguras en los servicios como FTP, SSH, HTTP, SMB, etc. Tales como credenciales predeterminadas o vulnerabilidades relacionadas con la autenticación.</p>
 
@@ -331,7 +329,7 @@
 </br>
 
 
-<p>(Discovery):&nbsp; Para descubrimiento de hosts y servicios con mayor alcance y profundidad que un escanero comun.</p>
+<p>(Discovery):&nbsp; Descubrimiento de hosts y servicios con mayor alcance y profundidad que un escanero comun.</p>
 
 <p> • Descubrir hosts activos en la red (ej. con ARP, ICMP).</p>
 <p> • Enumerar servicios ocultos (ej. SNMP, SMB, DNS).</p>
@@ -371,6 +369,7 @@
  <img src="https://i.postimg.cc/9fRsy6Pd/6-6.png" alt="Descripción de la imagen">
 
 </br>
+</br>
 
 <p>Ejemplo de script :&nbsp;  Exploit</p>
 
@@ -400,6 +399,7 @@
 
  <img src="https://i.postimg.cc/VkGg1wZj/7.png" alt="Descripción de la imagen">
 
+</br>
 </br>
 
 <p>Ejemplo de script :&nbsp;  Brute </p>
@@ -453,9 +453,9 @@
 <p>    &nbsp; &nbsp;  • Probar servicios de red (HTTP, SMTP, etc.).</p>
 
 <p> Syntax: nc -nv -w1 -z</p>
-<p> nc -zv (IP) (PUERTO) </p>
+<p> nc -zv  [IP] [PUERTO] </p>
 
-<p> <h4> Comandos </h4> </p>
+<h3> Comandos </h3>
 
 <p> • -z: &nbsp; Modo de escaneo sin enviar datos, definir el rango de puertos a escanear sin establecer conexion completa </p>
 <p> • -v: &nbsp; Muestra informacion detallada de la conexion  "Sin -v no mostrara si el puerto esta abierto o cerrado" </p>
@@ -478,18 +478,13 @@
 
 <p> <h4> Otros usos de NETCAT </h4> </p>
 
-<p> 2. Transferencia de archivos : </p>
-<p>    &nbsp; &nbsp;   Enviar o recibir archivos entre hosts.</p>
+<p> 2. Transferencia de archivos : &nbsp; &nbsp;   Enviar o recibir archivos entre hosts.</p>
 
 <p> 3. Shell remoto: Permite enviar y recibir datos en texto plano o binarios.</p>
-<p>    &nbsp; &nbsp;   Establecer una concha inversa o unir concha (útil en pruebas de penetración).</p>
 
-<p> 4 Proxy y tunelización.</p>
-<p>    &nbsp; &nbsp;   Redirigir el tráfico a través de un host intermedio.</p>
+<p> 4. Proxy y tunelización: &nbsp; &nbsp;   Redirigir el tráfico a través de un host intermedio.</p>
 
-
-<p> 5 Creación de servidores simples :.</p>
-<p>    &nbsp; &nbsp;   Servidor de chat, servidor HTTP básico, etc.</p>
+<p> 5. Creación de servidores simples: &nbsp; &nbsp; Servidor de chat, servidor HTTP básico, etc.</p>
 
 
 <div id="user-content-toc">
@@ -524,8 +519,6 @@
  </p>
 
 
-</br>
-
 <p> Escaneo de un rango de puertos:</p>
 
 
@@ -534,8 +527,6 @@
  <img src="https://i.postimg.cc/t4bB7qwN/2.png" alt="Descripción de la imagen">
 
  </p>
-
-</br>
 
 <p> Escaneo rango de IPs y exclusion de IPs:</p>
 
@@ -546,7 +537,7 @@
  </p>
 
 </br>
-
+<p> Otros tipos de escaneo</p>
 <p> Ajustar velocidad (--rate):&nbsp; masscan [IP] -p1-65535 --rate 100000 </p>
 <p> Guardar resultados:&nbsp; masscan [IP] -p80 -oX resultado.xml </p>
 
@@ -561,6 +552,112 @@
 
  </p>
 
+<p><h2> Enumeración de usuarios: </h2> La enumeración de usuarios es una técnica utilizada en pruebas de penetración y auditorías de seguridad para identificar nombres de usuario válidos en un sistema, aplicación o servicio. Este proceso es fundamental en las fases iniciales de un ataque, ya que permite a un atacante conocer qué cuentas existen en el sistema, lo que facilita ataques posteriores como fuerza bruta, phishing o ataques de diccionario.</p>
+
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+<p>• RPCClient: &nbsp; Enumerar usuarios en sistemas Windows</p>
+<p>• Metasploit: &nbsp; (auxiliary modules): Módulos como smb_enumuser
+<p>• enum4linux: &nbsp; Para enumerar usuarios en sistemas SMB/LDAP</p>
+
+
+
+### 🛠 &nbsp;enum4linux
+
+</br>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KjnWjJ70/5.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p>Enum4linux es una herramienta de enumeración para sistemas Windows que se utiliza principalmente para recopilar información sobre usuarios, grupos, recursos compartidos, políticas 
+y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de reconocimiento de un test de penetración para identificar posibles vectores de ataque en redes Windows.</p>
+
+
+<p>&nbsp;&nbsp;&nbsp; enum4linux [host] </p>
+
+<p> • Información sobre objetivos </p>
+<p> • Enumerar grupo de trabajo/dominio</p>
+<p> • Información sobre Nbtstat</p>
+<p> • Comprobación de la sesión</p>
+<p> • Obtención del SID de dominio</p>
+<p> • Información sobre el Sistema Operativo </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cHc90Bmb/1.png" alt="Descripción de la imagen">
+</p>
+
+<p> • Usuarios</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/yxQLS62h/2.png" alt="Descripción de la imagen">
+</p>
+
+<p> • Enumeración de acciones </p>
+<p> • Informacion de politicas de contraseñas </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/WbzWcrJ5/3.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> • Grupos </p>
+<p> • Enumerando usuarios usando SID  y nombre de usuario '', contraseña ''</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/s2YK44tg/4.png" alt="Descripción de la imagen">
+</p>
+
+
+
+<p>opciones de uso: enum4linux -U [host]  </p>
+
+
+<p> •  -U obtener lista de usuarios </p>
+<p> •  -M obtener lista de máquinas </p>
+<p> •  -S obtener lista compartida </p>
+<p> •  -P obtener información sobre la política de contraseñas </p>
+<p> •  -G obtener lista de grupos y miembros </p>
+<p> •  -d ser detallado, se aplica a -U y -S </p>
+<p> •  -u user especifica el nombre de usuario a utilizar (por defecto «») </p> 
+<p> •  -p pass especificar la contraseña a utilizar (por defecto «») </p>
+<p> •  -i obtiene una lista de impresoras</p>
+<p> •  -a Combina las opciones -U, -S, -G, -P, -r, -o, -n, -i en un solo comando</p>
+<p> •  -k user Usuario(s) que existe(n) en el sistema remoto</p>
+<p> •  -o Obtener información del sistema operativo</p>
+<p> •  -n Hacer un nmblookup (similar a nbtstat)</p>
+<p> •  -v Verbose.  Muestra todos los comandos que se están ejecutando (net, rpcclient, etc.)</p>
+<p> •  -A Agresivo. Realiza comprobaciones de escritura en recursos compartidos, etc.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -570,8 +667,7 @@
 		o es posible que ya tenga acceso a una máquina y desee explorarla para ver qué información puede obtener y cómo podría ayudar a acceder a otros sistemas (local).
 		Herramientas como Fping, Masscan, y Angry IP Scanner son utilizadasSe enfoca en identificar dispositivos activos en una red. Técnicas como el ping sweep, el escaneo ARP</p>
 		
-<p><b> • Enumeración de servicios:</b> LTras identificar los servicios en ejecución (y sus posibles versiones) en un host, es hora de interactuar con ellos utilizando sus protocolos. 
-		Si no se encontró nada interesante ni vulnerable en las fases anteriores, aquí es donde profundizamos en los detalles y donde dedicaremos la mayor parte del tiempo.</p>
+
 
 <p> 	» Enumeración NetBIOS :recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows.</p>
 
@@ -611,73 +707,6 @@
 
 </br>
 
-### 🛠 &nbsp;enum4linux
-
-</br>
-
-<p>Enum4linux es una herramienta de enumeración para sistemas Windows que se utiliza principalmente para recopilar información sobre usuarios, grupos, recursos compartidos, políticas 
-y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de reconocimiento de un test de penetración para identificar posibles vectores de ataque en redes Windows.</p>
-
-
-<p>&nbsp;&nbsp;&nbsp; enum4linux [host] </p>
-
-<p>	•	Información sobre objetivos </p>
-<p>	•	Enumerar grupo de trabajo/dominio</p>
-<p>	•	Información sobre Nbtstat</p>
-<p>	•	Comprobación de la sesión</p>
-<p>	•	Obtención del SID de dominio</p>
-<p>	•	Información sobre el Sistema Operativo </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/cHc90Bmb/1.png" alt="Descripción de la imagen">
-</p>
-
-<p>	•	Usuarios</p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/yxQLS62h/2.png" alt="Descripción de la imagen">
-</p>
-
-<p>	•	Enumeración de acciones </p>
-<p>	•	Informacion de politicas de contraseñas </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/WbzWcrJ5/3.png" alt="Descripción de la imagen">
-</p>
-
-
-<p>	•	Grupos </p>
-<p>	•	Enumerando usuarios usando SID  y nombre de usuario '', contraseña ''</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/s2YK44tg/4.png" alt="Descripción de la imagen">
-</p>
-
-
-
-<p>opciones de uso: enum4linux -U [host]  </p>
-
-
-<p> •  -U obtener lista de usuarios </p>
-<p> •  -M obtener lista de máquinas </p>
-<p> •  -S obtener lista compartida </p>
-<p> •  -P obtener información sobre la política de contraseñas </p>
-<p> •  -G obtener lista de grupos y miembros </p>
-<p> •  -d ser detallado, se aplica a -U y -S </p>
-<p> •  -u user especifica el nombre de usuario a utilizar (por defecto «») </p> 
-<p> •  -p pass especificar la contraseña a utilizar (por defecto «») </p>
-<p> •  -i obtiene una lista de impresoras</p>
-<p> •  -a Combina las opciones -U, -S, -G, -P, -r, -o, -n, -i en un solo comando</p>
-<p> •  -k user Usuario(s) que existe(n) en el sistema remoto</p>
-<p> •  -o Obtener información del sistema operativo</p>
-<p> •  -n Hacer un nmblookup (similar a nbtstat)</p>
-<p> •  -v Verbose.  Muestra todos los comandos que se están ejecutando (net, rpcclient, etc.)</p>
-<p> •  -A Agresivo. Realiza comprobaciones de escritura en recursos compartidos, etc.</p>
 
 
 <!--horizontal divider(gradiant)-->
