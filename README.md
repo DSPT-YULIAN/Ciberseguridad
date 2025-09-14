@@ -291,9 +291,8 @@
 
 ### &nbsp; &nbsp; Tipos de enumeracion
 
-</br>
 
-<p><h3> • Enumeración de Servicios de Red: </h3> Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
+<p><h2> • Enumeración de Servicios de Red: </h2> Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
 
 
 <p>1.  Identificar servicios vulnerables: Al conocer la versión de un servicio, se pueden buscar vulnerabilidades conocidas asociadas a esa versión.</p>
@@ -316,7 +315,7 @@
 </br>
 </br>
 
-<p> El NSE permite a los usuarios automatizar y ampliar las capacidades de Nmap mediante scripts escritos en el lenguaje de programación Lua. Estos scripts pueden realizar tareas como detección de vulnerabilidades, recolección de información, explotación de servicios y más.</p>
+<p> El NSE (Nmap Scripting Engine - Motor de Scripting de Nmap ) permite a los usuarios automatizar y ampliar las capacidades de Nmap mediante scripts escritos en el lenguaje de programación Lua. Estos scripts pueden realizar tareas como detección de vulnerabilidades, recolección de información, explotación de servicios y más.</p>
 
 
 <p>Ejemplo de uso:&nbsp;  nmap --script (nombre_del_script) (objetivo) </p>
@@ -413,7 +412,7 @@
 </br>
 
 
-<p>(Safe):&nbsp; Diseñado para realizar pruebas no intrusivas y seguras en sistemas y servicios. A diferencia de los scripts vulno brute, los scripts safeestán pensados para no causar ningún daño o interrupción en los sistemas objetivo, lo que los hace ideales para:</p>
+<p>(Safe):&nbsp; Diseñado para realizar pruebas no intrusivas y seguras en sistemas y servicios. A diferencia de los scripts vuln o brute, los scripts safe están pensados para no causar ningún daño o interrupción en los sistemas objetivo, lo que los hace ideales para:</p>
 
 
 <p> • Escaneos preliminares en entornos sensibles.</p>
@@ -449,12 +448,21 @@
 
 <p> Usos comunes de NETCAT</p>
 
-<p> <h4> • Depuración de redes </h4> </p>
+<p> <h4> 1. Depuración de redes </h4> </p>
 <p>    &nbsp; &nbsp;  • Verifique si un puerto está abierto o cerrado.</p>
 <p>    &nbsp; &nbsp;  • Probar servicios de red (HTTP, SMTP, etc.).</p>
 
 <p> Syntax: nc -nv -w1 -z</p>
 <p> nc -zv (IP) (PUERTO) </p>
+
+<p> <h4> Comandos </h4> </p>
+
+<p> • -z: &nbsp; Modo de escaneo sin enviar datos, definir el rango de puertos a escanear sin establecer conexion completa </p>
+<p> • -v: &nbsp; Muestra informacion detallada de la conexion  "Sin -v no mostrara si el puerto esta abierto o cerrado" </p>
+<p> • -n: &nbsp; Evita la resolucion DNS (acelera el escaneo) Util cuando no se requiere resolver nombres de dominio </p>
+<p> • -u  &nbsp; Escaneo UDP (por defecto NETCAT usa TCP) </p>
+<p> • -w 1 &nbsp; Definir tiempo de espera para la conexion si el puerto no responde en "n" segundos pasa al siguiente </p>
+
 
 <p align="center">
 
@@ -463,48 +471,95 @@
  </p>
 
 
-<p> &nbsp; &nbsp; NETCAT  no tiene incorporada la opcion de escanear varios host por lo tanto existen dos soluciones   </p>
-<p> &nbsp;  1. Bash scripts one-liner</p>
-<p> &nbsp;  2. Script en Phython  </p>
-<p> • -z: &nbsp; Modo de escaneo sin enviar datos, definir el rango de puertos a escanear sin establecer conexion completa </p>
-<p> • -v: &nbsp; Muestra informacion detallada de la conexion  "Sin -v no mostrara si el puerto esta abierto o cerrado" </p>
-<p> • -n: &nbsp; Evita la resolucion DNS (acelera el escaneo) Util cuando no se requiere resolver nombres de dominio </p>
-<p> • -u  &nbsp; Escaneo UDP (por defecto NETCAT usa TCP) </p>
-<p> • -w 1 &nbsp; Definir tiempo de espera para la conexion si el puerto no responde en "n" segundos pasa al siguiente </p>
+<p> &nbsp; &nbsp; NETCAT  no tiene incorporada la opcion de escanear varios host por lo tanto existen dos soluciones:   </p>
+<p> &nbsp;  • Bash scripts one-liner</p>
+<p> &nbsp;  • Script en Phython  </p>
 
 
-<p> • Transferencia de archivos : </p>
-<p>    &nbsp; &nbsp;  • Enviar o recibir archivos entre hosts.</p>
+<p> <h4> Otros usos de NETCAT </h4> </p>
 
-<p> • Shell remoto: Permite enviar y recibir datos en texto plano o binarios.</p>
-<p>    &nbsp; &nbsp;  • Establecer una concha inversa o unir concha (útil en pruebas de penetración).</p>
+<p> 2. Transferencia de archivos : </p>
+<p>    &nbsp; &nbsp;   Enviar o recibir archivos entre hosts.</p>
 
-<p> • Proxy y tunelización.</p>
-<p>    &nbsp; &nbsp;  • Redirigir el tráfico a través de un host intermedio.</p>
+<p> 3. Shell remoto: Permite enviar y recibir datos en texto plano o binarios.</p>
+<p>    &nbsp; &nbsp;   Establecer una concha inversa o unir concha (útil en pruebas de penetración).</p>
 
-
-<p> • Creación de servidores simples :.</p>
-<p>    &nbsp; &nbsp;  • Servidor de chat, servidor HTTP básico, etc.</p>
+<p> 4 Proxy y tunelización.</p>
+<p>    &nbsp; &nbsp;   Redirigir el tráfico a través de un host intermedio.</p>
 
 
+<p> 5 Creación de servidores simples :.</p>
+<p>    &nbsp; &nbsp;   Servidor de chat, servidor HTTP básico, etc.</p>
 
 
-
-
-
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h3 style="display: inline-block">🛠 Masscan </h3></summary>
+  </ul>
+</div>
 
 
 
+<p align="center">
+
+ <img src="https://i.postimg.cc/1RVY4YCM/masscan.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> MASSCAN es un escáner de puertos de alto rendimiento diseñado para escanear grandes redes (como toda Internet) en cuestión de minutos. A diferencia de Nmap, que es más preciso y detallado, Masscan se enfoca en la velocidad, utilizando un enfoque asíncrono y evitando el handshake TCP completo para lograr escaneos ultrarrápidos..</p>
+
+
+<p> Syntax: masscan [IP] -p [puertos] [--argumentos] </p>
 
 
 
+<p> Escaneo simple de puertos:</p>
 
 
+<p align="center">
+
+ <img src="https://i.postimg.cc/FFqbkrdJ/1.png" alt="Descripción de la imagen">
+
+ </p>
 
 
+</br>
+
+<p> Escaneo de un rango de puertos:</p>
 
 
+<p align="center">
 
+ <img src="https://i.postimg.cc/t4bB7qwN/2.png" alt="Descripción de la imagen">
+
+ </p>
+
+</br>
+
+<p> Escaneo rango de IPs y exclusion de IPs:</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/MpR8JpR0/3.png" alt="Descripción de la imagen">
+
+ </p>
+
+</br>
+
+<p> Ajustar velocidad (--rate):&nbsp; masscan [IP] -p1-65535 --rate 100000 </p>
+<p> Guardar resultados:&nbsp; masscan [IP] -p80 -oX resultado.xml </p>
+
+
+<p>Opciones avanzadas</p>
+
+</br>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/tCZKF4r0/4.png" alt="Descripción de la imagen">
+
+ </p>
 
 
 
