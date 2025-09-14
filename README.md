@@ -565,7 +565,11 @@
 
 
 
-### 🛠 &nbsp;enum4linux
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h3 style="display: inline-block">🛠 enum4linux </h3></summary>
+  </ul>
+</div>
 
 </br>
 
@@ -585,7 +589,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 <p> • Información sobre objetivos </p>
 <p> • Enumerar grupo de trabajo/dominio</p>
-<p> • Información sobre Nbtstat</p>
+<p> • Información sobre Nbtstat (tablas de nombres NetBIOS)</p>
 <p> • Comprobación de la sesión</p>
 <p> • Obtención del SID de dominio</p>
 <p> • Información sobre el Sistema Operativo </p>
@@ -643,7 +647,77 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h3 style="display: inline-block">🛠 Metasploit </h3></summary>
+  </ul>
+</div>
 
+</br>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Gm5j0V6v/1.jpg" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p>En Metasploit, puedes realizar enumeración de usuarios en diferentes protocolos y servicios, como Kerberos, SMB, LDAP, HTTP, entre otros.</p>
+
+
+
+<p> Syntax: search enumusers: &nbsp; filtrar por todos los modulos relacionados con enumeracion de usuarios</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/tRs2Xhhh/3.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> Syntax: usar modulo ejemplo [use 6] o [use auxiliary/scanner/ssh/ssh_enumusers] </p>
+
+<p> 1. Establecer la IP objetivo:&nbsp; set RHOSTS [IP objetivo] </p>
+<p> 2. Especificar el archivo de usuarios a comparar con los usuarios del objetivo set USER_FILE [RUTA_DEL_ARCHIVO_CON_USUARIOS] </p>
+<p> &nbsp; Nota: &nbsp; El archivo usuarios.txt debe contener una lista de nombres de usuario, uno por línea</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/wvZP6FMG/5.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> 3. Ejecutar el módulo [run] </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KjbPrgHY/4.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> Resultado: Usuarios que se encuentran en el servidor objetivo </p>
+
+<p> &nbsp; Nota: &nbsp; con el comando [options] sirve para validar los parametros que se pueden configurar </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/RFK1HTG8/6.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+
+
+
+
+
+<p><h3> Enumeración de usuarios en KERBEROS </h3> La enumeración de usuarios en Kerberos es una técnica utilizada para identificar cuentas de usuario válidas en un entorno de autenticación basado en Kerberos, común en entornos de Active Directory (AD). Kerberos es un protocolo de autenticación de red que utiliza tickets para permitir nodos comunicarse de manera segura. Aunque Kerberos está diseñado para ser seguro, ciertos comportamientos pueden permitir la enumeración de usuarios.</p>
 
 
 
