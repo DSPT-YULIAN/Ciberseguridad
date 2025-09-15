@@ -676,7 +676,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
  </p>
 
-<p> Syntax: usar modulo ejemplo [use 6] o [use auxiliary/scanner/ssh/ssh_enumusers] </p>
+<p> usar modulo ejemplo: [use 6] o [use auxiliary/scanner/ssh/ssh_enumusers] </p>
 
 <p> 1. Establecer la IP objetivo:&nbsp; set RHOSTS [IP objetivo] </p>
 <p> 2. Especificar el archivo de usuarios a comparar con los usuarios del objetivo set USER_FILE [RUTA_DEL_ARCHIVO_CON_USUARIOS] </p>
@@ -710,14 +710,31 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
  </p>
 
 
-
-
-
-
-
-
-
 <p><h3> Enumeración de usuarios en KERBEROS </h3> La enumeración de usuarios en Kerberos es una técnica utilizada para identificar cuentas de usuario válidas en un entorno de autenticación basado en Kerberos, común en entornos de Active Directory (AD). Kerberos es un protocolo de autenticación de red que utiliza tickets para permitir nodos comunicarse de manera segura. Aunque Kerberos está diseñado para ser seguro, ciertos comportamientos pueden permitir la enumeración de usuarios.</p>
+
+
+
+<!-------------------------------------------## Pendiente documentacion  ---------------------------------------->
+
+
+
+<p><h2> Enumeración SMB </h2> (Server Message Block) es una técnica fundamental en pruebas de penetración y auditorías de seguridad para recopilar información sobre sistemas Windows, recursos compartidos, usuarios y configuraciones. A continuación, te explico todo lo que necesitas saber sobre la enumeración SMB, incluyendo métodos, herramientas, comandos y mitigaciones.</p>
+
+
+<p> Versiones SMB:
+
+• SMBv1 (obsoleto y vulnerable a ataques como EternalBlue, Wannacry) disponilble en sistemas operativos antiguos.
+• SMBv2 Acceso de invitados deshabilitado de forma predeterminada 
+• SMBv3 Acceso de invitados deshabilitado, utiliza cifrado y necesita un nombre de usuario y contraseña
+• Puerto predeterminado: 445/tcp (SMB sobre TCP/IP) o 139/tcp (NetBIOS).</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/BvfscT0D/smbmap.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> Identificar si el puerto SMB se encuentra abierto </p>
 
 
 
@@ -757,8 +774,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <p>		» Enumeración NFS :NFS (Sistema de Archivos de Red) permite a los usuarios acceder a archivos en red como si estuvieran en sus discos locales. 
 	 	La enumeración puede revelar directorios y archivos compartidos.</p>
 				
-<p>		» Enumeración SMB :SMB (Bloque de Mensajes del Servidor) es un protocolo para compartir archivos, impresoras y otros recursos. La enumeración puede 
-    	asignarte nombres de usuario, información de servicio, archivos, carpetas, impresoras: todo lo que vale la pena compartir.</p>
+
 				
 <p>		» Enumeración HTTP :HTTP (Protocolo de Transferencia de Hipertexto), utilizado para proporcionarnos ese excelente tráfico web. Además de la versión 
      	del servicio web, la enumeración de servidores web consiste en encontrar todas las rutas (archivos y directorios) que residen en ellos.</p>
