@@ -718,15 +718,15 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 
-<p><h2> Enumeración SMB </h2> (Server Message Block) es una técnica fundamental en pruebas de penetración y auditorías de seguridad para recopilar información sobre sistemas Windows, recursos compartidos, usuarios y configuraciones. A continuación, te explico todo lo que necesitas saber sobre la enumeración SMB, incluyendo métodos, herramientas, comandos y mitigaciones.</p>
+<p><h2> Enumeración SMB </h2> (Server Message Block) es una técnica fundamental en pruebas de penetración y auditorías de seguridad para recopilar información sobre sistemas Windows, recursos compartidos, usuarios y configuraciones.</p>
 
 
 <p> Versiones SMB:
 
-• SMBv1 (obsoleto y vulnerable a ataques como EternalBlue, Wannacry) disponilble en sistemas operativos antiguos.
-• SMBv2 Acceso de invitados deshabilitado de forma predeterminada 
-• SMBv3 Acceso de invitados deshabilitado, utiliza cifrado y necesita un nombre de usuario y contraseña
-• Puerto predeterminado: 445/tcp (SMB sobre TCP/IP) o 139/tcp (NetBIOS).</p>
+<p> • SMBv1 (obsoleto y vulnerable a ataques como EternalBlue, Wannacry) disponilble en sistemas operativos antiguos. </p>
+<p> • SMBv2 Acceso de invitados deshabilitado de forma predeterminada  </p>
+<p> • SMBv3 Acceso de invitados deshabilitado, utiliza cifrado y necesita un nombre de usuario y contraseña  </p>
+<p> • Puerto predeterminado: 445/tcp (SMB sobre TCP/IP) o 139/tcp (NetBIOS).</p>
 
 <p align="center">
 
@@ -734,12 +734,17 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
  </p>
 
-<p> Identificar si el puerto SMB se encuentra abierto </p>
+<p> Identificar si los puertos SMB se encuentran abiertos </p>
+
+<p> -sV: Detecta la versión de SMB. </p>
+<p> -sC: Ejecuta scripts básicos de enumeración. </p>
 
 
+<p align="center">
 
+ <img src="https://i.postimg.cc/44PzDP2f/7.png" alt="Descripción de la imagen">
 
-
+ </p>
 
 
 
