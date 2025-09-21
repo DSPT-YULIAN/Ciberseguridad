@@ -716,17 +716,9 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 <!-------------------------------------------## Pendiente documentacion  ---------------------------------------->
 
-
+<h2> Enumeración de Recursos Compartidos </h2>
 
 <p><h2> Enumeración SMB </h2> (Server Message Block) es una técnica fundamental en pruebas de penetración y auditorías de seguridad para recopilar información sobre sistemas Windows, recursos compartidos, usuarios y configuraciones.</p>
-
-
-<p> Versiones SMB:
-
-<p> • SMBv1 (obsoleto y vulnerable a ataques como EternalBlue, Wannacry) disponilble en sistemas operativos antiguos. </p>
-<p> • SMBv2 Acceso de invitados deshabilitado de forma predeterminada  </p>
-<p> • SMBv3 Acceso de invitados deshabilitado, utiliza cifrado y necesita un nombre de usuario y contraseña  </p>
-<p> • Puerto predeterminado: 445/tcp (SMB sobre TCP/IP) o 139/tcp (NetBIOS).</p>
 
 <p align="center">
 
@@ -734,10 +726,31 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
  </p>
 
-<p> Identificar si los puertos SMB se encuentran abiertos </p>
+<p> • Puerto predeterminado: 445/tcp (SMB sobre TCP/IP) o 139/tcp (NetBIOS).</p>
 
-<p> -sV: Detecta la versión de SMB. </p>
-<p> -sC: Ejecuta scripts básicos de enumeración. </p>
+<p> Versiones de SMB en Windows:
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/T1XGnX66/SMB-W.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> Versiones de SMB en Linux (Samba)
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/N09wV0Gt/SMB-L.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> 1. Escaneo de puertos SMB con NMAP </p>
+
+</br>
+
+<p> -sV :&nbsp; Detecta la versión de SMB. </p>
+<p> -sC :&nbsp; Ejecuta scripts básicos de enumeración. </p>
 
 
 <p align="center">
@@ -747,9 +760,18 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
  </p>
 
 
+<p> 2. Enumeracion de usuarios con RCPCLIENT </p>
+
+</br>
+
+<p> Es una herramienta de línea de comandos incluida en el paquete Samba que permite interactuar con servidores Windows mediante RPC (llamadas a procedimiento remoto). Es útil para enumerar usuarios, grupos, políticas y más en sistemas Windows (o Samba en Linux).</p>
 
 
+<p align="center">
 
+ <img src="https://i.postimg.cc/Y0MXYtdY/1.png" alt="Descripción de la imagen">
+
+ </p>
 
 
 
