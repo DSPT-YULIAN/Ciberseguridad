@@ -718,7 +718,17 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 <h2> Enumeración de Recursos Compartidos </h2>
 
-<p><h2> Enumeración SMB </h2> (Server Message Block) es una técnica fundamental en pruebas de penetración y auditorías de seguridad para recopilar información sobre sistemas Windows, recursos compartidos, usuarios y configuraciones.</p>
+<p><h2> 1.&nbsp; Enumeración SMB </h2> (Server Message Block) es una técnica fundamental en pruebas de penetración y auditorías de seguridad para recopilar información sobre sistemas Windows:</p>
+
+
+<p> • Recursos compartidos (Shares):&nbsp; Lista de carpetas, impresoras u otros recursos compartidos en la red.&nbsp;( bash:&nbsp; smbclient -L // [target_IP] -N ) </p>
+<p> • Usuarios y Grupos:&nbsp; Nombres de usuarios válidos en el sistema, lo que puede ser útil para ataques de fuerza bruta o phishing. &nbsp;( bash:&nbsp; enum4linux -U [target_IP] ) </p>
+<p> • Información del Sistema Operativo:&nbsp; Detalles como el nombre, versión y build del sistema operativo. &nbsp;( bash:&nbsp; nmap --script smb-os-discovery -p 445 [target_IP] ) </p>
+<p> • Sesiones Activas:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp;( bash:&nbsp; net session \\ [target_IP] ) </p>
+<p> • Configuraciones de Seguridad:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp; ( bash:&nbsp; enum4linux [target_IP] ) </p>
+<p> • Vulnerabilidades Conocidas:&nbsp;  Si el sistema aún utiliza SMBv1, puede ser vulnerable a ataques como EternalBlue. &nbsp; ( bash:&nbsp;  nmap --script smb-protocols -p 445 [target_IP] ) </p>
+
+
 
 <p align="center">
 
@@ -726,7 +736,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
  </p>
 
-<p> • Puerto predeterminado: 445/tcp (SMB sobre TCP/IP) o 139/tcp (NetBIOS).</p>
+<p> • Puertos predeterminado: 445/tcp (SMB sobre TCP/IP) o 139/tcp (NetBIOS).</p>
 
 <p> Versiones de SMB en Windows:
 
@@ -744,27 +754,73 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
  </p>
 
+<p> Ejemplo de enumeracion SMB</p>
 
-<p> 1. Escaneo de puertos SMB con NMAP </p>
+<p> 🛠&nbsp; (1). Escaneo de puertos SMB y recursos compartidos con NMAP  </p>
 
-</br>
-
-<p> -sV :&nbsp; Detecta la versión de SMB. </p>
-<p> -sC :&nbsp; Ejecuta scripts básicos de enumeración. </p>
+<p>&nbsp; -sV :&nbsp; Detecta la versión de SMB. </p>
+<p>&nbsp; smb-enum-shares :&nbsp; Enumerar los recursos compartidos, permisos, configuraciones inseguras, metadatos y preparar ataques posteriores </p>
 
 
 <p align="center">
 
- <img src="https://i.postimg.cc/44PzDP2f/7.png" alt="Descripción de la imagen">
+ <img src="https://i.postimg.cc/dVJN883r/3.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> 🛠&nbsp; (2). Enumeracion de recursos compartidos, permisos y comentararios con SMBMAP </p>
+
+<p> 🛠 &nbsp; SMBMAP &nbsp; Herramienta diseñada  para enumerar, explorar y explotar recursos compartidos SMB </p>
+
+<p> • Enumerar recursos compartidos (shares) sin autenticación o con credenciales </p>
+<p> &nbsp; Sin credenciales ( bash:&nbsp; smbmap -[target_IP] ) </p>
+<p> &nbsp; Con credenciales ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña]) </p>
+
+<p> • Explorar el contenido de un recurso compartido</p>
+<p> &nbsp; ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] -r [recurso_compartido]) </p>
+
+<p> • Descargar/Subir archivos (si los permisos lo permiten)</p>
+<p> &nbsp; Descargar un archivo : ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] --dowload [ruta remota] </p>
+<p> &nbsp; Cargar un archivo : ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] --upload [archivo_local] [ruta remota] </p>
+
+<p> • Ejecución de comandos remotos (si hay suficientes privilegios)</p>
+<p> &nbsp; ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] -x "net user hacker P@ssw0rd /add ) </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/J0nZrzzy/4.png" alt="Descripción de la imagen">
+
+ </p>
+
+ <p> Solo se tiene acceso al recurso compartido temporales (tmp) el cual se encuentra en READ, WHRITE </p>
+
+ <p>🛠&nbsp; (3). conectarse al recurso compartido que tiene permisos con SMBCLIENT</p>
+
+ <p> 🛠 &nbsp; SMBCLIENT &nbsp; Herramienta que permite interactuar con recursos compartidos </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qBDpDXWc/5-1.png" alt="Descripción de la imagen">
+
+ </p>
+
+ <p> Al ingresar al recurso compartido tmp, es posible visualizar los archivos temporales, validar los permisos de escritura y descargar archivos para revisar su contenido </p>
+
+
+p align="center">
+
+ <img src="https://i.postimg.cc/KvLvK3sn/6.png" alt="Descripción de la imagen">
 
  </p>
 
 
-<p> 2. Enumeracion de usuarios con RCPCLIENT </p>
+<p> 🛠&nbsp; (4). Enumeracion de usuarios con RCPCLIENT cuando no se tiene acceso a ningun recurso compartido</p>
 
 </br>
 
-<p> Es una herramienta de línea de comandos incluida en el paquete Samba que permite interactuar con servidores Windows mediante RPC (llamadas a procedimiento remoto). Es útil para enumerar usuarios, grupos, políticas y más en sistemas Windows (o Samba en Linux).</p>
+<p> 🛠 &nbsp; RCPCLIENT &nbsp; Es una herramienta de línea de comandos incluida en el paquete Samba que permite interactuar con servidores Windows mediante RPC (llamadas a procedimiento remoto). Es útil para enumerar usuarios, grupos, políticas y más en sistemas Windows (o Samba en Linux).</p>
 
 
 <p align="center">
@@ -772,6 +828,51 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
  <img src="https://i.postimg.cc/Y0MXYtdY/1.png" alt="Descripción de la imagen">
 
  </p>
+
+
+<p> 🛠&nbsp; (5). Realizar ataque de fuerza bruta Metasploit, Hydra, John the Ripper</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/85BmPCgD/7.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fTkm1CyM/8.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> 🛠&nbsp; (6). El usuario msfadmin tiene permisos para leer el recurso compartido (print$), leer el recurso compartido (opt) y permiso de lectura y escritura en los directorios </p>
+<p> 🛠&nbsp; (7). Iniciar sesion con el usuario y contraseña msfadmin </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/mrrPF29B/9.png" alt="Descripción de la imagen">
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/kXdzMVr6/10.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> 🛠&nbsp; (8). Ejecutar Web Shell </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
