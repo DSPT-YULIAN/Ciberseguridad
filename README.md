@@ -713,21 +713,18 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <p><h3> Enumeración de usuarios en KERBEROS </h3> La enumeración de usuarios en Kerberos es una técnica utilizada para identificar cuentas de usuario válidas en un entorno de autenticación basado en Kerberos, común en entornos de Active Directory (AD). Kerberos es un protocolo de autenticación de red que utiliza tickets para permitir nodos comunicarse de manera segura. Aunque Kerberos está diseñado para ser seguro, ciertos comportamientos pueden permitir la enumeración de usuarios.</p>
 
 
-
-<!-------------------------------------------## Pendiente documentacion  ---------------------------------------->
-
 <h2> Enumeración de Recursos Compartidos </h2>
 
 <p><h2> 1.&nbsp; Enumeración SMB </h2> (Server Message Block) es una técnica fundamental en pruebas de penetración y auditorías de seguridad para recopilar información sobre sistemas Windows:</p>
 
+</br>
 
-<p> • Recursos compartidos (Shares):&nbsp; Lista de carpetas, impresoras u otros recursos compartidos en la red.&nbsp;( bash:&nbsp; smbclient -L // [target_IP] -N ) </p>
-<p> • Usuarios y Grupos:&nbsp; Nombres de usuarios válidos en el sistema, lo que puede ser útil para ataques de fuerza bruta o phishing. &nbsp;( bash:&nbsp; enum4linux -U [target_IP] ) </p>
-<p> • Información del Sistema Operativo:&nbsp; Detalles como el nombre, versión y build del sistema operativo. &nbsp;( bash:&nbsp; nmap --script smb-os-discovery -p 445 [target_IP] ) </p>
-<p> • Sesiones Activas:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp;( bash:&nbsp; net session \\ [target_IP] ) </p>
-<p> • Configuraciones de Seguridad:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp; ( bash:&nbsp; enum4linux [target_IP] ) </p>
-<p> • Vulnerabilidades Conocidas:&nbsp;  Si el sistema aún utiliza SMBv1, puede ser vulnerable a ataques como EternalBlue. &nbsp; ( bash:&nbsp;  nmap --script smb-protocols -p 445 [target_IP] ) </p>
-
+<p>&nbsp; • Recursos compartidos (Shares):&nbsp; Lista de carpetas, impresoras u otros recursos compartidos en la red.&nbsp;( bash:&nbsp; smbclient -L // [target_IP] -N ) </p>
+<p>&nbsp; • Usuarios y Grupos:&nbsp; Nombres de usuarios válidos en el sistema, lo que puede ser útil para ataques de fuerza bruta o phishing. &nbsp;( bash:&nbsp; enum4linux -U [target_IP] ) </p>
+<p>&nbsp; • Información del Sistema Operativo:&nbsp; Detalles como el nombre, versión y build del sistema operativo. &nbsp;( bash:&nbsp; nmap --script smb-os-discovery -p 445 [target_IP] ) </p>
+<p>&nbsp; • Sesiones Activas:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp;( bash:&nbsp; net session \\ [target_IP] ) </p>
+<p>&nbsp; • Configuraciones de Seguridad:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp; ( bash:&nbsp; enum4linux [target_IP] ) </p>
+<p>&nbsp; • Vulnerabilidades Conocidas:&nbsp;  Si el sistema aún utiliza SMBv1, puede ser vulnerable a ataques como EternalBlue. &nbsp; ( bash:&nbsp;  nmap --script smb-protocols -p 445 [target_IP] ) </p>
 
 
 <p align="center">
@@ -756,10 +753,10 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 <p> Ejemplo de enumeracion SMB</p>
 
-<p> 🛠&nbsp; (1). Escaneo de puertos SMB y recursos compartidos con NMAP  </p>
+<p> &nbsp; (1).&nbsp; Escaneo de puertos SMB y recursos compartidos con NMAP  </p>
 
-<p>&nbsp; -sV :&nbsp; Detecta la versión de SMB. </p>
-<p>&nbsp; smb-enum-shares :&nbsp; Enumerar los recursos compartidos, permisos, configuraciones inseguras, metadatos y preparar ataques posteriores </p>
+<p>&nbsp;• -sV :&nbsp; Detecta la versión de SMB. </p>
+<p>&nbsp;• smb-enum-shares :&nbsp; Enumerar los recursos compartidos, permisos, configuraciones inseguras, metadatos y preparar ataques posteriores </p>
 
 
 <p align="center">
@@ -768,9 +765,11 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
  </p>
 
-<p> 🛠&nbsp; (2). Enumeracion de recursos compartidos, permisos y comentararios con SMBMAP </p>
+<p> &nbsp; (2).&nbsp; Enumeracion de recursos compartidos, permisos y comentararios con SMBMAP </p>
 
 <p> 🛠 &nbsp; SMBMAP &nbsp; Herramienta diseñada  para enumerar, explorar y explotar recursos compartidos SMB </p>
+
+</br>
 
 <p> • Enumerar recursos compartidos (shares) sin autenticación o con credenciales </p>
 <p> &nbsp; Sin credenciales ( bash:&nbsp; smbmap -[target_IP] ) </p>
@@ -795,7 +794,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
  <p> Solo se tiene acceso al recurso compartido temporales (tmp) el cual se encuentra en READ, WHRITE </p>
 
- <p>🛠&nbsp; (3). conectarse al recurso compartido que tiene permisos con SMBCLIENT</p>
+ <p>&nbsp; (3).&nbsp; conectarse al recurso compartido que tiene permisos con SMBCLIENT</p>
 
  <p> 🛠 &nbsp; SMBCLIENT &nbsp; Herramienta que permite interactuar con recursos compartidos </p>
 
@@ -809,14 +808,14 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
  <p> Al ingresar al recurso compartido tmp, es posible visualizar los archivos temporales, validar los permisos de escritura y descargar archivos para revisar su contenido </p>
 
 
-p align="center">
+<p align="center">
 
  <img src="https://i.postimg.cc/KvLvK3sn/6.png" alt="Descripción de la imagen">
 
  </p>
 
 
-<p> 🛠&nbsp; (4). Enumeracion de usuarios con RCPCLIENT cuando no se tiene acceso a ningun recurso compartido</p>
+<p>&nbsp; (4).&nbsp; Enumeracion de usuarios con RCPCLIENT cuando no se tiene acceso a ningun recurso compartido</p>
 
 </br>
 
@@ -830,7 +829,7 @@ p align="center">
  </p>
 
 
-<p> 🛠&nbsp; (5). Realizar ataque de fuerza bruta Metasploit, Hydra, John the Ripper</p>
+<p> &nbsp; (5).&nbsp; Realizar ataque de fuerza bruta Metasploit, Hydra, John the Ripper</p>
 
 
 <p align="center">
@@ -845,8 +844,8 @@ p align="center">
 
  </p>
 
-<p> 🛠&nbsp; (6). El usuario msfadmin tiene permisos para leer el recurso compartido (print$), leer el recurso compartido (opt) y permiso de lectura y escritura en los directorios </p>
-<p> 🛠&nbsp; (7). Iniciar sesion con el usuario y contraseña msfadmin </p>
+<p> &nbsp; (6).&nbsp; El usuario msfadmin tiene permisos para leer el recurso compartido (print$), leer el recurso compartido (opt) y permiso de lectura y escritura en los directorios </p>
+<p> &nbsp; (7).&nbsp; Iniciar sesion con el usuario y contraseña msfadmin </p>
 
 <p align="center">
 
@@ -858,16 +857,21 @@ p align="center">
 
  </p>
 
-<p> 🛠&nbsp; (8). Ejecutar Web Shell </p>
+<p> 🛠&nbsp; (8).&nbsp; Ejecutar una reverse shell </p>
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/50fDJ3P2/8.png" alt="Descripción de la imagen">
+
+ </p>
 
 
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
 
 
-
-
-
-
-
+<p><h2> 1.&nbsp; Enumeración SMB </h2> NFS permite que un servidor comparta directorios y archivos con uno o más clientes a través de una red. Los clientes pueden montar esos recursos compartidos como si fueran unidades locales, facilitando el acceso centralizado a datos</p>
 
 
 
