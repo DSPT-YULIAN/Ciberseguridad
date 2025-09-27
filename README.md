@@ -871,11 +871,43 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
 
 
-<p><h2> 1.&nbsp; Enumeración SMB </h2> NFS permite que un servidor comparta directorios y archivos con uno o más clientes a través de una red. Los clientes pueden montar esos recursos compartidos como si fueran unidades locales, facilitando el acceso centralizado a datos</p>
+<p><h2> 2.&nbsp; Enumeración NFS </h2> NFS permite que un servidor comparta directorios y archivos con uno o más clientes a través de una red. Los clientes pueden montar esos recursos compartidos como si fueran unidades locales, facilitando el acceso centralizado a datos</p>
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+
+
+<p><h2> 3.&nbsp; Enumeración FTP </h2> FTP (File Transfer Protocol) es un protocolo de red que permite la transferencia de archivos entre un cliente y un servidor. Utiliza dos canales: </p>
+
+<p> • Canal de control (puerto 21): Para comandos</p>
+<p> • Canal de datos (puerto 20 o dinámico): Para transferencia de archivos</p>
+
+<p> Nota: &nbsp; FTP no es cifrado se recomienda usar SFTP (puerto 22) SFTP no es un protocolo independiente, sino una subfunción del protocolo SSH por lo tanto opera dentro del canal seguro que establece SSH. </p>
+
+<p> Se requiere tener usuario y contraseña</p>
+
+<h3> Objetivos de la enumeración FTP<h3>
+
+
+<p> •&nbsp; Identificar usuarios válidos.
+<p> •&nbsp; Acceder a recursos compartidos.
+<p> •&nbsp; Encontrar archivos sensibles (contraseñas, configuraciones, etc.).
+<p> •&nbsp; Detectar configuraciones inseguras (permisos, modo anónimo, etc.).
+<p> •&nbsp; Explotar vulnerabilidades conocidas en servidores FTP.
 
 
 
 
+
+
+
+
+
+
+
+
+<p><h2> 2.&nbsp; Enumeración SMTP </h2> NFS permite que un servidor comparta directorios y archivos con uno o más clientes a través de una red. Los clientes pueden montar esos recursos compartidos como si fueran unidades locales, facilitando el acceso centralizado a datos</p>
 
 
 
