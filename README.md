@@ -715,23 +715,29 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 <h2> Enumeración de Recursos Compartidos </h2>
 
+
 <p><h2> 1.&nbsp; Enumeración SMB </h2> (Server Message Block) es una técnica fundamental en pruebas de penetración y auditorías de seguridad para recopilar información sobre sistemas Windows:</p>
-
-</br>
-
-<p>&nbsp; • Recursos compartidos (Shares):&nbsp; Lista de carpetas, impresoras u otros recursos compartidos en la red.&nbsp;( bash:&nbsp; smbclient -L // [target_IP] -N ) </p>
-<p>&nbsp; • Usuarios y Grupos:&nbsp; Nombres de usuarios válidos en el sistema, lo que puede ser útil para ataques de fuerza bruta o phishing. &nbsp;( bash:&nbsp; enum4linux -U [target_IP] ) </p>
-<p>&nbsp; • Información del Sistema Operativo:&nbsp; Detalles como el nombre, versión y build del sistema operativo. &nbsp;( bash:&nbsp; nmap --script smb-os-discovery -p 445 [target_IP] ) </p>
-<p>&nbsp; • Sesiones Activas:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp;( bash:&nbsp; net session \\ [target_IP] ) </p>
-<p>&nbsp; • Configuraciones de Seguridad:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp; ( bash:&nbsp; enum4linux [target_IP] ) </p>
-<p>&nbsp; • Vulnerabilidades Conocidas:&nbsp;  Si el sistema aún utiliza SMBv1, puede ser vulnerable a ataques como EternalBlue. &nbsp; ( bash:&nbsp;  nmap --script smb-protocols -p 445 [target_IP] ) </p>
-
 
 <p align="center">
 
  <img src="https://i.postimg.cc/BvfscT0D/smbmap.png" alt="Descripción de la imagen">
 
  </p>
+
+</br>
+
+<p>&nbsp; • Recursos compartidos (Shares):&nbsp; Lista de carpetas, impresoras u otros recursos compartidos en la red.&nbsp;<br>
+( bash:&nbsp; smbclient -L // [target_IP] -N ) </p>
+<p>&nbsp; • Usuarios y Grupos:&nbsp; Nombres de usuarios válidos en el sistema, lo que puede ser útil para ataques de fuerza bruta o phishing. &nbsp;<br>
+( bash:&nbsp; enum4linux -U [target_IP] ) </p>
+<p>&nbsp; • Información del Sistema Operativo:&nbsp; Detalles como el nombre, versión y build del sistema operativo. &nbsp;<br>
+( bash:&nbsp; nmap --script smb-os-discovery -p 445 [target_IP] ) </p>
+<p>&nbsp; • Sesiones Activas:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp;<br>
+( bash:&nbsp; net session \\ [target_IP] ) </p>
+<p>&nbsp; • Configuraciones de Seguridad:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp; <br>
+( bash:&nbsp; enum4linux [target_IP] ) </p>
+<p>&nbsp; • Vulnerabilidades Conocidas:&nbsp;  Si el sistema aún utiliza SMBv1, puede ser vulnerable a ataques como EternalBlue. &nbsp;<br>
+( bash:&nbsp;  nmap --script smb-protocols -p 445 [target_IP] ) </p>
 
 <p> • Puertos predeterminado: 445/tcp (SMB sobre TCP/IP) o 139/tcp (NetBIOS).</p>
 
@@ -907,7 +913,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 
-<p><h2> 2.&nbsp; Enumeración SMTP </h2> NFS permite que un servidor comparta directorios y archivos con uno o más clientes a través de una red. Los clientes pueden montar esos recursos compartidos como si fueran unidades locales, facilitando el acceso centralizado a datos</p>
+<p><h2> 4.&nbsp; Enumeración SMTP </h2> NFS permite que un servidor comparta directorios y archivos con uno o más clientes a través de una red. Los clientes pueden montar esos recursos compartidos como si fueran unidades locales, facilitando el acceso centralizado a datos</p>
 
 
 
