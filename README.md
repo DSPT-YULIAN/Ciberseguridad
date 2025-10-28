@@ -889,9 +889,9 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <p> • Canal de control (puerto 21): Para comandos</p>
 <p> • Canal de datos (puerto 20 o dinámico): Para transferencia de archivos</p>
 
-<p> Nota: &nbsp; FTP no es cifrado se recomienda usar SFTP (puerto 22) SFTP no es un protocolo independiente, sino una subfunción del protocolo SSH por lo tanto opera dentro del canal seguro que establece SSH. </p>
+<p> Nota: &nbsp; FTP no es cifrado se recomienda usar SFTP (puerto 22) SFTP no es un protocolo independiente, sino una subfunción del protocolo SSH por lo tanto opera dentro del canal seguro que establece SSH. Adicionalmente, Se requiere tener credenciales </p>
 
-<p> Se requiere tener usuario y contraseña</p>
+<p> </p>
 
 <h3> Objetivos de la enumeración FTP<h3>
 
@@ -901,7 +901,32 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <p> •&nbsp; Encontrar archivos sensibles (contraseñas, configuraciones, etc.).
 <p> •&nbsp; Detectar configuraciones inseguras (permisos, modo anónimo, etc.).
 <p> •&nbsp; Explotar vulnerabilidades conocidas en servidores FTP.
+<p> •&nbsp; Subida y descarga masiva de archivos.
 
+
+<p>Pasos</p>
+<p>Realizar escaneo de puertos y servicios</p>
+<p>Se debe observar el resultado, es este caso el servicio de FTP tiene permitido el acceso con el usuario Anonymous</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/yx6Y70DR/1.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p>Inicial sesion con el usuario Anonymous y contraseña default estableciendo comunicacion por el puerto 21 </p>
+<p>Visualizar los archivos a los cuales tenemos acceso con el usuario Anonymous </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PJHKJ5HC/2.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p>Uso de herramientas dedicadas a enumeracion Nmap(script NSE) o modulos de Metasploit</p>
+
+<p> Nmap(script NSE) </p>
 
 
 
