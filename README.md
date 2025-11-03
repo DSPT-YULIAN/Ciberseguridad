@@ -896,17 +896,19 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <h3> Objetivos de la enumeración FTP<h3>
 
 
-<p> •&nbsp; Identificar usuarios válidos.
-<p> •&nbsp; Acceder a recursos compartidos.
-<p> •&nbsp; Encontrar archivos sensibles (contraseñas, configuraciones, etc.).
-<p> •&nbsp; Detectar configuraciones inseguras (permisos, modo anónimo, etc.).
-<p> •&nbsp; Explotar vulnerabilidades conocidas en servidores FTP.
-<p> •&nbsp; Subida y descarga masiva de archivos.
+<p> •&nbsp; Identificar usuarios válidos. </p> 
+<p> •&nbsp; Acceder a recursos compartidos.</p>
+<p> •&nbsp; Encontrar archivos sensibles (contraseñas, configuraciones, etc.). </p>
+<p> •&nbsp; Detectar configuraciones inseguras (permisos, modo anónimo, etc.). </p>
+<p> •&nbsp; Explotar vulnerabilidades conocidas en servidores FTP. </p>
+<p> •&nbsp; Subida y descarga masiva de archivos.</p> 
 
 
 <p>Pasos</p>
-<p>Realizar escaneo de puertos y servicios</p>
-<p>Se debe observar el resultado, es este caso el servicio de FTP tiene permitido el acceso con el usuario Anonymous</p>
+
+<p>1) Conocer la version del servidor FTP con el fin de saber si tiene vulnerabilidades que puedan ser explotadas </p>
+
+<p>2) Conocer si permite el acceso con el usuario anonymous </p>
 
 
 <p align="center">
@@ -915,7 +917,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
  </p>
 
-<p>Inicial sesion con el usuario Anonymous y contraseña default estableciendo comunicacion por el puerto 21 </p>
+<p>Iniciar sesion con el usuario Anonymous y contraseña default estableciendo comunicacion por el puerto 21 </p>
 <p>Visualizar los archivos a los cuales tenemos acceso con el usuario Anonymous </p>
 
 <p align="center">
@@ -924,11 +926,40 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
  </p>
 
+
+
+<p>3) Conocer si el usuario con el que ingrese puede moverse libremente entre ficheros </p>
+<p>4) Conocer si esta permitida la subida de fucheros con el usuario que se esta accediendo </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p>Uso de herramientas dedicadas a enumeracion Nmap(script NSE) o modulos de Metasploit</p>
 
-<p> Nmap(script NSE) </p>
+<p> Nmap(script NSE): Ver Scripts que sirver para enumerar el protocolo de FTP </p>
 
+<p align="center">
 
+ <img src="https://i.postimg.cc/RZpSndwM/3.png" alt="Descripción de la imagen">
+
+ </p>
 
 
 
