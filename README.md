@@ -52,32 +52,30 @@
 
 </br>
 
+<p> OSINT:&nbsp; Conjunto de tecnicas u herramientas para recopilar datos de fuentes disponibles de forma publica para ser utillizados en un contexto de inteligencia  </p>
+
 <p align="center">
 
   <img src="https://i.postimg.cc/c4bGJV2W/Recursos.jpg" alt="Descripción de la imagen">
 </p>
 
+<p> https://osintframework.com </p>
+
 
 ### Metodos
 
 
-<p><b>  • Certificados SSL:</b></p>
-<p> Comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. ¡Un excelente lugar para encontrar nombres de dominio y subdominio! </p>
+<p><b>  • Certificados SSL: &nbsp; </b> comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. ¡Un excelente lugar para encontrar nombres de dominio y subdominio! </p>
 
-<p><b> • Análisis del sitio web:</b></p>
-<p> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. Por ejemplo, revisar su página "Sobre nosotros". Adivinar rutas aleatorias en el sitio ejemplo ( mytarget.com/admin ) </p>
+<p><b> • Análisis del sitio web: &nbsp; </b> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. Por ejemplo, revisar su página "Sobre nosotros". Adivinar rutas aleatorias en el sitio ejemplo ( mytarget.com/admin ) </p>
 
-<p><b> • Consultas WHOIS:</b></p>
-<p> Recuperación de información de registro de dominio.</p>
+<p><b> • Consultas WHOIS: &nbsp;</b> Recuperación de información de registro de dominio.</p>
 	
-<p><b> • Consultas DNS:</b></p>
-<p> Recopilación de registros DNS, como registros MX, A y CNAME.</p>
+<p><b> • Consultas DNS:&nbsp; </b> Recopilación de registros DNS, como registros MX, A y CNAME.</p>
 	
-<p><b> • Informes disponibles públicamente:</b></p>
-<p> Análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b>
+<p><b> • Informes disponibles públicamente: &nbsp;</b> Análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b>
 
-<p><b> • Redes sociales:</b></p>
-<p> Recopilación de información de plataformas de redes sociales.</p>
+<p><b> • Redes sociales: &nbsp;</b> Recopilación de información de plataformas de redes sociales.</p>
 
 </br>
 
@@ -88,7 +86,9 @@
 <p><b> • Analizadores de Techstack:</b> &nbsp; Wappalyzer, BuiltWith, WhatRuns</p>
 <p><b> • Escáneres de Internet:</b> &nbsp; Shodan, Censys, Netlas, Greynoise</p>
 <p><b> • Archivos web:</b> &nbsp; Wayback Machine, Common Crawl</p>
-<p><b> • Motores de búsqueda:</b> &nbsp; Google, Bing, DuckDuckGo, Brave, Yandex, Baidu</p>
+<p><b> • Motores de búsqueda:</b> &nbsp; Google, Bing, DuckDuckGo, Brave, Yandex, Baidu, Google Dork, Google Hacking database, shodan</p>
+<p><b> • Rastreador web</b> &nbsp; Netcraft, Whois </p>
+<p><b> • Comandos</b> &nbsp; Nslookup, hping </p>
 
 
 </br>
@@ -883,7 +883,6 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
 
 
-
 <p><h2> 3.&nbsp; Enumeración FTP </h2> FTP (File Transfer Protocol) es un protocolo de red que permite la transferencia de archivos entre un cliente y un servidor. Utiliza dos canales: </p>
 
 <p> • Canal de control (puerto 21): Para comandos</p>
@@ -891,7 +890,6 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 <p> Nota: &nbsp; FTP no es cifrado se recomienda usar SFTP (puerto 22) SFTP no es un protocolo independiente, sino una subfunción del protocolo SSH por lo tanto opera dentro del canal seguro que establece SSH. Adicionalmente, Se requiere tener credenciales </p>
 
-<p> </p>
 
 <h3> Objetivos de la enumeración FTP<h3>
 
@@ -924,29 +922,10 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
  <img src="https://i.postimg.cc/PJHKJ5HC/2.png" alt="Descripción de la imagen">
 
- </p>
-
 
 
 <p>3) Conocer si el usuario con el que ingrese puede moverse libremente entre ficheros </p>
 <p>4) Conocer si esta permitida la subida de fucheros con el usuario que se esta accediendo </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -960,11 +939,6 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
  <img src="https://i.postimg.cc/RZpSndwM/3.png" alt="Descripción de la imagen">
 
  </p>
-
-
-
-
-
 
 
 
@@ -1030,9 +1004,92 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 
-<p>Es un proceso automatizado que identifica las debilidades de seguridad conocidas en los sistemas, las redes o las aplicaciones. Estos análisis 
-generan informes en los que se enumeran las posibles vulnerabilidades en función de las firmas y las configuraciones, pero no confirman si esas 
-fallas pueden aprovecharse realmente.</p>
+<!--h1 without bottom border-->
+<div id="user-content-toc">
+  <ul align="left">
+    <summary><h2 style="display: inline-block">Fase 2. Escaneo y análisis de vulnerabilidades</h2></summary>
+  </ul>
+</div>
+
+
+<p> Vulnerabilidad es una debilidad o fallo de un sistema de informacion o de una infraestructura TI</p>
+
+<p>Se pueden dividir en: </p>
+
+<p> • Debilidad fisica: &nbsp; Ejemplo un servidor al que puede acceder cualquier persona </p>
+<p> • Debilidad logica: &nbsp; Ejemplo puertos abiertos o una informacion confidencial en texto claro  </p>
+
+<p> Amenaza es una accion que se aprovecha de una vulnerabilidad para atacar la seguridad de un sistema de informacion</p>
+
+<p> • Eventos fisica &nbsp; Ejemplo desastres naturales</p>
+<p> • Ataques informaticos &nbsp; Malware  </p>
+
+
+<p> Riesgo es el potencial de causar daño en las organizaciones, probabilidad de que una amenzad explote una vulnerabilidad</p>
+
+
+<p> Para determinar el valor del riesgo se debe determinar la probabilidad de que la amenaza explote la vulnerabilidad el impacto que se generaria si el ataque es 
+efectivo </p>
+
+<p> Los riesgos se deben tratar</p>
+
+<p> 1. Aceptando el riesgo </p>
+<p> 2. Transferir el riesgo </p>
+<p> 3. Evitar el riesgo </p>
+<p> 4. Mitigar el riesgo </p>
+
+
+<p>Que es Cyber Risk. Es el riesgo a cualquier perdida financiera interrupcion o daño a la reputacion de una organizacion debido a fallas en las tecnologias de 
+informacion</p>
+
+<p> Principales Vulnerabilidades</p>
+
+<p> • Configuracion del software o hardware</p>
+<p> • Malas practicas de programacion</p>
+
+
+<p> Bases de datos de vulnerabilidades</p>
+
+<p> • Clasificar las vulnerabilidades</p>
+<p> • Proporcionar una puntuacion compuesta de la gravedad general y el riesgo asociado a las vulnerabilidades identificadas </p>
+
+
+### 🛠 &nbsp; Sistemas de puntuacion de vulnerabilidades
+
+<p> • CVSS - Sistema Común de Puntuación de Vulnerabilidades &nbsp; (https://www.first.org/cvss)</p>
+<p> • CVE  - Vulnerabilidades y Exposiciones Comunes &nbsp; (https://www.cve.org)</p>
+<p> • CWE  - Enumeracion de debilidades comunes &nbsp; (https://cwe.mitre.org)</p>
+<p> • NVD  - Base de datos nacional de vulnerabilidad &nbsp; (https://nvd.nist.gov)</p>
+
+
+<p> Evaluacioon de vulnerabilidades</p>
+
+<p> 1. Examinar y evaluar la seguridad fisica de la organizacion </p>
+<p> 2. Comprobar errores de configuracion o errores humanos </p>
+<p> 3. Utilizar herramientas de escaneo de vulnerabilidades </p>
+<p> 4. Identificar y priorizar las vulnerabilidades </p>
+<p> 5. Validar las vulnerabilidades encontradas </p>
+
+<p> Clasificacion de vulnerabilidades</p>
+
+<p> • Configuracion erronea </p>
+<p> • Instalacion y configuracion por defecto</p>
+<p> • Desbordamiento de bufer</p>
+<p> • Servidores sin actualizar</p>
+<p> • Fallos de diseño</p>
+<p> • Fallos del sistema operativo </p>
+<p> • Defectos en las aplicaciones</p>
+<p> • Servicios abiertos</p>
+<p> • Contraseñas por defecto</p>
+
+
+###  &nbsp;Herramientas de escaneo de vulnerabilidades
+
+<p> 🛠 Qualys: &nbsp; Vulnerability Management (https://www.qualys.com) Servicio en la nube que permite identificar que sistemas informaticos pueden ser vulnerables a las ultimas amenazas de internet  </p>
+<p> 🛠 Nessus: &nbsp; (https://www.tenable.com) Permite la evaluacion de vulnerabilidades, configuraciones y cumplimiento </p>
+<p> 🛠 GFI LanGuard: &nbsp; Escanea, detecta y evalua las vulnerabilidades en una red y sus dispositivos conectados </p>
+<p> 🛠 OpenVAS &nbsp; (https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
+<p> 🛠 Nikto &nbsp; Escaner de servidores web, examina los elementos de configuracion como archivos de indice, opciones habilitades en servidores http e identifica el software instalado   </p>
 
 
 
@@ -1115,7 +1172,427 @@ fallas pueden aprovecharse realmente.</p>
 
 
 
-### 👨🏻‍💻 &nbsp; Fase 3. Explotacion
+<!--h1 without bottom border-->
+<div id="user-content-toc">
+  <ul align="left">
+    <summary><h2 style="display: inline-block">Fase 3. Explotacion </h2></summary>
+  </ul>
+</div>
+
+
+
+<p> Metodologia para irrumpir en un sistema</p>
+
+
+<p> Paso 1:  &nbsp; Obtener acceso - Initial Access &nbsp; TA0001</p>
+<p> Tecnicas</p>
+<p><b> • Descifrado de contraseñas:</b> </p>
+
+
+  <p><b> &nbsp; Ataques no electronicos:</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ingenieria social </b> </p>
+ 
+<p><b> &nbsp;&nbsp;🛠 &nbsp; Setoolkit</p>
+<p><b> &nbsp;&nbsp;🛠 &nbsp; BeEF</p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Espiar la contraseña </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Buscar en la basura</b> </p>
+
+  <p><b> &nbsp; Ataques activos en linea:</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Contraseñas por defecto </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Password Cracking  </b> </p>
+
+
+<p><b> Intentar explotar las posibles debilidades de contraseñas asignadas en el servidor web </b> </p>
+<p> Objetivos del ataque</p>
+
+<p> Servidores de SMTP y FTP</p>
+<p> Tunelkes SSH</p>
+<p> Formularios de autenticacion web</p>
+
+<p> Tecnicas</p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de fuerza bruta </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de diccionario </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de tabla arcoiris </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Uso de Troyanos, Spyware, Keyloggers </b> </p>
+
+  <p><b> &nbsp; Ataques pasivos en linea:</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Monitoreo de paquetes, Credenciales de acceso en los paquetes de red </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de hombre en el medio </b> </p>
+
+<p><b>&nbsp;&nbsp;&nbsp;• Ataques Man-in-the-Middle (MitM)</b> : Interceptar y alterar la comunicación entre dos partes sin su conocimiento. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3xghnVqC/MITM.png" alt="Descripción de la imagen">
+</p>
+
+
+
+
+### &nbsp; 1. Técnicas de intermediario (MiTM)
+
+<p><b>• Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
+<p><b>• Ataque gemelo malvado :</b> configuración de un punto de acceso Wi-Fi falso para interceptar el tráfico.</p>
+<p><b>• Envenenamiento de caché ARP :</b> envío de mensajes ARP falsos para vincular su dirección MAC con la dirección IP de otro host.</p>
+<p><b>• Envenenamiento LLMNR/NBT-NS :</b> explotación de protocolos de red para interceptar y retransmitir tráfico de autenticación.</p>
+<p><b>• Suplantacion DNS</b> 
+<p> Una vez que nos hemos posicionado en el medio, podemos empezar a rastrear el tráfico en busca de información confidencial. Si el tráfico está cifrado, podemos emplear técnicas como: </p>
+
+<p><b>• Debilitar el cifrado :</b> comprometer las capacidades de cifrado de un dispositivo de red</p>
+<p><b>• Ataque de degradación: </b> aprovecha la compatibilidad con versiones anteriores de un sistema para obligarlo a utilizar una versión menos segura.</p>
+
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+<p><b> • SSLstrip+ :</b> Realizar ataques de degradación de HTTPS a HTTP.</p>
+<p><b> • Bettercap :</b> Marco de reconocimiento y explotación de redes tanto cableadas como inalámbricas</p>
+<p><b> • Ettercap :</b> </p>
+<p><b> • Cain y abel :</b> </p>
+<p><b> • Mitmframwork :</b> Envenenar consultas LLMNR, NBT-NS y mDNS</p>
+<p><b> • Arpspoof :</b> Ataques de envenenamiento de caché ARP.</p>
+<p><b> • Aircrack-ng :</b> Conjunto de herramientas para atacar redes Wi-Fi.</p>
+<p><b> • Airgeddon :</b> Framework para atacar redes WiFi. Incluye ataques de gemelo malvado.</p>
+<p><b> • Fluxion :</b> Ataques MiTM contra redes Wi-Fi.</p>
+
+
+ <p><b> &nbsp; Ataques pasivos en linea::</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de tabla de arcoiris, tecnica de criptoanalitica almacenada en memoria</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de red distribuido</b> </p>
+
+
+
+<p><b> • Explotacion de desbordamiento de Bufer:</b> </p>
+
+
+  <p><b> &nbsp; Vulnerabilidad de las aplicaciones de Bufer:</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Inyectar codigo malicioso en el bufer para dañar archivos </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Modificar datos del program</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Acceder a informacion critica </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Obtener acceso al Shell </b> </p>
+
+
+
+
+<p><b> • Explotacion de vulnerabilidades :</b> </p>
+
+  <p><b> &nbsp; Determinar la capacidad de la vulnerabilidad </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Desarrollar el exploit </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Seleccionar el metodo de entrega (Local o remoto)</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Generar y entregar el payload </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Obtener acceso al Shell remoto </b> </p>
+
+
+
+
+<p> Paso 2:  &nbsp; Elevar privilegios - Privilege Escalation &nbsp; TA0004 </p>
+
+<p> Tipos</p>
+
+<p><b> Horizontal</b> &nbsp; Acceder a recursos, funciones y otros privilegios que pertenecen a un usuario autorizado con un permiso de acceso similar </p>
+<p><b> Vertical </b> &nbsp; Acceder a los recursos y funciones de un usuario con privilegios superiores </p>
+
+
+<p> Tecnicas</p>
+
+<p><b> • Explotacion de vulnerabilidades </b> &nbsp; para obtener mayores privilegios </p>
+
+<p><b> • Secuestro de DLLs</b></p>
+  <p><b> &nbsp; Reemplazar Dlls legitimas por maliciosas</b> &nbsp; Powersploit puede identificar los DLLs secuentrables y ejecutar el cambio en el sistema</p>
+
+<p><b> • Ataques a vulnerabilidades spectre y meltdown </b> &nbsp;"Procesadores AMD - ARM - INTEL" </p>
+
+<p><b> • Explotacion de servicios mal configurados:</b> </p>
+  <p><b> &nbsp; Identificar servicios mal configurados </b> &nbsp; Powersploit </p>
+
+ 
+
+
+<p> Paso 3:  &nbsp; Mantener altos niveles de acceso - Persistencia &nbsp; TA0003 </p>
+
+<p> 1.&nbsp; Ejecutar remotamente aplicaciones maliciosas para robar informacion critica </p>
+    <p><b> &nbsp;&nbsp;🛠 Backdoors &nbsp;&nbsp; Denegar o interrumpir la operacion, tomando informacion para la perdida de privacidad y obtener acceso no autorizado a los recursos del sistema </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 Crackers &nbsp;&nbsp; Software diseñado para decifrar un codigo o contraseña </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 Keyloggers &nbsp;&nbsp; Grabar las pulsaciones del teclados </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 Spyware &nbsp;&nbsp; Tomar captura de la pantalla y enviarlas a un destino definido </b> </p>
+
+
+
+<p> 2.&nbsp; Esconder los programas o archivos maliciosos</p>
+    <p><b> &nbsp;🛠 Rootkits &nbsp;&nbsp; Malware sofisticado diseñado específicamente para ocultar su presencia en un sistema mientras otorga acceso privilegiado a atacantes no autorizados </b> </p>
+        <p>&nbsp;&nbsp;🛠 • Lojas </p>
+        <p>&nbsp;&nbsp;🛠 • Scranos </p>
+        <p>&nbsp;&nbsp;🛠 • Horse pill </p>
+        <p>&nbsp;&nbsp;🛠 • Necurs </p>
+    <p><b> &nbsp;🛠 Streams de datos NTFS &nbsp;&nbsp; Permite al atacante ocultar codigo malicioso</b> </p>
+    <p><b> &nbsp;🛠 Esteganografia &nbsp;&nbsp; Ocultar informacion detras de otros datos sin el consentimiento de la victima </b> </p>
+  
+
+
+<p> Paso 4:  &nbsp; Limpiar el rastro - Defense Evasion  &nbsp; TA0005 </p>
+
+<p><b> &nbsp; • Desactivar la auditoria del sistema</b> </p>
+<p><b> &nbsp; • Borrar los registros del sistema</b> </p>
+<p><b> &nbsp; • Manipular los registros del sistema</b> </p>
+<p><b> &nbsp; • Cubrir las huellas en la red</b> </p>
+<p><b> &nbsp; • Borrados de archivos </b> </p>
+
+
+<p>&nbsp;&nbsp; Herramientas </p>
+        <p>&nbsp;&nbsp;🛠 • CCleaner </p>
+        <p>&nbsp;&nbsp;🛠 • DBAN &nbsp; Es una herramienta para para aplicar un borrado seguro a cualquier disco, HDD o SSD. </p>
+        <p>&nbsp;&nbsp;🛠 • Privacy Eraser </p>
+        <p>&nbsp;&nbsp;🛠 • Wipe </p>
+        <p>&nbsp;&nbsp;🛠 • ClearProg </p>
+
+
+
+p>&nbsp;&nbsp;<h3>Ataques a servidores WEB<h3></p>
+
+  <p> Daños dentro de la origanizacion</p>
+
+<p><b> &nbsp; • Comprometer cuentas de usuario</b> </p>
+<p><b> &nbsp; • Realizar cambios en el contenido del sitio web</b> </p>
+<p><b> &nbsp; • Realizar ataques secundarios desde el servidor web</b> </p>
+<p><b> &nbsp; • Acceder como administrador a otras aplicaciones o al servidor </b> </p>
+<p><b> &nbsp; • Manipular los datos de la organizacion para comprometer a los usuarios que se conecten al servidor</b> </p>
+<p><b> &nbsp; • Robar datos sensibles de la origanizacion </b> </p>
+
+<p> Riesgos </p>
+
+<p><b> &nbsp; • Establecer permisos inadecuados de archivos y directorios </b> </p>
+<p><b> &nbsp; • Realizar la instalacion del servidor con la configuracion por defecto </b> </p>
+<p><b> &nbsp; • Dejar habilitados servicios innecesarios </b> </p>
+<p><b> &nbsp; • Problemas con la configuracion de cuentas con contraseñas por defecto </b> </p>
+<p><b> &nbsp; • Configuraciones erroneas en el servidor web el sistema operaativo o las redes </b> </p>
+<p><b> &nbsp; • Fallos en el software del servidor, sistema operativo o aplicaciones web </b> </p>
+<p><b> &nbsp; • Problemsa con los certificaados </b> </p>
+
+<p>Recopilar informacion</p>
+
+<p><b> &nbsp; • Whois </b> </p>
+  <p>&nbsp;&nbsp;🛠 https://www.whois.com </p>
+  <p>&nbsp;&nbsp;🛠 https://whois.domaintools.com </p>
+
+<p><b> &nbsp; • Dosier del dominio </b> </p>
+  <p>&nbsp;&nbsp;🛠 https://centralops.net/co </p>
+
+<p><b> &nbsp; • Encontrar subdominios </b> </p>
+<p>&nbsp;&nbsp;🛠 https://pentest-tools.com/information-gathering/find-subdomains-of-domain </p>
+
+<p><b> &nbsp; • Robots.txt </b> Este archivo es para evitar el rastreo y la indexación de ciertas partes de tu sitio por rastreadores web y arañas administrados por sitios como Yahoo! y Google.</p>
+  <p>&nbsp;&nbsp;🛠 URL/robots.txt o https://seranking.com/free-tools/robots-txt-tester.html</p>
+
+<p><b> &nbsp; • Captura de Banners</b> </p>
+  <p>&nbsp;&nbsp;🛠 Netcraft</p>
+  <p>&nbsp;&nbsp;🛠 Netcat</p>
+  <p>&nbsp;&nbsp;🛠 Telnet</p>
+  <p>&nbsp;&nbsp;🛠 Httprecon</p>
+  <p>&nbsp;&nbsp;🛠 ID Serve</p>
+  <p>&nbsp;&nbsp;🛠 Nmap</p>
+
+
+<p><b> &nbsp; Explotar vulnerbilidades</b> </p>
+  <p>&nbsp;&nbsp;🛠 Acunetix</p>
+  <p>&nbsp;&nbsp;🛠 Arachni</p>
+  <p>&nbsp;&nbsp;🛠 Burp Suite</p>
+  <p>&nbsp;&nbsp;🛠 Nessus</p>
+  <p>&nbsp;&nbsp;🛠 Nikto</p>
+
+
+<p><b> &nbsp; Vulnerabilidades explotables</b> </p>
+  <p>&nbsp;&nbsp;🛠 Exploit dtabase</p>
+  <p>&nbsp;&nbsp;🛠 Rapid7</p>
+  <p>&nbsp;&nbsp;🛠 Security focus</p>
+  <p>&nbsp;&nbsp;🛠 Nessus</p>
+  <p>&nbsp;&nbsp;🛠 Zero day</p>
+
+
+
+
+<p><b> &nbsp; Ataques mas frecuentes a los servidores WEB</b> </p>
+
+
+### &nbsp;  Ataques de denegación de servicio (DoS y DDoS)
+
+</b> 
+
+<p>Saturar una red o un servicio con tráfico excesivo para que no esté disponible para usuarios legítimos.La mayoría de los ataques DoS implican inundación, lo que significa saturar al objetivo con solicitudes. </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/FzpJHJBF/5.png" alt="Descripción de la imagen">
+</p>
+
+### 👨🏻‍💻 &nbsp;Tipos
+
+###  Basado en volumen
+
+<p> Saturar el ancho de banda del sitio, medido en bps (bits por segundo), atacando las capas inferiores del modelo TCP/IP. </p>
+
+<p><b> • Inundaciones ICMP :</b> envío de muchos pings.</p>
+<p><b> • Inundaciones UDP :</b> envío de una gran cantidad de datos UDP.</p>
+<p><b> • Red de botnet :</b> Un botnet es un conjunto de máquinas comprometidas que el atacante puede manipular desde un sistema de comando y control (CnC o C2) para participar en un ataque de DDoS, enviar correos electrónicos no deseados y realizar otras actividades ilícitas.</p>
+
+<p>La Figura muestra cómo un atacante puede utilizar una botnet para lanzar un ataque DDoS. La botnet está compuesta por terminales de usuario comprometidos (computadoras portátiles), enrutadores inalámbricos domésticos y dispositivos de Internet de las cosas (IoT), como cámaras IP. </p>
+
+<p>El atacante envía instrucciones al C2; Posteriormente, el C2 envía instrucciones a los bots dentro de la botnet para lanzar el ataque DDoS contra el servidor víctima.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/WpWKsLz8/2.png" alt="Descripción de la imagen">
+</p>
+
+###  Basado en protocolo
+
+<p> Consumir recursos del servidor o del nodo de red explotando las asignaciones del protocolo </p>
+
+
+<p><b> • Inundaciones SYN :</b>El atacante lanza un ataque DoS directo envío de muchos paquetes SYN para dejar conexiones TCP medio abiertas y, por lo tanto, exceder los recursos del servidor, impidiendo conexiones de usuarios legítimos.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nhjfyV1q/1.png" alt="Descripción de la imagen">
+</p>
+
+<p>Ataques DoS y DDoS reflejados</p>
+
+<p>los atacantes envían a las fuentes paquetes falsos que parecen ser de la víctima y luego las fuentes se vuelven participantes involuntarios en el ataque reflejado al enviar el tráfico de respuesta a la víctima prevista.</p>
+
+<p> el atacante envía un paquete al host A. La dirección IP de origen es la dirección IP de la víctima (10.1.2.3) y la dirección IP de destino es la dirección IP del host A (10.1.1.8). Posteriormente, el host A envía un paquete 
+no deseado a la víctima. Si el atacante continúa enviando este tipo de paquetes, el Host A no solo inunda a la víctima, sino que la víctima también puede responder con paquetes innecesarios, lo que consume ancho de banda y recursos</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sxH7Z4qQ/3.png" alt="Descripción de la imagen">
+</p>
+
+
+<p><b> • Ataques de paquetes fragmentados : :</b>  envío de muchos paquetes fragmentados innecesariamente para llenar la cola/ventana TCP del objetivo.</p>
+<p><b> • Ataques Smurf :</b> envío de solicitudes ICMP a la dirección de transmisión, lo que hace que todas las máquinas en el dominio de transmisión respondan al objetivo.</p>
+<p><b> • Ataques DDoS de amplificación :</b> es una forma de ataque de DoS reflejado en el que el tráfico de respuesta (enviado por el participante involuntario) está compuesto por paquetes que son mucho más grandes que los enviados inicialmente por el atacante 
+(falsificando a la víctima). Un ejemplo de este tipo de ataque es un atacante que envía consultas de DNS a un servidor DNS abierto. Luego, el servidor DNS responde con un tamaño de paquete mucho mayor que los paquetes de consulta iniciales. 
+El resultado final es que la máquina de la víctima se ve inundada por paquetes grandes para los que nunca emitió consultas</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/xCC4rtvq/4.png" alt="Descripción de la imagen">
+</p>
+
+###  Basado en solicitudes
+
+<p> Se centra en los servicios y aplicaciones de las capas superiores del modelo TCP/IP. Se mide en rps (solicitudes por segundo). </p>
+
+<p><b> • Ataques lentos y de bajo rendimientoP :</b> Ancho de banda bajo, solicitudes lentas para saturar todos los subprocesos de la aplicación.</p>
+<p><b> • Ataques DDoS de amplificación :</b> Solicitudes constantes de contenido que consumen recursos de la aplicación.</p>
+
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+
+<p><b> • Low orbit ion cannon </b></p>
+<p><b> • High orbit ion cannon</b></p>
+<p><b> • R-u-dead-yet:</b></p>
+<p><b> • Exploit lanzado desde metasploit</b></p>
+<p><b> • SlowLoris :</b> realiza ataques DoS lentos y de baja intensidad.</p>
+<p><b> • Hping3 :</b> una herramienta para crear y enviar paquetes TCP/UDP personalizados y ver respuestas.</p>
+<p><b> • DHCPig :</b> agota todas las direcciones en el grupo DHCP.</p>
+<p><b> • Yersinia  :</b> Un marco de ataque de capa 2.</p>
+
+
+<p><b>&nbsp;&nbsp;&nbsp;• Secuestro de sesión</b>: Tomar el control de una sesión activa entre dos partes para obtener acceso no autorizado a información o servicios.</p>
+<p><b>&nbsp;&nbsp;&nbsp;• Ataques de repetición</b>: Captura y retransmisión de datos válidos para crear efectos no autorizados u obtener acceso a los sistemas.</p>
+
+
+
+### &nbsp;  Ataques de acceso a directorios del servidor web
+
+
+<p> Acceder a directorios restringidos ejecutando comandos del sistema operativo a traves de la manipulacion de la URL. Utilizando la secuencia (../) y sus variaciones o rutas del archivo absolutas para acceder a los 
+archivos y directorios almacenados en los sistemas de archivos incluyendo el codigo fuente de la aplicacion o la configuracion y los archivos criticos del sistema </p>
+
+
+
+### &nbsp;  Ataques de aplicaciones WEB OWASP
+
+
+<p><b> &nbsp; 10 Riesgos de seguridad criticos en aplicaciones WEB</b> </p>
+
+
+  <p>&nbsp; 1) &nbsp; Inyeccion </p>
+  </br>
+    <p>&nbsp; Se producen cuando se envian datos no fiables a un interprete como parte de un comando o consulta con la finalidad que el interprete ejecute comandos no deseados o acceda a datos sin la debida autorizacion </p>
+    </br>
+      <p><b> 🛠 Inyeccion SQL&nbsp;  </b>La inyección SQL (SQL Injection o SQLi) es una técnica de ataque utilizada para explotar vulnerabilidades en aplicaciones web que interactúan con bases de datos. Consiste en insertar o "inyectar" código SQL malicioso en las consultas que realiza una aplicación hacia su base de datos.</p>
+      <p><b> 🛠 Inyeccion de comandos&nbsp;  </b>La inyección de comandos (también conocida como "Command Injection" o "OS Command Injection") es una vulnerabilidad de seguridad en aplicaciones web o sistemas que permite a un atacante ejecutar comandos del sistema operativo directamente en el servidor donde se aloja la aplicación.</p>
+          <p><b>&nbsp;&nbsp;&nbsp; Ataque shell injection: &nbsp;Es una vulnerabilidad crítica que permite a un atacante ejecutar comandos del sistema operativo directamente en el servidor vulnerable. </b>
+          <p><b>&nbsp;&nbsp;&nbsp; HTML embedding &nbsp; Incorporar contenido HTML de una fuente externa dentro de una página web propia </b>:
+          <p><b>&nbsp;&nbsp;&nbsp; Inyeccion de archivos&nbsp; Es una vulnerabilidad web que permite a un atacante incluir e interpretar archivos en una aplicación vulnerable</b>
+      <p><b> 🛠 Inyeccion LDAP&nbsp;  </b> Es una vulnerabilidad de seguridad que ocurre cuando una aplicación construye consultas LDAP utilizando entradas del usuario sin una adecuada sanitización</p      
+
+
+
+  <p>&nbsp; 2) &nbsp; Autenticaciones Rotas </p>
+  </br>
+    <p>&nbsp; Las autenticaciones rotas (Broken Authentication) es una categoría de vulnerabilidad web que se refiere a debilidades en los mecanismos de autenticación y gestión de sesiones de una aplicación. </p>
+  </br>
+      <p><b> 🛠 A traves de sesiones de ID en URLs &nbsp; </b> Es una práctica de desarrollo insegura donde el identificador de sesión del usuario se expone como parámetro en la URL en lugar de transmitirse de manera segura a través de cookies HTTPOnly o cabeceras.</p>
+      <p><b> 🛠 Explotacion de contraseñas </b> se pueden identificar contraseñas almacenadas en bases de datos. Debido al uso de algoritmos de hashing débiles y a través de la explotación del tiempo de espera. Si una aplicación tiene configurado un tiempo de espera largo para la expiración de las sesiones. </p>
+      <p><b> 🛠 Explotacion del tiempo de espera </b> Si una aplicación tiene configurado un tiempo de espera largo para la expiración de las sesiones. Cuando un usuario cierra el navegador sin cerrar la sesión de los sitios a los que ha accedido desde un computador público. Un atacante podría usar el mismo navegador para producir un ataque you que los ID de sesión pueden seguir siendo válidos. Por lo que puede explotar los privilegios del usuario </p>
+
+
+  <p>&nbsp; 3) &nbsp; Cross-site scripting (XSS) </p>     
+
+  </br>
+    <p>&nbsp; Es una vulnerabilidad web que permite a un atacante inyectar scripts maliciosos (generalmente JavaScript) en páginas web vistas por otros usuarios. Es una de las vulnerabilidades más prevalentes y peligrosas en aplicaciones web. </p>
+  </br>
+
+
+  <p>&nbsp; 4) &nbsp; Cross-site scripting (XSS) </p>     
+
+  </br>
+    <p>&nbsp; Es una vulnerabilidad web que permite a un atacante inyectar scripts maliciosos (generalmente JavaScript) en páginas web vistas por otros usuarios. Es una de las vulnerabilidades más prevalentes y peligrosas en aplicaciones web. </p>
+  </br>
+
+
+
+
+
+<p> ----------------------------------- Pendiente actualizar con el OWASP TOP 10 2025------------------------------------------</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <p>&nbsp;&nbsp;<h3>Ataques de red pasivos vs. activos<h3></p>
@@ -1156,134 +1633,9 @@ los usuarios o la estructura de la red.</p>
 
 <p> Implican la modificación, interrupción o manipulación deliberada del tráfico o las comunicaciones de la red para lograr objetivos maliciosos. </p>
 
-<p><b>&nbsp;&nbsp;&nbsp;• Ataques Man-in-the-Middle (MitM)</b> : Interceptar y alterar la comunicación entre dos partes sin su conocimiento. </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/3xghnVqC/MITM.png" alt="Descripción de la imagen">
-</p>
 
 
 
-
-### &nbsp; 1. Técnicas de intermediario (MiTM)
-
-<p><b>• Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
-<p><b>• Ataque gemelo malvado :</b> configuración de un punto de acceso Wi-Fi falso para interceptar el tráfico.</p>
-<p><b>• Envenenamiento de caché ARP :</b> envío de mensajes ARP falsos para vincular su dirección MAC con la dirección IP de otro host.</p>
-<p><b>• Envenenamiento LLMNR/NBT-NS :</b> explotación de protocolos de red para interceptar y retransmitir tráfico de autenticación.</p>
-
-<p> Una vez que nos hemos posicionado en el medio, podemos empezar a rastrear el tráfico en busca de información confidencial. Si el tráfico está cifrado, podemos emplear técnicas como: </p>
-
-<p><b>• Debilitar el cifrado :</b> comprometer las capacidades de cifrado de un dispositivo de red</p>
-<p><b>• Ataque de degradación: </b> aprovecha la compatibilidad con versiones anteriores de un sistema para obligarlo a utilizar una versión menos segura.</p>
-
-
-### 🛠 &nbsp;Herramientas
-
-</br>
-
-<p><b> • SSLstrip+ :</b> Realizar ataques de degradación de HTTPS a HTTP.</p>
-<p><b> • Bettercap :</b> Marco de reconocimiento y explotación de redes tanto cableadas como inalámbricas</p>
-<p><b> • Ettercap :</b> </p>
-<p><b> • Cain y abel :</b> </p>
-<p><b> • Mitmframwork :</b> Envenenar consultas LLMNR, NBT-NS y mDNS</p>
-<p><b> • Arpspoof :</b> Ataques de envenenamiento de caché ARP.</p>
-<p><b> • Aircrack-ng :</b> Conjunto de herramientas para atacar redes Wi-Fi.</p>
-<p><b> • Airgeddon :</b> Framework para atacar redes WiFi. Incluye ataques de gemelo malvado.</p>
-<p><b> • Fluxion :</b> Ataques MiTM contra redes Wi-Fi.</p>
-
-
-### &nbsp; 2. Ataques de denegación de servicio (DoS)
-
-</b> 
-
-<p>Saturar una red o un servicio con tráfico excesivo para que no esté disponible para usuarios legítimos.La mayoría de los ataques DoS implican inundación, 
-lo que significa saturar al objetivo con solicitudes. </p>
-
-
-### 👨🏻‍💻 &nbsp;Tipos
-
-###  Basado en volumen
-
-<p> Saturar el ancho de banda del sitio, medido en bps (bits por segundo), atacando las capas inferiores del modelo TCP/IP. </p>
-
-<p><b> • Inundaciones ICMP :</b> envío de muchos pings.</p>
-<p><b> • Inundaciones UDP :</b> envío de una gran cantidad de datos UDP.</p>
-<p><b> • Red de botnet :</b> Un _botnet _es un conjunto de máquinas comprometidas que el atacante puede manipular desde un sistema de comando y control (CnC o C2) para participar en un ataque de DDoS, 
-enviar correos electrónicos no deseados y realizar otras actividades ilícitas.</p>
-
-<p>La Figura muestra cómo un atacante puede utilizar una botnet para lanzar un ataque DDoS. La botnet está compuesta por terminales de usuario comprometidos (computadoras portátiles), enrutadores 
-inalámbricos domésticos y dispositivos de Internet de las cosas (IoT), como cámaras IP. </p>
-
-<p>El atacante envía instrucciones al C2; Posteriormente, el C2 envía instrucciones a los bots dentro de la botnet para lanzar el ataque DDoS contra el servidor víctima.</p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/WpWKsLz8/2.png" alt="Descripción de la imagen">
-</p>
-
-###  Basado en protocolo
-
-<p> Consumir recursos del servidor o del nodo de red explotando las asignaciones del protocolo </p>
-
-
-<p><b> • Inundaciones SYN :</b>El atacante lanza un ataque DoS directo envío de muchos paquetes SYN para dejar conexiones TCP medio abiertas y, por lo tanto, exceder los recursos del servidor, 
-impidiendo conexiones de usuarios legítimos.</p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/nhjfyV1q/1.png" alt="Descripción de la imagen">
-</p>
-
-<p>Ataques DoS y DDoS reflejados</p>
-
-<p>los atacantes envían a las fuentes paquetes falsos que parecen ser de la víctima y, luego, las fuentes se vuelven participantes involuntarios en el ataque reflejado al enviar el tráfico de respuesta a la víctima prevista.</p>
-
-<p> el atacante envía un paquete al host A. La dirección IP de origen es la dirección IP de la víctima (10.1.2.3) y la dirección IP de destino es la dirección IP del host A (10.1.1.8). Posteriormente, el host A envía un paquete 
-no deseado a la víctima. Si el atacante continúa enviando este tipo de paquetes, el Host A no solo inunda a la víctima, sino que la víctima también puede responder con paquetes innecesarios, lo que consume ancho de banda y recursos</p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/sxH7Z4qQ/3.png" alt="Descripción de la imagen">
-</p>
-
-
-<p><b> • Ataques de paquetes fragmentados : :</b>  envío de muchos paquetes fragmentados innecesariamente para llenar la cola/ventana TCP del objetivo.</p>
-<p><b> • Ataques Smurf :</b> envío de solicitudes ICMP a la dirección de transmisión, lo que hace que todas las máquinas en el dominio de transmisión respondan al objetivo.</p>
-<p><b> • Ataques DDoS de amplificación :</b> es una forma de ataque de DoS reflejado en el que el tráfico de respuesta (enviado por el participante involuntario) está compuesto por paquetes que son mucho más grandes que los enviados inicialmente por el atacante 
-(falsificando a la víctima). Un ejemplo de este tipo de ataque es un atacante que envía consultas de DNS a un servidor DNS abierto. Luego, el servidor DNS responde con un tamaño de paquete mucho mayor que los paquetes de consulta iniciales. 
-El resultado final es que la máquina de la víctima se ve inundada por paquetes grandes para los que nunca emitió consultas</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/xCC4rtvq/4.png" alt="Descripción de la imagen">
-</p>
-
-###  Basado en solicitudes
-
-<p> Se centra en los servicios y aplicaciones de las capas superiores del modelo TCP/IP. Se mide en rps (solicitudes por segundo). </p>
-
-<p><b> • Ataques lentos y de bajo rendimientoP :</b> Ancho de banda bajo, solicitudes lentas para saturar todos los subprocesos de la aplicación.</p>
-<p><b> • Ataques DDoS de amplificación :</b> Solicitudes constantes de contenido que consumen recursos de la aplicación.</p>
-
-
-### 🛠 &nbsp;Herramientas
-
-</br>
-
-
-
-<p><b> • Hping3 :</b> una herramienta para crear y enviar paquetes TCP/UDP personalizados y ver respuestas.</p>
-<p><b> • DHCPig :</b> agota todas las direcciones en el grupo DHCP.</p>
-<p><b> • SlowLoris :</b> realiza ataques DoS lentos y de baja intensidad.</p>
-<p><b> • Yersinia  :</b> Un marco de ataque de capa 2.</p>
-
-
-<p><b>&nbsp;&nbsp;&nbsp;• Secuestro de sesión</b>: Tomar el control de una sesión activa entre dos partes para obtener acceso no autorizado a información o servicios.</p>
-<p><b>&nbsp;&nbsp;&nbsp;• Ataques de repetición</b>: Captura y retransmisión de datos válidos para crear efectos no autorizados u obtener acceso a los sistemas.</p>
 
 
 ### &nbsp;Vulnerabilidades y las explotaciones basados en la red
@@ -1337,13 +1689,9 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 
 
 
-### 🛠 &nbsp;Herramientas recomendadas
 
-### 🛠 &nbsp;Ingenieria social 
 
-### 🛠 &nbsp; Setoolkit
 
-### 🛠 &nbsp; BeEF
 
 
 <!--horizontal divider(gradiant)-->
