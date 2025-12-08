@@ -29,13 +29,6 @@
 <p>Es el primer paso en cualquier intervención de hacking. Consiste en recopilar información sobre los sistemas o redes objetivo para comprender a fondo el entorno que se pretende evaluar  </p>
 
 
-<p><b> • &nbsp; Identidicar direcciones IP & informacion DNS </b></p>
-<p><b> • &nbsp; Identidicar nombres de dominios & la información sobre la propiedad del dominio  </b></p>
-<p><b> • &nbsp; Identificar direcciones Email y perfiles de redes sociales </b></p>
-<p><b> • &nbsp; Identificar las tecnologias WEB utiulizadas por el sitio </b></p>
-<p><b> • &nbsp; Identificar subdominios </b></p>
-
-
 </br>
 
 
@@ -45,6 +38,14 @@
 
 <p> La principal forma de lograrlo es mediante Inteligencia de Fuentes Abiertas (OSINT) , que consiste en recopilar información sobre nuestro objetivo 
 	de fuentes públicas, incluido el sitio web público de la organizacion </p>
+
+
+<p><b> • &nbsp; Identidicar direcciones IP & informacion DNS </b></p>
+<p><b> • &nbsp; Identidicar nombres de dominios & la información sobre la propiedad del dominio  </b></p>
+<p><b> • &nbsp; Identificar direcciones Email y perfiles de redes sociales </b></p>
+<p><b> • &nbsp; Identificar las tecnologias WEB utiulizadas por el sitio </b></p>
+<p><b> • &nbsp; Identificar subdominios </b></p>
+
 
 </br>
 
@@ -64,11 +65,24 @@
 <p align="center">
 
   <img src="https://i.postimg.cc/c4bGJV2W/Recursos.jpg" alt="Descripción de la imagen">
+
 </p>
 
 <p> https://osintframework.com </p>
 
-<p><b> • &nbsp; Reconocimiento y huella del sitio WEB </b></p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/GmF2LnYx/14.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<h2> :arrow_right: Reconocimiento y huella del sitio WEB  </h2>
+
+
+<p><b> • &nbsp; </b></p>
 
 
 <p><b> 1 &nbsp; Resolver la direccion IP del sitio web o del servidor que aloja el sitio web</b></p>
@@ -120,7 +134,7 @@
 
 <p><b> 3 &nbsp; Perfilar las tecnologias usadas por el sitio WEB </b></p>
 
-<p> BuiltWith &nbsp; Es una herramienta en línea que permite analizar cualquier sitio web para descubrir qué tecnologías utiliza: servidores, CMS, frameworks, librerías, herramientas de marketing, comercio electrónico entre otros </p>
+<p> BuiltWith: &nbsp; Es una herramienta en línea que permite analizar cualquier sitio web para descubrir qué tecnologías utiliza: servidores, CMS, frameworks, librerías, herramientas de marketing, comercio electrónico entre otros </p>
 
 
 <p align="center">
@@ -129,7 +143,7 @@
 
 </p>
 
-<p> Wappalyzer &nbsp; es una herramienta que identifica las tecnologías utilizadas en un sitio web, como CMS, frameworks, servidores, librerías de JavaScript, herramientas de analítica y más</p>
+<p> Wappalyzer: &nbsp; es una herramienta que identifica las tecnologías utilizadas en un sitio web, como CMS, frameworks, servidores, librerías de JavaScript, herramientas de analítica y más</p>
 
 
 <p align="center">
@@ -140,7 +154,7 @@
 
 
 
-<p> Netlas.io &nbsp; es una plataforma de OSINT (Open Source Intelligence) y escaneo de Internet que permite descubrir, investigar y monitorear activos en línea. Se utiliza principalmente en ciberseguridad para analizar superficies de ataque, buscar dispositivos vulnerables y obtener información técnica de dominios, IPs y certificados SSL </p>
+<p> Netlas.io: &nbsp; es una plataforma de OSINT (Open Source Intelligence) y escaneo de Internet que permite descubrir, investigar y monitorear activos en línea. Se utiliza principalmente en ciberseguridad para analizar superficies de ataque, buscar dispositivos vulnerables y obtener información técnica de dominios, IPs y certificados SSL </p>
 
 
 <p align="center">
@@ -155,7 +169,7 @@
 
 </p>
 
-<p> WhatRuns &nbsp; permite identificar las tecnologías que utiliza un sitio web: frameworks, CMS, plugins, herramientas de analítica, fuentes, redes publicitarias y más</p>
+<p> WhatRuns: &nbsp; permite identificar las tecnologías que utiliza un sitio web: frameworks, CMS, plugins, herramientas de analítica, fuentes, redes publicitarias y más</p>
 
 
 <p align="center">
@@ -165,7 +179,7 @@
 </p>
 
 
-<p> whatweb &nbsp; sirve para identificar las tecnologías que utiliza un sitio web (CMS, frameworks, servidores, librerías, herramientas de analítica, etc.). Es una herramienta de ciberseguridad y pentesting que permite realizar un reconocimiento rápido de la infraestructura tecnológica de una página.</p>
+<p> whatweb: &nbsp; sirve para identificar las tecnologías que utiliza un sitio web (CMS, frameworks, servidores, librerías, herramientas de analítica, etc.). Es una herramienta de ciberseguridad y pentesting que permite realizar un reconocimiento rápido de la infraestructura tecnológica de una página.</p>
 
 
 <p align="center">
@@ -176,22 +190,17 @@
 
 
 
-<p><b> 4 &nbsp; Descargar el sitio WEB </b></p>
-
-<p><b> Analizar el codigo fuente </b></p>
+<p> 4 &nbsp; Descargar el sitio WEB. Para analizar el codigo fuente</p>
 
 
+### 🛠 &nbsp; HTTRack
 
-### 🛠 &nbsp;Herramientas
-
-
-<p><b> HTTRack </b></p>
 
 <p><b> Es un crawler especializado en replicar sitios web estáticos y semidinámicos, con soporte para filtros, reescritura de enlaces y control de recursos, lo que lo convierte en una herramienta técnica clave para archivado y análisis de infraestructura web. </b></p>
 
 
-<p><b> 1 &nbsp; Instalar HTTrack desde su página oficial httrack.com. disponible en Windows, linux, Andriod </b></p>
-<p><b> 2 &nbsp; Crear un proyecto: darle un nombre y elegir la carpeta donde se guardará. </b></p>
+<p><b> 1. &nbsp; Instalar HTTrack desde su página oficial httrack.com. disponible en Windows, linux, Andriod </b></p>
+<p><b> 2. &nbsp; Crear un proyecto: darle un nombre y elegir la carpeta donde se guardará. </b></p>
 
 <p align="center">
 
@@ -200,8 +209,8 @@
 </p>
 
 
-<p><b> 3 &nbsp; Ingresar la URL del sitio que quieres descargar. </b></p>
-<p><b> 4 &nbsp; Configurar opciones: puedes limitar la profundidad del rastreo, excluir directorios o ajustar la velocidad. </b></p>
+<p><b> 3. &nbsp; Ingresar la URL del sitio que quieres descargar. </b></p>
+<p><b> 4. &nbsp; Configurar opciones: puedes limitar la profundidad del rastreo, excluir directorios o ajustar la velocidad. </b></p>
 
 <p align="center">
 
@@ -209,7 +218,7 @@
 
 </p>
 
-<p><b> 5 &nbsp; Iniciar la descarga: el programa copiará los archivos HTML, CSS, JS, imágenes y otros recursos. </b></p>
+<p><b> 5. &nbsp; Iniciar la descarga: el programa copiará los archivos HTML, CSS, JS, imágenes y otros recursos. </b></p>
 
 
 <p align="center">
@@ -219,21 +228,29 @@
 </p>
 
 
-<p><b> 6 &nbsp; Navegar offline: abre el archivo index.html en tu navegador y explora el sitio como si estuvieras conectado. </b></p>
+<p><b> 6. &nbsp; Navegar offline: abre el archivo index.html en tu navegador y explora el sitio como si estuvieras conectado. </b></p>
 
 <p><b> HDTrack</b></p>
 
 
+<h2> :arrow_right: Whois  </h2>
 
 
+<p>Los Whois son servicios y protocolos que permiten consultar información pública sobre dominios de internet, direcciones IP y recursos asociados en redes. Básicamente, funcionan como una base de datos global distribuida que almacena detalles registrales de dominios (como .com, .net, .org) y otros identificadores numéricos (ASNs o bloques IP). </p>
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/fTXRwS0N/16.png" alt="Descripción de la imagen">
+
+</p>
 
 
+<p align="center">
 
+  <img src="https://i.postimg.cc/520KBLqF/15.png" alt="Descripción de la imagen">
 
-
-
+</p>
 
 
 
