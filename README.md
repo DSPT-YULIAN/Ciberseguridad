@@ -26,8 +26,15 @@
 
 <!-- ## Reconocimiento -->
 
-<p> Es el primer paso en cualquier intervención de hacking. Consiste en recopilar información sobre los sistemas o redes objetivo para comprender a 
-	fondo el entorno que se pretende evaluar  </p>
+<p>Es el primer paso en cualquier intervención de hacking. Consiste en recopilar información sobre los sistemas o redes objetivo para comprender a fondo el entorno que se pretende evaluar  </p>
+
+
+<p><b> • &nbsp; Identidicar direcciones IP & informacion DNS </b></p>
+<p><b> • &nbsp; Identidicar nombres de dominios & la información sobre la propiedad del dominio  </b></p>
+<p><b> • &nbsp; Identificar direcciones Email y perfiles de redes sociales </b></p>
+<p><b> • &nbsp; Identificar las tecnologias WEB utiulizadas por el sitio </b></p>
+<p><b> • &nbsp; Identificar subdominios </b></p>
+
 
 </br>
 
@@ -60,6 +67,176 @@
 </p>
 
 <p> https://osintframework.com </p>
+
+<p><b> • &nbsp; Reconocimiento y huella del sitio WEB </b></p>
+
+
+<p><b> 1 &nbsp; Resolver la direccion IP del sitio web o del servidor que aloja el sitio web</b></p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/6pHmdqv9/1.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>En este caso, el sitio web tiene dos direcciones IPv4. Esto se debe a que está detrás de Cloudflare, que funciona como un proxy. Además, muestra las direcciones IPv6 y el servidor de correo asociado al dominio. </p>
+
+
+
+<p><b> 2 &nbsp; Explorar el sitio WEB con el archivo robots.txt </b></p>
+
+
+<p>El archivo robots.txt es un archivo de texto que se coloca en la raíz de un sitio web para indicar a los rastreadores (como los de Google, Bing u otros bots) qué partes del sitio pueden o no pueden explorar </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RZ2474yN/2.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> En este caso se observa que en el archivo robots.txt especifica que ignore el directorio /wp-admin/. WP se refiere a que este sitio web esta ejecutando WordPress y admin es el directorio de administracion por lo tanto no debe ser de acceso publico</p>
+
+<p> El archivo sitemap_index.xml es un mapa del sitio en formato XML que lista las páginas, imágenes, vídeos y otros recursos de un sitio web</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/DyNjCZg8/3.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/FKp0BC4q/4.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p><b> 3 &nbsp; Perfilar las tecnologias usadas por el sitio WEB </b></p>
+
+<p> BuiltWith &nbsp; Es una herramienta en línea que permite analizar cualquier sitio web para descubrir qué tecnologías utiliza: servidores, CMS, frameworks, librerías, herramientas de marketing, comercio electrónico entre otros </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/GhHwh9hP/5.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Wappalyzer &nbsp; es una herramienta que identifica las tecnologías utilizadas en un sitio web, como CMS, frameworks, servidores, librerías de JavaScript, herramientas de analítica y más</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/PqmCxTMx/6.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Netlas.io &nbsp; es una plataforma de OSINT (Open Source Intelligence) y escaneo de Internet que permite descubrir, investigar y monitorear activos en línea. Se utiliza principalmente en ciberseguridad para analizar superficies de ataque, buscar dispositivos vulnerables y obtener información técnica de dominios, IPs y certificados SSL </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/tRhGM7Cr/7.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/vTyksLHP/8.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> WhatRuns &nbsp; permite identificar las tecnologías que utiliza un sitio web: frameworks, CMS, plugins, herramientas de analítica, fuentes, redes publicitarias y más</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Yq5gqnwx/9.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> whatweb &nbsp; sirve para identificar las tecnologías que utiliza un sitio web (CMS, frameworks, servidores, librerías, herramientas de analítica, etc.). Es una herramienta de ciberseguridad y pentesting que permite realizar un reconocimiento rápido de la infraestructura tecnológica de una página.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/W3tpLVt1/10.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p><b> 4 &nbsp; Descargar el sitio WEB </b></p>
+
+<p><b> Analizar el codigo fuente </b></p>
+
+
+
+### 🛠 &nbsp;Herramientas
+
+
+<p><b> HTTRack </b></p>
+
+<p><b> Es un crawler especializado en replicar sitios web estáticos y semidinámicos, con soporte para filtros, reescritura de enlaces y control de recursos, lo que lo convierte en una herramienta técnica clave para archivado y análisis de infraestructura web. </b></p>
+
+
+<p><b> 1 &nbsp; Instalar HTTrack desde su página oficial httrack.com. disponible en Windows, linux, Andriod </b></p>
+<p><b> 2 &nbsp; Crear un proyecto: darle un nombre y elegir la carpeta donde se guardará. </b></p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/v8LZCGYd/11.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b> 3 &nbsp; Ingresar la URL del sitio que quieres descargar. </b></p>
+<p><b> 4 &nbsp; Configurar opciones: puedes limitar la profundidad del rastreo, excluir directorios o ajustar la velocidad. </b></p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/k4N7rydg/12.png" alt="Descripción de la imagen">
+
+</p>
+
+<p><b> 5 &nbsp; Iniciar la descarga: el programa copiará los archivos HTML, CSS, JS, imágenes y otros recursos. </b></p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cCY9kDyW/13.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b> 6 &nbsp; Navegar offline: abre el archivo index.html en tu navegador y explora el sitio como si estuvieras conectado. </b></p>
+
+<p><b> HDTrack</b></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Metodos
@@ -95,6 +272,13 @@
 
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Recomocimiento activo (Implica interacción directa con el objetivo) </h2>
+
+
+</br>
+
+<p><b> • &nbsp; Descubrimiento de puertos abiertos </b>  </p>
+<p><b> • &nbsp; Conocer la infraestructura interna de una red u organización </b></p>
+<p><b> • &nbsp; Enumeracion de la informacion del sistema objetivo </b></p>
 
 
 <p> Recopilar información interactuando directamente con el objetivo (envío de paquetes, solicitudes, etc.)  </p>
