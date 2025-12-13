@@ -82,10 +82,7 @@
 <h2> :arrow_right: Reconocimiento y huella del sitio WEB  </h2>
 
 
-<p><b> • &nbsp; </b></p>
-
-
-<p><b> 1 &nbsp; Resolver la direccion IP del sitio web o del servidor que aloja el sitio web</b></p>
+<p><b> 1. &nbsp; Resolver la direccion IP del sitio web o del servidor que aloja el sitio web</b></p>
 
 
 
@@ -100,7 +97,7 @@
 
 
 
-<p><b> 2 &nbsp; Explorar el sitio WEB con el archivo robots.txt </b></p>
+<p><b> 2. &nbsp; Explorar el sitio WEB con el archivo robots.txt </b></p>
 
 
 <p>El archivo robots.txt es un archivo de texto que se coloca en la raíz de un sitio web para indicar a los rastreadores (como los de Google, Bing u otros bots) qué partes del sitio pueden o no pueden explorar </p>
@@ -132,7 +129,7 @@
 
 
 
-<p><b> 3 &nbsp; Perfilar las tecnologias usadas por el sitio WEB </b></p>
+<p><b> 3. &nbsp; Perfilar las tecnologias usadas por el sitio WEB </b></p>
 
 <p> BuiltWith: &nbsp; Es una herramienta en línea que permite analizar cualquier sitio web para descubrir qué tecnologías utiliza: servidores, CMS, frameworks, librerías, herramientas de marketing, comercio electrónico entre otros </p>
 
@@ -190,7 +187,7 @@
 
 
 
-<p> 4 &nbsp; Descargar el sitio WEB. Para analizar el codigo fuente</p>
+<p> 4. &nbsp; Descargar el sitio WEB. Para analizar el codigo fuente</p>
 
 
 ### 🛠 &nbsp; HTTRack
@@ -230,6 +227,15 @@
 
 <p><b> 6. &nbsp; Navegar offline: abre el archivo index.html en tu navegador y explora el sitio como si estuvieras conectado. </b></p>
 
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/yYV3rTGk/17.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
 <p><b> HDTrack</b></p>
 
 
@@ -251,6 +257,84 @@
   <img src="https://i.postimg.cc/520KBLqF/15.png" alt="Descripción de la imagen">
 
 </p>
+
+
+
+<h2> :arrow_right: Huella de sitio web con Netcraft </h2>
+
+<p>Netcraft es una herramienta de reconocimiento pasivo (también conocido como OSINT o Inteligencia de Fuentes Abiertas) increíblemente valiosa, ya que permite obtener una gran cantidad de información sobre el objetivo sin interactuar directamente con él. </p>
+
+<p> 1) Huella de Dominios y Subdominios (Footprinting)  </p>
+<p>    &nbsp; &nbsp;  • Identificar Servidores &nbsp; : Conocer qué servidor web (por ejemplo, Apache, Nginx, IIS) y qué sistema operativo se ha utilizado.</p>
+<p>    &nbsp; &nbsp;  • Historial de IP y Hosting &nbsp; : El historial de alojamiento puede revelar antiguas direcciones IP o proveedores de hosting. </p>
+<p>    &nbsp; &nbsp;  • Detección de Subdominios &nbsp; : Netcraft puede tener registros de subdominios que han sido alojados con el dominio principal </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/c1zwPR5N/18.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 2) Mapeo de Infraestructura y Redes </p>
+<p>    &nbsp; &nbsp;  • Propietario del Bloque de Red (Netblock Owner) y Rango de IPs: &nbsp; La identificación del propietario del bloque de red y de las direcciones IP de los servidores de destino ayuda a mapear la superficie de ataque de la organización</p>
+
+<p> 3) Identificación de Tecnologías (Fingerprinting) </p>
+<p>    &nbsp; &nbsp;  • Tecnologías de Frontend y Backend  &nbsp; : permite conocer tecnologías como sistemas de gestión de contenido (CMS como WordPress o Drupal), frameworks de desarrollo, tecnologías de analytics y otras librerías.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Wz0ZMKmr/22.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p>    &nbsp; &nbsp;  • Certificados SSL/TLS:  &nbsp; : Puede proporcionar información sobre el historial y la configuración actual de los certificados.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MKkbv0b2/19.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 4) Detección de Phishing y Sitios Fraudulentos Anteriores  </p>
+<p>    &nbsp; &nbsp;  • puede indicar si el dominio objetivo o sus subdominios han sido comprometidos anteriormente o si han sido utilizados en ataques.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zvkBD1Ss/20.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XJLSpNmc/21.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h2> :arrow_right: Reconocimiento de DNS </h2>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
