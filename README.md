@@ -40,10 +40,10 @@
 	de fuentes públicas, incluido el sitio web público de la organizacion </p>
 
 
-<p><b> • &nbsp; Identidicar direcciones IP & informacion DNS </b></p>
+<p><b> • &nbsp; Identidicar direcciones IP & la informacion DNS </b></p>
 <p><b> • &nbsp; Identidicar nombres de dominios & la información sobre la propiedad del dominio  </b></p>
 <p><b> • &nbsp; Identificar direcciones Email y perfiles de redes sociales </b></p>
-<p><b> • &nbsp; Identificar las tecnologias WEB utiulizadas por el sitio </b></p>
+<p><b> • &nbsp; Identificar las tecnologias WEB utilizadas por el sitio </b></p>
 <p><b> • &nbsp; Identificar subdominios </b></p>
 
 
@@ -68,6 +68,13 @@
 
 </p>
 
+
+<p> OSINT Framework &nbsp; es un directorio o marco de trabajo que agrupa una amplia variedad de herramientas, recursos y técnicas utilizadas en la disciplina conocida como OSINT (Open Source Intelligence o Inteligencia de Fuentes Abiertas  </p>
+
+
+<p> Sirve como una guía estructurada y una colección de enlaces hacia herramientas específicas que permiten a los investigadores recopilar y analizar información proveniente de fuentes públicamente accesibles en Internet. Estas fuentes incluyen redes sociales, motores de búsqueda, registros públicos, foros, bases de datos gubernamentales, entre otros.  </p>
+
+
 <p> https://osintframework.com </p>
 
 
@@ -82,7 +89,7 @@
 <h2> :arrow_right: Reconocimiento y huella del sitio WEB  </h2>
 
 
-<p><b> 1. &nbsp; Resolver la direccion IP del sitio web o del servidor que aloja el sitio web</b></p>
+<h3> 1. &nbsp; Resolver la direccion IP del sitio web o del servidor que aloja el sitio web </h3>
 
 
 
@@ -97,7 +104,7 @@
 
 
 
-<p><b> 2. &nbsp; Explorar el sitio WEB con el archivo robots.txt </b></p>
+<h3> 2. &nbsp; Explorar el sitio WEB con el archivo robots.txt y sitemap_index.xml  </h3>
 
 
 <p>El archivo robots.txt es un archivo de texto que se coloca en la raíz de un sitio web para indicar a los rastreadores (como los de Google, Bing u otros bots) qué partes del sitio pueden o no pueden explorar </p>
@@ -111,6 +118,7 @@
 
 
 <p> En este caso se observa que en el archivo robots.txt especifica que ignore el directorio /wp-admin/. WP se refiere a que este sitio web esta ejecutando WordPress y admin es el directorio de administracion por lo tanto no debe ser de acceso publico</p>
+
 
 <p> El archivo sitemap_index.xml es un mapa del sitio en formato XML que lista las páginas, imágenes, vídeos y otros recursos de un sitio web</p>
 
@@ -129,7 +137,7 @@
 
 
 
-<p><b> 3. &nbsp; Perfilar las tecnologias usadas por el sitio WEB </b></p>
+<h3> 3. &nbsp; Perfilar las tecnologias usadas por el sitio WEB </h3>
 
 <p> BuiltWith: &nbsp; Es una herramienta en línea que permite analizar cualquier sitio web para descubrir qué tecnologías utiliza: servidores, CMS, frameworks, librerías, herramientas de marketing, comercio electrónico entre otros </p>
 
@@ -187,17 +195,20 @@
 
 
 
-<p> 4. &nbsp; Descargar el sitio WEB. Para analizar el codigo fuente</p>
+<h3>  4. &nbsp; Descargar el sitio WEB. Para analizar el codigo fuente </h3>
 
 
-### 🛠 &nbsp; HTTRack
+<p> Es una técnica común en las pruebas de penetración (pentesting) durante la fase de reconocimiento y posterior análisis. Esta técnica implica obtener una copia local de los archivos que componen el sitio web objetivo. Al tener una copia local, el pentester puede inspeccionar minuciosamente el código fuente del lado del cliente y del servidor (si se obtiene) sin necesidad de interactuar constantemente con el servidor remoto, lo cual es más silencioso y eficiente para ciertos análisis.</p>
+
+
+ <h2>  🛠 &nbsp; HTTRack  </h2> 
 
 
 <p><b> Es un crawler especializado en replicar sitios web estáticos y semidinámicos, con soporte para filtros, reescritura de enlaces y control de recursos, lo que lo convierte en una herramienta técnica clave para archivado y análisis de infraestructura web. </b></p>
 
 
-<p><b> 1. &nbsp; Instalar HTTrack desde su página oficial httrack.com. disponible en Windows, linux, Andriod </b></p>
-<p><b> 2. &nbsp; Crear un proyecto: darle un nombre y elegir la carpeta donde se guardará. </b></p>
+<p><b> 1) &nbsp; Instalar HTTrack desde su página oficial httrack.com. disponible en Windows, linux, Andriod </b></p>
+<p><b> 2) &nbsp; Crear un proyecto: darle un nombre y elegir la carpeta donde se guardará. </b></p>
 
 <p align="center">
 
@@ -206,8 +217,8 @@
 </p>
 
 
-<p><b> 3. &nbsp; Ingresar la URL del sitio que quieres descargar. </b></p>
-<p><b> 4. &nbsp; Configurar opciones: puedes limitar la profundidad del rastreo, excluir directorios o ajustar la velocidad. </b></p>
+<p><b> 3) &nbsp; Ingresar la URL del sitio que quieres descargar. </b></p>
+<p><b> 4) &nbsp; Configurar opciones: puedes limitar la profundidad del rastreo, excluir directorios o ajustar la velocidad. </b></p>
 
 <p align="center">
 
@@ -215,7 +226,7 @@
 
 </p>
 
-<p><b> 5. &nbsp; Iniciar la descarga: el programa copiará los archivos HTML, CSS, JS, imágenes y otros recursos. </b></p>
+<p><b> 5) &nbsp; Iniciar la descarga: el programa copiará los archivos HTML, CSS, JS, imágenes y otros recursos. </b></p>
 
 
 <p align="center">
@@ -225,7 +236,7 @@
 </p>
 
 
-<p><b> 6. &nbsp; Navegar offline: abre el archivo index.html en tu navegador y explora el sitio como si estuvieras conectado. </b></p>
+<p><b> 6) &nbsp; Navegar offline: abre el archivo index.html en tu navegador y explora el sitio como si estuvieras conectado. </b></p>
 
 
 <p align="center">
@@ -235,8 +246,10 @@
 </p>
 
 
+ <h2> 🛠 &nbsp; HDTrack </h2>
 
-<p><b> HDTrack</b></p>
+<p> Es una herramienta de código abierto y gratuita que funciona como un navegador offline o copiador de sitios web. Su función principal es descargar un sitio web completo desde Internet y almacenarlo en tu computadora local. Lo hace descargando recursivamente todas las páginas, imágenes, archivos CSS, JavaScript, y otros recursos del sitio, recreando su estructura original en tu disco duro. </p>
+
 
 
 <h2> :arrow_right: Whois  </h2>
@@ -250,6 +263,12 @@
   <img src="https://i.postimg.cc/fTXRwS0N/16.png" alt="Descripción de la imagen">
 
 </p>
+
+
+
+<p>El comando whois es una herramienta esencial de línea de comandos utilizada para consultar las bases de datos WHOIS. Estas bases de datos contienen información registrada sobre los usuarios de recursos de Internet, principalmente nombres de dominio y direcciones IP.</p>
+
+
 
 
 <p align="center">
@@ -291,8 +310,6 @@
 </p>
 
 
-
-
 <p>    &nbsp; &nbsp;  • Certificados SSL/TLS:  &nbsp; : Puede proporcionar información sobre el historial y la configuración actual de los certificados.</p>
 
 
@@ -324,6 +341,148 @@
 
 
 <h2> :arrow_right: Reconocimiento de DNS </h2>
+
+
+<p> El objetivo principal del reconocimiento de DNS es mapear la infraestructura de red del objetivo a través de sus registros DNS. </p>
+
+
+ <h2> 🛠 &nbsp; DNS recon </h2>
+
+
+<p> DNSRecon es una herramienta de enumeración DNS escrita en Python. Esta herramienta es utilizada principalmente para recopilar información sobre los registros DNS de un dominio específico, lo cual es una práctica común en pruebas de penetración y evaluaciones de seguridad. DNSRecon puede realizar una variedad de tareas, incluyendo: </p>
+
+
+<p> Transferencias de Zona: Verifica si los servidores de nombres (NS) permiten transferencias de zona, lo que podría revelar información sensible.</p>
+<p> Enumeración de Registros DNS: Recopila registros DNS comunes como MX (servidores de correo), SOA (inicio de autoridad), NS (servidores de nombres), A (direcciones IPv4), AAAA (direcciones IPv6), SPF (política de remitente) y TXT.</p>
+<p> Enumeración de Registros SRV: Busca registros SRV que indican servicios disponibles como LDAP, SIP, etc.</p>
+<p> Expansión de TLD: Realiza búsquedas para dominios con diferentes extensiones de nivel superior (TLD).</p>
+<p> Resolución de Caracteres Comodín: Detecta si un dominio utiliza resolución de caracteres comodín.</p>
+<p> Fuerza Bruta de Subdominios: Utiliza listas de palabras para descubrir subdominios y hosts existentes.</p>
+<p> Búsqueda de Registros PTR: Realiza búsquedas inversas de DNS para rangos IP o CIDR.</p>
+<p> Verificación de Registros en Caché: Examina los registros en caché de un servidor DNS para encontrar registros A, AAAA y CNAME.</p>
+
+
+<h4>Enumeración General de Registros DNS:</h4>
+
+<p>Comando: dnsrecon -d [dominio]:Recopila información general sobre los registros DNS del dominio especificado (MX, SOA, NS, A, AAAA, SPF, TXT) consultando servidores DNS públicos</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/J4FJMKVv/23.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> SOA:&nbsp; Muestra el servidor DNS autoritativo de inicio (nsztm1.digi.ninja) y detalles de configuración.  </p>
+<p> NS:&nbsp; Lista los servidores de nombres autoritativos para el dominio (nsztm1.digi.ninja, nsztm2.digi.ninja). </p>
+<p> MX:&nbsp; Muestra los servidores de correo.  </p>
+<p> A:&nbsp; Dirección IPv4 asociada al dominio (5[.]196[.]105[.]14). </p>
+<p> AAAA:&nbsp; Dirección IPv6 asociada al dominio </p>
+<p> TXT:&nbsp; Registros de texto, en este caso contiene una política SPF. </p>
+
+
+<h4>Enumeración de Registros SRV:</h4>
+
+<p>Comando: dnsrecon -d [dominio] -t srv :Busca registros SRV comunes relacionados con servicios como LDAP, SIP, Kerberos, XMPP (mensajería) Etc consultando servidores DNS </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/WpGT21B5/24.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> El dominio zonetransfer.me tiene un servicio SIP (VoIP)   </p>
+
+
+<h4>Transferencia de Zona (Contexto Pasivo):</h4>
+
+
+<p>dnsrecon -d [dominio] -t axfr: Una transferencia de zona es un mecanismo legítimo en DNS que permite a un servidor DNS secundario copiar (sincronizar) todos los registros de un dominio desde el servidor DNS primario. Esto es crucial para redundancia y resiliencia del servicio DNS.
+
+El proceso AXFR implica que un servidor DNS solicite al servidor primario una copia completa de todos los registros DNS del dominio (A, AAAA, MX, NS, TXT, CNAME, SRV, etc.). Esta solicitud se hace mediante una consulta especial llamada AXFR
+
+</p>
+
+
+<p> ¿Qué hace este comando?</p>
+
+<p> 1) &nbsp; Identificación de servidores de nombres (NS)&nbsp; : Primero, DNSRecon consulta los registros NS del dominio  para conocer cuáles son los servidores DNS autoritativos </p>
+
+<p> 2) &nbsp; Intento de Transferencia de Zona: &nbsp; : DNSRecon intenta enviar una solicitud AXFR directamente a cada uno de esos servidores de nombres (NS) identificados</p>
+
+
+<p> 3) &nbsp; Interacción con el objetivo &nbsp; : las solicitudes AXFR son enviadas directamente al servidor DNS objetivo.La mayoría de los servidores DNS modernos tienen configuraciones de seguridad que rechazan transferencias de zona provenientes de direcciones IP no autorizadas (normalmente solo se permite desde IPs de servidores secundarios confiables). Sin embargo, si el servidor tiene una configuración incorrecta o insegura y acepta la solicitud AXFR desde la IP del atacante (o desde donde se ejecute dnsrecon), entonces entregará toda la zona DNS del dominio.</p>
+
+
+<p> 4) &nbsp; Recopilación de datos: &nbsp; : Si la transferencia es exitosa, el atacante obtiene una lista exhaustiva de todos los registros DNS del dominio, lo que representa una filtración de información interna muy valiosa.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/W3LpnWqP/25.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/2yTzCCc8/26.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> CNAME:&nbsp;  sirve para crear un alias entre nombres de dominio, redirigiendo un subdominio hacia otro dominio canónico. No apunta a direcciones IP, sino a 
+nombres de dominio. </p>
+<p> SRV y NAPTR:&nbsp; Indican servicios como SIP (_sip._tcp) y correo electrónico, útiles para VoIP y descubrimiento de servicios. </p>
+<p> HINFO::&nbsp; Describe el sistema operativo y hardware (Windows XP y Casio fx-7000G). </p>
+<p> RP:&nbsp; Persona responsable </p>
+<p> LOC::&nbsp; Coordenadas geográficas </p>
+<p> AAAA:&nbsp; Dirección IPv6 asociada al dominio </p>
+<p> CERT y DNSKEY &nbsp; Información criptográfica para validación DNSSEC. </p>
+
+
+<h2> 🛠 &nbsp; DNSDumpster </h2>
+
+
+<p> DNSDumpster es una herramienta gratuita en línea diseñada para la recopilación de información (reconocimiento) de dominios. Es muy utilizada en pruebas de penetración y evaluaciones de seguridad para obtener datos sobre la infraestructura DNS de un dominio específico. </p>
+
+
+
+<p> Búsqueda de registros DNS: Permite encontrar registros como A, MX, NS, TXT, SOA y más relacionados con un dominio.</p>
+<p> Búsqueda de hosts relacionados: Identifica direcciones IP y hosts que están conectados al dominio.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/V65zFx4p/27.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Detección de subdominios: Recopila y muestra subdominios asociados al dominio principal.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Hk2JvC4z/28.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Mapeo gráfico: Genera un diagrama visual de la infraestructura del dominio, incluyendo servidores y subdominios relacionados.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/d1QhcN6p/29.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
 
 
 
