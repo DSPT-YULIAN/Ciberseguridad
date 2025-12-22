@@ -352,19 +352,21 @@
 <p> DNSRecon es una herramienta de enumeración DNS escrita en Python. Esta herramienta es utilizada principalmente para recopilar información sobre los registros DNS de un dominio específico, lo cual es una práctica común en pruebas de penetración y evaluaciones de seguridad. DNSRecon puede realizar una variedad de tareas, incluyendo: </p>
 
 
-<p> Transferencias de Zona: Verifica si los servidores de nombres (NS) permiten transferencias de zona, lo que podría revelar información sensible.</p>
-<p> Enumeración de Registros DNS: Recopila registros DNS comunes como MX (servidores de correo), SOA (inicio de autoridad), NS (servidores de nombres), A (direcciones IPv4), AAAA (direcciones IPv6), SPF (política de remitente) y TXT.</p>
-<p> Enumeración de Registros SRV: Busca registros SRV que indican servicios disponibles como LDAP, SIP, etc.</p>
-<p> Expansión de TLD: Realiza búsquedas para dominios con diferentes extensiones de nivel superior (TLD).</p>
-<p> Resolución de Caracteres Comodín: Detecta si un dominio utiliza resolución de caracteres comodín.</p>
-<p> Fuerza Bruta de Subdominios: Utiliza listas de palabras para descubrir subdominios y hosts existentes.</p>
-<p> Búsqueda de Registros PTR: Realiza búsquedas inversas de DNS para rangos IP o CIDR.</p>
-<p> Verificación de Registros en Caché: Examina los registros en caché de un servidor DNS para encontrar registros A, AAAA y CNAME.</p>
+<p> • Transferencias de Zona: Verifica si los servidores de nombres (NS) permiten transferencias de zona, lo que podría revelar información sensible.</p>
+<p> • Enumeración de Registros DNS: Recopila registros DNS comunes como MX (servidores de correo), SOA (inicio de autoridad), NS (servidores de nombres), A (direcciones IPv4), AAAA (direcciones IPv6), SPF (política de remitente) y TXT.</p>
+<p> • Enumeración de Registros SRV: Busca registros SRV que indican servicios disponibles como LDAP, SIP, etc.</p>
+<p> • Expansión de TLD: Realiza búsquedas para dominios con diferentes extensiones de nivel superior (TLD).</p>
+<p> • Resolución de Caracteres Comodín: Detecta si un dominio utiliza resolución de caracteres comodín.</p>
+<p> • Fuerza Bruta de Subdominios: Utiliza listas de palabras para descubrir subdominios y hosts existentes.</p>
+<p> • Búsqueda de Registros PTR: Realiza búsquedas inversas de DNS para rangos IP o CIDR.</p>
+<p> • Verificación de Registros en Caché: Examina los registros en caché de un servidor DNS para encontrar registros A, AAAA y CNAME.</p>
 
 
 <h4>Enumeración General de Registros DNS:</h4>
 
-<p>Comando: dnsrecon -d [dominio]:Recopila información general sobre los registros DNS del dominio especificado (MX, SOA, NS, A, AAAA, SPF, TXT) consultando servidores DNS públicos</p>
+<p>Comando: dnsrecon -d [dominio]:</p>
+
+<p>Recopila información general sobre los registros DNS del dominio especificado (MX, SOA, NS, A, AAAA, SPF, TXT) consultando servidores DNS públicos</p>
 
 
 <p align="center">
@@ -384,7 +386,8 @@
 
 <h4>Enumeración de Registros SRV:</h4>
 
-<p>Comando: dnsrecon -d [dominio] -t srv :Busca registros SRV comunes relacionados con servicios como LDAP, SIP, Kerberos, XMPP (mensajería) Etc consultando servidores DNS </p>
+<p>Comando: dnsrecon -d [dominio] -t srv </p> 
+<p>Busca registros SRV comunes relacionados con servicios como LDAP, SIP, Kerberos, XMPP (mensajería) Etc consultando servidores DNS </p>
 
 
 
@@ -452,8 +455,8 @@ nombres de dominio. </p>
 
 
 
-<p> Búsqueda de registros DNS: Permite encontrar registros como A, MX, NS, TXT, SOA y más relacionados con un dominio.</p>
-<p> Búsqueda de hosts relacionados: Identifica direcciones IP y hosts que están conectados al dominio.</p>
+<p> • Búsqueda de registros DNS: Permite encontrar registros como A, MX, NS, TXT, SOA y más relacionados con un dominio.</p>
+<p> • Búsqueda de hosts relacionados: Identifica direcciones IP y hosts que están conectados al dominio.</p>
 
 
 <p align="center">
@@ -462,7 +465,7 @@ nombres de dominio. </p>
 
 </p>
 
-<p> Detección de subdominios: Recopila y muestra subdominios asociados al dominio principal.</p>
+<p> • Detección de subdominios: Recopila y muestra subdominios asociados al dominio principal.</p>
 
 <p align="center">
 
@@ -470,7 +473,7 @@ nombres de dominio. </p>
 
 </p>
 
-<p> Mapeo gráfico: Genera un diagrama visual de la infraestructura del dominio, incluyendo servidores y subdominios relacionados.</p>
+<p> • Mapeo gráfico: Genera un diagrama visual de la infraestructura del dominio, incluyendo servidores y subdominios relacionados.</p>
 
 
 <p align="center">
@@ -481,13 +484,125 @@ nombres de dominio. </p>
 
 
 
+<h2> :arrow_right: Deteccion WAF con wafw00f </h2>
+
+
+<p> Un WAF (Web Application Firewall) es un tipo de firewall diseñado específicamente para proteger aplicaciones web. Analiza el tráfico HTTP/HTTPS entrante y saliente entre el cliente y el servidor web, inspeccionando cada solicitud en busca de actividad maliciosa o comportamientos inusuales que puedan indicar un ataque. </p>
+
+
+<h2> 🛠 &nbsp; WAFW00F </h2>
+
+<p> Es una herramienta de código abierto diseñada específicamente para detectar y fingerprinting (identificación avanzada) de firewalls de aplicaciones web (WAF). Es una utilidad muy utilizada en pruebas de penetración y auditorías de seguridad web para identificar qué tipo de WAF está protegiendo una aplicación web objetivo. </p>
 
 
 
+<p> ¿Cómo funciona?</p>
+
+
+<p> • Envía una solicitud HTTP normal y analiza la respuesta; esto identifica una serie de soluciones WAF. </p>
+<p> • Si esto no tiene éxito, envía una serie de solicitudes HTTP (potencialmente maliciosas) y utiliza una lógica simple para deducir qué WAF es.</p>
+<p> • Si esto tampoco tiene éxito, analiza las respuestas devueltas previamente y utiliza otro algoritmo simple para adivinar si un WAF o una solución de seguridad está respondiendo activamente a nuestros ataques.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/13sZ9vfn/30.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h2> :arrow_right: Enumeracion de subdominios con sublist3r </h2>
+
+
+<p> Sublist3r es una herramienta de Python diseñada para enumerar subdominios de sitios web mediante OSINT. Ayuda a los evaluadores de penetración y a los buscadores de errores a recopilar subdominios para el dominio objetivo. Sublist3r enumera subdominios utilizando diversos motores de búsqueda como Google, Yahoo, Bing, Baidu y Ask. También enumera subdominios utilizando Netcraft, Virustotal, ThreatCrowd, DNSdumpster y ReverseDNS.</p>
+
+<p> Subbrute se integró con Sublist3r para aumentar la posibilidad de encontrar más subdominios mediante fuerza bruta con una lista de palabras mejorada. El mérito es de TheRook, autor de Subbrute.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/rmH29cVf/31.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
+<p align="center">
 
+  <img src="https://i.postimg.cc/YCVp31dn/32.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :arrow_right: Google Dorks </h2>
+
+
+<p> Google Dorks son consultas de búsqueda avanzadas que utilizan operadores especiales de Google para encontrar información específica o vulnerabilidades en la web. Estas técnicas son comúnmente empleadas en pruebas de penetración, reconocimiento de información y detección de configuraciones incorrectas en sitios web. </p>
+
+<p> Los Google Dorks aprovechan operadores como site:, inurl:, intitle:, filetype:, entre otros, para refinar las búsquedas y obtener resultados más precisos </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bryGnN2w/33.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bryGnN2w/33.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h4> 🛠 &nbsp; https://pentest-tools.com/ </h4>
+
+
+<p> Ofrece automatizacion de dorks organizados por categoria  </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MXkpD6nV/34.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h4> 🛠 &nbsp; https://www.exploit-db.com/google-hacking-database </h4>
+
+
+<p> Base de datos con miles de dorks clasificados por servicio y tipo de vulnerabilidad </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HWFwKb57/35.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Operadores Comunes: </p>
+
+
+<p>1. site:: Limita los resultados a un dominio específico.</p>
+<p>•Ejemplo: site:google.com</p>
+
+<p>2. inurl:: Busca URLs que contengan una palabra clave específica.</p>
+<p>•Ejemplo: inurl:admin</p>
+
+<p>3. intitle:: Encuentra páginas cuyo título contenga ciertas palabras.</p>
+<p>•Ejemplo: intitle:"login"</p>
+
+<p>4. filetype:: Busca archivos de un tipo específico.</p>
+<p>•Ejemplo: filetype:pdf</p>
+
+<p>5.intext:: Busca páginas que contengan una palabra específica en su contenido.</p>
+<p>•Ejemplo: intext:"contraseña"</p>
 
 
 
@@ -502,7 +617,7 @@ nombres de dominio. </p>
 ### Metodos
 
 
-<p><b>  • Certificados SSL: &nbsp; </b> comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. ¡Un excelente lugar para encontrar nombres de dominio y subdominio! </p>
+<p><b> • Certificados SSL: &nbsp; </b> comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. ¡Un excelente lugar para encontrar nombres de dominio y subdominio! </p>
 
 <p><b> • Análisis del sitio web: &nbsp; </b> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. Por ejemplo, revisar su página "Sobre nosotros". Adivinar rutas aleatorias en el sitio ejemplo ( mytarget.com/admin ) </p>
 
