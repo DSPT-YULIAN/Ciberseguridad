@@ -15,6 +15,24 @@
 </div>
 
 
+<!-------------------------------------- ## FASE 0 Preparacion--------------------------------------------->
+
+
+
+<p> Antes de comenzar una prueba de penetración, se lleva a cabo una conversación formal entre el evaluador y el propietario del sistema. Se acuerdan las diversas herramientas, técnicas y sistemas que se probarán. Esta conversación constituye el alcance del acuerdo de prueba de penetración y determinará el desarrollo de la prueba. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sgF1pzyr/image.png" alt="Descripción de la imagen">
+</p>
+
+
+
+
+
+
+
 
 <!--h1 without bottom border-->
 <div id="user-content-toc">
@@ -24,12 +42,15 @@
 </div>
 
 
-<!-- ## Reconocimiento -->
+
 
 <p>Es el primer paso en cualquier intervención de hacking. Consiste en recopilar información sobre los sistemas o redes objetivo para comprender a fondo el entorno que se pretende evaluar  </p>
 
 
 </br>
+
+
+<!-------------------------------------- ## FASE 1 Reconocimiento pasivo --------------------------------------------->
 
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Recomocimiento pasivo (No hay interacción directa con el objetivo) </h2>
@@ -608,22 +629,82 @@ nombres de dominio. </p>
 
 
 
+<h2> :arrow_right: Recoleccion de correo electronico con TheHarvester </h2>
+
+
+<p> Su función principal es recopilar información pública sobre un objetivo (dominio) desde múltiples fuentes externas. Es extremadamente útil para determinar la "superficie de ataque" de una organización antes de realizar escaneos directos. Recopila: </p>
+
+
+<p> • Correos electrónicos: Útiles para identificar usuarios y posibles vectores de phishing. </p>
+
+<p> • Subdominios y Hosts: Para descubrir activos web que no están a simple vista. </p>
+
+<p> • Nombres de empleados: Generalmente extraídos de redes como LinkedIn. </p>
+
+<p> • Direcciones IP: Para mapear la infraestructura del objetivo. </p>
+
+<p> • Virtual Hosts: Identificación de otros sitios alojados en el mismo servidor. </p>
+
+
+
+<p> sintaxis general es: theHarvester -d [dominio]  -l [limite]  -b [fuente] </p>
+
+
+<p> 1. Búsqueda en todas las fuentes disponibles </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Gm9ZpxFd/36.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/1XJjm84n/37.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> ASNS: Identificador, permitirá asegurar que no estás escaneando accidentalmente IPs que pertenecen a otra organización </p>
+<p> URLs </p>
+<p> LinkedIn: Identifica empleados reales de la organización. </p>
+<p> IPs </p>
+<p> Emails: Da una lista de correos que podrían usarse para pruebas de ingeniería social o para identificar el formato de usuario </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HskNS9PP/38.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Hosts: Revela subdominios que quizás no conocías, que suelen ser objetivos críticos. </p>
+
+
+<h2> :arrow_right: Bases de datos de contraseñas filtradas  </h2>
+
+
+<p> Have I Been Pwned (HIBP) es un servicio web gratuito y extremadamente confiable que permite a los usuarios e investigadores de seguridad verificar si sus cuentas o datos personales han sido expuestos en filtraciones de datos (data breaches) debido a hackeos en plataformas de terceros. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/htv5nk6b/39.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
 
-
-
-### Metodos
-
-
-<p><b> • Certificados SSL: &nbsp; </b> comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. ¡Un excelente lugar para encontrar nombres de dominio y subdominio! </p>
+<h2> Otro metodos de reconocimiento pasivo </h2>
 
 <p><b> • Análisis del sitio web: &nbsp; </b> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. Por ejemplo, revisar su página "Sobre nosotros". Adivinar rutas aleatorias en el sitio ejemplo ( mytarget.com/admin ) </p>
 
-<p><b> • Consultas WHOIS: &nbsp;</b> Recuperación de información de registro de dominio.</p>
-	
-<p><b> • Consultas DNS:&nbsp; </b> Recopilación de registros DNS, como registros MX, A y CNAME.</p>
+<p><b> • Certificados SSL: &nbsp; </b> comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. ¡Un excelente lugar para encontrar nombres de dominio y subdominio! </p>
 	
 <p><b> • Informes disponibles públicamente: &nbsp;</b> Análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b>
 
@@ -631,8 +712,8 @@ nombres de dominio. </p>
 
 </br>
 
-### 🛠 &nbsp;Herramientas
 
+<h4> 🛠 &nbsp; Herramientas </h4>
 
 <p><b> • Descubrimiento de dominios:</b> &nbsp; crt.sh, dnsdumpster, subfinder, amass</p>
 <p><b> • Analizadores de Techstack:</b> &nbsp; Wappalyzer, BuiltWith, WhatRuns</p>
@@ -641,6 +722,10 @@ nombres de dominio. </p>
 <p><b> • Motores de búsqueda:</b> &nbsp; Google, Bing, DuckDuckGo, Brave, Yandex, Baidu, Google Dork, Google Hacking database, shodan</p>
 <p><b> • Rastreador web</b> &nbsp; Netcraft, Whois </p>
 <p><b> • Comandos</b> &nbsp; Nslookup, hping </p>
+
+
+
+<!-------------------------------------- ## FASE 1 Reconocimiento Activo --------------------------------------------->
 
 
 </br>
