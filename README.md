@@ -29,8 +29,91 @@
 
 
 
+<h3>  Etapas </h3>
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/hjGxc5dw/0-1.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h3> Metodología </h3>
+
+
+<h4> OSSTMM   </h4>
+
+<p> El Manual de Metodología de Pruebas de Seguridad de Código Abierto proporciona un marco detallado de estrategias de prueba para sistemas, software, aplicaciones, comunicaciones y el aspecto humano de la ciberseguridad </p>
+<p> La metodología se centra principalmente en cómo se comunican estos sistemas, aplicaciones, por lo que incluye una metodología para:  </p>
+
+
+<p><b> • &nbsp; Telecomunicaciones (teléfonos, VoIP, etc.) </b></p>
+<p><b> • &nbsp; Redes cableadas  </b></p>
+<p><b> • &nbsp; Comunicaciones inalámbricas</b></p>
+
+
+<h4> OWASP </h4>
+
+<p> El marco del " Proyecto de seguridad de aplicaciones web abiertas " es un marco impulsado por la comunidad y actualizado con frecuencia que se utiliza únicamente para probar la seguridad de las aplicaciones y servicios web. </p>
+<p> La fundación  escribe periódicamente informes  que indican las diez principales vulnerabilidades de seguridad que puede tener una aplicación web, el enfoque de prueba y la solución. </p>
+
+
+<h4> NIST </h4>
+
+<p> El Marco de Ciberseguridad del NIST es un marco popular utilizado para mejorar los estándares de ciberseguridad de una organización y gestionar el riesgo de ciberamenazas. Este marco merece una mención honorífica debido a su popularidad y detalle </p>
+<p> El marco proporciona directrices sobre controles de seguridad y parámetros de referencia para el éxito de organizaciones desde infraestructuras críticas (centrales eléctricas, etc.) hasta las comerciales. Incluye una sección limitada sobre directrices estándar para la metodología que debe seguir un evaluador de penetración.</p>
+
+
+<h4> NCSC </h4>
+
+
+<p> El Marco de Evaluación Cibernética (CAF) es un marco extenso de catorce principios que se utilizan para evaluar el riesgo de diversas ciberamenazas y las defensas de una organización contra ellas </p>
+<p> El marco se aplica a organizaciones que realizan servicios y actividades de vital importancia, como infraestructuras críticas, banca, etc. Se centra principalmente en los siguientes temas y los evalúa:  </p>
+
+
+<p><b> • &nbsp; Seguridad de datos </b></p>
+<p><b> • &nbsp; Seguridad del sistema </b></p>
+<p><b> • &nbsp; Control de identidad y acceso </b></p>
+<p><b> • &nbsp; Resiliencia </b></p>
+<p><b> • &nbsp; Monitoreo </b></p>
+<p><b> • &nbsp; Planificación de respuesta y recuperación </b></p>
+
+
+<h3> Tipos de pruebas de penetracion </h3>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pd1VnWTc/0-2.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<h4> Pruebas de caja negra </h4>
+
+
+<p> Este proceso de prueba es un proceso de alto nivel en el que el evaluador no recibe ninguna información sobre el funcionamiento interno de la aplicación o el servicio
+
+El tester actúa como un usuario normal que prueba la funcionalidad y la interacción de la aplicación o software. Estas pruebas pueden implicar interactuar con la interfaz (es decir, con los botones) y comprobar si se obtiene el resultado esperado. No se requieren conocimientos de programación ni comprensión del programa para este tipo de pruebas.
+
+Las pruebas de caja negra aumentan significativamente la cantidad de tiempo dedicado durante la fase de recopilación y enumeración de información para comprender la superficie de ataque del objetivo. </p>
+
+
+<h4> Pruebas de caja gris </h4>
+
+<p> Este proceso de prueba es el más popular para cosas como las pruebas de penetración. Es una combinación de procesos de prueba de caja negra y de caja blanca. El evaluador tendrá un conocimiento limitado de los componentes internos de la aplicación o del software. Aun así, interactuará con la aplicación como si fuera un escenario de caja negra y luego usará su conocimiento de la aplicación para intentar resolver los problemas a medida que los encuentre
+
+Con las pruebas de caja gris, el conocimiento limitado proporcionado ahorra tiempo y, a menudo, se elige para superficies de ataque extremadamente bien endurecidas. </p>
+
+
+<h4> Pruebas de caja Blanca </h4>
+
+
+<p> Este proceso de prueba es un proceso de bajo nivel que generalmente realiza un desarrollador de software con conocimientos de programación y lógica de aplicaciones. El evaluador probará los componentes internos de la aplicación o del software y, por ejemplo, se asegurará de que funciones específicas funcionen correctamente y en un tiempo razonable
+
+El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento esperado, lo que requiere mucho más tiempo que las pruebas de caja negra. El conocimiento completo en un escenario de pruebas de caja blanca proporciona un enfoque que garantiza la validación de toda la superficie de ataque.</p>
 
 
 
@@ -571,14 +654,8 @@ nombres de dominio. </p>
 </p>
 
 
-<p align="center">
 
-  <img src="https://i.postimg.cc/bryGnN2w/33.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<h4> 🛠 &nbsp; https://pentest-tools.com/ </h4>
+<h4> 🛠 &nbsp; Pentest-tools (https://pentest-tools.com/) </h4>
 
 
 <p> Ofrece automatizacion de dorks organizados por categoria  </p>
@@ -593,7 +670,7 @@ nombres de dominio. </p>
 
 
 
-<h4> 🛠 &nbsp; https://www.exploit-db.com/google-hacking-database </h4>
+<h4> 🛠 &nbsp; Exploit-db (https://www.exploit-db.com/google-hacking-database) </h4>
 
 
 <p> Base de datos con miles de dorks clasificados por servicio y tipo de vulnerabilidad </p>
@@ -699,8 +776,171 @@ nombres de dominio. </p>
 
 
 
+<h2> :arrow_right: Caminando una aplicación </h2>
 
-<h2> Otro metodos de reconocimiento pasivo </h2>
+
+<h2>  Visualización del código fuente de la página</h2>
+
+
+<p> El código fuente de una página web es el conjunto de instrucciones y líneas de texto escritas en lenguajes de programación (principalmente HTML, CSS y JavaScript) que le indican al navegador cómo debe estructurarse, visualizarse y comportarse un sitio web. </p>
+
+
+<p> Mientras visualiza un sitio web, puede hacer clic derecho en la página y verá una opción en el menú que dice Ver código fuente de la página.
+La mayoría de los navegadores admiten colocar view-source: delante de la URL, por ejemplo,  view-source:https://www.google.com/
+En el menú de tu navegador, encontrarás una opción para ver el código fuente de la página. Esta opción a veces se encuentra en submenús como "Herramientas para desarrolladores" o "Más herramientas".</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bwc207Qy/40.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 1) &nbsp; En la parte superior de la página, verás código que empieza "<!--y termina con -->" estos comentarios. Los comentarios son mensajes que deja el desarrollador del sitio web, generalmente para explicar algo del código a otros programadores o incluso como notas o recordatorios para sí mismo. </p>
+
+
+<p> 2) &nbsp; Se pueden incluir archivos externos como CSS, JavaScript e imágenes mediante el código HTML. Existe la posibilidad que puedan obtener acceso al listado de archivos del directorio "/assets"  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zfNtQP1Y/41.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 3) &nbsp; Los enlaces a diferentes páginas en HTML se escriben en etiquetas de anclaje (son elementos HTML que comienzan con "< a), y el enlace al que será dirigido se almacena en el href atributo" . </p>
+
+
+<p> 4) &nbsp; Hoy en día, muchos sitios web no se crean desde cero y utilizan lo que se denomina un framework. Un framework es una colección de código prediseñado que permite a los desarrolladores incluir fácilmente funciones comunes que un sitio web requeriría, como blogs, gestión de usuarios, procesamiento de formularios y mucho más, ahorrándoles horas o días de desarrollo. </p>
+
+
+
+<h2> Herramientas para desarrolladores </h2>
+
+
+<p>  Se trata de un conjunto de herramientas que ayuda a los desarrolladores web a depurar aplicaciones y permite echar un vistazo a la estructura interna de un sitio web para ver qué sucede "F12" </p>
+
+
+<h2> Developer Tools - Inspector </h2>
+
+
+<p> El Inspector (o Inspector de Elementos) es una de las herramientas más fundamentales para el desarrollo web y el análisis de seguridad. Su función principal es permitirte visualizar y manipular en tiempo real el DOM (Document Object Model) y el CSS (estilos) de una página web sin modificar el archivo original en el servidor. </p>
+
+
+<h3> Utilidad en Ciberseguridad y Pentesting </h3>
+
+
+<p> • Identificar campos ocultos: &nbsp; Localizar inputs de tipo type="hidden" que podrían contener tokens, IDs de sesión o parámetros manipulables. </p>
+<p> • Bypassing de validaciones cliente: &nbsp; Si un formulario tiene restricciones en el frontend (como maxlength, required o campos deshabilitados con disabled), puedes eliminarlos directamente en el Inspector para enviar payloads que el programador no previó.</p>
+<p> • Análisis de Event Listeners: &nbsp; Permite ver qué funciones de JavaScript están vinculadas a un botón o formulario, lo cual es útil para rastrear cómo se procesan los datos antes de ser enviados al servidor. </p>
+<p> • Detección de vulnerabilidades DOM-based XSS: &nbsp; Ayuda a rastrear cómo se renderizan datos controlados por el usuario dentro del HTML.</p>
+
+
+<p> En resumen, es la "radiografía" de la página web que te permite entender cómo está construida y cómo interactúa con el navegador. </p>
+
+
+<p> En este ejemplo podemos observar un sitio web el cual a sido bloqueado con un aviso flotante sobre el contenido que indica que es necesario ser cliente premium para verlo. Estos recuadros flotantes que bloquean el contenido de la página se conocen como muros de pago, ya que colocan un muro metafórico frente al contenido que se desea ver hasta que se paga.  </p>
+
+
+<p> Al hacer clic derecho en el aviso premium (muro de pago), debería poder seleccionar la opción "Inspeccionar" en el menú. Esta opción abre las herramientas de desarrollo en la parte inferior o derecha, según su navegador o preferencias. Ahora verá los elementos/HTML que componen el sitio web  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/9MJ5BwzK/43.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Localiza el DIV elemento con la clase premium-customer-blockery haz clic en él. Verás todos los estilos CSS en el cuadro de estilos que se aplican a este elemento, como margin-top: 60pxy text-align: center. El estilo que nos interesa es el display: block. Si haces clic en la palabra block, puedes escribir un valor a tu elección, escribir none; esto hará que el cuadro desaparezca, revelando el contenido debajo. Si el elemento no tenía un campo de visualización, puedes hacer clic debajo del último estilo y añadir el tuyo. Recuerda que esto solo se edita en la ventana de tu navegador y, al pulsar "Actualizar", todo volverá a la normalidad.  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/fW91LPfF/44.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h2> Developer Tools - Debugger </h2>
+
+<p> El Inspector (o Inspector de Elementos) es una de las herramientas más fundamentales para el desarrollo web y el análisis de seguridad. Su función principal es permitirte visualizar y manipular en tiempo real el DOM (Document Object Model) y el CSS (estilos) de una página web sin modificar el archivo original en el servidor,  como evaluadores de penetración, nos permite analizar a fondo el código JavaScript. En Firefox y Safari, esta función se llama Depurador, pero en Google Chrome, Fuentes. </p>
+
+<h3> Utilidad en Ciberseguridad y Pentesting </h3>
+
+
+<p> • Entender la ofuscación: &nbsp; Muchos scripts maliciosos o protecciones de formularios están "ofuscados" (código difícil de leer). El Debugger permite ejecutar el código lentamente para ver qué hace realmente paso a paso. </p>
+<p> • Bypassing de controles de seguridad en el cliente: &nbsp; Si una aplicación realiza validaciones complejas de seguridad en JavaScript antes de enviar una petición, puedes pausar el código justo antes del envío, modificar los valores de las variables en memoria y luego reanudar la ejecución para enviar datos manipulados.</p>
+<p> • Análisis de APIs y Tokens: &nbsp; Puedes poner un breakpoint en la línea donde se generan las cabeceras de una petición para ver cómo se calculan firmas criptográficas o de dónde se extraen los tokens de sesión. </p>
+<p> • Manipulación del flujo: &nbsp; Puedes forzar que una condición if se cumpla (cambiando un false por true en la consola mientras está pausado) para acceder a funciones que normalmente estarían bloqueadas.</p>
+
+<p> En resumen, el Debugger es como un "microscopio" para el código en movimiento; te permite detener el tiempo y ver exactamente qué está pensando la aplicación en cualquier momento. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nL2RHdcc/45.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p> Muchas veces, al visualizar archivos JavaScript, notarás que todo está en una sola línea. Esto se debe a que se ha minimizado, lo que significa que se ha eliminado todo el formato (tabulaciones, espaciado y saltos de línea) para reducir el tamaño del archivo. Podemos recuperar algunos de los formatos usando la opción "Pretty Print", que se presenta como dos llaves { } para facilitar la lectura, aunque debido a la ofuscación, sigue siendo difícil comprender qué sucede con el archivo. Si se desplaza hasta el final del archivo flash.min.js, verá la línea:flash['remove'](); </p>
+
+<p>  Este pequeño fragmento de JavaScript es lo que elimina la ventana emergente roja de la página. Podemos utilizar otra función del depurador llamada  puntos de interrupción . Estos son puntos en el código que podemos obligar al navegador a detener el procesamiento de JavaScript y pausar la ejecución actual.</p>
+
+<p>  Si hace clic en el número de línea que contiene el código anterior, verá que se vuelve azul; ha insertado un punto de interrupción en esta línea. Ahora, intente actualizar la página y verá que el cuadro rojo permanece en la página en lugar de desaparecer, y que contiene una bandera.</p>
+
+
+<h2> Developer Tools - Network </h2>
+
+
+<p> La pestaña Network (Red) es quizás la herramienta más crítica para entender la comunicación entre el navegador y el servidor. Su función es registrar y mostrar todas las peticiones (requests) y respuestas (responses) que realiza la página web. </p>
+
+<h3> Utilidad en Ciberseguridad y Pentesting </h3>
+
+
+<p> • Identificación de Endpoints de AP &nbsp; Revela rutas de API ocultas que no son visibles en el código fuente pero que la aplicación utiliza para obtener o enviar datos. </p>
+
+<p> • Análisis de Autenticación:  &nbsp; Permite ver cómo se transmiten las credenciales. ¿Se envían en la URL? ¿En una cookie con el flag HttpOnly? ¿En una cabecera personalizada?</p>
+
+<p> • Replay de Peticiones: &nbsp; La mayoría de navegadores permiten hacer clic derecho sobre una petición y seleccionar "Copy as fetch" o "Copy as cURL". Esto te permite recrear la petición exacta en tu propia terminal o script para probar vulnerabilidades como IDOR (Insecure Direct Object Reference). </p>
+
+<p> • Inspección de WebSockets: &nbsp; Permite ver el flujo de datos bidireccional en tiempo real, muy común en chats, dashboards financieros o juegos online.</p>
+
+<p> Con la pestaña de red abierta, se rellena el formulario de contacto y se pulsa el botón "Enviar mensaje" . Verás un evento en la pestaña de red: el formulario se envía en segundo plano mediante AJAX. AJAX permite enviar y recibir datos de red en segundo plano en una aplicación web sin modificar la página web actual. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/NGN0yTjz/46.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Examine la nueva entrada en la pestaña de red que creó el formulario de contacto y vea la página a la que se enviaron los datos </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/T3b2H4J8/47.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+<h2> Otros metodos de reconocimiento pasivo </h2>
 
 <p><b> • Análisis del sitio web: &nbsp; </b> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. Por ejemplo, revisar su página "Sobre nosotros". Adivinar rutas aleatorias en el sitio ejemplo ( mytarget.com/admin ) </p>
 
