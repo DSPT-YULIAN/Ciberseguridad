@@ -120,7 +120,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 <!--h1 without bottom border-->
 <div id="user-content-toc">
   <ul align="left">
-    <summary><h2 style="display: inline-block">Fase 1. Recomocimiento pasivo y activo</h2></summary>
+    <summary><h1 style="display: inline-block">Fase 1. Recomocimiento pasivo y activo</h1></summary>
   </ul>
 </div>
 
@@ -190,28 +190,193 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 
 
-<h2> :arrow_right: Reconocimiento y huella del sitio WEB  </h2>
+
+<h2> :arrow_right: Caminando una aplicación </h2>
 
 
-<h3> 1. &nbsp; Resolver la direccion IP del sitio web o del servidor que aloja el sitio web </h3>
+<h2>  Visualización del código fuente de la página</h2>
+
+
+<p> El código fuente de una página web es el conjunto de instrucciones y líneas de texto escritas en lenguajes de programación (principalmente HTML, CSS y JavaScript) que le indican al navegador cómo debe estructurarse, visualizarse y comportarse un sitio web. </p>
+
+
+<p> Mientras visualiza un sitio web, puede hacer clic derecho en la página y verá una opción en el menú que dice Ver código fuente de la página.
+La mayoría de los navegadores admiten colocar view-source: delante de la URL, por ejemplo,  view-source:https://www.google.com/
+En el menú de tu navegador, encontrarás una opción para ver el código fuente de la página. Esta opción a veces se encuentra en submenús como "Herramientas para desarrolladores" o "Más herramientas".</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bwc207Qy/40.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 1) &nbsp; En la parte superior de la página, verás código que empieza "<!--y termina con -->" estos comentarios. Los comentarios son mensajes que deja el desarrollador del sitio web, generalmente para explicar algo del código a otros programadores o incluso como notas o recordatorios para sí mismo. </p>
+
+
+<p> 2) &nbsp; Se pueden incluir archivos externos como CSS, JavaScript e imágenes mediante el código HTML. Existe la posibilidad que puedan obtener acceso al listado de archivos del directorio "/assets"  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zfNtQP1Y/41.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 3) &nbsp; Los enlaces a diferentes páginas en HTML se escriben en etiquetas de anclaje (son elementos HTML que comienzan con "< a), y el enlace al que será dirigido se almacena en el href atributo" . </p>
+
+
+<p> 4) &nbsp; Hoy en día, muchos sitios web no se crean desde cero y utilizan lo que se denomina un framework. Un framework es una colección de código prediseñado que permite a los desarrolladores incluir fácilmente funciones comunes que un sitio web requeriría, como blogs, gestión de usuarios, procesamiento de formularios y mucho más, ahorrándoles horas o días de desarrollo. </p>
+
+
+
+<h2> Herramientas para desarrolladores </h2>
+
+
+<p>  Se trata de un conjunto de herramientas que ayuda a los desarrolladores web a depurar aplicaciones y permite echar un vistazo a la estructura interna de un sitio web para ver qué sucede "F12" </p>
+
+
+<h2> Developer Tools - Inspector </h2>
+
+
+<p> El Inspector (o Inspector de Elementos) es una de las herramientas más fundamentales para el desarrollo web y el análisis de seguridad. Su función principal es permitirte visualizar y manipular en tiempo real el DOM (Document Object Model) y el CSS (estilos) de una página web sin modificar el archivo original en el servidor. </p>
+
+
+<h3> Utilidad en Ciberseguridad y Pentesting </h3>
+
+
+<p> • Identificar campos ocultos: &nbsp; Localizar inputs de tipo type="hidden" que podrían contener tokens, IDs de sesión o parámetros manipulables. </p>
+<p> • Bypassing de validaciones cliente: &nbsp; Si un formulario tiene restricciones en el frontend (como maxlength, required o campos deshabilitados con disabled), puedes eliminarlos directamente en el Inspector para enviar payloads que el programador no previó.</p>
+<p> • Análisis de Event Listeners: &nbsp; Permite ver qué funciones de JavaScript están vinculadas a un botón o formulario, lo cual es útil para rastrear cómo se procesan los datos antes de ser enviados al servidor. </p>
+<p> • Detección de vulnerabilidades DOM-based XSS: &nbsp; Ayuda a rastrear cómo se renderizan datos controlados por el usuario dentro del HTML.</p>
+
+
+<p> En resumen, es la "radiografía" de la página web que te permite entender cómo está construida y cómo interactúa con el navegador. </p>
+
+
+<p> En este ejemplo podemos observar un sitio web el cual a sido bloqueado con un aviso flotante sobre el contenido que indica que es necesario ser cliente premium para verlo. Estos recuadros flotantes que bloquean el contenido de la página se conocen como muros de pago, ya que colocan un muro metafórico frente al contenido que se desea ver hasta que se paga.  </p>
+
+
+<p> Al hacer clic derecho en el aviso premium (muro de pago), debería poder seleccionar la opción "Inspeccionar" en el menú. Esta opción abre las herramientas de desarrollo en la parte inferior o derecha, según su navegador o preferencias. Ahora verá los elementos/HTML que componen el sitio web  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/9MJ5BwzK/43.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Localiza el DIV elemento con la clase premium-customer-blockery haz clic en él. Verás todos los estilos CSS en el cuadro de estilos que se aplican a este elemento, como margin-top: 60pxy text-align: center. El estilo que nos interesa es el display: block. Si haces clic en la palabra block, puedes escribir un valor a tu elección, escribir none; esto hará que el cuadro desaparezca, revelando el contenido debajo. Si el elemento no tenía un campo de visualización, puedes hacer clic debajo del último estilo y añadir el tuyo. Recuerda que esto solo se edita en la ventana de tu navegador y, al pulsar "Actualizar", todo volverá a la normalidad.  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/fW91LPfF/44.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h2> Developer Tools - Debugger </h2>
+
+<p> El Inspector (o Inspector de Elementos) es una de las herramientas más fundamentales para el desarrollo web y el análisis de seguridad. Su función principal es permitirte visualizar y manipular en tiempo real el DOM (Document Object Model) y el CSS (estilos) de una página web sin modificar el archivo original en el servidor,  como evaluadores de penetración, nos permite analizar a fondo el código JavaScript. En Firefox y Safari, esta función se llama Depurador, pero en Google Chrome, Fuentes. </p>
+
+<h3> Utilidad en Ciberseguridad y Pentesting </h3>
+
+
+<p> • Entender la ofuscación: &nbsp; Muchos scripts maliciosos o protecciones de formularios están "ofuscados" (código difícil de leer). El Debugger permite ejecutar el código lentamente para ver qué hace realmente paso a paso. </p>
+<p> • Bypassing de controles de seguridad en el cliente: &nbsp; Si una aplicación realiza validaciones complejas de seguridad en JavaScript antes de enviar una petición, puedes pausar el código justo antes del envío, modificar los valores de las variables en memoria y luego reanudar la ejecución para enviar datos manipulados.</p>
+<p> • Análisis de APIs y Tokens: &nbsp; Puedes poner un breakpoint en la línea donde se generan las cabeceras de una petición para ver cómo se calculan firmas criptográficas o de dónde se extraen los tokens de sesión. </p>
+<p> • Manipulación del flujo: &nbsp; Puedes forzar que una condición if se cumpla (cambiando un false por true en la consola mientras está pausado) para acceder a funciones que normalmente estarían bloqueadas.</p>
+
+<p> En resumen, el Debugger es como un "microscopio" para el código en movimiento; te permite detener el tiempo y ver exactamente qué está pensando la aplicación en cualquier momento. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nL2RHdcc/45.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p> Muchas veces, al visualizar archivos JavaScript, notarás que todo está en una sola línea. Esto se debe a que se ha minimizado, lo que significa que se ha eliminado todo el formato (tabulaciones, espaciado y saltos de línea) para reducir el tamaño del archivo. Podemos recuperar algunos de los formatos usando la opción "Pretty Print", que se presenta como dos llaves { } para facilitar la lectura, aunque debido a la ofuscación, sigue siendo difícil comprender qué sucede con el archivo. Si se desplaza hasta el final del archivo flash.min.js, verá la línea:flash['remove'](); </p>
+
+<p>  Este pequeño fragmento de JavaScript es lo que elimina la ventana emergente roja de la página. Podemos utilizar otra función del depurador llamada  puntos de interrupción . Estos son puntos en el código que podemos obligar al navegador a detener el procesamiento de JavaScript y pausar la ejecución actual.</p>
+
+<p>  Si hace clic en el número de línea que contiene el código anterior, verá que se vuelve azul; ha insertado un punto de interrupción en esta línea. Ahora, intente actualizar la página y verá que el cuadro rojo permanece en la página en lugar de desaparecer, y que contiene una bandera.</p>
+
+
+<h2> Developer Tools - Network </h2>
+
+
+<p> La pestaña Network (Red) es quizás la herramienta más crítica para entender la comunicación entre el navegador y el servidor. Su función es registrar y mostrar todas las peticiones (requests) y respuestas (responses) que realiza la página web. </p>
+
+<h3> Utilidad en Ciberseguridad y Pentesting </h3>
+
+
+<p> • Identificación de Endpoints de AP &nbsp; Revela rutas de API ocultas que no son visibles en el código fuente pero que la aplicación utiliza para obtener o enviar datos. </p>
+
+<p> • Análisis de Autenticación:  &nbsp; Permite ver cómo se transmiten las credenciales. ¿Se envían en la URL? ¿En una cookie con el flag HttpOnly? ¿En una cabecera personalizada?</p>
+
+<p> • Replay de Peticiones: &nbsp; La mayoría de navegadores permiten hacer clic derecho sobre una petición y seleccionar "Copy as fetch" o "Copy as cURL". Esto te permite recrear la petición exacta en tu propia terminal o script para probar vulnerabilidades como IDOR (Insecure Direct Object Reference). </p>
+
+<p> • Inspección de WebSockets: &nbsp; Permite ver el flujo de datos bidireccional en tiempo real, muy común en chats, dashboards financieros o juegos online.</p>
+
+<p> Con la pestaña de red abierta, se rellena el formulario de contacto y se pulsa el botón "Enviar mensaje" . Verás un evento en la pestaña de red: el formulario se envía en segundo plano mediante AJAX. AJAX permite enviar y recibir datos de red en segundo plano en una aplicación web sin modificar la página web actual. </p>
 
 
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/6pHmdqv9/1.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/NGN0yTjz/46.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Examine la nueva entrada en la pestaña de red que creó el formulario de contacto y vea la página a la que se enviaron los datos </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/T3b2H4J8/47.png" alt="Descripción de la imagen">
 
 </p>
 
 
-<p>En este caso, el sitio web tiene dos direcciones IPv4. Esto se debe a que está detrás de Cloudflare, que funciona como un proxy. Además, muestra las direcciones IPv6 y el servidor de correo asociado al dominio. </p>
 
 
 
-<h3> 2. &nbsp; Explorar el sitio WEB con el archivo robots.txt y sitemap_index.xml  </h3>
 
 
-<p>El archivo robots.txt es un archivo de texto que se coloca en la raíz de un sitio web para indicar a los rastreadores (como los de Google, Bing u otros bots) qué partes del sitio pueden o no pueden explorar </p>
+
+
+<h2> :arrow_right: Descubrimiento de contenido y huella del sitio WEB  </h2>
+
+
+<p> Cuando hablamos de descubrimiento de contenido, no hace referencia a las cosas obvias que podemos ver en un sitio web; se trata de las cosas que no se nos presentan inmediatamente y que no siempre estuvieron destinadas al acceso público. Este contenido podría ser, por ejemplo, páginas o portales destinados al uso del personal, versiones anteriores del sitio web, archivos de copia de seguridad, archivos de configuración, paneles de administración, etc.
+</p>
+
+
+<p> Hay tres formas principales de descubrir contenido en un sitio web que cubriremos: manual, automatizada y OSINT (Inteligencia de código abierto)</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RZxf0t0q/58.png" alt="Descubrimiento manual">
+  
+</p>
+
+
+
+
+<h2> &nbsp;:white_check_mark: &nbsp; Descubrimiento manual - Robots.txt </h2>
+
+
+<p>El archivo robots.txt es un archivo de texto que se coloca en la raíz de un sitio web para indicar a los rastreadores (como los de Google, Bing u otros bots) qué partes del sitio pueden o no pueden explorar. Estas páginas pueden ser áreas como portales de administración o archivos destinados a los clientes del sitio web </p>
 
 
 <p align="center">
@@ -224,7 +389,13 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 <p> En este caso se observa que en el archivo robots.txt especifica que ignore el directorio /wp-admin/. WP se refiere a que este sitio web esta ejecutando WordPress y admin es el directorio de administracion por lo tanto no debe ser de acceso publico</p>
 
 
-<p> El archivo sitemap_index.xml es un mapa del sitio en formato XML que lista las páginas, imágenes, vídeos y otros recursos de un sitio web</p>
+
+
+
+
+<h2> &nbsp;:white_check_mark: &nbsp; Descubrimiento manual - Sitemap.xml </h2>
+
+<p> El archivo sitemap_index.xml es un mapa del sitio en formato XML que lista las páginas, imágenes, vídeos y otros recursos de un sitio web. Proporciona una lista de todos los archivos que el propietario del sitio web desea que aparezcan en un motor de búsqueda. En ocasiones, estos archivos pueden contener áreas del sitio web más difíciles de navegar o incluso incluir páginas web antiguas que el sitio actual ya no utiliza, pero que siguen funcionando en segundo plano.</p>
 
 
 <p align="center">
@@ -240,8 +411,203 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 </p>
 
 
+<h2> &nbsp;:white_check_mark: &nbsp; Descubrimiento manual - Favicon </h2>
 
-<h3> 3. &nbsp; Perfilar las tecnologias usadas por el sitio WEB </h3>
+
+<p> El favicon es un pequeño ícono que se muestra en la barra de direcciones o en la pestaña del navegador y se utiliza para marcar la marca de un sitio web. </p>
+
+<p> El Descubrimiento manual de Favicon es una técnica de enumeración de directorios y tecnologías que aprovecha el archivo favicon.ico (el ícono de la pestaña del navegador) para obtener información valiosa sobre la aplicación web.</p>
+
+
+<p> 1 &nbsp; Identificación de Frameworks y CMS</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mkfSQ5wP/53.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 2 &nbsp; Enumeración de Rutas Ocultas </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/gkpDj1j5/54.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 3 &nbsp; Fingerprinting del Servidor Web </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5tX5DV7h/55.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 4 &nbsp; Detección de Subdirectorios Estáticos </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZR38KLhw/56.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p>  Pista sobre el framework en uso. </p>
+
+<p>  OWASP alberga una base de datos de iconos comunes de frameworks que se puede usar para comparar con el favicon de destino  : https://wiki.owasp.org/index.php/OWASP_favicon_database . Una vez que conocemos la pila del framework, podemos usar recursos externos para obtener más información</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pL311pGW/48.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Realizando la validacion del codigo fuente del sitio web se puede confirma que este sitio está usando un favicon. Adicionalmente, verá que la línea que contiene un enlace al archivo images/favicon.ico.  </p>
+
+
+<p> Al ejecuntar el siguiente comando, descargará el favicon y obtendrá su valor hash md5 que luego podrá buscar en "https://wiki.owasp.org/index.php/OWASP_favicon_database ."</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/g23BQGfK/49.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/X748q9hF/50.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> En resumen: Un simple favicon puede revelar el stack tecnológico completo, rutas ocultas y hasta vulnerabilidades directas en minutos, sin necesidad de herramientas externas. </p>
+
+
+<p> Ejemplo Práctico en Pentesting </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5tgpWgbY/51.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mkzSMGM6/52.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+<h2> &nbsp;:white_check_mark: &nbsp; Descubrimiento manual - Encabezados HTTP </h2>
+
+
+<p> Los encabezados HTTP son el "metadata silencioso" Cada respuesta del servidor contiene información crítica que el desarrollador olvidó ocultar. Estos encabezados a veces pueden contener información útil, como el software del servidor web y posiblemente el lenguaje de programación/scripting utilizado </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/GppQxY1n/57.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> podemos ver que el servidor web usa NGINX versión 1.18.0 y PHP versión 7.4.3. Con esta información, podríamos encontrar versiones vulnerables del software utilizado. Adicionalmente, con el comando CURL descargar la informacion del servidor donde la opción -v habilita el modo detallado </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cCZCSRhK/59.png" alt="Descubrimiento con OSINT">
+
+</p>
+
+
+<p> Hay recursos externos disponibles que pueden ayudar a descubrir información sobre el sitio web de destino; estos recursos a menudo se denominan OSINT o (Inteligencia de código abierto), ya que son herramientas disponibles gratuitamente que recopilan información: </p>
+
+
+<h2> &nbsp;:white_check_mark: &nbsp; OSINT - Hackeo de Google / Dorking </h2>
+
+
+<p> Google Dorks son consultas de búsqueda avanzadas que utilizan operadores especiales de Google para encontrar información específica o vulnerabilidades en la web. Estas técnicas son comúnmente empleadas en pruebas de penetración, reconocimiento de información y detección de configuraciones incorrectas en sitios web. </p>
+
+<p> Los Google Dorks aprovechan operadores como site:, inurl:, intitle:, filetype:, entre otros, para refinar las búsquedas y obtener resultados más precisos </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bryGnN2w/33.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h4> 🛠 &nbsp; Pentest-tools (https://pentest-tools.com/) </h4>
+
+
+<p> Ofrece automatizacion de dorks organizados por categoria  </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MXkpD6nV/34.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h4> 🛠 &nbsp; Exploit-db (https://www.exploit-db.com/google-hacking-database) </h4>
+
+
+<p> Base de datos con miles de dorks clasificados por servicio y tipo de vulnerabilidad </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HWFwKb57/35.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Operadores Comunes: </p>
+
+
+<p>1. site:: Limita los resultados a un dominio específico.</p>
+<p>•Ejemplo: site:google.com</p>
+
+<p>2. inurl:: Busca URLs que contengan una palabra clave específica.</p>
+<p>•Ejemplo: inurl:admin</p>
+
+<p>3. intitle:: Encuentra páginas cuyo título contenga ciertas palabras.</p>
+<p>•Ejemplo: intitle:"login"</p>
+
+<p>4. filetype:: Busca archivos de un tipo específico.</p>
+<p>•Ejemplo: filetype:pdf</p>
+
+<p>5.intext:: Busca páginas que contengan una palabra específica en su contenido.</p>
+<p>•Ejemplo: intext:"contraseña"</p>
+
+
+
+
+
+
+<h2> &nbsp;:white_check_mark: &nbsp; OSINT - Perfilar las tecnologias usadas por el sitio WEB </h2>
+
 
 <p> BuiltWith: &nbsp; Es una herramienta en línea que permite analizar cualquier sitio web para descubrir qué tecnologías utiliza: servidores, CMS, frameworks, librerías, herramientas de marketing, comercio electrónico entre otros </p>
 
@@ -296,6 +662,155 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
   <img src="https://i.postimg.cc/W3tpLVt1/10.png" alt="Descripción de la imagen">
 
 </p>
+
+
+
+
+
+
+<h2> &nbsp;:white_check_mark: &nbsp; OSINT - Wayback Machine </h2>
+
+
+<p> Wayback Machine: La Cápsula del Tiempo para Descubrimiento Web, (archive.org/web) es el archivo histórico más completo de internet con billones de capturas desde 1996. Revela páginas olvidadas, endpoints desindexados, funcionalidades ocultas y vulnerabilidades históricas. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/65WS781B/60.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XvSkCh79/61.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Cómo Usarla en Pentesting </p>
+
+
+<p> 1 &nbsp; Acceso Rápido</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5tX6q5nv/62.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 2 &nbsp; Descubrimiento de Endpoints Ocultos </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XqkJ7s7F/63.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 3 &nbsp; Enumeración de Parámetros y Funcionalidades </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/jdv5p317/64.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 4 &nbsp; Integración con DevTools + Headers </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wBRjsqj6/65.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Nota : Lo que estuvo público alguna vez, probablemente aún existe en el servidor. </p>
+
+
+
+
+
+
+<h2> &nbsp;:white_check_mark: &nbsp; OSINT - GitHub </h2>
+
+<p> Git es un  sistema de control de versiones  que rastrea los cambios en los archivos de un proyecto. Trabajar en equipo es más fácil porque puedes ver lo que cada miembro del equipo está editando y qué cambios hicieron en los archivos. Cuando los usuarios terminan de hacer sus cambios, los confirman con un mensaje y luego los devuelven a una ubicación central (repositorio) para que los otros usuarios luego extraigan esos cambios a sus máquinas locales. GitHub es una versión alojada de Git en Internet. Los repositorios pueden configurarse como públicos o privados y tienen varios controles de acceso. Puedes usar la función de búsqueda de GitHub para buscar nombres de empresas o nombres de sitios web para intentar localizar repositorios que pertenecen a tu objetivo. Una vez descubierto, puedes tener acceso al código fuente, contraseñas u otro contenido que aún no habías encontrado. </p>
+
+
+
+
+
+
+<h2> &nbsp;:white_check_mark: &nbsp; OSINT - S3 Buckets </h2>
+
+<p> Los buckets S3 son un servicio de almacenamiento proporcionado por Amazon AWS , que permite a las personas guardar archivos e incluso contenido estático de sitios web en la nube accesible a través de HTTP y HTTPS. El propietario de los archivos puede configurar permisos de acceso para que los archivos sean públicos, privados e incluso escribibles. A veces, estos permisos de acceso se configuran incorrectamente y, sin darse cuenta, permiten el acceso a archivos que no deberían estar disponibles para el público. </p>
+
+<p> El formato de los buckets S3 es http (s):// {name}. s3 .amazonaws.com  donde {name} lo decide el propietario, como  tryhackme-assets. s3 .amazonaws.com . Los buckets S3 se pueden descubrir de muchas maneras, como encontrar las URL en el código fuente de la página del sitio web, repositorios de GitHub o incluso automatizar el proceso. Un método de automatización común es usar el nombre de la empresa seguido de términos comunes como  {name} -assets,  {name} -www,  {name} -public,  {name} -private, etc. </p>
+
+
+
+
+
+<h2> &nbsp;:white_check_mark: &nbsp; Automated Discovery </h2>
+
+
+
+<p> El descubrimiento automatizado consiste en usar herramientas para descubrir contenido en lugar de hacerlo manualmente. Este proceso está automatizado, ya que suele contener cientos, miles o incluso millones de solicitudes a un servidor web. Estas solicitudes comprueban si un archivo o directorio existe en un sitio web, lo que nos da acceso a recursos que desconocíamos. Este proceso es posible gracias a un recurso llamado listas de palabras. </p>
+
+<p> Las listas de palabras son simplemente archivos de texto que contienen una larga lista de palabras de uso común; pueden abarcar diversos casos de uso. Por ejemplo, una lista de contraseñas incluiría las más utilizadas, mientras que en nuestro caso buscamos contenido, por lo que necesitaríamos una lista con los nombres de directorios y archivos más comunes. </p>
+
+<p> Las listas de palabras son simplemente archivos de texto que contienen una larga lista de palabras de uso común; pueden abarcar diversos casos de uso. Por ejemplo, una lista de contraseñas incluiría las más utilizadas, mientras que en nuestro caso buscamos contenido, por lo que necesitaríamos una lista con los nombres de directorios y archivos más comunes. </p>
+
+
+
+<h3> 🛠 &nbsp; Herramientas de automatización </h3>
+
+
+<h3> 🛠 &nbsp; ffuf: </h3>
+<h3> 🛠 &nbsp; dirb: </h3>
+<h3> 🛠 &nbsp; Gobuster: </h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> 1. &nbsp; Resolver la direccion IP del sitio web o del servidor que aloja el sitio web </h3>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/6pHmdqv9/1.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>En este caso, el sitio web tiene dos direcciones IPv4. Esto se debe a que está detrás de Cloudflare, que funciona como un proxy. Además, muestra las direcciones IPv6 y el servidor de correo asociado al dominio. </p>
 
 
 
@@ -639,68 +1154,7 @@ nombres de dominio. </p>
 
 
 
-<h2> :arrow_right: Google Dorks </h2>
 
-
-<p> Google Dorks son consultas de búsqueda avanzadas que utilizan operadores especiales de Google para encontrar información específica o vulnerabilidades en la web. Estas técnicas son comúnmente empleadas en pruebas de penetración, reconocimiento de información y detección de configuraciones incorrectas en sitios web. </p>
-
-<p> Los Google Dorks aprovechan operadores como site:, inurl:, intitle:, filetype:, entre otros, para refinar las búsquedas y obtener resultados más precisos </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/bryGnN2w/33.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<h4> 🛠 &nbsp; Pentest-tools (https://pentest-tools.com/) </h4>
-
-
-<p> Ofrece automatizacion de dorks organizados por categoria  </p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/MXkpD6nV/34.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<h4> 🛠 &nbsp; Exploit-db (https://www.exploit-db.com/google-hacking-database) </h4>
-
-
-<p> Base de datos con miles de dorks clasificados por servicio y tipo de vulnerabilidad </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/HWFwKb57/35.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> Operadores Comunes: </p>
-
-
-<p>1. site:: Limita los resultados a un dominio específico.</p>
-<p>•Ejemplo: site:google.com</p>
-
-<p>2. inurl:: Busca URLs que contengan una palabra clave específica.</p>
-<p>•Ejemplo: inurl:admin</p>
-
-<p>3. intitle:: Encuentra páginas cuyo título contenga ciertas palabras.</p>
-<p>•Ejemplo: intitle:"login"</p>
-
-<p>4. filetype:: Busca archivos de un tipo específico.</p>
-<p>•Ejemplo: filetype:pdf</p>
-
-<p>5.intext:: Busca páginas que contengan una palabra específica en su contenido.</p>
-<p>•Ejemplo: intext:"contraseña"</p>
 
 
 
@@ -774,161 +1228,6 @@ nombres de dominio. </p>
 
 </p>
 
-
-
-<h2> :arrow_right: Caminando una aplicación </h2>
-
-
-<h2>  Visualización del código fuente de la página</h2>
-
-
-<p> El código fuente de una página web es el conjunto de instrucciones y líneas de texto escritas en lenguajes de programación (principalmente HTML, CSS y JavaScript) que le indican al navegador cómo debe estructurarse, visualizarse y comportarse un sitio web. </p>
-
-
-<p> Mientras visualiza un sitio web, puede hacer clic derecho en la página y verá una opción en el menú que dice Ver código fuente de la página.
-La mayoría de los navegadores admiten colocar view-source: delante de la URL, por ejemplo,  view-source:https://www.google.com/
-En el menú de tu navegador, encontrarás una opción para ver el código fuente de la página. Esta opción a veces se encuentra en submenús como "Herramientas para desarrolladores" o "Más herramientas".</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/bwc207Qy/40.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> 1) &nbsp; En la parte superior de la página, verás código que empieza "<!--y termina con -->" estos comentarios. Los comentarios son mensajes que deja el desarrollador del sitio web, generalmente para explicar algo del código a otros programadores o incluso como notas o recordatorios para sí mismo. </p>
-
-
-<p> 2) &nbsp; Se pueden incluir archivos externos como CSS, JavaScript e imágenes mediante el código HTML. Existe la posibilidad que puedan obtener acceso al listado de archivos del directorio "/assets"  </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/zfNtQP1Y/41.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> 3) &nbsp; Los enlaces a diferentes páginas en HTML se escriben en etiquetas de anclaje (son elementos HTML que comienzan con "< a), y el enlace al que será dirigido se almacena en el href atributo" . </p>
-
-
-<p> 4) &nbsp; Hoy en día, muchos sitios web no se crean desde cero y utilizan lo que se denomina un framework. Un framework es una colección de código prediseñado que permite a los desarrolladores incluir fácilmente funciones comunes que un sitio web requeriría, como blogs, gestión de usuarios, procesamiento de formularios y mucho más, ahorrándoles horas o días de desarrollo. </p>
-
-
-
-<h2> Herramientas para desarrolladores </h2>
-
-
-<p>  Se trata de un conjunto de herramientas que ayuda a los desarrolladores web a depurar aplicaciones y permite echar un vistazo a la estructura interna de un sitio web para ver qué sucede "F12" </p>
-
-
-<h2> Developer Tools - Inspector </h2>
-
-
-<p> El Inspector (o Inspector de Elementos) es una de las herramientas más fundamentales para el desarrollo web y el análisis de seguridad. Su función principal es permitirte visualizar y manipular en tiempo real el DOM (Document Object Model) y el CSS (estilos) de una página web sin modificar el archivo original en el servidor. </p>
-
-
-<h3> Utilidad en Ciberseguridad y Pentesting </h3>
-
-
-<p> • Identificar campos ocultos: &nbsp; Localizar inputs de tipo type="hidden" que podrían contener tokens, IDs de sesión o parámetros manipulables. </p>
-<p> • Bypassing de validaciones cliente: &nbsp; Si un formulario tiene restricciones en el frontend (como maxlength, required o campos deshabilitados con disabled), puedes eliminarlos directamente en el Inspector para enviar payloads que el programador no previó.</p>
-<p> • Análisis de Event Listeners: &nbsp; Permite ver qué funciones de JavaScript están vinculadas a un botón o formulario, lo cual es útil para rastrear cómo se procesan los datos antes de ser enviados al servidor. </p>
-<p> • Detección de vulnerabilidades DOM-based XSS: &nbsp; Ayuda a rastrear cómo se renderizan datos controlados por el usuario dentro del HTML.</p>
-
-
-<p> En resumen, es la "radiografía" de la página web que te permite entender cómo está construida y cómo interactúa con el navegador. </p>
-
-
-<p> En este ejemplo podemos observar un sitio web el cual a sido bloqueado con un aviso flotante sobre el contenido que indica que es necesario ser cliente premium para verlo. Estos recuadros flotantes que bloquean el contenido de la página se conocen como muros de pago, ya que colocan un muro metafórico frente al contenido que se desea ver hasta que se paga.  </p>
-
-
-<p> Al hacer clic derecho en el aviso premium (muro de pago), debería poder seleccionar la opción "Inspeccionar" en el menú. Esta opción abre las herramientas de desarrollo en la parte inferior o derecha, según su navegador o preferencias. Ahora verá los elementos/HTML que componen el sitio web  </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/9MJ5BwzK/43.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> Localiza el DIV elemento con la clase premium-customer-blockery haz clic en él. Verás todos los estilos CSS en el cuadro de estilos que se aplican a este elemento, como margin-top: 60pxy text-align: center. El estilo que nos interesa es el display: block. Si haces clic en la palabra block, puedes escribir un valor a tu elección, escribir none; esto hará que el cuadro desaparezca, revelando el contenido debajo. Si el elemento no tenía un campo de visualización, puedes hacer clic debajo del último estilo y añadir el tuyo. Recuerda que esto solo se edita en la ventana de tu navegador y, al pulsar "Actualizar", todo volverá a la normalidad.  </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/fW91LPfF/44.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<h2> Developer Tools - Debugger </h2>
-
-<p> El Inspector (o Inspector de Elementos) es una de las herramientas más fundamentales para el desarrollo web y el análisis de seguridad. Su función principal es permitirte visualizar y manipular en tiempo real el DOM (Document Object Model) y el CSS (estilos) de una página web sin modificar el archivo original en el servidor,  como evaluadores de penetración, nos permite analizar a fondo el código JavaScript. En Firefox y Safari, esta función se llama Depurador, pero en Google Chrome, Fuentes. </p>
-
-<h3> Utilidad en Ciberseguridad y Pentesting </h3>
-
-
-<p> • Entender la ofuscación: &nbsp; Muchos scripts maliciosos o protecciones de formularios están "ofuscados" (código difícil de leer). El Debugger permite ejecutar el código lentamente para ver qué hace realmente paso a paso. </p>
-<p> • Bypassing de controles de seguridad en el cliente: &nbsp; Si una aplicación realiza validaciones complejas de seguridad en JavaScript antes de enviar una petición, puedes pausar el código justo antes del envío, modificar los valores de las variables en memoria y luego reanudar la ejecución para enviar datos manipulados.</p>
-<p> • Análisis de APIs y Tokens: &nbsp; Puedes poner un breakpoint en la línea donde se generan las cabeceras de una petición para ver cómo se calculan firmas criptográficas o de dónde se extraen los tokens de sesión. </p>
-<p> • Manipulación del flujo: &nbsp; Puedes forzar que una condición if se cumpla (cambiando un false por true en la consola mientras está pausado) para acceder a funciones que normalmente estarían bloqueadas.</p>
-
-<p> En resumen, el Debugger es como un "microscopio" para el código en movimiento; te permite detener el tiempo y ver exactamente qué está pensando la aplicación en cualquier momento. </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/nL2RHdcc/45.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-
-<p> Muchas veces, al visualizar archivos JavaScript, notarás que todo está en una sola línea. Esto se debe a que se ha minimizado, lo que significa que se ha eliminado todo el formato (tabulaciones, espaciado y saltos de línea) para reducir el tamaño del archivo. Podemos recuperar algunos de los formatos usando la opción "Pretty Print", que se presenta como dos llaves { } para facilitar la lectura, aunque debido a la ofuscación, sigue siendo difícil comprender qué sucede con el archivo. Si se desplaza hasta el final del archivo flash.min.js, verá la línea:flash['remove'](); </p>
-
-<p>  Este pequeño fragmento de JavaScript es lo que elimina la ventana emergente roja de la página. Podemos utilizar otra función del depurador llamada  puntos de interrupción . Estos son puntos en el código que podemos obligar al navegador a detener el procesamiento de JavaScript y pausar la ejecución actual.</p>
-
-<p>  Si hace clic en el número de línea que contiene el código anterior, verá que se vuelve azul; ha insertado un punto de interrupción en esta línea. Ahora, intente actualizar la página y verá que el cuadro rojo permanece en la página en lugar de desaparecer, y que contiene una bandera.</p>
-
-
-<h2> Developer Tools - Network </h2>
-
-
-<p> La pestaña Network (Red) es quizás la herramienta más crítica para entender la comunicación entre el navegador y el servidor. Su función es registrar y mostrar todas las peticiones (requests) y respuestas (responses) que realiza la página web. </p>
-
-<h3> Utilidad en Ciberseguridad y Pentesting </h3>
-
-
-<p> • Identificación de Endpoints de AP &nbsp; Revela rutas de API ocultas que no son visibles en el código fuente pero que la aplicación utiliza para obtener o enviar datos. </p>
-
-<p> • Análisis de Autenticación:  &nbsp; Permite ver cómo se transmiten las credenciales. ¿Se envían en la URL? ¿En una cookie con el flag HttpOnly? ¿En una cabecera personalizada?</p>
-
-<p> • Replay de Peticiones: &nbsp; La mayoría de navegadores permiten hacer clic derecho sobre una petición y seleccionar "Copy as fetch" o "Copy as cURL". Esto te permite recrear la petición exacta en tu propia terminal o script para probar vulnerabilidades como IDOR (Insecure Direct Object Reference). </p>
-
-<p> • Inspección de WebSockets: &nbsp; Permite ver el flujo de datos bidireccional en tiempo real, muy común en chats, dashboards financieros o juegos online.</p>
-
-<p> Con la pestaña de red abierta, se rellena el formulario de contacto y se pulsa el botón "Enviar mensaje" . Verás un evento en la pestaña de red: el formulario se envía en segundo plano mediante AJAX. AJAX permite enviar y recibir datos de red en segundo plano en una aplicación web sin modificar la página web actual. </p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/NGN0yTjz/46.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> Examine la nueva entrada en la pestaña de red que creó el formulario de contacto y vea la página a la que se enviaron los datos </p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/T3b2H4J8/47.png" alt="Descripción de la imagen">
-
-</p>
 
 
 
