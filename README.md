@@ -189,12 +189,13 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 </p>
 
 
+<!----------------------------------------------------------------------------- Codigo fuente de una aplicacion ----------------------------------------------------------------------------->
 
 
 <h2> :arrow_right: Caminando una aplicación </h2>
 
 
-<h2>  Visualización del código fuente de la página</h2>
+<h2> :white_check_mark: &nbsp; Visualización del código fuente de la página</h2>
 
 
 <p> El código fuente de una página web es el conjunto de instrucciones y líneas de texto escritas en lenguajes de programación (principalmente HTML, CSS y JavaScript) que le indican al navegador cómo debe estructurarse, visualizarse y comportarse un sitio web. </p>
@@ -238,7 +239,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 <p>  Se trata de un conjunto de herramientas que ayuda a los desarrolladores web a depurar aplicaciones y permite echar un vistazo a la estructura interna de un sitio web para ver qué sucede "F12" </p>
 
 
-<h2> Developer Tools - Inspector </h2>
+<h2> :white_check_mark: &nbsp; Developer Tools - Inspector </h2>
 
 
 <p> El Inspector (o Inspector de Elementos) es una de las herramientas más fundamentales para el desarrollo web y el análisis de seguridad. Su función principal es permitirte visualizar y manipular en tiempo real el DOM (Document Object Model) y el CSS (estilos) de una página web sin modificar el archivo original en el servidor. </p>
@@ -278,7 +279,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 </p>
 
 
-<h2> Developer Tools - Debugger </h2>
+<h2> :white_check_mark: &nbsp; Developer Tools - Debugger </h2>
 
 <p> El Inspector (o Inspector de Elementos) es una de las herramientas más fundamentales para el desarrollo web y el análisis de seguridad. Su función principal es permitirte visualizar y manipular en tiempo real el DOM (Document Object Model) y el CSS (estilos) de una página web sin modificar el archivo original en el servidor,  como evaluadores de penetración, nos permite analizar a fondo el código JavaScript. En Firefox y Safari, esta función se llama Depurador, pero en Google Chrome, Fuentes. </p>
 
@@ -300,8 +301,6 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 </p>
 
 
-
-
 <p> Muchas veces, al visualizar archivos JavaScript, notarás que todo está en una sola línea. Esto se debe a que se ha minimizado, lo que significa que se ha eliminado todo el formato (tabulaciones, espaciado y saltos de línea) para reducir el tamaño del archivo. Podemos recuperar algunos de los formatos usando la opción "Pretty Print", que se presenta como dos llaves { } para facilitar la lectura, aunque debido a la ofuscación, sigue siendo difícil comprender qué sucede con el archivo. Si se desplaza hasta el final del archivo flash.min.js, verá la línea:flash['remove'](); </p>
 
 <p>  Este pequeño fragmento de JavaScript es lo que elimina la ventana emergente roja de la página. Podemos utilizar otra función del depurador llamada  puntos de interrupción . Estos son puntos en el código que podemos obligar al navegador a detener el procesamiento de JavaScript y pausar la ejecución actual.</p>
@@ -309,7 +308,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 <p>  Si hace clic en el número de línea que contiene el código anterior, verá que se vuelve azul; ha insertado un punto de interrupción en esta línea. Ahora, intente actualizar la página y verá que el cuadro rojo permanece en la página en lugar de desaparecer, y que contiene una bandera.</p>
 
 
-<h2> Developer Tools - Network </h2>
+<h2> :white_check_mark: &nbsp; Developer Tools - Network </h2>
 
 
 <p> La pestaña Network (Red) es quizás la herramienta más crítica para entender la comunicación entre el navegador y el servidor. Su función es registrar y mostrar todas las peticiones (requests) y respuestas (responses) que realiza la página web. </p>
@@ -348,7 +347,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 
-
+<!----------------------------------------------------------------------------- Descubrimiento de contenido (Manual, Osint, Automatizado) ----------------------------------------------------------------------------->
 
 
 
@@ -387,8 +386,6 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 <p> En este caso se observa que en el archivo robots.txt especifica que ignore el directorio /wp-admin/. WP se refiere a que este sitio web esta ejecutando WordPress y admin es el directorio de administracion por lo tanto no debe ser de acceso publico</p>
-
-
 
 
 
@@ -771,35 +768,248 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 
+<!----------------------------------------------------------------------------- Reconocimiento de Dominios ----------------------------------------------------------------------------->
+
+
+<h2> :arrow_right: Reconocimiento de DNS </h2>
+
+
+<p> El objetivo principal del reconocimiento de DNS es mapear la infraestructura de red del objetivo a través de sus registros DNS. </p>
+
+
+ <h2> :white_check_mark: &nbsp; DNS recon </h2>
+
+
+<p> DNSRecon es una herramienta de enumeración DNS escrita en Python. Esta herramienta es utilizada principalmente para recopilar información sobre los registros DNS de un dominio específico, lo cual es una práctica común en pruebas de penetración y evaluaciones de seguridad. DNSRecon puede realizar una variedad de tareas, incluyendo: </p>
+
+
+<p> • Transferencias de Zona: Verifica si los servidores de nombres (NS) permiten transferencias de zona, lo que podría revelar información sensible.</p>
+<p> • Enumeración de Registros DNS: Recopila registros DNS comunes como MX (servidores de correo), SOA (inicio de autoridad), NS (servidores de nombres), A (direcciones IPv4), AAAA (direcciones IPv6), SPF (política de remitente) y TXT.</p>
+<p> • Enumeración de Registros SRV: Busca registros SRV que indican servicios disponibles como LDAP, SIP, etc.</p>
+<p> • Expansión de TLD: Realiza búsquedas para dominios con diferentes extensiones de nivel superior (TLD).</p>
+<p> • Resolución de Caracteres Comodín: Detecta si un dominio utiliza resolución de caracteres comodín.</p>
+<p> • Fuerza Bruta de Subdominios: Utiliza listas de palabras para descubrir subdominios y hosts existentes.</p>
+<p> • Búsqueda de Registros PTR: Realiza búsquedas inversas de DNS para rangos IP o CIDR.</p>
+<p> • Verificación de Registros en Caché: Examina los registros en caché de un servidor DNS para encontrar registros A, AAAA y CNAME.</p>
+
+
+<h4>Enumeración General de Registros DNS:</h4>
+
+<p>Comando: dnsrecon -d [dominio]:</p>
+
+<p>Recopila información general sobre los registros DNS del dominio especificado (MX, SOA, NS, A, AAAA, SPF, TXT) consultando servidores DNS públicos</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/J4FJMKVv/23.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> SOA:&nbsp; Muestra el servidor DNS autoritativo de inicio (nsztm1.digi.ninja) y detalles de configuración.  </p>
+<p> NS:&nbsp; Lista los servidores de nombres autoritativos para el dominio (nsztm1.digi.ninja, nsztm2.digi.ninja). </p>
+<p> MX:&nbsp; Muestra los servidores de correo.  </p>
+<p> A:&nbsp; Dirección IPv4 asociada al dominio (5[.]196[.]105[.]14). </p>
+<p> AAAA:&nbsp; Dirección IPv6 asociada al dominio </p>
+<p> TXT:&nbsp; Registros de texto, en este caso contiene una política SPF. </p>
+
+
+<h4>Enumeración de Registros SRV:</h4>
+
+<p>Comando: dnsrecon -d [dominio] -t srv </p> 
+<p>Busca registros SRV comunes relacionados con servicios como LDAP, SIP, Kerberos, XMPP (mensajería) Etc consultando servidores DNS </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/WpGT21B5/24.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> El dominio zonetransfer.me tiene un servicio SIP (VoIP)   </p>
+
+
+<h4>Transferencia de Zona (Contexto Pasivo):</h4>
+
+
+<p>dnsrecon -d [dominio] -t axfr: Una transferencia de zona es un mecanismo legítimo en DNS que permite a un servidor DNS secundario copiar (sincronizar) todos los registros de un dominio desde el servidor DNS primario. Esto es crucial para redundancia y resiliencia del servicio DNS.
+
+El proceso AXFR implica que un servidor DNS solicite al servidor primario una copia completa de todos los registros DNS del dominio (A, AAAA, MX, NS, TXT, CNAME, SRV, etc.). Esta solicitud se hace mediante una consulta especial llamada AXFR
+
+</p>
+
+
+<p> ¿Qué hace este comando?</p>
+
+<p> 1) &nbsp; Identificación de servidores de nombres (NS)&nbsp; : Primero, DNSRecon consulta los registros NS del dominio  para conocer cuáles son los servidores DNS autoritativos </p>
+
+<p> 2) &nbsp; Intento de Transferencia de Zona: &nbsp; : DNSRecon intenta enviar una solicitud AXFR directamente a cada uno de esos servidores de nombres (NS) identificados</p>
+
+
+<p> 3) &nbsp; Interacción con el objetivo &nbsp; : las solicitudes AXFR son enviadas directamente al servidor DNS objetivo.La mayoría de los servidores DNS modernos tienen configuraciones de seguridad que rechazan transferencias de zona provenientes de direcciones IP no autorizadas (normalmente solo se permite desde IPs de servidores secundarios confiables). Sin embargo, si el servidor tiene una configuración incorrecta o insegura y acepta la solicitud AXFR desde la IP del atacante (o desde donde se ejecute dnsrecon), entonces entregará toda la zona DNS del dominio.</p>
+
+
+<p> 4) &nbsp; Recopilación de datos: &nbsp; : Si la transferencia es exitosa, el atacante obtiene una lista exhaustiva de todos los registros DNS del dominio, lo que representa una filtración de información interna muy valiosa.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/W3LpnWqP/25.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/2yTzCCc8/26.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> CNAME:&nbsp;  sirve para crear un alias entre nombres de dominio, redirigiendo un subdominio hacia otro dominio canónico. No apunta a direcciones IP, sino a 
+nombres de dominio. </p>
+<p> SRV y NAPTR:&nbsp; Indican servicios como SIP (_sip._tcp) y correo electrónico, útiles para VoIP y descubrimiento de servicios. </p>
+<p> HINFO::&nbsp; Describe el sistema operativo y hardware (Windows XP y Casio fx-7000G). </p>
+<p> RP:&nbsp; Persona responsable </p>
+<p> LOC::&nbsp; Coordenadas geográficas </p>
+<p> AAAA:&nbsp; Dirección IPv6 asociada al dominio </p>
+<p> CERT y DNSKEY &nbsp; Información criptográfica para validación DNSSEC. </p>
+
+
+<h2> :white_check_mark: &nbsp;  DNSDumpster </h2>
+
+
+<p> DNSDumpster es una herramienta gratuita en línea diseñada para la recopilación de información (reconocimiento) de dominios. Es muy utilizada en pruebas de penetración y evaluaciones de seguridad para obtener datos sobre la infraestructura DNS de un dominio específico. </p>
+
+
+
+<p> • Búsqueda de registros DNS: Permite encontrar registros como A, MX, NS, TXT, SOA y más relacionados con un dominio.</p>
+<p> • Búsqueda de hosts relacionados: Identifica direcciones IP y hosts que están conectados al dominio.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/V65zFx4p/27.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> • Detección de subdominios: Recopila y muestra subdominios asociados al dominio principal.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Hk2JvC4z/28.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> • Mapeo gráfico: Genera un diagrama visual de la infraestructura del dominio, incluyendo servidores y subdominios relacionados.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/d1QhcN6p/29.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<!----------------------------------------------------------------------------- Reconocimiento de Subdominios ----------------------------------------------------------------------------->
+
+
+<h2> :arrow_right: Reconocimiento de subdominios </h2>
+
+
+<p> La enumeración de subdominios consiste en encontrar subdominios válidos para un dominio, pero ¿por qué lo hacemos? Lo hacemos para ampliar nuestra superficie de ataque y descubrir más puntos de vulnerabilidad potenciales.</p>
+
+
+
+<h2> :white_check_mark: &nbsp; OSINT - Certificados SSL/TLS </h2>
+
+
+<p> Los Certificados SSL/TLS son archivos digitales que autentican la identidad de un sitio web y cifran la comunicación entre el navegador y el servidor usando protocolos de seguridad (SSL = Secure Sockets Layer, TLS = Transport Layer Security).</p>
+
+<p> El propósito de los registros de Transparencia de Certificados es impedir el uso de certificados maliciosos o creados accidentalmente. Podemos aprovechar este servicio para descubrir subdominios que pertenecen a un dominio.</p>
+
+
+
+<h2>  &nbsp;  crt.sh - La Mina de Oro de Subdominios "https://crt.sh/" </h2>
+
+<p> crt.sh es un motor de búsqueda público que indexa TODOS los certificados SSL/TLS emitidos por Certificadoras Públicas (CAs) desde 2013. Contiene +1 billón de certificados y es 100% pasivo.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/G3yn11X5/66.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :white_check_mark: &nbsp; OSINT - Motores de búsqueda  </h2>
+
+
+<p> Usar métodos de búsqueda avanzados en sitios web como Google, como [nombre del dominio] site: filter, puede restringir los resultados. Por ejemplo, [ site:*.domain.com -site:www.domain.com nombre del dominio] solo contendría resultados que dirigieran al nombre de dominio dominio.com, pero excluiría cualquier enlace a www.dominio.com; por lo tanto, solo nos muestra los subdominios que pertenecen a dominio.com.</p>
+
+<p> Ejemplo practico</p>
+
+
+<p> Utilice el término de búsqueda site:*.tryhackme.com -site:www.tryhackme.com, que debería revelar un subdominio para tryhackme.com</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Vv6Sdk5d/67.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :white_check_mark: &nbsp;  Enumeracion de subdominios con sublist3r </h2>
+
+
+<p> Sublist3r es una herramienta de Python diseñada para enumerar subdominios de sitios web mediante OSINT. Ayuda a los evaluadores de penetración y a los buscadores de errores a recopilar subdominios para el dominio objetivo. Sublist3r enumera subdominios utilizando diversos motores de búsqueda como Google, Yahoo, Bing, Baidu y Ask. También enumera subdominios utilizando Netcraft, Virustotal, ThreatCrowd, DNSdumpster y ReverseDNS.</p>
+
+<p> Subbrute se integró con Sublist3r para aumentar la posibilidad de encontrar más subdominios mediante fuerza bruta con una lista de palabras mejorada. El mérito es de TheRook, autor de Subbrute.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/rmH29cVf/31.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/YCVp31dn/32.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Ejemplo 2</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/YCVp31dn/32.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<!----------------------------------------------------------------------------- Otros metodos de reconocimiento pasivo ----------------------------------------------------------------------------->
 
 
 
 
+<h2> Otros metodos de reconocimiento pasivo </h2>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3> 1. &nbsp; Resolver la direccion IP del sitio web o del servidor que aloja el sitio web </h3>
+<h2> Identificar la direccion IP del sitio web o del servidor que aloja el sitio web </h2>
 
 
 
@@ -959,151 +1169,9 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 </p>
 
 
-<h2> :arrow_right: Reconocimiento de DNS </h2>
 
 
-<p> El objetivo principal del reconocimiento de DNS es mapear la infraestructura de red del objetivo a través de sus registros DNS. </p>
-
-
- <h2> 🛠 &nbsp; DNS recon </h2>
-
-
-<p> DNSRecon es una herramienta de enumeración DNS escrita en Python. Esta herramienta es utilizada principalmente para recopilar información sobre los registros DNS de un dominio específico, lo cual es una práctica común en pruebas de penetración y evaluaciones de seguridad. DNSRecon puede realizar una variedad de tareas, incluyendo: </p>
-
-
-<p> • Transferencias de Zona: Verifica si los servidores de nombres (NS) permiten transferencias de zona, lo que podría revelar información sensible.</p>
-<p> • Enumeración de Registros DNS: Recopila registros DNS comunes como MX (servidores de correo), SOA (inicio de autoridad), NS (servidores de nombres), A (direcciones IPv4), AAAA (direcciones IPv6), SPF (política de remitente) y TXT.</p>
-<p> • Enumeración de Registros SRV: Busca registros SRV que indican servicios disponibles como LDAP, SIP, etc.</p>
-<p> • Expansión de TLD: Realiza búsquedas para dominios con diferentes extensiones de nivel superior (TLD).</p>
-<p> • Resolución de Caracteres Comodín: Detecta si un dominio utiliza resolución de caracteres comodín.</p>
-<p> • Fuerza Bruta de Subdominios: Utiliza listas de palabras para descubrir subdominios y hosts existentes.</p>
-<p> • Búsqueda de Registros PTR: Realiza búsquedas inversas de DNS para rangos IP o CIDR.</p>
-<p> • Verificación de Registros en Caché: Examina los registros en caché de un servidor DNS para encontrar registros A, AAAA y CNAME.</p>
-
-
-<h4>Enumeración General de Registros DNS:</h4>
-
-<p>Comando: dnsrecon -d [dominio]:</p>
-
-<p>Recopila información general sobre los registros DNS del dominio especificado (MX, SOA, NS, A, AAAA, SPF, TXT) consultando servidores DNS públicos</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/J4FJMKVv/23.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> SOA:&nbsp; Muestra el servidor DNS autoritativo de inicio (nsztm1.digi.ninja) y detalles de configuración.  </p>
-<p> NS:&nbsp; Lista los servidores de nombres autoritativos para el dominio (nsztm1.digi.ninja, nsztm2.digi.ninja). </p>
-<p> MX:&nbsp; Muestra los servidores de correo.  </p>
-<p> A:&nbsp; Dirección IPv4 asociada al dominio (5[.]196[.]105[.]14). </p>
-<p> AAAA:&nbsp; Dirección IPv6 asociada al dominio </p>
-<p> TXT:&nbsp; Registros de texto, en este caso contiene una política SPF. </p>
-
-
-<h4>Enumeración de Registros SRV:</h4>
-
-<p>Comando: dnsrecon -d [dominio] -t srv </p> 
-<p>Busca registros SRV comunes relacionados con servicios como LDAP, SIP, Kerberos, XMPP (mensajería) Etc consultando servidores DNS </p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/WpGT21B5/24.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> El dominio zonetransfer.me tiene un servicio SIP (VoIP)   </p>
-
-
-<h4>Transferencia de Zona (Contexto Pasivo):</h4>
-
-
-<p>dnsrecon -d [dominio] -t axfr: Una transferencia de zona es un mecanismo legítimo en DNS que permite a un servidor DNS secundario copiar (sincronizar) todos los registros de un dominio desde el servidor DNS primario. Esto es crucial para redundancia y resiliencia del servicio DNS.
-
-El proceso AXFR implica que un servidor DNS solicite al servidor primario una copia completa de todos los registros DNS del dominio (A, AAAA, MX, NS, TXT, CNAME, SRV, etc.). Esta solicitud se hace mediante una consulta especial llamada AXFR
-
-</p>
-
-
-<p> ¿Qué hace este comando?</p>
-
-<p> 1) &nbsp; Identificación de servidores de nombres (NS)&nbsp; : Primero, DNSRecon consulta los registros NS del dominio  para conocer cuáles son los servidores DNS autoritativos </p>
-
-<p> 2) &nbsp; Intento de Transferencia de Zona: &nbsp; : DNSRecon intenta enviar una solicitud AXFR directamente a cada uno de esos servidores de nombres (NS) identificados</p>
-
-
-<p> 3) &nbsp; Interacción con el objetivo &nbsp; : las solicitudes AXFR son enviadas directamente al servidor DNS objetivo.La mayoría de los servidores DNS modernos tienen configuraciones de seguridad que rechazan transferencias de zona provenientes de direcciones IP no autorizadas (normalmente solo se permite desde IPs de servidores secundarios confiables). Sin embargo, si el servidor tiene una configuración incorrecta o insegura y acepta la solicitud AXFR desde la IP del atacante (o desde donde se ejecute dnsrecon), entonces entregará toda la zona DNS del dominio.</p>
-
-
-<p> 4) &nbsp; Recopilación de datos: &nbsp; : Si la transferencia es exitosa, el atacante obtiene una lista exhaustiva de todos los registros DNS del dominio, lo que representa una filtración de información interna muy valiosa.</p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/W3LpnWqP/25.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/2yTzCCc8/26.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> CNAME:&nbsp;  sirve para crear un alias entre nombres de dominio, redirigiendo un subdominio hacia otro dominio canónico. No apunta a direcciones IP, sino a 
-nombres de dominio. </p>
-<p> SRV y NAPTR:&nbsp; Indican servicios como SIP (_sip._tcp) y correo electrónico, útiles para VoIP y descubrimiento de servicios. </p>
-<p> HINFO::&nbsp; Describe el sistema operativo y hardware (Windows XP y Casio fx-7000G). </p>
-<p> RP:&nbsp; Persona responsable </p>
-<p> LOC::&nbsp; Coordenadas geográficas </p>
-<p> AAAA:&nbsp; Dirección IPv6 asociada al dominio </p>
-<p> CERT y DNSKEY &nbsp; Información criptográfica para validación DNSSEC. </p>
-
-
-<h2> 🛠 &nbsp; DNSDumpster </h2>
-
-
-<p> DNSDumpster es una herramienta gratuita en línea diseñada para la recopilación de información (reconocimiento) de dominios. Es muy utilizada en pruebas de penetración y evaluaciones de seguridad para obtener datos sobre la infraestructura DNS de un dominio específico. </p>
-
-
-
-<p> • Búsqueda de registros DNS: Permite encontrar registros como A, MX, NS, TXT, SOA y más relacionados con un dominio.</p>
-<p> • Búsqueda de hosts relacionados: Identifica direcciones IP y hosts que están conectados al dominio.</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/V65zFx4p/27.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> • Detección de subdominios: Recopila y muestra subdominios asociados al dominio principal.</p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/Hk2JvC4z/28.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> • Mapeo gráfico: Genera un diagrama visual de la infraestructura del dominio, incluyendo servidores y subdominios relacionados.</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/d1QhcN6p/29.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<h2> :arrow_right: Deteccion WAF con wafw00f </h2>
+<h2> :white_check_mark: &nbsp; Deteccion WAF con wafw00f </h2>
 
 
 <p> Un WAF (Web Application Firewall) es un tipo de firewall diseñado específicamente para proteger aplicaciones web. Analiza el tráfico HTTP/HTTPS entrante y saliente entre el cliente y el servidor web, inspeccionando cada solicitud en busca de actividad maliciosa o comportamientos inusuales que puedan indicar un ataque. </p>
@@ -1128,35 +1196,6 @@ nombres de dominio. </p>
   <img src="https://i.postimg.cc/13sZ9vfn/30.png" alt="Descripción de la imagen">
 
 </p>
-
-
-<h2> :arrow_right: Enumeracion de subdominios con sublist3r </h2>
-
-
-<p> Sublist3r es una herramienta de Python diseñada para enumerar subdominios de sitios web mediante OSINT. Ayuda a los evaluadores de penetración y a los buscadores de errores a recopilar subdominios para el dominio objetivo. Sublist3r enumera subdominios utilizando diversos motores de búsqueda como Google, Yahoo, Bing, Baidu y Ask. También enumera subdominios utilizando Netcraft, Virustotal, ThreatCrowd, DNSdumpster y ReverseDNS.</p>
-
-<p> Subbrute se integró con Sublist3r para aumentar la posibilidad de encontrar más subdominios mediante fuerza bruta con una lista de palabras mejorada. El mérito es de TheRook, autor de Subbrute.</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/rmH29cVf/31.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/YCVp31dn/32.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-
-
-
 
 
 
@@ -1232,18 +1271,8 @@ nombres de dominio. </p>
 
 
 
-
-
-
-
-
-
-
 <h2> Otros metodos de reconocimiento pasivo </h2>
 
-<p><b> • Análisis del sitio web: &nbsp; </b> Revisar el sitio web de la empresa sin hacer nada más allá de lo que haría un usuario típico. Por ejemplo, revisar su página "Sobre nosotros". Adivinar rutas aleatorias en el sitio ejemplo ( mytarget.com/admin ) </p>
-
-<p><b> • Certificados SSL: &nbsp; </b> comprueba qué certificados ha solicitado la empresa para facilitar el acceso HTTPS a su sitio web. ¡Un excelente lugar para encontrar nombres de dominio y subdominio! </p>
 	
 <p><b> • Informes disponibles públicamente: &nbsp;</b> Análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b>
 
