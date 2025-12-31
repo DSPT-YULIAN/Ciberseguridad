@@ -120,7 +120,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 <!--h1 without bottom border-->
 <div id="user-content-toc">
   <ul align="left">
-    <summary><h1 style="display: inline-block">Fase 1. Recomocimiento pasivo y activo</h1></summary>
+    <summary><h1 style="display: inline-block">Fase 1. Recomncimiento pasivo y activo</h1></summary>
   </ul>
 </div>
 
@@ -136,7 +136,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 <!-------------------------------------- ## FASE 1 Reconocimiento pasivo --------------------------------------------->
 
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Recomocimiento pasivo (No hay interacción directa con el objetivo) </h2>
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Reconocimiento pasivo (No hay interacción directa con el objetivo) </h2>
 
 
 
@@ -144,8 +144,8 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 	de fuentes públicas, incluido el sitio web público de la organizacion </p>
 
 
-<p><b> • &nbsp; Identidicar direcciones IP & la informacion DNS </b></p>
-<p><b> • &nbsp; Identidicar nombres de dominios & la información sobre la propiedad del dominio  </b></p>
+<p><b> • &nbsp; Identificar direcciones IP & la informacion DNS </b></p>
+<p><b> • &nbsp; Identificar nombres de dominios & la información sobre la propiedad del dominio  </b></p>
 <p><b> • &nbsp; Identificar direcciones Email y perfiles de redes sociales </b></p>
 <p><b> • &nbsp; Identificar las tecnologias WEB utilizadas por el sitio </b></p>
 <p><b> • &nbsp; Identificar subdominios </b></p>
@@ -164,7 +164,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 </br>
 
-<p> OSINT:&nbsp; Conjunto de tecnicas u herramientas para recopilar datos de fuentes disponibles de forma publica para ser utillizados en un contexto de inteligencia  </p>
+<p> OSINT:&nbsp; Conjunto de tecnicas y herramientas para recopilar datos de fuentes disponibles de forma publica para ser utillizados en un contexto de inteligencia  </p>
 
 <p align="center">
 
@@ -173,7 +173,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 </p>
 
 
-<p> OSINT Framework &nbsp; es un directorio o marco de trabajo que agrupa una amplia variedad de herramientas, recursos y técnicas utilizadas en la disciplina conocida como OSINT (Open Source Intelligence o Inteligencia de Fuentes Abiertas  </p>
+<p> OSINT Framework: &nbsp; es un directorio o marco de trabajo que agrupa una amplia variedad de herramientas, recursos y técnicas utilizadas en la disciplina conocida como OSINT (Open Source Intelligence o Inteligencia de Fuentes Abiertas  </p>
 
 
 <p> Sirve como una guía estructurada y una colección de enlaces hacia herramientas específicas que permiten a los investigadores recopilar y analizar información proveniente de fuentes públicamente accesibles en Internet. Estas fuentes incluyen redes sociales, motores de búsqueda, registros públicos, foros, bases de datos gubernamentales, entre otros.  </p>
@@ -373,7 +373,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 
-<h2> &nbsp;:white_check_mark: &nbsp; Descubrimiento manual - Robots.txt </h2>
+<h2> :white_check_mark: &nbsp; Descubrimiento manual - Robots.txt </h2>
 
 
 <p>El archivo robots.txt es un archivo de texto que se coloca en la raíz de un sitio web para indicar a los rastreadores (como los de Google, Bing u otros bots) qué partes del sitio pueden o no pueden explorar. Estas páginas pueden ser áreas como portales de administración o archivos destinados a los clientes del sitio web </p>
@@ -393,7 +393,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 
-<h2> &nbsp;:white_check_mark: &nbsp; Descubrimiento manual - Sitemap.xml </h2>
+<h2> :white_check_mark: &nbsp; Descubrimiento manual - Sitemap.xml </h2>
 
 <p> El archivo sitemap_index.xml es un mapa del sitio en formato XML que lista las páginas, imágenes, vídeos y otros recursos de un sitio web. Proporciona una lista de todos los archivos que el propietario del sitio web desea que aparezcan en un motor de búsqueda. En ocasiones, estos archivos pueden contener áreas del sitio web más difíciles de navegar o incluso incluir páginas web antiguas que el sitio actual ya no utiliza, pero que siguen funcionando en segundo plano.</p>
 
@@ -411,7 +411,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 </p>
 
 
-<h2> &nbsp;:white_check_mark: &nbsp; Descubrimiento manual - Favicon </h2>
+<h2> :white_check_mark: &nbsp; Descubrimiento manual - Favicon </h2>
 
 
 <p> El favicon es un pequeño ícono que se muestra en la barra de direcciones o en la pestaña del navegador y se utiliza para marcar la marca de un sitio web. </p>
@@ -509,7 +509,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 
-<h2> &nbsp;:white_check_mark: &nbsp; Descubrimiento manual - Encabezados HTTP </h2>
+<h2> :white_check_mark: &nbsp; Descubrimiento manual - Encabezados HTTP </h2>
 
 
 <p> Los encabezados HTTP son el "metadata silencioso" Cada respuesta del servidor contiene información crítica que el desarrollador olvidó ocultar. Estos encabezados a veces pueden contener información útil, como el software del servidor web y posiblemente el lenguaje de programación/scripting utilizado </p>
@@ -538,7 +538,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 <p> Hay recursos externos disponibles que pueden ayudar a descubrir información sobre el sitio web de destino; estos recursos a menudo se denominan OSINT o (Inteligencia de código abierto), ya que son herramientas disponibles gratuitamente que recopilan información: </p>
 
 
-<h2> &nbsp;:white_check_mark: &nbsp; OSINT - Hackeo de Google / Dorking </h2>
+<h2> :white_check_mark: &nbsp; OSINT - Hackeo de Google / Dorking </h2>
 
 
 <p> Google Dorks son consultas de búsqueda avanzadas que utilizan operadores especiales de Google para encontrar información específica o vulnerabilidades en la web. Estas técnicas son comúnmente empleadas en pruebas de penetración, reconocimiento de información y detección de configuraciones incorrectas en sitios web. </p>
@@ -606,7 +606,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 
-<h2> &nbsp;:white_check_mark: &nbsp; OSINT - Perfilar las tecnologias usadas por el sitio WEB </h2>
+<h2> :white_check_mark: &nbsp; OSINT - Perfilar las tecnologias usadas por el sitio WEB </h2>
 
 
 <p> BuiltWith: &nbsp; Es una herramienta en línea que permite analizar cualquier sitio web para descubrir qué tecnologías utiliza: servidores, CMS, frameworks, librerías, herramientas de marketing, comercio electrónico entre otros </p>
@@ -668,7 +668,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 
-<h2> &nbsp;:white_check_mark: &nbsp; OSINT - Wayback Machine </h2>
+<h2> :white_check_mark: &nbsp; OSINT - Wayback Machine </h2>
 
 
 <p> Wayback Machine: La Cápsula del Tiempo para Descubrimiento Web, (archive.org/web) es el archivo histórico más completo de internet con billones de capturas desde 1996. Revela páginas olvidadas, endpoints desindexados, funcionalidades ocultas y vulnerabilidades históricas. </p>
@@ -731,7 +731,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 
-<h2> &nbsp;:white_check_mark: &nbsp; OSINT - GitHub </h2>
+<h2> :white_check_mark: &nbsp; OSINT - GitHub </h2>
 
 <p> Git es un  sistema de control de versiones  que rastrea los cambios en los archivos de un proyecto. Trabajar en equipo es más fácil porque puedes ver lo que cada miembro del equipo está editando y qué cambios hicieron en los archivos. Cuando los usuarios terminan de hacer sus cambios, los confirman con un mensaje y luego los devuelven a una ubicación central (repositorio) para que los otros usuarios luego extraigan esos cambios a sus máquinas locales. GitHub es una versión alojada de Git en Internet. Los repositorios pueden configurarse como públicos o privados y tienen varios controles de acceso. Puedes usar la función de búsqueda de GitHub para buscar nombres de empresas o nombres de sitios web para intentar localizar repositorios que pertenecen a tu objetivo. Una vez descubierto, puedes tener acceso al código fuente, contraseñas u otro contenido que aún no habías encontrado. </p>
 
@@ -740,7 +740,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 
-<h2> &nbsp;:white_check_mark: &nbsp; OSINT - S3 Buckets </h2>
+<h2> :white_check_mark: &nbsp; OSINT - S3 Buckets </h2>
 
 <p> Los buckets S3 son un servicio de almacenamiento proporcionado por Amazon AWS , que permite a las personas guardar archivos e incluso contenido estático de sitios web en la nube accesible a través de HTTP y HTTPS. El propietario de los archivos puede configurar permisos de acceso para que los archivos sean públicos, privados e incluso escribibles. A veces, estos permisos de acceso se configuran incorrectamente y, sin darse cuenta, permiten el acceso a archivos que no deberían estar disponibles para el público. </p>
 
@@ -750,7 +750,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 
-<h2> &nbsp;:white_check_mark: &nbsp; Automated Discovery </h2>
+<h2> :white_check_mark: &nbsp; Automated Discovery </h2>
 
 
 
