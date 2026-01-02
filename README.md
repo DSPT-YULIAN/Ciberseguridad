@@ -43,7 +43,7 @@
 <h2> Metodología </h2>
 
 
-<h3 style="color:blue;"> OSSTMM </h3>
+<h3> OSSTMM  </h3>
 
 <p> El Manual de Metodología de Pruebas de Seguridad de Código Abierto proporciona un marco detallado de estrategias de prueba para sistemas, software, aplicaciones, comunicaciones y el aspecto humano de la ciberseguridad </p>
 <p> La metodología se centra principalmente en cómo se comunican estos sistemas, aplicaciones, por lo que incluye una metodología para:  </p>
@@ -54,23 +54,20 @@
 <p><b> • &nbsp; Comunicaciones inalámbricas</b></p>
 
 
-
-<h3 style="color:blue;"> OWASP </h3>
-
+<h3> OWASP </h3>
 
 <p> El marco del " Proyecto de seguridad de aplicaciones web abiertas " es un marco impulsado por la comunidad y actualizado con frecuencia que se utiliza únicamente para probar la seguridad de las aplicaciones y servicios web. </p>
 <p> La fundación  escribe periódicamente informes  que indican las diez principales vulnerabilidades de seguridad que puede tener una aplicación web, el enfoque de prueba y la solución. </p>
 
 
-
-<h3 style="color:blue;"> NIST </h3>
-
+<h3> NIST </h3>
 
 <p> El Marco de Ciberseguridad del NIST es un marco popular utilizado para mejorar los estándares de ciberseguridad de una organización y gestionar el riesgo de ciberamenazas. Este marco merece una mención honorífica debido a su popularidad y detalle </p>
 <p> El marco proporciona directrices sobre controles de seguridad y parámetros de referencia para el éxito de organizaciones desde infraestructuras críticas (centrales eléctricas, etc.) hasta las comerciales. Incluye una sección limitada sobre directrices estándar para la metodología que debe seguir un evaluador de penetración.</p>
 
 
-<h3 style="color:blue;"> NCSC </h3>
+<h3> NCSC </h3>
+
 
 <p> El Marco de Evaluación Cibernética (CAF) es un marco extenso de catorce principios que se utilizan para evaluar el riesgo de diversas ciberamenazas y las defensas de una organización contra ellas </p>
 <p> El marco se aplica a organizaciones que realizan servicios y actividades de vital importancia, como infraestructuras críticas, banca, etc. Se centra principalmente en los siguientes temas y los evalúa:  </p>
@@ -120,13 +117,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 
 
-<!--h1 without bottom border-->
-<div id="user-content-toc">
-  <ul align="left">
-    <summary><h1 style="display: inline-block">Fase 1. Recomncimiento pasivo y activo</h1></summary>
-  </ul>
-</div>
-
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&width=435&lines=Fase+1.+Reconocimiento" alt="Typing SVG" /></a>
 
 
 
@@ -137,6 +128,10 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 
 <!-------------------------------------- ## FASE 1 Reconocimiento pasivo --------------------------------------------->
+
+
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Reconocimiento pasivo (No hay interacción directa con el objetivo) </h2>
