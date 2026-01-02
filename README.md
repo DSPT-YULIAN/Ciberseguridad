@@ -40,10 +40,10 @@
 
 
 
-<h3> Metodología </h3>
+<h2> Metodología </h2>
 
 
-<h4> OSSTMM   </h4>
+<h3 style="color:blue;"> OSSTMM </h3>
 
 <p> El Manual de Metodología de Pruebas de Seguridad de Código Abierto proporciona un marco detallado de estrategias de prueba para sistemas, software, aplicaciones, comunicaciones y el aspecto humano de la ciberseguridad </p>
 <p> La metodología se centra principalmente en cómo se comunican estos sistemas, aplicaciones, por lo que incluye una metodología para:  </p>
@@ -54,20 +54,23 @@
 <p><b> • &nbsp; Comunicaciones inalámbricas</b></p>
 
 
-<h4> OWASP </h4>
+
+<h3 style="color:blue;"> OWASP </h3>
+
 
 <p> El marco del " Proyecto de seguridad de aplicaciones web abiertas " es un marco impulsado por la comunidad y actualizado con frecuencia que se utiliza únicamente para probar la seguridad de las aplicaciones y servicios web. </p>
 <p> La fundación  escribe periódicamente informes  que indican las diez principales vulnerabilidades de seguridad que puede tener una aplicación web, el enfoque de prueba y la solución. </p>
 
 
-<h4> NIST </h4>
+
+<h3 style="color:blue;"> NIST </h3>
+
 
 <p> El Marco de Ciberseguridad del NIST es un marco popular utilizado para mejorar los estándares de ciberseguridad de una organización y gestionar el riesgo de ciberamenazas. Este marco merece una mención honorífica debido a su popularidad y detalle </p>
 <p> El marco proporciona directrices sobre controles de seguridad y parámetros de referencia para el éxito de organizaciones desde infraestructuras críticas (centrales eléctricas, etc.) hasta las comerciales. Incluye una sección limitada sobre directrices estándar para la metodología que debe seguir un evaluador de penetración.</p>
 
 
-<h4> NCSC </h4>
-
+<h3 style="color:blue;"> NCSC </h3>
 
 <p> El Marco de Evaluación Cibernética (CAF) es un marco extenso de catorce principios que se utilizan para evaluar el riesgo de diversas ciberamenazas y las defensas de una organización contra ellas </p>
 <p> El marco se aplica a organizaciones que realizan servicios y actividades de vital importancia, como infraestructuras críticas, banca, etc. Se centra principalmente en los siguientes temas y los evalúa:  </p>
