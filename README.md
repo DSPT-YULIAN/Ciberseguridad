@@ -15,10 +15,6 @@
 </div>
 
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&pause=1000&color=DA0000&width=700&height=90&lines=PRUEBAS+DE+PENETRACI%C3%93N" alt="Typing SVG" /></a>
-
-
-
 <!-------------------------------------- ## FASE 0 Preparacion--------------------------------------------->
 
 
@@ -129,7 +125,12 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 </br>
 
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=33&pause=1000&width=435&lines=Fase+1.+Reconocimiento" alt="Typing SVG" /></a>
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=33&pause=1000&width=435&lines=Fase+1.+Reconocimiento" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
 
 
 
