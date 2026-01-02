@@ -117,7 +117,15 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&width=435&lines=Fase+1.+Reconocimiento" alt="Typing SVG" /></a>
+<!-------------------------------------- ## FASE 1 Reconocimiento --------------------------------------------->
+
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+</br>
+
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=33&pause=1000&width=435&lines=Fase+1.+Reconocimiento" alt="Typing SVG" /></a>
 
 
 
@@ -130,8 +138,6 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 <!-------------------------------------- ## FASE 1 Reconocimiento pasivo --------------------------------------------->
 
 
-<!--horizontal divider(gradiant)-->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Reconocimiento pasivo (No hay interacción directa con el objetivo) </h2>
