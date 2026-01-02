@@ -10,9 +10,13 @@
 <!--h1 without bottom border-->
 <div id="user-content-toc">
   <ul align="center">
-    <summary><h1 style="display: inline-block">PENETRATION TESTS</h1></summary>
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&pause=1000&color=FF0000&width=700&height=90&lines=PRUEBAS+DE+PENETRACI%C3%93N" alt="Typing SVG" /></a></summary>
   </ul>
 </div>
+
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&pause=1000&color=DA0000&width=700&height=90&lines=PRUEBAS+DE+PENETRACI%C3%93N" alt="Typing SVG" /></a>
+
 
 
 <!-------------------------------------- ## FASE 0 Preparacion--------------------------------------------->
