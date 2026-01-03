@@ -17,7 +17,7 @@
 
 <!-------------------------------------- ## FASE 0 Preparacion--------------------------------------------->
 
-
+<h2> :arrow_right: Alcance </h2>
 
 <p> Antes de comenzar una prueba de penetración, se lleva a cabo una conversación formal entre el evaluador y el propietario del sistema. Se acuerdan las diversas herramientas, técnicas y sistemas que se probarán. Esta conversación constituye el alcance del acuerdo de prueba de penetración y determinará el desarrollo de la prueba. </p>
 
@@ -40,10 +40,10 @@
 
 
 
-<h2> Metodología </h2>
+<h2> :arrow_right:&nbsp; Metodología </h2>
 
 
-<h3> OSSTMM  </h3>
+<h3> :white_check_mark: &nbsp; OSSTMM  </h3>
 
 <p> El Manual de Metodología de Pruebas de Seguridad de Código Abierto proporciona un marco detallado de estrategias de prueba para sistemas, software, aplicaciones, comunicaciones y el aspecto humano de la ciberseguridad </p>
 <p> La metodología se centra principalmente en cómo se comunican estos sistemas, aplicaciones, por lo que incluye una metodología para:  </p>
@@ -54,19 +54,19 @@
 <p><b> • &nbsp; Comunicaciones inalámbricas</b></p>
 
 
-<h3> OWASP </h3>
+<h3> :white_check_mark: &nbsp; OWASP </h3>
 
 <p> El marco del " Proyecto de seguridad de aplicaciones web abiertas " es un marco impulsado por la comunidad y actualizado con frecuencia que se utiliza únicamente para probar la seguridad de las aplicaciones y servicios web. </p>
 <p> La fundación  escribe periódicamente informes  que indican las diez principales vulnerabilidades de seguridad que puede tener una aplicación web, el enfoque de prueba y la solución. </p>
 
 
-<h3> NIST </h3>
+<h3> :white_check_mark: &nbsp; NIST </h3>
 
 <p> El Marco de Ciberseguridad del NIST es un marco popular utilizado para mejorar los estándares de ciberseguridad de una organización y gestionar el riesgo de ciberamenazas. Este marco merece una mención honorífica debido a su popularidad y detalle </p>
 <p> El marco proporciona directrices sobre controles de seguridad y parámetros de referencia para el éxito de organizaciones desde infraestructuras críticas (centrales eléctricas, etc.) hasta las comerciales. Incluye una sección limitada sobre directrices estándar para la metodología que debe seguir un evaluador de penetración.</p>
 
 
-<h3> NCSC </h3>
+<h3> :white_check_mark: &nbsp; NCSC </h3>
 
 
 <p> El Marco de Evaluación Cibernética (CAF) es un marco extenso de catorce principios que se utilizan para evaluar el riesgo de diversas ciberamenazas y las defensas de una organización contra ellas </p>
@@ -81,7 +81,7 @@
 <p><b> • &nbsp; Planificación de respuesta y recuperación </b></p>
 
 
-<h3> Tipos de pruebas de penetracion </h3>
+<h2> :arrow_right: Tipos de pruebas de penetracion </h2>
 
 
 <p align="center">
@@ -91,7 +91,7 @@
 </p>
 
 
-<h4> Pruebas de caja negra </h4>
+<h3> :white_check_mark: &nbsp; Pruebas de caja negra </h3>
 
 
 <p> Este proceso de prueba es un proceso de alto nivel en el que el evaluador no recibe ninguna información sobre el funcionamiento interno de la aplicación o el servicio
@@ -101,14 +101,14 @@ El tester actúa como un usuario normal que prueba la funcionalidad y la interac
 Las pruebas de caja negra aumentan significativamente la cantidad de tiempo dedicado durante la fase de recopilación y enumeración de información para comprender la superficie de ataque del objetivo. </p>
 
 
-<h4> Pruebas de caja gris </h4>
+<h3> :white_check_mark: &nbsp; Pruebas de caja gris </h3>
 
 <p> Este proceso de prueba es el más popular para cosas como las pruebas de penetración. Es una combinación de procesos de prueba de caja negra y de caja blanca. El evaluador tendrá un conocimiento limitado de los componentes internos de la aplicación o del software. Aun así, interactuará con la aplicación como si fuera un escenario de caja negra y luego usará su conocimiento de la aplicación para intentar resolver los problemas a medida que los encuentre
 
 Con las pruebas de caja gris, el conocimiento limitado proporcionado ahorra tiempo y, a menudo, se elige para superficies de ataque extremadamente bien endurecidas. </p>
 
 
-<h4> Pruebas de caja Blanca </h4>
+<h3> :white_check_mark: &nbsp; Pruebas de caja Blanca </h3>
 
 
 <p> Este proceso de prueba es un proceso de bajo nivel que generalmente realiza un desarrollador de software con conocimientos de programación y lógica de aplicaciones. El evaluador probará los componentes internos de la aplicación o del software y, por ejemplo, se asegurará de que funciones específicas funcionen correctamente y en un tiempo razonable
@@ -127,7 +127,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 <div id="user-content-toc">
   <ul align="center">
-    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=33&pause=1000&width=435&lines=Fase+1.+Reconocimiento" alt="Typing SVG" /></a></summary>
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=42&pause=1000&color=F70000&width=600&height=85&lines=Fase+1.+Reconocimiento" alt="Typing SVG" /></a></summary>
   </ul>
 </div>
 
@@ -171,7 +171,6 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
   <img src="https://i.postimg.cc/2yHRhJ54/categorias-osint.jpg" alt="Descripción de la imagen">
 </p>
 
-</br>
 
 <p> OSINT:&nbsp; Conjunto de tecnicas y herramientas para recopilar datos de fuentes disponibles de forma publica para ser utillizados en un contexto de inteligencia  </p>
 
@@ -199,6 +198,9 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 
 <!----------------------------------------------------------------------------- Codigo fuente de una aplicacion ----------------------------------------------------------------------------->
+
+
+<h1> Playbook de pentesting </h1>
 
 
 <h2> :arrow_right: Caminando una aplicación </h2>
@@ -933,7 +935,7 @@ nombres de dominio. </p>
 
 
 
-<h2> :white_check_mark: &nbsp; OSINT - Certificados SSL/TLS </h2>
+<h3> :white_check_mark: &nbsp; OSINT - Certificados SSL/TLS </h3>
 
 
 <p> Los Certificados SSL/TLS son archivos digitales que autentican la identidad de un sitio web y cifran la comunicación entre el navegador y el servidor usando protocolos de seguridad (SSL = Secure Sockets Layer, TLS = Transport Layer Security).</p>
@@ -1003,7 +1005,7 @@ nombres de dominio. </p>
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/YCVp31dn/32.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/QxjcF4q5/68.png" alt="Descripción de la imagen">
 
 </p>
 
@@ -1018,7 +1020,7 @@ nombres de dominio. </p>
 
 
 
-<h2> Identificar la direccion IP del sitio web o del servidor que aloja el sitio web </h2>
+<h3> 1. &nbsp;Identificar la direccion IP del sitio web o del servidor que aloja el sitio web </h3>
 
 
 
@@ -1033,7 +1035,7 @@ nombres de dominio. </p>
 
 
 
-<h3>  4. &nbsp; Descargar el sitio WEB. Para analizar el codigo fuente </h3>
+<h3>  2. &nbsp; Descargar el sitio WEB. Para analizar el codigo fuente </h3>
 
 
 <p> Es una técnica común en las pruebas de penetración (pentesting) durante la fase de reconocimiento y posterior análisis. Esta técnica implica obtener una copia local de los archivos que componen el sitio web objetivo. Al tener una copia local, el pentester puede inspeccionar minuciosamente el código fuente del lado del cliente y del servidor (si se obtiene) sin necesidad de interactuar constantemente con el servidor remoto, lo cual es más silencioso y eficiente para ciertos análisis.</p>
@@ -1277,15 +1279,9 @@ nombres de dominio. </p>
 </p>
 
 
+<p><b> :arrow_right:  • Informes disponibles públicamente: &nbsp;</b> Análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b>
 
-
-
-<h2> Otros metodos de reconocimiento pasivo </h2>
-
-	
-<p><b> • Informes disponibles públicamente: &nbsp;</b> Análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b>
-
-<p><b> • Redes sociales: &nbsp;</b> Recopilación de información de plataformas de redes sociales.</p>
+<p><b> :arrow_right:  • Redes sociales: &nbsp;</b> Recopilación de información de plataformas de redes sociales.</p>
 
 </br>
 
