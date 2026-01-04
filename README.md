@@ -29,7 +29,7 @@
 
 
 
-<h3>  Etapas </h3>
+<h2> :arrow_right: Etapas </h2>
 
 
 <p align="center">
@@ -200,7 +200,15 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 <!----------------------------------------------------------------------------- Codigo fuente de una aplicacion ----------------------------------------------------------------------------->
 
 
-<h1> Playbook de pentesting </h1>
+<!--h1 without bottom border-->
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h1 style="display: inline-block">Playbook de pentesting </h1></summary>
+  </ul>
+</div>
+
+
+</br>
 
 
 <h2> :arrow_right: Caminando una aplicación </h2>
@@ -1309,6 +1317,12 @@ nombres de dominio. </p>
 
 </br>
 
+
+<p> El descubrimiento activo (active discovery) es una fase clave en las pruebas de penetración (pentesting) y evaluaciones de seguridad, donde se envían paquetes o solicitudes reales a los sistemas objetivo para mapear y recopilar información sobre la red, hosts, servicios y vulnerabilidades. </p>
+
+
+<p> :white_check_mark: Técnicas comunes: </p>
+
 <p><b> • &nbsp; Descubrimiento de puertos abiertos </b>  </p>
 <p><b> • &nbsp; Conocer la infraestructura interna de una red u organización </b></p>
 <p><b> • &nbsp; Enumeracion de la informacion del sistema objetivo </b></p>
@@ -1323,7 +1337,9 @@ nombres de dominio. </p>
 
 </br>
 
-### &nbsp; Metodos
+
+<h2> :white_check_mark: Metodos </h2>
+
 
 </br>
 
@@ -1347,29 +1363,136 @@ nombres de dominio. </p>
 </br>
 
 
-### 🛠 &nbsp;Herramientas
-
-</br>
-
-<p><b> • Escáneres de puertos :</b> &nbsp; Nmap, Rustscan, Unicornscan, Masscan, Kiterunner</p>
-<p><b> • Descubrimiento de red :</b> &nbsp;Netdiscover, SSB, SNMPwalk, ldapsearch, BloodHound</p>
-<p><b> • Descubrimiento de dominios:</b> &nbsp; Dnsenum</p>
+<!----------------------------------------------------------------------------- Reconocimiento activo de DNS ----------------------------------------------------------------------------->
 
 
-</br>
-
-### 🛠 &nbsp;Herramientas recomendadas
-
-</br>
-
-### 🛠 &nbsp;Nmap
-
-<p> Es una herramienta esencial en pruebas de penetración para el descubrimiento de hosts y servicios en una red. </p>
+<h2> :arrow_right: Transferencias de zona DNS </h2>
 
 
-<p>Reconocimiento Activo con NMAP</p>
+<p> Una transferencia de zona DNS es un mecanismo del protocolo DNS (AXFR - Authoritative Zone Transfer o IXFR - Incremental) donde un servidor DNS secundario solicita y recibe una copia completa de la zona DNS (archivo maestro) desde el servidor primario. Contiene todos los registros DNS (A, MX, CNAME, TXT, etc.) de un dominio.</p>
 
-<p>Descubrir información básica sobre los sistemas objetivo, como hosts vivos, puertos abiertos y servicios, sin profundizar en detalles específicos.</p>
+
+<p> ¡Una sola transferencia puede revelar 80% de tu ataque vectorizado! Ejecuta primero, analiza después.</p>
+
+<p> Nota: Si se deja mal configurado y sin seguridad, los atacantes pueden abusar de ellos pra copiar el archivo de zona del DNS principal de un servidor a otro servidor esto proporcionara una vision holistica de la red de una organizacion</p>
+
+
+
+Registros DNS
+
+<p> + A - &nbsp; Resuelve un nombre de host o dominio a una dirección IPv4.</p>
+<p> + AAAA - &nbsp; Resuelve un nombre de host o dominio en una dirección IPV6.</p>
+<p> + NS - &nbsp; Referencia al servidor de nombres del dominio.</p>
+<p> + MX - &nbsp; Resuelve un dominio a un servidor de correo.</p>
+<p> + CNAME - &nbsp; Usado para alias de dominio.</p>
+<p> + TXT - &nbsp; Texto record.</p>
+<p> + HINFO - &nbsp; Información del anfitrión.</p>
+<p> + SOA - &nbsp; Autoridad de dominio.</p>
+<p> + SRV - &nbsp; Registros de servicio.</p>
+<p> + PTR -&nbsp;  Resuelve una dirección IP a un nombre de host</p>
+
+
+<p> Procedimiento </p>
+
+
+
+<h2> :white_check_mark: dnsenum </h2>
+
+
+<p> Es una herramienta Perl de enumeración DNS diseñada específicamente para reconocimiento agresivo en pruebas de penetración. Automatiza múltiples técnicas de enumeración DNS para mapear completamente la infraestructura de un dominio. </p>
+
+
+<p> Obtiene el máximo de información DNS (subdominios, hosts, IPs) en un solo comando, combinando:
+
+Zone transfers (AXFR)
+Enumeración por diccionario
+Reverse lookups
+Brute force de subdominios
+Permutaciones wordlist </p>
+
+
+<p> Ejemplo </p>
+
+
+
+<p> 1. &nbsp; Direccion IP de host "A".</p>
+<p> 2. &nbsp; Servidores de nombres con sus respectivas direcciones IP </p>
+<p> 3. &nbsp; Servidores de correo.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/BnJTpnFy/69.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 4. &nbsp; Transferencia de zona</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pd6KPQSN/70.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZnrNPG5J/71.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> DNS Brute Force es una técnica donde generas miles de subdominios posibles (admin.domain.com, db.domain.com) y consultas DNS para encontrar los que existen realmente.
+
+Por qué funciona
+80% de subdominios siguen patrones predecibles
+Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
+¡Revela infraestructura interna sin tocar hosts! </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RZPHTQ40/72.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7ZVZ1x1K/73.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :white_check_mark: DIG </h2>
+
+
+<p> dig (Domain Information Groper) es la herramienta definitiva de consulta DNS para pentesters. Es rápida, flexible y verbose, perfecta para enumeración DNS agresiva y reconocimiento sigiloso.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/P5pT2xVv/74.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<!----------------------------------------------------------------------------- Reconocimiento activo de servicios con NMAP ----------------------------------------------------------------------------->
+
+
+<h2> :arrow_right: Reconocimiento Activo con NMAP </h2>
+
+
+
+<p> Nmap: Es una herramienta esencial en pruebas de penetración para el descubrimiento de hosts y servicios en una red. </p>
+
+
+<p>Permite descubrir información básica sobre los sistemas objetivo, como hosts vivos, puertos abiertos y servicios, sin profundizar en detalles específicos.</p>
 
 
 <p><b> • Descubrimiento de hosts en una red :&nbsp; Detecta hosts vivos (sin escanear puertos).</b></p> 
@@ -1478,6 +1601,55 @@ nombres de dominio. </p>
 
  <img src="https://i.postimg.cc/bw28d4wH/5-10.png" alt="Descripción de la imagen">
 </p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+<p><b> • Escáneres de puertos :</b> &nbsp; Nmap, Rustscan, Unicornscan, Masscan, Kiterunner</p>
+<p><b> • Descubrimiento de red :</b> &nbsp;Netdiscover, SSB, SNMPwalk, ldapsearch, BloodHound</p>
+<p><b> • Descubrimiento de dominios:</b> &nbsp; Dnsenum</p>
 
 
 <!---------------------------------------------------------------------------------------------------------------------- ## FASE 2 ------------------------------------------------------------------------------------------------------------------------------------------------->
