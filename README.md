@@ -766,25 +766,6 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 
-<h2> :white_check_mark: &nbsp; Automated Discovery </h2>
-
-
-
-<p> El descubrimiento automatizado consiste en usar herramientas para descubrir contenido en lugar de hacerlo manualmente. Este proceso está automatizado, ya que suele contener cientos, miles o incluso millones de solicitudes a un servidor web. Estas solicitudes comprueban si un archivo o directorio existe en un sitio web, lo que nos da acceso a recursos que desconocíamos. Este proceso es posible gracias a un recurso llamado listas de palabras. </p>
-
-<p> Las listas de palabras son simplemente archivos de texto que contienen una larga lista de palabras de uso común; pueden abarcar diversos casos de uso. Por ejemplo, una lista de contraseñas incluiría las más utilizadas, mientras que en nuestro caso buscamos contenido, por lo que necesitaríamos una lista con los nombres de directorios y archivos más comunes. </p>
-
-<p> Las listas de palabras son simplemente archivos de texto que contienen una larga lista de palabras de uso común; pueden abarcar diversos casos de uso. Por ejemplo, una lista de contraseñas incluiría las más utilizadas, mientras que en nuestro caso buscamos contenido, por lo que necesitaríamos una lista con los nombres de directorios y archivos más comunes. </p>
-
-
-
-<h3> 🛠 &nbsp; Herramientas de automatización </h3>
-
-
-<h3> 🛠 &nbsp; ffuf: </h3>
-<h3> 🛠 &nbsp; dirb: </h3>
-<h3> 🛠 &nbsp; Gobuster: </h3>
-
 
 
 <!----------------------------------------------------------------------------- Reconocimiento de Dominios ----------------------------------------------------------------------------->
@@ -952,7 +933,7 @@ nombres de dominio. </p>
 
 
 
-<h2>  &nbsp;  crt.sh - La Mina de Oro de Subdominios "https://crt.sh/" </h2>
+<h4>  &nbsp;  crt.sh - La Mina de Oro de Subdominios "https://crt.sh/" </h4>
 
 <p> crt.sh es un motor de búsqueda público que indexa TODOS los certificados SSL/TLS emitidos por Certificadoras Públicas (CAs) desde 2013. Contiene +1 billón de certificados y es 100% pasivo.</p>
 
@@ -1304,7 +1285,7 @@ nombres de dominio. </p>
 <p><b> • Rastreador web</b> &nbsp; Netcraft, Whois </p>
 <p><b> • Comandos</b> &nbsp; Nslookup, hping </p>
 
-
+</br>
 
 <!-------------------------------------- ## FASE 1 Reconocimiento Activo --------------------------------------------->
 
@@ -1312,7 +1293,7 @@ nombres de dominio. </p>
 </br>
 
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Recomocimiento activo (Implica interacción directa con el objetivo) </h2>
+<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Reconocimiento activo (Implica interacción directa con el objetivo) </h2>
 
 
 </br>
@@ -1392,9 +1373,11 @@ Registros DNS
 <p> + PTR -&nbsp;  Resuelve una dirección IP a un nombre de host</p>
 
 
-<p> Procedimiento </p>
 
 
+<h2> Procedimiento </h2>
+
+</br>
 
 <h2> :white_check_mark: dnsenum </h2>
 
@@ -1482,6 +1465,133 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p>
 
 
+
+<!----------------------------------------------------------------------------- Automated Discovery  ----------------------------------------------------------------------------->
+
+
+<h2> :white_check_mark: &nbsp; Automated Discovery </h2>
+
+
+
+<p> El descubrimiento automatizado consiste en usar herramientas para descubrir contenido en lugar de hacerlo manualmente. Este proceso está automatizado, ya que suele contener cientos, miles o incluso millones de solicitudes a un servidor web. Estas solicitudes comprueban si un archivo o directorio existe en un sitio web, lo que nos da acceso a recursos que desconocíamos. Este proceso es posible gracias a un recurso llamado listas de palabras. </p>
+
+<p> Las listas de palabras son simplemente archivos de texto que contienen una larga lista de palabras de uso común; pueden abarcar diversos casos de uso. Por ejemplo, una lista de contraseñas incluiría las más utilizadas, mientras que en nuestro caso buscamos contenido, por lo que necesitaríamos una lista con los nombres de directorios y archivos más comunes. </p>
+
+<p> Las listas de palabras son simplemente archivos de texto que contienen una larga lista de palabras de uso común; pueden abarcar diversos casos de uso. Por ejemplo, una lista de contraseñas incluiría las más utilizadas, mientras que en nuestro caso buscamos contenido, por lo que necesitaríamos una lista con los nombres de directorios y archivos más comunes. </p>
+
+
+
+<h3> Herramientas de automatización </h3>
+
+
+<h2> 🛠 &nbsp; ffuf: </h2>
+
+
+<p> ffuf (Fuzz Faster U Fool) es una herramienta de fuzzing "técnica de prueba de seguridad que consiste en enviar datos aleatorios, manipulados o maliciosos a una aplicación o sistema con el objetivo de descubrir vulnerabilidades. " de código abierto extremadamente rápida y eficiente, escrita en Go, diseñada para pruebas de penetración web. Se utiliza principalmente para descubrir recursos ocultos, directorios, archivos, parámetros y endpoints en aplicaciones web mediante ataques de fuerza bruta inteligentes. </p>
+
+
+<p> Flags esenciales</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RhVj2F6C/75.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h3> Descubrimiento de directorios y archivos </h3>
+
+
+<p> Prueba 1 Metasploitable  </p>
+
+<p> Con la opcon -c le da color a los diferenentes codigos de respuesta de HTTP </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3RyLGvvd/76.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Respuestas informativas (100–199),
+Respuestas satisfactorias (200–299),
+Redirecciones (300–399),
+Errores de los clientes (400–499),
+Errores de los servidores (500–599). </p>
+
+
+<p> Prueba 2  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HxRT0Xvh/77.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h3> Descubrimiento de archivos con extensiones </h3>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/2SJ5zpr3/78.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h3> Resultado de las coincidencias con el status del codigo HTTP</h3>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/BvK23B9L/79.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h3> Modo silencioso / solo resultados</h3>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZR971M4F/80.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+
+
+<h3> 🛠 &nbsp; dirb: </h3>
+<h3> 🛠 &nbsp; Gobuster: </h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------- Reconocimiento activo de servicios con NMAP ----------------------------------------------------------------------------->
 
 
@@ -1489,13 +1599,10 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<p> Nmap: Es una herramienta esencial en pruebas de penetración para el descubrimiento de hosts y servicios en una red. </p>
+<p> Nmap: Es una herramienta esencial en pruebas de penetración para el descubrimiento de hosts y servicios en una red. Permite descubrir información básica sobre los sistemas objetivo, como hosts vivos, puertos abiertos y servicios, sin profundizar en detalles específicos.</p>
 
 
-<p>Permite descubrir información básica sobre los sistemas objetivo, como hosts vivos, puertos abiertos y servicios, sin profundizar en detalles específicos.</p>
-
-
-<p><b> • Descubrimiento de hosts en una red :&nbsp; Detecta hosts vivos (sin escanear puertos).</b></p> 
+<p><b> :white_check_mark: • Descubrimiento de hosts: &nbsp; Detecta hosts vivos en la red (sin escanear puertos).</b></p> 
 
 <p> El escaneo de deteccion de host (-sn) es enviar un paquete de solicitud de eco ICMP al destino, un TCP SYN al puerto 443, un TCP ACK al puerto 80 y una solicitud de marca de tiempo ICMP. Si el objetivo responde al eco de ICMP o a los paquetes mencionados anteriormente, se considera activo. un escaneo de este tipo para la detección de host de una subred completa a veces se denomina barrido de ping.</p> 
 
@@ -1515,7 +1622,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p>
 
 
-<p><b> •Escaneo de puertos abiertos :&nbsp; El escaneo (-sS) usa un escaneo SYN para identificar puertos abiertos de manera sigilosa. Sin completar la conexión TCP </b></p> 
+<p><b> :white_check_mark: • Escaneo de puertos abiertos :&nbsp; El escaneo (-sS) usa un escaneo SYN para identificar puertos abiertos de manera sigilosa. Sin completar la conexión TCP </b></p> 
 
 </br>
 
@@ -1533,7 +1640,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<p><b> Detección de sistemas operativos (-O) y servicios básicos (-sV) :&nbsp; Determina el sistema operativo y las versiones de servicios sin explotar vulnerabilidades. </b></p> 
+<p><b> :white_check_mark: • Detección de sistemas operativos (-O) y servicios básicos (-sV) :&nbsp; Determina el sistema operativo y las versiones de servicios sin explotar vulnerabilidades. </b></p> 
 
 </br>
 
@@ -1543,7 +1650,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p>
 
 
-<p><b> Evadir firewalls/IDS :&nbsp; Fragmentación de paquetes y timing lento y reducir la probabilidad de ser detectado.
+<p><b> :white_check_mark: • Evasion de firewalls/IDS :&nbsp; Fragmentación de paquetes y timing lento y reducir la probabilidad de ser detectado.
 
 
 <p> •T0 (Paranoico) :&nbsp; muy lento, se usa para la evasión de IDS </p> 
@@ -1560,7 +1667,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p>
 
 
-<p><b> Escaneo de conexión TCP (-sT) :&nbsp; Utiliza el mecanismo de red del sistema operativo subyacente para establecer una conexión TCP completa con el dispositivo de destino que se está escaneando. Dado que crea una conexión completa, crea más tráfico (y, por lo tanto, tarda más en ejecutarse).</b></p> 
+<p><b> :white_check_mark: • Escaneo de conexión TCP (-sT) :&nbsp; Utiliza el mecanismo de red del sistema operativo subyacente para establecer una conexión TCP completa con el dispositivo de destino que se está escaneando. Dado que crea una conexión completa, crea más tráfico (y, por lo tanto, tarda más en ejecutarse).</b></p> 
 
 </br>
 
@@ -1569,7 +1676,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
   <img src="https://i.postimg.cc/Hs8YqGH1/5-6.png" alt="Descripción de la imagen">
 </p></p>
 
-<p><b> Escaneo UDP (-sU) :&nbsp; si se intenta enumerar un servidor DNS, SNMP o DHCP. Todos estos servicios utilizan UDP para la comunicación entre el cliente y el servidor. Para escanear puertos UDP, Nmap envía un paquete UDP a todos los puertos especificados en la configuración de la línea de comandos. Espera la respuesta del destino. Si recibe un mensaje ICMP de puerto inaccesible, ese puerto se marca como cerrado. Si no se recibe respuesta del puerto UDP de destino, Nmap lo marca como abierto/filtrado</b></p> 
+<p><b> :white_check_mark: • Escaneo UDP (-sU) :&nbsp; si se intenta enumerar un servidor DNS, SNMP o DHCP. Todos estos servicios utilizan UDP para la comunicación entre el cliente y el servidor. Para escanear puertos UDP, Nmap envía un paquete UDP a todos los puertos especificados en la configuración de la línea de comandos. Espera la respuesta del destino. Si recibe un mensaje ICMP de puerto inaccesible, ese puerto se marca como cerrado. Si no se recibe respuesta del puerto UDP de destino, Nmap lo marca como abierto/filtrado</b></p> 
 
 <p>NOTA:&nbsp; Tenga en cuenta que los mensajes ICMP inaccesibles a veces pueden tener una velocidad limitada y, en ese caso, un escaneo de puerto UDP puede tardar mucho más. La limitación de velocidad ICMP se utiliza principalmente para limitar el comportamiento de gusanos o virus y normalmente debe configurarse para permitir que entre el 1 % y el 5 % del ancho de banda entrante disponible (a velocidades de 10 Mbps o 100 Mbps) o entre 100 kbps y 10 000 kbps (a velocidades de 1 Gbps o 10 Gbps) se utilice para el tráfico ICMP.</p>
 
@@ -1588,7 +1695,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p></p>
 
 
-<p><b> Escaneo TCP FIN (-sF) :&nbsp; En ocasiones, un filtro de red o un firewall puede detectar un escaneo SYN. En tales casos, es necesario emplear un tipo de paquete diferente en un escaneo de puertos. Con el escaneo TCP FIN, se envía un paquete FIN a un puerto de destino. Si el puerto está cerrado, el sistema de destino devuelve un paquete RST. Si no se recibe nada del puerto de destino, se puede considerar abierto, ya que el comportamiento normal sería ignorar el paquete FIN.</b></p> 
+<p><b> :white_check_mark: • Escaneo TCP FIN (-sF) :&nbsp; En ocasiones, un filtro de red o un firewall puede detectar un escaneo SYN. En tales casos, es necesario emplear un tipo de paquete diferente en un escaneo de puertos. Con el escaneo TCP FIN, se envía un paquete FIN a un puerto de destino. Si el puerto está cerrado, el sistema de destino devuelve un paquete RST. Si no se recibe nada del puerto de destino, se puede considerar abierto, ya que el comportamiento normal sería ignorar el paquete FIN.</b></p> 
 
 <p>NOTA:&nbsp; Un escaneo TCP FIN no es útil cuando se escanean sistemas basados en Windows, ya que responden con paquetes RST, independientemente del estado del puerto.</p>
 
@@ -1606,6 +1713,8 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
+
+------------------------------------ Nmap -SC ------------------------------
 
 
 
