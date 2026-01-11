@@ -984,7 +984,7 @@ nombres de dominio. </p>
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/YCVp31dn/32.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/59nBhgTP/32.png" alt="Descripción de la imagen">
 
 </p>
 
@@ -1469,7 +1469,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <!----------------------------------------------------------------------------- Automated Discovery  ----------------------------------------------------------------------------->
 
 
-<h2> :white_check_mark: &nbsp; Automated Discovery </h2>
+<h2> :arrow_right: &nbsp; Automated Discovery </h2>
 
 
 
@@ -1484,7 +1484,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <h3> Herramientas de automatización </h3>
 
 
-<h2> 🛠 &nbsp; ffuf: </h2>
+<h2> :white_check_mark: &nbsp; ffuf: </h2>
 
 
 <p> ffuf (Fuzz Faster U Fool) es una herramienta de fuzzing "técnica de prueba de seguridad que consiste en enviar datos aleatorios, manipulados o maliciosos a una aplicación o sistema con el objetivo de descubrir vulnerabilidades. " de código abierto extremadamente rápida y eficiente, escrita en Go, diseñada para pruebas de penetración web. Se utiliza principalmente para descubrir recursos ocultos, directorios, archivos, parámetros y endpoints en aplicaciones web mediante ataques de fuerza bruta inteligentes. </p>
@@ -1515,11 +1515,11 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p>
 
 
-<p> Respuestas informativas (100–199),
-Respuestas satisfactorias (200–299),
-Redirecciones (300–399),
-Errores de los clientes (400–499),
-Errores de los servidores (500–599). </p>
+<p> • Respuestas informativas (100–199) </p>
+<p> • Respuestas satisfactorias (200–299) </p>
+<p> • Redirecciones (300–399)             </p>
+<p> • Errores de los clientes (400–499)  </p>          
+<p> • Errores de los servidores (500–599) </p>
 
 
 <p> Prueba 2  </p>
@@ -1543,7 +1543,7 @@ Errores de los servidores (500–599). </p>
 </p>
 
 
-<h3> Resultado de las coincidencias con el status del codigo HTTP</h3>
+<h3> Resultado de las coincidencias de las extensiones con el status del codigo HTTP</h3>
 
 
 <p align="center">
@@ -1564,12 +1564,118 @@ Errores de los servidores (500–599). </p>
 
 
 
+<h2> :white_check_mark: &nbsp; dirb: </h2>
+
+
+<p> DIRB (Directory Buster) es una herramienta de código abierto para fuerza bruta de directorios y archivos en servidores web. Fue desarrollada por The Dark Raver y es ampliamente utilizada en pruebas de penetración y auditorías de seguridad web. </p>
+
+
+<p> Uso principal </p>
+
+
+<p> • Directorios ocultos (/admin/, /backup/, etc.) </p>
+<p> • Archivos sensibles (config.php, .bak, .old, etc.) </p>
+<p> • Páginas de respaldo y recursos no enlazados </p>
+<p> • Ficheros de configuración expuestos  </p>          
+<p> • APIs ocultas y endpoints no documentados </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7LFk7yLk/81.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>  Dirb encontró varias rutas en el servidor que responden con diferentes códigos HTTP, cuando no especificas un diccionario, Dirb usa por defecto /usr/share/dirb/wordlists/common.txt</p>
+
+
+<p>  Podemos obseervar subdirectorios dentro de las rutas (wp-admin - wp-content - wp-includes)</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wvKBzGnQ/82.png" alt="Descripción de la imagen">
+
+</p>
+
+<p>  Dirb detecta que algunos directorios son listables (se puede ver su contenido en el navegador), por lo que no los escanea automáticamente a menos que se use la opción -w </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/X7NYnF1D/83.png" alt="Descripción de la imagen">
+
+</p>
+
+<p>  Este escaneo revela que el servidor corre WordPress y tiene múltiples rutas expuestas, algunas potencialmente sensibles como: </p>
+
+<p> • xmlrpc.php: &nbsp; puede ser explotado para ataques de fuerza bruta. </p>
+<p> • wp-content/plugins/: &nbsp; útil para detectar plugins vulnerables </p>
+<p> • server-status: &nbsp; confirma que el módulo está activo pero restringido. </p>
+
+
+<p> Escaneo básico especificando el diccionario </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZRFjF1mT/84.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Escaneo Con extensiones específicas (metasploitable) </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nLbcS8km/85.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Si al dar el resultado del escaneo encuentra archivos con extensiones que no se pueden visualizar Podemos usar el comando (curl) para leer su contenido</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/T3rXwKVd/86.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/q7jShygm/87.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
 
-<h3> 🛠 &nbsp; dirb: </h3>
-<h3> 🛠 &nbsp; Gobuster: </h3>
+
+
+
+
+
+
+
+
+
+<h2> :white_check_mark: &nbsp; Gobuster: </h2>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
