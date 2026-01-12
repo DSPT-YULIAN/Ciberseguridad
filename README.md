@@ -162,7 +162,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 </br>
 
-###  Recopilacion de informacion: (OSINT)
+<h3>  Recopilacion de informacion: (OSINT) </h3>
 
 </br>
 
@@ -1466,7 +1466,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<!----------------------------------------------------------------------------- Automated Discovery  ----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------- Descubrimiento de dierectorios  ----------------------------------------------------------------------------->
 
 
 <h2> :arrow_right: &nbsp; Automated Discovery </h2>
@@ -1514,6 +1514,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 </p>
 
+<p> Codigos de respuesta HTTP </p>
 
 <p> • Respuestas informativas (100–199) </p>
 <p> • Respuestas satisfactorias (200–299) </p>
@@ -1564,7 +1565,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<h2> :white_check_mark: &nbsp; dirb: </h2>
+<h2> :white_check_mark: &nbsp; dirb </h2>
 
 
 <p> DIRB (Directory Buster) es una herramienta de código abierto para fuerza bruta de directorios y archivos en servidores web. Fue desarrollada por The Dark Raver y es ampliamente utilizada en pruebas de penetración y auditorías de seguridad web. </p>
@@ -1653,46 +1654,81 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
+<h2> :white_check_mark: &nbsp; Gobuster </h2>
+
+
+<p> Gobuster es una herramienta de fuerza bruta de directorio/archivo, DNS y host virtual de alto rendimiento escrita en Go. Está diseñado para ser rápido, confiable y fácil de usar para profesionales de seguridad y probadores de penetración. </p>
+
+
+<p> Uso principal </p>
+
+
+<p> • Directorio web/Enumeración de archivos: &nbsp; Descubra directorios y archivos ocultos en servidores web </p>
+<p> • Descubrimiento de subdominios DNS: &nbsp; Encuentre subdominios con soporte comodín </p>
+<p> • Detección de hosts virtuales: &nbsp; Identificar hosts virtuales en servidores web de destino</p>
+<p> • Enumeración de almacenamiento en la nube: &nbsp; Descubra los cubos abiertos de Amazon S3 y Google Cloud Storage </p>          
+<p> • Descubrimiento de archivos TFTP: &nbsp; Buscar archivos en servidores TFTP</p>
+<p> • Fuzzing personalizado: &nbsp; Fuzzing flexible con parámetros personalizables </p>
+
+
+<p> Modos de operación </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/q7jShygm/87.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Parámetros esenciales </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/CKSHy2MT/88.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/gJ0Vj6ZP/89.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
+<p> La función gobuster dir hace fuerza bruta de directorios y archivos en servidores web </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3JdHmKG2/90.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Escaneo Con extensiones específicas (metasploitable) </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wTtS3wKM/91.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> La función gobuster dns hace fuerza bruta de subdominios mediante consultas DNS bruteforce. </p>
 
 
 
+<p align="center">
 
-<h2> :white_check_mark: &nbsp; Gobuster: </h2>
+  <img src="(https://i.postimg.cc/RhJXCb3V/92.png" alt="Descripción de la imagen">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</p>
 
 
 
@@ -1718,6 +1754,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p align="center">
 
   <img src="https://i.postimg.cc/T2B41B89/5-1.png" alt="Descripción de la imagen">
+
 </p>
 
 </br>
@@ -1725,6 +1762,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p align="center">
 
   <img src="https://i.postimg.cc/wTtwd27m/5.png" alt="Descripción de la imagen">
+
 </p>
 
 
@@ -1735,6 +1773,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p align="center">
 
   <img src="https://i.postimg.cc/xdy23nQn/5-2.png" alt="Descripción de la imagen">
+
 </p>
 
 </br>
@@ -1742,6 +1781,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p align="center">
 
   <img src="https://i.postimg.cc/7YRCzMPw/5-5.png" alt="Descripción de la imagen">
+
 </p>
 
 
@@ -1753,6 +1793,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p align="center">
 
   <img src="https://i.postimg.cc/hvRZy71Y/5-3.png" alt="Descripción de la imagen">
+
 </p>
 
 
@@ -1770,6 +1811,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p align="center">
 
   <img src="https://i.postimg.cc/SRyCxWLC/5-4.png" alt="Descripción de la imagen">
+
 </p>
 
 
@@ -1780,6 +1822,8 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p align="center">
 
   <img src="https://i.postimg.cc/Hs8YqGH1/5-6.png" alt="Descripción de la imagen">
+
+
 </p></p>
 
 <p><b> :white_check_mark: • Escaneo UDP (-sU) :&nbsp; si se intenta enumerar un servidor DNS, SNMP o DHCP. Todos estos servicios utilizan UDP para la comunicación entre el cliente y el servidor. Para escanear puertos UDP, Nmap envía un paquete UDP a todos los puertos especificados en la configuración de la línea de comandos. Espera la respuesta del destino. Si recibe un mensaje ICMP de puerto inaccesible, ese puerto se marca como cerrado. Si no se recibe respuesta del puerto UDP de destino, Nmap lo marca como abierto/filtrado</b></p> 
@@ -1791,6 +1835,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p align="center">
 
   <img src="https://i.postimg.cc/yYTgNgWy/5-7.png" alt="Descripción de la imagen">
+
 </p></p>
 
 </br>
@@ -1798,6 +1843,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p align="center">
 
   <img src="https://i.postimg.cc/DwCsyJmb/5-8.png" alt="Descripción de la imagen">
+
 </p></p>
 
 
@@ -1808,57 +1854,22 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p align="center">
 
   <img src="https://i.postimg.cc/wvD7J7x2/5-9.png" alt="Descripción de la imagen">
+
 </p></p>
 
 </br>
 
+
+<p align="center">
+
  <img src="https://i.postimg.cc/bw28d4wH/5-10.png" alt="Descripción de la imagen">
+
 </p></p>
 
 
 
 
-
-
------------------------------------- Nmap -SC ------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 🛠 &nbsp;Herramientas
+<h3> 🛠 &nbsp;Herramientas</h3>
 
 </br>
 
@@ -1868,12 +1879,13 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 <!---------------------------------------------------------------------------------------------------------------------- ## FASE 2 ------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <!--horizontal divider(gradiant)-->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <div id="user-content-toc">
   <ul align="left">
-    <summary><h2 style="display: inline-block">Fase 2.Escaneo y Análisis de vulnerabilidades </h2></summary>
+    <summary><h2 style="display: inline-block">Fase 2.Enumercion y Análisis de vulnerabilidades </h2></summary>
   </ul>
 </div>
 
@@ -1881,6 +1893,16 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
   <img src="https://i.postimg.cc/kgsWrP5Q/reconocimiento-vs-enumeracion.jpg">
 </p>
+
+
+<p> Diferencia entre reconocimiento activo y enumercion: &nbsp; el reconocimiento activo busca recopilar información inicial del objetivo (a veces interactuando directamente con él), mientras que la enumeración es una fase más profunda y técnica que extrae detalles específicos de servicios, usuarios y recursos disponibles en el sistema. En otras palabras, el reconocimiento responde a “¿qué hay ahí afuera?”, y la enumeración a “¿qué exactamente puedo encontrar y explotar?”.</p>
+
+
+<p> • Recon Activo = "¿Qué puertas están abiertas?" </p>
+<p> • Enumeración = "¿Qué hay detrás de cada puerta?" </p>
+
+
+
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Enumeracion</h2>
 
@@ -1918,6 +1940,29 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </br>
 
 <p> El NSE (Nmap Scripting Engine - Motor de Scripting de Nmap ) permite a los usuarios automatizar y ampliar las capacidades de Nmap mediante scripts escritos en el lenguaje de programación Lua. Estos scripts pueden realizar tareas como detección de vulnerabilidades, recolección de información, explotación de servicios y más.</p>
+
+
+
+<p><b> :white_check_mark: • Escaneo (-sC) :&nbsp; ejecuta todos los Scripts NSE por defecto (Nmap Scripting Engine).</b></p> 
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/ZqyQ5R1k/93.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <p>Ejemplo de uso:&nbsp;  nmap --script (nombre_del_script) (objetivo) </p>
