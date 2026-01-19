@@ -39,6 +39,17 @@
 </p>
 
 
+</br>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/x8pDHjgX/opc-1.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
 
 <h2> :arrow_right:&nbsp; Metodología </h2>
 
@@ -137,12 +148,24 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 <p>Es el primer paso en cualquier intervención de hacking. Consiste en recopilar información sobre los sistemas o redes objetivo para comprender a fondo el entorno que se pretende evaluar  </p>
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/Cxs1Bkks/opc-2.png" alt="Descripción de la imagen">
+  
+</p>
+
+
 </br>
 
 
 <!-------------------------------------- ## FASE 1 Reconocimiento pasivo --------------------------------------------->
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/Cxs1Bkks/opc-2.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Reconocimiento pasivo (No hay interacción directa con el objetivo) </h2>
@@ -169,6 +192,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 <p align="center">
 
   <img src="https://i.postimg.cc/2yHRhJ54/categorias-osint.jpg" alt="Descripción de la imagen">
+
 </p>
 
 
@@ -1726,9 +1750,11 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 <p align="center">
 
-  <img src="(https://i.postimg.cc/RhJXCb3V/92.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/RhJXCb3V/92.png" alt="Descripción de la imagen">
 
 </p>
+
+
 
 
 
@@ -1878,16 +1904,20 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p><b> • Descubrimiento de dominios:</b> &nbsp; Dnsenum</p>
 
 
-<!---------------------------------------------------------------------------------------------------------------------- ## FASE 2 ------------------------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------- ## Fase 2. Enumeracion y Análisis de vulnerabilidades ------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <!--horizontal divider(gradiant)-->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
+
+
 <div id="user-content-toc">
-  <ul align="left">
-    <summary><h2 style="display: inline-block">Fase 2.Enumercion y Análisis de vulnerabilidades </h2></summary>
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=78&pause=1000&color=F70202&width=2350&height=500&lines=Fase+2.+Enumeracion+y+An%C3%A1lisis+de+vulnerabilidades" alt="Typing SVG" /></a></summary>
   </ul>
 </div>
+
+
 
 <p align="center">
 
@@ -1895,28 +1925,54 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p>
 
 
-<p> Diferencia entre reconocimiento activo y enumercion: &nbsp; el reconocimiento activo busca recopilar información inicial del objetivo (a veces interactuando directamente con él), mientras que la enumeración es una fase más profunda y técnica que extrae detalles específicos de servicios, usuarios y recursos disponibles en el sistema. En otras palabras, el reconocimiento responde a “¿qué hay ahí afuera?”, y la enumeración a “¿qué exactamente puedo encontrar y explotar?”.</p>
+<p> La diferencia entre reconocimiento activo y enumercion: &nbsp; el reconocimiento activo busca recopilar información inicial del objetivo (a veces interactuando directamente con él), mientras que la enumeración es una fase más profunda y técnica que extrae detalles específicos de servicios, usuarios y recursos disponibles en el sistema. En otras palabras, el reconocimiento responde a “¿qué hay ahí afuera?”, y la enumeración a “¿qué exactamente puedo encontrar y explotar?”.</p>
 
 
-<p> • Recon Activo = "¿Qué puertas están abiertas?" </p>
+<p> • Reconocimiento Activo = "¿Qué puertas están abiertas?" </p>
 <p> • Enumeración = "¿Qué hay detrás de cada puerta?" </p>
 
 
+</br>
+
+
+<!-------------------------------------------------------------------------------------------------------------- ## Enumeracion ------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Enumeracion</h2>
 
-<!-- ## Enumeracion -->
 
-<p> Extracción de información detallada sobre recursos específicos: usuarios, directorios, vulnerabilidades, etc.)</p>
-
-
-<p><b> • Motores de búsqueda:</b></p> 
-<p> Utilice motores de búsqueda para encontrar información sobre el objetivo que ya han realizado un reconocimiento activo para usted.</p>
 
 </br>
 
-<p><h2> Enumeración de Servicios de Red: </h2> Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
+
+
+<h2> :arrow_right: Enumeración de nombre de usuario </h2> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2> :arrow_right: Enumeración de Servicios de Red: </h2> 
+
+
+<p>Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
 
 
 <p>1.  Identificar servicios vulnerables: Al conocer la versión de un servicio, se pueden buscar vulnerabilidades conocidas asociadas a esa versión.</p>
