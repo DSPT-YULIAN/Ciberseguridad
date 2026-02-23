@@ -29,6 +29,8 @@
 
 
 
+
+
 <h2> :arrow_right: Etapas </h2>
 
 
@@ -38,6 +40,7 @@
 
 </p>
 
+<p> Se trata de recopilar informacion util, pero no de recopilar toda la informacion  </p>
 
 </br>
 
@@ -49,7 +52,7 @@
 </p>
 
 
-
+</br>
 
 <h2> :arrow_right:&nbsp; Metodología </h2>
 
@@ -91,6 +94,8 @@
 <p><b> • &nbsp; Monitoreo </b></p>
 <p><b> • &nbsp; Planificación de respuesta y recuperación </b></p>
 
+
+</br>
 
 <h2> :arrow_right: Tipos de pruebas de penetracion </h2>
 
@@ -147,10 +152,12 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 <p>Es el primer paso en cualquier intervención de hacking. Consiste en recopilar información sobre los sistemas o redes objetivo para comprender a fondo el entorno que se pretende evaluar  </p>
 
+<p> Por lo tanto su objetivo es construir un mapa del objetivo </p>
+
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/Cxs1Bkks/opc-2.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/Zqw789yc/mapp.png" alt="Descripción de la imagen">
   
 </p>
 
@@ -161,11 +168,6 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 <!-------------------------------------- ## FASE 1 Reconocimiento pasivo --------------------------------------------->
 
 
-<p align="center">
-
-  <img src="https://i.postimg.cc/Cxs1Bkks/opc-2.png" alt="Descripción de la imagen">
-  
-</p>
 
 
 <img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Reconocimiento pasivo (No hay interacción directa con el objetivo) </h2>
@@ -196,7 +198,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 </p>
 
 
-<p> OSINT:&nbsp; Conjunto de tecnicas y herramientas para recopilar datos de fuentes disponibles de forma publica para ser utillizados en un contexto de inteligencia  </p>
+<p> OSINT:&nbsp; Conjunto de tecnicas y herramientas para recopilar datos de fuentes disponibles de forma publica para ser utilizados en un contexto de inteligencia  </p>
 
 <p align="center">
 
@@ -236,6 +238,9 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 
 <h2> :arrow_right: Caminando una aplicación </h2>
+
+
+</br>
 
 
 <h2> :white_check_mark: &nbsp; Visualización del código fuente de la página</h2>
