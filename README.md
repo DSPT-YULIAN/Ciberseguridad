@@ -21,6 +21,8 @@
 
 <p> Antes de comenzar una prueba de penetración, se lleva a cabo una conversación formal entre el evaluador y el propietario del sistema. Se acuerdan las diversas herramientas, técnicas y sistemas que se probarán. Esta conversación constituye el alcance del acuerdo de prueba de penetración y determinará el desarrollo de la prueba. </p>
 
+<p> Se trata de recopilar informacion util, pero no de recopilar toda la informacion  </p>
+
 
 <p align="center">
 
@@ -40,7 +42,6 @@
 
 </p>
 
-<p> Se trata de recopilar informacion util, pero no de recopilar toda la informacion  </p>
 
 </br>
 
@@ -1759,17 +1760,134 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 </p>
 
+</br>
+
+
+<!----------------------------------------------------------------------------- Mapeo de redes  ----------------------------------------------------------------------------->
+
+
+
+<center> <h2> :arrow_right: Network Mapping / Mapeo de redes </h2> </center>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/J0C5fNSS/94.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Es el proceso de identificar, documentar la topología, comprender su arquitectura e identificar posibles puntos de entrada para una mayor explotacion de una red objetivo, mediante el envío de paquetes directamente a los hosts para obtener respuestas, generando tráfico para mapear dispositivos, interfaces, sistemas operativos, servicios abiertos y rutas de conectividad.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bJgvP8BF/95.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Esto es lo que deberiamos tener despues de realizar el mapeo de la red </p>
+
+
+
+<p> 1. &nbsp; Cuantos host hay dentro de la red </p>
+<p> 2. &nbsp; Direcciones IP </p>
+<p> 3. &nbsp; Puertos abiertos </p>
+<p> 4. &nbsp; Que servicios se ejecutan </p>
+<p> 5. &nbsp; Sistema operativo </p>
+
+
+<p> Nota: Se debe incluir en el mapa de la red los enrutadores, conmutadores, Firewalls, sistemas de prevencion de intrusos (ralentizar el escaneo) y cualquier otro elemento de infraestructura </p>
+
+
+
+<!----------------------------------------------------------------------------- Descubrimiento de Host  ----------------------------------------------------------------------------->
+
+
+<center> <h2> :arrow_right: Host Discovery / Descubrimiento de anfitriones </h2> </center>
+
+
+<p> Permite identificar host vivos en una red </p>
+
+
+<p> Tecnicas mas comunes </p>
+
+<p> :white_check_mark: &nbsp; Barrido de PING: </p>
+
+<p>Envio de solicitudes de eco ICMP pasa conocer si el objetivo esta en linea </p>
+<p> Nota: Esta tecnica no funciona cuando esta bloqueado en el Firewall de Windows para que reciba solicitudes ICMP lo que limita su eficacia </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/prSVVsh2/96.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> •  &nbsp; Validar si estan en linea [ping + IP] </p>
+<p> •  &nbsp; Especificar la cantidad de paquetes ICMP [ping -c + cantidad de paquetes + IP]  en windows se cambia la c por una n  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5NfrKQ3t/97.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> •  &nbsp; Encontrar todos los host activos en la RED con fping </p>
+<p> fping -a -g [IP] /[mascara de red y subred] </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/QMKYKQXK/98.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> -a Muestra los objetivos que estan vivos </p>
+<p> -g crea unma lista </p>
+
+
+<p> :white_check_mark: &nbsp; Escaneo ARP: </p>
+
+<p>Implica utilizar el protocolo de resoluciones de direciones, esta tecnica es util para descubrir hosts dentro del mismo dominio o en una red local</p>
+
+
+<p> :white_check_mark: &nbsp; TCP Synping:</p>
+<p> Escaneo medio abierto en Nmap se coloce como escaneo sigiloso, si el host esta vivo, responde con un TCP Syn-AC </p>
+<p> Nota: En algunos casos el hosts puede no responder las solicitudes de sincronizacion TCP y los resultados pueden versen afectados, si el puerto esta cerrado NMAP puede pensar que el host muerto </p>
+
+
+
+<p> :white_check_mark: &nbsp; UDP Ping</p>
+<p> Envia paquetes UDP a un puerto en especifico para verificar si hay anfitrion vivo </p>
+
+<p> :white_check_mark: &nbsp; TCP ACK</p>
+<p> Envia paquetes TCP ACK a un puerto especifico en un objetivo para comprobar si el anfitrion esta vivo, esta tecnica no espera respuesta pero si recibe un restablecimiento de TCP  </p>
+
+<p> :white_check_mark: &nbsp; SYN - ACK ping </p>
+<p> Envia un paquete Syn-ACK a un puerto especifico para verificar si un host esta vivo, si recibe un reinicio de TCP, nuevamente indica que el host esta vivo  </p>
+
+
+<p> Nota: Para escoger la mejor tecnica se debe tener en cuenta las caracteristicas de la red, las herramientas de seguridad  </p>
 
 
 
 
 
 
-<!----------------------------------------------------------------------------- Reconocimiento activo de servicios con NMAP ----------------------------------------------------------------------------->
 
 
-<h2> :arrow_right: Reconocimiento Activo con NMAP </h2>
+<h2> :arrow_right: Host Discovery With Nmap / Descubrimiento de host con Nmap </h2>
 
+
+<p> Nmap identifica los host activos en la red usando tecnicas como ICMP solicitudes de ARP o sondas TCP/UDP</p>
 
 
 <p> Nmap: Es una herramienta esencial en pruebas de penetración para el descubrimiento de hosts y servicios en una red. Permite descubrir información básica sobre los sistemas objetivo, como hosts vivos, puertos abiertos y servicios, sin profundizar en detalles específicos.</p>
