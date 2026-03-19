@@ -1844,14 +1844,16 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p> fping -a -g [IP] /[mascara de red y subred] </p>
 
 
+<p> -a Muestra los objetivos que estan vivos </p>
+<p> -g crea unma lista </p>
+
 <p align="center">
 
   <img src="https://i.postimg.cc/QMKYKQXK/98.png" alt="Descripción de la imagen">
 
 </p>
 
-<p> -a Muestra los objetivos que estan vivos </p>
-<p> -g crea unma lista </p>
+
 
 
 <p> :white_check_mark: &nbsp; Escaneo ARP: </p>
@@ -1877,11 +1879,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 <p> Nota: Para escoger la mejor tecnica se debe tener en cuenta las caracteristicas de la red, las herramientas de seguridad  </p>
 
-
-
-
-
-
+</br>
 
 
 <h2> :arrow_right: Host Discovery With Nmap / Descubrimiento de host con Nmap </h2>
@@ -1890,7 +1888,14 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p> Nmap identifica los host activos en la red usando tecnicas como ICMP solicitudes de ARP o sondas TCP/UDP</p>
 
 
-<p> Nmap: Es una herramienta esencial en pruebas de penetración para el descubrimiento de hosts y servicios en una red. Permite descubrir información básica sobre los sistemas objetivo, como hosts vivos, puertos abiertos y servicios, sin profundizar en detalles específicos.</p>
+<p> Es una herramienta esencial en pruebas de penetración para el descubrimiento de hosts y servicios en una red. Permite descubrir información básica sobre los sistemas objetivo, como hosts vivos, puertos abiertos y servicios, sin profundizar en detalles específicos.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/x8gB3LcB/99.png" alt="Descripción de la imagen">
+
+</p>
 
 
 <p><b> :white_check_mark: • Descubrimiento de hosts: &nbsp; Detecta hosts vivos en la red (sin escanear puertos).</b></p> 
@@ -1913,6 +1918,135 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
   <img src="https://i.postimg.cc/wTtwd27m/5.png" alt="Descripción de la imagen">
 
 </p>
+
+
+<p> El escaneo (-sn) utiliza el protocolo ARP para realizr el descubrimiento del host</p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7PKYrcBP/100.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ydVBwXc8/101.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/NFnc93V7/102.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MpVSHrYd/103.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MHNCKyM3/104.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p><b> :white_check_mark: nmap -sn -PS :&nbsp; realiza un ping scan TCP SYN (también conocido como half-open scan) para descubrir hosts activos en la red sin escanear puertos. </b></p> 
+
+<p> -sn: &nbsp;Desactiva el escaneo de puertos. Solo hace descubrimiento de hosts (host discovery).</p> 
+<p> -PS: &nbsp;Usa paquetes TCP SYN para el ping scan. Envía un SYN a los puertos por defecto (80, 443, 22, 113, 9929, 6667, etc.) y espera respuesta.</p> 
+
+
+<p><b> Ventajas </b></p> 
+
+<p><b> Stealthy:</b> No completa la conexión TCP (evita logs de conexión completa)</p> 
+<p><b> Eficiente: </b>Más rápido que ping ICMP tradicional </p> 
+<p><b> Bypassa firewalls: </b> Muchos firewalls permiten SYN pero bloquean ICMP </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zBFGT1Zx/105.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p><b> :white_check_mark: nmap -sn -PA :&nbsp; realiza un ping scan TCP ACK para descubrir hosts activos en la red. </b></p> 
+
+
+<p> -sn: &nbsp;Solo descubre hosts (host discovery), sin escaneo de puertos.</p> 
+<p> -PS: &nbsp;Usa paquetes TCP ACK (no SYN) para el ping scan. Envía un paquete ACK a los puertos por defecto (80, 443, 22, etc.) y espera respuesta.</p> 
+
+
+<p><b> Ventajas </b></p> 
+
+<p><b> Mas Stealthy:</b> El ACK es menos ruidoso que SYN en algunos sistemas</p> 
+<p><b> Eficiente: </b>Menos propenso a ser bloqueado por IDS/IPS en redes estrictas </p> 
+<p><b> Bypassa firewalls: </b> Muchos firewalls permiten ACK de salida, pero bloquean SYN entrantes </p> 
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5yfqm1XG/106.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/1XtGnBnB/107.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> -PS: &nbsp;es ideal para reconocimiento rápido en redes menos protegidas</p> 
+<p> -PA: &nbsp;es más eficaz en entornos con firewalls estrictos o sistemas de detección de intrusiones (IDS/IPS), ya que el ACK es menos sospechoso y puede pasar desapercibido.</p> 
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Bv02c4P4/108.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<!----------------------------------------------------------------------------- Escaneo de puertos ----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <p><b> :white_check_mark: • Escaneo de puertos abiertos :&nbsp; El escaneo (-sS) usa un escaneo SYN para identificar puertos abiertos de manera sigilosa. Sin completar la conexión TCP </b></p> 
