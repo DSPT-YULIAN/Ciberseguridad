@@ -168,10 +168,21 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 <!-------------------------------------- ## FASE 1 Reconocimiento pasivo --------------------------------------------->
 
+</br>
+
+
+<div id="user-content-toc">
+  <ul align="right">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=2C6ED4&width=700&height=350&lines=Reconocimiento+pasivo" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+
+</br>
 
 
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Reconocimiento pasivo (No hay interacción directa con el objetivo) </h2>
+<h2> 👨🏻‍💻 Reconocimiento pasivo (No hay interacción directa con el objetivo) </h2>
 
 
 
@@ -1320,10 +1331,24 @@ nombres de dominio. </p>
 <!-------------------------------------- ## FASE 1 Reconocimiento Activo --------------------------------------------->
 
 
+
 </br>
 
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Reconocimiento activo (Implica interacción directa con el objetivo) </h2>
+<div id="user-content-toc">
+  <ul align="right">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=2C6ED4&width=700&height=350&lines=Reconocimiento+Activo" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+
+</br>
+
+
+
+<h2> 👨🏻‍💻 Reconocimiento activo (Implica interacción directa con el objetivo) </h2>
+
+
 
 
 </br>
@@ -2184,7 +2209,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<!----------------------------------------------------------------------------- Escaneo de puertos ----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------- Deteccion de servicios y sistema operativo ----------------------------------------------------------------------------->
 
 
 <center> <h2> :arrow_right: Service detection & OS  / Deteccion de servicios y sistema operativo </h2> </center>
