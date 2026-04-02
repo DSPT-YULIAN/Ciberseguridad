@@ -2030,21 +2030,101 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
+<center> <h2> :arrow_right: Port Scanning / Escaneo de puertos </h2> </center>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zB5qJGPb/109.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/0rg1z0QV/116.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
 
+<p> -F: &nbsp;La opción -F en Nmap activa el escaneo rápido de puertos frecuentes (Fast scan mode). En lugar de escanear los 1000 puertos TCP más comunes (modo por defecto), -F escanea solo los 100 puertos TCP más comunes, lo que acelera drásticamente el proceso.</p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/K8MdWyvk/110.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> -p: &nbsp; La opción -p en Nmap especifica puertos o rangos de puertos a escanear, anulando los defaults (top 1000 TCP). Es la más flexible para targeting preciso. Si son multiples puertos se separan con "," </p> 
+ sin espacio
+<p> -p-: &nbsp; Enumeracion completa de todos los 65.535 puertos </p> 
+<p> Espicificar rango de puertos -p1-100 + IP </p> 
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/q78g4YQs/111.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> -Pn: &nbsp;El parámetro -Pn en Nmap le indica al escáner que no realice el descubrimiento de hosts (host discovery), es decir, trata a todos los hosts objetivo como si estuvieran "online" sin importar si responden al ping o no.  </p> 
+
+<p> Casos prácticos más comunes donde -Pn es esencial en pentesting:</p> 
+
+
+
+<p> 1. Firewalls que bloquean ICMP/Ping (empresas, cloud AWS/Azure, servidores web) </p>
+<p> 2. Escaneos de Internet/DMZ (servidores públicos bloquean ping) </p>
+<p> 3. Cloud Environments (AWS, GCP, Azure - Security Groups bloquean ICMP) </p>
+<p> 4. Redes Corporativas/Enterprise (IDS/IPS + firewalls Next-Gen) </p>
+<p> 5. Windows Hosts (bloquean ICMP por defecto) </p>
+<p> 6. Recon de Subdominios/WAF-protected (CloudFlare, Akamai) </p>
+<p> 7. SCADA/ICS/OT Networks (equipos industriales silenciosos) </p>
+<p> 8. Pentesting con Timing lento/evasión IDS </p>
+
+
+
+<p> Ejemplo de escaneo a sistema windows con y sin la opcion -Pn </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/85dMgQwp/115.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/85dMgQwp/112.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MK94JgrP/113.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Cuándo NO usarlo: redes locales confiables, discovery rápido, escaneos masivos sin tiempo.</p> 
 
 
 
+<p align="center">
 
+  <img src="https://i.postimg.cc/bNsmtgTw/114.png" alt="Descripción de la imagen">
 
-
-
+</p>
 
 
 
@@ -2066,6 +2146,71 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
   <img src="https://i.postimg.cc/7YRCzMPw/5-5.png" alt="Descripción de la imagen">
 
 </p>
+
+
+
+<p><b> :white_check_mark: • Escaneo de conexión TCP (-sT) :&nbsp; Utiliza el mecanismo de red del sistema operativo subyacente para establecer una conexión TCP completa con el dispositivo de destino que se está escaneando. Dado que crea una conexión completa, crea más tráfico (y, por lo tanto, tarda más en ejecutarse).</b></p> 
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Hs8YqGH1/5-6.png" alt="Descripción de la imagen">
+
+
+
+
+
+<p><b> :white_check_mark: • Escaneo UDP (-sU) :&nbsp; si se intenta enumerar un servidor DNS, SNMP o DHCP. Todos estos servicios utilizan UDP para la comunicación entre el cliente y el servidor. Para escanear puertos UDP, Nmap envía un paquete UDP a todos los puertos especificados en la configuración de la línea de comandos. Espera la respuesta del destino. Si recibe un mensaje ICMP de puerto inaccesible, ese puerto se marca como cerrado. Si no se recibe respuesta del puerto UDP de destino, Nmap lo marca como abierto/filtrado</b></p> 
+
+<p>NOTA:&nbsp; Tenga en cuenta que los mensajes ICMP inaccesibles a veces pueden tener una velocidad limitada y, en ese caso, un escaneo de puerto UDP puede tardar mucho más. La limitación de velocidad ICMP se utiliza principalmente para limitar el comportamiento de gusanos o virus y normalmente debe configurarse para permitir que entre el 1 % y el 5 % del ancho de banda entrante disponible (a velocidades de 10 Mbps o 100 Mbps) o entre 100 kbps y 10 000 kbps (a velocidades de 1 Gbps o 10 Gbps) se utilice para el tráfico ICMP.</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/yYTgNgWy/5-7.png" alt="Descripción de la imagen">
+
+</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/DwCsyJmb/5-8.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<!----------------------------------------------------------------------------- Escaneo de puertos ----------------------------------------------------------------------------->
+
+
+<center> <h2> :arrow_right: Service detection & OS  / Deteccion de servicios y sistema operativo </h2> </center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2098,36 +2243,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p>
 
 
-<p><b> :white_check_mark: • Escaneo de conexión TCP (-sT) :&nbsp; Utiliza el mecanismo de red del sistema operativo subyacente para establecer una conexión TCP completa con el dispositivo de destino que se está escaneando. Dado que crea una conexión completa, crea más tráfico (y, por lo tanto, tarda más en ejecutarse).</b></p> 
 
-</br>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/Hs8YqGH1/5-6.png" alt="Descripción de la imagen">
-
-
-</p></p>
-
-<p><b> :white_check_mark: • Escaneo UDP (-sU) :&nbsp; si se intenta enumerar un servidor DNS, SNMP o DHCP. Todos estos servicios utilizan UDP para la comunicación entre el cliente y el servidor. Para escanear puertos UDP, Nmap envía un paquete UDP a todos los puertos especificados en la configuración de la línea de comandos. Espera la respuesta del destino. Si recibe un mensaje ICMP de puerto inaccesible, ese puerto se marca como cerrado. Si no se recibe respuesta del puerto UDP de destino, Nmap lo marca como abierto/filtrado</b></p> 
-
-<p>NOTA:&nbsp; Tenga en cuenta que los mensajes ICMP inaccesibles a veces pueden tener una velocidad limitada y, en ese caso, un escaneo de puerto UDP puede tardar mucho más. La limitación de velocidad ICMP se utiliza principalmente para limitar el comportamiento de gusanos o virus y normalmente debe configurarse para permitir que entre el 1 % y el 5 % del ancho de banda entrante disponible (a velocidades de 10 Mbps o 100 Mbps) o entre 100 kbps y 10 000 kbps (a velocidades de 1 Gbps o 10 Gbps) se utilice para el tráfico ICMP.</p>
-
-</br>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/yYTgNgWy/5-7.png" alt="Descripción de la imagen">
-
-</p></p>
-
-</br>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/DwCsyJmb/5-8.png" alt="Descripción de la imagen">
-
-</p></p>
 
 
 <p><b> :white_check_mark: • Escaneo TCP FIN (-sF) :&nbsp; En ocasiones, un filtro de red o un firewall puede detectar un escaneo SYN. En tales casos, es necesario emplear un tipo de paquete diferente en un escaneo de puertos. Con el escaneo TCP FIN, se envía un paquete FIN a un puerto de destino. Si el puerto está cerrado, el sistema de destino devuelve un paquete RST. Si no se recibe nada del puerto de destino, se puede considerar abierto, ya que el comportamiento normal sería ignorar el paquete FIN.</b></p> 
