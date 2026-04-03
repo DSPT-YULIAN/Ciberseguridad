@@ -182,7 +182,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 
 
-<h2> 👨🏻‍💻 Reconocimiento pasivo (No hay interacción directa con el objetivo) </h2>
+<h2> 👨🏻‍💻 (No hay interacción directa con el objetivo) </h2>
 
 
 
@@ -1346,7 +1346,7 @@ nombres de dominio. </p>
 
 
 
-<h2> 👨🏻‍💻 Reconocimiento activo (Implica interacción directa con el objetivo) </h2>
+<h2> 👨🏻‍💻 (Implica interacción directa con el objetivo) </h2>
 
 
 
@@ -2099,7 +2099,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<p> -Pn: &nbsp;El parámetro -Pn en Nmap le indica al escáner que no realice el descubrimiento de hosts (host discovery), es decir, trata a todos los hosts objetivo como si estuvieran "online" sin importar si responden al ping o no.  </p> 
+<p> :white_check_mark: -Pn: &nbsp;El parámetro -Pn en Nmap le indica al escáner que no realice el descubrimiento de hosts (host discovery), es decir, trata a todos los hosts objetivo como si estuvieran "online" sin importar si responden al ping o no. </p> 
 
 <p> Casos prácticos más comunes donde -Pn es esencial en pentesting:</p> 
 
@@ -2121,7 +2121,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/85dMgQwp/115.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/nLrBL4Q3/115.png" alt="Descripción de la imagen">
 
 </p>
 
@@ -2141,7 +2141,6 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 </p>
 
-<p> Cuándo NO usarlo: redes locales confiables, discovery rápido, escaneos masivos sin tiempo.</p> 
 
 
 
@@ -2152,9 +2151,11 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p>
 
 
+<p> Cuándo NO usarlo: redes locales confiables, discovery rápido, escaneos masivos sin tiempo.</p> 
 
 
-<p><b> :white_check_mark: • Escaneo de puertos abiertos :&nbsp; El escaneo (-sS) usa un escaneo SYN para identificar puertos abiertos de manera sigilosa. Sin completar la conexión TCP </b></p> 
+
+<p><b> :white_check_mark: Escaneo de puertos abiertos :&nbsp; El escaneo (-sS) usa un escaneo SYN para identificar puertos abiertos de manera sigilosa. Sin completar la conexión TCP </b></p> 
 
 </br>
 
@@ -2174,7 +2175,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<p><b> :white_check_mark: • Escaneo de conexión TCP (-sT) :&nbsp; Utiliza el mecanismo de red del sistema operativo subyacente para establecer una conexión TCP completa con el dispositivo de destino que se está escaneando. Dado que crea una conexión completa, crea más tráfico (y, por lo tanto, tarda más en ejecutarse).</b></p> 
+<p><b> :white_check_mark: Escaneo de conexión TCP (-sT) :&nbsp; Utiliza el mecanismo de red del sistema operativo subyacente para establecer una conexión TCP completa con el dispositivo de destino que se está escaneando. Dado que crea una conexión completa, crea más tráfico (y, por lo tanto, tarda más en ejecutarse).</b></p> 
 
 </br>
 
@@ -2186,7 +2187,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<p><b> :white_check_mark: • Escaneo UDP (-sU) :&nbsp; si se intenta enumerar un servidor DNS, SNMP o DHCP. Todos estos servicios utilizan UDP para la comunicación entre el cliente y el servidor. Para escanear puertos UDP, Nmap envía un paquete UDP a todos los puertos especificados en la configuración de la línea de comandos. Espera la respuesta del destino. Si recibe un mensaje ICMP de puerto inaccesible, ese puerto se marca como cerrado. Si no se recibe respuesta del puerto UDP de destino, Nmap lo marca como abierto/filtrado</b></p> 
+<p><b> :white_check_mark: Escaneo UDP (-sU) :&nbsp; si se intenta enumerar un servidor DNS, SNMP o DHCP. Todos estos servicios utilizan UDP para la comunicación entre el cliente y el servidor. Para escanear puertos UDP, Nmap envía un paquete UDP a todos los puertos especificados en la configuración de la línea de comandos. Espera la respuesta del destino. Si recibe un mensaje ICMP de puerto inaccesible, ese puerto se marca como cerrado. Si no se recibe respuesta del puerto UDP de destino, Nmap lo marca como abierto/filtrado</b></p> 
 
 <p>NOTA:&nbsp; Tenga en cuenta que los mensajes ICMP inaccesibles a veces pueden tener una velocidad limitada y, en ese caso, un escaneo de puerto UDP puede tardar mucho más. La limitación de velocidad ICMP se utiliza principalmente para limitar el comportamiento de gusanos o virus y normalmente debe configurarse para permitir que entre el 1 % y el 5 % del ancho de banda entrante disponible (a velocidades de 10 Mbps o 100 Mbps) o entre 100 kbps y 10 000 kbps (a velocidades de 1 Gbps o 10 Gbps) se utilice para el tráfico ICMP.</p>
 
@@ -2207,39 +2208,25 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p>
 
 
+</br>
 
 
 <!----------------------------------------------------------------------------- Deteccion de servicios y sistema operativo ----------------------------------------------------------------------------->
 
 
+</br>
+
 <center> <h2> :arrow_right: Service detection & OS  / Deteccion de servicios y sistema operativo </h2> </center>
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/TPQddJNQ/117.png" alt="Descripción de la imagen">
+
+</p>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p><b> :white_check_mark: • Detección de sistemas operativos (-O) y servicios básicos (-sV) :&nbsp; Determina el sistema operativo y las versiones de servicios sin explotar vulnerabilidades. </b></p> 
+<p><b> :white_check_mark: Detección de sistemas operativos (-O) y servicios básicos (-sV) :&nbsp; Determina el sistema operativo y las versiones de servicios sin explotar vulnerabilidades. </b></p> 
 
 </br>
 
@@ -2248,6 +2235,63 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
   <img src="https://i.postimg.cc/hvRZy71Y/5-3.png" alt="Descripción de la imagen">
 
 </p>
+
+
+<p><b> "Forzar a que indique el S.O" </b> El parámetro --osscan-guess (o -O --osscan-guess) en Nmap activa la detección especulativa de sistemas operativos cuando la coincidencia de huella no es exacta al 100%. </p> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/j2xksy9s/118.png" alt="Descripción de la imagen">
+
+</p>
+
+<p><b> "Forzar a que indique la version" </b> El parámetro --version-intensity (o -sV --version-intensity) en Nmap controla el nivel de agresividad en la detección de versiones de servicios durante un escaneo de servicios (-sV). </p> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3rqgrgzn/119.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/jSHNhBCr/120.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <p><b> :white_check_mark: • Evasion de firewalls/IDS :&nbsp; Fragmentación de paquetes y timing lento y reducir la probabilidad de ser detectado.
@@ -2302,7 +2346,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p><b> • Descubrimiento de dominios:</b> &nbsp; Dnsenum</p>
 
 
-<!---------------------------------------------------------------------------------------------------------------------- ## Fase 2. Enumeracion y Análisis de vulnerabilidades ------------------------------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------- ## Fase 2. Enumeracion y Análisis de vulnerabilidades ------------------------------------------------------------------------------------------>
 
 <!--horizontal divider(gradiant)-->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
