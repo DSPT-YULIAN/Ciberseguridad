@@ -2268,30 +2268,15 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
+<!----------------------------------------------------------------------------- Evasión, rendimiento de escaneo y salida----------------------------------------------------------------------------->
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!------------------------------Pendiente--------------------------------->
+<!------------------------------Pendiente--------------------------------->
+<!------------------------------Pendiente--------------------------------->
+<!------------------------------Pendiente--------------------------------->
+<!------------------------------Pendiente--------------------------------->
 
 
 <p><b> :white_check_mark: • Evasion de firewalls/IDS :&nbsp; Fragmentación de paquetes y timing lento y reducir la probabilidad de ser detectado.
@@ -2310,7 +2295,6 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
   <img src="https://i.postimg.cc/SRyCxWLC/5-4.png" alt="Descripción de la imagen">
 
 </p>
-
 
 
 
@@ -2346,6 +2330,9 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p><b> • Descubrimiento de dominios:</b> &nbsp; Dnsenum</p>
 
 
+
+
+
 <!------------------------------------------------------------------------- ## Fase 2. Enumeracion y Análisis de vulnerabilidades ------------------------------------------------------------------------------------------>
 
 <!--horizontal divider(gradiant)-->
@@ -2367,7 +2354,10 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p>
 
 
-<p> La diferencia entre reconocimiento activo y enumercion: &nbsp; el reconocimiento activo busca recopilar información inicial del objetivo (a veces interactuando directamente con él), mientras que la enumeración es una fase más profunda y técnica que extrae detalles específicos de servicios, usuarios y recursos disponibles en el sistema. En otras palabras, el reconocimiento responde a “¿qué hay ahí afuera?”, y la enumeración a “¿qué exactamente puedo encontrar y explotar?”.</p>
+</br>
+
+
+<p> La diferencia entre reconocimiento activo y enumeracion: &nbsp; el reconocimiento activo busca recopilar información inicial del objetivo (a veces interactuando directamente con él), mientras que la enumeración es una fase más profunda y técnica que extrae detalles específicos de servicios, usuarios y recursos disponibles en el sistema. En otras palabras, el reconocimiento responde a “¿qué hay ahí afuera?”, y la enumeración a “¿qué exactamente puedo encontrar y explotar?”.</p>
 
 
 <p> • Reconocimiento Activo = "¿Qué puertas están abiertas?" </p>
@@ -2377,41 +2367,25 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </br>
 
 
-<!-------------------------------------------------------------------------------------------------------------- ## Enumeracion ------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------- ## Enumeracion ------------------------------------------------------------------------------------------------------------------>
+
+</br>
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=33&pause=1000&width=600&height=200&lines=Enumeracion+de+servicios+y+S.O)](https://git.io/typing-svg" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
 
 
-<img alt="Night Coding" src="./assets/Hand%20Wave.gif" width='40' align="left"/><h2> 👨🏻‍💻 Enumeracion</h2>
-
-
-
+</br>
 </br>
 
 
 
-<h2> :arrow_right: Enumeración de nombre de usuario </h2> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h2> :arrow_right: Enumeración de Servicios de Red: </h2> 
+
 
 
 <p>Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
@@ -2440,8 +2414,53 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p> El NSE (Nmap Scripting Engine - Motor de Scripting de Nmap ) permite a los usuarios automatizar y ampliar las capacidades de Nmap mediante scripts escritos en el lenguaje de programación Lua. Estos scripts pueden realizar tareas como detección de vulnerabilidades, recolección de información, explotación de servicios y más.</p>
 
 
+<p> Los Scripts se encuentran en la ruta "<b> ls /usr/share/nmap/scripts/ </b>"</p>
 
-<p><b> :white_check_mark: • Escaneo (-sC) :&nbsp; ejecuta todos los Scripts NSE por defecto (Nmap Scripting Engine).</b></p> 
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/hjV4TRpH/121.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p> filtrar los scripts especificando la expresion de la busqueda </p>
+
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/8cC3DhJy/122.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<h2> :white_check_mark: Categorías de scripts:(NSE)</h2>
+
+
+<p>Los scripts de Nmap Scripting Engine (NSE) se organizan en categorías que determinan su propósito y comportamiento. Puedes filtrarlos con script-args o --script="categoria"</p> 
+
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/yxqPpch7/123.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/3xtf3LQw/124.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p><b> :white_check_mark: Escaneo (-sC) :&nbsp; ejecuta todos los Scripts NSE por defecto (Nmap Scripting Engine).</b></p> 
 
 
  <p align="center">
@@ -2451,21 +2470,21 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
  </p>
 
 
+<p><b> :white_check_mark: Paramentro (-A) </b>:&nbsp; Esta opción habilita opciones avanzadas y agresivas adicionales. Actualmente, habilita la <b> detección del sistema operativo (-O), el escaneo de versiones (-sV), el escaneo de scripts (-sC) y el traceroute (--traceroute)</b></p> 
+
+
+<p>Nota: dado que el escaneo de scripts con la configuración predeterminada se considera intrusivo, no debe utilizar -A en redes de destino sin permiso. Esta opción solo habilita funciones, y no opciones de tiempo (como -T4) u opciones de detalle (-v) que quizá también desee utilizar. Las opciones que requieren privilegios (por ejemplo, acceso de root), como la detección del sistema operativo y traceroute, solo se habilitarán si se dispone de dichos privilegios. </p> 
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/WbDGX07B/125.png" alt="Descripción de la imagen">
+
+ </p>
 
 
 
-
-
-
-
-
-
-
-
-
-<p>Ejemplo de uso:&nbsp;  nmap --script (nombre_del_script) (objetivo) </p>
-
-<h3>Categorías de scripts:(NSE)</h3>
+<p>Ejemplo de uso de script:&nbsp;  nmap --script (nombre_del_script) (objetivo) </p>
 
 <p>(Auth):&nbsp; Su objetivo principal es identificar configuraciones inseguras en los servicios como FTP, SSH, HTTP, SMB, etc. Tales como credenciales predeterminadas o vulnerabilidades relacionadas con la autenticación.</p>
 
