@@ -2331,6 +2331,121 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
+<h2> :arrow_right: 🛠 &nbsp;Practica - CTF </h2>
+
+
+<p> :white_check_mark: FLAG 1 &nbsp;Identidad del servidor </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PJpTChg5/126.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/nLf4TGZP/132.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+
+
+
+<p> :white_check_mark: FLAG 2 &nbsp; Validacion de archivos que deben permanecer ocultos</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/MG4vdWyv/133.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+<p> Descargar el archivo de la URL </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/SR4Qvjjp/134.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+<p> Opcion 2: Validacion en la URL</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Dw99gHSf/135.png" alt="Descripción de la imagen">
+
+</p></p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/gJdf9hy7/136.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/85HxTCtJ/137.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+
+<p> :white_check_mark: FLAG 3 &nbsp; Acceso anónimo FTP </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/vZpqyyzd/128.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+<p> :white_check_mark: FLAG 4 &nbsp; Acceso a la base de datos </p>
+
+
+<p> Resultado del escaneo de Nmap donde se identifica que el puerto 3306 se encuentra abierto corriendo el servicio de <b> MySQL 8.0.39-0ubuntu0.22.04 </b>. </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/gcH0Qqpr/130.png" alt="Descripción de la imagen">
+
+</p></p>
+
+<p> Se identifica el usuario y contraseña de la base de datos en el archivo creds.txt </b>. </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/jCY2KLLv/129.png" alt="Descripción de la imagen">
+
+</p></p>
+
+<p> Comandos Básicos de Conexión </b>. </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/jCY2KLLv/129.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+
+
+
+
+
 
 
 <!------------------------------------------------------------------------- ## Fase 2. Enumeracion y Análisis de vulnerabilidades ------------------------------------------------------------------------------------------>
@@ -2590,6 +2705,21 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
  <img src="https://i.postimg.cc/G2Y6HtZ0/7-2.png" alt="Descripción de la imagen">
 
 </br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div id="user-content-toc">
