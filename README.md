@@ -2059,6 +2059,18 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
+<p> Estados de puertos en Nmap</p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MpRHRTvZ/139.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
 <p align="center">
 
   <img src="https://i.postimg.cc/zB5qJGPb/109.png" alt="Descripción de la imagen">
@@ -2272,30 +2284,98 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<!------------------------------Pendiente--------------------------------->
-<!------------------------------Pendiente--------------------------------->
-<!------------------------------Pendiente--------------------------------->
-<!------------------------------Pendiente--------------------------------->
-<!------------------------------Pendiente--------------------------------->
-
-
-<p><b> :white_check_mark: • Evasion de firewalls/IDS :&nbsp; Fragmentación de paquetes y timing lento y reducir la probabilidad de ser detectado.
-
-
-<p> •T0 (Paranoico) :&nbsp; muy lento, se usa para la evasión de IDS </p> 
-<p> •T1 (Furtivo) :&nbsp; bastante lento, se usa para la evasión de IDS </p> 
-<p> •T2 (Educado) :&nbsp; se ralentiza para consumir menos ancho de banda, se ejecuta aproximadamente 10 veces más lento que el valor predeterminado </p> 
-<p> •T3 (Normal) :&nbsp; predeterminado, un modelo de tiempo dinámico basado en la capacidad de respuesta del objetivo </p> 
-<p> •T4 (Agresivo) :&nbsp; supone una red rápida y confiable y puede abrumar a los objetivos </p> 
-<p> •T5 (Demente) :&nbsp; muy agresivo; probablemente abrumará a los objetivos o perderá los puertos abiertoswindows + enter abre terminal </p> 
+<center> <h2> :arrow_right: Firewall Detection & IDS Evasion  / Detección de firewall y evasión de IDS </h2> </center>
 
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/SRyCxWLC/5-4.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/j2vBwzrb/138.png" alt="Descripción de la imagen">
 
 </p>
 
+
+
+<h2> Detección de Firewalls </h2> 
+
+
+
+<p> La detección de firewalls se realiza principalmente durante el escaneo de puertos para identificar si un firewall está bloqueando tráfico, droppeando paquetes o rechazando conexiones. Nmap usa varias técnicas pasivas y activas para inferir la presencia de un firewall:<p>
+
+
+<p>Tecnicas principales<p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/B6hy023F/140.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>Fingerprinting de firewalls específicos:<p>
+
+
+<p>Fingerprinting, es la técnica de recopilar y analizar información sobre un sistema, red, aplicación o dispositivo para identificar sus características específicas, como el sistema operativo, versión de software, servicios en ejecución, bibliotecas usadas o incluso el navegador y plugins de un usuario.<p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/gJf7jmwd/141.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> Evasión de IDS/IPS y Firewalls </h2> 
+
+
+<p> Los IDS/IPS detectan patrones de escaneos (e.g., Snort rules para SYN floods). Nmap evade alterando tráfico para evitar firmas, rate-limiting y reensamblado:<p>
+
+
+<p>Tecnicas principales<p>
+
+<p>Fragmentación y manipulación de paquetes:<p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/FH3HHH7d/142.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Scans evasivos por tipo:<p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/13fYG8pP/144.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Evasión específica por producto <p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HxsMMyMD/145.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Scripts NSE para evasión <p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HxsMMyMD/145.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
@@ -2317,6 +2397,146 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
  <img src="https://i.postimg.cc/bw28d4wH/5-10.png" alt="Descripción de la imagen">
 
 </p></p>
+
+
+
+
+<h2> :arrow_right: Optimización de escaneos Nmap  </h2> 
+
+
+<h2> :white_check_mark: Timing y evasión temporal: </h2> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/xTBktZWp/147.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+<p> Fragmentación de paquetes y timing lento y reducir la probabilidad de ser detectado.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hP9GSGJj/143.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>•T0 (Paranoico) :  muy lento, se usa para la evasión de IDS </p>
+<p>•T1 (Furtivo) :  bastante lento, se usa para la evasión de IDS </p>
+<p>•T2 (Educado) :  se ralentiza para consumir menos ancho de banda, se ejecuta aproximadamente 10 veces más lento que el valor predeterminado </p>
+<p>•T3 (Normal) :  predeterminado, un modelo de tiempo dinámico basado en la capacidad de respuesta del objetivo </p>
+<p>•T4 (Agresivo) :  supone una red rápida y confiable y puede abrumar a los objetivos </p>
+<p>•T5 (Demente) :  muy agresivo; probablemente abrumará a los objetivos o perderá los puertos abiertoswindows + enter abre terminal </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/SRyCxWLC/5-4.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<h2> :arrow_right: Formatos de salida de Nmap </h2> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Z5sh890M/148.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b>:white_check_mark: &nbsp;  Formato Normal (-oN )</b>.</p>
+
+
+<p> Descripción: Legible para humanos, similar a la salida en pantalla pero guardada en un archivo de texto plano.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Xv347MGX/149.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/85XSHjyM/150.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/L5rFcGFM/151.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p><b>:white_check_mark: &nbsp;  Formato XML (-oX )</b>.</p>
+
+
+
+<p> Es legible por máquinas y permite parsear los resultados con scripts, herramientas como Metasploit, Nessus o Zenmap.</p>
+
+
+<p> Importar el escaneo de Nmap al marco de Metasploit </p>
+
+
+
+<p> 1. Iniciar el servicio de base de datos  &nbsp; Escaneos masivos/continuos: Almacenar historial de múltiples escaneos,  Queries SQL para generar informes </p>
+<p> 2. Iniciar Metasploit </p>
+<p> 3. Validar la conexion de la base de datos con Metasploit </p>
+<p> 5. validar el espacio de trabajo </p>
+<p> 6. Crear o usar un espacio de trabajo </p>  
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hG7cWkfP/153.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Importar resultados de Nmap en formato XML a Metasploit mediante db_import automatiza completamente el pentest: convierte horas de recon manual en segundos de explotación masiva, poblando automáticamente la base de datos con hosts, servicios, versiones y vulnerabilidades detectadas para que comandos como hosts, services, vulns y search type:exploit $SERVICE generen ataques precisos contra todos los objetivos sin tecleo manual; permite pivoting instantáneo entre sesiones, tracking de loot/credenciales/notas NSE, y exportación de reportes profesionales, escalando de 10 a 10k hosts sin esfuerzo mientras cruza tu scan con 3000+ exploits de la DB de Metasploit para own everything con un solo exploit -j</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sXhYWgx4/154.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p><b>:white_check_mark: &nbsp;  Formato Grepable (-oG )</b>.</p>
+
+
+<p> La opción -oG en Nmap genera salida en formato Grepable (uno por línea, fácil de parsear)..</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XvJS4TqF/155.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
 
 
 
