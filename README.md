@@ -2537,10 +2537,6 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-
-
-
-
 <h3> 🛠 &nbsp;Herramientas</h3>
 
 </br>
@@ -2692,11 +2688,32 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </br>
 
 
+
+<p> La enumeración se utiliza para recopilar información detallada y específica sobre el objetivo una vez que se ha completado el reconocimiento inicial. </p>
+
+
+<p><b> 1. Identificar servicios y versiones:</b> Determinar qué puertos están abiertos y qué servicios (HTTP, SSH, FTP, SMB, etc.) se ejecutan en ellos, incluyendo sus versiones exactas. Esto permite buscar vulnerabilidades conocidas (CVEs) asociadas a esas versiones.</p>
+
+
+<p><b> 2. Descubrir usuarios y cuentas válidas:</b> Extraer nombres de usuarios del sistema, cuentas de correo, o credenciales mediante técnicas como enumeración de SMB (enum4linux), consultas LDAP, o fuerza bruta de usuarios en servicios como SSH o VPN.</p>
+
+
+<p><b> 3. Mapear recursos compartidos: </b> Encontrar recursos compartidos en red (como carpetas SMB o NFS), sus permisos, y qué información sensible pueden contener.</p>
+
+
+<p><b> 4. Recolectar información de aplicaciones web: </b> Detectar directorios ocultos, parámetros, tecnologías del lado del servidor (CMS, frameworks, versiones de PHP/ASP.NET), archivos de configuración expuestos, y endpoints API.</p>
+
+
+<p><b> 5. Identificar vulnerabilidades potenciales: </b>Con la información recolectada (versiones, configuraciones, usuarios), se pueden correlacionar con bases de datos de vulnerabilidades para planificar la fase de explotación.</p>
+
+
+
+
 <p> La diferencia entre reconocimiento activo y enumeracion: &nbsp; el reconocimiento activo busca recopilar información inicial del objetivo (a veces interactuando directamente con él), mientras que la enumeración es una fase más profunda y técnica que extrae detalles específicos de servicios, usuarios y recursos disponibles en el sistema. En otras palabras, el reconocimiento responde a “¿qué hay ahí afuera?”, y la enumeración a “¿qué exactamente puedo encontrar y explotar?”.</p>
 
 
-<p> • Reconocimiento Activo = "¿Qué puertas están abiertas?" </p>
-<p> • Enumeración = "¿Qué hay detrás de cada puerta?" </p>
+<p><b>  • Reconocimiento Activo </b>  = "¿Qué puertas están abiertas?" </p>
+<p><b>  • Enumeración </b>  = "¿Qué hay detrás de cada puerta?" </p>
 
 
 </br>
@@ -2719,16 +2736,8 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<h2> :arrow_right: Enumeración de Servicios de Red: </h2> 
+<h2>  :arrow_right: Port Scanning & Enumeration with Nmap </h2>
 
-
-
-<p>Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
-
-
-<p>1.  Identificar servicios vulnerables: Al conocer la versión de un servicio, se pueden buscar vulnerabilidades conocidas asociadas a esa versión.</p>
-<p>2.  Determinar vectores de ataque: Por ejemplo, si un servicio como FTP o SMB está expuesto, podría ser explotado para ganar acceso inicial.</p>
-<p>3.  Mapear la red: Ayuda a entender la arquitectura de la red y cómo interactúan los sistemas entre sí.</p>
 
 
 <div id="user-content-toc">
@@ -2773,7 +2782,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<h2> :white_check_mark: Categorías de scripts:(NSE)</h2>
+<h2> Categorías de scripts:(NSE)</h2>
 
 
 <p>Los scripts de Nmap Scripting Engine (NSE) se organizan en categorías que determinan su propósito y comportamiento. Puedes filtrarlos con script-args o --script="categoria"</p> 
@@ -2795,7 +2804,9 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<p><b> :white_check_mark: Escaneo (-sC) :&nbsp; ejecuta todos los Scripts NSE por defecto (Nmap Scripting Engine).</b></p> 
+<h2> :white_check_mark: Escaneo (-sC) :&nbsp; ejecuta todos los Scripts NSE por defecto (Nmap Scripting Engine).</h2>
+
+
 
 
  <p align="center">
@@ -2805,7 +2816,9 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
  </p>
 
 
-<p><b> :white_check_mark: Paramentro (-A) </b>:&nbsp; Esta opción habilita opciones avanzadas y agresivas adicionales. Actualmente, habilita la <b> detección del sistema operativo (-O), el escaneo de versiones (-sV), el escaneo de scripts (-sC) y el traceroute (--traceroute)</b></p> 
+
+
+<h2> :white_check_mark: Paramentro (-A) </b>:&nbsp; Esta opción habilita opciones avanzadas y agresivas adicionales. Actualmente, habilita la <b> detección del sistema operativo (-O), el escaneo de versiones (-sV), el escaneo de scripts (-sC) y el traceroute (--traceroute)</h2> 
 
 
 <p>Nota: dado que el escaneo de scripts con la configuración predeterminada se considera intrusivo, no debe utilizar -A en redes de destino sin permiso. Esta opción solo habilita funciones, y no opciones de tiempo (como -T4) u opciones de detalle (-v) que quizá también desee utilizar. Las opciones que requieren privilegios (por ejemplo, acceso de root), como la detección del sistema operativo y traceroute, solo se habilitarán si se dispone de dichos privilegios. </p> 
@@ -2830,7 +2843,9 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </br>
 
 
-<p>(Discovery):&nbsp; Descubrimiento de hosts y servicios con mayor alcance y profundidad que un escanero comun.</p>
+
+
+<h2> :white_check_mark: (Discovery): &nbsp; Descubrimiento de hosts y servicios con mayor alcance y profundidad que un escanero comun.</h2>
 
 <p> • Descubrir hosts activos en la red (ej. con ARP, ICMP).</p>
 <p> • Enumerar servicios ocultos (ej. SNMP, SMB, DNS).</p>
@@ -2859,7 +2874,11 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </br>
 </br>
 
-<p>(Exploit):&nbsp; Está diseñado para probar y explotar vulnerabilidades conocidas en sistemas o servicios. Su objetivo principal es verificar si un objetivo es vulnerable a un ataque específico, proporcionando una forma controlada de demostrar el riesgo</p>
+
+
+<h2> :white_check_mark: (Exploit):&nbsp; Está diseñado para probar y explotar vulnerabilidades conocidas en sistemas o servicios. Su objetivo principal es verificar si un objetivo es vulnerable a un ataque específico, proporcionando una forma controlada de demostrar el riesgo </h2>
+
+
 
 </br>
 
@@ -2881,7 +2900,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </br>
 </br>
 
-<p>(Vuln):&nbsp; Diseñado para detectar vulnerabilidades conocidas en servicios, sistemas o aplicaciones</p>
+<h2> :white_check_mark: (Vuln):&nbsp; Diseñado para detectar vulnerabilidades conocidas en servicios, sistemas o aplicaciones </h2>
 
 </br>
 
@@ -2894,7 +2913,9 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </br>
 </br>
 
-<p>(Brute):&nbsp; Diseñado para realizar ataques de fuerza bruta contra servicios de autenticación (como FTP, SSH, HTTP, SMB, etc.). Su objetivo es probar credenciales predeterminadas o débiles para identificar accesos no autorizados.</p>
+
+
+<h2> :white_check_mark: (Brute):&nbsp; Diseñado para realizar ataques de fuerza bruta contra servicios de autenticación (como FTP, SSH, HTTP, SMB, etc.). Su objetivo es probar credenciales predeterminadas o débiles para identificar accesos no autorizados. </h2>
 
 </br>
 
@@ -2913,8 +2934,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </br>
 
 
-<p>(Safe):&nbsp; Diseñado para realizar pruebas no intrusivas y seguras en sistemas y servicios. A diferencia de los scripts vuln o brute, los scripts safe están pensados para no causar ningún daño o interrupción en los sistemas objetivo, lo que los hace ideales para:</p>
-
+<h2> :white_check_mark: (Safe):&nbsp; Diseñado para realizar pruebas no intrusivas y seguras en sistemas y servicios. A diferencia de los scripts vuln o brute, los scripts safe están pensados para no causar ningún daño o interrupción en los sistemas objetivo, lo que los hace ideales para: </h2>
 
 <p> • Escaneos preliminares en entornos sensibles.</p>
 <p> • Auditorías de cumplimiento donde se requiere minimizar riesgos.</p>
@@ -2925,6 +2945,119 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
  <img src="https://i.postimg.cc/G2Y6HtZ0/7-2.png" alt="Descripción de la imagen">
 
 </br>
+
+
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h3 style="display: inline-block">🛠 Metasploit </h3></summary>
+  </ul>
+</div>
+
+</br>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Gm5j0V6v/1.jpg" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p>En Metasploit, puedes realizar enumeración de usuarios en diferentes protocolos y servicios, como Kerberos, SMB, LDAP, HTTP, entre otros.</p>
+
+
+
+<p> Syntax: search enumusers: &nbsp; filtrar por todos los modulos relacionados con enumeracion de usuarios</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/tRs2Xhhh/3.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> usar modulo ejemplo: [use 6] o [use auxiliary/scanner/ssh/ssh_enumusers] </p>
+
+<p> 1. Establecer la IP objetivo:&nbsp; set RHOSTS [IP objetivo] </p>
+<p> 2. Especificar el archivo de usuarios a comparar con los usuarios del objetivo set USER_FILE [RUTA_DEL_ARCHIVO_CON_USUARIOS] </p>
+<p> &nbsp; Nota: &nbsp; El archivo usuarios.txt debe contener una lista de nombres de usuario, uno por línea</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/wvZP6FMG/5.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> 3. Ejecutar el módulo [run] </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KjbPrgHY/4.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> Resultado: Usuarios que se encuentran en el servidor objetivo </p>
+
+<p> &nbsp; Nota: &nbsp; con el comando [options] sirve para validar los parametros que se pueden configurar </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/RFK1HTG8/6.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2> :arrow_right: Enumeración de Servicios de Red: </h2> 
+
+
+
+<p>Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
+
+
+<p>1.  Identificar servicios vulnerables: Al conocer la versión de un servicio, se pueden buscar vulnerabilidades conocidas asociadas a esa versión.</p>
+<p>2.  Determinar vectores de ataque: Por ejemplo, si un servicio como FTP o SMB está expuesto, podría ser explotado para ganar acceso inicial.</p>
+<p>3.  Mapear la red: Ayuda a entender la arquitectura de la red y cómo interactúan los sistemas entre sí.</p>
 
 
 
@@ -3163,67 +3296,25 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 
-<div id="user-content-toc">
-  <ul align="center">
-    <summary><h3 style="display: inline-block">🛠 Metasploit </h3></summary>
-  </ul>
-</div>
-
-</br>
-
-<p align="center">
-
- <img src="https://i.postimg.cc/Gm5j0V6v/1.jpg" alt="Descripción de la imagen">
-
- </p>
-
-
-<p>En Metasploit, puedes realizar enumeración de usuarios en diferentes protocolos y servicios, como Kerberos, SMB, LDAP, HTTP, entre otros.</p>
 
 
 
-<p> Syntax: search enumusers: &nbsp; filtrar por todos los modulos relacionados con enumeracion de usuarios</p>
 
 
 
-<p align="center">
-
- <img src="https://i.postimg.cc/tRs2Xhhh/3.png" alt="Descripción de la imagen">
-
- </p>
-
-<p> usar modulo ejemplo: [use 6] o [use auxiliary/scanner/ssh/ssh_enumusers] </p>
-
-<p> 1. Establecer la IP objetivo:&nbsp; set RHOSTS [IP objetivo] </p>
-<p> 2. Especificar el archivo de usuarios a comparar con los usuarios del objetivo set USER_FILE [RUTA_DEL_ARCHIVO_CON_USUARIOS] </p>
-<p> &nbsp; Nota: &nbsp; El archivo usuarios.txt debe contener una lista de nombres de usuario, uno por línea</p>
-
-<p align="center">
-
- <img src="https://i.postimg.cc/wvZP6FMG/5.png" alt="Descripción de la imagen">
-
- </p>
-
-<p> 3. Ejecutar el módulo [run] </p>
 
 
-<p align="center">
-
- <img src="https://i.postimg.cc/KjbPrgHY/4.png" alt="Descripción de la imagen">
-
- </p>
 
 
-<p> Resultado: Usuarios que se encuentran en el servidor objetivo </p>
-
-<p> &nbsp; Nota: &nbsp; con el comando [options] sirve para validar los parametros que se pueden configurar </p>
 
 
-<p align="center">
 
- <img src="https://i.postimg.cc/RFK1HTG8/6.png" alt="Descripción de la imagen">
 
- </p>
+
+
+
+
+
 
 
 <p><h3> Enumeración de usuarios en KERBEROS </h3> La enumeración de usuarios en Kerberos es una técnica utilizada para identificar cuentas de usuario válidas en un entorno de autenticación basado en Kerberos, común en entornos de Active Directory (AD). Kerberos es un protocolo de autenticación de red que utiliza tickets para permitir nodos comunicarse de manera segura. Aunque Kerberos está diseñado para ser seguro, ciertos comportamientos pueden permitir la enumeración de usuarios.</p>
