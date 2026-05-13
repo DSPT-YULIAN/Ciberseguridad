@@ -2724,16 +2724,6 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 </br>
 
-<div id="user-content-toc">
-  <ul align="center">
-    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=33&pause=1000&width=600&height=200&lines=Enumeracion+de+servicios+y+S.O)](https://git.io/typing-svg" alt="Typing SVG" /></a></summary>
-  </ul>
-</div>
-
-
-</br>
-</br>
-
 
 
 <h2>  :arrow_right: Port Scanning & Enumeration with Nmap </h2>
@@ -3014,6 +3004,93 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
+<h2> :arrow_right: Importing Nmap Scan Results into MSF / Importación de resultados de escaneo de Nmap a MSF </h2> 
+
+
+<p> ----------- Fragmento tomado de Formatos de salida ----> XML (-oX )</b>.</p></p>
+
+
+<p> 1. Iniciar el servicio de base de datos  &nbsp; Escaneos masivos/continuos: Almacenar historial de múltiples escaneos,  Queries SQL para generar informes </p>
+<p> 2. Iniciar Metasploit </p>
+<p> 3. Validar la conexion de la base de datos con Metasploit </p>
+<p> 5. validar el espacio de trabajo </p>
+<p> 6. Crear o usar un espacio de trabajo </p>  
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hG7cWkfP/153.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Importar resultados de Nmap en formato XML a Metasploit mediante db_import automatiza completamente el pentest: convierte horas de recon manual en segundos de explotación masiva, poblando automáticamente la base de datos con hosts, servicios, versiones y vulnerabilidades detectadas para que comandos como hosts, services, vulns y search type:exploit $SERVICE generen ataques precisos contra todos los objetivos sin tecleo manual; permite pivoting instantáneo entre sesiones, tracking de loot/credenciales/notas NSE, y exportación de reportes profesionales, escalando de 10 a 10k hosts sin esfuerzo mientras cruza tu scan con 3000+ exploits de la DB de Metasploit para own everything con un solo exploit -j</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sXhYWgx4/154.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> ---------------------------------</p>
+
+<p> Realizar un nuevo escaneo dentro de Metasploit con el fin de que se almacene el resultado directamente en la herramienta de Metasploit </p>
+
+
+<p> 1. Crear un nuevo espacio de trabajo </p>
+<p> 2. Iniciar Metasploit </p>
+<p> 3. Validar la conexion de la base de datos con Metasploit </p>
+<p> 5. validar el espacio de trabajo </p>
+<p> 6. Crear o usar un espacio de trabajo </p>  
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/2Ss4HPx5/156.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :arrow_right: Port Scanning with Auxiliary Modules Metasploit</h2> 
+
+<p> una vez se encuentra dentro del Workspace se pueden comenzar a interactuar con los modulos auxiliares </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/qqGTYVKs/158.png" alt="Descripción de la imagen">
+
+</p>
+
+</br>
+</br>
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=25&pause=1000&width=500&height=80&lines=T1046+%3A+Network+Service+Scanning" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+</br>
+
+
+<p> Tactica "Descubrimiento"</p>
+<p> Tecnica "1046" </p>
+
+<h2> Descubrimiento de servicios de red <h2>
+
+<p> Los adversarios pueden intentar obtener una lista de servicios que se ejecutan en hosts remotos y dispositivos de infraestructura de red local, incluidos aquellos que pueden ser vulnerables a la explotación remota de software. Los métodos comunes para adquirir esta información incluyen escaneos de puertos, vulnerabilidades y/o listas de palabras utilizando herramientas que se incorporan a un sistema.[1]
+
+Dentro de entornos de nube, los adversarios pueden intentar descubrir servicios que se ejecutan en otros hosts de nube. Además, si el entorno de nube está conectado a un entorno local, los adversarios también pueden identificar servicios que se ejecutan en sistemas que no son de nube.
+
+Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa Bonjour para descubrir servicios que se ejecutan en otros hosts macOS dentro de una red. El demonio Bonjour mDNSResponder registra y anuncia automáticamente los servicios registrados de un host en la red. Por ejemplo, los adversarios pueden utilizar una consulta mDNS </p>
+
+
+<a href=https://attack.mitre.org/techniques/T1046/> 
 
 
 
@@ -3034,21 +3111,9 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-----------------------------------------------------------------------
 
 
 
-
-
-
-
-
-
-
-
-
-
-<h2> :arrow_right: Enumeración de Servicios de Red: </h2> 
 
 
 
