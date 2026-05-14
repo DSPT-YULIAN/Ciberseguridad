@@ -2720,7 +2720,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<!----------------------------------------------------------------------------- ## Enumeracion ------------------------------------------------------------------------------------------------------------------>
+<!----------------------------------------------------------------------------- ## Enumeracion NMAP Scripting Engine (NSE) ------------------------------------------------------------------------------------------------------------------>
 
 </br>
 
@@ -2937,7 +2937,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </br>
 
 
-
+<!----------------------------------------------------------------------------- ## Enumeracion Metasploit ------------------------------------------------------------------------------------------------------------------>
 
 <div id="user-content-toc">
   <ul align="center">
@@ -3066,78 +3066,8 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 </p>
 
-</br>
-</br>
 
-<div id="user-content-toc">
-  <ul align="center">
-    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=25&pause=1000&width=500&height=80&lines=T1046+%3A+Network+Service+Scanning" alt="Typing SVG" /></a></summary>
-  </ul>
-</div>
-
-</br>
-
-
-<p> Tactica "Descubrimiento"</p>
-<p> Tecnica "1046" </p>
-
-<h2> Descubrimiento de servicios de red <h2>
-
-<p> Los adversarios pueden intentar obtener una lista de servicios que se ejecutan en hosts remotos y dispositivos de infraestructura de red local, incluidos aquellos que pueden ser vulnerables a la explotación remota de software. Los métodos comunes para adquirir esta información incluyen escaneos de puertos, vulnerabilidades y/o listas de palabras utilizando herramientas que se incorporan a un sistema.[1]
-
-Dentro de entornos de nube, los adversarios pueden intentar descubrir servicios que se ejecutan en otros hosts de nube. Además, si el entorno de nube está conectado a un entorno local, los adversarios también pueden identificar servicios que se ejecutan en sistemas que no son de nube.
-
-Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa Bonjour para descubrir servicios que se ejecutan en otros hosts macOS dentro de una red. El demonio Bonjour mDNSResponder registra y anuncia automáticamente los servicios registrados de un host en la red. Por ejemplo, los adversarios pueden utilizar una consulta mDNS </p>
-
-
-<a href=https://attack.mitre.org/techniques/T1046/> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p>Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
-
-
-<p>1.  Identificar servicios vulnerables: Al conocer la versión de un servicio, se pueden buscar vulnerabilidades conocidas asociadas a esa versión.</p>
-<p>2.  Determinar vectores de ataque: Por ejemplo, si un servicio como FTP o SMB está expuesto, podría ser explotado para ganar acceso inicial.</p>
-<p>3.  Mapear la red: Ayuda a entender la arquitectura de la red y cómo interactúan los sistemas entre sí.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!----------------------------------------------------------------------------- ## Enumeracion Netcat ------------------------------------------------------------------------------------------------------------------>
 
 
 <div id="user-content-toc">
@@ -3199,6 +3129,9 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <p> 4. Proxy y tunelización: &nbsp; &nbsp;   Redirigir el tráfico a través de un host intermedio.</p>
 
 <p> 5. Creación de servidores simples: &nbsp; &nbsp; Servidor de chat, servidor HTTP básico, etc.</p>
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion Masscan  ------------------------------------------------------------------------------------------------------------------>
 
 
 <div id="user-content-toc">
@@ -3265,6 +3198,158 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
  <img src="https://i.postimg.cc/tCZKF4r0/4.png" alt="Descripción de la imagen">
 
  </p>
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion de servicios de RED ------------------------------------------------------------------------------------------------------------------>
+
+
+
+</br>
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=25&pause=1000&width=500&height=80&lines=T1046+%3A+Network+Service+Scanning" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+</br>
+
+
+<p> Tactica "Descubrimiento"</p>
+<p> Tecnica "1046" </p>
+
+<h2> Descubrimiento de servicios de red <h2>
+
+<p> Los adversarios pueden intentar obtener una lista de servicios que se ejecutan en hosts remotos y dispositivos de infraestructura de red local, incluidos aquellos que pueden ser vulnerables a la explotación remota de software. Los métodos comunes para adquirir esta información incluyen escaneos de puertos, vulnerabilidades y/o listas de palabras utilizando herramientas que se incorporan a un sistema.[1]
+
+Dentro de entornos de nube, los adversarios pueden intentar descubrir servicios que se ejecutan en otros hosts de nube. Además, si el entorno de nube está conectado a un entorno local, los adversarios también pueden identificar servicios que se ejecutan en sistemas que no son de nube.
+
+Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa Bonjour para descubrir servicios que se ejecutan en otros hosts macOS dentro de una red. El demonio Bonjour mDNSResponder registra y anuncia automáticamente los servicios registrados de un host en la red. Por ejemplo, los adversarios pueden utilizar una consulta mDNS (dns-sd-b_ssh_tcp.) para econtrar otros sistemas que trasmiten el servicio SSH</p>
+
+
+<p> https://attack.mitre.org/techniques/T1046/> </p>
+
+
+
+<p>Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
+
+
+<p>1.  Identificar servicios vulnerables: Al conocer la versión de un servicio, se pueden buscar vulnerabilidades conocidas asociadas a esa versión.</p>
+<p>2.  Determinar vectores de ataque: Por ejemplo, si un servicio como FTP o SMB está expuesto, podría ser explotado para ganar acceso inicial.</p>
+<p>3.  Mapear la red: Ayuda a entender la arquitectura de la red y cómo interactúan los sistemas entre sí.</p>
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion FTP ------------------------------------------------------------------------------------------------------------------>
+
+
+
+<p><h2> 3.&nbsp; Enumeración FTP </h2> FTP (File Transfer Protocol) es un protocolo de red que permite la transferencia de archivos entre un cliente y un servidor. Utiliza dos canales: </p>
+
+<p> • Canal de control (puerto 21): Para comandos</p>
+<p> • Canal de datos (puerto 20 o dinámico): Para transferencia de archivos</p>
+
+<p> Nota: &nbsp; FTP no es cifrado se recomienda usar SFTP (puerto 22) SFTP no es un protocolo independiente, sino una subfunción del protocolo SSH por lo tanto opera dentro del canal seguro que establece SSH. Adicionalmente, Se requiere tener credenciales </p>
+
+
+<h3> Objetivos de la enumeración FTP<h3>
+
+
+<p> •&nbsp; Identificar usuarios válidos. </p> 
+<p> •&nbsp; Acceder a recursos compartidos.</p>
+<p> •&nbsp; Encontrar archivos sensibles (contraseñas, configuraciones, etc.). </p>
+<p> •&nbsp; Detectar configuraciones inseguras (permisos, modo anónimo, etc.). </p>
+<p> •&nbsp; Explotar vulnerabilidades conocidas en servidores FTP. </p>
+<p> •&nbsp; Subida y descarga masiva de archivos.</p> 
+
+
+<p>Pasos</p>
+
+<p>1) Conocer la version del servidor FTP con el fin de saber si tiene vulnerabilidades que puedan ser explotadas </p>
+
+<p>2) Conocer si permite el acceso con el usuario anonymous </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/yx6Y70DR/1.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p>Iniciar sesion con el usuario Anonymous y contraseña default estableciendo comunicacion por el puerto 21 </p>
+<p>Visualizar los archivos a los cuales tenemos acceso con el usuario Anonymous </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PJHKJ5HC/2.png" alt="Descripción de la imagen">
+
+
+
+<p>3) Conocer si el usuario con el que ingrese puede moverse libremente entre ficheros </p>
+<p>4) Conocer si esta permitida la subida de fucheros con el usuario que se esta accediendo </p>
+
+
+
+
+<p>Uso de herramientas dedicadas a enumeracion Nmap(script NSE) o modulos de Metasploit</p>
+
+<p> Nmap(script NSE): Ver Scripts que sirver para enumerar el protocolo de FTP </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/RZpSndwM/3.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p><h2> Enumeración de usuarios: </h2> La enumeración de usuarios es una técnica utilizada en pruebas de penetración y auditorías de seguridad para identificar nombres de usuario válidos en un sistema, aplicación o servicio. Este proceso es fundamental en las fases iniciales de un ataque, ya que permite a un atacante conocer qué cuentas existen en el sistema, lo que facilita ataques posteriores como fuerza bruta, phishing o ataques de diccionario.</p>
 
@@ -3358,23 +3443,6 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <p> •  -n Hacer un nmblookup (similar a nbtstat)</p>
 <p> •  -v Verbose.  Muestra todos los comandos que se están ejecutando (net, rpcclient, etc.)</p>
 <p> •  -A Agresivo. Realiza comprobaciones de escritura en recursos compartidos, etc.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3554,63 +3622,6 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 <p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
 
-
-<p><h2> 3.&nbsp; Enumeración FTP </h2> FTP (File Transfer Protocol) es un protocolo de red que permite la transferencia de archivos entre un cliente y un servidor. Utiliza dos canales: </p>
-
-<p> • Canal de control (puerto 21): Para comandos</p>
-<p> • Canal de datos (puerto 20 o dinámico): Para transferencia de archivos</p>
-
-<p> Nota: &nbsp; FTP no es cifrado se recomienda usar SFTP (puerto 22) SFTP no es un protocolo independiente, sino una subfunción del protocolo SSH por lo tanto opera dentro del canal seguro que establece SSH. Adicionalmente, Se requiere tener credenciales </p>
-
-
-<h3> Objetivos de la enumeración FTP<h3>
-
-
-<p> •&nbsp; Identificar usuarios válidos. </p> 
-<p> •&nbsp; Acceder a recursos compartidos.</p>
-<p> •&nbsp; Encontrar archivos sensibles (contraseñas, configuraciones, etc.). </p>
-<p> •&nbsp; Detectar configuraciones inseguras (permisos, modo anónimo, etc.). </p>
-<p> •&nbsp; Explotar vulnerabilidades conocidas en servidores FTP. </p>
-<p> •&nbsp; Subida y descarga masiva de archivos.</p> 
-
-
-<p>Pasos</p>
-
-<p>1) Conocer la version del servidor FTP con el fin de saber si tiene vulnerabilidades que puedan ser explotadas </p>
-
-<p>2) Conocer si permite el acceso con el usuario anonymous </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/yx6Y70DR/1.png" alt="Descripción de la imagen">
-
- </p>
-
-<p>Iniciar sesion con el usuario Anonymous y contraseña default estableciendo comunicacion por el puerto 21 </p>
-<p>Visualizar los archivos a los cuales tenemos acceso con el usuario Anonymous </p>
-
-<p align="center">
-
- <img src="https://i.postimg.cc/PJHKJ5HC/2.png" alt="Descripción de la imagen">
-
-
-
-<p>3) Conocer si el usuario con el que ingrese puede moverse libremente entre ficheros </p>
-<p>4) Conocer si esta permitida la subida de fucheros con el usuario que se esta accediendo </p>
-
-
-
-
-<p>Uso de herramientas dedicadas a enumeracion Nmap(script NSE) o modulos de Metasploit</p>
-
-<p> Nmap(script NSE): Ver Scripts que sirver para enumerar el protocolo de FTP </p>
-
-<p align="center">
-
- <img src="https://i.postimg.cc/RZpSndwM/3.png" alt="Descripción de la imagen">
-
- </p>
 
 
 
