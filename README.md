@@ -3219,9 +3219,11 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p> Tactica "Descubrimiento"</p>
 <p> Tecnica "1046" </p>
 
-<h2> Descubrimiento de servicios de red <h2>
+<h2> :arrow_right:  Descubrimiento de servicios de red </h2>
 
-<p> Los adversarios pueden intentar obtener una lista de servicios que se ejecutan en hosts remotos y dispositivos de infraestructura de red local, incluidos aquellos que pueden ser vulnerables a la explotación remota de software. Los métodos comunes para adquirir esta información incluyen escaneos de puertos, vulnerabilidades y/o listas de palabras utilizando herramientas que se incorporan a un sistema.[1]
+</br>
+
+<p> Los adversarios pueden intentar obtener una lista de servicios que se ejecutan en hosts remotos y dispositivos de infraestructura de red local, incluidos aquellos que pueden ser vulnerables a la explotación remota de software. Los métodos comunes para adquirir esta información incluyen escaneos de puertos, vulnerabilidades y/o listas de palabras utilizando herramientas que se incorporan a un sistema.
 
 Dentro de entornos de nube, los adversarios pueden intentar descubrir servicios que se ejecutan en otros hosts de nube. Además, si el entorno de nube está conectado a un entorno local, los adversarios también pueden identificar servicios que se ejecutan en sistemas que no son de nube.
 
@@ -3244,15 +3246,31 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 
 
-<p><h2> 3.&nbsp; Enumeración FTP </h2> FTP (File Transfer Protocol) es un protocolo de red que permite la transferencia de archivos entre un cliente y un servidor. Utiliza dos canales: </p>
+<h2> :white_check_mark:  Enumeración FTP </h2> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qvXjqsWy/CCA-Protocolo-FTP-1.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+<p> FTP (File Transfer Protocol) es un protocolo de red que permite la transferencia de archivos entre un cliente y un servidor. Utiliza dos canales: </p>
 
 <p> • Canal de control (puerto 21): Para comandos</p>
 <p> • Canal de datos (puerto 20 o dinámico): Para transferencia de archivos</p>
 
-<p> Nota: &nbsp; FTP no es cifrado se recomienda usar SFTP (puerto 22) SFTP no es un protocolo independiente, sino una subfunción del protocolo SSH por lo tanto opera dentro del canal seguro que establece SSH. Adicionalmente, Se requiere tener credenciales </p>
+<p> FTP maneja la autenticacion por lo tanto requiere nombre de usuario y contraseña obteniendo acceso al directorio que ha sido configurado, permitiendo la carga y descarga de archivos </p>
 
 
-<h3> Objetivos de la enumeración FTP<h3>
+<p> Nota: &nbsp; FTP no es cifrado se recomienda usar SFTP (puerto 22) no es un protocolo independiente, sino una subfunción del protocolo SSH por lo tanto opera dentro del canal seguro que establece SSH. Adicionalmente, Se requiere tener credenciales </p>
+
+
+<h3> Objetivos de la enumeración FTP</h3>
 
 
 <p> •&nbsp; Identificar usuarios válidos. </p> 
@@ -3260,14 +3278,14 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <p> •&nbsp; Encontrar archivos sensibles (contraseñas, configuraciones, etc.). </p>
 <p> •&nbsp; Detectar configuraciones inseguras (permisos, modo anónimo, etc.). </p>
 <p> •&nbsp; Explotar vulnerabilidades conocidas en servidores FTP. </p>
-<p> •&nbsp; Subida y descarga masiva de archivos.</p> 
+<p> •&nbsp; Carga y descarga masiva de archivos.</p> 
 
 
 <p>Pasos</p>
 
-<p>1) Conocer la version del servidor FTP con el fin de saber si tiene vulnerabilidades que puedan ser explotadas </p>
+<p>1. Conocer la version del servidor FTP con el fin de saber si tiene vulnerabilidades que puedan ser explotadas </p>
 
-<p>2) Conocer si permite el acceso con el usuario anonymous </p>
+<p>2. Validar si el protocolo permite el acceso con el usuario anonymous </p>
 
 
 <p align="center">
@@ -3284,16 +3302,13 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
  <img src="https://i.postimg.cc/PJHKJ5HC/2.png" alt="Descripción de la imagen">
 
 
-
-<p>3) Conocer si el usuario con el que ingrese puede moverse libremente entre ficheros </p>
-<p>4) Conocer si esta permitida la subida de fucheros con el usuario que se esta accediendo </p>
-
+<p>3. Validar si el usuario con el que ingresa puede moverse libremente entre ficheros </p>
+<p>4. Validar si esta permitida la carga de ficheros con el usuario que se esta accediendo </p>
 
 
+<p> Uso de herramientas dedicadas a enumeracion Nmap(script NSE) o modulos de Metasploit</p>
 
-<p>Uso de herramientas dedicadas a enumeracion Nmap(script NSE) o modulos de Metasploit</p>
-
-<p> Nmap(script NSE): Ver Scripts que sirver para enumerar el protocolo de FTP </p>
+<p> Nmap(script NSE): Ver Scripts que sirven para enumerar el protocolo de FTP </p>
 
 <p align="center">
 
@@ -3301,6 +3316,268 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
  </p>
 
+
+
+<p> Con la ayuda de Metasploit se puede realizar la enumeracion directa de solo el protocolo FTP con la ayuda de los modulos auxiliares </p>
+
+
+<p>1. Validar si el puerto FTP se encuentra abierto</p>
+<p>2. Realizar la configuracion de los paramentros necesarios para el escaneo</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/g0hMhrxL/159.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p>3. Realizar la busqueda de todo los modulos relacionados con FTP </p>
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/63NMfwRW/160.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p>Nota: se puede limitar la busqueda con el siguiente parametro: <b> search type:auxiliary name:FTP, Lo cual enfoca la busqueda solo a los modulos auxliares pasando de un resultados de 565 a 46 </b> </p>
+
+<p>4. Seleccionar el modulo que se requiere, en este caso la opcionde la version de FTP</p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/1XmMbHJY/161.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p>5.Realizar nuevamente la configuracion de los parametros para el nuevo modulo auxiliar </p>
+<p>6.Ejecutar </p>
+<p>7.Validar el resultado donde la herramienta informa la version de FTP que se esta ejecutando en el servidor, esta informacion es util por que podemos usarla para identificar vulnerabilidades para esa version en especifico </p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/Gm6Rr80P/162.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p>8. realizar la busqueda teniendo en cuenta la version del protocolo FTP que se esta usando en el servidor </p>
+
+<p>El resultado se podra usar en la fase de explotacion por medio del uso de exploit</p>
+
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/GpjXKVjr/163.png" alt="Descripción de la imagen">
+
+ </p>
+
+ 
+
+<h3> :radio_button: &nbsp; Fuerza Bruta al protocolo FTP  </h3>
+
+<p> Se usa para identificar el nombre de usuario y contraseña </p>
+
+<p>1. Selecionar el modulo que corresponde </p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/jqPNRsp9/164.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p>2. Complemtentar los parametros requeridos </p>
+<p>3. Ejecutar </p>
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/527QsjzV/165.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p>4. Validd las coincidencias entre el resultado de ataque de fuerza bruta por diccionario y los usuarios de FTP </p>
+
+
+  <p align="center">
+
+ <img src="https://i.postimg.cc/GpjXKVjr/163.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+  <p align="center">
+
+ <img src="https://i.postimg.cc/GpjXKVjr/163.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion SMB ------------------------------------------------------------------------------------------------------------------>
+
+
+
+<h2> :white_check_mark: Enumeración SMB </h2> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/BvfscT0D/smbmap.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> (Server Message Block) es una técnica fundamental en pruebas de penetración y auditorías de seguridad para recopilar información sobre sistemas Windows </p>
+
+
+
+</br>
+
+<p>&nbsp; • Recursos compartidos (Shares):&nbsp; Lista de carpetas, impresoras u otros recursos compartidos en la red.&nbsp;<br>
+( bash:&nbsp; smbclient -L // [target_IP] -N ) </p>
+<p>&nbsp; • Usuarios y Grupos:&nbsp; Nombres de usuarios válidos en el sistema, lo que puede ser útil para ataques de fuerza bruta o phishing. &nbsp;<br>
+( bash:&nbsp; enum4linux -U [target_IP] ) </p>
+<p>&nbsp; • Información del Sistema Operativo:&nbsp; Detalles como el nombre, versión y build del sistema operativo. &nbsp;<br>
+( bash:&nbsp; nmap --script smb-os-discovery -p 445 [target_IP] ) </p>
+<p>&nbsp; • Sesiones Activas:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp;<br>
+( bash:&nbsp; net session \\ [target_IP] ) </p>
+<p>&nbsp; • Configuraciones de Seguridad:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp; <br>
+( bash:&nbsp; enum4linux [target_IP] ) </p>
+<p>&nbsp; • Vulnerabilidades Conocidas:&nbsp;  Si el sistema aún utiliza SMBv1, puede ser vulnerable a ataques como EternalBlue. &nbsp;<br>
+( bash:&nbsp;  nmap --script smb-protocols -p 445 [target_IP] ) </p>
+
+<p> • Puertos predeterminado: 445/tcp (SMB sobre TCP/IP) o 139/tcp (NetBIOS).</p>
+
+<p> Versiones de SMB en Windows:
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/T1XGnX66/SMB-W.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> Versiones de SMB en Linux (Samba)
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/N09wV0Gt/SMB-L.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> Ejemplo de enumeracion SMB</p>
+
+<p> &nbsp; (1).&nbsp; Escaneo de puertos SMB y recursos compartidos con NMAP  </p>
+
+<p>&nbsp;• -sV :&nbsp; Detecta la versión de SMB. </p>
+<p>&nbsp;• smb-enum-shares :&nbsp; Enumerar los recursos compartidos, permisos, configuraciones inseguras, metadatos y preparar ataques posteriores </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/dVJN883r/3.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> &nbsp; (2).&nbsp; Enumeracion de recursos compartidos, permisos y comentararios con SMBMAP </p>
+
+<p> 🛠 &nbsp; SMBMAP &nbsp; Herramienta diseñada  para enumerar, explorar y explotar recursos compartidos SMB </p>
+
+</br>
+
+<p> • Enumerar recursos compartidos (shares) sin autenticación o con credenciales </p>
+<p> &nbsp; Sin credenciales ( bash:&nbsp; smbmap -[target_IP] ) </p>
+<p> &nbsp; Con credenciales ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña]) </p>
+
+<p> • Explorar el contenido de un recurso compartido</p>
+<p> &nbsp; ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] -r [recurso_compartido]) </p>
+
+<p> • Descargar/Subir archivos (si los permisos lo permiten)</p>
+<p> &nbsp; Descargar un archivo : ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] --dowload [ruta remota] </p>
+<p> &nbsp; Cargar un archivo : ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] --upload [archivo_local] [ruta remota] </p>
+
+<p> • Ejecución de comandos remotos (si hay suficientes privilegios)</p>
+<p> &nbsp; ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] -x "net user hacker P@ssw0rd /add ) </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/J0nZrzzy/4.png" alt="Descripción de la imagen">
+
+ </p>
+
+ <p> Solo se tiene acceso al recurso compartido temporales (tmp) el cual se encuentra en READ, WHRITE </p>
+
+ <p>&nbsp; (3).&nbsp; conectarse al recurso compartido que tiene permisos con SMBCLIENT</p>
+
+ <p> 🛠 &nbsp; SMBCLIENT &nbsp; Herramienta que permite interactuar con recursos compartidos </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qBDpDXWc/5-1.png" alt="Descripción de la imagen">
+
+ </p>
+
+ <p> Al ingresar al recurso compartido tmp, es posible visualizar los archivos temporales, validar los permisos de escritura y descargar archivos para revisar su contenido </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KvLvK3sn/6.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p>&nbsp; (4).&nbsp; Enumeracion de usuarios con RCPCLIENT cuando no se tiene acceso a ningun recurso compartido</p>
+
+</br>
+
+<p> 🛠 &nbsp; RCPCLIENT &nbsp; Es una herramienta de línea de comandos incluida en el paquete Samba que permite interactuar con servidores Windows mediante RPC (llamadas a procedimiento remoto). Es útil para enumerar usuarios, grupos, políticas y más en sistemas Windows (o Samba en Linux).</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Y0MXYtdY/1.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> &nbsp; (5).&nbsp; Realizar ataque de fuerza bruta Metasploit, Hydra, John the Ripper</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/85BmPCgD/7.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fTkm1CyM/8.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> &nbsp; (6).&nbsp; El usuario msfadmin tiene permisos para leer el recurso compartido (print$), leer el recurso compartido (opt) y permiso de lectura y escritura en los directorios </p>
+<p> &nbsp; (7).&nbsp; Iniciar sesion con el usuario y contraseña msfadmin </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/mrrPF29B/9.png" alt="Descripción de la imagen">
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/kXdzMVr6/10.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> 🛠&nbsp; (8).&nbsp; Ejecutar una reverse shell </p>
 
 
 
@@ -3456,154 +3733,6 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <h2> Enumeración de Recursos Compartidos </h2>
 
 
-<p><h2> 1.&nbsp; Enumeración SMB </h2> (Server Message Block) es una técnica fundamental en pruebas de penetración y auditorías de seguridad para recopilar información sobre sistemas Windows:</p>
-
-<p align="center">
-
- <img src="https://i.postimg.cc/BvfscT0D/smbmap.png" alt="Descripción de la imagen">
-
- </p>
-
-</br>
-
-<p>&nbsp; • Recursos compartidos (Shares):&nbsp; Lista de carpetas, impresoras u otros recursos compartidos en la red.&nbsp;<br>
-( bash:&nbsp; smbclient -L // [target_IP] -N ) </p>
-<p>&nbsp; • Usuarios y Grupos:&nbsp; Nombres de usuarios válidos en el sistema, lo que puede ser útil para ataques de fuerza bruta o phishing. &nbsp;<br>
-( bash:&nbsp; enum4linux -U [target_IP] ) </p>
-<p>&nbsp; • Información del Sistema Operativo:&nbsp; Detalles como el nombre, versión y build del sistema operativo. &nbsp;<br>
-( bash:&nbsp; nmap --script smb-os-discovery -p 445 [target_IP] ) </p>
-<p>&nbsp; • Sesiones Activas:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp;<br>
-( bash:&nbsp; net session \\ [target_IP] ) </p>
-<p>&nbsp; • Configuraciones de Seguridad:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp; <br>
-( bash:&nbsp; enum4linux [target_IP] ) </p>
-<p>&nbsp; • Vulnerabilidades Conocidas:&nbsp;  Si el sistema aún utiliza SMBv1, puede ser vulnerable a ataques como EternalBlue. &nbsp;<br>
-( bash:&nbsp;  nmap --script smb-protocols -p 445 [target_IP] ) </p>
-
-<p> • Puertos predeterminado: 445/tcp (SMB sobre TCP/IP) o 139/tcp (NetBIOS).</p>
-
-<p> Versiones de SMB en Windows:
-
-<p align="center">
-
- <img src="https://i.postimg.cc/T1XGnX66/SMB-W.png" alt="Descripción de la imagen">
-
- </p>
-
-<p> Versiones de SMB en Linux (Samba)
-
-<p align="center">
-
- <img src="https://i.postimg.cc/N09wV0Gt/SMB-L.png" alt="Descripción de la imagen">
-
- </p>
-
-<p> Ejemplo de enumeracion SMB</p>
-
-<p> &nbsp; (1).&nbsp; Escaneo de puertos SMB y recursos compartidos con NMAP  </p>
-
-<p>&nbsp;• -sV :&nbsp; Detecta la versión de SMB. </p>
-<p>&nbsp;• smb-enum-shares :&nbsp; Enumerar los recursos compartidos, permisos, configuraciones inseguras, metadatos y preparar ataques posteriores </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/dVJN883r/3.png" alt="Descripción de la imagen">
-
- </p>
-
-<p> &nbsp; (2).&nbsp; Enumeracion de recursos compartidos, permisos y comentararios con SMBMAP </p>
-
-<p> 🛠 &nbsp; SMBMAP &nbsp; Herramienta diseñada  para enumerar, explorar y explotar recursos compartidos SMB </p>
-
-</br>
-
-<p> • Enumerar recursos compartidos (shares) sin autenticación o con credenciales </p>
-<p> &nbsp; Sin credenciales ( bash:&nbsp; smbmap -[target_IP] ) </p>
-<p> &nbsp; Con credenciales ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña]) </p>
-
-<p> • Explorar el contenido de un recurso compartido</p>
-<p> &nbsp; ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] -r [recurso_compartido]) </p>
-
-<p> • Descargar/Subir archivos (si los permisos lo permiten)</p>
-<p> &nbsp; Descargar un archivo : ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] --dowload [ruta remota] </p>
-<p> &nbsp; Cargar un archivo : ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] --upload [archivo_local] [ruta remota] </p>
-
-<p> • Ejecución de comandos remotos (si hay suficientes privilegios)</p>
-<p> &nbsp; ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] -x "net user hacker P@ssw0rd /add ) </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/J0nZrzzy/4.png" alt="Descripción de la imagen">
-
- </p>
-
- <p> Solo se tiene acceso al recurso compartido temporales (tmp) el cual se encuentra en READ, WHRITE </p>
-
- <p>&nbsp; (3).&nbsp; conectarse al recurso compartido que tiene permisos con SMBCLIENT</p>
-
- <p> 🛠 &nbsp; SMBCLIENT &nbsp; Herramienta que permite interactuar con recursos compartidos </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/qBDpDXWc/5-1.png" alt="Descripción de la imagen">
-
- </p>
-
- <p> Al ingresar al recurso compartido tmp, es posible visualizar los archivos temporales, validar los permisos de escritura y descargar archivos para revisar su contenido </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/KvLvK3sn/6.png" alt="Descripción de la imagen">
-
- </p>
-
-
-<p>&nbsp; (4).&nbsp; Enumeracion de usuarios con RCPCLIENT cuando no se tiene acceso a ningun recurso compartido</p>
-
-</br>
-
-<p> 🛠 &nbsp; RCPCLIENT &nbsp; Es una herramienta de línea de comandos incluida en el paquete Samba que permite interactuar con servidores Windows mediante RPC (llamadas a procedimiento remoto). Es útil para enumerar usuarios, grupos, políticas y más en sistemas Windows (o Samba en Linux).</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/Y0MXYtdY/1.png" alt="Descripción de la imagen">
-
- </p>
-
-
-<p> &nbsp; (5).&nbsp; Realizar ataque de fuerza bruta Metasploit, Hydra, John the Ripper</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/85BmPCgD/7.png" alt="Descripción de la imagen">
-
- </p>
-
-<p align="center">
-
- <img src="https://i.postimg.cc/fTkm1CyM/8.png" alt="Descripción de la imagen">
-
- </p>
-
-<p> &nbsp; (6).&nbsp; El usuario msfadmin tiene permisos para leer el recurso compartido (print$), leer el recurso compartido (opt) y permiso de lectura y escritura en los directorios </p>
-<p> &nbsp; (7).&nbsp; Iniciar sesion con el usuario y contraseña msfadmin </p>
-
-<p align="center">
-
- <img src="https://i.postimg.cc/mrrPF29B/9.png" alt="Descripción de la imagen">
-
-<p align="center">
-
- <img src="https://i.postimg.cc/kXdzMVr6/10.png" alt="Descripción de la imagen">
-
- </p>
-
-<p> 🛠&nbsp; (8).&nbsp; Ejecutar una reverse shell </p>
 
 <p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
 
