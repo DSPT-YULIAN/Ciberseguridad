@@ -3216,8 +3216,23 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </br>
 
 
-<p> Tactica "Descubrimiento"</p>
-<p> Tecnica "1046" </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qvXjqsWy/CCA-Protocolo-FTP-1.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/MpMfrqmK/mitre.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
 
 <h2> :arrow_right:  Descubrimiento de servicios de red </h2>
 
@@ -3228,6 +3243,15 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 Dentro de entornos de nube, los adversarios pueden intentar descubrir servicios que se ejecutan en otros hosts de nube. Además, si el entorno de nube está conectado a un entorno local, los adversarios también pueden identificar servicios que se ejecutan en sistemas que no son de nube.
 
 Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa Bonjour para descubrir servicios que se ejecutan en otros hosts macOS dentro de una red. El demonio Bonjour mDNSResponder registra y anuncia automáticamente los servicios registrados de un host en la red. Por ejemplo, los adversarios pueden utilizar una consulta mDNS (dns-sd-b_ssh_tcp.) para econtrar otros sistemas que trasmiten el servicio SSH</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/g2gXJrcg/mitigacion.png" alt="Descripción de la imagen">
+
+ </p>
+
 
 
 <p> https://attack.mitre.org/techniques/T1046/> </p>
@@ -3244,6 +3268,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 <!----------------------------------------------------------------------------- ## Enumeracion FTP ------------------------------------------------------------------------------------------------------------------>
 
+</br>
 
 
 <h2> :white_check_mark:  Enumeración FTP </h2> 
@@ -3280,8 +3305,9 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <p> •&nbsp; Explotar vulnerabilidades conocidas en servidores FTP. </p>
 <p> •&nbsp; Carga y descarga masiva de archivos.</p> 
 
+</br>
 
-<p>Pasos</p>
+<p><b>Pasos<b></p>
 
 <p>1. Conocer la version del servidor FTP con el fin de saber si tiene vulnerabilidades que puedan ser explotadas </p>
 
@@ -3306,9 +3332,9 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <p>4. Validar si esta permitida la carga de ficheros con el usuario que se esta accediendo </p>
 
 
-<p> Uso de herramientas dedicadas a enumeracion Nmap(script NSE) o modulos de Metasploit</p>
+<p><strong> Uso de herramientas dedicadas a enumeracion Nmap(script NSE) o modulos de Metasploit </strong></p>
 
-<p> Nmap(script NSE): Ver Scripts que sirven para enumerar el protocolo de FTP </p>
+<p><b> Nmap(script NSE):</b>  Ver Scripts que sirven para enumerar el protocolo de FTP </p>
 
 <p align="center">
 
@@ -3318,7 +3344,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 
 
-<p> Con la ayuda de Metasploit se puede realizar la enumeracion directa de solo el protocolo FTP con la ayuda de los modulos auxiliares </p>
+<p> Con la ayuda de <b>Metasploit</b>  se puede realizar la enumeracion directa de solo el protocolo FTP con la ayuda de los modulos auxiliares </p>
 
 
 <p>1. Validar si el puerto FTP se encuentra abierto</p>
@@ -3342,7 +3368,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
  </p>
 
 
-<p>Nota: se puede limitar la busqueda con el siguiente parametro: <b> search type:auxiliary name:FTP, Lo cual enfoca la busqueda solo a los modulos auxliares pasando de un resultados de 565 a 46 </b> </p>
+<p>Nota: se puede limitar la busqueda con el siguiente parametro: <b> search type:auxiliary name:FTP,</b>&nbsp; Lo cual enfoca la busqueda solo a los modulos auxliares pasando de un resultados de 565 a 46 </p>
 
 <p>4. Seleccionar el modulo que se requiere, en este caso la opcionde la version de FTP</p>
 
@@ -3377,7 +3403,8 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
  </p>
 
- 
+
+  </br>
 
 <h3> :radio_button: &nbsp; Fuerza Bruta al protocolo FTP  </h3>
 
@@ -3393,7 +3420,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
  </p>
 
 
-<p>2. Complemtentar los parametros requeridos </p>
+<p>2. Complemetar los parametros requeridos, seleccionr el diccionario que mejor se acomode al resultado que se espera </p>
 <p>3. Ejecutar </p>
 
  <p align="center">
@@ -3402,23 +3429,28 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
  </p>
 
-<p>4. Validd las coincidencias entre el resultado de ataque de fuerza bruta por diccionario y los usuarios de FTP </p>
+<p>4. Validar las coincidencias entre el resultado de ataque de fuerza bruta por diccionario y los usuarios de FTP </p>
 
 
   <p align="center">
 
- <img src="https://i.postimg.cc/GpjXKVjr/163.png" alt="Descripción de la imagen">
+ <img src="https://i.postimg.cc/nzqWmjsX/166.png" alt="Descripción de la imagen">
 
  </p>
+
+<p>5. ingresar al servidor FTP con las credenciales identificadas</p>
+<p>6. Explorar y descargar los archivos de valor</p>
 
 
   <p align="center">
 
- <img src="https://i.postimg.cc/GpjXKVjr/163.png" alt="Descripción de la imagen">
+ <img src="https://i.postimg.cc/sDTN5R2g/167.png" alt="Descripción de la imagen">
 
  </p>
 
 
+
+ </br>
 
 <!----------------------------------------------------------------------------- ## Enumeracion SMB ------------------------------------------------------------------------------------------------------------------>
 
