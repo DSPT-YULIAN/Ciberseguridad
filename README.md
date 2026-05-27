@@ -55,10 +55,17 @@
 
 </br>
 
-<h2> :arrow_right:&nbsp; Metodología </h2>
+<h2> :arrow_right:&nbsp; Metodología / Penetration Testing Frameworks </h2>
 
 
-<h3> :white_check_mark: &nbsp; OSSTMM  </h3>
+
+<p> Un marco de pruebas de penetración es una metodología estructurada que guía a los profesionales de seguridad a través de cada etapa de un compromiso, desde la planificación y el alcance iniciales hasta la explotación, los informes y la validación de la remediación </p>
+
+
+
+<h2> :white_check_mark: &nbsp; OSSTMM  </h2>
+<p> Enfoque científico basado en métricas para las pruebas de seguridad  </p>
+
 
 <p> El Manual de Metodología de Pruebas de Seguridad de Código Abierto proporciona un marco detallado de estrategias de prueba para sistemas, software, aplicaciones, comunicaciones y el aspecto humano de la ciberseguridad </p>
 <p> La metodología se centra principalmente en cómo se comunican estos sistemas, aplicaciones, por lo que incluye una metodología para:  </p>
@@ -69,17 +76,62 @@
 <p><b> • &nbsp; Comunicaciones inalámbricas</b></p>
 
 
-<h3> :white_check_mark: &nbsp; OWASP </h3>
+<p>OSSTMM organiza pruebas alrededor de cinco canales de seguridad, reflejando su filosofía de que la seguridad no es sólo un problema de red:</p>
 
-<p> El marco del " Proyecto de seguridad de aplicaciones web abiertas " es un marco impulsado por la comunidad y actualizado con frecuencia que se utiliza únicamente para probar la seguridad de las aplicaciones y servicios web. </p>
-<p> La fundación  escribe periódicamente informes  que indican las diez principales vulnerabilidades de seguridad que puede tener una aplicación web, el enfoque de prueba y la solución. </p>
+<p><b>Seguridad Humana (HUMSEC):</b> Ingeniería socialy vulnerabilidades del factor humano.</p>
+<p><b>Seguridad física (PHYSSEC):</b> Controles de acceso físico, desde lectores de insignias hasta tailgating.</p>
+<p><b>Comunicaciones inalámbricas (SPECSEC):</b> Wi-Fi, Bluetooth, RFID y otras señales electromagnéticas.</p>
+<p><b>Telecomunicaciones (COMSEC):</b> Sistemas telefónicos, VoIP, fax e infraestructura de módem.</p>
+<p><b>Redes de datos (DATASEC):</b> Servicios de red, firewalls y protocolos de capa de aplicación.</p>
 
+
+<h3> :radio_button: &nbsp; Fases </h3>
+
+<p>El ciclo de pruebas OSSTMM tiene cuatro fases.</p>
+
+
+<p><b> • &nbsp; Fase 1: Inducción</b> cubre enumeración y verificación. Mapeas lo que existe y confirmas que es real. (Consulta DNS, certificados, subdominios) Luego verifica que cada activo esté activo y responda. El resultado es un inventario confirmado del entorno objetivo.</p>
+
+<p><b> • &nbsp; Fase 2: Interacción  </b> Cubre la calificación y cuantificación. Activos verificados y evalúa su relevancia (te conectas a cada servicio, identificas su tecnología y cuantificas la exposición) Estos hallazgos 
+alimentan directamente el cálculo de la superficie de ataque.</p>
+
+<p><b> • &nbsp; Fase 3: Investigación</b> Cubre la escalada de privilegios y la escalada de verificación (Se prueba si la exposición medida se puede convertir en acceso no autorizado.) </p>
+
+<p><b> • &nbsp; Fase 4: Intervención</b>Cubre cuarentena, auditoría y incitación (Aborda los hallazgos y examina el entorno de control más amplio)</p>
+
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; OWASP </h2>
+<p> Enfoque científico basado en métricas para las pruebas de seguridad  </p>
+
+<p> Guía de pruebas de seguridad web (WSTG) " es un marco impulsado por la comunidad y actualizado con frecuencia que se utiliza únicamente para probar la seguridad de las aplicaciones y servicios web. </p>
+
+<p>El WSTG adopta una enfoque basado en riesgos: las vulnerabilidades se priorizan en función de su explotabilidad e impacto, no simplemente se catalogan. Este enfoque significa que el marco ayuda a los evaluadores a centrar sus esfuerzos donde más importan.</p>
+
+
+<h3> :radio_button: &nbsp; Fases: Seguridad en todo el SDLC </h3>
+
+<p> Alinea las pruebas en cinco fases del Ciclo de vida del desarrollo de software (SDLC), incorporando seguridad desde la planificación inicial hasta el mantenimiento posterior al lanzamiento .</p>
+
+
+
+
+
+
+
+
+
+
+</br>
 
 <h3> :white_check_mark: &nbsp; NIST </h3>
 
 <p> El Marco de Ciberseguridad del NIST es un marco popular utilizado para mejorar los estándares de ciberseguridad de una organización y gestionar el riesgo de ciberamenazas. Este marco merece una mención honorífica debido a su popularidad y detalle </p>
 <p> El marco proporciona directrices sobre controles de seguridad y parámetros de referencia para el éxito de organizaciones desde infraestructuras críticas (centrales eléctricas, etc.) hasta las comerciales. Incluye una sección limitada sobre directrices estándar para la metodología que debe seguir un evaluador de penetración.</p>
 
+</br>
 
 <h3> :white_check_mark: &nbsp; NCSC </h3>
 
@@ -87,13 +139,51 @@
 <p> El Marco de Evaluación Cibernética (CAF) es un marco extenso de catorce principios que se utilizan para evaluar el riesgo de diversas ciberamenazas y las defensas de una organización contra ellas </p>
 <p> El marco se aplica a organizaciones que realizan servicios y actividades de vital importancia, como infraestructuras críticas, banca, etc. Se centra principalmente en los siguientes temas y los evalúa:  </p>
 
-
 <p><b> • &nbsp; Seguridad de datos </b></p>
 <p><b> • &nbsp; Seguridad del sistema </b></p>
 <p><b> • &nbsp; Control de identidad y acceso </b></p>
 <p><b> • &nbsp; Resiliencia </b></p>
 <p><b> • &nbsp; Monitoreo </b></p>
 <p><b> • &nbsp; Planificación de respuesta y recuperación </b></p>
+
+
+</br>
+
+<h3> :white_check_mark: &nbsp; PTES </h3>
+
+<p> Estándar práctico, impulsado por fases, que refleja cómo se llevan a cabo los compromisos reales </p>
+
+
+</br>
+
+
+<h3> :white_check_mark: &nbsp; ISSAF </h3>
+<p> Metodología históricamente influyente con un modelo de evaluación detallado de nueve pasos </p>
+
+
+</br>
+
+<h3> :white_check_mark: &nbsp; MITRAATT&CK </h3>
+<p> Como base de conocimientos complementaria que mapea tácticas y técnicas adversarias.  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </br>
@@ -3217,12 +3307,6 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
-<p align="center">
-
- <img src="https://i.postimg.cc/qvXjqsWy/CCA-Protocolo-FTP-1.png" alt="Descripción de la imagen">
-
- </p>
-
 
 <p align="center">
 
@@ -3307,7 +3391,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 </br>
 
-<p><b>Pasos<b></p>
+<p><b>Pasos</b></p>
 
 <p>1. Conocer la version del servidor FTP con el fin de saber si tiene vulnerabilidades que puedan ser explotadas </p>
 
@@ -3466,26 +3550,12 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
  </p>
 
 
-<p> (Server Message Block) es una técnica fundamental en pruebas de penetración y auditorías de seguridad para recopilar información sobre sistemas Windows </p>
+<p><b>(Server Message Block)</b> Es un protocolo de intercabio de archivos en red que se utiliza para facilitar el intercambio de archivos entre computadores de una red local (Carpeta compartida), acceso a impresoras que estan conectadas en el PC </p>
 
 
+<p> • Windows: Puertos predeterminado: 445/tcp (SMB sobre TCP/IP) versiones anteriores 139/tcp (NetBIOS).</p>
+<p> • Linux: Samba </p>
 
-</br>
-
-<p>&nbsp; • Recursos compartidos (Shares):&nbsp; Lista de carpetas, impresoras u otros recursos compartidos en la red.&nbsp;<br>
-( bash:&nbsp; smbclient -L // [target_IP] -N ) </p>
-<p>&nbsp; • Usuarios y Grupos:&nbsp; Nombres de usuarios válidos en el sistema, lo que puede ser útil para ataques de fuerza bruta o phishing. &nbsp;<br>
-( bash:&nbsp; enum4linux -U [target_IP] ) </p>
-<p>&nbsp; • Información del Sistema Operativo:&nbsp; Detalles como el nombre, versión y build del sistema operativo. &nbsp;<br>
-( bash:&nbsp; nmap --script smb-os-discovery -p 445 [target_IP] ) </p>
-<p>&nbsp; • Sesiones Activas:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp;<br>
-( bash:&nbsp; net session \\ [target_IP] ) </p>
-<p>&nbsp; • Configuraciones de Seguridad:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp; <br>
-( bash:&nbsp; enum4linux [target_IP] ) </p>
-<p>&nbsp; • Vulnerabilidades Conocidas:&nbsp;  Si el sistema aún utiliza SMBv1, puede ser vulnerable a ataques como EternalBlue. &nbsp;<br>
-( bash:&nbsp;  nmap --script smb-protocols -p 445 [target_IP] ) </p>
-
-<p> • Puertos predeterminado: 445/tcp (SMB sobre TCP/IP) o 139/tcp (NetBIOS).</p>
 
 <p> Versiones de SMB en Windows:
 
@@ -3503,12 +3573,15 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
  </p>
 
-<p> Ejemplo de enumeracion SMB</p>
 
-<p> &nbsp; (1).&nbsp; Escaneo de puertos SMB y recursos compartidos con NMAP  </p>
+</br>
+
+
+<h3> :radio_button: Pasos de enumeracion SMB con NMAP</h3>
+
 
 <p>&nbsp;• -sV :&nbsp; Detecta la versión de SMB. </p>
-<p>&nbsp;• smb-enum-shares :&nbsp; Enumerar los recursos compartidos, permisos, configuraciones inseguras, metadatos y preparar ataques posteriores </p>
+<p>&nbsp;• smb-enum-shares :&nbsp; Enumerar los recursos compartidos, permisos, configuraciones inseguras, metadatos y prepara ataques posteriores </p>
 
 
 <p align="center">
@@ -3517,9 +3590,100 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
  </p>
 
-<p> &nbsp; (2).&nbsp; Enumeracion de recursos compartidos, permisos y comentararios con SMBMAP </p>
 
-<p> 🛠 &nbsp; SMBMAP &nbsp; Herramienta diseñada  para enumerar, explorar y explotar recursos compartidos SMB </p>
+
+<h3> :radio_button: Enumeracion de usuarios con RCPCLIENT </h3>
+
+<p> RCPCLIENT &nbsp; Es una herramienta de línea de comandos incluida en el paquete Samba que permite interactuar con servidores Windows mediante RPC (llamadas a procedimiento remoto). Es útil para enumerar usuarios, grupos, políticas y más en sistemas Windows (o Samba en Linux).</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Y0MXYtdY/1.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p> &nbsp; :radio_button: Enumeracion de SMB con Metasploit</p>
+
+
+<p> 1. Identificar la version de SMB para conocer sus vulnerabilidades y exploit disponibles para usarlo en la fase de explotacion</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/5yTssfvk/168.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> 2. Escoger el modulo auxiliar teniendo en cuenta la informacion que se desea recopilar</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fRhGsvtm/169.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p><b>auxiliary/scanner/smb/smb_enumusers</b> (Determinar qué usuarios existen a través del servicio SAM RPC.)</p>
+
+
+<p><b>auxiliary/scanner/smb/smb_enumshares</b> (Este módulo determina qué recursos compartidos proporciona el servicio SMB y cuáles son de lectura/escritura. También recopila información adicional como tipos de recursos compartidos,
+directorios, archivos, marcas de tiempo, etc.)</p>
+
+
+<p><b>auxiliary/scanner/smb/smb_login</b> (Este módulo probará el inicio de sesión SMB en varias máquinas y informará sobre los inicios de sesión exitosos. Si ha cargado un complemento de base de datos y se ha conectado a una base de datos, este módulo registrará los inicios de sesión exitosos
+y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/vB30JrRq/2.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/8zRm8RMF/8.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+<h3> :radio_button: SMBCLIENT</h3>
+
+ <p> La herramienta permite interactuar con recursos compartidos </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qBDpDXWc/5-1.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> Acceder a los recursos compartidos, se puede usar la funcion publica o seleccionar el usuario "smbclient\\\\192.168.232.131\\public -U admin"</p>
+
+<p> El comando get permite la descarga del recurso</p>
+<p> Al ingresar al recurso compartido tmp, es posible visualizar los archivos temporales, validar los permisos de escritura y descargar archivos para revisar su contenido </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KvLvK3sn/6.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<h3> :radio_button: SMBMAP</h3>
+
+
+<p> Herramienta diseñada  para enumerar, explorar y explotar recursos compartidos SMB </p>
 
 </br>
 
@@ -3546,58 +3710,9 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
  <p> Solo se tiene acceso al recurso compartido temporales (tmp) el cual se encuentra en READ, WHRITE </p>
 
- <p>&nbsp; (3).&nbsp; conectarse al recurso compartido que tiene permisos con SMBCLIENT</p>
 
- <p> 🛠 &nbsp; SMBCLIENT &nbsp; Herramienta que permite interactuar con recursos compartidos </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/qBDpDXWc/5-1.png" alt="Descripción de la imagen">
-
- </p>
-
- <p> Al ingresar al recurso compartido tmp, es posible visualizar los archivos temporales, validar los permisos de escritura y descargar archivos para revisar su contenido </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/KvLvK3sn/6.png" alt="Descripción de la imagen">
-
- </p>
-
-
-<p>&nbsp; (4).&nbsp; Enumeracion de usuarios con RCPCLIENT cuando no se tiene acceso a ningun recurso compartido</p>
-
-</br>
-
-<p> 🛠 &nbsp; RCPCLIENT &nbsp; Es una herramienta de línea de comandos incluida en el paquete Samba que permite interactuar con servidores Windows mediante RPC (llamadas a procedimiento remoto). Es útil para enumerar usuarios, grupos, políticas y más en sistemas Windows (o Samba en Linux).</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/Y0MXYtdY/1.png" alt="Descripción de la imagen">
-
- </p>
-
-
-<p> &nbsp; (5).&nbsp; Realizar ataque de fuerza bruta Metasploit, Hydra, John the Ripper</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/85BmPCgD/7.png" alt="Descripción de la imagen">
-
- </p>
-
-<p align="center">
-
- <img src="https://i.postimg.cc/fTkm1CyM/8.png" alt="Descripción de la imagen">
-
- </p>
-
-<p> &nbsp; (6).&nbsp; El usuario msfadmin tiene permisos para leer el recurso compartido (print$), leer el recurso compartido (opt) y permiso de lectura y escritura en los directorios </p>
-<p> &nbsp; (7).&nbsp; Iniciar sesion con el usuario y contraseña msfadmin </p>
+<p> El usuario msfadmin tiene permisos para leer el recurso compartido (print$), leer el recurso compartido (opt) y permiso de lectura y escritura en los directorios </p>
+<p> Iniciar sesion con el usuario y contraseña msfadmin </p>
 
 <p align="center">
 
@@ -3609,12 +3724,27 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
  </p>
 
-<p> 🛠&nbsp; (8).&nbsp; Ejecutar una reverse shell </p>
 
 
+<p> Comandos basicos</p>
 
+<p>&nbsp; <b>• Recursos compartidos (Shares):</b>&nbsp; Lista de carpetas, impresoras u otros recursos compartidos en la red.&nbsp;<br>
+<b>( bash:&nbsp; smbclient -L // [target_IP] -N )</b></p>
 
+<p>&nbsp; <b>• Usuarios y Grupos:&nbsp; Nombres de usuarios válidos en el sistema, lo que puede ser útil para ataques de fuerza bruta o phishing. &nbsp;<br>
+<b>( bash:&nbsp; enum4linux -U [target_IP] )</b></p>
 
+<p>&nbsp; <b>• Información del Sistema Operativo:&nbsp; Detalles como el nombre, versión y build del sistema operativo. &nbsp;<br>
+<b>( bash:&nbsp; nmap --script smb-os-discovery -p 445 [target_IP] )</b></p>
+
+<p>&nbsp; <b>• Sesiones Activas:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp;<br>
+<b>( bash:&nbsp; net session \\ [target_IP] )</b></p>
+
+<p>&nbsp; <b>• Configuraciones de Seguridad:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp; <br>
+<b>( bash:&nbsp; enum4linux [target_IP] )</b></p>
+
+<p>&nbsp; <b>• Vulnerabilidades Conocidas:&nbsp;  Si el sistema aún utiliza SMBv1, puede ser vulnerable a ataques como EternalBlue. &nbsp;<br>
+<b>( bash:&nbsp;  nmap --script smb-protocols -p 445 [target_IP] )</b></p>
 
 
 
