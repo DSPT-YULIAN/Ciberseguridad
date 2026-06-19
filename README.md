@@ -116,24 +116,185 @@ alimentan directamente el cálculo de la superficie de ataque.</p>
 <p> Alinea las pruebas en cinco fases del Ciclo de vida del desarrollo de software (SDLC), incorporando seguridad desde la planificación inicial hasta el mantenimiento posterior al lanzamiento .</p>
 
 
+<p><b> • &nbsp; Fase 1: Antes de que comience el desarrollo</b> Los requisitos de seguridad y las obligaciones regulatorias se establecen de antemano.</p>
+
+<p><b> • &nbsp; Fase 2: Durante la definición y el diseño </b> Se revisa la arquitectura de la aplicación para detectar fallas de seguridad antes de escribir cualquier código</p>
+
+<p><b> • &nbsp; Fase 3: Durante el desarrollo</b> El código se examina mediante tutoriales y revisiones </p>
+
+<p><b> • &nbsp; Fase 4: Durante el despliegue.</b> Los controles de seguridad se verifican en el entorno de producción</p>
+
+<p><b> • &nbsp; Fase 5: Durante el mantenimiento y las operaciones</b> La seguridad se mantiene después del lanzamiento mediante controles de salud periódicos, especialmente después de las actualizaciones</p>
 
 
-
-
-
-
+<p><b>NOTA</b> La mayor fortaleza del WSTG es su Cobertura exhaustiva y práctica. Con más de 90 casos de prueba, cada uno de los cuales contiene procedimientos específicos y resultados esperados, ofrece a los evaluadores una hoja de ruta concreta en lugar de principios abstractos</p>
 
 
 </br>
 
-<h3> :white_check_mark: &nbsp; NIST </h3>
+
+<h3> :white_check_mark: &nbsp; NIST SP 800-115 </h3>
 
 <p> El Marco de Ciberseguridad del NIST es un marco popular utilizado para mejorar los estándares de ciberseguridad de una organización y gestionar el riesgo de ciberamenazas. Este marco merece una mención honorífica debido a su popularidad y detalle </p>
 <p> El marco proporciona directrices sobre controles de seguridad y parámetros de referencia para el éxito de organizaciones desde infraestructuras críticas (centrales eléctricas, etc.) hasta las comerciales. Incluye una sección limitada sobre directrices estándar para la metodología que debe seguir un evaluador de penetración.</p>
 
+
+<p> Este marco se basa en tres objetivos fundamentales </p>
+
+
+<p>1 &nbsp; Identificar vulnerabilidades en sistemas, redes y aplicaciones </p>
+<p>2 &nbsp; Validar los controles de seguridad comprobando si funcionan según lo previsto en condiciones adversas. </b></p>
+<p>3 &nbsp; Evaluar la explotabilidad simulando escenarios de ataque reales para determinar si un agente malintencionado puede realmente aprovechar las debilidades identificadas</b></p>
+
+
+
+<h3> :radio_button: &nbsp; Fases </h3>
+
+
+
+<p><b> • &nbsp; Fase 1: Planificacion</b> Antes de comenzar cualquier prueba, se definen y documentan formalmente los objetivos, el alcance y las reglas de participación </p>
+
+<p><b> • &nbsp; Fase 2: Ejecución  </b> se llevan a cabo las pruebas activas. La norma NIST SP 800-115 agrupa las actividades de ejecución en cuatro categorías de técnicas: </p>
+
+
+<p><b>:white_check_mark: 1 &nbsp; Técnicas de revisión: </b>  examen de la documentación, las políticas, las configuraciones del sistema y los conjuntos de reglas.  </p>
+<p><b>:white_check_mark: 2 &nbsp; Identificación y análisis de objetivos: </b>  Detección y caracterización de hosts activos, puertos abiertos y servicios en ejecución </p>
+<p><b>:white_check_mark: 3 &nbsp; Validación de vulnerabilidades específicas:</b> Confirmar que las debilidades identificadas son reales y explotables, y no falsos positivos.</p>
+<p><b>:white_check_mark: 4 &nbsp; Pruebas de penetración:</b> Simulación de ataques maliciosos para evaluar el alcance de la explotación posible </p>
+
+
+<p><b> • &nbsp; Fase 3: Post-Prueba</b> El enfoque se centra en analizar los resultados, priorizar los riesgos y ofrecer estrategias de remediación viables.</p>
+
+
 </br>
 
-<h3> :white_check_mark: &nbsp; NCSC </h3>
+
+<h3> :white_check_mark: &nbsp; PTES </h3>
+
+<p> Estándar de ejecución de pruebas de penetración (PTES). Fue desarrollado por un grupo de profesionales de seguridad experimentados con un objetivo específico: definir cómo es una prueba de penetración real, de extremo a extremo. Donde otros marcos se centran en qué para probar o cómo Para medir, PTES se centra en cómo fluye el compromiso De principio a fin. </p>
+
+<p> PTES está organizado en siete fases que se asignan directamente al ciclo de vida de una prueba de penetración.  </p>
+
+
+
+<h3> :radio_button: &nbsp; Fases </h3>
+
+
+<p><b> • &nbsp; Fase 1: Interacciones previas al compromiso</b> Esto es todo lo que sucede antes de que comiencen las pruebas. Usted define el alcance con el director de TI, El PTES se detalla aquí en particular porque el alcance poco claro es la principal fuente de disputas legales y profesionales en las pruebas de penetración. </p>
+
+<p><b> • &nbsp; Fase 2: Recopilación de inteligencia. </b> Recopila información utilizando técnicas tanto pasivas como activas. El reconocimiento pasivo incluye recopilar direcciones de correo electrónico de empleados de LinkedIn, descubrir subdominios a través de registros de transparencia de certificados y revisar ofertas de trabajo que revelan pilas de tecnología ("buscar un DBA con experiencia en Oracle 19c"). El reconocimiento activo implica DNSenumeración y escaneo de redes dentro del alcance acordado. PTES distingue entre estos niveles porque la profundidad de la recopilación de inteligencia determina directamente la calidad de las fases posteriores.</p>
+
+
+<p><b> • &nbsp; Fase 3: Modelado de amenazas.</b> Utilizando la inteligencia recopilada, identificas los objetivos más valiosos y las rutas de ataque más probables. Esta fase garantiza que su esfuerzo de prueba esté dirigido por lógica adversaria en lugar de escaneo aleatorio. </p>
+
+<p><b> • &nbsp; Fase 4: Análisis de vulnerabilidades.</b> Identifica sistemáticamente debilidades que podrían habilitar las rutas de ataque desde tu modelo de amenaza. PTES enfatiza que el análisis de vulnerabilidad incluye tanto escaneo automatizado como verificación manual para eliminar falsos positivos.</p>
+
+<p><b> • &nbsp; Fase 5: Explotacion. </b> Intentas explotar las vulnerabilidades confirmadas. PTES enfatiza que la explotación debe tener un propósito: el objetivo es demostrar el impacto comercial, no "hacer estallar cajas" solo por hacerlo.</p>
+
+<p><b> • &nbsp; Fase 6: Post-Explotación </b> Después de obtener acceso, usted determina el impacto en el mundo real. PTES trata la posexplotación como la fase en la que los hallazgos técnicos se traducen en riesgo comercial</p>
+
+<p><b> • &nbsp; Fase 7: Informes </b> Los resultados se presentan en un informe estructurado teniendo en cuenta dos públicos. El resumen ejecutivo comunica el riesgo comercial en un lenguaje sencillo. El informe técnico proporciona los detalles que el equipo de TI para corregir cada hallazgo: pasos de explotación exactos, hosts afectados, capturas de pantalla de evidencia y orientación de remediación priorizada.</p>
+
+
+</br>
+
+
+<h3> :white_check_mark: &nbsp; ISSAF </h3>
+
+<p> El Marco de evaluación de la seguridad de los sistemas de información (ISSAF), es un marco de pruebas de penetración de código abierto diseñado para evaluar la seguridad de redes, sistemas y aplicaciones. La última versión, ISSAF v0.2.1, se publicó alrededor de 2006 y el marco ya no se mantiene activamente. </p>
+
+<p> Modelo de evaluación de nueve pasos es una de las representaciones más claras de cómo un atacante progresa a través de un entorno objetivo. Refleja la lógica de una amenaza persistente avanzada, que pasa sistemáticamente del reconocimiento inicial al acceso persistente y la eliminación de pruebas. (Cadena de muerte cibernética / Cyber Kill Chain ) </p>
+
+
+
+<h3> :radio_button: &nbsp; Fases </h3>
+
+
+<p><b> • &nbsp; Fase 1: Planificación y preparación</b> Esta fase establece los límites del compromiso. Definir el alcance, establecer protocolos de escalada y contactos de emergencia, identificar limitaciones y acuerde el conjunto de herramientas apropiado para la evaluación. </p>
+
+
+<p><b> • &nbsp; Fase 2: Evaluación</b> Se divide en nueve pasos. Cada paso se basa en el anterior, simulando cómo progresaría un adversario real a través del entorno. </p>
+
+
+
+<p><b>:white_check_mark: 1 &nbsp; Recopilación de información: </b>  Recopilar datos disponibles públicamente: WHOIS, perfiles de empleados en LinkedIn y referencias tecnológicas en ofertas de trabajo todo alimenta su comprensión del objetivo.</p>
+
+<p><b>:white_check_mark: 2 &nbsp; Mapeo de redes: </b> Mapee la topología de la red en vivo. Descubra la gama de IPs, el portal del proyecto, una VPN, una puerta de enlace o servidor de correo.</p>
+
+<p><b>:white_check_mark: 3 &nbsp; Identificación de vulnerabilidades:</b>  Escanee los activos mapeados en busca de debilidades. Como una consola administrativa expuesta sin autenticación. </p>
+
+</br>
+
+<p><b>:white_check_mark: 4 &nbsp; Penetración: </b>  Intentar explotación inicial. </p>
+
+<p><b>:white_check_mark: 5 &nbsp; Obtención de acceso y escalada de privilegios:</b> Escalar desde el acceso inicial a privilegios más altos. </p>
+
+<p><b>:white_check_mark: 6 &nbsp; Enumerando más: </b> Con acceso elevado, enumere lo que ahora es accesible. Decubra repositorios que contienen APIclaves, cadenas de conexión a bases de datos o código fuente del proyecto </p>
+
+<p><b>:white_check_mark: 7 &nbsp; Comprometer a usuarios/sitios remotos (movimiento lateral): </b> Muévete lateralmente a otros sistemas. Utilizando las credenciales recopiladas, accede a varias estaciones de trabajo o servidores de correo interno.</p>
+
+</br>
+
+<p><b>:white_check_mark: 8 &nbsp; Mantener el acceso:</b> Establecer acceso persistente para demostrar que un atacante real podría conservar su posición. Documenta (sin implementar realmente) cómo se podría colocar una puerta trasera, que persiste durante los reinicios e implementaciones del sistema. </p>
+
+<p><b>:white_check_mark: 9 &nbsp; Cubriendo pistas: </b> Demuestre cómo un atacante borraría la evidencia. Documenta qué registros capturaron tu actividad e identifica brechas en el registro que permitirían que un adversario real operara sin ser detectado.</p>
+
+
+
+<p>Nota: Los pasos 1 a 3 son reconocimiento y análisis, los pasos 4 a 7 son compromiso activo y los pasos 8 a 9 abordan persistenciay sigilo.</p>
+
+
+<p><b> • &nbsp; Fase 3: Informes y limpieza</b> Recopila los hallazgos en un informe estructurado y realiza la limpieza lo cual implica eliminar cualquier artefacto de prueba, revocar cualquier cuenta temporal creada durante la prueba y confirmar con el equipo de tecnologia que no quedan residuos de prueba en su entorno. </p>
+
+
+</br>
+
+
+<h3> :white_check_mark: &nbsp; MITRE ATT&CK </h3>
+
+
+<p> ATT&CK significa Tácticas, técnicas y procedimientos comunes adversarios. No es un marco tradicional de pruebas de penetración. Es una base de conocimientos del comportamiento del adversario, construido a partir de observaciones del mundo real de cómo operan los actores de amenazas.  </p>
+
+
+<p> ATT&CK significa Tácticas, técnicas y procedimientos comunes adversarios. No es un marco tradicional de pruebas de penetración. Es una base de conocimientos del comportamiento del adversario, construido a partir de observaciones del mundo real de cómo operan los actores de amenazas.  </p>
+
+
+<h3> :radio_button: &nbsp; Tácticas, técnicas y procedimientos </h3>
+
+
+<p>ATT&CK está organizado como un matriz.  
+
+
+Las columnas representan las tácticas, que son los objetivos de alto nivel del adversario, el por qué detrás de una acción. La matriz empresarial actual incluye 14 tácticas, que progresan desde el acceso inicial hasta la ejecución persistencia, escalada de privilegios, evasión de defensa, acceso a credenciales, descubrimiento, movimiento lateral, recolección, comando y control, exfiltración e impacto.
+
+Dentro de cada columna de táctica, el filas lista técnicas, que son los cómo, los métodos específicos que utiliza un adversario para lograr ese objetivo táctico.   </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/150h3vLp/175.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Ejemplo de como usar la Matriz de MITRE ATT&CK </p>
+
+
+<p align="center">
+
+  <img src="(https://i.postimg.cc/JnWjM3vQ/176.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+</br>
+
+
+<h3> :white_check_mark: &nbsp; Otros Marcos Notables </h3>
+
+
+
+<h2> :white_check_mark: &nbsp; NCSC </h2>
 
 
 <p> El Marco de Evaluación Cibernética (CAF) es un marco extenso de catorce principios que se utilizan para evaluar el riesgo de diversas ciberamenazas y las defensas de una organización contra ellas </p>
@@ -149,39 +310,50 @@ alimentan directamente el cálculo de la superficie de ataque.</p>
 
 </br>
 
-<h3> :white_check_mark: &nbsp; PTES </h3>
+<h3> :white_check_mark: &nbsp; Clasificación de amenazas WASC</h3>
 
-<p> Estándar práctico, impulsado por fases, que refleja cómo se llevan a cabo los compromisos reales </p>
+
+<p>   Desarrollado por el Consorcio de Seguridad de Aplicaciones Web (WASC) como taxonomía para categorizar vulnerabilidades de aplicaciones web y tipos de ataques. Organiza las amenazas en categorías como autenticación insuficiente, fuga de información y abuso de funcionalidad.</p>
+
 
 
 </br>
 
 
-<h3> :white_check_mark: &nbsp; ISSAF </h3>
-<p> Metodología históricamente influyente con un modelo de evaluación detallado de nueve pasos </p>
+<h3> :white_check_mark: &nbsp; Matriz de controles en la nube de CSA (CCM)</h3>
+
+
+<p> publicado por el Alianza de Seguridad en la Nube (CSA) y proporciona un marco de controles de seguridad cibernética diseñado específicamente para entornos de computación en la nube. Mapea controles en 17 dominios, incluida la seguridad de datos, la gestión de identidad y acceso y la seguridad de la infraestructura, y los alinea con estándares importantes como ISO 27001 NIST, y PCI DSS. CCM no es una metodología de pruebas de penetración; es una Herramienta de gobernanza y cumplimiento que ayuda a las organizaciones a evaluar si sus proveedores y configuraciones de nube cumplen con los requisitos de seguridad.</p>
 
 
 </br>
 
-<h3> :white_check_mark: &nbsp; MITRAATT&CK </h3>
-<p> Como base de conocimientos complementaria que mapea tácticas y técnicas adversarias.  </p>
+
+<h3> :white_check_mark: &nbsp; OWASP Guía de pruebas de seguridad de aplicaciones móviles (MASTG)</h3>
+ 
+
+<p> Proporciona casos de prueba detallados para Seguridad de aplicaciones Android e iOS, cubriendo áreas como almacenamiento de datos, implementación criptográfica, comunicación de red, interacción con la plataforma y calidad del código. Si su interacción implica probar una aplicación de banca móvil, una aplicación de portal para pacientes de atención médica o cualquier aplicación móvil orientada al cliente.</p>
 
 
 
+</br>
+
+
+<h3> :white_check_mark: &nbsp; PCI DSS Pautas para las pruebas de penetración</h3>
+ 
+
+<p> Se definen dentro del Estándar de seguridad de datos de la industria de tarjetas de pago, específicamente en Requisito 11.4 (PCI DSS v4.0), Estas directrices son mandatos regulatorios: cualquier organización que procese, almacene o transmita datos del titular de la tarjeta debe realizar pruebas de penetración que cumplan PCI DSS. Las directrices especifican que las pruebas deben cubrir tanto el perímetro externo como la red interna, deben realizarse al menos una vez al año y después de cambios significativos en la infraestructura, y deben validar la red segmentación y controles.</p>
+
+
+</br>
 
 
 
+<p align="center">
 
+  <img src="https://i.postimg.cc/8cpWrp1r/177.png" alt="Descripción de la imagen">
 
-
-
-
-
-
-
-
-
-
+</p>
 
 
 
@@ -3605,7 +3777,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 
 
-<p> &nbsp; :radio_button: Enumeracion de SMB con Metasploit</p>
+<h3> &nbsp; :radio_button: Enumeracion de SMB con Metasploit</h3>
 
 
 <p> 1. Identificar la version de SMB para conocer sus vulnerabilidades y exploit disponibles para usarlo en la fase de explotacion</p>
@@ -3655,31 +3827,6 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 
 
-
-<h3> :radio_button: SMBCLIENT</h3>
-
- <p> La herramienta permite interactuar con recursos compartidos </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/qBDpDXWc/5-1.png" alt="Descripción de la imagen">
-
- </p>
-
-<p> Acceder a los recursos compartidos, se puede usar la funcion publica o seleccionar el usuario "smbclient\\\\192.168.232.131\\public -U admin"</p>
-
-<p> El comando get permite la descarga del recurso</p>
-<p> Al ingresar al recurso compartido tmp, es posible visualizar los archivos temporales, validar los permisos de escritura y descargar archivos para revisar su contenido </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/KvLvK3sn/6.png" alt="Descripción de la imagen">
-
- </p>
-
-
 <h3> :radio_button: SMBMAP</h3>
 
 
@@ -3711,12 +3858,15 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
  <p> Solo se tiene acceso al recurso compartido temporales (tmp) el cual se encuentra en READ, WHRITE </p>
 
 
+
 <p> El usuario msfadmin tiene permisos para leer el recurso compartido (print$), leer el recurso compartido (opt) y permiso de lectura y escritura en los directorios </p>
 <p> Iniciar sesion con el usuario y contraseña msfadmin </p>
 
 <p align="center">
 
  <img src="https://i.postimg.cc/mrrPF29B/9.png" alt="Descripción de la imagen">
+
+  </p>
 
 <p align="center">
 
@@ -3726,60 +3876,253 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 
 
-<p> Comandos basicos</p>
+ <h3> :radio_button: SMBCLIENT</h3>
+
+ <p> La herramienta permite interactuar con recursos compartidos </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qBDpDXWc/5-1.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> Acceder a los recursos compartidos, se puede usar la funcion publica o seleccionar el usuario "smbclient\\\\192.168.232.131\\public -U admin"</p>
+
+<p> El comando get permite la descarga del recurso</p>
+<p> Al ingresar al recurso compartido tmp, es posible visualizar los archivos temporales, validar los permisos de escritura y descargar archivos para revisar su contenido </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KvLvK3sn/6.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p><b> Comandos basicos</b></p>
 
 <p>&nbsp; <b>• Recursos compartidos (Shares):</b>&nbsp; Lista de carpetas, impresoras u otros recursos compartidos en la red.&nbsp;<br>
 <b>( bash:&nbsp; smbclient -L // [target_IP] -N )</b></p>
 
-<p>&nbsp; <b>• Usuarios y Grupos:&nbsp; Nombres de usuarios válidos en el sistema, lo que puede ser útil para ataques de fuerza bruta o phishing. &nbsp;<br>
+<p>&nbsp; <b>• Usuarios y Grupos:</b>&nbsp; Nombres de usuarios válidos en el sistema, lo que puede ser útil para ataques de fuerza bruta o phishing. &nbsp;<br>
 <b>( bash:&nbsp; enum4linux -U [target_IP] )</b></p>
 
-<p>&nbsp; <b>• Información del Sistema Operativo:&nbsp; Detalles como el nombre, versión y build del sistema operativo. &nbsp;<br>
+<p>&nbsp; <b>• Información del Sistema Operativo:</b>&nbsp; Detalles como el nombre, versión y build del sistema operativo. &nbsp;<br>
 <b>( bash:&nbsp; nmap --script smb-os-discovery -p 445 [target_IP] )</b></p>
 
-<p>&nbsp; <b>• Sesiones Activas:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp;<br>
+<p>&nbsp; <b>• Sesiones Activas:</b>&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp;<br>
 <b>( bash:&nbsp; net session \\ [target_IP] )</b></p>
 
-<p>&nbsp; <b>• Configuraciones de Seguridad:&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp; <br>
+<p>&nbsp; <b>• Configuraciones de Seguridad:</b>&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp; <br>
 <b>( bash:&nbsp; enum4linux [target_IP] )</b></p>
 
-<p>&nbsp; <b>• Vulnerabilidades Conocidas:&nbsp;  Si el sistema aún utiliza SMBv1, puede ser vulnerable a ataques como EternalBlue. &nbsp;<br>
+<p>&nbsp; <b>• Vulnerabilidades Conocidas:</b>&nbsp;  Si el sistema aún utiliza SMBv1, puede ser vulnerable a ataques como EternalBlue. &nbsp;<br>
 <b>( bash:&nbsp;  nmap --script smb-protocols -p 445 [target_IP] )</b></p>
 
 
 
 
+<!----------------------------------------------------------------------------- ## Web Server Enumeration ------------------------------------------------------------------------------------------------------------------>
+
+
+<h2> :white_check_mark: Web Server Enumeration </h2> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Rhjx2TR7/171.png" alt="Descripción de la imagen">
+
+ </p>
 
 
 
+<p>Un Web Server (servidor web) es un sistema que almacena, procesa y entrega páginas web a los clientes (navegadores) a través del protocolo HTTP/HTTPS. Cumple dos funciones principales: </p>
+
+<p> 1. Servir contenido estático – archivos HTML, CSS, JavaScript, imágenes, PDFs, etc. Los cuales almacenan en disco y se envían tal cual cuando un cliente los solicita.</p>
+
+<p> 2. Ejecutar aplicaciones dinámicas – mediante lenguajes como PHP, Python, Node.js o ASP.NET, el servidor web genera páginas personalizadas en tiempo real, a menudo consultando bases de datos.</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/4dSDh1jB/172.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/L6TVCs81/170.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Componentes claves </p>
+
+<p><b> HTTP Server </b> El software que escucha peticiones HTTP en un puerto (generalmente 80 o 443) y responde. Ejemplos: Apache, Nginx, IIS, Caddy.</p>
+<p><b> Sistema operativo </b>Donde corre el servidor web (Linux, Windows, etc.)</p>
+<p><b> Recursos </b>Los archivos y aplicaciones que el servidor expone.</p>
+<p><b> Conexión de red </b>Para recibir y responder peticiones de los clientes</p>
+
+
+<p> Informacion que se puede obtener al enumerar un web Server </p>
+
+
+<p>✅ Información del propio servidor web</p>
+<p>✅ Directorios y archivos ocultos/expuestos / herramientas como ffuf, gobuster, dirb o dirsearch.</p>
+<p>✅ Versionado de aplicaciones y CMS </p>
+<p>✅ Parámetros y endpoints de API / Mediante fuzzing de parámetros y enumeración de rutas API</p>
+<p>✅ Subdominios y virtual hosts</p>
+<p>✅ Redirecciones y cadena de proxies</p>
+<p>✅ Errores que filtran información</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/52G1zbvh/173.png" alt="Descripción de la imagen">
+
+</p>
+
+<p>✅ Información de sesión y autenticación</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/ZnVz5S4M/174.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>✅ Framework y librerías del frontend</p>
+<p>✅ Información del entorno de desarrollo</p>
 
 
 
+<h3> :radio_button: Pasos de enumeracion WEB Server</h3>
+
+
+<p> 1. &nbsp; Identificar la version</p> 
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/bwJTzr5g/178.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 2. &nbsp; Enumerar los encabezados HTTP</p> 
+
+<p> Los encabezados HTTP revelan información valiosa sobre la configuración del servidor, la tecnología subyacente y las medidas de seguridad implementadas.</p> 
 
 
 
+<p align="center">
+
+ <img src="https://i.postimg.cc/8CgjZnLv/179.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 3. &nbsp; Enumerar Robots.txt</p> 
+
+<p> Los desarrolladores suelen listar ahí las rutas que no quieren que los motores de búsqueda indexen, precisamente porque contienen información sensible o funcionalidades administrativas</p> 
 
 
 
+<p align="center">
+
+ <img src="https://i.postimg.cc/s2Ks5nc6/180.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Se evidencian 2 directorios </p> 
+
+<p> Con ayuda del comando CURL obtener el contenido de la URL transfiriendo los archivos </p> 
 
 
 
+<p align="center">
+
+ <img src="https://i.postimg.cc/1tY4wfs0/181.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Se observa el codigo de respuesta 401 "Unauthorized" Indica que una solicitud web no fue procesada porque las credenciales de autenticación del usuario faltan, son incorrectas o han expirado, Lo que significa que este directorio en particular se encuentra protegido, por lo tanto podemos recurrir a un ataque de fuerza bruta  </p> 
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/zD6VfbdS/182.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 4. &nbsp; Validar si se encuetran mas directorios ocultos</p> 
 
 
 
+<p align="center">
+
+ <img src="https://i.postimg.cc/nzBzBKX4/183.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
+<p> Con ayuda del comando CURL obtener el contenido de la URL transfiriendo los archivos </p> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/nzBzBKX4/183.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
+<p align="center">
+
+ <img src="https://i.postimg.cc/kXn4RbqG/184.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
+<p> 5. &nbsp; Buscar archivos especificos dentro del directorio </p> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PxQC0zdt/185.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/x8sc1fJ2/186.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
+<p> 6. &nbsp; Realizar un ataque de fuerza bruta al directorio /secure identificado con la opcion de robots</p> 
 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/c4G3rzgX/187.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
