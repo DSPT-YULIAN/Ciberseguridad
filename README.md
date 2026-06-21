@@ -281,7 +281,7 @@ Dentro de cada columna de táctica, el filas lista técnicas, que son los cómo,
 
 <p align="center">
 
-  <img src="(https://i.postimg.cc/JnWjM3vQ/176.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/JnWjM3vQ/176.png" alt="Descripción de la imagen">
 
 </p>
 
@@ -356,6 +356,35 @@ Dentro de cada columna de táctica, el filas lista técnicas, que son los cómo,
 </p>
 
 
+<h3> :white_check_mark: &nbsp; Marco CBEST</h3>
+
+
+<p> Es un marco de pruebas de penetración basado en inteligencia de amenazas diseñado específicamente para instituciones financieras del Reino Unido</p>
+
+
+
+
+<h3> :radio_button: &nbsp; Elegir el marco adecuado </h3>
+
+
+<p> • &nbsp; Una evaluación de la aplicación web se alinea con la <b> OWASPWSTG </b></p>
+<p> • &nbsp; Una evaluación en una aplicacion movil requiere <b> OWASPMASTG </b></p>
+<p> • &nbsp; Una prueba de penetración de red de espectro completo se alinea naturalmente con <b> PTES u OSSTMM </b></p>
+<p> • &nbsp; Si el alcance abarca múltiples canales, incluidos factores físicos y humanos, el modelo de cinco canales de <b> OSSTMM </b> se vuelve particularmente relevante. </p>
+<p> • &nbsp; Si el cliente procesa datos de tarjetas de pago se debe usar <b> PCI DSS</b> </p>
+<p> • &nbsp; Si el cliente es una institución financiera del Reino Unido sujeta a la supervisión del Banco de Inglaterra, se podrá exigir <b> CBEST</b> </p>
+<p> • &nbsp; En EE. UU. Entornos de contratistas gubernamentales y federales. Cuando la regulación lo dicta, el evaluador se adapta. <b>  NISTSP 800-115 </b> </p>
+<p> • &nbsp; Cuando participan varios evaluadores o cuando los resultados deben compararse a lo largo de períodos de tiempo. Las métricas RAV de <b> OSSTMM </b> están diseñadas específicamente para esto, medir si nuestra postura de seguridad ha mejorado desde la prueba anterior</p>
+<p> • &nbsp;  <b> CBEST </b> exige capacidades de inteligencia sobre amenazas</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/y8VwKKHP/191.png" alt="Descripción de la imagen">
+
+</p>
+
+</br>
 
 
 </br>
@@ -3926,6 +3955,8 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 <!----------------------------------------------------------------------------- ## Web Server Enumeration ------------------------------------------------------------------------------------------------------------------>
 
+</br> 
+
 
 <h2> :white_check_mark: Web Server Enumeration </h2> 
 
@@ -4123,6 +4154,107 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
  <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
 
 </p>
+
+
+
+<!----------------------------------------------------------------------------- ## MySQL Enumeration ------------------------------------------------------------------------------------------------------------------>
+
+</br> 
+
+
+<h2> :white_check_mark: MySQL Enumeration</h2> 
+
+
+<p align="center">
+
+ <img src="xxxx" alt="Descripción de la imagen">
+
+
+
+
+<p> MySQL es un sistema de gestión de bases de datos relacional (RDBMS) de código abierto, extremadamente popular en entornos web y aplicaciones empresariales. Normalmente corre en el puerto 3306 (TCP). También puede estar en puertos alternativos o detrás de un proxy.</p>
+
+
+<p> La enuneracion consiste en identificar y extraer información del servicio MySQL para descubrir vulnerabilidades, configuraciones inseguras y vectores de ataque</p>
+
+<p> Una vez identificado el servicio, se busca obtener: </p>
+
+
+
+<p>&nbsp; <b>• Versión de MySQL y sistema operativo </b>&nbsp; crucial para buscar CVEs conocidos </p>
+<p>&nbsp; <b>• Usuarios y cuentas </b>&nbsp; (root, anónimas, por defecto) </p>
+<p>&nbsp; <b>• Bases de datos disponibles  </b>&nbsp; (information_schema, mysql, databases de aplicación) </p>
+<p>&nbsp; <b>• Tablas y columnas sensibles </b>&nbsp; (usuarios, contraseñas, tokens, datos personales) </p>
+<p>&nbsp; <b>• Privilegios de usuarios </b>&nbsp; (FILE, SUPER, SELECT, CREATE, etc.)</p>
+<p>&nbsp; <b>• Variables de configuración </b>&nbsp; (secure_file_priv, local_infile, sql_mode, etc.) </p>
+<p>&nbsp; <b>• Plugins y extensiones </b>&nbsp; (UDFs, stored procedures maliciosos) </p>
+
+
+
+<h3> :radio_button: Pasos de enumeracion MySQL</h3>
+
+<p> Filtrar los modulos auxiliares relacionados con MySQL: <b>search type:auxiliary name:MySQL</b> </p>
+ 
+ 
+ 
+<p> 1. Identificar la version de MySQL que esta corriendo en el servidor</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 192.168.232.131:3306 is running MySQL 5.0.51a-3ubuntu5 (protocol 10) </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Exploit disponibles para esta version de MySQL </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
