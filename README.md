@@ -359,8 +359,9 @@ Dentro de cada columna de táctica, el filas lista técnicas, que son los cómo,
 <h3> :white_check_mark: &nbsp; Marco CBEST</h3>
 
 
-<p> Es un marco de pruebas de penetración basado en inteligencia de amenazas diseñado específicamente para instituciones financieras del Reino Unido</p>
+<p> Es un marco de pruebas de penetración basado en inteligencia de amenazas diseñado específicamente para instituciones financieras del Reino Unido</p
 
+</br>
 
 
 
@@ -4167,7 +4168,7 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 <p align="center">
 
- <img src="xxxx" alt="Descripción de la imagen">
+ <img src="https://i.postimg.cc/XYzCxz0D/192.png" alt="Descripción de la imagen">
 
 
 
@@ -4206,7 +4207,7 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 </p>
 
-<p> 192.168.232.131:3306 is running MySQL 5.0.51a-3ubuntu5 (protocol 10) </p>
+<p> Resultado: 192.168.232.131:3306 is running MySQL 5.0.51a-3ubuntu5 (protocol 10) </p>
 
 
 
@@ -4221,37 +4222,152 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 
 
+<p> 2. Fuerza bruta MySQL </p>
+
+<p> Configurar los parametros</p>
+
+<p> • BLANK_PASSWORDS - Probar contraseñas en blanco para todos los usuarios </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PJcW3WNY/193.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KvkrKHs9/194.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Con el parametro <b> "CREDS"</b> se pueden ver los resultados</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/SNf8zbf8/195.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 3. Ingresar a la base de datos con las credenciales obteninas  </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/VkTjzBR1/196.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/8kHM7V4g/197.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
 
+<p align="center">
+
+ <img src="https://i.postimg.cc/vZp6J8Yw/198.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Se puede realizar el cambio de contraseña de los usuarios de las bases de datos </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/D0ZZWRvg/199.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> En este caso se realiza el cambio de contraseña del usuarios root al cual le colocamos la contraseña 12345 </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/2SXPmJMZ/200.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Esta cadena representa un hash de contraseña clásico de MySQL (versión 4.1 o posterior). Corresponde exactamente a la contraseña "12345", generada mediante la función PASSWORD() de MySQL</p>
+
+<p> El algoritmo aplicado implica un cifrado doble con SHA-1</p>
+
+<p> Hash = SHA1(SHA1(cadena))</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/mrzKrjWq/201.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 4. El modulo auxiliar mysql_enum nos permite ver una gran cantridad de informacion </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/BnYd46tm/202.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 5. El modulo <b> mysql_sql </b>permite ejecutar sentencias SQL sencillas en una instancia de MySQL, siempre que se disponga de las credenciales adecuadas </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/MKMnwc9L/203.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Realizar consultas dentro de la base de datos </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/7ZSbCF8X/204.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 6. El modulo <b> mysql_schemadump </b>extrae la información del esquema de un servidor de base de datos MySQL. </p>
 
 
 
 
+<p align="center">
+
+ <img src="https://i.postimg.cc/d0B16G01/205.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!----------------------------------------------------------------------------- ## SSH Enumeration ------------------------------------------------------------------------------------------------------------------>
 
 
 
