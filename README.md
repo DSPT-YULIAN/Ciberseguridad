@@ -4221,6 +4221,11 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 <p> Exploit disponibles para esta version de MySQL </p>
 
 
+<p align="center">
+
+ <img src="https://i.postimg.cc/VNRS6LKK/190.png" alt="Descripción de la imagen">
+
+</p>
 
 <p> 2. Fuerza bruta MySQL </p>
 
@@ -4239,7 +4244,7 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 <p align="center">
 
- <img src="https://i.postimg.cc/KvkrKHs9/194.png" alt="Descripción de la imagen">
+ <img src="https://i.postimg.cc/nhfMGQ5d/194.png" alt="Descripción de la imagen">
 
 </p>
 
@@ -4370,15 +4375,144 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 <!----------------------------------------------------------------------------- ## SSH Enumeration ------------------------------------------------------------------------------------------------------------------>
 
 
+</br> 
+
+
+<h2> :white_check_mark: SSH Enumeration</h2> 
+
+
+<p align="center">
+
+ <img src="xxxxx" alt="Descripción de la imagen">
+
+
+<p> SSH son las siglas de Secure SHell. Es un protocolo de red criptográfico que permite operar servicios de red de forma segura sobre un canal no seguro entre el cliente y el servidor.</p>
+
+<p> SSH utiliza el puerto 22 de forma predeterminada, sin embargo se puede configurar para utilizar en cualquier otro puerto</p>
+
+
+<h3> :radio_button: Pasos de enumeracion SSH</h3>
+
+
+
+<p> 1. Identificar la version de SSH que esta corriendo en el servidor</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Resultado: SSH server version: SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1 </p>
+
+
+<p> NOTA: No se evidencian Exploit disponibles para esta version de SSH en Metasploit </p>
+
+
+<p> Con ayuda de searchsploit podemos consultar los exploit disponibles </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/xC6tKQ1t/208.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 2. El modulo <b> ssh_login </b>  Este módulo comprobará los inicios de sesión mediante SSH en una serie de equipos e informará de los inicios de sesión correctos. Si has cargado un complemento de base de datos y te has conectado a una base de datos, este módulo registrará los inicios de sesión
+  correctos y los hosts para que puedas realizar un seguimiento de tus accesos.</p>
+
+
+<p> • Fuerza bruta SSH </p>  
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PqvkN6fD/209.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> • Establecer sesion con las credenciales explotadas </p> 
+
+
+
+<!----------------------------------------------------------------------------- ## SMTP Enumeration ------------------------------------------------------------------------------------------------------------------>
+
+
+
+<h2> :white_check_mark: SMTP Enumeration</h2> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fRBD7mN1/210.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> SMTP son las siglas de Simple Mail Transfer Protocol (Protocolo Simple de Transferencia de Correo). Es el protocolo estándar utilizado para el envío de correo electrónico en Internet y en redes TCP/IP.</p>
+
+<p> Se encarga de transmitir (enviar) mensajes de correo desde un cliente (como Outlook, Thunderbird, o un script) hasta un servidor de correo, y también entre servidores de correo (MTA → MTA). No se usa para descargar correo (eso es tarea de POP3 o IMAP).</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qvZWML0C/211.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> La enumeracion SMTP es una técnica de reconocimiento utilizada en pruebas de penetración para extraer información de un servidor SMTP. Se aprovecha de los comandos del protocolo SMTP (principalmente VRFY, EXPN y RCPT TO) para descubrir usuarios válidos, alias de correo o direcciones de email en el servidor target. </p>
 
 
 
 
+<h3> :radio_button: Pasos de enumeracion SMTP</h3>
+
+
+
+<p> 1. Identificar la version de SMTP que esta corriendo en el servidor</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/tJYrs1jS/212.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Resultado: SMTP server version: 192.168.232.131:25 SMTP 220 metasploitable.localdomain ESMTP Postfix (Ubuntu)\x0d\x0a </p>
+
+
+<p> NOTA: No se evidencian Exploit disponibles para esta version de SMTP en Metasploit pero se pueden buscar en otras herramientas o plataformas </p>
+
+
+<p> 2. El modulo <b> smtp_enum </b> SMTP dispone de dos comandos internos que permiten la enumeración de usuarios: VRFY (que confirma los nombres de los usuarios válidos) y EXPN (que
+  revela las direcciones reales de los alias de los usuarios y las listas de correo (listas de distribución)). Mediante la ejecución de estos comandos SMTP se puede
+  obtener una lista de usuarios válidos. </p>
+
+
+<p> Realizar ataque de fuerza bruta </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/mZpLJK6F/213.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Como resultado tenemos diferentes usuarios del sistema </p>
 
 
 
 
+</br>
 
+
+
+<!----------------------------------------------------------------------------- ## Enumeration ------------------------------------------------------------------------------------------------------------------>
 
 
 <p><h2> Enumeración de usuarios: </h2> La enumeración de usuarios es una técnica utilizada en pruebas de penetración y auditorías de seguridad para identificar nombres de usuario válidos en un sistema, aplicación o servicio. Este proceso es fundamental en las fases iniciales de un ataque, ya que permite a un atacante conocer qué cuentas existen en el sistema, lo que facilita ataques posteriores como fuerza bruta, phishing o ataques de diccionario.</p>
