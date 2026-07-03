@@ -426,6 +426,71 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 
 
+<h2> :arrow_right: Enfoque de las pruebas de penetracion </h2>
+
+
+<h3> :white_check_mark: &nbsp; Pruebas de penetración de aplicaciones web </h3>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pL2ML60N/217.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Las pruebas de penetración de aplicaciones web se centran en encontrar brechas y debilidades en una aplicación web. Las pruebas generalmente se realizan desde la perspectiva del usuario interactuando con la interfaz de usuario de la aplicación y sus API. El objetivo es evaluar cómo la aplicación maneja la entrada del usuario, la autenticación, la autorización, las sesiones y el procesamiento de datos. Las debilidades de las aplicaciones web pueden tener un gran impacto en sus usuarios porque las aplicaciones web suelen estar expuestas a Internet.</p>
+
+
+<p> • <b> Autenticación:</b> Esta área se evalúa para detectar debilidades en el manejo de credenciales de la aplicación, política de contraseñas, mecanismos de bloqueo de cuentas, autenticación multifactor, implementación, protección contra ataques automatizados como fuerza bruta y robo de credenciales, flujo de restablecimiento de contraseñas y lógicas generales relacionadas con la autenticación.</p>
+
+<p> • <b> Autorización </b> se evalúa para detectar debilidades en el mecanismo de control de acceso de la aplicación, garantizando que los usuarios solo puedan acceder a recursos y realizar acciones permitidas por su función, y protección contra ataques de escalada de privilegios verticales y horizontales. </p>
+
+<p> • <b> Gestión de sesiones </b> Riesgos de fijación de sesión, invalidación de sesión después de cerrar sesión, cumplimiento del tiempo de espera inactivo, atributos de cookies seguros y protección contra falsificación de solicitudes entre sitios (CSRF). </p>
+
+<p> • <b> Validación de entrada y salida: </b> Se evalúa para detectar debilidades en los controles de manejo de datos de la aplicación, incluida la protección contra ataques de inyección, la validación del tipo de datos y el manejo de salida. </p>
+
+<p> • <b> Configuración de seguridad: </b> se evalúa para detectar brechas en las configuraciones del servidor y de la aplicación, incluidos encabezados de seguridad, comportamiento de manejo de errores, controles de limitación de velocidad, configuración criptográfica y exposición de servicios o características innecesarias</p>
+
+
+<h3> :white_check_mark: &nbsp; Pruebas de penetración de red </h3>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/W3K5qX0Z/218.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Las pruebas de penetración de red se centran en encontrar vulnerabilidades en la infraestructura</p>
+
+<p> Se divide entre: </p>
+
+
+<h3> :radio_button: &nbsp; Red externa </h3>
+
+
+<p> se realizadesde la perspectiva de un usuario externo con poco o ningún acceso a la información sobre los sistemas expuestos externamente. Este tipo de evaluación se centra en la infraestructura externa, como servidores con conexión a Internet, firewalls, VPN, pasarelas y servicios de acceso remoto. El objetivo es evaluar cómo están expuestos estos sistemas y evaluar los controles de seguridad que los protegen contra usuarios no autorizados.</p>
+
+
+<h3> :radio_button: &nbsp; Red Interna </h3>
+
+
+<p> Es un escenario de "supuesta violación" en el que un actor de amenazas ya tiene acceso a un sistema en la red. Este tipo de evaluación evalúa lo que un atacante podría hacer a continuación, como moverse entre sistemas, aumentar privilegios o acceder a datos confidenciales. El objetivo es evaluar las relaciones de confianza, los controles de acceso y la segmentación de red. Identificar configuraciones débiles y determinar si los controles de seguridad pueden limitar el impacto de un compromiso.</p>
+
+
+<p> • <b> Mecanismos de autenticación:</b> se evalúa para detectar debilidades en los controles de autenticación a nivel de red, como la política de contraseñas, cumplimiento MFA, reutilización de credenciales, uso de credenciales predeterminadas y protección contra ataques a servicios como portales de administración, VPN, SSH, o PDR.</p>
+
+<p> • <b> Autorización y controles de acceso </b> se evalúa para detectar debilidades en los mecanismos de control de acceso a la red, garantizando que los usuarios y los sistemas solo puedan acceder a los recursos permitidos por su función o nivel de confianza. </p>
+
+<p> • <b> Segmentacion de red y relacion de confianza </b>  se evalúa para detectar debilidades en las relaciones de confianza entre usuarios y sistemas firewall reglas y controles de aislamiento. </p>
+
+<p> • <b> Configuración y gestión de parches </b> se evalúa para detectar brechas en las configuraciones y servicios de los dispositivos, como el uso de software obsoleto, configuración predeterminada insegura y protocolos de cifrado débiles. </p>
+
+
+
+
+
 <!-------------------------------------- ## FASE 1 Reconocimiento --------------------------------------------->
 
 <!--horizontal divider(gradiant)-->
@@ -2965,9 +3030,16 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 <div id="user-content-toc">
   <ul align="center">
-    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=78&pause=1000&color=F70202&width=2350&height=500&lines=Fase+2.+Enumeracion+y+An%C3%A1lisis+de+vulnerabilidades" alt="Typing SVG" /></a></summary>
+    <summary><a href="https://git.io/typing-svg"><img src="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=39&pause=1000&color=F70000&width=600&height=60&lines=Fase+2.+Enumeraci%C3%B3n" alt="Typing SVG" /></a></summary>
   </ul>
 </div>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Mp6CtyhM/214.png">
+</p>
+
 
 
 
@@ -3830,14 +3902,14 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
  </p>
 
-<p><b>auxiliary/scanner/smb/smb_enumusers</b> (Determinar qué usuarios existen a través del servicio SAM RPC.)</p>
+<p><b>:white_check_mark: auxiliary/scanner/smb/smb_enumusers</b> (Determinar qué usuarios existen a través del servicio SAM RPC.)</p>
 
 
-<p><b>auxiliary/scanner/smb/smb_enumshares</b> (Este módulo determina qué recursos compartidos proporciona el servicio SMB y cuáles son de lectura/escritura. También recopila información adicional como tipos de recursos compartidos,
+<p><b>:white_check_mark: auxiliary/scanner/smb/smb_enumshares</b> (Este módulo determina qué recursos compartidos proporciona el servicio SMB y cuáles son de lectura/escritura. También recopila información adicional como tipos de recursos compartidos,
 directorios, archivos, marcas de tiempo, etc.)</p>
 
 
-<p><b>auxiliary/scanner/smb/smb_login</b> (Este módulo probará el inicio de sesión SMB en varias máquinas y informará sobre los inicios de sesión exitosos. Si ha cargado un complemento de base de datos y se ha conectado a una base de datos, este módulo registrará los inicios de sesión exitosos
+<p><b>:white_check_mark: auxiliary/scanner/smb/smb_login</b> (Este módulo probará el inicio de sesión SMB en varias máquinas y informará sobre los inicios de sesión exitosos. Si ha cargado un complemento de base de datos y se ha conectado a una base de datos, este módulo registrará los inicios de sesión exitosos
 y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 
@@ -4203,19 +4275,11 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 <p align="center">
 
- <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
+ <img src="https://i.postimg.cc/Vv4StqxX/189.png" alt="Descripción de la imagen">
 
 </p>
 
 <p> Resultado: 192.168.232.131:3306 is running MySQL 5.0.51a-3ubuntu5 (protocol 10) </p>
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
-
-</p>
 
 
 <p> Exploit disponibles para esta version de MySQL </p>
@@ -4435,6 +4499,20 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 </p>
 
 <p> • Establecer sesion con las credenciales explotadas </p> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/GpLzWRRW/215.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/ydWjNTkh/216.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
@@ -4697,60 +4775,122 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 </br>
 
 
+<!----------------------------------------------------------------------------- ## Análisis de vulnerabilidades ------------------------------------------------------------------------------------------------------------------>
+
+
 
 <!--horizontal divider(gradiant)-->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 
+</br>
 
-<!--h1 without bottom border-->
 <div id="user-content-toc">
-  <ul align="left">
-    <summary><h2 style="display: inline-block">Fase 2. Escaneo y análisis de vulnerabilidades</h2></summary>
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&color=F70000&width=760&height=60&lines=Fase+2.+Vulnerability+Assessment" alt="Typing SVG" /></a></summary>
   </ul>
 </div>
 
+</br>
 
-<p> Vulnerabilidad es una debilidad o fallo de un sistema de informacion o de una infraestructura TI</p>
+
+<h3><b> Vulnerability x Threat = Risk </b></h3>
+
+
+<h3>Vulnerabilidad</h3>
+
+
+<p>:white_check_mark: Una Vulnerabilidad es una debilidad o fallo de un sistema de informacion o de una infraestructura TI que podría explotarse para comprometer la seguridad de los sistemas, datos u operaciones.</p>
 
 <p>Se pueden dividir en: </p>
 
-<p> • Debilidad fisica: &nbsp; Ejemplo un servidor al que puede acceder cualquier persona </p>
-<p> • Debilidad logica: &nbsp; Ejemplo puertos abiertos o una informacion confidencial en texto claro  </p>
-
-<p> Amenaza es una accion que se aprovecha de una vulnerabilidad para atacar la seguridad de un sistema de informacion</p>
-
-<p> • Eventos fisica &nbsp; Ejemplo desastres naturales</p>
-<p> • Ataques informaticos &nbsp; Malware  </p>
+<p><b> :radio_button: Debilidad fisica: </b>&nbsp; Ejemplo un servidor al que puede acceder cualquier persona </p>
+<p><b> :radio_button: Debilidad logica: </b>&nbsp; Ejemplo puertos abiertos o una informacion confidencial en texto claro  </p>
 
 
-<p> Riesgo es el potencial de causar daño en las organizaciones, probabilidad de que una amenzad explote una vulnerabilidad</p>
+<p><b> Vulnerabilidades técnicas</b>son debilidades en el software, los sistemas o las configuraciones que pueden explotarse debido a errores de codificación, configuraciones inseguras o un diseño defectuoso del sistema.</p>
 
 
-<p> Para determinar el valor del riesgo se debe determinar la probabilidad de que la amenaza explote la vulnerabilidad el impacto que se generaria si el ataque es 
-efectivo </p>
-
-<p> Los riesgos se deben tratar</p>
-
-<p> 1. Aceptando el riesgo </p>
-<p> 2. Transferir el riesgo </p>
-<p> 3. Evitar el riesgo </p>
-<p> 4. Mitigar el riesgo </p>
+<p><b> Una vulnerabilidad por sí sola no representa un riesgo si no existe ninguna amenaza que pueda aprovecharla. Asimismo, una amenaza no puede causar impacto si no existe una vulnerabilidad para explotar</b></p>
 
 
-<p>Que es Cyber Risk. Es el riesgo a cualquier perdida financiera interrupcion o daño a la reputacion de una organizacion debido a fallas en las tecnologias de 
-informacion</p>
+
+<h3>Amenaza</h3>
+
+
+<p>:white_check_mark: Una Amenaza es una accion que se aprovecha de una vulnerabilidad para atacar la seguridad de un sistema de informacion. Representa una fuente de peligro que puede aprovecharse de una debilidad para comprometer la confidencialidad integridad, y disponibilidad de los sistemas de la organización.</p>
+
+<p><b> :radio_button: Eventos fisica &nbsp; Ejemplo desastres naturales</p>
+<p><b> :radio_button: Ataques informaticos &nbsp; Malware  </p>
+
+
+
+<h3>Riesgo</h3>
+
+
+<p>:white_check_mark: Riesgo es el daño potencial que podría ocurrir si una amenaza explota con éxito una vulnerabilidad. Podemos determinar el riesgo general de una vulnerabilidad combinando el impacto y la probabilidad de explotación</p>
+
+
+<p><b>Cyber Risk</b>. Es el riesgo a cualquier perdida financiera interrupcion o daño a la reputacion de una organizacion debido a fallas en las tecnologias de informacion</p>
+
+<h3>Gestión de riesgos</h3>
+
+
+<p>La gestión de riesgos suele ser un ciclo continuo que consta de cuatro etapas:r</p>
+
+
+<p><b> :radio_button: Identificación :</b>Identificar activos, vulnerabilidades y amenazas potenciales que podrían afectar a la organización. </p>
+<p><b> :radio_button: Análisis::</b> Evaluar los riesgos para determinar el impacto potencial y la probabilidad de explotación, lo que se traduce en la gravedad de cada riesgo y ayuda a planificar los esfuerzos de remediación.</p>
+<p><b> :radio_button: Mitigación:</b>  Reducir o controlar los riesgos identificados. Esto puede incluir la aplicación de parches de seguridad, fortalecer los controles de acceso, mejorar las configuraciones, implementar herramientas de monitoreo o rediseñar procesos inseguros</p>
+<p><b> :radio_button: Monitoreo </b> Monitoreo continuo de los riesgos para garantizar que los controles sigan siendo efectivos, se detecten nuevas vulnerabilidades y se aborden rápidamente las amenazas emergentes.</p>
+
+
+<p><b> En algunos casos, las organizaciones pueden optar por aceptar o transferir el riesgo si la mitigación no es práctica o rentable. Generalmente se elige aceptar un riesgo si el impacto es mínimo y el costo de reducir el riesgo supera el beneficio. Transferir el riesgo significa transferir la responsabilidad a un tercero, como por ejemplo comprar una póliza de seguro que cubra el costo que conlleva el riesgo. </b></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p> Principales Vulnerabilidades</p>
 
-<p> • Configuracion del software o hardware</p>
-<p> • Malas practicas de programacion</p>
+<p> :radio_button: Configuracion del software o hardware</p>
+<p> :radio_button: Malas practicas de programacion</p>
 
 
 <p> Bases de datos de vulnerabilidades</p>
 
-<p> • Clasificar las vulnerabilidades</p>
-<p> • Proporcionar una puntuacion compuesta de la gravedad general y el riesgo asociado a las vulnerabilidades identificadas </p>
+<p> :radio_button: Clasificar las vulnerabilidades</p>
+<p> :radio_button: Proporcionar una puntuacion compuesta de la gravedad general y el riesgo asociado a las vulnerabilidades identificadas </p>
+
+
+
+
+
+
+
+
+
+
 
 
 ### 🛠 &nbsp; Sistemas de puntuacion de vulnerabilidades
