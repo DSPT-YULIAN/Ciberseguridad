@@ -548,10 +548,15 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 
 <p><b> • &nbsp; Identificar direcciones IP & la informacion DNS </b></p>
+<p><b> • &nbsp; informacion Registros DNS de solucionadores abiertos (A, MX, TXT, etc.). </b></p>
+<p><b> • &nbsp; Búsqueda de registros de transparencia de certificados (por ejemplo, crt.sh) en busca de subdominios y certificados emitidos </b></p>
 <p><b> • &nbsp; Identificar nombres de dominios & la información sobre la propiedad del dominio  </b></p>
 <p><b> • &nbsp; Identificar direcciones Email y perfiles de redes sociales </b></p>
 <p><b> • &nbsp; Identificar las tecnologias WEB utilizadas por el sitio </b></p>
-<p><b> • &nbsp; Identificar subdominios </b></p>
+<p><b> • &nbsp; Leer noticias públicas, comunicados de prensa o documentos filtrados en sitios de pegado.</b></p>
+<p><b> • &nbsp; Comprobación de dispositivos expuestos a través de motores de búsqueda como Shodan o Censys.</b></p>
+<p><b> • &nbsp; Escanear repositorios públicos de GitHub en busca de credenciales codificadas o archivos de configuración.</b></p>
+
 
 
 </br>
@@ -762,6 +767,29 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 </p>
 
 
+<h2> :white_check_mark: &nbsp; Developer Tools - Console </h2>
+
+
+<p> La pestaña Consola le permite ejecutar fragmentos de JavaScript directamente en el contexto de la página, ver errores e interactuar con el DOM  </p>
+
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Sources  </h2>
+
+
+<p> La pestaña Fuentes le permite explorar archivos JavaScript, CSS y HTML cargados por la página. Esta es una de las técnicas de reconocimiento más prácticas disponibles a través del navegador. Los archivos fuente de JavaScript con frecuencia contienen códigos duros API puntos finales, estructuras de directorios, referencias a servicios internos y comentarios de desarrolladores que nunca tuvieron la intención de ser públicos. Al inspeccionar estos archivos puede aparecer información que es invisible en la página renderizada. Utilizarás esta técnica en las preguntas siguientes. </p>
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Application  </h2>
+
+
+<p> La pestaña Aplicación, en la sección Almacenamiento, le permite inspeccionar las cookies, el almacenamiento local y el almacenamiento de sesión. Estas áreas de almacenamiento a veces contienen tokens de sesión, APILas claves expusieron accidentalmente el seguimiento del lado del cliente ID, o datos de autenticación.  </p>
+
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Security  </h2>
+
+
+<p> La pestaña Seguridad proporciona detalles del certificado, incluido el emisor, el período de validez y los nombres alternativos de sujeto (SAN). Las SAN con frecuencia revelan subdominios adicionales o dominios relacionados que pertenecen a la misma organización. </p>
+
+
 
 
 <!----------------------------------------------------------------------------- Descubrimiento de contenido (Manual, Osint, Automatizado) ----------------------------------------------------------------------------->
@@ -782,7 +810,7 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/RZxf0t0q/58.png" alt="Descubrimiento manual">
+  <img src="hcleps://i.postimg.cc/RZxf0t0q/58.png" alt="Descubrimiento manual">
   
 </p>
 
@@ -1503,6 +1531,16 @@ nombres de dominio. </p>
   <img src="https://i.postimg.cc/520KBLqF/15.png" alt="Descripción de la imagen">
 
 </p>
+ 
+<p> Servicios como whoxy.com proporcionan instantáneas históricas de WHOIS. Los datos históricos de WHOIS pueden revelar propietarios anteriores, cambios de registradores o migraciones de servidores de nombres que pueden indicar compromisos pasados o cambios de infraestructura..</p>
+
+
+
+<p> WHOIS será reemplazado por RDAP</p>
+
+
+<p> RDAP es el sucesor moderno: utiliza HTTPS (seguro), devuelve JSON estructurado (legible por máquina y consistente), admite la internacionalización, proporciona mejores controles de privacidad (acceso diferenciado) y se alinea con las reglas actuales de protección de datos</p>
+
 
 
 
@@ -1666,11 +1704,87 @@ nombres de dominio. </p>
 </p>
 
 
-<p><b> :arrow_right:  • Informes disponibles públicamente: &nbsp;</b> Análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b>
+<p><b> :arrow_right:  • Informes disponibles públicamente: &nbsp;</b> Análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b></p>
 
-<p><b> :arrow_right:  • Redes sociales: &nbsp;</b> Recopilación de información de plataformas de redes sociales.</p>
+<p><b> :arrow_right:  • Redes sociales: &nbsp;</b> Recopilación de información de plataformas de redes sociales.<b></p>
 
 </br>
+
+
+
+
+<h2> :white_check_mark: &nbsp; NSLOOKUP </h2>
+
+
+
+<p>Se utiliza para consultar servidores DNS y obtener información sobre registros de dominio. Es una herramienta fundamental en redes y ciberseguridad.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3xpKRGKB/222.png" alt="Descripción de la imagen">
+
+</p>
+
+<p>En ciberseguridad, nslookup se usa en la fase de reconocimiento (OSINT) para</p>
+
+
+<p> Descubrir subdominios mediante consultas de transferencia de zona (si el servidor DNS lo permite)</p>
+<p> Encontrar servidores de correo para posibles ataques de phishing o spoofing/p>
+<p> Identificar servidores DNS internos/externos</p>
+<p> Recolectar información sobre la infraestructura del objetivo</p>
+
+
+<p>Aunque sigue siendo útil, herramientas más modernas como dig (Domain Information Groper) ofrecen más flexibilidad y detalles, y son preferidas en entornos Linux/Kali para auditorías más profundas.</p>
+
+
+</br>
+
+
+
+<h2> :white_check_mark: &nbsp; SHODAN </h2>
+
+
+
+<p>Shodan es un motor de búsqueda especializado que indexa dispositivos conectados a internet (servidores, IoT equipos, cámaras, enrutadores, sistemas de control industrial y más), a diferencia de Google que indexa páginas web. Escanea constantemente todas las direcciones IP del mundo y almacena información sobre los servicios, banners y respuestas que recibe de los puertos abiertos.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Y9jDrJgC/223.pngr" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p>La pagina da como resultado una lista de Host coincidentes</p>
+
+<p><b> • Dirección IP y ASN: </b> &nbsp; identifica el bloque de red.</p>
+<p><b> • Proveedor/organización de alojamiento: </b> &nbsp; revela la infraestructura detrás del dominio. (por ejemplo, Cloudflare, AWS): </p>
+<p><b> • Ubicación geográfica:</b> &nbsp; ubicación física aproximada del servidor. </p>
+<p><b> • Puertos y servicios abiertos:</b> &nbsp; con cadenas de versiones y banners (por ejemplo, tipo y versión del servidor HTTP).</p>
+<p><b> • Etiquetas:</b> &nbsp; comocdn ovuln si una vulnerabilidad conocida coincide con la versión del servicio detectada.</p>
+
+
+
+<h3> :radio_button: &nbsp; Filtros de búsqueda en Shodan </h3>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/VLPgpS7m/224.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MGHmV1GP/225.png" alt="Descripción de la imagen">
+
+</p>
+
+
 
 
 <h4> 🛠 &nbsp; Herramientas </h4>
@@ -1716,9 +1830,14 @@ nombres de dominio. </p>
 
 <p> :white_check_mark: Técnicas comunes: </p>
 
-<p><b> • &nbsp; Descubrimiento de puertos abiertos </b>  </p>
 <p><b> • &nbsp; Conocer la infraestructura interna de una red u organización </b></p>
+<p><b> • &nbsp; Descubrimiento de puertos abiertos </b>  </p>
 <p><b> • &nbsp; Enumeracion de la informacion del sistema objetivo </b></p>
+<p><b> • &nbsp; Interactuar con aplicaciones web o API  </b></p>
+<p><b> • &nbsp; Ingeniería social (phishing, vishing, pretexto para hacer llamadas telefónicas) </b></p>
+<p><b> • &nbsp; Enfoques físicos (tailgating, hacerse pasar por un proveedor). </b></p>
+
+
 
 
 <p> Recopilar información interactuando directamente con el objetivo (envío de paquetes, solicitudes, etc.)  </p>
@@ -1755,6 +1874,8 @@ nombres de dominio. </p>
 
 </br>
 
+
+<p><b> El reconocimiento activo es detectable (IDS/IPS, WAFs, registro), conlleva un mayor riesgo de alertar al objetivo </b></p>
 
 <!----------------------------------------------------------------------------- Reconocimiento activo de DNS ----------------------------------------------------------------------------->
 
@@ -1875,6 +1996,24 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
   <img src="https://i.postimg.cc/P5pT2xVv/74.png" alt="Descripción de la imagen">
 
 </p>
+
+<p> Consejo de privacidad: utilice solucionadores públicos como @1.1.1.1 (que admiten DNS sobre HTTPS y DNS sobre TLS) para evitar que su ISP registre sus consultas.</p>
+
+<p> Nota del defensor: Supervise si hay cambios inesperados en el DNS (nuevos registros MX, entradas TXT no autorizadas). Estos pueden ser signos de toma de control de subdominios o errores de configuración.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wBdGkyDh/220.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/d0q9182P/221.png" alt="Descripción de la imagen">
+
+</p>
+
+
 
 
 
@@ -3450,9 +3589,9 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </br>
 
 
-<p>Netcat (nc) es una herramienta de red versátil conocida como el "navaja suiza" de las redes. Permite leer y escribir datos en conexiones de red usando protocolos TCP o UDP. Es ampliamente utilizado en pruebas de penetración, administración de redes y debugging.</p>
+<p>Netcat (nc) es una herramienta de red versátil conocida como la "navaja suiza" de las redes. Permite leer y escribir datos en conexiones de red usando protocolos TCP o UDP. Es ampliamente utilizado en pruebas de penetración, administración de redes y debugging.</p>
 
-<p> &nbsp; &nbsp; Nota: El trafico no esta encriptado </p>
+<p> &nbsp; &nbsp;<b> Nota: El trafico no esta encriptado</b></p>
 
 <p> Usos comunes de NETCAT</p>
 
@@ -3493,6 +3632,18 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 <p> 4. Proxy y tunelización: &nbsp; &nbsp;   Redirigir el tráfico a través de un host intermedio.</p>
 
 <p> 5. Creación de servidores simples: &nbsp; &nbsp; Servidor de chat, servidor HTTP básico, etc.</p>
+
+
+<p> Netcat sirve para capturar banner-grabbing, los banners revelan con frecuencia el nombre del software y la versión que se ejecuta en ese puerto</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/gJvvgzYR/236.png" alt="Descripción de la imagen">
+
+ </p>
+
 
 
 <!----------------------------------------------------------------------------- ## Enumeracion Masscan  ------------------------------------------------------------------------------------------------------------------>
@@ -3562,6 +3713,47 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
  <img src="https://i.postimg.cc/tCZKF4r0/4.png" alt="Descripción de la imagen">
 
  </p>
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion telnet  ------------------------------------------------------------------------------------------------------------------>
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h3 style="display: inline-block">🛠 Telnet </h3></summary>
+  </ul>
+</div>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/XvYmMPZK/telnet.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> El protocolo TELNET (Teletype Network) fue desarrollado en 1969 para comunicarse con un sistema remoto a través de una interfaz de línea de comandos. Usa el puerto 23 de forma predeterminada</p>
+
+
+<p> Telnet envía todos los datos en texto sin cifrar, incluidos nombres de usuario y contraseñas. Esto hace que sea trivial para cualquier persona con acceso al canal de comunicación interceptar las credenciales de inicio de sesión </p>
+
+
+
+<p> A pesar de sus deficiencias de seguridad, el cliente telnet dispone de una propiedad útil para el reconocimiento. Debido a que opera a través de TCP, puede usarlo para conectarse a cualquier puerto TCP y observar la respuesta del servidor. Esta técnica se conoce como banner grabbing. Te conectas a un servicio y lees la respuesta inicial, llamada "banner", que el servidor envía de vuelta. Los banners revelan con frecuencia el nombre del software y la versión que se ejecuta en ese puerto.</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KYcSGzWz/235.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+
+
 
 
 
@@ -4794,6 +4986,14 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 </br>
 
 
+<p align="center">
+
+ <img src="https://i.postimg.cc/yNw1RfSz/219.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
 <h3><b> Vulnerability x Threat = Risk </b></h3>
 
 
@@ -4820,8 +5020,8 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 <p>:white_check_mark: Una Amenaza es una accion que se aprovecha de una vulnerabilidad para atacar la seguridad de un sistema de informacion. Representa una fuente de peligro que puede aprovecharse de una debilidad para comprometer la confidencialidad integridad, y disponibilidad de los sistemas de la organización.</p>
 
-<p><b> :radio_button: Eventos fisica &nbsp; Ejemplo desastres naturales</p>
-<p><b> :radio_button: Ataques informaticos &nbsp; Malware  </p>
+<p><b> :radio_button: Eventos fisica &nbsp; Ejemplo desastres naturales</b></p>
+<p><b> :radio_button: Ataques informaticos &nbsp; Malware  </b></p>
 
 
 
@@ -4846,6 +5046,188 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 <p><b> En algunos casos, las organizaciones pueden optar por aceptar o transferir el riesgo si la mitigación no es práctica o rentable. Generalmente se elige aceptar un riesgo si el impacto es mínimo y el costo de reducir el riesgo supera el beneficio. Transferir el riesgo significa transferir la responsabilidad a un tercero, como por ejemplo comprar una póliza de seguro que cubra el costo que conlleva el riesgo. </b></p>
+
+
+<!----------------------------------------------------------------------------- ## Vulnerability Scanning with MSF ------------------------------------------------------------------------------------------------------------------>
+
+
+<h2> :white_check_mark: Vulnerability Scanning with MSF</h2> 
+
+
+<p>En la interacción anterior con Metasploit se logró identificar y explotar configuraciones incorrectas en el servidor objetivo. En este caso, se utilizarán módulos auxiliares para escanear en busca de vulnerabilidades.</p>
+
+
+
+<h3> :radio_button: Pasos </h3>
+
+
+<p> Realizar un escanero al obsetivo </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fLHZhwDC/226.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> Con el resultado obtenido de los servicios que se enuentran corriendo en el servidor objetivo se puede realizar una busqueda especifica de exploit </p>
+
+
+<p><b> search type:exploit name:...</b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Kv19fmVK/227.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> Como se logra observar existen diferentes exploit para el servicio de Mirosoft IIS pero no para la version que se encuentra corriendo el servidor en especifico, por lo cual se puede recurrir a otras herramientas o a sitios WEB </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/505FVKtk/228.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p> Se observa que en el puerto 8080 HTTP se encuentra corriendo el servicio de Sun GlassFish Open Source Edition  en su version 4.0  </p>
+<p> Al realizar la busqueda del exploit encontramos un resultado, exploit/multi/http/glassfish_deployer de la fecha 2011-08-04 </p>
+<p> Al ingresar al exploit podemos leer la descripcion del modulo para entender mejor su funcionamiento </p>
+
+<p>  Este módulo inicia sesión en un servidor GlassFish (de código abierto o comercial) utilizando diversos métodos (como eludir la autenticación, credenciales predeterminadas o datos de inicio de sesión proporcionados por el usuario), y despliega un archivo WAR malicioso con el fin de lograr la ejecución remota de código. Se ha probado en GlassFish 2.x, 3.0, 4.0 y Sun Java System Application Server 9.x. Las versiones más reciente no permiten el acceso remoto (Secure Admin) de forma predeterminada, pero este es necesario para la explotación. </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KzQpYNqJ/229.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> Adicionalmente, podemos observar que el modulo se encuentra configurado de forma automatica para el sistema de windows, pero se puede modificar segun se requiera</p>
+
+
+ </br>
+
+
+
+<p> De igual forma, podemos verificar si el servidor objetivo es vulnerable a una vulnerabilidad específica</p>
+
+
+<p> Usando el modulo de Metasploit <b> exploit(windows/smb/ms17_010_eternalblue) </b></p>
+
+
+<p> Este módulo de Metasploit se utiliza para explotar la vulnerabilidad MS17-010 (EternalBlue) en sistemas Windows que no tienen aplicado el parche de seguridad correspondiente, Este módulo de Metasploit se utiliza para explotar la vulnerabilidad MS17-010 (EternalBlue) en sistemas Windows que no tienen aplicado el parche de seguridad correspondiente </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/xjMn71Q0/231.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sg6rSBYt/232.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Como se puede observar el sistema es vulnerable y tenemos acceso al destino</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/CMRzKq8n/233.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/htBjMZ5D/234.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Al combinarlo con un payload como windows/x64/meterpreter/reverse_tcp, obtienes una shell Meterpreter en el sistema objetivo con privilegios de SYSTEM (el nivel más alto en Windows), lo que te permite: Ejecutar comandos remotos, Extraer hashes de contraseñas (SAM), Escalar privilegios (aunque ya entrega SYSTEM), Exfiltrar archivos, Pivotear a otros sistemas en la red, Instalar persistencia </p>
+
+
+
+<p> De igual forma es posible apoyarse con herramientas externas </p>
+
+
+
+<h3> :white_check_mark:  Searchsploit</h3>  
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/52m1n7w1/230.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> Es una herramienta de línea de comandos incluida en el framework Exploit-DB (Exploit Database), que permite buscar exploits y vulnerabilidades en una base de datos local.</p>
+
+</br>
+
+<h3> :radio_button: Pasos </h3> 
+
+<p> 1. Realizar un escaneo de detección de versiones de servicios y aplicaciones que se ejecutan en puertos abiertos de un sistema objetivo. (nmap -sV). </p>
+<p> 2. Colocar el nombre del servicio del cual se quiere buscar el exploit, teniendo en cuenta los puertos o servicios expuestos. </p>
+<p> &nbsp;&nbsp;&nbsp; • searchsploit [opciones] término de búsqueda.  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/LX4kBKtx/1.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> 3. Descargar el exploit. </p>
+
+<p >&nbsp;&nbsp;&nbsp; • searchsploit -m [Nombre del exploit]. </p>
+<p> Exploit descargado en el directorio selecionado. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/tgpFpQM9/3.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> Base de datos de Exploit. </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/t4HpGqGn/5.png" alt="Descripción de la imagen">
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4935,41 +5317,6 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 ### 🛠 &nbsp;Herramientas recomendadas
 
 
-### 🛠 &nbsp; Searchsploit
-
-<p>	Es una herramienta de línea de comandos incluida en el framework Exploit-DB (Exploit Database), que permite buscar exploits y vulnerabilidades en una base de datos local.</p>
-
-</br>
-
-<p>	1. Realizar un escaneo de detección de versiones de servicios y aplicaciones que se ejecutan en puertos abiertos de un sistema objetivo. (nmap -sV). </p>
-<p>	2. Colocar el nombre del servicio del cual se quiere buscar el exploit, teniendo en cuenta los puertos o servicios expuestos. </p>
-<p> &nbsp;&nbsp;&nbsp; • searchsploit [opciones] término de búsqueda.  </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/LX4kBKtx/1.png" alt="Descripción de la imagen">
-</p>
-
-
-<p> 3. Descargar el exploit. </p>
-
-<p >&nbsp;&nbsp;&nbsp; • searchsploit -m [Nombre del exploit]. </p>
-<p> Exploit descargado en el directorio selecionado. </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/tgpFpQM9/3.png" alt="Descripción de la imagen">
-</p>
-
-
-<p> Base de datos de Exploit. </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/t4HpGqGn/5.png" alt="Descripción de la imagen">
-</p>
 
 
 
