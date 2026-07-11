@@ -5207,47 +5207,179 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <p align="center">
 
   <img src="https://i.postimg.cc/t4HpGqGn/5.png" alt="Descripción de la imagen">
+
 </p>
 
 
+<!----------------------------------------------------------------------------- ## WebDAV Vulnerabilities ------------------------------------------------------------------------------------------------------------------>
+
+
+<h2> :white_check_mark: WebDAV Vulnerabilities (Windows)</h2> 
+
+
+<p>(Web Distributed Authoring and Versioning) es una extensión del protocolo HTTP que permite a los usuarios editar y gestionar archivos en servidores web de forma colaborativa. Fue definido en el RFC 4918 y básicamente transforma un servidor web en un sistema de archivos accesible remotamente.</p>
+
+
+<p> Extensiones de archivos ejecutables compatibles</p>
+
+
+<p><b> • .asp  </b></p>
+<p><b> • .aspx </b></p>
+<p><b> • .conf </b></p>
+<p><b> • .php  </b></p>
+
+<p> Para conectarse a un servidor WebDav, debera proporcionar credenciales legitimas, esto se debe a que WebDav implementa autenticaion en forma de usuario y contraseña </p>
+
+
+<h3> :radio_button: Pasos </h3>
+
+
+<p> 1. Identificar la version y el servicio </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/T1z9HJwg/237.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> Se observa que en el puerto 80 tenemos un servidor web ejecutandose el cual corresponde a Microsoft IIS httpd en su version 7.5  </p>
+
+
+<p> 2. Consultar un poco mas de informacion del puerto con la opcion <b>--script=http-enum</b> el cual se utiliza para enumerar directorios y archivos comunes en servidores web. Lo cual tambien nos indicara si el WebDAV se encuentra configurado en este servidor </p>
+
+<p> Se observa que WebDav ha sido configurado para ejecutarse en el servidor web IIS </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Bvv1GPRk/238.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> Al ralizar la validacion en el navegador se observa que el servidor webdav solicita usuario y contraseña como se menciono con anterioridad, si no contamos con dichos datos podemos proceder con un ataque de fuerza bruta </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Cxxjw2qc/239.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> Al ingresar las credenciales correctas podremos acceder al contenido del directorio web en el cual por el momento solo cuenta con 2 archivos</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/0j9zc6GD/240.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>3.  Con la ayuda de la herramienta <b>davtest</b> podremos identifica y explotar configuraciuones inseguras en servidores que tienen habilitado WebDAV.</p>
+
+
+<p> Como se observa en la siguiente imagen cuando intentamos acceder a la URL falla la conexion por no suministrar las credenciales</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/25fLVXqc/241.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Al establecer conexion se crea una Cadena aleatoria para esta sesión: <b> GzUzoZM8 </b> </p>
+
+
+<p> Adicionalmente se crar el directorio <b> Created http://10.4.29.41/webdav/DavTestDir_GzUzoZM8 </b> </p>
+
+
+<p> Podemos notar que hemos cargado casi todos los tipos de archivos importantes al directorio /webdav. Además, podemos ejecutar tres tipos de archivos. es decir, asp, texto y html.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XqZY2wGy/242.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> Al comprobar la seccion de ejecucion de archivos de pruebas observamos que se tiene exito en la carga de archicos .asp</p>
+
+
+<p> <b> Nota </b> Cuando ves archivos .asp en un servidor WebDAV, significa que ese servidor muy probablemente ejecuta IIS (Internet Information Services) de Microsoft. Si puedes subir un archivo .asp a través de WebDAV y el servidor lo ejecuta, puedes obtener ejecución remota de código subiendo una webshell </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sxYyvKtX/243.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>4. Cargue una puerta trasera .asp en la máquina de destino al directorio /webdav usando la utilidad <b>cadaver</b></p>
+
+
+<p>Cadaver es un cliente de línea de comandos para el protocolo WebDAV, diseñado para interactuar con servidores WebDAV de forma similar a como lo harías con un cliente FTP.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wjTHjX2b/244.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>En la imagen se puede observar el punto 4 que indica que es posible interactuar con el webdav y el punto 5 dondela conexion webshell se ha establecido con exito</p>
+
+
+
+<p>5.  Subir la puerta trasera asp al servidor web IIS en el directorio webdav.></p>
+
+<p>Hemos subido la puerta trasera con éxito..</p>
+
+
+<p>:white_check_mark: Webshell</p>
+
+
+<p> Es un script malicioso (o de prueba, en el contexto de un pentest autorizado) que se sube a un servidor web para obtener control remoto sobre él a través del navegador o peticiones HTTP.</p>
+
+<p> Es esencialmente una puerta trasera (backdoor) que se ejecuta en el servidor. Te permite enviar comandos del sistema operativo a través de parámetros HTTP (GET, POST, etc.) y ver el resultado en el navegador.</p>
 
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/mrKGj04t/245.png" alt="Descripción de la imagen">
+  
+</p>
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/RVWL5y5Y/246.png" alt="Descripción de la imagen">
+  
+</p>
+ 
 
 
+ <p align="center">
+
+  <img src="https://i.postimg.cc/Fswg9phf/247.png" alt="Descripción de la imagen">
+  
+</p>
 
 
+ 
+ <p align="center">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <img src="https://i.postimg.cc/wjctSQMp/248.png" alt="Descripción de la imagen">
+  
+</p>
+ 
 
 
 
