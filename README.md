@@ -3715,47 +3715,6 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
  </p>
 
 
-<!----------------------------------------------------------------------------- ## Enumeracion telnet  ------------------------------------------------------------------------------------------------------------------>
-
-
-<div id="user-content-toc">
-  <ul align="center">
-    <summary><h3 style="display: inline-block">🛠 Telnet </h3></summary>
-  </ul>
-</div>
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/XvYmMPZK/telnet.png" alt="Descripción de la imagen">
-
- </p>
-
-
-<p> El protocolo TELNET (Teletype Network) fue desarrollado en 1969 para comunicarse con un sistema remoto a través de una interfaz de línea de comandos. Usa el puerto 23 de forma predeterminada</p>
-
-
-<p> Telnet envía todos los datos en texto sin cifrar, incluidos nombres de usuario y contraseñas. Esto hace que sea trivial para cualquier persona con acceso al canal de comunicación interceptar las credenciales de inicio de sesión </p>
-
-
-
-<p> A pesar de sus deficiencias de seguridad, el cliente telnet dispone de una propiedad útil para el reconocimiento. Debido a que opera a través de TCP, puede usarlo para conectarse a cualquier puerto TCP y observar la respuesta del servidor. Esta técnica se conoce como banner grabbing. Te conectas a un servicio y lees la respuesta inicial, llamada "banner", que el servidor envía de vuelta. Los banners revelan con frecuencia el nombre del software y la versión que se ejecuta en ese puerto.</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/KYcSGzWz/235.png" alt="Descripción de la imagen">
-
- </p>
-
-
-
-
-
-
-
-
 
 <!----------------------------------------------------------------------------- ## Enumeracion de servicios de RED ------------------------------------------------------------------------------------------------------------------>
 
@@ -3765,7 +3724,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 <div id="user-content-toc">
   <ul align="center">
-    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=25&pause=1000&width=500&height=80&lines=T1046+%3A+Network+Service+Scanning" alt="Typing SVG" /></a></summary>
+    <summary><a href="https://git.io/typing-svg"><img src="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=FF4E4E&width=800&height=500&lines=T1046+%3A+Network+Service+Discovery" alt="Typing SVG" /></a></summary>
   </ul>
 </div>
 
@@ -3816,12 +3775,16 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <p>3.  Mapear la red: Ayuda a entender la arquitectura de la red y cómo interactúan los sistemas entre sí.</p>
 
 
+
 <!----------------------------------------------------------------------------- ## Enumeracion FTP ------------------------------------------------------------------------------------------------------------------>
 
 </br>
 
 
-<h2> :white_check_mark:  Enumeración FTP </h2> 
+<h2> :white_check_mark:  Enumeración FTP  </h2> 
+
+
+<h3> :radio_button: 20 - 21  </h3> 
 
 
 
@@ -3845,7 +3808,27 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <p> Nota: &nbsp; FTP no es cifrado se recomienda usar SFTP (puerto 22) no es un protocolo independiente, sino una subfunción del protocolo SSH por lo tanto opera dentro del canal seguro que establece SSH. Adicionalmente, Se requiere tener credenciales </p>
 
 
+<p> &nbsp; • SFTP (SSH Protocolo de transferencia de archivos) se ejecuta sobre SSH en el puerto 22 y cifra todo el tráfico. Este es el reemplazo más común para FTP.</p>
+<p> &nbsp; • FTPS (FTP Seguro) añade TLS cifrado al Protocolo FTP en el puerto 990 (implícito TLS) o utiliza STARTTLS en el puerto 21.</p>
+<p> &nbsp; • SCP (Protocolo de copia segura) también se ejecuta SSH, aunque está siendo desaprobado en favor del SFTP.</p>
+
+
+
+<h3> Anonymous FTP </h3>
+
+<p> Algunos servidores FTP permiten el inicio de sesión anónimo, normalmente utilizando el nombre de usuarioanonymous o ftp con cualquier dirección de correo electrónico como contraseña (o sin contraseña alguna). Anónimo FTP Se utilizó históricamente para la distribución de archivos públicos, como descargas de software y documentación. Durante las pruebas de penetración, pruebe siempre un inicio de sesión anónimo cuando descubra un FTP servidor</p>
+
+<p> Anónimo FTP Los servidores pueden contener archivos confidenciales que se expusieron accidentalmente, copias de seguridad de configuración o proporcionar una forma de cargar archivos maliciosos si el acceso de escritura está habilitado.</p>
+
+
+
+
+
+
 <h3> Objetivos de la enumeración FTP</h3>
+
+
+<p> Encontrar un FTP en Un servidor (especialmente uno que permita el inicio de sesión anónimo) es un hallazgo común y significativo. </p>
 
 
 <p> •&nbsp; Identificar usuarios válidos. </p> 
@@ -4002,11 +3985,831 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
  </br>
 
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion SSH ------------------------------------------------------------------------------------------------------------------>
+
+
+
+</br> 
+
+
+<h2> :white_check_mark: SSH Enumeration</h2> 
+
+
+
+<h3> :radio_button: 22  </h3> 
+
+
+<p align="center">
+
+ <img src="xxxxx" alt="Descripción de la imagen">
+
+
+<p> SSH son las siglas de Secure SHell. Es un protocolo de red criptográfico que permite operar servicios de red de forma segura sobre un canal no seguro entre el cliente y el servidor.</p>
+
+<p> SSH utiliza el puerto 22 de forma predeterminada, sin embargo se puede configurar para utilizar en cualquier otro puerto</p>
+
+
+<h3> :radio_button: Pasos de enumeracion SSH</h3>
+
+
+
+<p> 1. Identificar la version de SSH que esta corriendo en el servidor</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Resultado: SSH server version: SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1 </p>
+
+
+<p> NOTA: No se evidencian Exploit disponibles para esta version de SSH en Metasploit </p>
+
+
+<p> Con ayuda de searchsploit podemos consultar los exploit disponibles </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/xC6tKQ1t/208.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 2. El modulo <b> ssh_login </b>  Este módulo comprobará los inicios de sesión mediante SSH en una serie de equipos e informará de los inicios de sesión correctos. Si has cargado un complemento de base de datos y te has conectado a una base de datos, este módulo registrará los inicios de sesión
+  correctos y los hosts para que puedas realizar un seguimiento de tus accesos.</p>
+
+
+<p> • Fuerza bruta SSH </p>  
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PqvkN6fD/209.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> • Establecer sesion con las credenciales explotadas </p> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/GpLzWRRW/215.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/ydWjNTkh/216.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion telnet  ------------------------------------------------------------------------------------------------------------------>
+
+
+</br>
+
+
+<h2> :white_check_mark:  Enumeración TELNET </h2> 
+
+
+
+<h3> :radio_button: 23  </h3> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/XvYmMPZK/telnet.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> El protocolo TELNET (Teletype Network) fue desarrollado en 1969 para comunicarse con un sistema remoto a través de una interfaz de línea de comandos. Usa el puerto 23 de forma predeterminada</p>
+
+
+<p> Telnet es un protocolo de capa de aplicación que envía todos los datos en texto sin cifrar, incluidos nombres de usuario y contraseñas. Esto hace que sea trivial para cualquier persona con acceso al canal de comunicación interceptar las credenciales de inicio de sesión </p>
+
+
+<p> Como funciona </p>
+
+
+
+<p> Se solicita al usuario que proporcione su nombre de inicio de sesión (nombre de usuario).</p>
+<p> Luego se les pide la contraseñaD2xc9CgD. La contraseña no se muestra en la pantalla.</p>
+<p> Una vez que el sistema verifica las credenciales de inicio de sesión, el usuario recibe un mensaje de bienvenida.</p>
+<p> El servidor remoto otorga un símbolo del sistemafrank@bento:~$. $Indica que este no es un terminal raíz.</p>
+
+
+
+<p align="center">
+
+ <img src="hhttps://i.postimg.cc/SKf0QP9v/249.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Todos los datos se envían en texto sin formato. Se capturó el tráfico generado por Telnet para encontrar la contraseña. La figura muestra los datos ASCII intercambiados entre el cliente y el sistema remoto. El texto en rojo es lo que envía el cliente, mientras que el texto en azul es lo que devuelve el sistema remoto. Observe cómo el nombre de usuario se repitió para mostrarlo en la terminal; sin embargo, la contraseña no lo era. En otras palabras, si alguien estuviera mirando la pantalla, no vería los caracteres de la contraseña. Sin embargo, esta protección visual no tiene sentido porque la contraseña todavía viaja a través de la red en texto sin cifrar.</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/WzQYwmrg/250.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p> A pesar de sus deficiencias de seguridad, el cliente telnet dispone de una propiedad útil para el reconocimiento. Debido a que opera a través de TCP, puede usarlo para conectarse a cualquier puerto TCP y observar la respuesta del servidor. Esta técnica se conoce como banner grabbing. Te conectas a un servicio y lees la respuesta inicial, llamada "banner", que el servidor envía de vuelta. Los banners revelan con frecuencia el nombre del software y la versión que se ejecuta en ese puerto.</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KYcSGzWz/235.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+<!----------------------------------------------------------------------------- ## SMTP Enumeration ------------------------------------------------------------------------------------------------------------------>
+
+
+
+<h2> :white_check_mark: SMTP Enumeration</h2> 
+
+
+<h3> :radio_button: 25  </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fRBD7mN1/210.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> SMTP son las siglas de Simple Mail Transfer Protocol (Protocolo Simple de Transferencia de Correo). Es el protocolo estándar utilizado para el envío de correo electrónico en Internet y en redes TCP/IP.</p>
+
+<p> Se encarga de transmitir (enviar) mensajes de correo desde un cliente (como Outlook, Thunderbird, o un script) hasta un servidor de correo, y también entre servidores de correo (MTA → MTA). No se usa para descargar correo (eso es tarea de POP3 o IMAP).</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qvZWML0C/211.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> La enumeracion SMTP es una técnica de reconocimiento utilizada en pruebas de penetración para extraer información de un servidor SMTP. Se aprovecha de los comandos del protocolo SMTP (principalmente VRFY, EXPN y RCPT TO) para descubrir usuarios válidos, alias de correo o direcciones de email en el servidor target. </p>
+
+
+
+
+<h3> :radio_button: Pasos de enumeracion SMTP</h3>
+
+
+
+<p> 1. Identificar la version de SMTP que esta corriendo en el servidor</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/tJYrs1jS/212.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Resultado: SMTP server version: 192.168.232.131:25 SMTP 220 metasploitable.localdomain ESMTP Postfix (Ubuntu)\x0d\x0a </p>
+
+
+<p> NOTA: No se evidencian Exploit disponibles para esta version de SMTP en Metasploit pero se pueden buscar en otras herramientas o plataformas </p>
+
+
+<p> 2. El modulo <b> smtp_enum </b> SMTP dispone de dos comandos internos que permiten la enumeración de usuarios: VRFY (que confirma los nombres de los usuarios válidos) y EXPN (que
+  revela las direcciones reales de los alias de los usuarios y las listas de correo (listas de distribución)). Mediante la ejecución de estos comandos SMTP se puede
+  obtener una lista de usuarios válidos. </p>
+
+
+<p> Realizar ataque de fuerza bruta </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/mZpLJK6F/213.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Como resultado tenemos diferentes usuarios del sistema </p>
+
+
+</br>
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion HTTP ------------------------------------------------------------------------------------------------------------------>
+
+
+
+</br>
+
+
+<h2> :white_check_mark:  Enumeración HTTP </h2> 
+
+
+<h3> :radio_button: 80  </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/mD7SGxFx/251.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> HTTP (Hypertext Transfer Protocol) es el protocolo fundamental de la web, utilizado para la comunicación entre clientes (navegadores) y servidores. Es un protocolo de capa de aplicación que sigue un modelo cliente-servidor y opera sobre TCP (generalmente puerto 80).</p>
+
+
+
+<h3> :radio_button: Métodos HTTP comunes</h3>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/5tBH4fnx/252.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Debido a que HTTP es un protocolo de texto sin cifrar, puede utilizar una herramienta sencilla como Telnet (o Netcat) para comunicarse con un servidor web y actuar como un "navegador web"</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/xC2qZqD1/253.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/4y4yJMxL/254.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+<p> :radio_button: La enumeración HTTP consiste en: </p>
+
+
+
+<p> 1. Identificación del servidor y tecnologías</p>
+
+<p> &nbsp; ✅ Banner grabbing y cabeceras HTTP:</p>
+<p> &nbsp; ✅ Detección de tecnologías (CMS, frameworks, librerías):</p>
+
+
+<p> 2. Enumeración de directorios y archivos ocultos</p>
+
+<p> &nbsp; ✅ Fuzzing con dirb (rápido, wordlist por defecto):</p>
+<p> &nbsp; ✅ Fuzzing con gobuster (más rápido y flexible):</p>
+<p> &nbsp; ✅ Fuzzing con ffuf (el más rápido, ideal para pentest):</p>
+
+
+<p> 3. Métodos HTTP permitidos</p>
+
+
+<p>Métodos peligrosos que buscar:</p>
+
+<p> &nbsp; ✅ PUT → subida de archivos no autorizada</p>
+<p> &nbsp; ✅ DELETE → eliminación de recursos</p>
+<p> &nbsp; ✅ TRACE → posible XST (Cross-Site Tracing)</p>
+<p> &nbsp; ✅ CONNECT → tunneling HTTP</p>
+
+
+<p> 4. Enumeración de parámetros y endpoints API</p>
+
+<p> &nbsp; ✅ Fuzzing de rutas API:</p>
+<p> &nbsp; ✅ Búsqueda de archivos sensibles conocidos:</p>
+
+
+<p> 5. Scripts Nmap específicos para HTTP</p>
+
+
+<p> 6. Herramientas especializadas</p>
+
+<p> &nbsp; ✅ Nikto - escáner de vulnerabilidades web:</p>
+<p> &nbsp; ✅ WPScan (si es WordPress):</p>
+
+
+
+<p> Flujo recomendado para una enumeración HTTP completa</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/4y4yJMxL/254.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> telnet IP 80 te da control total a nivel TCP/HTTP raw para inspeccionar, manipular y probar el servidor web sin intermediarios. Es una herramienta simple pero muy poderosa para detectar configuraciones inseguras, smuggling, verb tampering y otras vulnerabilidades que herramientas automatizadas pueden pasar por alto.</p>
+
+
+<p> HTTP Versiones del protocolo</p>
+
+<p> :radio_button: <b> HTTP/1.1 <b> Introdujo conexiones persistentes (que reutilizan la misma conexión TCP) y la cabecera Host obligatoria, lo que permitió el alojamiento virtual basado en nombres y redujo drásticamente el consumo de direcciones IP</p>
+<p> :radio_button: <b> HTTP/2  </b> introdujo multiplexación (múltiples solicitudes a través de una sola conexión), compresión de encabezado y envío al servidor. Es binario en lugar de basado en texto, lo que dificulta la interacción manual con Telnet.</p>
+<p> :radio_button: <b> HTTP/3  </b> usa QUIC (construido en UDP) en lugar de TCP, ofreciendo un rendimiento mejorado, especialmente en redes no confiables. Es cada vez más común en los principales sitios web.</p>
+
+
+<!----------------------------------------------------------------------------- ## Web Server Enumeration ------------------------------------------------------------------------------------------------------------------>
+
+</br> 
+
+
+<h2> :white_check_mark: Web Server Enumeration </h2> 
+
+
+<h3> :radio_button: 80 - 443 </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Rhjx2TR7/171.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p>Un Web Server (servidor web) es un sistema que almacena, procesa y entrega páginas web a los clientes (navegadores) a través del protocolo HTTP/HTTPS. Cumple dos funciones principales: </p>
+
+<p> 1. Servir contenido estático – archivos HTML, CSS, JavaScript, imágenes, PDFs, etc. Los cuales almacenan en disco y se envían tal cual cuando un cliente los solicita.</p>
+
+<p> 2. Ejecutar aplicaciones dinámicas – mediante lenguajes como PHP, Python, Node.js o ASP.NET, el servidor web genera páginas personalizadas en tiempo real, a menudo consultando bases de datos.</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/4dSDh1jB/172.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/L6TVCs81/170.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Componentes claves </p>
+
+<p><b> HTTP Server </b> El software que escucha peticiones HTTP en un puerto (generalmente 80 o 443) y responde. Ejemplos: Apache, Nginx, IIS, Caddy.</p>
+<p><b> Sistema operativo </b>Donde corre el servidor web (Linux, Windows, etc.)</p>
+<p><b> Recursos </b>Los archivos y aplicaciones que el servidor expone.</p>
+<p><b> Conexión de red </b>Para recibir y responder peticiones de los clientes</p>
+
+
+<p> Informacion que se puede obtener al enumerar un web Server </p>
+
+
+<p>✅ Información del propio servidor web</p>
+<p>✅ Directorios y archivos ocultos/expuestos / herramientas como ffuf, gobuster, dirb o dirsearch.</p>
+<p>✅ Versionado de aplicaciones y CMS </p>
+<p>✅ Parámetros y endpoints de API / Mediante fuzzing de parámetros y enumeración de rutas API</p>
+<p>✅ Subdominios y virtual hosts</p>
+<p>✅ Redirecciones y cadena de proxies</p>
+<p>✅ Errores que filtran información</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/52G1zbvh/173.png" alt="Descripción de la imagen">
+
+</p>
+
+<p>✅ Información de sesión y autenticación</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/ZnVz5S4M/174.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>✅ Framework y librerías del frontend</p>
+<p>✅ Información del entorno de desarrollo</p>
+
+
+
+<h3> :radio_button: Pasos de enumeracion WEB Server</h3>
+
+
+<p> 1. &nbsp; Identificar la version</p> 
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/bwJTzr5g/178.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 2. &nbsp; Enumerar los encabezados HTTP</p> 
+
+<p> Los encabezados HTTP revelan información valiosa sobre la configuración del servidor, la tecnología subyacente y las medidas de seguridad implementadas.</p> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/8CgjZnLv/179.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 3. &nbsp; Enumerar Robots.txt</p> 
+
+<p> Los desarrolladores suelen listar ahí las rutas que no quieren que los motores de búsqueda indexen, precisamente porque contienen información sensible o funcionalidades administrativas</p> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/s2Ks5nc6/180.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Se evidencian 2 directorios </p> 
+
+<p> Con ayuda del comando CURL obtener el contenido de la URL transfiriendo los archivos </p> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/1tY4wfs0/181.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Se observa el codigo de respuesta 401 "Unauthorized" Indica que una solicitud web no fue procesada porque las credenciales de autenticación del usuario faltan, son incorrectas o han expirado, Lo que significa que este directorio en particular se encuentra protegido, por lo tanto podemos recurrir a un ataque de fuerza bruta  </p> 
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/zD6VfbdS/182.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 4. &nbsp; Validar si se encuetran mas directorios ocultos</p> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/nzBzBKX4/183.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Con ayuda del comando CURL obtener el contenido de la URL transfiriendo los archivos </p> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/nzBzBKX4/183.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/kXn4RbqG/184.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 5. &nbsp; Buscar archivos especificos dentro del directorio </p> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PxQC0zdt/185.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/x8sc1fJ2/186.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 6. &nbsp; Realizar un ataque de fuerza bruta al directorio /secure identificado con la opcion de robots</p> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/c4G3rzgX/187.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<!----------------------------------------------------------------------------- ## MySQL Enumeration ------------------------------------------------------------------------------------------------------------------>
+
+</br> 
+
+
+<h2> :white_check_mark: MySQL Enumeration</h2> 
+
+
+<h3> :radio_button: 3306  </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/XYzCxz0D/192.png" alt="Descripción de la imagen">
+
+
+
+
+<p> MySQL es un sistema de gestión de bases de datos relacional (RDBMS) de código abierto, extremadamente popular en entornos web y aplicaciones empresariales. Normalmente corre en el puerto 3306 (TCP). También puede estar en puertos alternativos o detrás de un proxy.</p>
+
+
+<p> La enuneracion consiste en identificar y extraer información del servicio MySQL para descubrir vulnerabilidades, configuraciones inseguras y vectores de ataque</p>
+
+<p> Una vez identificado el servicio, se busca obtener: </p>
+
+
+
+<p>&nbsp; <b>• Versión de MySQL y sistema operativo </b>&nbsp; crucial para buscar CVEs conocidos </p>
+<p>&nbsp; <b>• Usuarios y cuentas </b>&nbsp; (root, anónimas, por defecto) </p>
+<p>&nbsp; <b>• Bases de datos disponibles  </b>&nbsp; (information_schema, mysql, databases de aplicación) </p>
+<p>&nbsp; <b>• Tablas y columnas sensibles </b>&nbsp; (usuarios, contraseñas, tokens, datos personales) </p>
+<p>&nbsp; <b>• Privilegios de usuarios </b>&nbsp; (FILE, SUPER, SELECT, CREATE, etc.)</p>
+<p>&nbsp; <b>• Variables de configuración </b>&nbsp; (secure_file_priv, local_infile, sql_mode, etc.) </p>
+<p>&nbsp; <b>• Plugins y extensiones </b>&nbsp; (UDFs, stored procedures maliciosos) </p>
+
+
+
+<h3> :radio_button: Pasos de enumeracion MySQL</h3>
+
+<p> Filtrar los modulos auxiliares relacionados con MySQL: <b>search type:auxiliary name:MySQL</b> </p>
+ 
+ 
+ 
+<p> 1. Identificar la version de MySQL que esta corriendo en el servidor</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Vv4StqxX/189.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Resultado: 192.168.232.131:3306 is running MySQL 5.0.51a-3ubuntu5 (protocol 10) </p>
+
+
+<p> Exploit disponibles para esta version de MySQL </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/VNRS6LKK/190.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 2. Fuerza bruta MySQL </p>
+
+<p> Configurar los parametros</p>
+
+<p> • BLANK_PASSWORDS - Probar contraseñas en blanco para todos los usuarios </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PJcW3WNY/193.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/nhfMGQ5d/194.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Con el parametro <b> "CREDS"</b> se pueden ver los resultados</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/SNf8zbf8/195.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 3. Ingresar a la base de datos con las credenciales obteninas  </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/VkTjzBR1/196.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/8kHM7V4g/197.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/vZp6J8Yw/198.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Se puede realizar el cambio de contraseña de los usuarios de las bases de datos </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/D0ZZWRvg/199.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> En este caso se realiza el cambio de contraseña del usuarios root al cual le colocamos la contraseña 12345 </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/2SXPmJMZ/200.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Esta cadena representa un hash de contraseña clásico de MySQL (versión 4.1 o posterior). Corresponde exactamente a la contraseña "12345", generada mediante la función PASSWORD() de MySQL</p>
+
+<p> El algoritmo aplicado implica un cifrado doble con SHA-1</p>
+
+<p> Hash = SHA1(SHA1(cadena))</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/mrzKrjWq/201.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 4. El modulo auxiliar mysql_enum nos permite ver una gran cantridad de informacion </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/BnYd46tm/202.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 5. El modulo <b> mysql_sql </b>permite ejecutar sentencias SQL sencillas en una instancia de MySQL, siempre que se disponga de las credenciales adecuadas </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/MKMnwc9L/203.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Realizar consultas dentro de la base de datos </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/7ZSbCF8X/204.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 6. El modulo <b> mysql_schemadump </b>extrae la información del esquema de un servidor de base de datos MySQL. </p>
+
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/d0B16G01/205.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion de servicios de Recursos compartidos ------------------------------------------------------------------------------------------------------------------>
+
+
+
+</br>
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=FF4E4E&width=800&height=500&lines=T1135+%3A+Network+Share+Discovery" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+</br>
+
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/rp4cs4zV/256.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p> Los adversarios pueden buscar carpetas y unidades compartidas en sistemas remotos como medio para identificar fuentes de información para recopilar como precursoras de la Recopilación e identificar posibles sistemas de interés para el Movimiento Lateral. Las redes a menudo contienen unidades de red y carpetas compartidas que permiten a los usuarios acceder a directorios de archivos en varios sistemas de una red.
+
+
+El intercambio de archivos a través de una red Windows se realiza mediante el protocolo SMB. Net se puede utilizar para consultar un sistema remoto en busca de unidades compartidas disponibles mediante el comando. También se puede utilizar para consultar unidades compartidas en el sistema local utilizando . Para macOS, el comando enumera todos los puntos compartidos utilizados para los servicios smb. net view \\remotesystemnet sharesharing -l
+
+
+</p>
+
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------- ## Enumeracion SMB ------------------------------------------------------------------------------------------------------------------>
 
 
 
 <h2> :white_check_mark: Enumeración SMB </h2> 
+
+
+
+
+<h3> :radio_button: 445  </h3> 
+
 
 
 <p align="center">
@@ -4218,571 +5021,108 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 
 
-<!----------------------------------------------------------------------------- ## Web Server Enumeration ------------------------------------------------------------------------------------------------------------------>
 
-</br> 
 
 
-<h2> :white_check_mark: Web Server Enumeration </h2> 
 
 
-<p align="center">
 
- <img src="https://i.postimg.cc/Rhjx2TR7/171.png" alt="Descripción de la imagen">
 
- </p>
 
 
 
-<p>Un Web Server (servidor web) es un sistema que almacena, procesa y entrega páginas web a los clientes (navegadores) a través del protocolo HTTP/HTTPS. Cumple dos funciones principales: </p>
 
-<p> 1. Servir contenido estático – archivos HTML, CSS, JavaScript, imágenes, PDFs, etc. Los cuales almacenan en disco y se envían tal cual cuando un cliente los solicita.</p>
 
-<p> 2. Ejecutar aplicaciones dinámicas – mediante lenguajes como PHP, Python, Node.js o ASP.NET, el servidor web genera páginas personalizadas en tiempo real, a menudo consultando bases de datos.</p>
 
 
-<p align="center">
 
- <img src="https://i.postimg.cc/4dSDh1jB/172.png" alt="Descripción de la imagen">
 
-</p>
 
 
-<p align="center">
 
- <img src="https://i.postimg.cc/L6TVCs81/170.png" alt="Descripción de la imagen">
 
-</p>
 
 
-<p> Componentes claves </p>
 
-<p><b> HTTP Server </b> El software que escucha peticiones HTTP en un puerto (generalmente 80 o 443) y responde. Ejemplos: Apache, Nginx, IIS, Caddy.</p>
-<p><b> Sistema operativo </b>Donde corre el servidor web (Linux, Windows, etc.)</p>
-<p><b> Recursos </b>Los archivos y aplicaciones que el servidor expone.</p>
-<p><b> Conexión de red </b>Para recibir y responder peticiones de los clientes</p>
 
 
-<p> Informacion que se puede obtener al enumerar un web Server </p>
 
 
-<p>✅ Información del propio servidor web</p>
-<p>✅ Directorios y archivos ocultos/expuestos / herramientas como ffuf, gobuster, dirb o dirsearch.</p>
-<p>✅ Versionado de aplicaciones y CMS </p>
-<p>✅ Parámetros y endpoints de API / Mediante fuzzing de parámetros y enumeración de rutas API</p>
-<p>✅ Subdominios y virtual hosts</p>
-<p>✅ Redirecciones y cadena de proxies</p>
-<p>✅ Errores que filtran información</p>
 
-<p align="center">
 
- <img src="https://i.postimg.cc/52G1zbvh/173.png" alt="Descripción de la imagen">
 
-</p>
 
-<p>✅ Información de sesión y autenticación</p>
 
-<p align="center">
+<p><b> • Enumeración local:</b> esto suele ocurrir después de la explotación, centrándose en los sistemas a los que hemos obtenido acceso y buscando datos confidenciales,privilegios adicionales o formas de acceder a otros sistemas. Herramientas como PowerShell, whoami, net user, y wmic permiten extraer información valiosa.</p>
+    
+<p><b> • Enumeración de hots:</b> Es posible que haya encontrado sistemas específicos en el reconocimiento inicial que necesitan una exploración más detallada (remoto), 
+    o es posible que ya tenga acceso a una máquina y desee explorarla para ver qué información puede obtener y cómo podría ayudar a acceder a otros sistemas (local).
+    Herramientas como Fping, Masscan, y Angry IP Scanner son utilizadasSe enfoca en identificar dispositivos activos en una red. Técnicas como el ping sweep, el escaneo ARP</p>
+    
 
- <img src="https://i.postimg.cc/ZnVz5S4M/174.png" alt="Descripción de la imagen">
 
-</p>
+<p>   » Enumeración NetBIOS :recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows.</p>
 
+<p>   » Enumeración SNMP :Extracción de información de dispositivos que utilizan el Protocolo Simple de Administración de Red (SNMP). 
+      Permite extraer configuraciones de red, interfaces, direcciones IP y procesos en ejecución.</p>
+        
+<p>   » Enumeración LDAP :LDAP (Protocolo Ligero de Acceso a Directorios) se utiliza para acceder y mantener servicios de información de directorio 
+    distribuidos a través de una red IP. Permite extraer nombres de usuario, direcciones de correo electrónico, grupos, departamentos y servidores del directorio.</p>
+        
+<p>   » Transferencia de Zona DNS :La Transferencia de Zona DNS es un mecanismo que permite a los servidores DNS compartir información. Puede estar mal configurada, 
+      lo que permite a los atacantes recuperar archivos de zona DNS completos, que contienen información sobre el dominio y sus direcciones IP asociadas.</p>
+        
+<p>   » Enumeración NFS :NFS (Sistema de Archivos de Red) permite a los usuarios acceder a archivos en red como si estuvieran en sus discos locales. 
+    La enumeración puede revelar directorios y archivos compartidos.</p>
+        
 
-<p>✅ Framework y librerías del frontend</p>
-<p>✅ Información del entorno de desarrollo</p>
 
 
 
-<h3> :radio_button: Pasos de enumeracion WEB Server</h3>
 
 
-<p> 1. &nbsp; Identificar la version</p> 
 
-<p align="center">
 
- <img src="https://i.postimg.cc/bwJTzr5g/178.png" alt="Descripción de la imagen">
 
-</p>
-
-<p> 2. &nbsp; Enumerar los encabezados HTTP</p> 
-
-<p> Los encabezados HTTP revelan información valiosa sobre la configuración del servidor, la tecnología subyacente y las medidas de seguridad implementadas.</p> 
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/8CgjZnLv/179.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> 3. &nbsp; Enumerar Robots.txt</p> 
-
-<p> Los desarrolladores suelen listar ahí las rutas que no quieren que los motores de búsqueda indexen, precisamente porque contienen información sensible o funcionalidades administrativas</p> 
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/s2Ks5nc6/180.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> Se evidencian 2 directorios </p> 
-
-<p> Con ayuda del comando CURL obtener el contenido de la URL transfiriendo los archivos </p> 
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/1tY4wfs0/181.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> Se observa el codigo de respuesta 401 "Unauthorized" Indica que una solicitud web no fue procesada porque las credenciales de autenticación del usuario faltan, son incorrectas o han expirado, Lo que significa que este directorio en particular se encuentra protegido, por lo tanto podemos recurrir a un ataque de fuerza bruta  </p> 
-
-<p align="center">
-
- <img src="https://i.postimg.cc/zD6VfbdS/182.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> 4. &nbsp; Validar si se encuetran mas directorios ocultos</p> 
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/nzBzBKX4/183.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> Con ayuda del comando CURL obtener el contenido de la URL transfiriendo los archivos </p> 
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/nzBzBKX4/183.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/kXn4RbqG/184.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> 5. &nbsp; Buscar archivos especificos dentro del directorio </p> 
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/PxQC0zdt/185.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/x8sc1fJ2/186.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> 6. &nbsp; Realizar un ataque de fuerza bruta al directorio /secure identificado con la opcion de robots</p> 
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/c4G3rzgX/187.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<!----------------------------------------------------------------------------- ## MySQL Enumeration ------------------------------------------------------------------------------------------------------------------>
-
-</br> 
-
-
-<h2> :white_check_mark: MySQL Enumeration</h2> 
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/XYzCxz0D/192.png" alt="Descripción de la imagen">
-
-
-
-
-<p> MySQL es un sistema de gestión de bases de datos relacional (RDBMS) de código abierto, extremadamente popular en entornos web y aplicaciones empresariales. Normalmente corre en el puerto 3306 (TCP). También puede estar en puertos alternativos o detrás de un proxy.</p>
-
-
-<p> La enuneracion consiste en identificar y extraer información del servicio MySQL para descubrir vulnerabilidades, configuraciones inseguras y vectores de ataque</p>
-
-<p> Una vez identificado el servicio, se busca obtener: </p>
-
-
-
-<p>&nbsp; <b>• Versión de MySQL y sistema operativo </b>&nbsp; crucial para buscar CVEs conocidos </p>
-<p>&nbsp; <b>• Usuarios y cuentas </b>&nbsp; (root, anónimas, por defecto) </p>
-<p>&nbsp; <b>• Bases de datos disponibles  </b>&nbsp; (information_schema, mysql, databases de aplicación) </p>
-<p>&nbsp; <b>• Tablas y columnas sensibles </b>&nbsp; (usuarios, contraseñas, tokens, datos personales) </p>
-<p>&nbsp; <b>• Privilegios de usuarios </b>&nbsp; (FILE, SUPER, SELECT, CREATE, etc.)</p>
-<p>&nbsp; <b>• Variables de configuración </b>&nbsp; (secure_file_priv, local_infile, sql_mode, etc.) </p>
-<p>&nbsp; <b>• Plugins y extensiones </b>&nbsp; (UDFs, stored procedures maliciosos) </p>
-
-
-
-<h3> :radio_button: Pasos de enumeracion MySQL</h3>
-
-<p> Filtrar los modulos auxiliares relacionados con MySQL: <b>search type:auxiliary name:MySQL</b> </p>
- 
- 
- 
-<p> 1. Identificar la version de MySQL que esta corriendo en el servidor</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/Vv4StqxX/189.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> Resultado: 192.168.232.131:3306 is running MySQL 5.0.51a-3ubuntu5 (protocol 10) </p>
-
-
-<p> Exploit disponibles para esta version de MySQL </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/VNRS6LKK/190.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> 2. Fuerza bruta MySQL </p>
-
-<p> Configurar los parametros</p>
-
-<p> • BLANK_PASSWORDS - Probar contraseñas en blanco para todos los usuarios </p>
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/PJcW3WNY/193.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/nhfMGQ5d/194.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> Con el parametro <b> "CREDS"</b> se pueden ver los resultados</p>
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/SNf8zbf8/195.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> 3. Ingresar a la base de datos con las credenciales obteninas  </p>
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/VkTjzBR1/196.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/8kHM7V4g/197.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/vZp6J8Yw/198.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> Se puede realizar el cambio de contraseña de los usuarios de las bases de datos </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/D0ZZWRvg/199.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> En este caso se realiza el cambio de contraseña del usuarios root al cual le colocamos la contraseña 12345 </p>
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/2SXPmJMZ/200.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> Esta cadena representa un hash de contraseña clásico de MySQL (versión 4.1 o posterior). Corresponde exactamente a la contraseña "12345", generada mediante la función PASSWORD() de MySQL</p>
-
-<p> El algoritmo aplicado implica un cifrado doble con SHA-1</p>
-
-<p> Hash = SHA1(SHA1(cadena))</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/mrzKrjWq/201.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> 4. El modulo auxiliar mysql_enum nos permite ver una gran cantridad de informacion </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/BnYd46tm/202.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> 5. El modulo <b> mysql_sql </b>permite ejecutar sentencias SQL sencillas en una instancia de MySQL, siempre que se disponga de las credenciales adecuadas </p>
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/MKMnwc9L/203.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> Realizar consultas dentro de la base de datos </p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/7ZSbCF8X/204.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> 6. El modulo <b> mysql_schemadump </b>extrae la información del esquema de un servidor de base de datos MySQL. </p>
-
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/d0B16G01/205.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-
-<!----------------------------------------------------------------------------- ## SSH Enumeration ------------------------------------------------------------------------------------------------------------------>
-
-
-</br> 
-
-
-<h2> :white_check_mark: SSH Enumeration</h2> 
-
-
-<p align="center">
-
- <img src="xxxxx" alt="Descripción de la imagen">
-
-
-<p> SSH son las siglas de Secure SHell. Es un protocolo de red criptográfico que permite operar servicios de red de forma segura sobre un canal no seguro entre el cliente y el servidor.</p>
-
-<p> SSH utiliza el puerto 22 de forma predeterminada, sin embargo se puede configurar para utilizar en cualquier otro puerto</p>
-
-
-<h3> :radio_button: Pasos de enumeracion SSH</h3>
-
-
-
-<p> 1. Identificar la version de SSH que esta corriendo en el servidor</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> Resultado: SSH server version: SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1 </p>
-
-
-<p> NOTA: No se evidencian Exploit disponibles para esta version de SSH en Metasploit </p>
-
-
-<p> Con ayuda de searchsploit podemos consultar los exploit disponibles </p>
-
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/xC6tKQ1t/208.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> 2. El modulo <b> ssh_login </b>  Este módulo comprobará los inicios de sesión mediante SSH en una serie de equipos e informará de los inicios de sesión correctos. Si has cargado un complemento de base de datos y te has conectado a una base de datos, este módulo registrará los inicios de sesión
-  correctos y los hosts para que puedas realizar un seguimiento de tus accesos.</p>
-
-
-<p> • Fuerza bruta SSH </p>  
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/PqvkN6fD/209.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> • Establecer sesion con las credenciales explotadas </p> 
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/GpLzWRRW/215.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/ydWjNTkh/216.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<!----------------------------------------------------------------------------- ## SMTP Enumeration ------------------------------------------------------------------------------------------------------------------>
-
-
-
-<h2> :white_check_mark: SMTP Enumeration</h2> 
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/fRBD7mN1/210.png" alt="Descripción de la imagen">
-
- </p>
-
-
-<p> SMTP son las siglas de Simple Mail Transfer Protocol (Protocolo Simple de Transferencia de Correo). Es el protocolo estándar utilizado para el envío de correo electrónico en Internet y en redes TCP/IP.</p>
-
-<p> Se encarga de transmitir (enviar) mensajes de correo desde un cliente (como Outlook, Thunderbird, o un script) hasta un servidor de correo, y también entre servidores de correo (MTA → MTA). No se usa para descargar correo (eso es tarea de POP3 o IMAP).</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/qvZWML0C/211.png" alt="Descripción de la imagen">
-
- </p>
-
-
-<p> La enumeracion SMTP es una técnica de reconocimiento utilizada en pruebas de penetración para extraer información de un servidor SMTP. Se aprovecha de los comandos del protocolo SMTP (principalmente VRFY, EXPN y RCPT TO) para descubrir usuarios válidos, alias de correo o direcciones de email en el servidor target. </p>
-
-
-
-
-<h3> :radio_button: Pasos de enumeracion SMTP</h3>
-
-
-
-<p> 1. Identificar la version de SMTP que esta corriendo en el servidor</p>
-
-
-<p align="center">
-
- <img src="https://i.postimg.cc/tJYrs1jS/212.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> Resultado: SMTP server version: 192.168.232.131:25 SMTP 220 metasploitable.localdomain ESMTP Postfix (Ubuntu)\x0d\x0a </p>
-
-
-<p> NOTA: No se evidencian Exploit disponibles para esta version de SMTP en Metasploit pero se pueden buscar en otras herramientas o plataformas </p>
-
-
-<p> 2. El modulo <b> smtp_enum </b> SMTP dispone de dos comandos internos que permiten la enumeración de usuarios: VRFY (que confirma los nombres de los usuarios válidos) y EXPN (que
-  revela las direcciones reales de los alias de los usuarios y las listas de correo (listas de distribución)). Mediante la ejecución de estos comandos SMTP se puede
-  obtener una lista de usuarios válidos. </p>
-
-
-<p> Realizar ataque de fuerza bruta </p>
-
-<p align="center">
-
- <img src="https://i.postimg.cc/mZpLJK6F/213.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> Como resultado tenemos diferentes usuarios del sistema </p>
+<!----------------------------------------------------------------------------- ## Users Enumeration ------------------------------------------------------------------------------------------------------------------>
 
 
 
 
 </br>
 
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=FF4E4E&width=800&height=500&lines=T1087+%3A+Users+Enumeration" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+</br>
 
 
-<!----------------------------------------------------------------------------- ## Enumeration ------------------------------------------------------------------------------------------------------------------>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/kgQPdmHK/257.png" alt="Descripción de la imagen">
+
+
+
+
+<p>  Los adversarios pueden intentar obtener una lista de cuentas, nombres de usuario o direcciones de correo electrónico válidas en un sistema o dentro de un entorno comprometido. Esta información puede ayudar a los adversarios a determinar qué cuentas existen, lo que puede ayudar en comportamientos posteriores como fuerza bruta, ataques de phishing o apropiaciones de cuentas (por ejemplo, cuentas válidas).
+
+Los adversarios pueden utilizar varios métodos para enumerar cuentas, incluido el abuso de herramientas existentes, comandos integrados y posibles configuraciones incorrectas que filtran nombres de cuentas, roles o permisos en el entorno de destino.
+
+Por ejemplo, los entornos de nube suelen proporcionar interfaces de fácil acceso para obtener listas de usuarios. En los hosts, los adversarios pueden usar PowerShell predeterminado y otras funciones de línea de comandos para identificar cuentas. También se puede extraer información sobre direcciones de correo electrónico y cuentas buscando en los archivos de un sistema infectado.
+
+
+</p>
+
+
+
+
+
+
+
 
 
 <p><h2> Enumeración de usuarios: </h2> La enumeración de usuarios es una técnica utilizada en pruebas de penetración y auditorías de seguridad para identificar nombres de usuario válidos en un sistema, aplicación o servicio. Este proceso es fundamental en las fases iniciales de un ataque, ya que permite a un atacante conocer qué cuentas existen en el sistema, lo que facilita ataques posteriores como fuerza bruta, phishing o ataques de diccionario.</p>
@@ -4912,41 +5252,8 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 
-<p><h2> 4.&nbsp; Enumeración SMTP </h2> NFS permite que un servidor comparta directorios y archivos con uno o más clientes a través de una red. Los clientes pueden montar esos recursos compartidos como si fueran unidades locales, facilitando el acceso centralizado a datos</p>
 
 
-
-
-
-
-
-
-<p><b> • Enumeración local:</b> esto suele ocurrir después de la explotación, centrándose en los sistemas a los que hemos obtenido acceso y buscando datos confidenciales,privilegios adicionales o formas de acceder a otros sistemas. Herramientas como PowerShell, whoami, net user, y wmic permiten extraer información valiosa.</p>
-		
-<p><b> • Enumeración de hots:</b> Es posible que haya encontrado sistemas específicos en el reconocimiento inicial que necesitan una exploración más detallada (remoto), 
-		o es posible que ya tenga acceso a una máquina y desee explorarla para ver qué información puede obtener y cómo podría ayudar a acceder a otros sistemas (local).
-		Herramientas como Fping, Masscan, y Angry IP Scanner son utilizadasSe enfoca en identificar dispositivos activos en una red. Técnicas como el ping sweep, el escaneo ARP</p>
-		
-
-
-<p> 	» Enumeración NetBIOS :recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows.</p>
-
-<p> 	» Enumeración SNMP :Extracción de información de dispositivos que utilizan el Protocolo Simple de Administración de Red (SNMP). 
-     	Permite extraer configuraciones de red, interfaces, direcciones IP y procesos en ejecución.</p>
-				
-<p>		» Enumeración LDAP :LDAP (Protocolo Ligero de Acceso a Directorios) se utiliza para acceder y mantener servicios de información de directorio 
-	 	distribuidos a través de una red IP. Permite extraer nombres de usuario, direcciones de correo electrónico, grupos, departamentos y servidores del directorio.</p>
-				
-<p>		» Transferencia de Zona DNS :La Transferencia de Zona DNS es un mecanismo que permite a los servidores DNS compartir información. Puede estar mal configurada, 
-     	lo que permite a los atacantes recuperar archivos de zona DNS completos, que contienen información sobre el dominio y sus direcciones IP asociadas.</p>
-				
-<p>		» Enumeración NFS :NFS (Sistema de Archivos de Red) permite a los usuarios acceder a archivos en red como si estuvieran en sus discos locales. 
-	 	La enumeración puede revelar directorios y archivos compartidos.</p>
-				
-
-				
-<p>		» Enumeración HTTP :HTTP (Protocolo de Transferencia de Hipertexto), utilizado para proporcionarnos ese excelente tráfico web. Además de la versión 
-     	del servicio web, la enumeración de servidores web consiste en encontrar todas las rutas (archivos y directorios) que residen en ellos.</p>
 
 </br>
 
@@ -5051,7 +5358,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <!----------------------------------------------------------------------------- ## Vulnerability Scanning with MSF ------------------------------------------------------------------------------------------------------------------>
 
 
-<h2> :white_check_mark: Vulnerability Scanning with MSF</h2> 
+<h2> :arrow_right:  Vulnerability Scanning with MSF</h2> 
 
 
 <p>En la interacción anterior con Metasploit se logró identificar y explotar configuraciones incorrectas en el servidor objetivo. En este caso, se utilizarán módulos auxiliares para escanear en busca de vulnerabilidades.</p>
@@ -5214,7 +5521,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <!----------------------------------------------------------------------------- ## WebDAV Vulnerabilities ------------------------------------------------------------------------------------------------------------------>
 
 
-<h2> :white_check_mark: WebDAV Vulnerabilities (Windows)</h2> 
+<h2> :arrow_right:  WebDAV Vulnerabilities (Windows)</h2> 
 
 
 <p>(Web Distributed Authoring and Versioning) es una extensión del protocolo HTTP que permite a los usuarios editar y gestionar archivos en servidores web de forma colaborativa. Fue definido en el RFC 4918 y básicamente transforma un servidor web en un sistema de archivos accesible remotamente.</p>
@@ -5380,6 +5687,123 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
   
 </p>
  
+
+
+
+<!----------------------------------------------------------------------------- ## Vulnerabilidades mas conocidas------------------------------------------------------------------------------------------------------------------>
+
+
+
+<h2> :arrow_right: Vulnerabilidades de alto impacto</h2> 
+
+
+
+<h2> :white_check_mark: EternalBlue - CVE-2017-0144</h2> 
+
+
+<h3> SMB </h3> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/q72dWRQq/Eternal-Blue-2.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> EternalBlue (MS17-010) es una de las vulnerabilidades más críticas en la historia de Microsoft.</p>
+
+
+<p> Cualquier cosa que use el protocolo de intercambio de archivos <b>SMBv1</b> (Server Message Block versión 1) está técnicamente en riesgo de ser objetivo de ransomware y otros ciberataques. EternalBlue aprovecha las vulnerabilidades de SMBv1 para insertar paquetes de datos maliciosos y propagar el malware por la red.</p>
+
+<p> La vulnerabilidad es un desbordamiento de búfer en el protocolo SMBv1 (Server Message Block version 1). Específicamente, el error reside en el manejo de paquetes Trans2 Secondary Data Payload en srv2.sys (controlador del servidor SMB). Un atacante puede enviar un paquete SMB especialmente diseñado que provoca una corrupción de memoria, permitiendo la ejecución remota de código a nivel de kernel.</p>
+
+
+
+
+<h2> :arrow_right:  BlueKeep - CVE-2019-0708</h2> 
+
+
+<h3> RDP </h3> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/kM2FFb5w/Blue-Keep.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Es una vulnerabilidad de Use-After-Free (UAF) en el servicio TermDD.sys (Terminal Desktop Device Driver) que implementa el protocolo RDP (Remote Desktop Protocol). Específicamente, el error se encuentra en el canal MS_T120 de la pila de RDP.
+
+Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial (pre-autenticación), el canal interno para la conferencia T.128/T.120 de Microsoft no valida adecuadamente la existencia de un objeto antes de reutilizarlo, permitiendo que un atacante:</p>
+
+
+
+<p>Establezca una sesión RDP sin autenticación (solo handshake)</p>
+<p>Envíe paquetes específicos que provocan que el kernel libere un objeto</p>
+<p>Continúe haciendo referencia a ese objeto (de ahí el use-after-free)</p>
+<p>Sobrescriba la memoria liberada con datos controlados (pool spraying/heap grooming)</p>
+<p>Obtenga ejecución de código en el contexto del kernel (NT AUTHORITY\SYSTEM)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
