@@ -3169,7 +3169,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 <div id="user-content-toc">
   <ul align="center">
-    <summary><a href="https://git.io/typing-svg"><img src="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=39&pause=1000&color=F70000&width=600&height=60&lines=Fase+2.+Enumeraci%C3%B3n" alt="Typing SVG" /></a></summary>
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=39&pause=1000&color=F70000&width=600&height=60&lines=Fase+2.+Enumeraci%C3%B3n" alt="Typing SVG" /></a></summary>
   </ul>
 </div>
 
@@ -3724,7 +3724,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 <div id="user-content-toc">
   <ul align="center">
-    <summary><a href="https://git.io/typing-svg"><img src="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=FF4E4E&width=800&height=500&lines=T1046+%3A+Network+Service+Discovery" alt="Typing SVG" /></a></summary>
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=FF4E4E&width=800&height=500&lines=T1046+%3A+Network+Service+Discovery" alt="Typing SVG" /></a></summary>
   </ul>
 </div>
 
@@ -3784,7 +3784,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <h2> :white_check_mark:  Enumeración FTP  </h2> 
 
 
-<h3> :radio_button: 20 - 21  </h3> 
+<h3> :radio_button: Puerto predeterminado 20 - 21  </h3> 
 
 
 
@@ -3998,7 +3998,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 
 
-<h3> :radio_button: 22  </h3> 
+<h3> :radio_button: Puerto predeterminado 22  </h3> 
 
 
 <p align="center">
@@ -4084,7 +4084,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 
 
-<h3> :radio_button: 23  </h3> 
+<h3> :radio_button: Puerto predeterminado 23  </h3> 
 
 
 
@@ -4151,20 +4151,41 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <h2> :white_check_mark: SMTP Enumeration</h2> 
 
 
-<h3> :radio_button: 25  </h3> 
+<h3> :radio_button: Puerto predeterminado 25  </h3> 
 
 
 <p align="center">
 
  <img src="https://i.postimg.cc/fRBD7mN1/210.png" alt="Descripción de la imagen">
 
- </p>
+</p>
 
 
 <p> SMTP son las siglas de Simple Mail Transfer Protocol (Protocolo Simple de Transferencia de Correo). Es el protocolo estándar utilizado para el envío de correo electrónico en Internet y en redes TCP/IP.</p>
 
-<p> Se encarga de transmitir (enviar) mensajes de correo desde un cliente (como Outlook, Thunderbird, o un script) hasta un servidor de correo, y también entre servidores de correo (MTA → MTA). No se usa para descargar correo (eso es tarea de POP3 o IMAP).</p>
 
+
+<h3> :radio_button: Componentes de entrega de correo electrónico </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/J0TXYvNb/258.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 1. Agente de usuario de correo (MUA): El cliente de correo electrónico (por ejemplo, Thunderbird, Outlook, una interfaz de correo web). </p>
+<p> 2. Agente de envío de correo (MSA): Recibe correo del MUA, comprueba si hay errores y lo reenvía. </p>
+<p> 3. Agente de transferencia de correo (MTA): Enruta y entrega correo entre servidores. </p>
+<p> 4. Agente de entrega de correo (MDA): Almacena el correo electrónico en el buzón del destinatario para recuperarlo. </p>
+
+
+<p> (SMTP) Se usa para enviar correo electrónico</p>
+<p> (POP3) o Protocolo de acceso a mensajes de Internet </p>
+<p> (IMAP) para recibir correo electrónico. </p>
+ 
 
 <p align="center">
 
@@ -4229,7 +4250,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <h2> :white_check_mark:  Enumeración HTTP </h2> 
 
 
-<h3> :radio_button: 80  </h3> 
+<h3> :radio_button: Puerto predeterminado 80  </h3> 
 
 
 <p align="center">
@@ -4271,8 +4292,6 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
  <img src="https://i.postimg.cc/4y4yJMxL/254.png" alt="Descripción de la imagen">
 
 </p>
-
-
 
 
 
@@ -4334,9 +4353,9 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <p> telnet IP 80 te da control total a nivel TCP/HTTP raw para inspeccionar, manipular y probar el servidor web sin intermediarios. Es una herramienta simple pero muy poderosa para detectar configuraciones inseguras, smuggling, verb tampering y otras vulnerabilidades que herramientas automatizadas pueden pasar por alto.</p>
 
 
-<p> HTTP Versiones del protocolo</p>
+<p><b> HTTP Versiones del protocolo</b></p>
 
-<p> :radio_button: <b> HTTP/1.1 <b> Introdujo conexiones persistentes (que reutilizan la misma conexión TCP) y la cabecera Host obligatoria, lo que permitió el alojamiento virtual basado en nombres y redujo drásticamente el consumo de direcciones IP</p>
+<p> :radio_button: <b> HTTP/1.1</b> Introdujo conexiones persistentes (que reutilizan la misma conexión TCP) y la cabecera Host obligatoria, lo que permitió el alojamiento virtual basado en nombres y redujo drásticamente el consumo de direcciones IP</p>
 <p> :radio_button: <b> HTTP/2  </b> introdujo multiplexación (múltiples solicitudes a través de una sola conexión), compresión de encabezado y envío al servidor. Es binario en lugar de basado en texto, lo que dificulta la interacción manual con Telnet.</p>
 <p> :radio_button: <b> HTTP/3  </b> usa QUIC (construido en UDP) en lugar de TCP, ofreciendo un rendimiento mejorado, especialmente en redes no confiables. Es cada vez más común en los principales sitios web.</p>
 
@@ -4349,7 +4368,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <h2> :white_check_mark: Web Server Enumeration </h2> 
 
 
-<h3> :radio_button: 80 - 443 </h3> 
+<h3> :radio_button: Puerto predeterminado 80 - 443 </h3> 
 
 
 <p align="center">
@@ -4547,6 +4566,115 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 </p>
 
 
+<!----------------------------------------------------------------------------- ## POP3 Post Office Protocol version 3------------------------------------------------------------------------------------------------------------------>
+
+
+</br> 
+
+
+<h2> :white_check_mark: POP3 Post Office Protocol version 3 </h2> 
+
+
+<h3> :radio_button: Puerto predeterminado 110  </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qv0v9j7n/259.png" alt="Descripción de la imagen">
+
+</p>
+
+
+ <p> Protocolo de Correos versión 3 (POP3) es un protocolo utilizado para descargar mensajes de correo electrónico de un agente de entrega de correo (MDA) servidor</p>
+
+
+
+  <p> El puerto 110 es el predeterminado POP3puerto usando texto sin cifrar. Algunos servidores admiten actualizar la conexión a TLSusando el comando STLS (similar a STARTTLS en SMTP).</p>
+  <p> El puerto 995 se utiliza para POP3S (POP3sobre implícito TLS). La conexión está cifrada desde el principio.</p>
+
+
+
+ <h3> :radio_button: Comandos del protocolo POP3 </h3>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/fbPSdpcV/260.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/G3g3mGj4/261.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+  <p> La enumeración de POP3 consiste en el proceso de recopilar información de un servidor de correo que utiliza el protocolo POP3 (Post Office Protocol v3, puerto 110 o 995 con SSL/TLS) para identificar versiones del software, usuarios válidos, configuraciones inseguras y, si se logra autenticar, acceder al contenido de los buzones de correo.
+
+  A diferencia de otros servicios, POP3 tiene una superficie de enumeración más reducida que HTTP o SMB, pero es especialmente valioso porque los correos electrónicos suelen contener información sensible: credenciales, enlaces de restablecimiento de contraseña, datos internos de la organización.</p>
+
+
+  <h3> :radio_button: vectores de ataque en POP3 </h3>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/cLwdhjG2/262.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<!----------------------------------------------------------------------------- ## IMAP Internet Message Access Protocol ----------------------------------------------------------------------------------------------------------------->
+
+
+</br> 
+
+
+<h2> :white_check_mark: Internet Message Access Protocol (IMAP)  </h2> 
+
+
+<h3> :radio_button: Puerto predeterminado 143  </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/nhpnd2FS/263.png" alt="Descripción de la imagen">
+
+</p>
+
+
+ <p> Protocolo de acceso a mensajes de Internet (IMAP) es más sofisticado que POP3. IMAP permite mantener el correo electrónico sincronizado en múltiples dispositivos (y clientes de correo). Si marca un mensaje de correo electrónico como leído al revisar su correo electrónico en su teléfono inteligente, el cambio se guarda en el IMAP servidor (MDA) y se replica en su computadora portátil cuando sincroniza su bandeja de entrada. </p>
+
+
+
+  <p> El puerto 143 es el predeterminado para IMAP usando texto sin cifrar. Muchos servidores admiten actualizar la conexión a TLS usando el comando STARTTLS..</p>
+  <p> El puerto 993 se utiliza para IMAPS (IMAPsobre implícito TLS). La conexión está cifrada desde el principio.</p>
+
+
+<p> Hoy en día, la mayoría de los proveedores de correo electrónico requieren IMAPS en el puerto 993. Los principales proveedores como Gmail, Outlook y Yahoo han desactivado el texto sin formato IMAP acceso completo. Sin embargo, es posible que aún encuentres texto sin formato IMAP en servidores de correo internos o sistemas heredados. </p>
+
+
+
+
+ <h3> :radio_button: Comandos del protocolo IMAP </h3>
+
+
+<p> La enumeración de IMAP permite al atacante:</p>
+
+
+
+<p>&nbsp; <b>• Acceso persistente: </b>&nbsp; A diferencia de POP3Los correos electrónicos permanecen en el servidor. Un atacante con IMAPLas credenciales pueden continuar leyendo nuevos correos electrónicos indefinidamente. </p>
+<p>&nbsp; <b>• Datos históricos: </b>&nbsp; Se puede acceder a todo el historial del buzón, que potencialmente contiene años de comunicaciones confidenciales. </p>
+<p>&nbsp; <b>• Abuso de restablecimiento de contraseña:  </b>&nbsp; los atacantes pueden buscar correos electrónicos de restablecimiento de contraseña para obtener acceso a otras cuentas.) </p>
+<p>&nbsp; <b>• Compromiso con el correo electrónico empresarial:  </b>&nbsp; el acceso al correo electrónico corporativo permite el fraude de facturas, la suplantación de identidad y el robo de datos.</p>
+<p>&nbsp; <b>• Movimiento lateral:  </b>&nbsp; los correos electrónicos suelen contener credenciales, documentación interna e información útil para futuros ataques.</p>
+
+
+
+
 
 <!----------------------------------------------------------------------------- ## MySQL Enumeration ------------------------------------------------------------------------------------------------------------------>
 
@@ -4556,7 +4684,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <h2> :white_check_mark: MySQL Enumeration</h2> 
 
 
-<h3> :radio_button: 3306  </h3> 
+<h3> :radio_button: Puerto predeterminado 3306  </h3> 
 
 
 <p align="center">
@@ -4757,6 +4885,41 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 
 
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+
+<p><h2> 2.&nbsp; Enumeración SNMP </h2> Extracción de información de dispositivos que utilizan el Protocolo Simple de Administración de Red (SNMP). 
+      Permite extraer configuraciones de red, interfaces, direcciones IP y procesos en ejecución</p>
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+
+<p><h2> 2.&nbsp; Enumeración LDAP </h2> (Protocolo Ligero de Acceso a Directorios) se utiliza para acceder y mantener servicios de información de directorio 
+    distribuidos a través de una red IP. Permite extraer nombres de usuario, direcciones de correo electrónico, grupos, departamentos y servidores del directorio.</p>
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+
+
+
+<p> <b> Nota importante  </b> Para cada protocolo de texto sin cifrar, existe una alternativa segura. Las implementaciones modernas deben utilizar variantes cifradas (HTTPS, SFTP, IMAPS, SSH) para proteger los datos en tránsito y evitar ataques como rastreo, man-in-the-middle y ataques de contraseñas. </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fykh4qtD/264.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
 
 
 <!----------------------------------------------------------------------------- ## Enumeracion de servicios de Recursos compartidos ------------------------------------------------------------------------------------------------------------------>
@@ -4767,7 +4930,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 <div id="user-content-toc">
   <ul align="center">
-    <summary><a href="https://git.io/typing-svg"><img src="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=FF4E4E&width=800&height=500&lines=T1135+%3A+Network+Share+Discovery" alt="Typing SVG" /></a></summary>
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=FF4E4E&width=800&height=500&lines=T1135+%3A+Network+Share+Discovery" alt="Typing SVG" /></a></summary>
   </ul>
 </div>
 
@@ -4794,11 +4957,6 @@ El intercambio de archivos a través de una red Windows se realiza mediante el p
 
 
 
-
-
-
-
-
 <!----------------------------------------------------------------------------- ## Enumeracion SMB ------------------------------------------------------------------------------------------------------------------>
 
 
@@ -4808,7 +4966,7 @@ El intercambio de archivos a través de una red Windows se realiza mediante el p
 
 
 
-<h3> :radio_button: 445  </h3> 
+<h3> :radio_button: Puerto predeterminado 445  </h3> 
 
 
 
@@ -5020,65 +5178,24 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 
 
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+
+<p><h2> 2.&nbsp; Enumeración NFS </h2> NFS permite que un servidor comparta directorios y archivos con uno o más clientes a través de una red. Los clientes pueden montar esos recursos compartidos como si fueran unidades locales, facilitando el acceso centralizado a datos</p>
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
 
 
 
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
 
 
+<p><h2> 2.&nbsp; Enumeración NetBIOS </h2> recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows</p>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p><b> • Enumeración local:</b> esto suele ocurrir después de la explotación, centrándose en los sistemas a los que hemos obtenido acceso y buscando datos confidenciales,privilegios adicionales o formas de acceder a otros sistemas. Herramientas como PowerShell, whoami, net user, y wmic permiten extraer información valiosa.</p>
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
     
-<p><b> • Enumeración de hots:</b> Es posible que haya encontrado sistemas específicos en el reconocimiento inicial que necesitan una exploración más detallada (remoto), 
-    o es posible que ya tenga acceso a una máquina y desee explorarla para ver qué información puede obtener y cómo podría ayudar a acceder a otros sistemas (local).
-    Herramientas como Fping, Masscan, y Angry IP Scanner son utilizadasSe enfoca en identificar dispositivos activos en una red. Técnicas como el ping sweep, el escaneo ARP</p>
-    
-
-
-<p>   » Enumeración NetBIOS :recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows.</p>
-
-<p>   » Enumeración SNMP :Extracción de información de dispositivos que utilizan el Protocolo Simple de Administración de Red (SNMP). 
-      Permite extraer configuraciones de red, interfaces, direcciones IP y procesos en ejecución.</p>
-        
-<p>   » Enumeración LDAP :LDAP (Protocolo Ligero de Acceso a Directorios) se utiliza para acceder y mantener servicios de información de directorio 
-    distribuidos a través de una red IP. Permite extraer nombres de usuario, direcciones de correo electrónico, grupos, departamentos y servidores del directorio.</p>
-        
-<p>   » Transferencia de Zona DNS :La Transferencia de Zona DNS es un mecanismo que permite a los servidores DNS compartir información. Puede estar mal configurada, 
-      lo que permite a los atacantes recuperar archivos de zona DNS completos, que contienen información sobre el dominio y sus direcciones IP asociadas.</p>
-        
-<p>   » Enumeración NFS :NFS (Sistema de Archivos de Red) permite a los usuarios acceder a archivos en red como si estuvieran en sus discos locales. 
-    La enumeración puede revelar directorios y archivos compartidos.</p>
-        
-
-
-
-
 
 
 
@@ -5093,7 +5210,7 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 <div id="user-content-toc">
   <ul align="center">
-    <summary><a href="https://git.io/typing-svg"><img src="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=FF4E4E&width=800&height=500&lines=T1087+%3A+Users+Enumeration" alt="Typing SVG" /></a></summary>
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=FF4E4E&width=800&height=500&lines=T1087+%3A+Users+Enumeration" alt="Typing SVG" /></a></summary>
   </ul>
 </div>
 
@@ -5118,13 +5235,6 @@ Por ejemplo, los entornos de nube suelen proporcionar interfaces de fácil acces
 </p>
 
 
-
-
-
-
-
-
-
 <p><h2> Enumeración de usuarios: </h2> La enumeración de usuarios es una técnica utilizada en pruebas de penetración y auditorías de seguridad para identificar nombres de usuario válidos en un sistema, aplicación o servicio. Este proceso es fundamental en las fases iniciales de un ataque, ya que permite a un atacante conocer qué cuentas existen en el sistema, lo que facilita ataques posteriores como fuerza bruta, phishing o ataques de diccionario.</p>
 
 
@@ -5132,7 +5242,7 @@ Por ejemplo, los entornos de nube suelen proporcionar interfaces de fácil acces
 
 </br>
 
-<p>• RPCClient: &nbsp; Enumerar usuarios en sistemas Windows</p>
+<p>• RPCClient:  &nbsp; Enumerar usuarios en sistemas Windows</p>
 <p>• Metasploit: &nbsp; (auxiliary modules): Módulos como smb_enumuser
 <p>• enum4linux: &nbsp; Para enumerar usuarios en sistemas SMB/LDAP</p>
 
@@ -5240,13 +5350,6 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
  </p>
 
 
-<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
-
-
-<p><h2> 2.&nbsp; Enumeración NFS </h2> NFS permite que un servidor comparta directorios y archivos con uno o más clientes a través de una red. Los clientes pueden montar esos recursos compartidos como si fueran unidades locales, facilitando el acceso centralizado a datos</p>
-
-
-<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
 
 
 
