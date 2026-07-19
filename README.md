@@ -1456,14 +1456,14 @@ nombres de dominio. </p>
 <p> Es una técnica común en las pruebas de penetración (pentesting) durante la fase de reconocimiento y posterior análisis. Esta técnica implica obtener una copia local de los archivos que componen el sitio web objetivo. Al tener una copia local, el pentester puede inspeccionar minuciosamente el código fuente del lado del cliente y del servidor (si se obtiene) sin necesidad de interactuar constantemente con el servidor remoto, lo cual es más silencioso y eficiente para ciertos análisis.</p>
 
 
- <h2>  🛠 &nbsp; HTTRack  </h2> 
+ <h2>  HTTRack  </h2> 
 
 
-<p><b> Es un crawler especializado en replicar sitios web estáticos y semidinámicos, con soporte para filtros, reescritura de enlaces y control de recursos, lo que lo convierte en una herramienta técnica clave para archivado y análisis de infraestructura web. </b></p>
+<p>Es un crawler especializado en replicar sitios web estáticos y semidinámicos, con soporte para filtros, reescritura de enlaces y control de recursos, lo que lo convierte en una herramienta técnica clave para archivado y análisis de infraestructura web. </p>
 
 
-<p><b> 1) &nbsp; Instalar HTTrack desde su página oficial httrack.com. disponible en Windows, linux, Andriod </b></p>
-<p><b> 2) &nbsp; Crear un proyecto: darle un nombre y elegir la carpeta donde se guardará. </b></p>
+<p> 1) &nbsp; Instalar HTTrack desde su página oficial httrack.com. disponible en Windows, linux, Andriod </p>
+<p> 2) &nbsp; Crear un proyecto: darle un nombre y elegir la carpeta donde se guardará. </p>
 
 <p align="center">
 
@@ -1472,8 +1472,8 @@ nombres de dominio. </p>
 </p>
 
 
-<p><b> 3) &nbsp; Ingresar la URL del sitio que quieres descargar. </b></p>
-<p><b> 4) &nbsp; Configurar opciones: puedes limitar la profundidad del rastreo, excluir directorios o ajustar la velocidad. </b></p>
+<p> 3) &nbsp; Ingresar la URL del sitio que quieres descargar. </p>
+<p> 4) &nbsp; Configurar opciones: puedes limitar la profundidad del rastreo, excluir directorios o ajustar la velocidad. </p>
 
 <p align="center">
 
@@ -1481,7 +1481,7 @@ nombres de dominio. </p>
 
 </p>
 
-<p><b> 5) &nbsp; Iniciar la descarga: el programa copiará los archivos HTML, CSS, JS, imágenes y otros recursos. </b></p>
+<p> 5) &nbsp; Iniciar la descarga: el programa copiará los archivos HTML, CSS, JS, imágenes y otros recursos. </p>
 
 
 <p align="center">
@@ -1491,7 +1491,7 @@ nombres de dominio. </p>
 </p>
 
 
-<p><b> 6) &nbsp; Navegar offline: abre el archivo index.html en tu navegador y explora el sitio como si estuvieras conectado. </b></p>
+<p> 6) &nbsp; Navegar offline: abre el archivo index.html en tu navegador y explora el sitio como si estuvieras conectado. </p>
 
 
 <p align="center">
@@ -2351,7 +2351,7 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 <p> •  &nbsp; Validar si estan en linea [ping + IP] </p>
-<p> •  &nbsp; Especificar la cantidad de paquetes ICMP [ping -c + cantidad de paquetes + IP]  en windows se cambia la c por una n  </p>
+<p> •  &nbsp; Especificar la cantidad de paquetes ICMP [ping -c + cantidad de paquetes + IP] en windows se cambia la c por una n  </p>
 
 
 <p align="center">
@@ -2361,12 +2361,13 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p>
 
 
-<p> •  &nbsp; Encontrar todos los host activos en la RED con fping </p>
+<h3> :white_check_mark: &nbsp; Encontrar todos los host activos en la RED con <b> FPING </b></h3>
 <p> fping -a -g [IP] /[mascara de red y subred] </p>
 
 
 <p> -a Muestra los objetivos que estan vivos </p>
 <p> -g crea unma lista </p>
+
 
 <p align="center">
 
@@ -2376,29 +2377,110 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 
 
 
+<h3> :white_check_mark: &nbsp; Escaneo ARP: </h3>
 
-<p> :white_check_mark: &nbsp; Escaneo ARP: </p>
-
-<p>Implica utilizar el protocolo de resoluciones de direciones, esta tecnica es util para descubrir hosts dentro del mismo dominio o en una red local</p>
+<p> El escaneo ARP solo es posible si está en la misma subred que los sistemas de destino. En una red Ethernet (802.3) y Wi-Fi (802.11), necesita saber la dirección MAC de cualquier sistema antes de poder comunicarse con él. La dirección MAC es necesaria para el encabezado de la capa de enlace; contiene las direcciones MAC de origen y destino, entre otros campos. Para obtener la dirección MAC, el sistema operativo envía una consulta ARP. Un host que responde a consultas ARP está activo. La consulta ARP solo funciona si el destino está en la misma subred que usted, es decir, en la misma red Ethernet/Wi-Fi. Debería esperar ver muchas consultas ARP generadas durante un escaneo NMAP de una red local. Si quieres hacer un escaneo con NMAP Solo para realizar un escaneo ARP sin escaneo de puertos, puede usar nmap -PR -sn TARGETS , donde-PR indica que solo desea un escaneo ARP.  </p>
 
 
-<p> :white_check_mark: &nbsp; TCP Synping:</p>
+<p> ARP El escaneo es particularmente útil durante la post‑explotación y la enumeración de redes internas. Una vez que un atacante obtiene acceso a un sistema dentro de una red, ARP Los escaneos se pueden utilizar para identificar de forma rápida y confiable otros hosts vivos en el mismo segmento local. Porque ARP opera en la Capa 2 y a menudo no está filtrado por firewalls, es una herramienta eficaz para operaciones de equipo rojo y pruebas de penetración interna.  </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/9XLwTH0K/267.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<h3> :white_check_mark: &nbsp; Escaneo ICMP </h3>
+
+<p> Muchos firewalls bloquean el eco ICMP; las nuevas versiones de MS Windows están configuradas con un firewall host que bloquea las solicitudes de eco ICMP de forma predeterminada. Recuerde que una consulta ARP precede a una solicitud ICMP si su objetivo está en la misma subred.  </p>
+
+
+<p> :radio_button: solicitudes de eco ICMP</p>
+    <p> • Para utilizar solicitudes de eco ICMP para descubrir hosts en vivo, agregue la opción -PE (Recuerde agregar -sn si no desea continuar con un escaneo de puertos)  </p>
+
+
+<p> :radio_button: Marca de tiempo ICMP </p>
+    <p> • Debido a que las solicitudes de eco ICMP tienden a bloquearse, también puede considerar las solicitudes de marca de tiempo ICMP o máscara de dirección ICMP para saber si un sistema está en línea,  Agregar la opción -PP le indica a Nmap que utilice solicitudes de marca de tiempo ICMP </p>
+
+
+
+<p> :radio_button: ICMP tipo 17</p>
+
+<p> • Nmap utiliza consultas de máscara de dirección (ICMP tipo 17) y verifica si obtiene una respuesta de máscara de dirección (ICMP tipo 18). Este escaneo se puede habilitar con la opción -PM, las nuevas versiones de MS Windows están configuradas con un firewall host que bloquea este tipo de solicitudes lo cual puede generar que no logre identificar ningun Host en la red   </p>
+
+
+
+
+<h3> :white_check_mark: &nbsp; Escaneo TCP Y UDP </h3>
+
+
+<P> :radio_button: &nbsp; TCP Syn ping:</P>
+
 <p> Escaneo medio abierto en Nmap se coloce como escaneo sigiloso, si el host esta vivo, responde con un TCP Syn-AC </p>
 <p> Nota: En algunos casos el hosts puede no responder las solicitudes de sincronizacion TCP y los resultados pueden versen afectados, si el puerto esta cerrado NMAP puede pensar que el host muerto </p>
 
 
+<p> Podemos enviar un paquete con el indicador SYN (Sincronizar) configurado en TCP puerto 80 (80 por defecto) y esperar una respuesta. Un puerto abierto debería responder con un SYN/ACK (Reconocimiento); un puerto cerrado daría como resultado un RST (Restablecimiento). En este caso, solo verificamos si recibimos una respuesta para inferir si el host está activo. El estado específico del puerto no es significativo aquí.</p>
 
-<p> :white_check_mark: &nbsp; UDP Ping</p>
+<p> para usar TCP SYN ping, puedes hacerlo a través de la opción -PS seguida del número de puerto, rango, lista o una combinación de ellos. Por ejemplo,-PS21 apuntará al puerto 21, mientras que-PS21-25 apuntará a los puertos 21, 22, 23, 24 y 25. Finalmente,-PS80,443,8080 se centrará en los tres puertos 80, 443 y 8080. 
+
+
+Los usuarios privilegiados (root y sudoers) pueden enviar paquetes TCP SYN y no necesitan completar el protocolo de enlace TCP de 3 vías incluso si el puerto está abierto. Los usuarios sin privilegios no tienen más remedio que completar el protocolo de enlace de 3 vías si el puerto está abierto.</p>
+
+
+
+<P> :radio_button: &nbsp; TCP ACK </P>
+
+<p> Envia paquetes TCP ACK a un puerto especifico en un objetivo para comprobar si el anfitrion esta vivo, esta tecnica no espera respuesta pero si recibe un restablecimiento de TCP  </p>
+
+
+<p> Como habrás adivinado, esto envía un paquete con un indicador ACK establecido. Debes correr NMAP como usuario privilegiado para lograr esto. Si lo pruebas como usuario sin privilegios, NMAP intentará un apretón de manos en tres direcciones.
+
+De forma predeterminada, se utiliza el puerto 80. La sintaxis es similar al ping TCP SYN. debe ir seguido de un número de puerto, un rango de números de puerto, una lista o una combinación de ellos. -PA Por ejemplo, considere -PA21 ,-PA21-25 y-PA80,443,8080 . Si no se especifica ningún puerto, se utilizará el puerto 80.  </p>
+
+
+
+
+<p> :radio_button: &nbsp; UDP Ping</p>
+
 <p> Envia paquetes UDP a un puerto en especifico para verificar si hay anfitrion vivo </p>
 
-<p> :white_check_mark: &nbsp; TCP ACK</p>
-<p> Envia paquetes TCP ACK a un puerto especifico en un objetivo para comprobar si el anfitrion esta vivo, esta tecnica no espera respuesta pero si recibe un restablecimiento de TCP  </p>
+
+<p> podemos usar UDP para descubrir si el host está en línea. A diferencia de un ping TCP SYN, no se espera que enviar un paquete UDP a un puerto abierto genere una respuesta. Sin embargo, si enviamos un paquete UDP a un puerto UDP cerrado, esperamos obtener un paquete inalcanzable para el puerto ICMP; esto indica que el sistema de destino está activo y disponible. </p>
+
+
+<p> La sintaxis para especificar los puertos es similar a la del ping TCP SYN y el ping TCP ACK; se debe usar -PU</p>
+
+
 
 <p> :white_check_mark: &nbsp; SYN - ACK ping </p>
 <p> Envia un paquete Syn-ACK a un puerto especifico para verificar si un host esta vivo, si recibe un reinicio de TCP, nuevamente indica que el host esta vivo  </p>
 
 
 <p> Nota: Para escoger la mejor tecnica se debe tener en cuenta las caracteristicas de la red, las herramientas de seguridad  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zv1GTpWn/268.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/fyZMVynC/269.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
 
 </br>
 
@@ -2543,6 +2625,8 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
   <img src="https://i.postimg.cc/Bv02c4P4/108.png" alt="Descripción de la imagen">
 
 </p>
+
+
 
 
 
@@ -3153,7 +3237,8 @@ Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
 </p></p>
 
 
-
+</br>
+</br> 
 
 
 
@@ -4896,9 +4981,6 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 
 
-<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
-
-
 <p><h2> 2.&nbsp; Enumeración LDAP </h2> (Protocolo Ligero de Acceso a Directorios) se utiliza para acceder y mantener servicios de información de directorio 
     distribuidos a través de una red IP. Permite extraer nombres de usuario, direcciones de correo electrónico, grupos, departamentos y servidores del directorio.</p>
 
@@ -5825,7 +5907,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 
-<h2> :arrow_right:  BlueKeep - CVE-2019-0708</h2> 
+<h2> :white_check_mark:  BlueKeep - CVE-2019-0708 </h2> 
 
 
 <h3> RDP </h3> 
@@ -5857,52 +5939,152 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
+<h2> :white_check_mark: Pass-the-Hash Attacks </h2> 
+
+
+<h3> Kerberos - NTLM </h3> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/CxtGgRRf/265.jpg" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Un Pass-the-Hash Attack (ataque de paso de hash) es una técnica de explotación en la que un atacante captura el hash NTLM o Kerberos de una cuenta de usuario y lo utiliza para autenticarse en otros sistemas sin necesidad de conocer la contraseña original. Este ataque aprovecha el protocolo Kerberos (utilizado por defecto en entornos Windows) o el protocolo NTLM (usado en versiones antiguas de Windows).</p>
+
+
+
+
+
+<h2> :white_check_mark: Shellshock CVE-2014-6271 - LINUX</h2> 
 
 
 
 
 
 
+<!--------------------------------------------------## Escaneo de vulnerabilidades automatizado --------------------------------------------------------------------------->
 
 
 
+<h2> :arrow_right: Escaneo de vulnerabilidades automatizado </h2> 
 
 
 
+<!--------------------------------------------------## Escaneo de vulnerabilidades automatizado --------------------------------------------------------------------------->
 
 
 
+<h2> :arrow_right: Análisis de vulnerabilidades de aplicaciones web con WMAP </h2> 
 
 
 
+<p> WMAP (Web Map) es una herramienta de escaneo web desarrollada por Acunetix que realiza análisis automatizado de vulnerabilidades en aplicaciones web. Es especialmente útil para identificar problemas de seguridad como XSS, SQLi, CSRF, entre otros. </p>
 
 
 
+<h3> :radio_button: Pasos </h3> 
 
 
 
+<p> 1. Carga el módulo WMAP </p>
+ 
+<p> 2. Configura las opciones básicas </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/fyZMVynC/269.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/xC9wQgLc/270.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
+<p> 3. Ejecutar escaneo completo </p>
+
+
+<p> opcion wmap_run -t </p>
+
+<p> Ejecuta solo los módulos de tipo "Targeted" (dirigidos). Estos módulos están diseñados para escanear objetivos específicos y detectar vulnerabilidades comunes como SQL Injection, XSS, CSRF, etc. </p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/YCsNMSgG/271.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> opcion wmap_run -e </p>
+
+<p> Ejecuta solo los módulos de tipo "Exploitation". Estos módulos están diseñados para verificar si las vulnerabilidades detectadas son explotables o no, probando técnicas específicas de explotación. </p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/rFptskqh/272.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/pX15n6Tn/273.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 4. Verificar las vulnerabilidades </p>
+
+<p> opcion wmap_vulns </p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/sXRTCXdH/274.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
+<p> 5. Usar el modulo: auxiliary(scanner/http/http_put)   </p>
+
+
+<p> Este módulo puede aprovechar servidores web mal configurados para subir y eliminar contenido web mediante solicitudes HTTP de tipo PUT y DELETE. Establece ACTION en PUT o DELETE.  PUT es el valor predeterminado.  Si no se especifica el nombre de archivo, el módulo generará una cadena aleatoria como archivo .txt. Si se utiliza DELETE, es obligatorio especificar un nombre de archivo.  </p>
 
 
 
+<p> Nota: en el escaneo realizado se observa que intenta realizar la carga en archivo en la ruta: " / " el cual falla , pero se puede realizar el intento en otro ruta </p>
 
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3xXBChD4/276.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bwg6f8Y5/277.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
