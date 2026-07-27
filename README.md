@@ -558,10 +558,211 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 <p><b> • &nbsp; Escanear repositorios públicos de GitHub en busca de credenciales codificadas o archivos de configuración.</b></p>
 
 
+</br>
+
+
+<h2> :arrow_right: Descubrimiento de contenido y huella del sitio WEB  </h2>
+
+
+<p> Cuando hablamos de descubrimiento de contenido, no hace referencia a las cosas obvias que podemos ver en un sitio web; se trata de las cosas que no se nos presentan inmediatamente y que no siempre estuvieron destinadas al acceso público. Este contenido podría ser, por ejemplo, páginas o portales destinados al uso del personal, versiones anteriores del sitio web, archivos de copia de seguridad, archivos de configuración, paneles de administración, etc.
+</p>
+
+
+<h3> Enfoques principales para el descubrimiento de contenido </h3>
+
+
+<p><b> :radio_button: &nbsp; Descubrimiento Manual: </b> contenido oculto usando robots.txt, mapa del sitio.xml, favicons, encabezados HTTP y análisis del marco</p>
+<p><b> :radio_button: &nbsp; OSINT </b> Google Dorking, Wappalyzer, Wayback Machine, GitHub y S3 bucket enumeración </p>
+<p><b> :radio_button: &nbsp; Herramientas automatizadas (Reconocimiento activo)</b> fuerza bruta Para el descubimiento de directorios, subdominios y host virtuales </p>
+<p><b> :radio_button: &nbsp; Aplicar una <b>metodología</b> estructurada de descubrimiento de contenido en una prueba de penetración </p>
+
+
+<!----------------------------------------------------------------------------- Descubrimiento Manual  ----------------------------------------------------------------------------->
+
+<h2> Descubrimiento Manual </h2>
+
 
 </br>
 
-<h3>  Recopilacion de informacion: (OSINT) </h3>
+
+<h2> :white_check_mark: &nbsp;  Robots.txt </h2>
+
+
+<p>El archivo robots.txt es un archivo de texto que se coloca en la raíz de un sitio web para indicar a los rastreadores (como los de Google, Bing u otros bots) qué partes del sitio pueden o no pueden explorar. Estas páginas pueden ser áreas como portales de administración o archivos destinados a los clientes del sitio web </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RZ2474yN/2.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> En este caso se observa que en el archivo robots.txt especifica que ignore el directorio /wp-admin/. WP se refiere a que este sitio web esta ejecutando WordPress y admin es el directorio de administracion por lo tanto no debe ser de acceso publico</p>
+
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Sitemap.xml </h2>
+
+<p> El archivo sitemap_index.xml es un mapa del sitio en formato XML que lista las páginas, imágenes, vídeos y otros recursos de un sitio web. Proporciona una lista de todos los archivos que el propietario del sitio web desea que aparezcan en un motor de búsqueda. En ocasiones, estos archivos pueden contener áreas del sitio web más difíciles de navegar o incluso incluir páginas web antiguas que el sitio actual ya no utiliza, pero que siguen funcionando en segundo plano.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/DyNjCZg8/3.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/FKp0BC4q/4.png" alt="Descripción de la imagen">
+
+</p>
+
+
+</br>
+
+
+
+
+<h2> :white_check_mark: &nbsp; Encabezados HTTP </h2>
+
+
+<p> Los encabezados HTTP son el "metadata silencioso" Cada respuesta del servidor contiene información crítica que el desarrollador olvidó ocultar. Estos encabezados a veces pueden contener información útil, como el software del servidor web y posiblemente el lenguaje de programación/scripting utilizado </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/GppQxY1n/57.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> podemos ver que el servidor web usa NGINX versión 1.18.0 y PHP versión 7.4.3. Con esta información, podríamos encontrar versiones vulnerables del software utilizado. Adicionalmente, con el comando CURL descargar la informacion del servidor donde la opción -v habilita el modo detallado </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cCZCSRhK/59.png" alt="Descubrimiento con OSINT">
+
+</p>
+
+
+<p> Hay recursos externos disponibles que pueden ayudar a descubrir información sobre el sitio web de destino; estos recursos a menudo se denominan OSINT o (Inteligencia de código abierto), ya que son herramientas disponibles gratuitamente que recopilan información: </p>
+
+
+</br>
+
+
+
+<h2> :white_check_mark: &nbsp; Favicon </h2>
+
+
+<p> El favicon es un pequeño ícono que se muestra en la barra de direcciones o en la pestaña del navegador y se utiliza para marcar la marca de un sitio web. </p>
+
+<p> El Descubrimiento manual de Favicon es una técnica de enumeración de directorios y tecnologías que aprovecha el archivo favicon.ico (el ícono de la pestaña del navegador) para obtener información valiosa sobre la aplicación web.</p>
+
+
+<p> 1 &nbsp; Identificación de Frameworks y CMS</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mkfSQ5wP/53.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 2 &nbsp; Enumeración de Rutas Ocultas </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/gkpDj1j5/54.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 3 &nbsp; Fingerprinting del Servidor Web </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5tX5DV7h/55.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 4 &nbsp; Detección de Subdirectorios Estáticos </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZR38KLhw/56.png" alt="Descripción de la imagen">
+
+</p>
+
+
+</br>
+
+
+<p>  Pista sobre el framework en uso. </p>
+
+<p>  OWASP alberga una base de datos de iconos comunes de frameworks que se puede usar para comparar con el favicon de destino  : https://wiki.owasp.org/index.php/OWASP_favicon_database . Una vez que conocemos la pila del framework, podemos usar recursos externos para obtener más información</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pL311pGW/48.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Realizando la validacion del codigo fuente del sitio web se puede confirma que este sitio está usando un favicon. Adicionalmente, verá que la línea que contiene un enlace al archivo images/favicon.ico.  </p>
+
+
+<p> Al ejecuntar el siguiente comando, descargará el favicon y obtendrá su valor hash md5 que luego podrá buscar en "https://wiki.owasp.org/index.php/OWASP_favicon_database ."</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/g23BQGfK/49.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/X748q9hF/50.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> En resumen: Un simple favicon puede revelar el stack tecnológico completo, rutas ocultas y hasta vulnerabilidades directas en minutos, sin necesidad de herramientas externas. </p>
+
+
+<p> Ejemplo Práctico en Pentesting </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5tgpWgbY/51.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mkzSMGM6/52.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<!----------------------------------------------------------------------------- OSINT  ----------------------------------------------------------------------------->
+
+
+
+
+<h2>  Recopilacion de informacion: (OSINT) </h3>
 
 </br>
 
@@ -595,6 +796,219 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
   <img src="https://i.postimg.cc/GmF2LnYx/14.png" alt="Descripción de la imagen">
   
 </p>
+
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Hackeo de Google / Dorking </h2>
+
+
+<p> Google Dorks son consultas de búsqueda avanzadas que utilizan operadores especiales de Google para encontrar información específica o vulnerabilidades en la web. Estas técnicas son comúnmente empleadas en pruebas de penetración, reconocimiento de información y detección de configuraciones incorrectas en sitios web. </p>
+
+<p> Los Google Dorks aprovechan operadores como site:, inurl:, intitle:, filetype:, entre otros, para refinar las búsquedas y obtener resultados más precisos </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bryGnN2w/33.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h4> 🛠 &nbsp; Pentest-tools (https://pentest-tools.com/) </h4>
+
+
+<p> Ofrece automatizacion de dorks organizados por categoria  </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MXkpD6nV/34.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h4> 🛠 &nbsp; Exploit-db (https://www.exploit-db.com/google-hacking-database) </h4>
+
+
+<p> Base de datos con miles de dorks clasificados por servicio y tipo de vulnerabilidad </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HWFwKb57/35.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Operadores Comunes: </p>
+
+
+<p>1. site:: Limita los resultados a un dominio específico.</p>
+<p>•Ejemplo: site:google.com</p>
+
+<p>2. inurl:: Busca URLs que contengan una palabra clave específica.</p>
+<p>•Ejemplo: inurl:admin</p>
+
+<p>3. intitle:: Encuentra páginas cuyo título contenga ciertas palabras.</p>
+<p>•Ejemplo: intitle:"login"</p>
+
+<p>4. filetype:: Busca archivos de un tipo específico.</p>
+<p>•Ejemplo: filetype:pdf</p>
+
+<p>5.intext:: Busca páginas que contengan una palabra específica en su contenido.</p>
+<p>•Ejemplo: intext:"contraseña"</p>
+
+
+</br>
+
+
+
+<h2> :white_check_mark: &nbsp; Perfilar las tecnologias usadas por el sitio WEB </h2>
+
+
+<p> BuiltWith: &nbsp; Es una herramienta en línea que permite analizar cualquier sitio web para descubrir qué tecnologías utiliza: servidores, CMS, frameworks, librerías, herramientas de marketing, comercio electrónico entre otros </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/GhHwh9hP/5.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Wappalyzer: &nbsp; es una herramienta que identifica las tecnologías utilizadas en un sitio web, como CMS, frameworks, servidores, librerías de JavaScript, herramientas de analítica y más</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/PqmCxTMx/6.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Netlas.io: &nbsp; es una plataforma de OSINT (Open Source Intelligence) y escaneo de Internet que permite descubrir, investigar y monitorear activos en línea. Se utiliza principalmente en ciberseguridad para analizar superficies de ataque, buscar dispositivos vulnerables y obtener información técnica de dominios, IPs y certificados SSL </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/tRhGM7Cr/7.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/vTyksLHP/8.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> WhatRuns: &nbsp; permite identificar las tecnologías que utiliza un sitio web: frameworks, CMS, plugins, herramientas de analítica, fuentes, redes publicitarias y más</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Yq5gqnwx/9.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> whatweb: &nbsp; sirve para identificar las tecnologías que utiliza un sitio web (CMS, frameworks, servidores, librerías, herramientas de analítica, etc.). Es una herramienta de ciberseguridad y pentesting que permite realizar un reconocimiento rápido de la infraestructura tecnológica de una página.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/W3tpLVt1/10.png" alt="Descripción de la imagen">
+
+</p>
+
+
+</br>
+
+
+
+<h2> :white_check_mark: &nbsp;Wayback Machine </h2>
+
+
+<p> Wayback Machine: La Cápsula del Tiempo para Descubrimiento Web, (archive.org/web) es el archivo histórico más completo de internet con billones de capturas desde 1996. Revela páginas olvidadas, endpoints desindexados, funcionalidades ocultas y vulnerabilidades históricas. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/65WS781B/60.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XvSkCh79/61.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Cómo Usarla en Pentesting </p>
+
+
+<p> 1 &nbsp; Acceso Rápido</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5tX6q5nv/62.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 2 &nbsp; Descubrimiento de Endpoints Ocultos </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XqkJ7s7F/63.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 3 &nbsp; Enumeración de Parámetros y Funcionalidades </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/jdv5p317/64.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 4 &nbsp; Integración con DevTools + Headers </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wBRjsqj6/65.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Nota : Lo que estuvo público alguna vez, probablemente aún existe en el servidor. </p>
+
+
+
+<h2> :white_check_mark: &nbsp;GitHub </h2>
+
+<p> Git es un  sistema de control de versiones  que rastrea los cambios en los archivos de un proyecto. Trabajar en equipo es más fácil porque puedes ver lo que cada miembro del equipo está editando y qué cambios hicieron en los archivos. Cuando los usuarios terminan de hacer sus cambios, los confirman con un mensaje y luego los devuelven a una ubicación central (repositorio) para que los otros usuarios luego extraigan esos cambios a sus máquinas locales. GitHub es una versión alojada de Git en Internet. Los repositorios pueden configurarse como públicos o privados y tienen varios controles de acceso. Puedes usar la función de búsqueda de GitHub para buscar nombres de empresas o nombres de sitios web para intentar localizar repositorios que pertenecen a tu objetivo. Una vez descubierto, puedes tener acceso al código fuente, contraseñas u otro contenido que aún no habías encontrado. </p>
+
+
+
+<h2> :white_check_mark: &nbsp;S3 Buckets </h2>
+
+<p> Los buckets S3 son un servicio de almacenamiento proporcionado por Amazon AWS , que permite a las personas guardar archivos e incluso contenido estático de sitios web en la nube accesible a través de HTTP y HTTPS. El propietario de los archivos puede configurar permisos de acceso para que los archivos sean públicos, privados e incluso escribibles. A veces, estos permisos de acceso se configuran incorrectamente y, sin darse cuenta, permiten el acceso a archivos que no deberían estar disponibles para el público. </p>
+
+<p> El formato de los buckets S3 es http (s):// {name}. s3 .amazonaws.com  donde {name} lo decide el propietario, como  tryhackme-assets. s3 .amazonaws.com . Los buckets S3 se pueden descubrir de muchas maneras, como encontrar las URL en el código fuente de la página del sitio web, repositorios de GitHub o incluso automatizar el proceso. Un método de automatización común es usar el nombre de la empresa seguido de términos comunes como  {name} -assets,  {name} -www,  {name} -public,  {name} -private, etc. </p>
+
+
+</br>
+
+
+
+
 
 
 <!----------------------------------------------------------------------------- Codigo fuente de una aplicacion ----------------------------------------------------------------------------->
@@ -788,406 +1202,6 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 <p> La pestaña Seguridad proporciona detalles del certificado, incluido el emisor, el período de validez y los nombres alternativos de sujeto (SAN). Las SAN con frecuencia revelan subdominios adicionales o dominios relacionados que pertenecen a la misma organización. </p>
-
-
-
-
-<!----------------------------------------------------------------------------- Descubrimiento de contenido (Manual, Osint, Automatizado) ----------------------------------------------------------------------------->
-
-
-
-
-<h2> :arrow_right: Descubrimiento de contenido y huella del sitio WEB  </h2>
-
-
-<p> Cuando hablamos de descubrimiento de contenido, no hace referencia a las cosas obvias que podemos ver en un sitio web; se trata de las cosas que no se nos presentan inmediatamente y que no siempre estuvieron destinadas al acceso público. Este contenido podría ser, por ejemplo, páginas o portales destinados al uso del personal, versiones anteriores del sitio web, archivos de copia de seguridad, archivos de configuración, paneles de administración, etc.
-</p>
-
-
-<p> Hay tres formas principales de descubrir contenido en un sitio web que cubriremos: manual, automatizada y OSINT (Inteligencia de código abierto)</p>
-
-
-
-<p align="center">
-
-  <img src="hcleps://i.postimg.cc/RZxf0t0q/58.png" alt="Descubrimiento manual">
-  
-</p>
-
-
-
-
-<h2> :white_check_mark: &nbsp; Descubrimiento manual - Robots.txt </h2>
-
-
-<p>El archivo robots.txt es un archivo de texto que se coloca en la raíz de un sitio web para indicar a los rastreadores (como los de Google, Bing u otros bots) qué partes del sitio pueden o no pueden explorar. Estas páginas pueden ser áreas como portales de administración o archivos destinados a los clientes del sitio web </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/RZ2474yN/2.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> En este caso se observa que en el archivo robots.txt especifica que ignore el directorio /wp-admin/. WP se refiere a que este sitio web esta ejecutando WordPress y admin es el directorio de administracion por lo tanto no debe ser de acceso publico</p>
-
-
-
-
-<h2> :white_check_mark: &nbsp; Descubrimiento manual - Sitemap.xml </h2>
-
-<p> El archivo sitemap_index.xml es un mapa del sitio en formato XML que lista las páginas, imágenes, vídeos y otros recursos de un sitio web. Proporciona una lista de todos los archivos que el propietario del sitio web desea que aparezcan en un motor de búsqueda. En ocasiones, estos archivos pueden contener áreas del sitio web más difíciles de navegar o incluso incluir páginas web antiguas que el sitio actual ya no utiliza, pero que siguen funcionando en segundo plano.</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/DyNjCZg8/3.png" alt="Descripción de la imagen">
-
-</p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/FKp0BC4q/4.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<h2> :white_check_mark: &nbsp; Descubrimiento manual - Favicon </h2>
-
-
-<p> El favicon es un pequeño ícono que se muestra en la barra de direcciones o en la pestaña del navegador y se utiliza para marcar la marca de un sitio web. </p>
-
-<p> El Descubrimiento manual de Favicon es una técnica de enumeración de directorios y tecnologías que aprovecha el archivo favicon.ico (el ícono de la pestaña del navegador) para obtener información valiosa sobre la aplicación web.</p>
-
-
-<p> 1 &nbsp; Identificación de Frameworks y CMS</p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/mkfSQ5wP/53.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> 2 &nbsp; Enumeración de Rutas Ocultas </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/gkpDj1j5/54.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> 3 &nbsp; Fingerprinting del Servidor Web </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/5tX5DV7h/55.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> 4 &nbsp; Detección de Subdirectorios Estáticos </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/ZR38KLhw/56.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p>  Pista sobre el framework en uso. </p>
-
-<p>  OWASP alberga una base de datos de iconos comunes de frameworks que se puede usar para comparar con el favicon de destino  : https://wiki.owasp.org/index.php/OWASP_favicon_database . Una vez que conocemos la pila del framework, podemos usar recursos externos para obtener más información</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/pL311pGW/48.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> Realizando la validacion del codigo fuente del sitio web se puede confirma que este sitio está usando un favicon. Adicionalmente, verá que la línea que contiene un enlace al archivo images/favicon.ico.  </p>
-
-
-<p> Al ejecuntar el siguiente comando, descargará el favicon y obtendrá su valor hash md5 que luego podrá buscar en "https://wiki.owasp.org/index.php/OWASP_favicon_database ."</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/g23BQGfK/49.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/X748q9hF/50.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> En resumen: Un simple favicon puede revelar el stack tecnológico completo, rutas ocultas y hasta vulnerabilidades directas en minutos, sin necesidad de herramientas externas. </p>
-
-
-<p> Ejemplo Práctico en Pentesting </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/5tgpWgbY/51.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/mkzSMGM6/52.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-
-
-<h2> :white_check_mark: &nbsp; Descubrimiento manual - Encabezados HTTP </h2>
-
-
-<p> Los encabezados HTTP son el "metadata silencioso" Cada respuesta del servidor contiene información crítica que el desarrollador olvidó ocultar. Estos encabezados a veces pueden contener información útil, como el software del servidor web y posiblemente el lenguaje de programación/scripting utilizado </p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/GppQxY1n/57.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> podemos ver que el servidor web usa NGINX versión 1.18.0 y PHP versión 7.4.3. Con esta información, podríamos encontrar versiones vulnerables del software utilizado. Adicionalmente, con el comando CURL descargar la informacion del servidor donde la opción -v habilita el modo detallado </p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/cCZCSRhK/59.png" alt="Descubrimiento con OSINT">
-
-</p>
-
-
-<p> Hay recursos externos disponibles que pueden ayudar a descubrir información sobre el sitio web de destino; estos recursos a menudo se denominan OSINT o (Inteligencia de código abierto), ya que son herramientas disponibles gratuitamente que recopilan información: </p>
-
-
-<h2> :white_check_mark: &nbsp; OSINT - Hackeo de Google / Dorking </h2>
-
-
-<p> Google Dorks son consultas de búsqueda avanzadas que utilizan operadores especiales de Google para encontrar información específica o vulnerabilidades en la web. Estas técnicas son comúnmente empleadas en pruebas de penetración, reconocimiento de información y detección de configuraciones incorrectas en sitios web. </p>
-
-<p> Los Google Dorks aprovechan operadores como site:, inurl:, intitle:, filetype:, entre otros, para refinar las búsquedas y obtener resultados más precisos </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/bryGnN2w/33.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<h4> 🛠 &nbsp; Pentest-tools (https://pentest-tools.com/) </h4>
-
-
-<p> Ofrece automatizacion de dorks organizados por categoria  </p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/MXkpD6nV/34.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<h4> 🛠 &nbsp; Exploit-db (https://www.exploit-db.com/google-hacking-database) </h4>
-
-
-<p> Base de datos con miles de dorks clasificados por servicio y tipo de vulnerabilidad </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/HWFwKb57/35.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> Operadores Comunes: </p>
-
-
-<p>1. site:: Limita los resultados a un dominio específico.</p>
-<p>•Ejemplo: site:google.com</p>
-
-<p>2. inurl:: Busca URLs que contengan una palabra clave específica.</p>
-<p>•Ejemplo: inurl:admin</p>
-
-<p>3. intitle:: Encuentra páginas cuyo título contenga ciertas palabras.</p>
-<p>•Ejemplo: intitle:"login"</p>
-
-<p>4. filetype:: Busca archivos de un tipo específico.</p>
-<p>•Ejemplo: filetype:pdf</p>
-
-<p>5.intext:: Busca páginas que contengan una palabra específica en su contenido.</p>
-<p>•Ejemplo: intext:"contraseña"</p>
-
-
-
-
-
-
-<h2> :white_check_mark: &nbsp; OSINT - Perfilar las tecnologias usadas por el sitio WEB </h2>
-
-
-<p> BuiltWith: &nbsp; Es una herramienta en línea que permite analizar cualquier sitio web para descubrir qué tecnologías utiliza: servidores, CMS, frameworks, librerías, herramientas de marketing, comercio electrónico entre otros </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/GhHwh9hP/5.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> Wappalyzer: &nbsp; es una herramienta que identifica las tecnologías utilizadas en un sitio web, como CMS, frameworks, servidores, librerías de JavaScript, herramientas de analítica y más</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/PqmCxTMx/6.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> Netlas.io: &nbsp; es una plataforma de OSINT (Open Source Intelligence) y escaneo de Internet que permite descubrir, investigar y monitorear activos en línea. Se utiliza principalmente en ciberseguridad para analizar superficies de ataque, buscar dispositivos vulnerables y obtener información técnica de dominios, IPs y certificados SSL </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/tRhGM7Cr/7.png" alt="Descripción de la imagen">
-
-</p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/vTyksLHP/8.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> WhatRuns: &nbsp; permite identificar las tecnologías que utiliza un sitio web: frameworks, CMS, plugins, herramientas de analítica, fuentes, redes publicitarias y más</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/Yq5gqnwx/9.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p> whatweb: &nbsp; sirve para identificar las tecnologías que utiliza un sitio web (CMS, frameworks, servidores, librerías, herramientas de analítica, etc.). Es una herramienta de ciberseguridad y pentesting que permite realizar un reconocimiento rápido de la infraestructura tecnológica de una página.</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/W3tpLVt1/10.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-
-
-
-<h2> :white_check_mark: &nbsp; OSINT - Wayback Machine </h2>
-
-
-<p> Wayback Machine: La Cápsula del Tiempo para Descubrimiento Web, (archive.org/web) es el archivo histórico más completo de internet con billones de capturas desde 1996. Revela páginas olvidadas, endpoints desindexados, funcionalidades ocultas y vulnerabilidades históricas. </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/65WS781B/60.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/XvSkCh79/61.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-<p> Cómo Usarla en Pentesting </p>
-
-
-<p> 1 &nbsp; Acceso Rápido</p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/5tX6q5nv/62.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> 2 &nbsp; Descubrimiento de Endpoints Ocultos </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/XqkJ7s7F/63.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> 3 &nbsp; Enumeración de Parámetros y Funcionalidades </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/jdv5p317/64.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> 4 &nbsp; Integración con DevTools + Headers </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/wBRjsqj6/65.png" alt="Descripción de la imagen">
-
-</p>
-
-<p> Nota : Lo que estuvo público alguna vez, probablemente aún existe en el servidor. </p>
-
-
-
-
-
-
-<h2> :white_check_mark: &nbsp; OSINT - GitHub </h2>
-
-<p> Git es un  sistema de control de versiones  que rastrea los cambios en los archivos de un proyecto. Trabajar en equipo es más fácil porque puedes ver lo que cada miembro del equipo está editando y qué cambios hicieron en los archivos. Cuando los usuarios terminan de hacer sus cambios, los confirman con un mensaje y luego los devuelven a una ubicación central (repositorio) para que los otros usuarios luego extraigan esos cambios a sus máquinas locales. GitHub es una versión alojada de Git en Internet. Los repositorios pueden configurarse como públicos o privados y tienen varios controles de acceso. Puedes usar la función de búsqueda de GitHub para buscar nombres de empresas o nombres de sitios web para intentar localizar repositorios que pertenecen a tu objetivo. Una vez descubierto, puedes tener acceso al código fuente, contraseñas u otro contenido que aún no habías encontrado. </p>
-
-
-
-
-
-
-<h2> :white_check_mark: &nbsp; OSINT - S3 Buckets </h2>
-
-<p> Los buckets S3 son un servicio de almacenamiento proporcionado por Amazon AWS , que permite a las personas guardar archivos e incluso contenido estático de sitios web en la nube accesible a través de HTTP y HTTPS. El propietario de los archivos puede configurar permisos de acceso para que los archivos sean públicos, privados e incluso escribibles. A veces, estos permisos de acceso se configuran incorrectamente y, sin darse cuenta, permiten el acceso a archivos que no deberían estar disponibles para el público. </p>
-
-<p> El formato de los buckets S3 es http (s):// {name}. s3 .amazonaws.com  donde {name} lo decide el propietario, como  tryhackme-assets. s3 .amazonaws.com . Los buckets S3 se pueden descubrir de muchas maneras, como encontrar las URL en el código fuente de la página del sitio web, repositorios de GitHub o incluso automatizar el proceso. Un método de automatización común es usar el nombre de la empresa seguido de términos comunes como  {name} -assets,  {name} -www,  {name} -public,  {name} -private, etc. </p>
-
 
 
 
@@ -1706,7 +1720,7 @@ nombres de dominio. </p>
 
 <p><b> :arrow_right:  • Informes disponibles públicamente: &nbsp;</b> Análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b></p>
 
-<p><b> :arrow_right:  • Redes sociales: &nbsp;</b> Recopilación de información de plataformas de redes sociales.<b></p>
+<p><b> :arrow_right:  • Redes sociales: &nbsp;</b> Recopilación de información de plataformas de redes sociales.</b></p>
 
 </br>
 
@@ -2875,7 +2889,7 @@ De forma predeterminada, se utiliza el puerto 80. La sintaxis es similar al ping
 
 
 
-<h2> Detección de Firewalls </h2> 
+<h2> :white_check_mark: Detección de Firewalls </h2> 
 
 
 
@@ -2907,7 +2921,7 @@ De forma predeterminada, se utiliza el puerto 80. La sintaxis es similar al ping
 
 
 
-<h2> Evasión de IDS/IPS y Firewalls </h2> 
+<h2> :white_check_mark: Evasión de IDS/IPS y Firewalls </h2> 
 
 
 <p> Los IDS/IPS detectan patrones de escaneos (e.g., Snort rules para SYN floods). Nmap evade alterando tráfico para evitar firmas, rate-limiting y reensamblado:<p>
@@ -2956,6 +2970,52 @@ De forma predeterminada, se utiliza el puerto 80. La sintaxis es similar al ping
   <img src="https://i.postimg.cc/HxsMMyMD/145.png" alt="Descripción de la imagen">
 
 </p>
+
+
+
+<h2> :white_check_mark: Bypass firewall </h2> 
+
+
+
+<p> :radio_button: Decoy Scan / Escaneo de señuelos <p>
+
+  <h3> <b> nmap -D </b> <h3>
+
+
+<p> Nmap emplea direcciones IP señuelo para ocultar el origen de un escaneo, lo que complica la identificación del escáner real. Los usuarios pueden especificar múltiples direcciones IP señuelo utilizando la opción -D dentro del comando Nmap. Si bien los escaneos señuelo pueden plantear desafíos para que los registros del firewall rastreen hasta el iniciador, es fundamental verificar que los hosts señuelo estén en línea. Además, el uso excesivo de señuelos puede provocar congestión en la red, lo que justifica tener precaución en su implementación. <p>
+
+
+<h3> Esta opción permite especificar manualmente las direcciones IP de los señuelos <b> nmap -D señuelo1, señuelo2, señuelo3 .... [IP objetivo] </b> <h3>
+
+
+<h3> Esta opción genera un número aleatorio de señuelos. (generará 5 direcciones IP para escanear este dns). <b> nmap -D RND:5 [IP de destino] </b> <h3>
+
+
+
+
+<p> :radio_button: Idle Zombie Scans <p>
+
+
+  <h3> <b> nmap -sI </b> <h3>
+
+
+<p> La técnica Idle Zombie Scan es un método sofisticado empleado en evaluaciones de seguridad de red para realizar escaneos de puertos en hosts de destino utilizando hosts inactivos dentro de la red. Su principal ventaja radica en sus notables sigilosidades, ya que oscurece el origen del escaneo al atribuir la dirección IP del host inactivo “Zombie” en los archivos de registro del firewall, ocultando así la identidad del escáner real.
+
+Para garantizar resultados precisos, es imperativo identificar hosts inactivos dentro de la red. El marco Metasploit proporciona un escáner dedicado diseñado precisamente para este propósito, facilitando el descubrimiento de hosts inactivos y mejorando la eficacia de la implementación de este tipo de escaneo.
+
+Para ejecutar este escaneo con éxito, es necesario localizar un host en la red que esté inactivo y utilice secuencias IPID, ya sea Incremental o Broken Little-Endian Incremental.
+
+En Nmap, la dirección IP 192.168.1.0 se designa como host zombie, mientras que el objetivo del escaneo es la dirección IP 192.168.1.1. Este comando emplea la técnica Idle Zombie Scan, utilizando el host inactivo (el zombi) para realizar un escaneo sigiloso del puerto en el host de destino. <p>
+
+<h3> <b> nmap -sI [señuelo] [IP objetivo] </b> <h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -3114,6 +3174,15 @@ De forma predeterminada, se utiliza el puerto 80. La sintaxis es similar al ping
 </p>
 
 
+
+<p> Opciones recomendadas </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mgL2WVXK/279.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
@@ -4199,7 +4268,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 <p align="center">
 
- <img src="hhttps://i.postimg.cc/SKf0QP9v/249.png" alt="Descripción de la imagen">
+ <img src="https://i.postimg.cc/SKf0QP9v/249.png" alt="Descripción de la imagen">
 
 </p>
 
@@ -5487,9 +5556,6 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 <h3><b> Vulnerability x Threat = Risk </b></h3>
-
-
-<h3>Vulnerabilidad</h3>
 
 
 <p>:white_check_mark: Una Vulnerabilidad es una debilidad o fallo de un sistema de informacion o de una infraestructura TI que podría explotarse para comprometer la seguridad de los sistemas, datos u operaciones.</p>
