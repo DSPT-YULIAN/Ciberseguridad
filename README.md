@@ -6003,8 +6003,6 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-
-
 <h2> :white_check_mark: Pass-the-Hash Attacks </h2> 
 
 
@@ -6029,6 +6027,18 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 <h2> :white_check_mark: Shellshock CVE-2014-6271 - LINUX</h2> 
 
 
+<p> Es una Vulnerabilidad crítica de ejecución remota de comandos en Bash (GNU Bourne Again Shell) que permite a los atacantes ejecutar comandos arbitrarios mediante variables de entorno.</p>
+
+<p><b>• Versiones Afectadas</b>: Bash 1.03 hasta 4.3 </p>
+<p><b>• Gravedad:</b>:  CVSS:9.3 (Crítica) </p>
+
+
+<p><b>Mecánica de Exploitación</b></p>
+
+
+<p>1. Un atacante envía encabezados HTTP especialmente elaborados o variables de entorno</p>
+<p>2. La sintaxis () en variables de entorno se interpreta incorrectamente como definiciones de funciones</p>
+<p>3. El código malicioso se ejecuta antes de que comience la ejecución normal del programa</p>
 
 
 
@@ -6154,12 +6164,6 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-
-
-
-
-
-
 <p> Principales Vulnerabilidades</p>
 
 <p> :radio_button: Configuracion del software o hardware</p>
@@ -6170,14 +6174,6 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 <p> :radio_button: Clasificar las vulnerabilidades</p>
 <p> :radio_button: Proporcionar una puntuacion compuesta de la gravedad general y el riesgo asociado a las vulnerabilidades identificadas </p>
-
-
-
-
-
-
-
-
 
 
 
@@ -6225,8 +6221,6 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-
-
 ### 👨🏻‍💻 &nbsp; NMAP
 
 
@@ -6257,7 +6251,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 </p>
 
 
-
+<!--------------------------------------------------## Fase 3 Explotacion --------------------------------------------------------------------------->
 
 
 <!--horizontal divider(gradiant)-->
@@ -6265,12 +6259,142 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-<!--h1 without bottom border-->
+
 <div id="user-content-toc">
-  <ul align="left">
-    <summary><h2 style="display: inline-block">Fase 3. Explotacion </h2></summary>
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7608A&width=700&height=600&lines=Fase+3.+Explotacion" alt="Typing SVG" /></a></summary>
   </ul>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
