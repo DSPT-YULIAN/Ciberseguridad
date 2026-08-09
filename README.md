@@ -379,6 +379,8 @@ Dentro de cada columna de táctica, el filas lista técnicas, que son los cómo,
 <p> • &nbsp;  <b> CBEST </b> exige capacidades de inteligencia sobre amenazas</p>
 
 
+
+
 <p align="center">
 
   <img src="https://i.postimg.cc/y8VwKKHP/191.png" alt="Descripción de la imagen">
@@ -386,6 +388,30 @@ Dentro de cada columna de táctica, el filas lista técnicas, que son los cómo,
 </p>
 
 </br>
+
+
+
+<h3> :white_check_mark: &nbsp; Cyber Kill Chain </h3>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ryDK7d1c/306.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
 
 
 </br>
@@ -6051,7 +6077,12 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-<!--------------------------------------------------## Escaneo de vulnerabilidades automatizado --------------------------------------------------------------------------->
+
+
+
+
+
+<!--------------------------------------------------## Escaneo de vulnerabilidades con wmap --------------------------------------------------------------------------->
 
 
 
@@ -6248,6 +6279,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 <p align="center">
 
   <img src="https://i.postimg.cc/MKJbZFH3/4.png" alt="Descripción de la imagen">
+
 </p>
 
 
@@ -6269,17 +6301,25 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
+<h2> :arrow_right:  Metodologias para irrumpir sistemas </h2>
 
 
+<h2> :white_check_mark: &nbsp; Obtener acceso - Initial Access &nbsp; TA0001</h2>
 
 
+<p> El adversario está intentando entrar en tu red. </p>
 
 
 
+<p> El acceso inicial consiste en técnicas que utilizan varios vectores de entrada para obtener su punto de apoyo inicial dentro de una red. Las técnicas utilizadas para afianzarse incluyen el phishing selectivo y la explotación de debilidades en servidores web públicos. Los puntos de acceso obtenidos a través del acceso inicial pueden permitir el acceso continuo, como cuentas válidas y el uso de servicios remotos externos, o pueden tener un uso limitado debido al cambio de contraseñas. </p>
 
 
 
+<p align="center">
 
+  <img src="https://i.postimg.cc/wjq7hnBW/305.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
@@ -6318,90 +6358,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p> Metodologia para irrumpir en un sistema</p>
-
-
-<p> Paso 1:  &nbsp; Obtener acceso - Initial Access &nbsp; TA0001</p>
+<p> </p>
 <p> Tecnicas</p>
 <p><b> • Descifrado de contraseñas:</b> </p>
 
@@ -6784,34 +6741,6 @@ archivos y directorios almacenados en los sistemas de archivos incluyendo el cod
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>&nbsp;&nbsp;<h3>Ataques de red pasivos vs. activos<h3></p>
 
 
@@ -6858,18 +6787,18 @@ los usuarios o la estructura de la red.</p>
 ### &nbsp;Vulnerabilidades y las explotaciones basados en la red
 
 
-<p>	• Ataques y explotaciones basados en la resolución de nombres de Windows</p>
-<p>	• Ataque de envenenamiento de caché DNS</p>
-<p>	• Ataques y explotaciones contra implementaciones de Server Message Block (SMB)</p>
-<p>	• Vulnerabilidades y explotaciones del Protocolo simple de administración de red (SNMP)</p>
-<p>	• Vulnerabilidades y explotaciones del Protocolo simple de transferencia de correo (SMTP)</p>
-<p>	• Vulnerabilidades y explotaciones del Protocolo de transferencia de archivos (FTP)</p>
-<p>	• Ataques de transferencia de hash</p>
-<p>	• Ataques en ruta (antes conocidos como ataques de intermediario [MITM])</p>
-<p>	• Ataques de eliminación de SSL</p>
-<p>	• Ataques de denegación de servicio (DoS) y de denegación de servicio distribuido (DDoS)</p>
-<p>	• Omisión del control de acceso a la red (NAC)</p>
-<p>	• Ataques de salto a la red de área local virtual (VLAN)</p>
+<p> • Ataques y explotaciones basados en la resolución de nombres de Windows</p>
+<p> • Ataque de envenenamiento de caché DNS</p>
+<p> • Ataques y explotaciones contra implementaciones de Server Message Block (SMB)</p>
+<p> • Vulnerabilidades y explotaciones del Protocolo simple de administración de red (SNMP)</p>
+<p> • Vulnerabilidades y explotaciones del Protocolo simple de transferencia de correo (SMTP)</p>
+<p> • Vulnerabilidades y explotaciones del Protocolo de transferencia de archivos (FTP)</p>
+<p> • Ataques de transferencia de hash</p>
+<p> • Ataques en ruta (antes conocidos como ataques de intermediario [MITM])</p>
+<p> • Ataques de eliminación de SSL</p>
+<p> • Ataques de denegación de servicio (DoS) y de denegación de servicio distribuido (DDoS)</p>
+<p> • Omisión del control de acceso a la red (NAC)</p>
+<p> • Ataques de salto a la red de área local virtual (VLAN)</p>
 
 ### &nbsp;Ataques a redes WI-FI
 
@@ -6877,7 +6806,7 @@ los usuarios o la estructura de la red.</p>
 
 </br>
 
-<p>	WEP es susceptible a muchos ataques diferentes, se considera un protocolo inalámbrico obsoleto. ha sido derrotado durante décadas. WEP usa RC4 de una manera que permite a un atacante 
+<p> WEP es susceptible a muchos ataques diferentes, se considera un protocolo inalámbrico obsoleto. ha sido derrotado durante décadas. WEP usa RC4 de una manera que permite a un atacante 
 descifrar la PSK con poco esfuerzo. El problema está relacionado con cómo WEP utiliza los IV en cada paquete. Cuando WEP usa RC4 para cifrar un paquete, anteponga el IV a la clave secreta 
 antes de incluir la clave en RC4. Posteriormente, un atacante tiene los primeros 3 bytes de una clave supuestamente “secreta” utilizada en cada paquete. Para recuperar el PSK, el atacante 
 solo necesita recopilar suficientes datos del aire. Un atacante puede acelerar este tipo de ataque inyectando paquetes ARP (porque la longitud es predecible), lo que permite que el atacante 
@@ -6887,7 +6816,7 @@ recupere el PSK mucho más rápido. Después de recuperar la clave WEP, el ataca
 
 </br>
 
-<p>	Todas las versiones de WPA admiten diferentes métodos de autenticación, incluido PSK. WPA no es susceptible a los ataques IV que afectan a WEP; Sin embargo, es posible capturar el protocolo 
+<p> Todas las versiones de WPA admiten diferentes métodos de autenticación, incluido PSK. WPA no es susceptible a los ataques IV que afectan a WEP; Sin embargo, es posible capturar el protocolo 
 de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructura inalámbrica y luego aplicar la fuerza bruta a la PSK de WPA.</p>
 
 <p align="center">
@@ -6906,8 +6835,272 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 
 
 
+<!-------------------------------------------------- Ejemplo explotacion Pentest web --------------------------------------------------------------------------->
 
 
+
+
+<h2> :arrow_right: Pentest WEB</h2> 
+
+
+<p> Claves del compromiso </p>
+
+
+
+<p> :radio_button: La enumeración permite mapear la estructura, los encabezados, los puntos finales y el comportamiento de la aplicación antes de intentar la explotación. </p>
+
+<p> :radio_button: Los pequeños defectos se encadenan en grandes compromisos. Ningún tema aquí fue exótico o particularmente complejo. IDOR, restablecimientos débiles de contraseñas y omisiones en la carga son vulnerabilidades bien entendidas. Su impacto provino de cómo se conectaron entre sí. </p>
+
+<p>  :radio_button:  Las restricciones del lado del cliente no son seguridad. El formulario de carga de archivos utilizaba un accept atributo para restringir los tipos de archivos en el navegador. La verificación del lado del servidor utilizó una lista de bloqueo que omitió la alternativa extensiones PHP . La seguridad real requiere una validación del lado del servidor con un enfoque de lista de permisos. </p>
+
+<p> :radio_button: Los mecanismos de restablecimiento de contraseña merecen una atención cuidadosa. Son complejos de implementar de forma segura, y una sola falla de diseño, como exponer el token en la respuesta, puede llevar a la apropiación de la cuenta. </p>
+
+
+<p> :radio_button: Piense como un atacante, informe como un consultor. Encontrar las vulnerabilidades es la mitad del trabajo. Documentarlos claramente con calificaciones de gravedad y consejos de remediación viables es lo que hace que el compromiso sea valioso para el cliente.  </p>
+
+
+
+
+<h2> white_check_mark: 1.  Reconocimiento y enumeracion </h2> 
+
+
+
+<p> Recopilar la mayor cantidad de informacion posible sobre el objetivo</p> 
+
+
+<p> 1. Escaneo de puertos </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/50HWSMRT/285.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Resultado puertos abiertos</p> 
+
+<p> Puerto 22: SSH Util si obtenemos credenciales  </p> 
+<p> Puerto 80: Donde se encuentra la aplicacionn WEB la cual se esta ejecutando en apache </p> 
+<p> Puerto 3306: Indica que usa una base de datos MySQL en el Backend</p> 
+<p> Puerto 8080: página predeterminada de Apache la aplicación probablemente construye consultas SQL y cualquier debilidad en el manejo de entradas podría generar problemas relacionados con SQL </p> 
+
+
+<p> 2. Explorando la aplicacion </p> 
+
+<p> Validar el encabezados HTTP  </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/jqwRzzVQ/287.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Resultado puertos abiertos</p> 
+
+
+<p> Los encabezados confirman que el servidor se está ejecutando apache con versión2.4.58 . LaPHPSESSID cookie confirma que la gestión de sesiones PHP está en uso. Ahora conocemos la pila de tecnología: Apache + PHP + MySQL, una configuración LAMP clásica.</p> 
+
+
+<p> 3. Enumeracion de directorios </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wvRnsQtt/286.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Resultado</p>
+
+
+<p> /admin- Existe un panel de administración, pero redirecciona a la página de inicio de sesión. Necesitaremos credenciales para acceder a él  </p> 
+<p> /api-  Las API a menudo exponen datos de maneras que el frontend no lo hace.</p> 
+<p> /reset.php- Una página de restablecimiento de contraseña. Los mecanismos de reinicio con frecuencia se implementan de forma insegura.</p> 
+<p> /uploads- Un directorio de cargas. Si podemos cargar archivos, esta podría ser una ruta para la ejecución del código. </p> 
+<p> /profile.php y/dashboard.php - Estos requieren autenticación, por lo que debemos iniciar sesión para acceder a ellos.</p> 
+
+
+<p> 4. Explorando API </p> 
+
+<p> El API enumera de forma útil sus propios puntos finales. Este ya es un problema de divulgación de información en una aplicación de producción; un usuario no autenticado no debería poder descubrir información interna rutas API.</p> 
+
+
+
+<p align="center">
+
+  <img src="hhttps://i.postimg.cc/tC8Z3XmY/288.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+
+<h2> white_check_mark:  IDOR (Insecure Direct Object Reference) </h2> 
+
+
+<p> Es un tipo de vulnerabilidad común en pruebas de penetración donde un atacante puede acceder directamente a objetos o recursos del sistema sin autenticación ni autorización adecuadas. </p> 
+
+
+<p> En una prueba de penetración, se identifica IDOR al observar cómo la aplicación maneja referencias a objetos (como IDs de usuarios, archivos o recursos). Los escenarios típicos incluyen: </p> 
+
+
+<p>&nbsp;1. Acceso no autorizado: Un usuario puede manipular parámetros (por ejemplo, ?id=123) para acceder a datos de otros usuarios. </p> 
+<p>&nbsp;2. Manipulación de recursos: Cambiar IDs para acceder a archivos o rutas que no deberían ser accesibles. </p> 
+<p>&nbsp;3. Desbordamiento de recursos: Acceder a más recursos de los permitidos por el sistema. </p> 
+
+
+<p> Mitigar IDOR </p> 
+
+
+<p> • Validar siempre la relación entre el usuario actual y el recurso solicitado.</p> 
+<p> • Usar referencias indirectas (hashes o tokens) en lugar de IDs directos. </p> 
+<p> • Implementar controles de acceso estrictos en todos los puntos de entrada. </p> 
+
+<p> IDOR es especialmente peligroso porque puede permitir el acceso no autorizado a información sensible o funcionalidades críticas. </p> 
+
+
+
+<h3> Probar si una pagina web es vulnerable a IDOR</h3> 
+
+
+<p>&nbsp;1. Identificar parámetros de objeto en URLs (como ?id=, ?user_id=, ?file=). </p> 
+<p>&nbsp;2. Extraccion de Cookies </p> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HsBq38Qz/283.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>&nbsp;3. Usar CURL para que ver exactamente qué regresa. Asegúrese de incluir su cookie de sesión en el siguiente comando después del PHPSESSID= valor: </p> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/BQzRR81K/284.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<h2> white_check_mark: 3. Restablecimiento de contraseña debil </h2> 
+
+
+<p> Los flujos de restablecimiento de contraseña son una de las características que se rompen con más frecuencia en las aplicaciones web porque son complejos de implementar de forma segura y los desarrolladores a menudo toman atajos.</p> 
+
+
+
+<p>  En una aplicación diseñada adecuadamente, el token de reinicio se enviaría al correo electrónico del usuario y nunca se mostraría en la pantalla. Pero esta aplicación muestra el token directamente en la respuesta.</p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3rknYFVm/289.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>  Ahora tenemos todo lo que necesitamos. Usemos el token para restablecer la contraseña de Sarah Mitchell. Visite la URL de reinicio y le pedirá una nueva contraseña:</p> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/BQzRR81K/284.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Fallas en la pagina WEB.</p> 
+
+
+<p> <b> Token mostrado en respuesta: </b>  El token solo debe enviarse al correo electrónico del propietario de la cuenta, nunca debe mostrarse en la pantalla. </p> 
+<p> <b> Generación de tokens débil:  </b> un token numérico de seis dígitos tiene un espacio de claves pequeño y es susceptible a ataques de fuerza bruta. </p> 
+<p> <b> Sin limitación de velocidad: </b> la aplicación no limitó la cantidad de solicitudes de reinicio ni conjeturas de tokens. </p> 
+
+
+
+<h2> white_check_mark: 4. Acceso al panel de administracion </h2> 
+
+
+<p> Una función de carga de archivos en manos de un administrador es una característica poderosa y, desde la perspectiva de un evaluador de penetración, es un camino potencial hacia la ejecución remota de código. </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nz0YpCYT/291.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Examinemos la página de carga. Haga clic derecho en el botón y Upload haga clic en Inspect </p> 
+
+
+
+<p> Podemos notar varios detalles importantes. El formulario dice que acepta archivos PDF, DOCX y de imagen. El atributo enaccept la entrada del archivo restringe los tipos de archivos, pero esta es solo una restricción del lado del cliente. El navegador lo aplica, pero una solicitud HTTP directa puede enviar cualquier tipo de archivo que desee. La página también revela el destino de carga: . /uploads/documents/  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3wZ2FdqS/293.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5NFvkPGN/294.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<h2> white_check_mark: 5. Ejecucion remota de codigo </h2> 
+
+
+<p> • Creación de un shell web </p> 
+
+<p> Un shell web es un pequeño script que acepta comandos a través de parámetros HTTP y los ejecuta en el servidor.  </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pTBKPD1H/297.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> • Ejecución de comandos </p> 
+
+<p> Verifiquemos que tenemos ejecución de código ejecutando comandos simples:  </p> 
+<p> Lectura de archivos confidenciales. </p> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/SQ77yfFx/295.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> • Obtención de un Reverse Shell </p> 
+
+
+
+
+<!-------------------------------------------------- Fase 4 Post Explotacion --------------------------------------------------------------------------->
 
 
 
@@ -6916,14 +7109,203 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 
 
 
-### 👨🏻‍💻 &nbsp; Fase 4. Post-Explotacion
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7608A&width=700&height=600&lines=Fase+3.+Explotacion" alt="Typing SVGxxxxx" /></a></summary>
+  </ul>
+</div>
 
 
-### 🛠 &nbsp; MSFVENOM
 
-### 🛠 &nbsp; Meterpreter
 
-### 🛠 &nbsp; Mimikatz
+<h2> :arrow_right: Escalada de privilegios </h2>
+
+
+<h2> :white_check_mark: &nbsp; Obtener acceso - Initial Access &nbsp; TA0001</h2>
+
+
+<p> El adversario está intentando entrar en tu red. </p>
+
+
+
+<p> El acceso inicial consiste en técnicas que utilizan varios vectores de entrada para obtener su punto de apoyo inicial dentro de una red. Las técnicas utilizadas para afianzarse incluyen el phishing selectivo y la explotación de debilidades en servidores web públicos. Los puntos de acceso obtenidos a través del acceso inicial pueden permitir el acceso continuo, como cuentas válidas y el uso de servicios remotos externos, o pueden tener un uso limitado debido al cambio de contraseñas. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wjq7hnBW/305.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+
+
+<!-------------------------------------------------- Fase 5 Informe --------------------------------------------------------------------------->
+
+
+
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7608A&width=700&height=600&lines=Fase+3.+Explotacion" alt="Typing SVGxxxxx" /></a></summary>
+  </ul>
+</div>
+
+
+
+<p> • Recomendaciones del contenido de un informe</p>
+
+
+<p> • Una portada con un título, su nombre, dirección de correo electrónico y control de versiones.</p>
+<p> • Una tabla de contenidos (opcional).</p>
+<p> • Un resumen ejecutivo, dirigido al gerente que solicitó el compromiso, explicando lo logrado en términos no técnicos.</p>
+<p> • Un resumen técnico dirigido al gerente de ingeniería, para que comprenda el impacto y pueda priorizar en consecuencia (Opcional).</p>
+<p> • Una tabla de todas las vulnerabilidades encontradas, ordenadas por gravedad, dirigida a gerentes e ingenieros, nuevamente para priorizar en consecuencia.</p>
+<p> • Sección de explotación detallada, donde se explica cada vulnerabilidad y su impacto, se muestran los pasos de explotación y las pruebas, y se dan recomendaciones para mitigaciones. Esto está dirigido a ingenieros que remediarán sus hallazgos.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
