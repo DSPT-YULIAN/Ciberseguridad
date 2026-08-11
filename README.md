@@ -3003,26 +3003,26 @@ De forma predeterminada, se utiliza el puerto 80. La sintaxis es similar al ping
 
 
 
-<p> :radio_button: Decoy Scan / Escaneo de señuelos <p>
+<p> :radio_button: Decoy Scan / Escaneo de señuelos </p>
 
-  <h3> <b> nmap -D </b> <h3>
-
-
-<p> Nmap emplea direcciones IP señuelo para ocultar el origen de un escaneo, lo que complica la identificación del escáner real. Los usuarios pueden especificar múltiples direcciones IP señuelo utilizando la opción -D dentro del comando Nmap. Si bien los escaneos señuelo pueden plantear desafíos para que los registros del firewall rastreen hasta el iniciador, es fundamental verificar que los hosts señuelo estén en línea. Además, el uso excesivo de señuelos puede provocar congestión en la red, lo que justifica tener precaución en su implementación. <p>
+  <h3> <b> nmap -D </b> </h3>
 
 
-<h3> Esta opción permite especificar manualmente las direcciones IP de los señuelos <b> nmap -D señuelo1, señuelo2, señuelo3 .... [IP objetivo] </b> <h3>
+<p> Nmap emplea direcciones IP señuelo para ocultar el origen de un escaneo, lo que complica la identificación del escáner real. Los usuarios pueden especificar múltiples direcciones IP señuelo utilizando la opción -D dentro del comando Nmap. Si bien los escaneos señuelo pueden plantear desafíos para que los registros del firewall rastreen hasta el iniciador, es fundamental verificar que los hosts señuelo estén en línea. Además, el uso excesivo de señuelos puede provocar congestión en la red, lo que justifica tener precaución en su implementación. </p>
 
 
-<h3> Esta opción genera un número aleatorio de señuelos. (generará 5 direcciones IP para escanear este dns). <b> nmap -D RND:5 [IP de destino] </b> <h3>
+<h3> Esta opción permite especificar manualmente las direcciones IP de los señuelos <b> nmap -D señuelo1, señuelo2, señuelo3 .... [IP objetivo] </b> </h3>
+
+
+<h3> Esta opción genera un número aleatorio de señuelos. (generará 5 direcciones IP para escanear este dns). <b> nmap -D RND:5 [IP de destino] </b> </h3>
 
 
 
 
-<p> :radio_button: Idle Zombie Scans <p>
+<p> :radio_button: Idle Zombie Scans </p>
 
 
-  <h3> <b> nmap -sI </b> <h3>
+  <h3> <b> nmap -sI </b> </h3>
 
 
 <p> La técnica Idle Zombie Scan es un método sofisticado empleado en evaluaciones de seguridad de red para realizar escaneos de puertos en hosts de destino utilizando hosts inactivos dentro de la red. Su principal ventaja radica en sus notables sigilosidades, ya que oscurece el origen del escaneo al atribuir la dirección IP del host inactivo “Zombie” en los archivos de registro del firewall, ocultando así la identidad del escáner real.
@@ -3031,15 +3031,9 @@ Para garantizar resultados precisos, es imperativo identificar hosts inactivos d
 
 Para ejecutar este escaneo con éxito, es necesario localizar un host en la red que esté inactivo y utilice secuencias IPID, ya sea Incremental o Broken Little-Endian Incremental.
 
-En Nmap, la dirección IP 192.168.1.0 se designa como host zombie, mientras que el objetivo del escaneo es la dirección IP 192.168.1.1. Este comando emplea la técnica Idle Zombie Scan, utilizando el host inactivo (el zombi) para realizar un escaneo sigiloso del puerto en el host de destino. <p>
+En Nmap, la dirección IP 192.168.1.0 se designa como host zombie, mientras que el objetivo del escaneo es la dirección IP 192.168.1.1. Este comando emplea la técnica Idle Zombie Scan, utilizando el host inactivo (el zombi) para realizar un escaneo sigiloso del puerto en el host de destino. </p>
 
-<h3> <b> nmap -sI [señuelo] [IP objetivo] </b> <h3>
-
-
-
-
-
-
+<h3> <b> nmap -sI [señuelo] [IP objetivo] </b> </h3>
 
 
 
@@ -3218,7 +3212,80 @@ En Nmap, la dirección IP 192.168.1.0 se designa como host zombie, mientras que 
 
 <p><b> • Escáneres de puertos :</b> &nbsp; Nmap, Rustscan, Unicornscan, Masscan, Kiterunner</p>
 <p><b> • Descubrimiento de red :</b> &nbsp;Netdiscover, SSB, SNMPwalk, ldapsearch, BloodHound</p>
-<p><b> • Descubrimiento de dominios:</b> &nbsp; Dnsenum</p>
+
+
+
+</br>
+
+
+<h2>:white_check_mark: &nbsp; Sniffing Attack / Ataque de olfateo </h2>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bJrmmmn5/307.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p>Es un tipo de ataque de red donde un atacante intercepta y analiza el tráfico de red no cifrado o débilmente protegido para obtener información sensible, como credenciales o datos sensibles.</p>
+
+
+
+<p>:radio_button:  El atacante coloca su sistema en una posición que le permite capturar el tráfico de red (ej: router, switch).</p>
+<p>:radio_button:  Utiliza herramientas como Wireshark, tcpdump o ettercap para interceptar paquetes.</p>
+<p>:radio_button:  Analiza los paquetes capturados para extraer información útil (ej: contraseñas, cookies).</p>
+
+
+
+<p>Herramientas</p>
+
+
+<p>:radio_button: Tcpdump &nbsp; es una interfaz de línea de comandos gratuita y de código abierto (CLI) programa que ha sido portado para funcionar en muchos sistemas operativos. Es liviano y está disponible en la mayoría de sistemas Linux por defecto.</p>
+
+<p>:radio_button: Wireshark &nbsp; es una interfaz gráfica de usuario gratuita y de código abierto (GUI) programa disponible para varios sistemas operativos, incluidos Linux, macOS y Windows. Proporciona potentes capacidades de filtrado, disección de protocolos y visualización</p>
+
+<p>:radio_button: Tshark &nbsp;es un alternativa CLI a Wireshark que utiliza el mismo motor de disección. Es útil para secuencias de comandos y automatización..</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7hfYYr2M/308.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/BZVn7tWf/309.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4769,7 +4836,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 
 
-  <p> El puerto 110 es el predeterminado POP3puerto usando texto sin cifrar. Algunos servidores admiten actualizar la conexión a TLSusando el comando STLS (similar a STARTTLS en SMTP).</p>
+  <p> El puerto 110 es el predeterminado POP3 puerto usando texto sin cifrar. Algunos servidores admiten actualizar la conexión a TLS usando el comando STLS (similar a STARTTLS en SMTP).</p>
   <p> El puerto 995 se utiliza para POP3S (POP3sobre implícito TLS). La conexión está cifrada desde el principio.</p>
 
 
@@ -6076,7 +6143,11 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 <h2> :arrow_right: Escaneo de vulnerabilidades automatizado </h2> 
 
 
-
+<p> 🛠 Qualys: &nbsp; Vulnerability Management (https://www.qualys.com) Servicio en la nube que permite identificar que sistemas informaticos pueden ser vulnerables a las ultimas amenazas de internet  </p>
+<p> 🛠 Nessus: &nbsp; (https://www.tenable.com) Permite la evaluacion de vulnerabilidades, configuraciones y cumplimiento </p>
+<p> 🛠 GFI LanGuard: &nbsp; Escanea, detecta y evalua las vulnerabilidades en una red y sus dispositivos conectados </p>
+<p> 🛠 OpenVAS &nbsp; (https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
+<p> 🛠 Nikto &nbsp; Escaner de servidores web, examina los elementos de configuracion como archivos de indice, opciones habilitades en servidores http e identifica el software instalado   </p>
 
 
 
@@ -6195,21 +6266,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-<p> Principales Vulnerabilidades</p>
-
-<p> :radio_button: Configuracion del software o hardware</p>
-<p> :radio_button: Malas practicas de programacion</p>
-
-
-<p> Bases de datos de vulnerabilidades</p>
-
-<p> :radio_button: Clasificar las vulnerabilidades</p>
-<p> :radio_button: Proporcionar una puntuacion compuesta de la gravedad general y el riesgo asociado a las vulnerabilidades identificadas </p>
-
-
-
-
-### 🛠 &nbsp; Sistemas de puntuacion de vulnerabilidades
+<h3> &nbsp; Sistemas de puntuacion de vulnerabilidades</h3>
 
 <p> • CVSS - Sistema Común de Puntuación de Vulnerabilidades &nbsp; (https://www.first.org/cvss)</p>
 <p> • CVE  - Vulnerabilidades y Exposiciones Comunes &nbsp; (https://www.cve.org)</p>
@@ -6217,7 +6274,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 <p> • NVD  - Base de datos nacional de vulnerabilidad &nbsp; (https://nvd.nist.gov)</p>
 
 
-<p> Evaluacioon de vulnerabilidades</p>
+<p><b>  Evaluacioon de vulnerabilidades </b></p>
 
 <p> 1. Examinar y evaluar la seguridad fisica de la organizacion </p>
 <p> 2. Comprobar errores de configuracion o errores humanos </p>
@@ -6225,7 +6282,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 <p> 4. Identificar y priorizar las vulnerabilidades </p>
 <p> 5. Validar las vulnerabilidades encontradas </p>
 
-<p> Clasificacion de vulnerabilidades</p>
+<p><b>  Clasificacion de vulnerabilidades </b></p>
 
 <p> • Configuracion erronea </p>
 <p> • Instalacion y configuracion por defecto</p>
@@ -6238,21 +6295,9 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 <p> • Contraseñas por defecto</p>
 
 
-###  &nbsp;Herramientas de escaneo de vulnerabilidades
-
-<p> 🛠 Qualys: &nbsp; Vulnerability Management (https://www.qualys.com) Servicio en la nube que permite identificar que sistemas informaticos pueden ser vulnerables a las ultimas amenazas de internet  </p>
-<p> 🛠 Nessus: &nbsp; (https://www.tenable.com) Permite la evaluacion de vulnerabilidades, configuraciones y cumplimiento </p>
-<p> 🛠 GFI LanGuard: &nbsp; Escanea, detecta y evalua las vulnerabilidades en una red y sus dispositivos conectados </p>
-<p> 🛠 OpenVAS &nbsp; (https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
-<p> 🛠 Nikto &nbsp; Escaner de servidores web, examina los elementos de configuracion como archivos de indice, opciones habilitades en servidores http e identifica el software instalado   </p>
 
 
-
-### 🛠 &nbsp;Herramientas recomendadas
-
-
-
-### 👨🏻‍💻 &nbsp; NMAP
+<h3> &nbsp;Ejemplo </h3>
 
 
 
@@ -6300,6 +6345,14 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
+<p> El adversario está intentando entrar en tu red. </p>
+
+
+
+<p> La fase de explotación en una prueba de penetración es el momento en que el atacante intenta aprovechar las vulnerabilidades identificadas durante las fases anteriores para comprometer el sistema objetivo. </p>
+
+
+
 
 <h2> :arrow_right:  Metodologias para irrumpir sistemas </h2>
 
@@ -6317,9 +6370,125 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/wjq7hnBW/305.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/tJ5pp6FT/305.png" alt="Descripción de la imagen">
   
 </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XYX46pq3/310.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<!--------------------------------------------------## Ataques basados en sistema/host  --------------------------------------------------------------------------->
+
+
+
+
+<h2> :arrow_right:  Ataques basados en sistema/host </h2>
+
+
+
+
+<!--------------------------------------------------##  Ataques basados en red  --------------------------------------------------------------------------->
+
+
+
+
+<h2> :arrow_right:  Ataques basados en red </h2>
+
+
+
+
+<h2>:white_check_mark:  Ataques Man-in-the-Middle (MitM)</h2> : 
+
+
+
+
+<p> Un ataque MITM ocurre cuando un atacante se interpone entre dos partes comunicándose, interceptando y potencialmente modificando la comunicación. El objetivo es robar información sensible (credenciales, tokens, etc.) o alterar los datos transmitidos. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3xghnVqC/MITM.png" alt="Descripción de la imagen">
+</p>
+
+
+
+
+### &nbsp; 1. Técnicas de intermediario (MiTM)
+
+<p><b>• Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
+<p><b>• Ataque gemelo malvado :</b> configuración de un punto de acceso Wi-Fi falso para interceptar el tráfico.</p>
+<p><b>• Envenenamiento de caché ARP :</b> envío de mensajes ARP falsos para vincular su dirección MAC con la dirección IP de otro host.</p>
+<p><b>• Envenenamiento LLMNR/NBT-NS :</b> explotación de protocolos de red para interceptar y retransmitir tráfico de autenticación.</p>
+<p><b>• Suplantacion DNS</b> 
+<p> Una vez que nos hemos posicionado en el medio, podemos empezar a rastrear el tráfico en busca de información confidencial. Si el tráfico está cifrado, podemos emplear técnicas como: </p>
+
+<p><b>• Debilitar el cifrado :</b> comprometer las capacidades de cifrado de un dispositivo de red</p>
+<p><b>• Ataque de degradación: </b> aprovecha la compatibilidad con versiones anteriores de un sistema para obligarlo a utilizar una versión menos segura.</p>
+
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+<p><b> • SSLstrip+ :</b> Realizar ataques de degradación de HTTPS a HTTP.</p>
+<p><b> • Bettercap :</b> Marco de reconocimiento y explotación de redes tanto cableadas como inalámbricas</p>
+<p><b> • Ettercap :</b> </p>
+<p><b> • Cain y abel :</b> </p>
+<p><b> • Mitmframwork :</b> Envenenar consultas LLMNR, NBT-NS y mDNS</p>
+<p><b> • Arpspoof :</b> Ataques de envenenamiento de caché ARP.</p>
+<p><b> • Aircrack-ng :</b> Conjunto de herramientas para atacar redes Wi-Fi.</p>
+<p><b> • Airgeddon :</b> Framework para atacar redes WiFi. Incluye ataques de gemelo malvado.</p>
+<p><b> • Fluxion :</b> Ataques MiTM contra redes Wi-Fi.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6389,47 +6558,13 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
     <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de tabla arcoiris </b> </p>
     <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Uso de Troyanos, Spyware, Keyloggers </b> </p>
 
-  <p><b> &nbsp; Ataques pasivos en linea:</b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Monitoreo de paquetes, Credenciales de acceso en los paquetes de red </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de hombre en el medio </b> </p>
-
-<p><b>&nbsp;&nbsp;&nbsp;• Ataques Man-in-the-Middle (MitM)</b> : Interceptar y alterar la comunicación entre dos partes sin su conocimiento. </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/3xghnVqC/MITM.png" alt="Descripción de la imagen">
-</p>
 
 
 
 
-### &nbsp; 1. Técnicas de intermediario (MiTM)
-
-<p><b>• Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
-<p><b>• Ataque gemelo malvado :</b> configuración de un punto de acceso Wi-Fi falso para interceptar el tráfico.</p>
-<p><b>• Envenenamiento de caché ARP :</b> envío de mensajes ARP falsos para vincular su dirección MAC con la dirección IP de otro host.</p>
-<p><b>• Envenenamiento LLMNR/NBT-NS :</b> explotación de protocolos de red para interceptar y retransmitir tráfico de autenticación.</p>
-<p><b>• Suplantacion DNS</b> 
-<p> Una vez que nos hemos posicionado en el medio, podemos empezar a rastrear el tráfico en busca de información confidencial. Si el tráfico está cifrado, podemos emplear técnicas como: </p>
-
-<p><b>• Debilitar el cifrado :</b> comprometer las capacidades de cifrado de un dispositivo de red</p>
-<p><b>• Ataque de degradación: </b> aprovecha la compatibilidad con versiones anteriores de un sistema para obligarlo a utilizar una versión menos segura.</p>
 
 
-### 🛠 &nbsp;Herramientas
 
-</br>
-
-<p><b> • SSLstrip+ :</b> Realizar ataques de degradación de HTTPS a HTTP.</p>
-<p><b> • Bettercap :</b> Marco de reconocimiento y explotación de redes tanto cableadas como inalámbricas</p>
-<p><b> • Ettercap :</b> </p>
-<p><b> • Cain y abel :</b> </p>
-<p><b> • Mitmframwork :</b> Envenenar consultas LLMNR, NBT-NS y mDNS</p>
-<p><b> • Arpspoof :</b> Ataques de envenenamiento de caché ARP.</p>
-<p><b> • Aircrack-ng :</b> Conjunto de herramientas para atacar redes Wi-Fi.</p>
-<p><b> • Airgeddon :</b> Framework para atacar redes WiFi. Incluye ataques de gemelo malvado.</p>
-<p><b> • Fluxion :</b> Ataques MiTM contra redes Wi-Fi.</p>
 
 
  <p><b> &nbsp; Ataques pasivos en linea::</b> </p>
