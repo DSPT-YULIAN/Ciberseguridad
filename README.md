@@ -590,8 +590,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 <h2> :arrow_right: Descubrimiento de contenido y huella del sitio WEB  </h2>
 
 
-<p> Cuando hablamos de descubrimiento de contenido, no hace referencia a las cosas obvias que podemos ver en un sitio web; se trata de las cosas que no se nos presentan inmediatamente y que no siempre estuvieron destinadas al acceso público. Este contenido podría ser, por ejemplo, páginas o portales destinados al uso del personal, versiones anteriores del sitio web, archivos de copia de seguridad, archivos de configuración, paneles de administración, etc.
-</p>
+<p> Cuando hablamos de descubrimiento de contenido, no hace referencia a las cosas obvias que podemos ver en un sitio web; se trata de las cosas que no se nos presentan inmediatamente y que no siempre estuvieron destinadas al acceso público. Este contenido podría ser, por ejemplo, páginas o portales destinados al uso del personal, versiones anteriores del sitio web, archivos de copia de seguridad, archivos de configuración, paneles de administración, etc. </p>
 
 
 <h3> Enfoques principales para el descubrimiento de contenido </h3>
@@ -600,10 +599,13 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 <p><b> :radio_button: &nbsp; Descubrimiento Manual: </b> contenido oculto usando robots.txt, mapa del sitio.xml, favicons, encabezados HTTP y análisis del marco</p>
 <p><b> :radio_button: &nbsp; OSINT </b> Google Dorking, Wappalyzer, Wayback Machine, GitHub y S3 bucket enumeración </p>
 <p><b> :radio_button: &nbsp; Herramientas automatizadas (Reconocimiento activo)</b> fuerza bruta Para el descubimiento de directorios, subdominios y host virtuales </p>
-<p><b> :radio_button: &nbsp; Aplicar una <b>metodología</b> estructurada de descubrimiento de contenido en una prueba de penetración </p>
+<p><b> :radio_button: &nbsp; Aplicar una metodología </b> estructurada de descubrimiento de contenido en una prueba de penetración </p>
 
 
 <!----------------------------------------------------------------------------- Descubrimiento Manual  ----------------------------------------------------------------------------->
+
+</br>
+
 
 <h2> Descubrimiento Manual </h2>
 
@@ -632,7 +634,7 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 <h2> :white_check_mark: &nbsp; Sitemap.xml </h2>
 
-<p> El archivo sitemap_index.xml es un mapa del sitio en formato XML que lista las páginas, imágenes, vídeos y otros recursos de un sitio web. Proporciona una lista de todos los archivos que el propietario del sitio web desea que aparezcan en un motor de búsqueda. En ocasiones, estos archivos pueden contener áreas del sitio web más difíciles de navegar o incluso incluir páginas web antiguas que el sitio actual ya no utiliza, pero que siguen funcionando en segundo plano.</p>
+<p> El archivo sitemap_index.xml es un mapa del sitio en formato XML que lista las páginas, imágenes, vídeos y otros recursos de un sitio web. Proporciona una lista de todos los archivos que el propietario del sitio web desea que aparezcan en un motor de búsqueda. En ocasiones, estos archivos pueden contener áreas del sitio web más difíciles de navegar o incluso incluir páginas web antiguas que el sitio actual ya no utiliza, pero que siguen funcionando en segundo plano. </p>
 
 
 <p align="center">
@@ -1228,6 +1230,81 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 
 <p> La pestaña Seguridad proporciona detalles del certificado, incluido el emisor, el período de validez y los nombres alternativos de sujeto (SAN). Las SAN con frecuencia revelan subdominios adicionales o dominios relacionados que pertenecen a la misma organización. </p>
+
+
+
+
+
+
+
+!--------------------------------------------------##  Seguridad de la capa de transporte (TLS)  --------------------------------------------------------------------------->
+
+
+<h2>:white_check_mark: Seguridad de la capa de transporte (TLS) </h2> 
+
+
+
+<p><b>  SSL (Secure Sockets Layer)</b>: es un protocolo de seguridad que cifra la comunicación entre un cliente y un servidor, garantizando privacidad, autenticación e integridad de los datos. Aunque hoy ha sido reemplazado por su versión más moderna </p>
+
+
+
+
+<p><b>TLS El protocolo (Transport Layer Security)</b>: TLS (Transport Layer Security) es el protocolo criptográfico que reemplazó a SSL y hoy es el estándar para proteger las comunicaciones en Internet. La versión más reciente, TLS 1.3, ofrece mayor seguridad y menor latencia, siendo la base de HTTPS y de servicios como correo electrónico y VoIP. </p>
+
+
+<p> TLS opera entre las capas de transporte y aplicación </p>
+
+
+
+<h3> Certificado de confianza TLS </h3>
+
+<p> Es el mecanismo que permite a un navegador verificar que un servidor web es auténtico y que la conexión está protegida. Funciona gracias a la infraestructura de clave pública (PKI) y a las autoridades certificadoras (CA) que emiten certificados digitales.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7Lb9DLmV/311.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> En la figura anterior, es visible la siguiente información: </p>
+
+<p>1. ¿A quién se expide el certificado? Este es el nombre de la empresa que utilizará este certificado. </p>
+<p>2. ¿Quién emitió el certificado? Esta es la autoridad certificadora que emitió este certificado.</p>
+<p>3. Periodo de validez. No se debe confiar en un certificado caducado.</p>
+
+
+
+<h3> 🔐 Funcionamiento de un certificado TLS </h3>
+
+<p> 1. Emisión por una CA: una autoridad certificadora valida la identidad del propietario del dominio y emite un certificado digital firmado.</p>
+
+<p> 2. Instalación en el servidor: el certificado se configura en el servidor web para habilitar conexiones HTTPS.</p>
+
+<p> 3. Handshake TLS: cuando un cliente se conecta, el servidor envía su certificado.</p>
+
+<p> 4. Verificación del navegador: el navegador comprueba que el certificado fue emitido por una CA confiable y que no está caducado ni revocado.</p>
+
+<p> 5. Establecimiento de clave de sesión: se negocia una clave simétrica única para cifrar la comunicación.</p>
+
+<p> 6. Transmisión segura: todos los datos posteriores viajan cifrados, garantizando confidencialidad e integridad.</p>
+
+
+
+
+<h3> Evaluar configuraciones TLS </h3>
+
+
+
+<p> :radio_button: <b> testssl.sh:</b> una herramienta de línea de comandos que verifica el funcionamiento de un servidor TLS configuración para protocolos compatibles, conjuntos de cifrado y vulnerabilidades comunes. Es la mejor opción para realizar evaluaciones detalladas, especialmente en sistemas internos que no son de acceso público. </p>
+
+<p> :radio_button: <b> sslyze:</b> una herramienta de Python para analizar SSL/TLS configuraciones, útiles para la automatización y la integración CI/CD canalizaciones. </p>
+
+<p> :radio_button: <b> SSL Labs (ssllabs.com):</b> un servicio basado en web que proporciona un análisis detallado de servidores HTTPS públicos. Es la opción más rápida para una evaluación única de un sitio web público.</p>
+
+<p> :radio_button: <b> nmap cifrados de enumeración SSL:</b> un Mapa Nscript que enumera conjuntos de cifrado compatibles como parte de un escaneo de puertos más amplio. </p>
 
 
 
@@ -6393,9 +6470,93 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
+<!--------------------------------------------------##  Tipos de ataque de COntraseña --------------------------------------------------------------------------->
+
+
+
+<h2> :arrow_right:  Ataques de contraseñas </h2>
+
+
+<p> Tipos de ataque </p>
+
+
+<p> :radio_button: <b> Ataques de Diccionario </b>  es una técnica de fuerza bruta que utiliza una lista predefinida de palabras (diccionario) para intentar adivinar contraseñas. Es más eficiente que la fuerza bruta tradicional porque se enfoca en combinaciones probables.  </p>
+<p> :radio_button: <b> Ataque de Fuerza bruta</b> Un ataque de fuerza bruta es una técnica que prueba todas las posibles combinaciones de contraseñas hasta encontrar la correcta. Es más lento pero garantiza encontrar la contraseña si se prueba todo el espacio de búsqueda. </p>
+<p> :radio_button: <b> credential stuffing </b> es una técnica donde se reutilizan credenciales comprometidas (por ejemplo, de un data breach) en múltiples servicios para obtener acceso no autorizado. Se basa en la tendencia de usuarios a reutilizar contraseñas. </p>
+<p> :radio_button: <b> Password Spraying </b> es una técnica que prueba una sola contraseña contra múltiples cuentas, en lugar de intentar varias contraseñas en una sola cuenta. Es útil para evitar bloqueos de cuentas por demasiados intentos fallidos. </p>
+<p> :radio_button: <b> taques híbridos </b> combinan técnicas de fuerza bruta y diccionario para aumentar la eficacia de los ataques de contraseña. Se utilizan cuando las contraseñas siguen patrones comunes (ej: password123 o admin123). </p>
+
+
+<p> Listas de palabras mas usadas </p>
+
+<p> La elección de la lista de palabras debe depender de su conocimiento del objetivo </p>
+
+
+<p> :radio_button: <b> RockYou </b> lista de contraseñas violadas </p>
+<p> :radio_button: <b> SecLists </b> colección de múltiples listas de palabras para diferentes propósitos </p>
+<p> :radio_button: <b> CrackStation </b> proporciona listas de palabras optimizadas para descifrar contraseñas. </p>
+<p> :radio_button: <b> Breach compilations  </b> contienen miles de millones de contraseñas reales de diversas violaciones de datos </p>
+
+
+<h3> :arrow_right: Herramientas de ataque de contraseñas </h3>
+
+
+<p> :radio_button: <b> THC Hydra </b> es una herramienta de fuerza bruta multi-protocolo, usada para realizar ataques de fuerza bruta contra múltiples protocolos (FTP, POP3, IMAP, SMTP, SSH y todos los métodos relacionados con HTTP). </p>
+<p> :radio_button: <b> Medusa </b> es similar a Hydra pero con un diseño modular. Algunos lo encuentran más estable para ciertos protocolos.. </p>
+<p> :radio_button: <b> Ncrack</b> Ncrack es una herramienta de fuerza bruta multi-protocolo desarrollada por Nmap, diseñada para acelerar los ataques de fuerza bruta en entornos de red. </p>
+<p> :radio_button: <b> CrackMapExec (CME)/NetExec </b> es una herramienta de pentesting que permite realizar ataques de credenciales contra múltiples protocolos (SMB, LDAP, Kerberos, etc.) y sistemas Windows. </p>
+<p> :radio_button: <b> Burp Suite intruder </b> es una herramienta de pentesting que permite realizar ataques de fuerza bruta, diccionario y híbridos contra aplicaciones web.. </p>
+<p> :radio_button: <b> Hashcat</b> Es una herramienta de cracking de hashes desarrollada por Openwall, usada para crackear hashes de contraseñas en múltiples formatos (MD5, SHA1, NTLM, etc.).. </p>
+<p> :radio_button: <b> John the Ripper  </b> es una herramienta de cracking de hashes desarrollada por Openwall, usada para crackear hashes de contraseñas en múltiples formatos (MD5, SHA1, NTLM, etc.). </p>
+
+
+
+<p>Mitigación de ataques con contraseña
+La mitigación contra ataques de contraseñas depende del sistema de destino. Las defensas modernas incluyen:
+
+Las políticas de contraseñas imponen restricciones de complejidad mínima. Orientación moderna como NIST SP 800-63B (un EE. UU. El estándar gubernamental para las pautas de identidad digital) recomienda centrarse en la longitud de la contraseña en lugar de las reglas de complejidad, bloquear las contraseñas comprometidas conocidas y no requerir cambios regulares de contraseña a menos que haya evidencia de compromiso.
+
+El bloqueo de cuenta bloquea temporal o permanentemente una cuenta después de una cierta cantidad de intentos fallidos. Esto es eficaz contra la fuerza bruta, pero puede evitarse mediante la pulverización de contraseñas o abusarse de él para denegar el servicio.
+
+La limitación de velocidad y el bloqueo retrasan las respuestas a los intentos de inicio de sesión. Unos pocos segundos de retraso son tolerables para los usuarios legítimos, pero obstaculizan gravemente las herramientas automatizadas. Las implementaciones más sofisticadas utilizan un retroceso exponencial.
+
+CAPTCHA requiere resolver un desafío difícil para las máquinas. Los CAPTCHA modernos utilizan análisis de comportamiento y puntuación de riesgos en lugar de simplemente reconocimiento de imágenes.
+
+Autenticación multifactor (Ministerio de Relaciones Exteriores) requiere verificación adicional más allá de la contraseña, como un código de una aplicación de autenticación, SMS (aunque los SMS son menos seguros) o una clave de seguridad de hardware. MFA es una de las defensas más efectivas contra los ataques de contraseñas.
+
+La autenticación sin contraseña elimina las contraseñas por completo utilizando métodos como:
+
+Las claves de acceso (FIDO2/WebAuthn) utilizan claves criptográficas almacenadas en dispositivos, reemplazando las contraseñas con verificación biométrica o PIN.
+Enlaces mágicos enviados por correo electrónico.
+Claves de seguridad de hardware como YubiKeys.
+La detección de contraseñas violadas verifica las contraseñas con bases de datos de violaciones conocidas durante el registro y el inicio de sesión. Servicios como "Have I Been Pwned" proporcionan API para este propósito.
+
+El análisis del comportamiento detecta anomalías como intentos de inicio de sesión desde ubicaciones inusuales, escenarios de viaje imposibles o patrones consistentes con ataques automatizados.
+
+Controles basados en IP que incluyen geofencing y bloqueo de dispositivos maliciosos conocidos IP, y requerir verificación adicional para nuevos dispositivos o ubicaciones.
+
+El uso de una combinación de los enfoques anteriores proporciona una defensa profunda contra ataques de contraseñas. Para entornos de alta seguridad, avanzar hacia la autenticación sin contraseña elimina por completo muchos de estos vectores de ataque.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--------------------------------------------------##  Ataques basados en red  --------------------------------------------------------------------------->
 
-
+<!--------------------------------------------------##  MitM  --------------------------------------------------------------------------->
 
 
 <h2> :arrow_right:  Ataques basados en red </h2>
@@ -6403,7 +6564,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-<h2>:white_check_mark:  Ataques Man-in-the-Middle (MitM)</h2> : 
+<h2>:white_check_mark:  Ataques Man-in-the-Middle (MitM)</h2> 
 
 
 
@@ -6414,75 +6575,65 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 <p align="center">
 
   <img src="https://i.postimg.cc/3xghnVqC/MITM.png" alt="Descripción de la imagen">
+
 </p>
 
 
 
 
-### &nbsp; 1. Técnicas de intermediario (MiTM)
+<p> Este ataque es relativamente sencillo de llevar a cabo si las dos partes no confirman la autenticidad e integridad de cada mensaje. En algunos casos, el protocolo elegido no proporciona autenticación segura o integridad. Algunos protocolos tienen inseguridades inherentes que los hacen susceptibles a este tipo de ataques. </p>
 
-<p><b>• Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
-<p><b>• Ataque gemelo malvado :</b> configuración de un punto de acceso Wi-Fi falso para interceptar el tráfico.</p>
-<p><b>• Envenenamiento de caché ARP :</b> envío de mensajes ARP falsos para vincular su dirección MAC con la dirección IP de otro host.</p>
-<p><b>• Envenenamiento LLMNR/NBT-NS :</b> explotación de protocolos de red para interceptar y retransmitir tráfico de autenticación.</p>
-<p><b>• Suplantacion DNS</b> 
+
+
+
+<h3> &nbsp; Técnicas (MiTM) </h3>
+
+<p><b>:radio_button:   Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
+<p><b>:radio_button:   Ataque gemelo malvado :</b> configuración de un punto de acceso Wi-Fi falso para interceptar el tráfico a través del sistema del atacante.</p>
+<p><b>:radio_button:   Envenenamiento de caché ARP :</b> envío de mensajes ARP falsos para vincular su dirección MAC con la dirección IP de otro host.</p>
+<p><b>:radio_button:   Envenenamiento LLMNR/NBT-NS :</b> explotación de protocolos de red para interceptar y retransmitir tráfico de autenticación.</p>
+<p><b>:radio_button:   Suplantacion DNS/ DNS Spoofing  </b>  implica proporcionar información falsa respuestas DNS para redirigir a las víctimas a servidores controlados por el atacante. Esto puede suceder a través de un compromiso de servidores DNS, envenenamiento de caché, o respondiendo a consultas DNS más rápidas que el servidor legítimo.</p>
+<p><b>:radio_button:   BGP Hijacking </b>   a nivel de enrutamiento de Internet, donde los atacantes anuncian rutas BGP falsas para redirigir el tráfico a través de su infraestructura. Se trata de un ataque más sofisticado, normalmente dirigido a organizaciones o regiones específicas.</p>
+
+
+
 <p> Una vez que nos hemos posicionado en el medio, podemos empezar a rastrear el tráfico en busca de información confidencial. Si el tráfico está cifrado, podemos emplear técnicas como: </p>
 
-<p><b>• Debilitar el cifrado :</b> comprometer las capacidades de cifrado de un dispositivo de red</p>
-<p><b>• Ataque de degradación: </b> aprovecha la compatibilidad con versiones anteriores de un sistema para obligarlo a utilizar una versión menos segura.</p>
+<p><b>:radio_button:  Debilitar el cifrado :</b> comprometer las capacidades de cifrado de un dispositivo de red</p>
+<p><b>:radio_button:  Certificados falsos :</b> implican que el atacante presente su propio certificado y establezca conexiones cifradas separadas con ambas partes. Esto funciona si la víctima acepta una advertencia de certificado no válido o si el atacante ha comprometido una autoridad de certificación (CA).</p>
+<p><b>:radio_button:  Ataque de degradación / SSL Stripping  </b> aprovecha la compatibilidad con versiones anteriores de un sistema para obligarlo a utilizar una versión menos segura.</p>
 
 
-### 🛠 &nbsp;Herramientas
+<h3> &nbsp; Herramientas para ataques MITM </h3>
 
 </br>
 
-<p><b> • SSLstrip+ :</b> Realizar ataques de degradación de HTTPS a HTTP.</p>
-<p><b> • Bettercap :</b> Marco de reconocimiento y explotación de redes tanto cableadas como inalámbricas</p>
-<p><b> • Ettercap :</b> </p>
-<p><b> • Cain y abel :</b> </p>
-<p><b> • Mitmframwork :</b> Envenenar consultas LLMNR, NBT-NS y mDNS</p>
-<p><b> • Arpspoof :</b> Ataques de envenenamiento de caché ARP.</p>
-<p><b> • Aircrack-ng :</b> Conjunto de herramientas para atacar redes Wi-Fi.</p>
-<p><b> • Airgeddon :</b> Framework para atacar redes WiFi. Incluye ataques de gemelo malvado.</p>
-<p><b> • Fluxion :</b> Ataques MiTM contra redes Wi-Fi.</p>
+<p><b> :radio_button: SSLstrip+ :</b> Realizar ataques de degradación de HTTPS a HTTP.</p>
+<p><b> :radio_button: Bettercap :</b> es el sucesor moderno de Ettercap. Admite suplantación de ARP, suplantación de DNS, proxy HTTP/HTTPS y tiene una arquitectura modular para varios escenarios de ataque.</p>
+<p><b> :radio_button: Ettercap :</b> es una herramienta clásica para ataques MITM en LAN. </p>
+<p><b> :radio_button: Cain y abel :</b> </p>
+<p><b> :radio_button: Mitmframwork :</b> Envenenar consultas LLMNR, NBT-NS y mDNS</p>
+<p><b> :radio_button: mitmproxy :</b> proxy HTTPS interactivo que permite la inspección y modificación del tráfico. Es particularmente útil para analizar y manipular comunicaciones HTTP/HTTPS.</p>
+<p><b> :radio_button: Arpspoof :</b> Ataques de envenenamiento de caché ARP.</p>
+<p><b> :radio_button: Aircrack-ng :</b> Conjunto de herramientas para atacar redes Wi-Fi.</p>
+<p><b> :radio_button: Airgeddon :</b> Framework para atacar redes WiFi. Incluye ataques de gemelo malvado.</p>
+<p><b> :radio_button: Fluxion :</b> Ataques MiTM contra redes Wi-Fi.</p>
 
 
 
+<p> MITM puede afectar a otros protocolos de texto claro como FTP, SMTP, y POP3. La mitigación fundamental requiere el uso de criptografía. La solución radica en una autenticación adecuada junto con el cifrado o la firma de los mensajes intercambiados. Con la ayuda de la Infraestructura de Clave Pública (PKI) y certificados raíz confiables, seguridad de la capa de transporte (TLS) protege contra MITMataques cuando se implementan correctamente..</p>
+
+
+<h3> &nbsp; Técnicas de mitigación </h3>
+
+
+<p><b> :radio_button: Validación de certificados :</b> Verificar que el certificado sea válido antes de conectar</p>
+<p><b> :radio_button: DHCP Snooping </b> Evita IPs falsas en la red local.</p>
+<p><b> :radio_button: TLS Pinning :</b> Fija el certificado esperado para evitar impersonación</p>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<
 
 
 
