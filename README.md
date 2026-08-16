@@ -1103,6 +1103,9 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 <p>  Se trata de un conjunto de herramientas que ayuda a los desarrolladores web a depurar aplicaciones y permite echar un vistazo a la estructura interna de un sitio web para ver qué sucede "F12" </p>
 
 
+</br>
+
+
 <h2> :white_check_mark: &nbsp; Developer Tools - Inspector </h2>
 
 
@@ -1142,6 +1145,17 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 </p>
 
+</br>
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Console </h2>
+
+
+<p> La pestaña Consola le permite ejecutar fragmentos de JavaScript directamente en el contexto de la página, ver errores e interactuar con el DOM  </p>
+
+
+
+</br>
+
 
 <h2> :white_check_mark: &nbsp; Developer Tools - Debugger </h2>
 
@@ -1170,6 +1184,9 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 <p>  Este pequeño fragmento de JavaScript es lo que elimina la ventana emergente roja de la página. Podemos utilizar otra función del depurador llamada  puntos de interrupción . Estos son puntos en el código que podemos obligar al navegador a detener el procesamiento de JavaScript y pausar la ejecución actual.</p>
 
 <p>  Si hace clic en el número de línea que contiene el código anterior, verá que se vuelve azul; ha insertado un punto de interrupción en esta línea. Ahora, intente actualizar la página y verá que el cuadro rojo permanece en la página en lugar de desaparecer, y que contiene una bandera.</p>
+
+
+</br>
 
 
 <h2> :white_check_mark: &nbsp; Developer Tools - Network </h2>
@@ -1209,21 +1226,21 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 </p>
 
 
-<h2> :white_check_mark: &nbsp; Developer Tools - Console </h2>
-
-
-<p> La pestaña Consola le permite ejecutar fragmentos de JavaScript directamente en el contexto de la página, ver errores e interactuar con el DOM  </p>
-
+</br>
 
 <h2> :white_check_mark: &nbsp; Developer Tools - Sources  </h2>
 
 
 <p> La pestaña Fuentes le permite explorar archivos JavaScript, CSS y HTML cargados por la página. Esta es una de las técnicas de reconocimiento más prácticas disponibles a través del navegador. Los archivos fuente de JavaScript con frecuencia contienen códigos duros API puntos finales, estructuras de directorios, referencias a servicios internos y comentarios de desarrolladores que nunca tuvieron la intención de ser públicos. Al inspeccionar estos archivos puede aparecer información que es invisible en la página renderizada. Utilizarás esta técnica en las preguntas siguientes. </p>
 
+</br>
+
 <h2> :white_check_mark: &nbsp; Developer Tools - Application  </h2>
 
 
 <p> La pestaña Aplicación, en la sección Almacenamiento, le permite inspeccionar las cookies, el almacenamiento local y el almacenamiento de sesión. Estas áreas de almacenamiento a veces contienen tokens de sesión, APILas claves expusieron accidentalmente el seguimiento del lado del cliente ID, o datos de autenticación.  </p>
+
+</br>
 
 
 <h2> :white_check_mark: &nbsp; Developer Tools - Security  </h2>
@@ -1231,13 +1248,72 @@ En el menú de tu navegador, encontrarás una opción para ver el código fuente
 
 <p> La pestaña Seguridad proporciona detalles del certificado, incluido el emisor, el período de validez y los nombres alternativos de sujeto (SAN). Las SAN con frecuencia revelan subdominios adicionales o dominios relacionados que pertenecen a la misma organización. </p>
 
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Sources  </h2>
+
+
+<p> La pestaña Fuentes le permite explorar archivos JavaScript, CSS y HTML cargados por la página. Esta es una de las técnicas de reconocimiento más prácticas disponibles a través del navegador. Los archivos fuente de JavaScript con frecuencia contienen códigos duros API puntos finales, estructuras de directorios, referencias a servicios internos y comentarios de desarrolladores que nunca tuvieron la intención de ser públicos. Al inspeccionar estos archivos puede aparecer información que es invisible en la página renderizada. Utilizarás esta técnica en las preguntas siguientes. </p>
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Application  </h2>
+
+
+<p> La pestaña Aplicación, en la sección Almacenamiento, le permite inspeccionar las cookies, el almacenamiento local y el almacenamiento de sesión. Estas áreas de almacenamiento a veces contienen tokens de sesión, APILas claves expusieron accidentalmente el seguimiento del lado del cliente ID, o datos de autenticación.  </p>
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Security  </h2>
+
+
+<p> La pestaña Seguridad proporciona detalles del certificado, incluido el emisor, el período de validez y los nombres alternativos de sujeto (SAN). Las SAN con frecuencia revelan subdominios adicionales o dominios relacionados que pertenecen a la misma organización. </p>
+
+</br>
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Security  </h2>
+
+
+<p> La pestaña Seguridad proporciona detalles del certificado, incluido el emisor, el período de validez y los nombres alternativos de sujeto (SAN). Las SAN con frecuencia revelan subdominios adicionales o dominios relacionados que pertenecen a la misma organización. </p>
+
+</br>
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Almacenamiento/storage  </h2>
+
+
+<p> La pestaña Almacenamiento en las herramientas para desarrolladores permite ver y administrar los datos que un sitio web almacena en nuestro navegador. Estos datos se almacenan en el lado del cliente y pueden contener información confidencial o interesante útil durante una prueba manual. Como pentesters, verificar el almacenamiento del navegador nos ayuda a comprender cómo la aplicación maneja la autenticación, los datos de sesión, las preferencias del usuario y otros valores almacenados.  </p>
+
+
+<p>Opciones relevantes</p>
+
+<p>:radio_button: <b> Almacenamiento local:</b> almacena datos de forma persistente en el navegador, incluso después de cerrarlo.</p>
+<p>:radio_button: <b> Almacenamiento de sesión:</b> almacena datos temporalmente para una sola pestaña/sesión del navegador.</p>
+<p>:radio_button: <b> Cookies</b>: Pequeños datos enviados por el servidor y almacenados en el navegador, utilizados frecuentemente para sesiones y autenticación.</p>
+<p>:radio_button: <b> Almacenamiento en caché:</b> almacena recursos almacenados en caché como imágenes, scripts y respuestas API para una carga más rápida</p>
+
+
+
+<p> las cookies se encuentran entre las más importantes para un pentester  </p>
+
+
+<p> Las cookies son pequeños archivos de texto que los sitios web almacenan en el navegador del usuario para recordar información de sesión o preferencias. Pueden ser usadas para autenticación, personalización o rastreo. Un atacante puede explotar cookies vulnerables (como HttpOnly o sin Secure) para secuestrar sesiones o robar credenciales. </p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/JntvgSSx/283.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
 
 
-
-!--------------------------------------------------##  Seguridad de la capa de transporte (TLS)  --------------------------------------------------------------------------->
 
 
 <h2>:white_check_mark: Seguridad de la capa de transporte (TLS) </h2> 
