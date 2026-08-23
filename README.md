@@ -959,6 +959,59 @@ El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento es
 
 
 
+
+<h2> :white_check_mark: &nbsp; Pilas web modernas <b>MERN</b></h2>
+
+
+<p> Es un conjunto de cuatro tecnologías basadas en JavaScript que se usan para crear aplicaciones web completas </p>
+
+
+<p> Componentes de la Pila MERN </p>
+
+
+
+<p><b> MongoDB </b> Base de datos de tipo NoSQL que guarda la información en archivos parecidos a JSON.</p>
+
+<p><b> Express.js </b> Herramienta ligera para crear el servidor y ordenar las rutas o conexiones web. </p>
+
+<p><b> React: </b> Librería de JavaScript para armar la interfaz visual con bloques independientes o componentes. </p>
+
+<p><b> Node.js </b> Motor que permite ejecutar JavaScript fuera del navegador y poner en marcha el servidor. </p>
+
+<p> Una vez que conoces la pila y la versión, conoces la superficie de ataque. </p>
+
+
+
+
+<h2> :white_check_mark: &nbsp; <b> LAMP </b></h2>
+
+
+
+<p> es un conjunto de cuatro tecnologías de software diferentes que los desarrolladores utilizan para crear sitios web y aplicaciones web.</p>
+
+
+<p> Componentes de la Pila LAMP </p>
+
+
+
+<p><b> Linux </b> Es la base de todo el sistema. Controla el ordenador y los demás programas.</p>
+
+<p><b> Apache </b> Es el servidor web. Recibe las peticiones de los usuarios en internet y muestra las páginas. </p>
+
+<p><b> MySQL </b> Es la base de datos. Guarda la información del sitio web de forma segura.. </p>
+
+<p><b> PHP </b> Es el lenguaje de programación. Ayuda a que la página cambie y responda a las acciones del usuario </p>
+
+<p> Una vez que conoces la pila y la versión, conoces la superficie de ataque. </p>
+
+
+
+
+
+
+
+
+
 <h2> :white_check_mark: &nbsp;Wayback Machine </h2>
 
 
@@ -6015,175 +6068,9 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 </p>
 
 
-<!----------------------------------------------------------------------------- ## WebDAV Vulnerabilities ------------------------------------------------------------------------------------------------------------------>
 
-
-<h2> :arrow_right:  WebDAV Vulnerabilities (Windows)</h2> 
-
-
-<p>(Web Distributed Authoring and Versioning) es una extensión del protocolo HTTP que permite a los usuarios editar y gestionar archivos en servidores web de forma colaborativa. Fue definido en el RFC 4918 y básicamente transforma un servidor web en un sistema de archivos accesible remotamente.</p>
-
-
-<p> Extensiones de archivos ejecutables compatibles</p>
-
-
-<p><b> • .asp  </b></p>
-<p><b> • .aspx </b></p>
-<p><b> • .conf </b></p>
-<p><b> • .php  </b></p>
-
-<p> Para conectarse a un servidor WebDav, debera proporcionar credenciales legitimas, esto se debe a que WebDav implementa autenticaion en forma de usuario y contraseña </p>
-
-
-<h3> :radio_button: Pasos </h3>
-
-
-<p> 1. Identificar la version y el servicio </p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/T1z9HJwg/237.png" alt="Descripción de la imagen">
-</p>
-
-
-<p> Se observa que en el puerto 80 tenemos un servidor web ejecutandose el cual corresponde a Microsoft IIS httpd en su version 7.5  </p>
-
-
-<p> 2. Consultar un poco mas de informacion del puerto con la opcion <b>--script=http-enum</b> el cual se utiliza para enumerar directorios y archivos comunes en servidores web. Lo cual tambien nos indicara si el WebDAV se encuentra configurado en este servidor </p>
-
-<p> Se observa que WebDav ha sido configurado para ejecutarse en el servidor web IIS </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/Bvv1GPRk/238.png" alt="Descripción de la imagen">
-</p>
-
-
-<p> Al ralizar la validacion en el navegador se observa que el servidor webdav solicita usuario y contraseña como se menciono con anterioridad, si no contamos con dichos datos podemos proceder con un ataque de fuerza bruta </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/Cxxjw2qc/239.png" alt="Descripción de la imagen">
-</p>
-
-
-<p> Al ingresar las credenciales correctas podremos acceder al contenido del directorio web en el cual por el momento solo cuenta con 2 archivos</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/0j9zc6GD/240.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p>3.  Con la ayuda de la herramienta <b>davtest</b> podremos identifica y explotar configuraciuones inseguras en servidores que tienen habilitado WebDAV.</p>
-
-
-<p> Como se observa en la siguiente imagen cuando intentamos acceder a la URL falla la conexion por no suministrar las credenciales</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/25fLVXqc/241.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p> Al establecer conexion se crea una Cadena aleatoria para esta sesión: <b> GzUzoZM8 </b> </p>
-
-
-<p> Adicionalmente se crar el directorio <b> Created http://10.4.29.41/webdav/DavTestDir_GzUzoZM8 </b> </p>
-
-
-<p> Podemos notar que hemos cargado casi todos los tipos de archivos importantes al directorio /webdav. Además, podemos ejecutar tres tipos de archivos. es decir, asp, texto y html.</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/XqZY2wGy/242.png" alt="Descripción de la imagen">
-  
-</p>
-
-<p> Al comprobar la seccion de ejecucion de archivos de pruebas observamos que se tiene exito en la carga de archicos .asp</p>
-
-
-<p> <b> Nota </b> Cuando ves archivos .asp en un servidor WebDAV, significa que ese servidor muy probablemente ejecuta IIS (Internet Information Services) de Microsoft. Si puedes subir un archivo .asp a través de WebDAV y el servidor lo ejecuta, puedes obtener ejecución remota de código subiendo una webshell </p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/sxYyvKtX/243.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p>4. Cargue una puerta trasera .asp en la máquina de destino al directorio /webdav usando la utilidad <b>cadaver</b></p>
-
-
-<p>Cadaver es un cliente de línea de comandos para el protocolo WebDAV, diseñado para interactuar con servidores WebDAV de forma similar a como lo harías con un cliente FTP.</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/wjTHjX2b/244.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p>En la imagen se puede observar el punto 4 que indica que es posible interactuar con el webdav y el punto 5 dondela conexion webshell se ha establecido con exito</p>
-
-
-
-<p>5.  Subir la puerta trasera asp al servidor web IIS en el directorio webdav.></p>
-
-<p>Hemos subido la puerta trasera con éxito..</p>
-
-
-<p>:white_check_mark: Webshell</p>
-
-
-<p> Es un script malicioso (o de prueba, en el contexto de un pentest autorizado) que se sube a un servidor web para obtener control remoto sobre él a través del navegador o peticiones HTTP.</p>
-
-<p> Es esencialmente una puerta trasera (backdoor) que se ejecuta en el servidor. Te permite enviar comandos del sistema operativo a través de parámetros HTTP (GET, POST, etc.) y ver el resultado en el navegador.</p>
-
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/mrKGj04t/245.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/RVWL5y5Y/246.png" alt="Descripción de la imagen">
-  
-</p>
  
 
-
- <p align="center">
-
-  <img src="https://i.postimg.cc/Fswg9phf/247.png" alt="Descripción de la imagen">
-  
-</p>
-
-
- 
- <p align="center">
-
-  <img src="https://i.postimg.cc/wjctSQMp/248.png" alt="Descripción de la imagen">
-  
-</p>
- 
 
 
 
@@ -6301,6 +6188,15 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 <p> 🛠 GFI LanGuard: &nbsp; Escanea, detecta y evalua las vulnerabilidades en una red y sus dispositivos conectados </p>
 <p> 🛠 OpenVAS &nbsp; (https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
 <p> 🛠 Nikto &nbsp; Escaner de servidores web, examina los elementos de configuracion como archivos de indice, opciones habilitades en servidores http e identifica el software instalado   </p>
+
+
+
+
+<p>Lynis: --------------------------------------------------------------------> Profundizar herramienta muy util</p>
+
+
+
+
 
 
 
@@ -6498,19 +6394,16 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-<p> El adversario está intentando entrar en tu red. </p>
-
-
-
 <p> La fase de explotación en una prueba de penetración es el momento en que el atacante intenta aprovechar las vulnerabilidades identificadas durante las fases anteriores para comprometer el sistema objetivo. </p>
-
 
 
 
 <h2> :arrow_right:  Metodologias para irrumpir sistemas </h2>
 
 
-<h2> :white_check_mark: &nbsp; Obtener acceso - Initial Access &nbsp; TA0001</h2>
+</br>
+
+<h2> :white_check_mark: &nbsp; Obtener acceso - Initial Access &nbsp; TA0001 </h2>
 
 
 <p> El adversario está intentando entrar en tu red. </p>
@@ -6542,6 +6435,277 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 <h2> :arrow_right:  Ataques basados en sistema/host </h2>
+
+
+<p> Un ataque basado en host es un ataque dirigido a un sistema especifico o host que ejecuta un sitema operativo especifico (Windows - Linux). Se centran principalmente en la explotacion de vulnerabilidades o configuraciones erroneas en el objetivo. En esta etapa se convierten las vulnerabilidades identificadas durante el escaneo y enumeración en acceso real a los sistemas </p>
+
+</br>
+
+
+<h2> :arrow_right: Windows </h2>
+
+
+</br>
+
+
+<h2> :white_check_mark: Vulnerabilidades de Windows </h2>
+
+
+<h3> :radio_button: Tipos de vulnerabilidades de Windows </h3>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hG2vJ4Qr/313.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<h3> :radio_button: Tipos de vulnerabilidades de Windows </h3>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/VL7CTcRk/314.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+
+
+<h2> :white_check_mark: Explotación de vulnerabilidades de Windows </h2>
+
+
+<!----------------------------------------------------------------------------- ## Explotación de Microsoft IIS WebDAV ------------------------------------------------------------------------------------------------------------------>
+
+
+
+<h2> :white_check_mark: Explotación de Microsoft IIS WebDAV </h2>
+
+
+<h3> :radio_button: Puerto 80 sin TLS / 443 con certificado SSL </h3>
+
+
+<p> (Web Distributed Authoring and Versioning) es una extensión del protocolo HTTP que permite a los usuarios editar y gestionar archivos en servidores web de forma colaborativa. Fue definido en el RFC 4918 y básicamente transforma un servidor web en un sistema de archivos accesible remotamente.</p>
+
+
+<p> Extensiones de archivos ejecutables compatibles</p>
+
+
+<p><b> • .asp  </b></p>
+<p><b> • .aspx </b></p>
+<p><b> • .conf </b></p>
+<p><b> • .php  </b></p>
+
+<p> Para conectarse a un servidor WebDav, debera proporcionar credenciales legitimas, esto se debe a que WebDav implementa autenticaion en forma de usuario y contraseña </p>
+
+
+<h3> :radio_button: Pasos </h3>
+
+
+<p> 1. Validar si el servicio se encuentra corriendo  </p>
+
+<p> Identificar la version y el servicio </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3x8LLJNM/237.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> Se observa que en el puerto 80 tenemos un servidor web ejecutandose el cual corresponde a Microsoft IIS httpd en su version 10.0  </p>
+
+
+<p> 2. Consultar un poco mas de informacion del puerto con la opcion <b>--script=http-enum</b> el cual se utiliza para enumerar directorios y archivos comunes en servidores web. </p>
+
+<p> Se observa que WebDav ha sido configurado para ejecutarse en el servidor web IIS </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hvKxSvHW/238.png" alt="Descripción de la imagen">
+</p>
+
+
+
+<p> Al ralizar la validacion en el navegador se observa que el servidor webdav solicita usuario y contraseña como se menciono con anterioridad, si no contamos con dichos datos podemos proceder a realizar un ataque de <b> fuerza bruta </b> </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MHX6b8BJ/239.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/CMvHFHLJ/315.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p> Al ingresar las credenciales correctas podremos acceder al contenido del directorio web en el cual por el momento solo cuenta con 2 archivos</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/0j9zc6GD/240.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>3.  Con la ayuda de la herramienta <b>davtest</b> podremos identifica y explotar configuraciones inseguras en servidores que tienen habilitado WebDAV.</p>
+
+
+<p> Como se observa en la siguiente imagen cuando intentamos acceder a la URL falla la conexion por no suministrar las credenciales</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/25fLVXqc/241.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Al establecer conexion se crea una Cadena aleatoria para esta sesión: <b> GzUzoZM8 </b> </p>
+
+
+<p> Adicionalmente se crar el directorio <b> Created http://10.4.29.41/webdav/DavTestDir_GzUzoZM8 </b> </p>
+
+
+<p> Podemos notar que hemos cargado casi todos los tipos de archivos importantes al directorio /webdav. Además, podemos ejecutar tres tipos de archivos. es decir, asp, texto y html.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XqZY2wGy/242.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> Al comprobar la seccion de ejecucion de archivos de pruebas observamos que se tiene exito en la carga de archicos .asp</p>
+
+
+<p> <b> Verificar la sesion Checking for test file execution </b> </p>
+
+
+<p> <b> Nota </b> Cuando ves archivos .asp en un servidor WebDAV, significa que ese servidor muy probablemente ejecuta IIS (Internet Information Services) de Microsoft. Si puedes subir un archivo .asp a través de WebDAV y el servidor lo ejecuta, puedes obtener ejecución remota de código subiendo una webshell </p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sxYyvKtX/243.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>4. Cargue una puerta trasera .asp en la máquina de destino al directorio /webdav usando la utilidad <b>cadaver</b></p>
+
+
+<p>Cadaver es un cliente de línea de comandos para el protocolo WebDAV, diseñado para interactuar con servidores WebDAV de forma similar a como lo harías con un cliente FTP.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wjTHjX2b/244.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>En la imagen se puede observar el punto 4 que indica que es posible interactuar con webdav y el punto 5 donde la conexion webshell se ha establecido con exito</p>
+
+
+
+<p>5.  Subir la puerta trasera asp al servidor web IIS en el directorio webdav.></p>
+
+<p>Hemos subido la puerta trasera con éxito..</p>
+
+
+<p>:white_check_mark: Webshell</p>
+
+
+<p> Es un script malicioso (o de prueba, en el contexto de un pentest autorizado) que se sube a un servidor web para obtener control remoto sobre él a través del navegador o peticiones HTTP.</p>
+
+<p> Es esencialmente una puerta trasera (backdoor) que se ejecuta en el servidor. Te permite enviar comandos del sistema operativo a través de parámetros HTTP (GET, POST, etc.) y ver el resultado en el navegador.</p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mrKGj04t/245.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RVWL5y5Y/246.png" alt="Descripción de la imagen">
+  
+</p>
+ 
+
+
+ <p align="center">
+
+  <img src="https://i.postimg.cc/Fswg9phf/247.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+ 
+ <p align="center">
+
+  <img src="https://i.postimg.cc/wjctSQMp/248.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6612,19 +6776,6 @@ El análisis del comportamiento detecta anomalías como intentos de inicio de se
 Controles basados en IP que incluyen geofencing y bloqueo de dispositivos maliciosos conocidos IP, y requerir verificación adicional para nuevos dispositivos o ubicaciones.
 
 El uso de una combinación de los enfoques anteriores proporciona una defensa profunda contra ataques de contraseñas. Para entornos de alta seguridad, avanzar hacia la autenticación sin contraseña elimina por completo muchos de estos vectores de ataque.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
