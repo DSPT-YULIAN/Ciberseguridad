@@ -6082,26 +6082,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 
-<h2> :white_check_mark: EternalBlue - CVE-2017-0144</h2> 
 
-
-<h3> SMB </h3> 
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/q72dWRQq/Eternal-Blue-2.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-
-<p> EternalBlue (MS17-010) es una de las vulnerabilidades más críticas en la historia de Microsoft.</p>
-
-
-<p> Cualquier cosa que use el protocolo de intercambio de archivos <b>SMBv1</b> (Server Message Block versión 1) está técnicamente en riesgo de ser objetivo de ransomware y otros ciberataques. EternalBlue aprovecha las vulnerabilidades de SMBv1 para insertar paquetes de datos maliciosos y propagar el malware por la red.</p>
-
-<p> La vulnerabilidad es un desbordamiento de búfer en el protocolo SMBv1 (Server Message Block version 1). Específicamente, el error reside en el manejo de paquetes Trans2 Secondary Data Payload en srv2.sys (controlador del servidor SMB). Un atacante puede enviar un paquete SMB especialmente diseñado que provoca una corrupción de memoria, permitiendo la ejecución remota de código a nivel de kernel.</p>
 
 
 
@@ -6432,6 +6413,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 <!--------------------------------------------------## Ataques basados en sistema/host  --------------------------------------------------------------------------->
 
 
+</br>
 
 
 <h2> :arrow_right:  Ataques basados en sistema/host </h2>
@@ -6439,10 +6421,9 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 <p> Un ataque basado en host es un ataque dirigido a un sistema especifico o host que ejecuta un sitema operativo especifico (Windows - Linux). Se centran principalmente en la explotacion de vulnerabilidades o configuraciones erroneas en el objetivo. En esta etapa se convierten las vulnerabilidades identificadas durante el escaneo y enumeración en acceso real a los sistemas </p>
 
-</br>
-
 
 </br>
+
 
 
 <h2> :white_check_mark: Vulnerabilidades de Windows </h2>
@@ -6471,7 +6452,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-<h2> :white_check_mark: Explotación de vulnerabilidades de Windows </h2>
+<h2> Explotación de vulnerabilidades de Windows </h2>
 
 
 <!----------------------------------------------------------------------------- ## Explotación de Microsoft IIS WebDAV ------------------------------------------------------------------------------------------------------------------>
@@ -6479,6 +6460,8 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 </br>
 
 <h2> :white_check_mark: Explotación de Microsoft IIS WebDAV </h2>
+
+</br>
 
 
 <h3> :radio_button: Puerto 80 sin TLS / 443 con certificado SSL </h3>
@@ -6527,8 +6510,6 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 <p> &nbsp; • Servidor comprometido se convierte en punto pivote a redes internas</p>
 <p> &nbsp; • Credenciales almacenadas en servidor pueden permitir acceso a otros sistemas</p>
-
-
 
 
 
@@ -6855,7 +6836,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 <p align="center">
 
-  <img src="hhttps://i.postimg.cc/XvLztwbw/323.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/XvLztwbw/323.png" alt="Descripción de la imagen">
   
 </p>
 
@@ -6870,6 +6851,157 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
   <img src="https://i.postimg.cc/Jz1gx6wB/324.png" alt="Descripción de la imagen">
   
 </p>
+
+
+
+<!----------------------------------------------------------------------------- ## Explotación SMB CON PsExec------------------------------------------------------------------------------------------------------------------>
+
+</br>
+
+<h2> :white_check_mark: Explotación SMB CON PsExec </h2>
+
+</br>
+
+
+<h3> :radio_button: Puerto 445 </h3>
+
+
+<p> PsExec es una herramienta de Microsoft que permite ejecutar comandos y programas en máquinas remotas mediante SMB. Se utiliza comúnmente en pentesting para obtener acceso a sistemas remotos. Es un remplazo ligero de telnet, para poderlo usar se deben ingresar credenciales legitimas </p>
+
+
+<p> El protocolo SMB utliliza dos niveles de autenticacion </p>
+
+
+
+<p> &nbsp; • User Authentication</p>
+<p> &nbsp; • Share Authentication </p> 
+
+
+
+<p><b> • User Authentication</b> Los usuarios deben proportcionar un nombre de usuario y contraseña para autenticarse en un servidor SMB </p>
+<p><b> • Share Authentication</b> El usuario debe proporcionar una contraseña para acceder al recurso compartido restringido</p> 
+
+
+
+
+
+<p> :radio_button: User Authentication</p>
+
+
+<p>1.  Realizar un escanero con Nmap para idetificar los puertos abiertos </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cHjvj1DR/325.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Se puede oservar que se encuentra corriendo la version 2 de SMB en el puerto 445 del servidor </p>
+
+
+
+<p> Se puede oservar que se encuentra corriendo la version 2 de SMB en el puerto 445 del servidor </p>
+
+
+<p> “Message signing enabled but not required” significa que el servidor puede firmar los mensajes SMB (añadir una firma criptográfica para verificar su autenticidad), pero no exige que los clientes lo hagan. </p>
+
+
+<p> Lo que significa que podemos autenticarnos el el sistema a traves de PsExec </p>
+
+
+
+<p>2.  Realizar un ataque de fuerza bruta </p>
+
+
+<p>Usar el modulo de metasploit <b>auxiliary/scanner/smb/smb_login</b> Este módulo probará un inicio de sesión SMB en una variedad de máquinas y informar inicios de sesión exitosos. Si ha cargado un complemento de base de datos y conectado a una base de datos, este módulo registrará correctamente inicios de sesión y hosts para que pueda realizar un seguimiento de su acceso. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sghvLGqJ/326.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mDLHH2kP/327.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p>Se han identificado 4 cuentas de usuario con contraseña, en particular la cuenta de administrador </p>
+
+
+<p> Podemos utilizar estas credenciales para autenticarnos en el sistema a traves de PsExec </p>
+
+
+<p> NOTA: la utilidada PsExec es una utilidad de Windows, Sin embargo es posible ejecutar en un sistema Linux por medio de herramientas o un script de Python llamado <b>psexec.py</b></p>
+
+
+<p>script de Python que implementa una funcionalidad similar a la herramienta original de Windows, PsExec (parte de la suite Sysinternals), pero diseñada para trabajar en entornos de red de manera más flexible y automatizada, comúnmente utilizada en tareas de administración de sistemas y en pruebas de penetración (pentesting).</p>
+
+
+<p>Tecnica </p>
+
+<p> • Utilizar psexec.py </p>
+
+
+<p>Proporcionar el nombre de usuario seguido de la direccion IP de destino y luego proporcionar el ejecutable real o el comando que se quiera ejecutar a continuacion solicitara la contraseña del usuario  </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/qR1jtFJB/328.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> • Utilizar Metasploit </p>
+
+
+<p> Modulo <b>exploit/windows/smb/psexec</b> Este módulo utiliza un nombre de usuario y una contraseña de administrador válidos (o un hash de contraseña) para ejecutar una carga útil arbitraria. Este módulo es similar a la utilidad «psexec» proporcionada por SysInternals. Ahora, este módulo es capaz de borrar sus propios rastros. El servicio creado por esta herramienta utiliza un nombre y una descripción elegidos al azar.</p>
+
+
+<p> Configurar los parametros, para establecer la sesion Merterpreter </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/SRfhBkqt/331.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<h2> :white_check_mark: EternalBlue - CVE-2017-0144</h2> 
+
+
+<h3> SMB </h3> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/q72dWRQq/Eternal-Blue-2.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> EternalBlue (MS17-010) es una de las vulnerabilidades más críticas en la historia de Microsoft.</p>
+
+
+<p> Cualquier cosa que use el protocolo de intercambio de archivos <b>SMBv1</b> (Server Message Block versión 1) está técnicamente en riesgo de ser objetivo de ransomware y otros ciberataques. EternalBlue aprovecha las vulnerabilidades de SMBv1 para insertar paquetes de datos maliciosos y propagar el malware por la red.</p>
+
+<p> La vulnerabilidad es un desbordamiento de búfer en el protocolo SMBv1 (Server Message Block version 1). Específicamente, el error reside en el manejo de paquetes Trans2 Secondary Data Payload en srv2.sys (controlador del servidor SMB). Un atacante puede enviar un paquete SMB especialmente diseñado que provoca una corrupción de memoria, permitiendo la ejecución remota de código a nivel de kernel.</p>
+
+
+
 
 
 
@@ -7021,9 +7153,6 @@ El uso de una combinación de los enfoques anteriores proporciona una defensa pr
 <p><b> :radio_button: DHCP Snooping </b> Evita IPs falsas en la red local.</p>
 <p><b> :radio_button: TLS Pinning :</b> Fija el certificado esperado para evitar impersonación</p>
 
-
-
-<
 
 
 
