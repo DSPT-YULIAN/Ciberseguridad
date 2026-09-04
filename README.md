@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-Ciberseguridad
-
-RED
 
 
-![red](https://github.com/user-attachments/assets/e4cb1666-0174-4565-bcfc-7f9bd61250b4)
-=======
 <p align="center">
 
   <img src="https://i.postimg.cc/j5knS9Sw/Pentesting.jpg" alt="Descripción de la imagen">
@@ -6095,34 +6089,6 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 
-<h2> :white_check_mark:  BlueKeep - CVE-2019-0708 </h2> 
-
-
-<h3> RDP </h3> 
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/kM2FFb5w/Blue-Keep.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-
-<p> Es una vulnerabilidad de Use-After-Free (UAF) en el servicio TermDD.sys (Terminal Desktop Device Driver) que implementa el protocolo RDP (Remote Desktop Protocol). Específicamente, el error se encuentra en el canal MS_T120 de la pila de RDP.
-
-Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial (pre-autenticación), el canal interno para la conferencia T.128/T.120 de Microsoft no valida adecuadamente la existencia de un objeto antes de reutilizarlo, permitiendo que un atacante:</p>
-
-
-
-<p>Establezca una sesión RDP sin autenticación (solo handshake)</p>
-<p>Envíe paquetes específicos que provocan que el kernel libere un objeto</p>
-<p>Continúe haciendo referencia a ese objeto (de ahí el use-after-free)</p>
-<p>Sobrescriba la memoria liberada con datos controlados (pool spraying/heap grooming)</p>
-<p>Obtenga ejecución de código en el contexto del kernel (NT AUTHORITY\SYSTEM)</p>
-
-
 
 
 <h2> :white_check_mark: Pass-the-Hash Attacks </h2> 
@@ -7007,6 +6973,178 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 <p> Cualquier cosa que use el protocolo de intercambio de archivos <b>SMBv1</b> (Server Message Block versión 1) está técnicamente en riesgo de ser objetivo de ransomware y otros ciberataques. EternalBlue aprovecha las vulnerabilidades de SMBv1 para insertar paquetes de datos maliciosos y propagar el malware por la red.</p>
 
 <p> La vulnerabilidad es un desbordamiento de búfer en el protocolo SMBv1 (Server Message Block version 1). Específicamente, el error reside en el manejo de paquetes Trans2 Secondary Data Payload en srv2.sys (controlador del servidor SMB). Un atacante puede enviar un paquete SMB especialmente diseñado que provoca una corrupción de memoria, permitiendo la ejecución remota de código a nivel de kernel.</p>
+
+
+<!--------------------------------------------------##  Pendiente documentar explotacion de Eternablue --------------------------------------------------------------------------->
+
+
+<!--------------------------------------------------##  Pendiente documentar explotacion de Eternablue --------------------------------------------------------------------------->
+
+
+</br>
+
+
+<h2> :white_check_mark: Explotación RDP </h2>
+
+
+</br>
+
+
+<h3> :radio_button: Puerto 3389 </h3>
+
+<p> El Protocolo de Escritorio Remoto (RDP) es una tecnología desarrollada por Microsoft que permite conectarse y controlar un ordenador o servidor a distancia, transmitiendo la pantalla y las entradas de teclado y mouse a través de la red de forma cifrada.</p>
+
+
+<p> La explotación de RDP consiste en aprovechar vulnerabilidades o configuraciones débiles del Protocolo de Escritorio Remoto para obtener acceso no autorizado, ejecutar código malicioso o moverse lateralmente dentro de una red.</p>
+
+
+<p> Es necesario ingresar Credenciales legitimas para poderse autenticar </p>
+
+
+
+<p> :radio_button: Pasos </p>
+
+
+<p> 1.  Realizar un escanero con Nmap para idetificar los puertos abiertos </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nV0DB4JP/340.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Como se puede observar no se evidencia que este en uso el puerto 3389, por lo que podemos usar el modulo <b> auxiliary/scanner/rdp/rdp_scanner </b> Este módulo intenta conectarse al puerto del Protocolo de Escritorio Remoto especificado y comprueba si admite RDP.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MTznjT30/341.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 2. Una vez que se confirme que el servicio RDP se encuentre corriendo en el servidor podemos proceder con un ataque de fuerza bruta con el fin de identificar credenciales legitimas </p>
+
+
+<p> Usaremos Hydra </p>
+
+
+<p> Es una herramienta de seguridad informática diseñada para realizar ataques de fuerza bruta y diccionario contra múltiples protocolos y servicios de autenticación. Permite automatizar intentos de login contra servicios como SSH, FTP, HTTP, RDP, SMB, Telnet, entre otros. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/8c5stYSm/342.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Es una herramienta de seguridad informática diseñada para realizar ataques de fuerza bruta y diccionario contra múltiples protocolos y servicios de autenticación. Permite automatizar intentos de login contra servicios como SSH, FTP, HTTP, RDP, SMB, Telnet, entre otros. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZKWCNXj4/343.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Tener en cuenta que si no se indica el puerto el predeterminado sera en 3389 en nuestro caso se indicara que es el puerto 3333 </p>
+
+
+<p> Nota: Tener en cuenta que un ataque de fuerza bruta puede causar denegacion de servicio lo que puede colapsar el sistema de windows. Hydra tiene la capacidad de reducir la velociadad de la fuerza bruta con la opcion <b> -t </b>  la cual de forma predeterminada se encuentra en 16</p>
+
+
+<p> Se identificaron 4 usuarios entre ellos el usuario administrador el cual debe tener mas altos privilegios  </p>
+
+
+<p> 3. Usar la herramienta <b> xfreerdp  </b> </p>
+
+
+<p> Es un cliente de Escritorio Remoto (RDP) de código abierto para sistemas Linux y Unix, que permite conectarse a máquinas Windows u otros servidores compatibles con el protocolo RDP.  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/52vy7vZB/344.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+<h2> :white_check_mark:  BlueKeep - CVE-2019-0708 </h2> 
+
+
+<h3> RDP </h3> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/kM2FFb5w/Blue-Keep.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Es una vulnerabilidad de Use-After-Free (UAF) en el servicio TermDD.sys (Terminal Desktop Device Driver) que implementa el protocolo RDP (Remote Desktop Protocol). Específicamente, el error se encuentra en el canal MS_T120 de la pila de RDP.
+
+Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial (pre-autenticación), el canal interno para la conferencia T.128/T.120 de Microsoft no valida adecuadamente la existencia de un objeto antes de reutilizarlo, permitiendo que un atacante:</p>
+
+
+
+<p>Establezca una sesión RDP sin autenticación (solo handshake)</p>
+<p>Envíe paquetes específicos que provocan que el kernel libere un objeto</p>
+<p>Continúe haciendo referencia a ese objeto (de ahí el use-after-free)</p>
+<p>Sobrescriba la memoria liberada con datos controlados (pool spraying/heap grooming)</p>
+<p>Obtenga ejecución de código en el contexto del kernel (NT AUTHORITY\SYSTEM)</p>
+
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------------------------##  Tipos de ataque de COntraseña --------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
