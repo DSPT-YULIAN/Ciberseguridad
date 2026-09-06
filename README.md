@@ -6732,7 +6732,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 <p align="center">
 
-  <img src="ttps://i.postimg.cc/LsMftLK5/318.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/LsMftLK5/318.png" alt="Descripción de la imagen">
   
 </p>
 
@@ -6953,7 +6953,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 
-<h2> :white_check_mark: EternalBlue - CVE-2017-0144</h2> 
+<h2> :warning: EternalBlue - CVE-2017-0144</h2> 
 
 
 <h3> SMB </h3> 
@@ -6978,7 +6978,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 <!--------------------------------------------------##  Pendiente documentar explotacion de Eternablue --------------------------------------------------------------------------->
 
 
-<!--------------------------------------------------##  Pendiente documentar explotacion de Eternablue --------------------------------------------------------------------------->
+<!--------------------------------------------------##  Explotación RDP --------------------------------------------------------------------------->
 
 
 </br>
@@ -7076,7 +7076,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 
-<h2> :white_check_mark:  BlueKeep - CVE-2019-0708 </h2> 
+<h2> :warning:  BlueKeep - CVE-2019-0708 </h2> 
 
 
 <h3> RDP </h3> 
@@ -7097,57 +7097,189 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-<p>Establezca una sesión RDP sin autenticación (solo handshake)</p>
-<p>Envíe paquetes específicos que provocan que el kernel libere un objeto</p>
-<p>Continúe haciendo referencia a ese objeto (de ahí el use-after-free)</p>
-<p>Sobrescriba la memoria liberada con datos controlados (pool spraying/heap grooming)</p>
-<p>Obtenga ejecución de código en el contexto del kernel (NT AUTHORITY\SYSTEM)</p>
+<p>• Establezca una sesión RDP sin autenticación (solo handshake)</p>
+<p>• Envíe paquetes específicos que provocan que el kernel libere un objeto</p>
+<p>• Continúe haciendo referencia a ese objeto (de ahí el use-after-free)</p>
+<p>• Sobrescriba la memoria liberada con datos controlados (pool spraying/heap grooming)</p>
+<p>• Obtenga ejecución de código en el contexto del kernel (NT AUTHORITY\SYSTEM)</p>
+
+
+<p>La vulnerabilidad BlueKeep permite a los atacantes obtener acceso a una parte de la memoria del Kernel lo que permite ejecutar de forma remota codigo arbitrario a nivel del sistema sin autenticacion</p>
+
+
+<p> Nota Apuntar a la memoria del kernel puede provocar bloqueos del sistema </p>
+
+
+<!--------------------------------------------------##  Pendiente documentar explotacion Vulnerability (BlueKeep) --------------------------------------------------------------------------->
+
+
+<!--------------------------------------------------##  Exploiting WinRM  --------------------------------------------------------------------------->
 
 
 
 
+<h2> :white_check_mark: Explotación WinRM / (Windows Remote Management)</h2>
+
+
+</br>
+
+
+<h3> :radio_button:  Puerto 5985 → HTTP / 5986 → HTTPS </h3>
+
+<p> Es un servicio de Microsoft que permite la administración remota de sistemas Windows mediante el protocolo WS-Management, basado en SOAP/XML.</p>
+
+
+<p> La explotación de WinRM (Windows Remote Management) es una técnica crítica de movimiento lateral en redes Windows: con credenciales válidas, un atacante puede ejecutar comandos PowerShell de forma remota en memoria, con muy pocos rastros en disco. Esto lo convierte en un vector altamente sigiloso y peligroso.</p>
+
+
+<p> Los atacantes aprovechan WinRM para: </p>
+
+
+<p> <b>• Movimiento lateral </b>: ejecutar comandos en otros equipos del dominio con credenciales válidas. </p>
+<p> <b>• Ejecución remota de PowerShell </b>: correr scripts en memoria, evitando dejar artefactos en disco.</p>
+<p> <b>• Exfiltración de datos </b>: usar comandos PowerShell para enviar información fuera de la red.</p>
+<p> <b>• Persistencia </b>: crear tareas programadas o manipular sesiones WinRM para mantener acceso.</p>
 
 
 
 
-
-
-
-<!--------------------------------------------------##  Tipos de ataque de COntraseña --------------------------------------------------------------------------->
-
+<p> :radio_button: Tecnicas</p>
 
 
 
 
+<p> 1.  Realizar un escanero con Nmap para idetificar los puertos abiertos </p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/jSGS2ZmQ/345.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Como se puede observar en el resultado no se muestra que el puerto 5985 y 5986 se encuentren abiertos esto se debe a que la herramienta NMAP solo realiza de forma determinada la buscquena en los 1000 puerto mas utilizado, como alternativa se puede indicar los puertos especificos con la opcion <b>-p</b></p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/B6W5Tr7V/346.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> En esta ocasion la herramiente de NMAP si nos da un resultado favorable indicado que el servicio de WinRM se encuentra corriendo en este puerto en particular  </p>
+
+<p> 2. Utilizar <b>CrackMapExec (CME)</b> para realizar un ataque de fuerza bruta </p>
+
+
+<p>Es una herramienta de ciberseguridad muy utilizada en pruebas de penetración y auditorías de redes Windows. Se conoce como una “navaja suiza” para pentesters porque permite automatizar tareas de post-explotación, evaluar credenciales y simular movimientos laterales dentro de un entorno corporativo </p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/k4xQfTkB/347.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Esta herramienta permite atacar multiples servicios </p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/prRD7DHs/348.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Se recomienda seleccionar el usuario administrator ya que debe tener privilegios elevados</p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/wTxXQcFj/349.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> El resultado es satisfactorio encontrando la contraseña del usuario administado</p>
+
+
+<p> Nota: winrm es una implementacion de wsman </p>
 
 
 
+<p> 3. Utilizar <b>CrackMapExec (CME)</b> para ejecutar comandos arbitrarios en el objetivo </p>
+
+
+<p> Se debe ingresar el usuario y las credenciales seguido del comando con el parametro -x</p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/DzGLwCft/350.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 3. Obtemer una SHELL con la herramienta <b>evil-winrm.rb</b> </p>
 
 
 
+<p> Es una herramienta escrita en Ruby que proporciona un “shell” interactivo para conectarse a sistemas Windows mediante el servicio WinRM (Windows Remote Management). Se utiliza en pruebas de penetración para ejecutar comandos de forma remota en máquinas Windows, especialmente cuando se tienen credenciales válidas. </p>
+
+
+<p> Especificar nombre de usuario junto a sus credenciales </p>
+
+<p> Esto proporcionara de forma automatica una shell en la cual es posible ingresar comandos  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Hx4MQVy7/351.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> :radio_button: Utilizar una sesion de meterpreter con Metasploit</p>
+
+
+<p> Usar el modulo <b>exploit/windows/winrm/winrm_script_exec</b> </p>
+
+
+<p> Este módulo utiliza credenciales válidas para iniciar sesión en el servicio WinRM y ejecutar una carga útil. Dispone de dos métodos para la entrega de la carga útil: PowerShell 2 (y versiones posteriores) y VBS CmdStager.</b></p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wMqmFgXV/352.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> Configurar los parametros necesarios </p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/NGDTF2tP/353.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> Se logro establecer una sesion Meterpreter de forma exitosa lo que nos permite tener acceso al equipo objetivo</p>
 
 
+<p align="center">
 
-
-
+  <img src="https://i.postimg.cc/66cRq4wt/354.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
@@ -8063,7 +8195,7 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 
 <div id="user-content-toc">
   <ul align="center">
-    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7608A&width=700&height=600&lines=Fase+3.+Explotacion" alt="Typing SVGxxxxx" /></a></summary>
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=60&pause=1000&color=F72222&width=900&height=400&lines=Fase+4.+Post+-+Explotaci%C3%B3n" alt="Typing SVG" /></a></summary>
   </ul>
 </div>
 
@@ -8073,22 +8205,15 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 <h2> :arrow_right: Escalada de privilegios </h2>
 
 
-<h2> :white_check_mark: &nbsp; Obtener acceso - Initial Access &nbsp; TA0001</h2>
+<h2> :arrow_right: Persistencia </h2>
 
 
-<p> El adversario está intentando entrar en tu red. </p>
+<h2> :arrow_right: Recolección de datos </h2>
 
 
-
-<p> El acceso inicial consiste en técnicas que utilizan varios vectores de entrada para obtener su punto de apoyo inicial dentro de una red. Las técnicas utilizadas para afianzarse incluyen el phishing selectivo y la explotación de debilidades en servidores web públicos. Los puntos de acceso obtenidos a través del acceso inicial pueden permitir el acceso continuo, como cuentas válidas y el uso de servicios remotos externos, o pueden tener un uso limitado debido al cambio de contraseñas. </p>
-
+<h2> :arrow_right: Movimiento lateral</h2>
 
 
-<p align="center">
-
-  <img src="https://i.postimg.cc/wjq7hnBW/305.png" alt="Descripción de la imagen">
-  
-</p>
 
 
 
