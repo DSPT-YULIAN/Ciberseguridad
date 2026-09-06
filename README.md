@@ -6022,7 +6022,7 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 
 
-<h3> :white_check_mark:  Searchsploit</h3>  
+<h2> :white_check_mark:  Searchsploit</h2>  
 
 
 <p align="center">
@@ -6068,91 +6068,6 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
   <img src="https://i.postimg.cc/t4HpGqGn/5.png" alt="Descripción de la imagen">
 
 </p>
-
-
-
- 
-
-
-
-
-<!----------------------------------------------------------------------------- ## Vulnerabilidades mas conocidas------------------------------------------------------------------------------------------------------------------>
-
-
-
-<h2> :arrow_right: Vulnerabilidades de alto impacto</h2> 
-
-
-
-
-
-
-
-
-
-
-<h2> :white_check_mark: Pass-the-Hash Attacks </h2> 
-
-
-<h3> Kerberos - NTLM </h3> 
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/CxtGgRRf/265.jpg" alt="Descripción de la imagen">
-  
-</p>
-
-
-
-<p> Un Pass-the-Hash Attack (ataque de paso de hash) es una técnica de explotación en la que un atacante captura el hash NTLM o Kerberos de una cuenta de usuario y lo utiliza para autenticarse en otros sistemas sin necesidad de conocer la contraseña original. Este ataque aprovecha el protocolo Kerberos (utilizado por defecto en entornos Windows) o el protocolo NTLM (usado en versiones antiguas de Windows).</p>
-
-
-
-
-
-<h2> :white_check_mark: Shellshock CVE-2014-6271 - LINUX</h2> 
-
-
-<p> Es una Vulnerabilidad crítica de ejecución remota de comandos en Bash (GNU Bourne Again Shell) que permite a los atacantes ejecutar comandos arbitrarios mediante variables de entorno.</p>
-
-<p><b>• Versiones Afectadas</b>: Bash 1.03 hasta 4.3 </p>
-<p><b>• Gravedad:</b>:  CVSS:9.3 (Crítica) </p>
-
-
-<p><b>Mecánica de Exploitación</b></p>
-
-
-<p>1. Un atacante envía encabezados HTTP especialmente elaborados o variables de entorno</p>
-<p>2. La sintaxis () en variables de entorno se interpreta incorrectamente como definiciones de funciones</p>
-<p>3. El código malicioso se ejecuta antes de que comience la ejecución normal del programa</p>
-
-
-
-
-<!--------------------------------------------------## Escaneo de vulnerabilidades automatizado --------------------------------------------------------------------------->
-
-
-
-<h2> :arrow_right: Escaneo de vulnerabilidades automatizado </h2> 
-
-
-<p> 🛠 Qualys: &nbsp; Vulnerability Management (https://www.qualys.com) Servicio en la nube que permite identificar que sistemas informaticos pueden ser vulnerables a las ultimas amenazas de internet  </p>
-<p> 🛠 Nessus: &nbsp; (https://www.tenable.com) Permite la evaluacion de vulnerabilidades, configuraciones y cumplimiento </p>
-<p> 🛠 GFI LanGuard: &nbsp; Escanea, detecta y evalua las vulnerabilidades en una red y sus dispositivos conectados </p>
-<p> 🛠 OpenVAS &nbsp; (https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
-<p> 🛠 Nikto &nbsp; Escaner de servidores web, examina los elementos de configuracion como archivos de indice, opciones habilitades en servidores http e identifica el software instalado   </p>
-
-
-
-
-<p>Lynis: --------------------------------------------------------------------> Profundizar herramienta muy util</p>
-
-
-
-
-
 
 
 
@@ -6269,35 +6184,109 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 </p>
 
 
-
-<h3> &nbsp; Sistemas de puntuacion de vulnerabilidades</h3>
-
-<p> • CVSS - Sistema Común de Puntuación de Vulnerabilidades &nbsp; (https://www.first.org/cvss)</p>
-<p> • CVE  - Vulnerabilidades y Exposiciones Comunes &nbsp; (https://www.cve.org)</p>
-<p> • CWE  - Enumeracion de debilidades comunes &nbsp; (https://cwe.mitre.org)</p>
-<p> • NVD  - Base de datos nacional de vulnerabilidad &nbsp; (https://nvd.nist.gov)</p>
+<!--------------------------------------------------## bases de datos de vulnerabilidades --------------------------------------------------------------------------->
 
 
-<p><b>  Evaluacioon de vulnerabilidades </b></p>
 
-<p> 1. Examinar y evaluar la seguridad fisica de la organizacion </p>
-<p> 2. Comprobar errores de configuracion o errores humanos </p>
-<p> 3. Utilizar herramientas de escaneo de vulnerabilidades </p>
-<p> 4. Identificar y priorizar las vulnerabilidades </p>
-<p> 5. Validar las vulnerabilidades encontradas </p>
+<h2> :white_check_mark:  Bases de datos de vulnerabilidades</h2>  
 
-<p><b>  Clasificacion de vulnerabilidades </b></p>
 
-<p> • Configuracion erronea </p>
-<p> • Instalacion y configuracion por defecto</p>
-<p> • Desbordamiento de bufer</p>
-<p> • Servidores sin actualizar</p>
-<p> • Fallos de diseño</p>
-<p> • Fallos del sistema operativo </p>
-<p> • Defectos en las aplicaciones</p>
-<p> • Servicios abiertos</p>
-<p> • Contraseñas por defecto</p>
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/jjJ4Cdgd/358.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+<p> Las bases de datos de vulnerabilidades son repositorios centralizados que recopilan, organizan y publican información sobre vulnerabilidades de seguridad conocidas.  </p>
+
+
+
+<p> Las bases de datos de vulnerabilidades también ayudan a conectar todo el ciclo de vida de la seguridad. Una vulnerabilidad describe una debilidad en el software o la configuración, un exploit demuestra cómo se puede abusar de esa debilidad y un parche o mitigación proporciona una forma de solucionarla. Las bases de datos actúan como el vínculo que une toda esta información.
+
+En las operaciones de seguridad del mundo real, las bases de datos de vulnerabilidades son esenciales para la gestión de vulnerabilidades y la aplicación de parches. Permiten a los equipos realizar un seguimiento de los sistemas afectados, priorizar las correcciones y reducir el riesgo de una manera estructurada y eficiente. </p>
+
+
+
+
+<h3> :radio_button:  Bloques de construccion clave </h3> 
+
+
+
+<p> Las bases de datos de vulnerabilidades utilizan componentes básicos estandarizados para describir problemas de seguridad de manera consistente y procesable. Estos componentes básicos garantizan que las vulnerabilidades puedan identificarse, evaluarse y referenciarse con precisión en diferentes herramientas y bases de datos. </p>
+
+
+
+<p> :pushpin: <b> Identificador de vulnerabilidad (CVE) </b> - Un identificador de vulnerabilidad identifica de forma única una falla de seguridad conocida para que pueda rastrearse de manera consistente entre herramientas y bases de datos. &nbsp; (https://www.cve.org) asigna un ID único a cada vulnerabilidad </p>
+
+
+<p> :pushpin: <b> Representación de gravedad (CVSS) </b> La gravedad de las bases de datos de vulnerabilidades se representa mediante el Sistema Común de Puntuación de Vulnerabilidades (CVSS) el cual asigna una puntuación numérica que refleja la facilidad con la que se puede explotar una vulnerabilidad y el impacto potencial si se abusa de ella con éxito. &nbsp; (https://www.first.org/cvss) - (https://nvd.nist.gov/vuln-metrics/cvss)</p>
+
+
+<p> :pushpin: <b> Identificación del producto afectado (CPE) </b> Las bases de datos de vulnerabilidades identifican el software afectado mediante la enumeración de plataforma común (CPE)(se abre en una nueva pestaña), que proporciona un formato de denominación estandarizado para proveedores, productos y versiones para definir claramente qué es vulnerable.  &nbsp; (https://nvd.nist.gov/products/cpe)</p>
+
+
+<p> :pushpin: <b> Enumeración de debilidades comunes (CWE) </b> Las bases de datos de vulnerabilidades también clasifican la debilidad subyacente que causó un problema de seguridad utilizando la Enumeración de debilidades comunes (CWE), que agrupa las vulnerabilidades por causa raíz, lo que ayuda a los profesionales de seguridad a comprender por qué existe una falla, no solo qué se ve afectado. &nbsp; (https://cwe.mitre.org)</p>
+
+
+<p> :pushpin: <b> Autoridades de numeración CVE (CNA) </b> Las CNA ayudan a escalar el programa CVE al permitir que los proveedores y las organizaciones informen directamente sobre las vulnerabilidades de sus propios productos. &nbsp; https://www.cve.org/programorganization/cnas</p>
+
+
+
+<p> La gravedad describe el impacto técnico de una vulnerabilidad, mientras que el riesgo considera cómo esa vulnerabilidad afecta un entorno específico. El riesgo depende de factores como la exposición del sistema, el uso y la importancia del negocio. Ejemplo: Una vulnerabilidad de alta gravedad en un sistema de prueba aislado presenta un riesgo menor que una vulnerabilidad de gravedad media en un servidor de producción conectado a Internet.
+
+</p>
+
+
+
+<h3> Tipos de bases de datos  </h3> 
+
+<h3> :pushpin: CVE LIST - https://www.cve.org/   </h3> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/vZFF2DJv/355.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+<p> 1. La parte superior de la página muestra cuándo se reveló por primera vez la vulnerabilidad y se modificó por última vez  </p>
+<p> 2. Muestra la descripcion de la vulnerabilidad  </p>
+<p> 3. CWE: muestra que la vulnerabilidad es causada por un control inadecuado de la generación de código, lo que genera un problema de inyección de código.  </p>
+<p> 4. CVSS: Observe la puntuación CVSS v4.0 de 8.9 (Alto), lo que indica que la vulnerabilidad se puede explotar de forma remota sin autenticación ni interacción del usuario.    </p>
+<p> 5. Esta sección muestra los productos exactos afectados por la vulnerabilidad </p>
+
+
+
+<h3> :pushpin: NVD - https://nvd.nist.gov/vuln/detail/cve-2025-67501   </h3> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zGbwvG31/356.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> 1. Descripción:  </p>
+<p> 2. Métricas:  NVD muestra múltiples fuentes de gravedad cuando están disponibles. </p>
+<p> 3. Referencias: Muestra enlaces externos ejemplo exploit, que enlaza con un aviso de seguridad de GitHub. Este aviso proporciona detalles técnicos e información de prueba de concepto que demuestra cómo se puede explotar la vulnerabilidad de inyección SQL. </p>
+<p> 4. Enumeración de debilidades: la sección CWE, a la que se asigna esta vulnerabilidadCWE-89, confirmando que la causa raíz es SQLinyección.</p>
+<p> 5. Configuraciones de software afectadas conocidas: utiliza identificadores CPE </p>
+
+
+
+<h3> :pushpin: Exploit Databases - https://www.exploit-db.com/  </h3> 
+
+
+<p> Las bases de datos centradas en exploits, como ExploitDB, se concentran en exploits de prueba de concepto y técnicas de ataque del mundo real </p>
 
 
 
@@ -6325,11 +6314,164 @@ y otras configuraciones a través del protocolo SMB. Es muy útil en la fase de 
 
 </br>
 
+<p>&nbsp;&nbsp;&nbsp; Buscar la vulnerabilidad en Exploit database</p>
+
+
 <p align="center">
 
   <img src="https://i.postimg.cc/MKJbZFH3/4.png" alt="Descripción de la imagen">
 
 </p>
+
+
+
+<h3> &nbsp;Ejemplo 2 </h3>
+
+
+<p> 1. Utilice la barra de búsqueda para buscar CVE-2025-10327. También puede buscar utilizando otros filtros, como título del exploit, plataforma, autor o contenido, si no hay un CVE ID disponible.</p>
+
+<p> 2. Una vez cargados los resultados, tenga en cuenta que ExploitDB enumera una entrada de exploit coincidente. Haga clic en el exploit para ver todos sus detalles..</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wxWgT6SQ/357.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 1. Descripción general del exploit: La página muestra el título del exploit junto con un EDB-ID único (52468) y el CVE asociado.</p>
+<p> 2. Metadatos de explotación:  nombre del autor, el tipo de explotación (WEBAPPS), la plataforma (MULTIPLE) y la fecha de publicación. Estos metadatos ayudan a identificar el origen del exploit y el entorno objetivo previsto. </p>
+<p> 3. Autenticidad del exploit:: la pequeña flecha hacia abajo junto aExploit indica si hay un PoC descargable disponible para el exploit. EDB Verified etiqueta indica si el exploit ha sido probado y verificado por ExploitDB. Además, elVulnerable App campo es útil para configurar rápidamente un PoC, ya que apunta a la aplicación afectada o a la versión </p>
+<p> 4. Código de prueba de concepto: En la parte inferior muestra el código de explotación basado en Python, que demuestra cómo un atacante puede inyectar una carga maliciosa en el parámetro de lista de reproducción para ejecutar comandos arbitrarios del sistema en el sistema de destino.</p>
+
+
+
+<!--------------------------------------------------## Escaneo de vulnerabilidades automatizado --------------------------------------------------------------------------->
+
+
+
+<h2> :arrow_right: Escaneo de vulnerabilidades automatizado </h2> 
+
+
+<p> 🛠 Qualys: &nbsp; Vulnerability Management (https://www.qualys.com) Servicio en la nube que permite identificar que sistemas informaticos pueden ser vulnerables a las ultimas amenazas de internet  </p>
+<p> 🛠 Nessus: &nbsp; (https://www.tenable.com) Permite la evaluacion de vulnerabilidades, configuraciones y cumplimiento </p>
+<p> 🛠 GFI LanGuard: &nbsp; Escanea, detecta y evalua las vulnerabilidades en una red y sus dispositivos conectados </p>
+<p> 🛠 OpenVAS &nbsp; (https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
+<p> 🛠 Nikto &nbsp; Escaner de servidores web, examina los elementos de configuracion como archivos de indice, opciones habilitades en servidores http e identifica el software instalado   </p>
+
+
+
+
+<p>Lynis: --------------------------------------------------------------------> Profundizar herramienta muy util</p>
+
+
+
+
+
+
+
+
+
+
+
+<p><b>  Evaluacioon de vulnerabilidades </b></p>
+
+<p> 1. Examinar y evaluar la seguridad fisica de la organizacion </p>
+<p> 2. Comprobar errores de configuracion o errores humanos </p>
+<p> 3. Utilizar herramientas de escaneo de vulnerabilidades </p>
+<p> 4. Identificar y priorizar las vulnerabilidades </p>
+<p> 5. Validar las vulnerabilidades encontradas </p>
+
+<p><b>  Clasificacion de vulnerabilidades </b></p>
+
+<p> • Configuracion erronea </p>
+<p> • Instalacion y configuracion por defecto</p>
+<p> • Desbordamiento de bufer</p>
+<p> • Servidores sin actualizar</p>
+<p> • Fallos de diseño</p>
+<p> • Fallos del sistema operativo </p>
+<p> • Defectos en las aplicaciones</p>
+<p> • Servicios abiertos</p>
+<p> • Contraseñas por defecto</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------- ## Vulnerabilidades mas conocidas------------------------------------------------------------------------------------------------------------------>
+
+
+
+<h2> :arrow_right: Vulnerabilidades de alto impacto</h2> 
+
+
+
+
+<h2> :white_check_mark: Pass-the-Hash Attacks </h2> 
+
+
+<h3> Kerberos - NTLM </h3> 
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/CxtGgRRf/265.jpg" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Un Pass-the-Hash Attack (ataque de paso de hash) es una técnica de explotación en la que un atacante captura el hash NTLM o Kerberos de una cuenta de usuario y lo utiliza para autenticarse en otros sistemas sin necesidad de conocer la contraseña original. Este ataque aprovecha el protocolo Kerberos (utilizado por defecto en entornos Windows) o el protocolo NTLM (usado en versiones antiguas de Windows).</p>
+
+
+
+
+
+<h2> :white_check_mark: Shellshock CVE-2014-6271 - LINUX</h2> 
+
+
+<p> Es una Vulnerabilidad crítica de ejecución remota de comandos en Bash (GNU Bourne Again Shell) que permite a los atacantes ejecutar comandos arbitrarios mediante variables de entorno.</p>
+
+<p><b>• Versiones Afectadas</b>: Bash 1.03 hasta 4.3 </p>
+<p><b>• Gravedad:</b>:  CVSS:9.3 (Crítica) </p>
+
+
+<p><b>Mecánica de Exploitación</b></p>
+
+
+<p>1. Un atacante envía encabezados HTTP especialmente elaborados o variables de entorno</p>
+<p>2. La sintaxis () en variables de entorno se interpreta incorrectamente como definiciones de funciones</p>
+<p>3. El código malicioso se ejecuta antes de que comience la ejecución normal del programa</p>
+
+
 
 
 <!--------------------------------------------------## Fase 3 Explotacion --------------------------------------------------------------------------->
