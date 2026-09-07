@@ -6353,26 +6353,104 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 
 
-<h2> :arrow_right: Escaneo de vulnerabilidades automatizado </h2> 
+<h2> :arrow_right: Herramientas de escaneo de vulnerabilidades </h2> 
+
+
+<h2> :white_check_mark: Escáner de red </h2> 
+
+
+<p> Un escáner de red examina los dispositivos de una red para identificar puertos abiertos, servicios en ejecución y posibles puntos de exposición. Ayuda a determinar qué sistemas son accesibles y dónde pueden existir riesgos.  </p>
+
+
+<p> :radio_button: Ejemplo </p>
+
+
+<p> :pushpin: NMAP : Es una herramienta de escaneo de red ampliamente utilizada que descubre hosts, identifica puertos abiertos y determina qué servicios se ejecutan en los sistemas. Desempeña un papel clave en las primeras etapas de evaluación de vulnerabilidad ayudando a los analistas a comprender qué está expuesto en una red. Antes de poder probar o explotar cualquier vulnerabilidad, se utiliza Nmap para mapear la superficie de ataque y recopilar información esencial sobre el entorno objetivo.</p>
+
+
+<h2> :white_check_mark: Escáner de aplicaciones web </h2> 
+
+
+<p> Un escáner de aplicaciones web analiza sitios web o aplicaciones web en busca de problemas de seguridad, incluidos componentes obsoletos, configuraciones débiles o comportamientos riesgosos. Se centra específicamente en el HTTP/Capa HTTPS.  </p>
+
+
+<p> :radio_button: Ejemplo </p>
+
+
+<p> :pushpin: Nikto : Es un escáner de vulnerabilidades de servidores web ampliamente utilizado que identifica configuraciones inseguras, componentes obsoletos y debilidades comunes basadas en la web. Realiza un escaneo exhaustivo de un servidor web de destino y lo compara con miles de problemas conocidos, incluidos archivos predeterminados y peligrosos HTTPmétodos, configuraciones incorrectas y posibles exposiciones de seguridad. Si bien Nikto no es una herramienta sigilosa, es extremadamente eficaz durante las primeras evaluaciones de vulnerabilidades web donde la minuciosidad es más importante que la evasión</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pdLN1BMh/359.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p><b> • Divulgación de información del servidor web:</b> detecta la versión exacta del servidor, lo que ayuda a los atacantes a buscar vulnerabilidades conocidas para esa versión</p>
+
+<p><b> • Indicadores de seguridad faltantes de cookies (PHPSESSID creado sin el indicador HttpOnly) :</b> significa que se puede acceder a la cookie a través de scripts del lado del cliente, lo que aumenta el riesgo de secuestro de sesión</p>
+
+<p><b> • Falta protección contra clickjacking (el encabezado X-Frame-Options no está presente) </b> sin este encabezado, el sitio se puede incrustar en un iframe, lo que habilita ataques “clickjacking” que engañan a los usuarios para que hagan clic en elementos ocultos.</p>
+
+<p><b> • Método HTTP potencialmente peligroso (verbo HTTP DEBUG disponible)</b> algunos servidores responden a métodos poco comunes, como DEBUG, que pueden revelar información de depuración interna.</p>
+
+<p><b> • Expuesto PHP Página de información:</b> phpinfo() salida revela información extensa del sistema, módulos, valores de configuración y variables de entorno y comúnmente se elimina en entornos de producción. Dejarlo accesible introduce altos riesgos de fuga de información.</p>
+
+<p><b> • Directorio Indexación Habilitado (STATIC) :</b> permite a cualquier persona explorar el contenido de un directorio sin restricciones, revelando archivos que no deberían ser visibles públicamente</p>
+
+<p><b> • Inclusión remota de archivos (RFI)</b> detectó un parámetro que puede ser vulnerable a la inclusión remota de archivos si se maneja incorrectamente. Las vulnerabilidades de RFI permiten a los atacantes cargar código desde servidores externos y ejecutarlo en el sistema de destino, uno de los riesgos web más graves.</p>
+
+
+
+<h2> :white_check_mark: Escáner basado en host</h2> 
+
+<p> Un escáner basado en host se ejecuta directamente en un sistema para verificar si faltan parches, software desactualizado y configuraciones inseguras. Proporciona una visión detallada de la salud del sistema interno   </p>
 
 
 <p> 🛠 Qualys: &nbsp; Vulnerability Management (https://www.qualys.com) Servicio en la nube que permite identificar que sistemas informaticos pueden ser vulnerables a las ultimas amenazas de internet  </p>
 <p> 🛠 Nessus: &nbsp; (https://www.tenable.com) Permite la evaluacion de vulnerabilidades, configuraciones y cumplimiento </p>
 <p> 🛠 GFI LanGuard: &nbsp; Escanea, detecta y evalua las vulnerabilidades en una red y sus dispositivos conectados </p>
-<p> 🛠 OpenVAS &nbsp; (https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
-<p> 🛠 Nikto &nbsp; Escaner de servidores web, examina los elementos de configuracion como archivos de indice, opciones habilitades en servidores http e identifica el software instalado   </p>
 
+<p> 🛠 OpenVAS &nbsp; (https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
+
+
+<p> OpenVAS (Open Vulnerability Assessment System) es una de las herramientas de escaneo de vulnerabilidades más potentes y utilizadas en el mundo de la seguridad de la información, especialmente en entornos de código abierto. Es el motor principal detrás de la suite Greenbone Vulnerability Management (GVM). </p>
+
+
+<p> :radio_button: Ejemplo </p>
+
+
+<p><b> 1. Agregar un objetivo</b> Configuration > Targets haga clic en elPlus (+) ícono e ingrese el nombre + la direccion IP </p>
+<p><b> 2. Escaneando un objetivo</b> Scans > Tasks haga clic en el Plus (+) icono y elija New Task . Ingrese el nombre de la tarea seleccione el destino que agregó anteriormente </p>
+<p><b> 3. Visualización del informe</b> vaya a Scans > Reports . Haga clic en la entrada del informe </p>
+
+<p><b> Pestaña Resultados </b> En la pestaña Resultados, los hallazgos del escaneo se enumeran por nivel de gravedad, puertos afectados y detalles del host. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pdLN1BMh/359.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b> Pestaña CVE </b> En la pestaña CVE, OpenVAS asigna problemas detectados a vulnerabilidades publicadas conocidas. </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/pdLN1BMh/359.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b> Las herramientas de escaneo de vulnerabilidades desempeñan un papel fundamental en la ciberseguridad moderna al identificar automáticamente debilidades, configuraciones incorrectas y software obsoleto en sistemas y redes.</b> </p>
 
 
 
 <p>Lynis: --------------------------------------------------------------------> Profundizar herramienta muy util</p>
-
-
-
-
-
-
-
 
 
 
@@ -8060,270 +8138,6 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 
 
 
-<!-------------------------------------------------- Ejemplo explotacion Pentest web --------------------------------------------------------------------------->
-
-
-
-
-<h2> :arrow_right: Pentest WEB</h2> 
-
-
-<p> Claves del compromiso </p>
-
-
-
-<p> :radio_button: La enumeración permite mapear la estructura, los encabezados, los puntos finales y el comportamiento de la aplicación antes de intentar la explotación. </p>
-
-<p> :radio_button: Los pequeños defectos se encadenan en grandes compromisos. Ningún tema aquí fue exótico o particularmente complejo. IDOR, restablecimientos débiles de contraseñas y omisiones en la carga son vulnerabilidades bien entendidas. Su impacto provino de cómo se conectaron entre sí. </p>
-
-<p>  :radio_button:  Las restricciones del lado del cliente no son seguridad. El formulario de carga de archivos utilizaba un accept atributo para restringir los tipos de archivos en el navegador. La verificación del lado del servidor utilizó una lista de bloqueo que omitió la alternativa extensiones PHP . La seguridad real requiere una validación del lado del servidor con un enfoque de lista de permisos. </p>
-
-<p> :radio_button: Los mecanismos de restablecimiento de contraseña merecen una atención cuidadosa. Son complejos de implementar de forma segura, y una sola falla de diseño, como exponer el token en la respuesta, puede llevar a la apropiación de la cuenta. </p>
-
-
-<p> :radio_button: Piense como un atacante, informe como un consultor. Encontrar las vulnerabilidades es la mitad del trabajo. Documentarlos claramente con calificaciones de gravedad y consejos de remediación viables es lo que hace que el compromiso sea valioso para el cliente.  </p>
-
-
-
-
-<h2> white_check_mark: 1.  Reconocimiento y enumeracion </h2> 
-
-
-
-<p> Recopilar la mayor cantidad de informacion posible sobre el objetivo</p> 
-
-
-<p> 1. Escaneo de puertos </p> 
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/50HWSMRT/285.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p> Resultado puertos abiertos</p> 
-
-<p> Puerto 22: SSH Util si obtenemos credenciales  </p> 
-<p> Puerto 80: Donde se encuentra la aplicacionn WEB la cual se esta ejecutando en apache </p> 
-<p> Puerto 3306: Indica que usa una base de datos MySQL en el Backend</p> 
-<p> Puerto 8080: página predeterminada de Apache la aplicación probablemente construye consultas SQL y cualquier debilidad en el manejo de entradas podría generar problemas relacionados con SQL </p> 
-
-
-<p> 2. Explorando la aplicacion </p> 
-
-<p> Validar el encabezados HTTP  </p> 
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/jqwRzzVQ/287.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p> Resultado puertos abiertos</p> 
-
-
-<p> Los encabezados confirman que el servidor se está ejecutando apache con versión2.4.58 . LaPHPSESSID cookie confirma que la gestión de sesiones PHP está en uso. Ahora conocemos la pila de tecnología: Apache + PHP + MySQL, una configuración LAMP clásica.</p> 
-
-
-<p> 3. Enumeracion de directorios </p> 
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/wvRnsQtt/286.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p> Resultado</p>
-
-
-<p> /admin- Existe un panel de administración, pero redirecciona a la página de inicio de sesión. Necesitaremos credenciales para acceder a él  </p> 
-<p> /api-  Las API a menudo exponen datos de maneras que el frontend no lo hace.</p> 
-<p> /reset.php- Una página de restablecimiento de contraseña. Los mecanismos de reinicio con frecuencia se implementan de forma insegura.</p> 
-<p> /uploads- Un directorio de cargas. Si podemos cargar archivos, esta podría ser una ruta para la ejecución del código. </p> 
-<p> /profile.php y/dashboard.php - Estos requieren autenticación, por lo que debemos iniciar sesión para acceder a ellos.</p> 
-
-
-<p> 4. Explorando API </p> 
-
-<p> El API enumera de forma útil sus propios puntos finales. Este ya es un problema de divulgación de información en una aplicación de producción; un usuario no autenticado no debería poder descubrir información interna rutas API.</p> 
-
-
-
-<p align="center">
-
-  <img src="hhttps://i.postimg.cc/tC8Z3XmY/288.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-
-
-
-<h2> white_check_mark:  IDOR (Insecure Direct Object Reference) </h2> 
-
-
-<p> Es un tipo de vulnerabilidad común en pruebas de penetración donde un atacante puede acceder directamente a objetos o recursos del sistema sin autenticación ni autorización adecuadas. </p> 
-
-
-<p> En una prueba de penetración, se identifica IDOR al observar cómo la aplicación maneja referencias a objetos (como IDs de usuarios, archivos o recursos). Los escenarios típicos incluyen: </p> 
-
-
-<p>&nbsp;1. Acceso no autorizado: Un usuario puede manipular parámetros (por ejemplo, ?id=123) para acceder a datos de otros usuarios. </p> 
-<p>&nbsp;2. Manipulación de recursos: Cambiar IDs para acceder a archivos o rutas que no deberían ser accesibles. </p> 
-<p>&nbsp;3. Desbordamiento de recursos: Acceder a más recursos de los permitidos por el sistema. </p> 
-
-
-<p> Mitigar IDOR </p> 
-
-
-<p> • Validar siempre la relación entre el usuario actual y el recurso solicitado.</p> 
-<p> • Usar referencias indirectas (hashes o tokens) en lugar de IDs directos. </p> 
-<p> • Implementar controles de acceso estrictos en todos los puntos de entrada. </p> 
-
-<p> IDOR es especialmente peligroso porque puede permitir el acceso no autorizado a información sensible o funcionalidades críticas. </p> 
-
-
-
-<h3> Probar si una pagina web es vulnerable a IDOR</h3> 
-
-
-<p>&nbsp;1. Identificar parámetros de objeto en URLs (como ?id=, ?user_id=, ?file=). </p> 
-<p>&nbsp;2. Extraccion de Cookies </p> 
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/HsBq38Qz/283.png" alt="Descripción de la imagen">
-
-</p>
-
-
-<p>&nbsp;3. Usar CURL para que ver exactamente qué regresa. Asegúrese de incluir su cookie de sesión en el siguiente comando después del PHPSESSID= valor: </p> 
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/BQzRR81K/284.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-
-<h2> white_check_mark: 3. Restablecimiento de contraseña debil </h2> 
-
-
-<p> Los flujos de restablecimiento de contraseña son una de las características que se rompen con más frecuencia en las aplicaciones web porque son complejos de implementar de forma segura y los desarrolladores a menudo toman atajos.</p> 
-
-
-
-<p>  En una aplicación diseñada adecuadamente, el token de reinicio se enviaría al correo electrónico del usuario y nunca se mostraría en la pantalla. Pero esta aplicación muestra el token directamente en la respuesta.</p> 
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/3rknYFVm/289.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p>  Ahora tenemos todo lo que necesitamos. Usemos el token para restablecer la contraseña de Sarah Mitchell. Visite la URL de reinicio y le pedirá una nueva contraseña:</p> 
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/BQzRR81K/284.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-
-<p> Fallas en la pagina WEB.</p> 
-
-
-<p> <b> Token mostrado en respuesta: </b>  El token solo debe enviarse al correo electrónico del propietario de la cuenta, nunca debe mostrarse en la pantalla. </p> 
-<p> <b> Generación de tokens débil:  </b> un token numérico de seis dígitos tiene un espacio de claves pequeño y es susceptible a ataques de fuerza bruta. </p> 
-<p> <b> Sin limitación de velocidad: </b> la aplicación no limitó la cantidad de solicitudes de reinicio ni conjeturas de tokens. </p> 
-
-
-
-<h2> white_check_mark: 4. Acceso al panel de administracion </h2> 
-
-
-<p> Una función de carga de archivos en manos de un administrador es una característica poderosa y, desde la perspectiva de un evaluador de penetración, es un camino potencial hacia la ejecución remota de código. </p> 
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/nz0YpCYT/291.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p> Examinemos la página de carga. Haga clic derecho en el botón y Upload haga clic en Inspect </p> 
-
-
-
-<p> Podemos notar varios detalles importantes. El formulario dice que acepta archivos PDF, DOCX y de imagen. El atributo enaccept la entrada del archivo restringe los tipos de archivos, pero esta es solo una restricción del lado del cliente. El navegador lo aplica, pero una solicitud HTTP directa puede enviar cualquier tipo de archivo que desee. La página también revela el destino de carga: . /uploads/documents/  </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/3wZ2FdqS/293.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/5NFvkPGN/294.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-
-<h2> white_check_mark: 5. Ejecucion remota de codigo </h2> 
-
-
-<p> • Creación de un shell web </p> 
-
-<p> Un shell web es un pequeño script que acepta comandos a través de parámetros HTTP y los ejecuta en el servidor.  </p> 
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/pTBKPD1H/297.png" alt="Descripción de la imagen">
-  
-</p>
-
-<p> • Ejecución de comandos </p> 
-
-<p> Verifiquemos que tenemos ejecución de código ejecutando comandos simples:  </p> 
-<p> Lectura de archivos confidenciales. </p> 
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/SQ77yfFx/295.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-
-<p> • Obtención de un Reverse Shell </p> 
-
-
-
 
 <!-------------------------------------------------- Fase 4 Post Explotacion --------------------------------------------------------------------------->
 
@@ -8345,6 +8159,90 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 
 
 <h2> :arrow_right: Escalada de privilegios </h2>
+
+
+<p> La Escalada de Privilegios (Privilege Escalation) es el proceso mediante el cual un atacante, tras haber ganado acceso inicial a un sistema con un nivel de permisos limitado (un usuario estándar o un servicio con pocos derechos), logra obtener un nivel de autoridad superior (como un Administrador en Windows o el usuario root en Linux). </p>
+
+
+
+<h3> Tipos de escalada de privilegios </h3>
+
+
+<p><b> 1. Escalada de Privilegios Vertical</b></p>
+
+
+<p>Es cuando un usuario pasa de un nivel de privilegio bajo a uno más alto. El objetivo es alcanzar el control total del sistema (el superusua</p>
+
+
+<p>Es cuando un usuario accede a los recursos o datos de otro usuario que tiene un nivel de privilegios similar al suyo.</p>
+
+
+
+</br>
+
+
+<h2> :no_entry: Explotaciones del kernel de Windows </h2>
+
+
+<p> Windows ejecuta un Kernel llamado Windows NT</p>
+
+
+
+<p> El Kernel (o núcleo) es el componente central de un sistema operativo. Es la capa de software más importante que actúa como un puente o intermediario entre el hardware (procesador, memoria, dispositivos de entrada/salida) y el software (aplicaciones de usuario).</p>
+
+<p> Cuando explotamos el Kernel de Windows, el objetivo suele ser pasar de un proceso en User Mode (donde corre una aplicación normal) a ejecutar código en Kernel Mode. Esto permite el control total sobre la memoria, los procesos y el hardware, permitiendo saltarse protecciones como el antivirus o el EDR (Endpoint Detection and Response).</p>
+
+
+<p> Es importante mencionar nuevamente que interactuar con el nucleo de Windows puede causar fallas en el sistema y en consecuencia conducir a perdida de datos, no  </p>
+
+
+
+<p> :radio_button: Pasos</p>
+
+
+<p> 1. Identificar vulnerabilidades del Kernel </p>
+<p> 2. Descargar compilar y tranferir exploits del kernel al sistema </p>
+
+
+
+<p> :radio_button: Tipos de Vulnerabilidades Comunes</p>
+
+
+<p> :radio_button: Pasos</p>
+
+<p> Los atacantes suelen buscar fallos de gestión de memoria:</p>
+
+
+<p><b>• Buffer Overflow (Desbordamiento de búfer):</b> Escribir más datos de los que un búfer de memoria puede manejar, sobrescribiendo estructuras críticas.</p>
+
+<p><b>• Pool Overflow:</b> El Kernel utiliza una estructura llamada "Pool" (similar al Heap en User Mode) para la asignación dinámica de memoria. Un desbordamiento en el Pool puede permitir sobrescribir objetos del Kernel.</p>
+
+<p><b>• Use-After-Free (UAF):</b> Ocurre cuando el Kernel utiliza un puntero a una zona de memoria que ya ha sido liberada. Esto permite a un atacante manipular esa memoria antes de que se reutilice.</p>
+
+<p><b>• Integer Overflow:</b> Errores en cálculos matemáticos que resultan en tamaños de memoria incorrectos, facilitando desbordamientos.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <h2> :arrow_right: Persistencia </h2>
