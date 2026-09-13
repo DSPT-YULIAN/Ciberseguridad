@@ -7747,6 +7747,70 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
+<p> :radio_button: <b> Pasos</b></p>  
+
+<p> 1. Crear o editar un archivo </p>  
+<p> 2. Validar la metadata del archivo creado </p>  
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/C5WstZQ2/390.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 3. Ocultar una carga util maliciosa dentro del flujo de recursos</p>  
+
+<p> Utilizar el siguiente parametro ejemplo <b> notepad prueba.xt:secret.txt </b> el cual abre un flujo alternativo llamado secret.txt dentro del archivo prueba.txt </p>  
+
+<p> el archivo test.xt seguirá mostrando su tamaño original, pero tendrá datos ocultos en el flujo secret.txt. </p>  
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/7Z4WYcKp/391.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> :radio_button: <b> Ejemplo de como ocultar un ejecutable </b></p>  
+
+
+<p> 1. Cambiar el nombre al ejecutable</p>  
+<p> 2. Normalmente el Malware se ejecuta en la carpeta Temp</p>  
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/PqrV1Ds7/392.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> 3. utilizar los siguiente parametros </p>  
+
+  <p> • type Prueba01.exe → este comando lee el contenido binario del archivo Prueba01.exe y lo envía a la salida estándar.</p> 
+  <p> • > → redirige esa salida hacia un archivo. </p> 
+  <p> • codigo.txt:update.exe → aquí no es un archivo normal, sino un archivo (codigo.txt) con un flujo alternativo llamado update.exe. </p> 
+
+
+<p> Como se puede observar el tamaño del archivo es de 0kb ya que no se ha introducido ningun dato</p> 
+
+<p> Nota: Se puede eliminar el ejecutable por que ya fue oculta en el archivo update.exe</p> 
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/BbDmJcH6/393.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
 
 
 
