@@ -6616,49 +6616,28 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 
 
+<h2> :pushpin: Flujo de trabajo típico después de la enumeración: </h2>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zGh89qrY/374.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
+<p>1. Tome el primer servicio y versión de su inventario.</p>
 
+<p>2. Busque en NVD o Exploit-DB el nombre y la versión de ese software.</p>
 
+<p>3. Consulte GitHub para conocer el identificador CVE para encontrar cualquier código o herramienta de prueba de concepto.</p>
 
+<p>4. Revise los resultados, anotando cualquier CVE que afecte la versión exacta o un rango que la incluya.</p>
 
+<p>5. Evalúe la relevancia y explotabilidad de cada resultado.</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p>6. Repita esto para cada servicio del inventario.</p>
 
 
 
@@ -6681,50 +6660,6 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 <p> • Defectos en las aplicaciones</p>
 <p> • Servicios abiertos</p>
 <p> • Contraseñas por defecto</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2> :pushpin: Flujo de trabajo típico después de la enumeración: <h2>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/zGh89qrY/374.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-
-<p>1. Tome el primer servicio y versión de su inventario.</p>
-
-<p>2. Busque en NVD o Exploit-DB el nombre y la versión de ese software.</p>
-
-<p>3. Consulte GitHub para conocer el identificador CVE para encontrar cualquier código o herramienta de prueba de concepto.</p>
-
-<p>4. Revise los resultados, anotando cualquier CVE que afecte la versión exacta o un rango que la incluya.</p>
-
-<p>5. Evalúe la relevancia y explotabilidad de cada resultado.</p>
-
-<p>6. Repita esto para cada servicio del inventario.</p>
 
 
 
@@ -6836,7 +6771,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 </br>
 
 
-<h2> :arrow_right:  Ataques basados en sistema/host </h2>
+<h2> :warning: Ataques basados en sistema/host </h2>
 
 
 <p> Un ataque basado en host es un ataque dirigido a un sistema especifico o host que ejecuta un sitema operativo especifico (Windows - Linux). Se centran principalmente en la explotacion de vulnerabilidades o configuraciones erroneas en el objetivo. En esta etapa se convierten las vulnerabilidades identificadas durante el escaneo y enumeración en acceso real a los sistemas </p>
@@ -6846,10 +6781,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 
 
-<h2> :white_check_mark: Vulnerabilidades de Windows </h2>
-
-
-<h3> :radio_button: Tipos de vulnerabilidades de Windows </h3>
+<h3> :pushpin: Tipos de vulnerabilidades de Windows </h3>
 
 
 <p align="center">
@@ -6860,7 +6792,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 
 
-<h3> :radio_button: Protocolos y servicios mas explotados de Windows </h3>
+<h3> :pushpin: Protocolos y servicios mas explotados de Windows </h3>
 
 
 
@@ -6870,16 +6802,17 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
   
 </p>
 
+</br>
 
 
-<h2> Explotación de vulnerabilidades de Windows </h2>
+<h2> :no_entry_sign: Explotación de vulnerabilidades de Windows </h2>
 
 
 <!----------------------------------------------------------------------------- ## Explotación de Microsoft IIS WebDAV ------------------------------------------------------------------------------------------------------------------>
 
 </br>
 
-<h2> :white_check_mark: Explotación de Microsoft IIS WebDAV </h2>
+<h2> :no_entry:  Explotación de Microsoft IIS WebDAV </h2>
 
 </br>
 
@@ -7114,7 +7047,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 <p> &nbsp; • Monitorear operaciones WebDAV inusuales </p>
 
 
-<h2> :white_check_mark: Explotación WebDAV con Metasploit </h2>
+<h2> :wrench:  Explotación WebDAV con Metasploit </h2>
 
 
 <h3><b> :radio_button: Tecnicas </b></h3>
@@ -7278,7 +7211,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 </br>
 
-<h2> :white_check_mark: Explotación SMB CON PsExec </h2>
+<h2> :no_entry:  Explotación SMB CON PsExec </h2>
 
 </br>
 
@@ -7430,7 +7363,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 </br>
 
 
-<h2> :white_check_mark: Explotación RDP </h2>
+<h2> :no_entry:  Explotación RDP </h2>
 
 
 </br>
@@ -7564,7 +7497,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-<h2> :white_check_mark: Explotación WinRM / (Windows Remote Management)</h2>
+<h2> :no_entry: Explotación WinRM / (Windows Remote Management)</h2>
 
 
 </br>
@@ -7726,6 +7659,94 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
   <img src="https://i.postimg.cc/66cRq4wt/354.png" alt="Descripción de la imagen">
   
 </p>
+
+
+<!--------------------------------------------------##  Vulnerabilidades del sistema de archivos de Windows --------------------------------------------------------------------------->
+
+
+
+<h2> :no_entry: Vulnerabilidades del sistema de archivos de Windows </h2>
+
+
+</br>
+
+
+<p> Un sistema de archivos es la forma en que el sistema operativo organiza, almacena y recupera los datos en un medio de almacenamiento (disco duro, SSD, USB)</p>
+
+
+
+<p> • Cómo se estructuran los datos (archivos, carpetas, metadatos)</p>
+<p> • Dónde se guardan físicamente en el disco</p>
+<p> • Cómo se nombran, se acceden y se protegen</p>
+<p> • Qué hacer cuando falla algo (recuperación de errores)</p>
+
+
+<p> En el caso de Windows NTFS es el sistema de archivos "de fábrica" de Windows moderno (desde Windows NT hasta hoy). Cuando instalas Windows y formateas el disco, la opción por defecto es NTFS.</p>
+
+
+<p> otros sistemas de archivos </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/B6x5RwJG/387.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> El sistema de archivos de Windows (principalmente NTFS, gestionado por el driver en kernel ntfs.sys) presenta varias clases de debilidades recurrentes:</p>
+
+
+
+
+<p> • <b> Desbordamientos de búfer en el driver NTFS </b>  Montar un volumen o imagen malformada (VHD/VHDX, discos externos) puede corromper memoria en kernel y derivar en ejecución de código o elevación de privilegios (SYSTEM). </p>
+<p> • <b> Lecturas fuera de límites (out-of-bounds read) </b> Filtración de memoria kernel o corrupción de estructuras que facilita LPE.</p>
+<p> • <b> Errores de conversión numérica / integer overflow </b> Cálculos incorrectos de tamaños en metadatos NTFS que permiten condiciones de memoria insegura.</p>
+<p> • <b> EFS y BitLocker </b> debilidades cuando las claves se exportan junto con los datos o en configuraciones sin protección adicional (TPM).</p>
+
+<p> • </b> Abuso de características de diseño (no son bugs, pero son vectores clásicos): </b> </p>
+
+  <p> ↠ <b> Junctions / symlinks / reparse points: </b> ataques de link following y TOCTOU contra servicios que escriben en directorios controlables por usuarios. </p>
+  <p> ↠ <b> Hard links </b> obre archivos con DACLs permissivas. </p>
+  <p> ↠ <b> Named pipe squatting </b> </p>
+  <p> ↠ <b> ADS (Alternate Data Streams): </b> en temporales mal protegidos. </p>
+
+<p> ↠ <b> ADS (Alternate Data Streams): </b> en temporales mal protegidos. </p>  
+
+
+<h3><b> ADS (Alternate Data Streams)</b></h3>  
+
+<p> Es una característica del sistema de archivos NTFS (New Technology File System) de Microsoft. Permite que un único archivo contenga múltiples flujos de datos independientes.
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/B6x5RwJG/387.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> En un sistema de archivos convencional, cuando ves un archivo, normalmente estás viendo su "flujo de datos principal" (el contenido que escribes en un .txt o un .exe). Sin embargo, NTFS permite añadir metadatos o información adicional en flujos "ocultos" que no afectan el tamaño aparente del archivo ni su contenido principal. </p>  
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/2j1TzTT5/389.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> En un sistema de archivos convencional, cuando ves un archivo, normalmente estás viendo su "flujo de datos principal" (el contenido que escribes en un .txt o un .exe). Sin embargo, NTFS permite añadir metadatos o información adicional en flujos "ocultos" que no afectan el tamaño aparente del archivo ni su contenido principal. </p>  
+
+
+<p> <b> Los atacantes utilizan ADS para técnicas de evasión de detección: </b></p>  
+
+<p> :pushpin: <b> Ocultación de Malware: </b> Un atacante puede descargar un payload malicioso y guardarlo en el ADS de un archivo legítimo (como un .jpg o un .txt).</p>
+<p> :pushpin: <b> Evasión de Antivirus: </b> Algunos productos de seguridad antiguos o mal configurados solo escanean el flujo de datos principal, ignorando los flujos alternativos. </p>
+<p> :pushpin: <b> Persistencia: </b> Pueden ejecutar scripts o binarios ocultos en el ADS para que el sistema parezca limpio a simple vista. </p>
+
+
+
 
 
 
@@ -8408,7 +8429,7 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 </br>
 
 
-<h2> :no_entry: Explotaciones del kernel de Windows </h2>
+<h2> :arrow_right:  Explotaciones del kernel de Windows </h2>
 
 
 <p> Windows ejecuta un Kernel llamado Windows NT</p>
