@@ -5546,23 +5546,59 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 <h3> :radio_button: SMBMAP</h3>
 
 
-<p> Herramienta diseñada  para enumerar, explorar y explotar recursos compartidos SMB </p>
+<p> SMBMap es una herramienta de línea de comandos (escrita en Python) diseñada para enumerar recursos compartidos SMB (Server Message Block) en hosts Windows y Linux/Samba. Es muy popular en fases de reconocimiento y movimiento lateral durante pruebas de penetración.</p>
 
 </br>
 
-<p> • Enumerar recursos compartidos (shares) sin autenticación o con credenciales </p>
-<p> &nbsp; Sin credenciales ( bash:&nbsp; smbmap -[target_IP] ) </p>
-<p> &nbsp; Con credenciales ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña]) </p>
+<p> :pushpin: <b> Enumerar recursos compartidos (shares) sin autenticación o con credenciales </b></p>
 
-<p> • Explorar el contenido de un recurso compartido</p>
-<p> &nbsp; ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] -r [recurso_compartido]) </p>
+<p> &nbsp; • Sin credenciales ( bash:&nbsp; smbmap -[target_IP] ) </p>
+<p> &nbsp; • Con credenciales ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña]) </p>
 
-<p> • Descargar/Subir archivos (si los permisos lo permiten)</p>
-<p> &nbsp; Descargar un archivo : ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] --dowload [ruta remota] </p>
-<p> &nbsp; Cargar un archivo : ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] --upload [archivo_local] [ruta remota] </p>
 
-<p> • Ejecución de comandos remotos (si hay suficientes privilegios)</p>
-<p> &nbsp; ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] -x "net user hacker P@ssw0rd /add ) </p>
+ <p align="center">
+
+ <img src="https://i.postimg.cc/TYRzFnqm/378.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> :pushpin: <b>  Explorar el contenido de un recurso compartido </b> </p>
+<p> &nbsp; • ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] -r [recurso_compartido]) </p>
+
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/Nfp3cLd9/379.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+
+
+<p> :pushpin: <b> Descargar/Subir archivos (si los permisos lo permiten) </b></p>
+
+<p> &nbsp; • Descargar un archivo : ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] --dowload [ruta remota] </p>
+<p> &nbsp; • Cargar un archivo : ( bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] --upload [archivo_local] [ruta remota] </p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/HkNFrRGh/380.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+ <p align="center">
+
+ <img src="https://i.postimg.cc/fb0pmCDy/381.png" alt="Descripción de la imagen">
+
+ </p>
+
+
+<p> :pushpin: <b> Ejecución de comandos remotos (si hay suficientes privilegios)</b></p>
+<p> &nbsp; • bash:&nbsp; smbmap -H [target_IP] -u [usuario] -p [contraseña] -x "net user hacker P@ssw0rd /add ) </p>
 
 
 <p align="center">
@@ -6374,7 +6410,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 <p> :radio_button: Ejemplo </p>
 
 
-<p> :pushpin: NMAP : Es una herramienta de escaneo de red ampliamente utilizada que descubre hosts, identifica puertos abiertos y determina qué servicios se ejecutan en los sistemas. Desempeña un papel clave en las primeras etapas de evaluación de vulnerabilidad ayudando a los analistas a comprender qué está expuesto en una red. Antes de poder probar o explotar cualquier vulnerabilidad, se utiliza Nmap para mapear la superficie de ataque y recopilar información esencial sobre el entorno objetivo.</p>
+<p> :wrench: NMAP : Es una herramienta de escaneo de red ampliamente utilizada que descubre hosts, identifica puertos abiertos y determina qué servicios se ejecutan en los sistemas. Desempeña un papel clave en las primeras etapas de evaluación de vulnerabilidad ayudando a los analistas a comprender qué está expuesto en una red. Antes de poder probar o explotar cualquier vulnerabilidad, se utiliza Nmap para mapear la superficie de ataque y recopilar información esencial sobre el entorno objetivo.</p>
 
 
 <h2> :white_check_mark: Escáner de aplicaciones web </h2> 
@@ -6386,7 +6422,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 <p> :radio_button: Ejemplo </p>
 
 
-<p> :pushpin: Nikto : Es un escáner de vulnerabilidades de servidores web ampliamente utilizado que identifica configuraciones inseguras, componentes obsoletos y debilidades comunes basadas en la web. Realiza un escaneo exhaustivo de un servidor web de destino y lo compara con miles de problemas conocidos, incluidos archivos predeterminados y peligrosos HTTPmétodos, configuraciones incorrectas y posibles exposiciones de seguridad. Si bien Nikto no es una herramienta sigilosa, es extremadamente eficaz durante las primeras evaluaciones de vulnerabilidades web donde la minuciosidad es más importante que la evasión</p>
+<p> :wrench: Nikto : Es un escáner de vulnerabilidades de servidores web ampliamente utilizado que identifica configuraciones inseguras, componentes obsoletos y debilidades comunes basadas en la web. Realiza un escaneo exhaustivo de un servidor web de destino y lo compara con miles de problemas conocidos, incluidos archivos predeterminados y peligrosos HTTPmétodos, configuraciones incorrectas y posibles exposiciones de seguridad. Si bien Nikto no es una herramienta sigilosa, es extremadamente eficaz durante las primeras evaluaciones de vulnerabilidades web donde la minuciosidad es más importante que la evasión</p>
 
 
 
@@ -6419,11 +6455,14 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 <p> Un escáner basado en host se ejecuta directamente en un sistema para verificar si faltan parches, software desactualizado y configuraciones inseguras. Proporciona una visión detallada de la salud del sistema interno   </p>
 
 
-<p> 🛠 Qualys: &nbsp; Vulnerability Management (https://www.qualys.com) Servicio en la nube que permite identificar que sistemas informaticos pueden ser vulnerables a las ultimas amenazas de internet  </p>
-<p> 🛠 Nessus: &nbsp; (https://www.tenable.com) Permite la evaluacion de vulnerabilidades, configuraciones y cumplimiento </p>
-<p> 🛠 GFI LanGuard: &nbsp; Escanea, detecta y evalua las vulnerabilidades en una red y sus dispositivos conectados </p>
+<p> :wrench: Qualys: &nbsp; Vulnerability Management (https://www.qualys.com) Servicio en la nube que permite identificar que sistemas informaticos pueden ser vulnerables a las ultimas amenazas de internet  </p>
+<p> :wrench: Nessus: &nbsp; (https://www.tenable.com) Permite la evaluacion de vulnerabilidades, configuraciones y cumplimiento </p>
+<p> :wrench: GFI LanGuard: &nbsp; Escanea, detecta y evalua las vulnerabilidades en una red y sus dispositivos conectados </p>
 
-<p> 🛠 OpenVAS &nbsp; (https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
+
+<h3> :wrench: OpenVAS </h3>
+
+<p>(https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
 
 
 <p> OpenVAS (Open Vulnerability Assessment System) es una de las herramientas de escaneo de vulnerabilidades más potentes y utilizadas en el mundo de la seguridad de la información, especialmente en entornos de código abierto. Es el motor principal detrás de la suite Greenbone Vulnerability Management (GVM). </p>
@@ -6441,7 +6480,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/pdLN1BMh/359.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/Yq1PDL1x/360.png" alt="Descripción de la imagen">
 
 </p>
 
@@ -6450,7 +6489,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/pdLN1BMh/359.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/JzM2f7x0/361.png" alt="Descripción de la imagen">
 
 </p>
 
@@ -6459,7 +6498,78 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 
 
-<p>Lynis: --------------------------------------------------------------------> Profundizar herramienta muy util</p>
+<h3> :wrench: Lynis: </h3>
+
+<p>(https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
+
+
+
+
+<p> Lynis es una herramienta de código abierto para auditorías de seguridad, hardening y cumplimiento en sistemas Unix-like (Linux, macOS, BSD, incluso AIX/HPUX).</p>
+
+
+<p> Para que sirve  </p>
+
+
+<p> • Auditoría de seguridad (profundidad en el host): analiza cientos de puntos de control del sistema — kernel, usuarios, servicios, configuraciones, permisos de archivos, etc. </p>
+<p> • ardening: su foco principal es recomendaciones de endurecimiento basadas en estándares (ISO 27001, PCI-DSS, HIPAA, GDPR, CIS benchmarks).</p>
+<p> • Escaneo de vulnerabilidades a nivel de versión de software y configuración.</p>
+<p> • Compliance testing: genera un índice de hardening y evidencia para auditorías.</p>
+<p> • Gestión de parches / detección de misconfigurations.</p>
+
+
+<p> # Instalación (Debian/Ubuntu/Kali) - <b> sudo apt install lynis</b> </p>
+<p> # Escaneo completo del sistema - <b> sudo lynis audit system </b></p>
+
+
+
+<h3> :wrench: NoScope </h3>
+
+<p>(https://www.openvas.org) Escaneo y gestion de vulnerabilidades </p>
+
+
+<p> Plataforma de pruebas de penetración automatizadas basada en agentes de inteligencia artificial, respaldada por TryHackMe. Combina enjambres de agentes autónomos con revisión de pentesters humanos. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8579,7 +8689,104 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 
 
+<!-------------------------------------------------- Access Token Impersonation  --------------------------------------------------------------------------->
 
+
+
+
+<h2> :no_entry: Suplantación de identidad mediante un token de acceso / Access Token Impersonation </h2>
+
+
+<p> Son un elemento central de la autenticacion de Windows, un token de acceso puede considerarse como una clave temporal similar a una cookie </p>
+
+
+ <p>El proceso Winlogon.exe genera una token de acceso cada vez que un usuario de autentica correctamenta y esa token de acceso incluye la identidad de la cuenta de usuario que se acaba de autentica y los provilegios de la cuenta de usario asociada con el hilo o proceso, por lo tanto cada vez que inicie el sistema operativo de windows y solicite un inicio de sesion sera manejado por Winlogon.exe  </p> 
+
+
+ <p>Esta token se adjunta al usuario en el proceso userinit.exe el cual actúa como el puente final entre la autenticación del usuario y el inicio de su entorno de trabajo. </p> 
+
+
+<p> :radio_button: Pasos</p>
+
+
+
+<p> 1. Verifique los puertos abiertos en la máquina de destino:  </p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/650FJ8T8/382.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/XYYmVnCY/383.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Esta version de servidor HTTP es vulnerable por lo que se procedera a tener una sesion de Meterpreter </p>
+
+
+<p> 2. Utilizar el modulo que explota este servidor  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/N0Wz7TPY/384.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Una vez que logremos tener la sesion de Meterprete podemos consultar informacion relevante con el sistema operativo, usario y privigelios del usuario </p>
+
+<p> En este caso podemos evidenciar que el usuario en uso no cuenta con privilegios </p>
+
+<p> Lo cual se confirma con el parametro getprivs, de igual forma podemos identificar que el usuario cuenta con el privilegio de <b>SeImpersonatePrivilege </b>"permite a un proceso suplantar (impersonar) a otro cliente tras la autenticación. " </p>
+
+
+<p> 3. Utilizar el modulo incognito</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/J01VZZGc/385.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Es un módulo incorporado en Meterpreter que sirve para robar (impersonar) y gestionar tokens de acceso de otros usuarios en el sistema comprometido. Está diseñado para explotar el mismo concepto de SeImpersonatePrivilege / SeAssignPrimaryTokenPrivilege. </p>
+
+
+<p> Utilizar el parametro <b> list_tokens -u </b></p>
+
+
+<p> Escanea todos los procesos y sesiones activas del equipo y muestra los tokens de identidad de usuarios que están disponibles para ser suplantados, agrupados por origen:</p>
+
+
+<p> Como se puede observar tenemos disponible la token de acceso del administrador y la del usuario actual </p>
+
+
+<p> Para poder suplantar la token del administrado debemos colocar el parametro <b>impersonate_token y el nombre de la token encapsulado entre comillas doble " "</b></p>
+
+
+<p> Posteriormente migramos nuevamente el proceso explorer y realizamos la validacion de privilegios del usario</p>
+
+<p> Como resultado tenemos un sesion elevada por que tenemos privilegios adicionales que estan asociados a un adminitrador </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/BQ79P8sF/386.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
