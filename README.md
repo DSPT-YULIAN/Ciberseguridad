@@ -6672,22 +6672,6 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 
 
-<h2> :white_check_mark: Pass-the-Hash Attacks </h2> 
-
-
-<h3> Kerberos - NTLM </h3> 
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/CxtGgRRf/265.jpg" alt="Descripción de la imagen">
-  
-</p>
-
-
-
-<p> Un Pass-the-Hash Attack (ataque de paso de hash) es una técnica de explotación en la que un atacante captura el hash NTLM o Kerberos de una cuenta de usuario y lo utiliza para autenticarse en otros sistemas sin necesidad de conocer la contraseña original. Este ataque aprovecha el protocolo Kerberos (utilizado por defecto en entornos Windows) o el protocolo NTLM (usado en versiones antiguas de Windows).</p>
 
 
 
@@ -7809,12 +7793,12 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 </p>
 
 
-
+</br>
 
 
 <!--------------------------------------------------##  Tipos de ataque de Contraseña --------------------------------------------------------------------------->
 
-
+</br>
 
 <h2> :arrow_right:  Volcado de credenciales de Windows </h2>
 
@@ -8109,6 +8093,8 @@ Es la implementación (basada en el protocolo de comunicación de Windows) de la
 
 
 
+
+
 <h2> :arrow_right:  Ataques de contraseñas </h2>
 
 
@@ -8258,46 +8244,6 @@ El uso de una combinación de los enfoques anteriores proporciona una defensa pr
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p> </p>
 <p> Tecnicas</p>
 <p><b> • Descifrado de contraseñas:</b> </p>
 
@@ -8305,8 +8251,8 @@ El uso de una combinación de los enfoques anteriores proporciona una defensa pr
   <p><b> &nbsp; Ataques no electronicos:</b> </p>
     <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ingenieria social </b> </p>
  
-<p><b> &nbsp;&nbsp;🛠 &nbsp; Setoolkit</p>
-<p><b> &nbsp;&nbsp;🛠 &nbsp; BeEF</p>
+<p><b> &nbsp;&nbsp;🛠 &nbsp; Setoolkit</b></p>
+<p><b> &nbsp;&nbsp;🛠 &nbsp; BeEF</b></p>
     <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Espiar la contraseña </b> </p>
     <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Buscar en la basura</b> </p>
 
@@ -9168,78 +9114,6 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-------------------------------------------------- Access Token Impersonation  --------------------------------------------------------------------------->
 
 
@@ -9262,15 +9136,6 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 
 
-
-
-
-
-
-
-
-
-
 <h2> :arrow_right: Persistencia </h2>
 
 
@@ -9279,6 +9144,9 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 
 <!--------------------------------------------------## Movimiento lateral --------------------------------------------------------------------------->
+
+</br>
+
 
 
 
@@ -9445,7 +9313,109 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 <p> Nota: Mimikatz es una herramienta nativa de Windows escrita en C, por lo que no se ejecuta directamente sobre el sistema de archivos de Linux.  Para utilizarla desde un entorno Kali Linux, la práctica estándar es instalar el paquete oficial desde los repositorios de Kali y luego transferir el binario a la máquina objetivo con Windows para ejecutarlo allí.  </p>
 
 
+<p> Lo cual se logro en la actividad anterior ahora ulitzaremos estos hash para autenticanos de forma legitima a traves de SMB </p>
 
+
+
+
+
+<!--------------------------------------------------##  Ataques de Pass-The-Hash  --------------------------------------------------------------------------->
+
+
+</br>
+
+<h2> :white_check_mark: Ataques de Pass-The-Hash </h2> 
+
+
+<h3> Kerberos - NTLM </h3> 
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/CxtGgRRf/265.jpg" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Un Pass-the-Hash Attack (ataque de paso de hash) es una técnica de explotación en la que un atacante captura el hash NTLM o Kerberos de una cuenta de usuario y lo utiliza para autenticarse en otros sistemas sin necesidad de conocer la contraseña original. Este ataque aprovecha el protocolo Kerberos (utilizado por defecto en entornos Windows) o el protocolo NTLM (usado en versiones antiguas de Windows).</p>
+
+
+<p> <b>NOTA: Anteriormente obtuvimos los hash por medio del volcado de comntraseñas de windows </b> </p>
+
+
+
+<p> 1. Obtener el Hash LM y NTLM con el comando <b> hashdump </b> </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5NLX2Xpq/417.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+<p> En Windows hay algunos RID (Relative Identifier) bien conocidos que suelen aparecer en volcados de cuentas locales: </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZYrm96tJ/422.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> 2. Utilizar el modulo psexec  <b>windows/smb/psexec</b> </p>
+
+
+<p> Este módulo utiliza un nombre de usuario y una contraseña de administrador válidos (o un hash de contraseña) para ejecutar una carga útil arbitraria. Este módulo es similar a la utilidad «psexec» proporcionada por SysInternals. Ahora, este módulo es capaz de borrar sus propios rastros. El servicio creado por esta herramienta utiliza un nombre y una descripción elegidos al azar. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/rFXp38c5/418.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Cambiar el puerto del atacante si es el mismo de la sesion actual</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Dw5ySLGW/419.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> 3. Usar la informacion recopilida anteriormente </p>
+
+<p> En este modulo en especifico se recomieda usar tanto el hash LM como NTLM para no generar error </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/vmNYzy3L/420.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> De nuevo obtenemos una sesion meterpreter como administrador con la diferencia que:  </p>
+
+
+<p> <b> En conjunto estas tenicas tiene como objetivo principal la escalada de privilegios y el movimiento lateral mediante ataques de identidad, específicamente mediante el uso de Pass-the-Hash (PtH).</b> </p>
+
+<p> :pushpin: <b> Bypass de la necesidad de contraseñas en texto plano</b> La mayor ventaja es que no necesitas conocer la contraseña real del usuario (la cadena de caracteres). En protocolos como SMB, si ya posees el hash NTLM de una cuenta con privilegios administrativos, puedes autenticarte hacia otros sistemas en la red utilizando ese hash. El módulo psexec puede ser configurado para utilizar estos hashes para establecer la conexión inicial.</p>
+
+<p> :pushpin: <b> Ejecución de código con altos privilegios (SYSTEM)</b> </p>
+
+  <p> :radio_button: <b> Instalación de Payload: </b> Permite la transferencia y ejecución de un payload (como un DLL o un ejecutable de Meterpreter) de forma remota.</p>
+  <p> :radio_button: <b> Privilegios de Servicio:</b> Una vez que el servicio se ejecuta, generalmente lo hace con los privilegios del usuario autenticado o, en muchos casos, logra escalar a NT AUTHORITY\SYSTEM, lo que te otorga control total sobre el sistema operativo.</p>
+
+<p> :pushpin: <b> Persistencia y Estabilidad</b> </p>
 
 
 
