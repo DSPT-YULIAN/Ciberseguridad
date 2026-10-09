@@ -6677,21 +6677,6 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 
 
-<h2> :white_check_mark: Shellshock CVE-2014-6271 - LINUX</h2> 
-
-
-<p> Es una Vulnerabilidad crítica de ejecución remota de comandos en Bash (GNU Bourne Again Shell) que permite a los atacantes ejecutar comandos arbitrarios mediante variables de entorno.</p>
-
-<p><b>• Versiones Afectadas</b>: Bash 1.03 hasta 4.3 </p>
-<p><b>• Gravedad:</b>:  CVSS:9.3 (Crítica) </p>
-
-
-<p><b>Mecánica de Exploitación</b></p>
-
-
-<p>1. Un atacante envía encabezados HTTP especialmente elaborados o variables de entorno</p>
-<p>2. La sintaxis () en variables de entorno se interpreta incorrectamente como definiciones de funciones</p>
-<p>3. El código malicioso se ejecuta antes de que comience la ejecución normal del programa</p>
 
 
 
@@ -6764,6 +6749,19 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 </br>
 
 
+<h2> :no_entry_sign: Explotación de vulnerabilidades de Windows </h2>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/JnSLM4MZ/wind-1-768x419.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
 
 <h3> :pushpin: Tipos de vulnerabilidades de Windows </h3>
 
@@ -6788,8 +6786,6 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 </br>
 
-
-<h2> :no_entry_sign: Explotación de vulnerabilidades de Windows </h2>
 
 
 <!----------------------------------------------------------------------------- ## Explotación de Microsoft IIS WebDAV ------------------------------------------------------------------------------------------------------------------>
@@ -7215,7 +7211,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 
 
-<p><b> • User Authentication</b> Los usuarios deben proportcionar un nombre de usuario y contraseña para autenticarse en un servidor SMB </p>
+<p><b> • User Authentication</b> Los usuarios deben proporcionar un nombre de usuario y contraseña para autenticarse en un servidor SMB </p>
 <p><b> • Share Authentication</b> El usuario debe proporcionar una contraseña para acceder al recurso compartido restringido</p> 
 
 
@@ -7237,9 +7233,6 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 <p> Se puede oservar que se encuentra corriendo la version 2 de SMB en el puerto 445 del servidor </p>
 
-
-
-<p> Se puede oservar que se encuentra corriendo la version 2 de SMB en el puerto 445 del servidor </p>
 
 
 <p> “Message signing enabled but not required” significa que el servidor puede firmar los mensajes SMB (añadir una firma criptográfica para verificar su autenticidad), pero no exige que los clientes lo hagan. </p>
@@ -8021,80 +8014,6 @@ Es la implementación (basada en el protocolo de comunicación de Windows) de la
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h2> :arrow_right:  Ataques de contraseñas </h2>
 
 
@@ -8157,6 +8076,409 @@ El análisis del comportamiento detecta anomalías como intentos de inicio de se
 Controles basados en IP que incluyen geofencing y bloqueo de dispositivos maliciosos conocidos IP, y requerir verificación adicional para nuevos dispositivos o ubicaciones.
 
 El uso de una combinación de los enfoques anteriores proporciona una defensa profunda contra ataques de contraseñas. Para entornos de alta seguridad, avanzar hacia la autenticación sin contraseña elimina por completo muchos de estos vectores de ataque.</p>
+
+
+</br>
+
+<!--------------------------------------------------##  Explotacion LINUX  --------------------------------------------------------------------------->
+
+
+
+
+
+<h2> :no_entry_sign: Explotación de vulnerabilidades de LINUX </h2>
+
+</br>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/yYG0zNCC/LINUX.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+<h3> :pushpin: Protocolos y servicios mas explotados en Linux</h3>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/KvvNx7p9/436.png" alt="Descripción de la imagen">
+  
+</p>
+
+</br>
+
+
+
+
+<!-------------------------------------- ## Exploiting Bash CVE-2014-6271 Vulnerability (Shellshock) ------------------------------------------>
+
+</br>
+
+<h2> :no_entry: Exploiting Bash CVE-2014-6271 Vulnerability (Shellshock) </h2>
+
+</br>
+
+
+
+<p> Es una Vulnerabilidad crítica de ejecución remota de comandos en Bash (GNU Bourne Again Shell) que permite a los atacantes ejecutar comandos arbitrarios mediante variables de entorno.</p>
+
+
+<p> La explotacion de esta vulnerabilidad implica dos servicios Apache y Bash </p>
+
+
+
+<p><b>• Versiones Afectadas</b>: Bash 1.03 hasta 4.3 </p>
+<p><b>• Gravedad:</b>:  CVSS:9.3 (Crítica) </p>
+
+
+<p><b>Mecánica de Exploitación</b></p>
+
+
+<p>1. Un atacante envía encabezados HTTP especialmente elaborados o variables de entorno</p>
+<p>2. La sintaxis () en variables de entorno se interpreta incorrectamente como definiciones de funciones</p>
+<p>3. El código malicioso se ejecuta antes de que comience la ejecución normal del programa</p>
+
+
+
+<p><b>PASOS</b></p>
+
+
+<p>1. Realizar un escaneo con NMAP para identificar si tenemos un servidor web apache ejecutandose </p>
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/k42kD35g/437.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+<p>Se puede observar que el sitio web esta usando una pieza de texto que no parece estar renderizada en HTML o tener atributos CSS en forma de temporizador, esto se realiza del lado del servidor por medio de un scrip CGI  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/zvW6SCKY/438.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> validando el codigo fuente de la pagina se confirma que contiene un SCRIPT CGI llamado gettime que se almacena en el servidor lo que significa que podemos acceder a el </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/c1McYktD/439.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Podemos utilizar esto como vector de entrada </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/RVWN9Nm1/440.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p>2. Utilizar un modulo de Metasploit o un SCRIPT de NMAP para confirmar que el serevidor es vulnerable a Shellshock </p>
+
+
+<p>Metasploit </p>
+
+
+<p>Utilizar el modulo <b>scanner/http/apache_mod_cgi_bash_env)</b> Este módulo busca la vulnerabilidad Shellshock, un fallo en la forma en que el shell Bash gestiona las variables de entorno externas. Este módulo se dirige a scripts CGI en el servidor web Apache estableciendo la variable de entorno HTTP_USER_AGENT con una
+definición de función maliciosa. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/5N7kfpcv/441.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>La captura muestra el resultado de ejecutar el módulo, lo que ignifica que el módulo logró ejecutar un comando en el servidor remoto y obtuvo como respuesta la salida del comando id. En sistemas Linux: esa salida suele indicar que el objetivo es vulnerable a Shellshock (CVE-2014-6271 o relacionada) y que fue posible ejecutar comandos de forma remota a través de mod_cgi.</p>
+
+
+<p>Nmap </p>
+
+
+<p>El resultado nos muestra que el servidor es vulnerable a Shellshock </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cJQp1YBv/442.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p>3. Utilizar Burp Suite, para inyectar caracteres en el encabezado http del agente del usuario  </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ncbwrMMF/443.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>Enviar la solicitud al repetidor y remplazar la informacion del User-Agent con nuestros caracteres especiales </p>
+
+
+<p>Ejemplo: Intentar mostrar el contenido del archivo de contraseñas en el sistema linux</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/kg14TZpW/445.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> Se puede observar que el comndo fue ejecutado con exito</p>
+
+
+
+<p>4. obtener un shell inverso </p>
+
+
+<p>configurar un oyente con netcat el cual estara escuchando por el puerto 1234 </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/VN2N8t1P/446.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Remplaza el comando para conectar el bash al oyente, colocando la direccion IP de nuetra maquina y el puerto  </p>
+
+
+<p>como se opuede observar obtuvimos una conexion SHELL en nuestro oyente Netcat  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3NFrmbG8/447.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>5. Explotar la vulnerabilidad con METASPLOIT </p>
+
+<p> Utilizar el modulo <b>multi/http/apache_mod_cgi_bash_env_exec</b> Este módulo aprovecha la vulnerabilidad Shellshock, un fallo en la forma en que el shell Bash gestiona las variables de entorno externas. Este módulo ataca los scripts CGI del servidor web Apache estableciendo la variable de entorno HTTP_USER_AGENT con una definición de función maliciosa. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/8zgSXxJ4/448.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+
+
+<!-------------------------------------- ## Exploiting FTP  ------------------------------------------>
+
+
+
+</br>
+
+<h2> :no_entry: Exploiting FTP</h2>
+
+</br>
+
+
+
+<p>1. Identificar la version del FTP que se esta ejecutando en el servidor destino</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mrf2WtPw/449.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>2. Verificar si tenemos acceso Anonimo</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/L8zFfvsk/450.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>El servidor nos arroja el corido de error 530 Login incorrecto</p>
+
+
+
+
+<p>3. Realizar un ataque de fuerza bruta con la herramient Hydra</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/yNch7gvg/451.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>Se puede observar como resultado que se encontraron 7 usuarios junto con su contraseña </p>
+
+
+<p>4. Intentar inisiar sesion para verificar si los usuarios son legitimos </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cLM4ZdfQ/452.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>Una vez logremos ingresar podemos enumerar la informacion que se enuentra en este servidor FTP </p>
+
+
+
+<p>5. Para esta version en especifico se cuenta con un exploit disponible  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/vmY9wqxw/453.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/0NVSkY76/454.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9243,7 +9565,7 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 <p><b> windows/http/badblue_passthru </b>  Este módulo aprovecha un desbordamiento del búfer de la pila en la funcionalidad PassThru de ext.dll en BadBlue 2.72b y versiones anteriores. </p>
 
 
-<p><b> Completar los parametros que requiere el modulo para su funcionamiento como la direccion IP de la victima </p>
+<p> Completar los parametros que requiere el modulo para su funcionamiento como la direccion IP de la victima </p>
 
 
 <p>3. Interactuar con la sesion de Meterpreter </p>
