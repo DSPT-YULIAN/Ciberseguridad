@@ -4484,6 +4484,13 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 <p align="center">
 
+ <img src="https://i.postimg.cc/Hxsh4Hk0/455.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
  <img src="https://i.postimg.cc/02GwmC72/188.png" alt="Descripción de la imagen">
 
 </p>
@@ -8381,104 +8388,220 @@ definición de función maliciosa. </p>
 
 
 
+<!-------------------------------------- ## Exploiting SSH  ------------------------------------------>
 
 
 
+</br>
 
+<h2> :no_entry: Exploiting SSH</h2>
 
+</br>
 
 
 
 
+<p> 1. Identificar la version de SSH que esta corriendo en el servidor</p>
 
 
+<p align="center">
 
+ <img src="https://i.postimg.cc/Hxsh4Hk0/455.png" alt="Descripción de la imagen">
 
+</p>
 
 
 
 
+<p> Resultado: SSH server version: <b>OpenSSH 7.9p1 Ubuntu 10</b> </p>
 
 
+<p> Aunque no tiene una vulnerabilidad crítica única que la defina, está expuesta a varios CVEs posteriores a su lanzamiento y a problemas de seguridad inherentes a su configuración por defecto. </p>
 
 
+<p><b> CVE-2018-15473 (SSH Termination Bug)</b></p>
 
 
+<p> Permite a un atacante remoto ejecutar comandos como root (o el usuario del proceso SSH) sin autenticarse. </p>
 
 
 
+<p align="center">
 
+ <img src="https://i.postimg.cc/2yTvdRVN/456.png" alt="Descripción de la imagen">
 
+</p>
 
 
 
+<p> 2. En este caso vamos a proceder a realizar un ataque de fuerza bruta con Hydra</p>
 
 
+<p> Credenciales identificadas </p>
 
 
+<p align="center">
 
+ <img src="https://i.postimg.cc/XJj9rYYq/457.png" alt="Descripción de la imagen">
 
+</p>
 
 
 
+<p> Nota: con el parametro hydra -R sirve para restaurar (reanudar) una sesión anterior de Hydra.</p>
 
 
 
 
+<p> 3. Iniciar sesion con las credenciales recopiladas </p>
 
 
 
+<p align="center">
 
+ <img src="https://i.postimg.cc/JnxvX035/458.png" alt="Descripción de la imagen">
 
+</p>
 
 
 
+<!-------------------------------------- ## Exploiting SSH  ------------------------------------------>
 
 
 
+</br>
 
+<h2> :no_entry: Exploiting SAMBA</h2>
 
+</br>
 
 
+<p> Samba es un conjunto de programas de software libre que implementa el protocolo SMB/CIFS en sistemas tipo Unix/Linux. Permite la interoperabilidad entre Linux y Windows</p>
 
+<p> Samba utiliza la autenticacion de nombre de usuario y contraseña para obtener acceso al servidor o a un recurso compartido de la red</p>
 
 
 
 
+<p> 1. Identificar la version de SAMBA que esta corriendo en el servidor</p>
 
 
+<p align="center">
 
+ <img src="https://i.postimg.cc/fbYGNMPh/459.png" alt="Descripción de la imagen">
 
+</p>
 
 
 
+<p> Resultado: SAMBA version: <b>Samba smbd 3.X - 4.X</b> </p>
 
 
 
+<p> 2. Obtener las credenciales es posible realizar un ataque de fueza bruta con HYDRA</p>
 
 
+<p> Credenciales identificadas </p>
 
 
+<p align="center">
 
+ <img src="https://i.postimg.cc/8CqLhSkX/460.png" alt="Descripción de la imagen">
 
+</p>
 
 
 
+<p> Nota: con el parametro hydra -R sirve para restaurar (reanudar) una sesión anterior de Hydra.</p>
 
 
 
+<p> 3. Una vez obtenida las contraseñas podemos usar la utilidad de SMBmap para enumerar las unidades compartidas y su contenido de Samba </p>
 
 
 
+<p align="center">
 
+ <img src="https://i.postimg.cc/Yq6k7fmm/461.png" alt="Descripción de la imagen">
 
+</p>
 
 
+<p> obtenemos los recursos disponibles y los permisos que tiene cada uno </p>
 
 
 
+<p> 4. Utilizar SMBclient para enumerar los recursos compartidos (shares) disponibles en un servidor SMB/Samba </p>
 
+<p> Tras introducir la contraseña del usuario admin, el servidor devuelve los siguientes recursos compartidos </p>
 
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Ghx0VLZk/462.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> shawn, nancy y admin son recursos compartidos de tipo <b>Disk</b>, es decir, directorios accesibles a través de SMB. </p>
+<p> <b>IPC$</b>,  es un recurso administrativo estándar utilizado por SMB para comunicaciones internas y administración remota. </p>
+
+<p> Adicionalmente, se observa información del dominio/grupo de trabajo  </p>
+
+
+
+<p> 5. Acceder al contenido de una de las carpetas compartidas </p>
+<p> 6. Descargar el contenido </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/T3kP8qZn/463.png" alt="Descripción de la imagen">
+
+</p>
+
+<p> Descomprimir el documento para poder visualizar su contenido </p>
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/LX377vb0/464.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> 7. Utilizar la herramienta <b>enum4linux</b> para enumerar mas informacion de los recursos compartidos </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/D0VrrK6h/465.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p> Es posible loguearse con los usuarios identificados anteriormente par obtener mas informacion </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/tJhhDmv4/466.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/05md8b5J/467.png" alt="Descripción de la imagen">
+
+</p>
 
 
 
@@ -9048,8 +9171,25 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 <p>Es cuando un usuario accede a los recursos o datos de otro usuario que tiene un nivel de privilegios similar al suyo.</p>
 
 
+</br>
+
+<!-------------------------------------------------- Escalada de privilegios LINUX --------------------------------------------------------------------------->
+
+<h2> :no_entry: Escalada de privilegios WINDOWS</h2>
+
+
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mZ5fGprV/1779886941114.jpg" alt="Descripción de la imagen">
+
+</p>
+
 
 </br>
+
 
 
 <h2> :arrow_right:  Explotaciones del kernel de Windows </h2>
@@ -9462,6 +9602,33 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 
 <h2> :arrow_right: Recolección de datos </h2>
+
+
+<!-------------------------------------------------- Escalada de privilegios Linux  --------------------------------------------------------------------------->
+
+</br>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/YCXy1hm8/linux-permissions-1024x576.jpg" alt="Descripción de la imagen">
+
+</p>
+
+
+</br>
+
+
+<h2> no_entry: Escalada de privilegios LINUX </h2>
+
+
+
+
+
+
+
+
+
 
 
 
