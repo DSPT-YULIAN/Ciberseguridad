@@ -9152,6 +9152,49 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 
 
 
+<p> La fase de post-explotación es el período posterior a la inicialización exitosa de una "shell" o acceso en un sistema objetivo. Su objetivo principal es maximizar el impacto, entender la postura de seguridad general y demostrar cómo un atacante persiste y se mueve dentro de la red. </p>
+
+
+
+<p> no es un proceso estrictamente lineal. Aunque sigue un flujo lógico de "impacto creciente", en la práctica la post-explotación es iterativa y paralela. </p>
+
+
+<p> Acceso -> Persistencia -> Escalada/Reconocimiento -> Movimiento Lateral -> Escalada/Reconocimiento en nuevo host -> ... -> Exfiltración</p>
+
+
+
+<!-------------------------------------------------- Fase 4 Post Explotacion // PERSISTENCIA --------------------------------------------------------------------------->
+
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=60&pause=1000&color=7A8A97&width=500&height=200&lines=Persistencia" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+
+
+<p> Asegurar que el acceso se mantenga aunque el sistema se reinicie o se apliquen parches. Esto se logra mediante la creación de tareas programadas (cron jobs, Task Scheduler), modificación de servicios, inserción en el registro (Registry) o mediante el uso de rootkits. </p>
+
+
+
+<!-------------------------------------------------- Fase 4 Post Explotacion // ESCALADA DE PRIVILEGIOS --------------------------------------------------------------------------->
+
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=42&pause=1000&color=7A8A97&width=550&height=300&lines=Escalada+de+Privilegios" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+
+<p> Pasar de un usuario estándar a un administrador local (root en Linux, Administrator en Windows). Esto permite acceder a archivos sensibles, modificar configuraciones de seguridad y obtener una vista más completa del sistema. </p>
+
+
+
+
 <h2> :arrow_right: Escalada de privilegios </h2>
 
 
@@ -9173,7 +9216,7 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 
 </br>
 
-<!-------------------------------------------------- Escalada de privilegios LINUX --------------------------------------------------------------------------->
+<!-------------------------------------------------- Escalada de privilegios windows --------------------------------------------------------------------------->
 
 <h2> :no_entry: Escalada de privilegios WINDOWS</h2>
 
@@ -9233,8 +9276,6 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 
 
 <!-------------------------------------------------- Completar el modulo con un sistema vulnerable --------------------------------------------------------------------------->
-
-
 
 
 
@@ -9596,10 +9637,13 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 
 
-
-
-
 <!-------------------------------------------------- Escalada de privilegios Linux  --------------------------------------------------------------------------->
+
+
+
+
+<h2> :no_entry: Escalada de privilegios LINUX </h2>
+
 
 </br>
 
@@ -9612,9 +9656,6 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 
 </br>
-
-
-<h2> :no_entry: Escalada de privilegios LINUX </h2>
 
 
 <h2> :arrow_right:  Explotacion del Kernel de Linux </h2>
@@ -9777,34 +9818,118 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 
 
+<!--------------------------------------------------## Exploiting Misconfigured Cron Jobs--------------------------------------------------------------------------->
+
+
+
+<h2> :no_entry: Exploiting Misconfigured Cron Jobs </h2>
+
+
+
+<p> <b>Cron jobs</b></p>
+
+
+
+<p> Cron es una herramienta fundamental para los administradores a la hora de realizar tareas de mantenimiento periódico en el sistema. Incluso puede utilizarse para tareas que se ejecutan dentro de los directorios de usuarios individuales. Sin embargo, estas automatizaciones deben emplearse con precaución, ya que pueden facilitar ataques de escalada de privilegios.
+Se ejecutan automáticamente a intervalos o tiempos específicos (segundos, minutos, horas, días, meses o años). El sistema usa el daemon cron (o crond) para gestionar estas tareas en segundo plano. </p>
+
+<p> Se usa para </p>
+
+<p>:radio_button: Copias de seguridad.</p>
+<p>:radio_button: Limpieza de logs.</p>
+<p>:radio_button: Actualizaciones de paquetes.</p>
+<p>:radio_button: Monitoreo de sistemas.</p>
+
+
+<p> Un atacante con acceso limitado puede usar cron para escalar privilegios, mantener persistencia o ejecutar código malicioso. </p>
+
+
+<p> Elevar privilegios a traves de trabajos cron mal configurados  </p>
+
+
+<!-------------------------------------------------- CONSULTAR Y REALIZAR UN LABORATORIO DE ESTA TECNICA--------------------------------------------------------------------------->
+
+
+<!--------------------------------------------------## Explotación de binarios SUIDs--------------------------------------------------------------------------->
 
 
 
 
+<h2> :no_entry: Explotación de binarios SUID </h2>
 
 
 
-// Después, puedes ejecutar
-//
-// ¡NO TE OLVIDES DE RESTAURAR TU /etc/passwd DESPUÉS DE EJECUTAR EL EXPLOIT!
-//   mv /tmp/passwd.bak /etc/passwd
-//
+<p><b>Los binarios SUID (Set User ID)</b></p>
 
 
 
+<p> Son archivos ejecutables que, al ser lanzados, se ejecutan con los permisos de usuario del propietario del archivo, en lugar de los permisos del usuario que lo invocó.</p>
 
-<!--------------------------------------------------## Movimiento lateral --------------------------------------------------------------------------->
-
-</br>
-
+<p> Si se configura incorrectamente los usuarios sin privilegios pueden aprovechar las configuraciones incorrectas  vulnerabilidades dentro del binario o script para obtener una sesion elevada </p>
 
 
 
-<h2> :arrow_right: Movimiento lateral</h2>
+<p><b>Pasos</b></p>
+
+
+
+<p> 1. Verifique el contenido del directorio del usuario estudiante. </p>
+
+<p> 2. Observe que el binario de bienvenida tiene el bit suid configurado (o activado) <b>-rwsr-xr-x</b>. Esto significa que este binario y sus procesos secundarios se ejecutarán con privilegios de root. Verifique el tipo de archivo. </p>
+
+
+
+<p> 3. Con el parametro <b>file welcome</b> Observamos que es un binario ELF. Y al ejecutarlo, muestra un mensaje de bienvenida. </p>
+
+<p> 4. Investigar el binario Con el parametro <b>strings welcome</b></p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/sg6cYrS9/479.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Observe las cadenas de saludos en la salida del comando de cadenas. Es posible que el binario de bienvenida está llamando al binario de saludos. Entonces, reemplace el binario de saludos con algún otro binario (por ejemplo/bin/bash) que luego también debería ejecutarse como root. </p>
+
+
+<p> 5. Elimine el binario de saludos y luego copie/bin/bash a su ubicación y cámbiele el nombre a saludos. </p>
+<p> 6. Luego, ejecute nuevamente el binario de bienvenida.</p>
+<p> 7. El usuario estudiante fue escalado a usuario root. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/d1MSCFPd/480.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<!-------------------------------------------------- Fase 4 Post Explotacion // Movimiento lateral --------------------------------------------------------------------------->
+
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=42&pause=1000&color=7A8A97&width=550&height=300&lines=Movimiento+Lateral" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+
+<p> Usar el sistema comprometido como punto de partida para acceder a otros recursos de la red. Esto implica el uso de credenciales robadas, explotación de vulnerabilidades en el sistema operativo, o el uso de herramientas de administración legítimas (como PsExec o WMI) para ejecutar comandos en otros hosts. </p>
 
 
 
 <!--------------------------------------------------##  Dumping Hashes With Mimikatz --------------------------------------------------------------------------->
+
+
+<h2> :arrow_right: Movimiento lateral en windows </h2>
+
+
 
 
 
@@ -10070,13 +10195,34 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 
 
-<h2> :arrow_right: Persistencia </h2>
-
-<h2> :arrow_right: Recolección de datos </h2>
+<!-------------------------------------------------- Fase 4 Post Explotacion // Exfiltración y Recopilación de Datos--------------------------------------------------------------------------->
 
 
 
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=42&pause=1000&color=7A8A97&width=550&height=300&lines=Exfiltraci%C3%B3n+de+Datos" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
 
+
+<p> Identificar y extraer información valiosa, como secretos, bases de datos, archivos de configuración, certificados y credenciales (hashes de contraseñas, claves SSH). </p>
+
+
+
+
+<!-------------------------------------------------- Fase 4 Post Explotacion // Anti-Forensicss--------------------------------------------------------------------------->
+
+
+
+<div id="user-content-toc">
+  <ul align="center">
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=50&pause=1000&color=7A8A97&width=550&height=300&lines=Anti-Forensics" alt="Typing SVG" /></a></summary>
+  </ul>
+</div>
+
+
+<p> Alterar logs, borrar rastros de la actividad del atacante, o crear archivos falsos para confundir al equipo de respuesta a incidentes (IR) y prolongar el tiempo de detección. </p>
 
 
 
@@ -10098,7 +10244,7 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 <div id="user-content-toc">
   <ul align="center">
-    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7608A&width=700&height=600&lines=Fase+3.+Explotacion" alt="Typing SVGxxxxx" /></a></summary>
+    <summary><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=60&pause=1000&color=970606&width=550&height=300&lines=Fase+5.+Informe" alt="Typing SVGxxxxx" /></a></summary>
   </ul>
 </div>
 
