@@ -9179,8 +9179,6 @@ de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructu
 
 
 
-
-
 <p align="center">
 
   <img src="https://i.postimg.cc/mZ5fGprV/1779886941114.jpg" alt="Descripción de la imagen">
@@ -9598,10 +9596,7 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 
 
-<h2> :arrow_right: Persistencia </h2>
 
-
-<h2> :arrow_right: Recolección de datos </h2>
 
 
 <!-------------------------------------------------- Escalada de privilegios Linux  --------------------------------------------------------------------------->
@@ -9619,7 +9614,166 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 </br>
 
 
-<h2> no_entry: Escalada de privilegios LINUX </h2>
+<h2> :no_entry: Escalada de privilegios LINUX </h2>
+
+
+<h2> :arrow_right:  Explotacion del Kernel de Linux </h2>
+
+
+<p> El kernel de Linux es el componente central del sistema operativo Linux. Actúa como un intermediario entre las aplicaciones y el hardware del equipo. Es responsable de gestionar recursos como la CPU, la memoria y los dispositivos de entrada/salida. </p>
+
+<p> La explotación del kernel de Linux es una técnica avanzada de seguridad ofensiva que permite a un atacante comprometer el núcleo del sistema operativo, obteniendo así un control total sobre el host. Dado que el kernel opera en el anillo de privilegio más alto (modo kernel), una vulnerabilidad aquí permite ejecutar código con privilegios de root, incluso si el proceso de usuario original se ejecutaba con permisos limitados. </p>
+
+
+
+<p> Pasos </p>
+
+
+<p> 1. obtener una sesion de meterpreter en la victima </p>
+
+
+
+<p> Al validar los permisos observamos la cuenta de usuario  <b>www-data </b> esta cuenta se encontrara normalmente en sistemas Linux que alojan un servidor web </p>
+<p> Esta cuenta se usa esencialmente para administrar el servidor ya sea Apache o Nginx y cuenta con permisos de bajo privilegio </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/yxc3RrW7/468.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 2. Elevar los privilegios usando el SCRIPT  </p>
+
+<p> https://github.com/The-Z-Labs/linux-exploit-suggester  </p>
+
+<p> Linux Exploit Suggester (LES) es una herramienta de línea de comandos escrita en Python que analiza la versión del kernel de Linux en ejecución y sugiere exploits de escalada de privilegios (privilege escalation) conocidos que podrían ser aplicables. </p>
+
+
+<p> Se recomienda descargar primero el script en el equipo atacante y despues transferirlo al equipoo victima  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nLJR96z7/469.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Una vez que se cargue en el equipo de la victima se procede a modificar los permisos y a ejecutar  </p>
+
+
+
+<p> 3. Validar el resultado  </p>
+
+<p> Obtenemos informacion importante del sistema </p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/nrN8y01s/470.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Podemos identificar una serie de vulnerabilidades donde proporciona informacion detallada</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/htLFY8Qh/471.png" alt="Descripción de la imagen">
+  
+</p>
+
+ <p> <b>CVE-2016-5195 </b>Es una vulnerabilidad de escalada de privilegios en el kernel de Linux permite a los usuarios locales obtener privilegios aprovechando el manejo incorrecto de una función de copia en escritura (COW) para escribir en un mapeo de memoria de solo lectura</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/QC3Y1wSf/472.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Gm27FkJH/473.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 4. Descargar el exploit </p>
+
+<p> Este exploit utiliza el exploit «pokemon» de la vulnerabilidad «dirtycow» como base y genera automáticamente una nueva línea en el archivo «passwd». Se le pedirá al usuario que introduzca la nueva contraseña al ejecutar el binario. A continuación, se realiza una copia de seguridad del archivo /etc/passwd original en /tmp/passwd.bak y se sobrescribe la cuenta de root con la línea generada. Tras ejecutar el exploit, deberías poder iniciar sesión con el usuario recién creado.<p>
+
+
+
+<p> Para utilizar este exploit, modifica los valores de usuario según tus necesidades. El valor por defecto es «firefart». </p>
+
+<p> Compilar con:</p>
+   
+   <p>gcc -pthread dirty.c -o dirty -lcrypt</p>
+
+
+<p> Para compilar codigo C en LINUX necesitamos GCC " Colección de Compiladores GNU es un conjunto de herramientas de programación desarrollado por el proyecto GNU. Su función principal es traducir el código fuente que escriben los programadores en lenguajes de alto nivel a un programa ejecutable que el procesador de la computadora puede entender y ejecutar directamente."</p>
+
+
+<p> Proceder a instalar GCC </p>
+
+
+ <p>Se recomienda cargar y compilar este exploit en la maqunina victima</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/4xFnFgCT/474.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p>abril un shell en la secion de meterpreter para modificar los permisos</p>
+
+
+<p> ejecuta el binario recién creado con: </p>
+    <p>«./dirty» o «./dirty mi-nueva-contraseña»</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/j2KjJqfJ/475.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p>Se puede observar que la contraseña fue respaldada con exito y que se creo el usuario </p>
+
+<p>Validar el archivo de contraseñas </p>
+<p>Podemos ver que se creo el usuario y que cuenta con permisos privilegiados </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/6p7Bq4P0/476.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 5. Iniciar sesion con  «su firefart» o «ssh firefart@...» y validar que cuenta con privilegios elevandos con comandos que requieran que el usuario tenga premisos de ROOT </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3wX50XFz/477.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/mDgXZCXM/478.png" alt="Descripción de la imagen">
+  
+</p>
 
 
 
@@ -9628,6 +9782,13 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
 
 
 
+
+
+// Después, puedes ejecutar
+//
+// ¡NO TE OLVIDES DE RESTAURAR TU /etc/passwd DESPUÉS DE EJECUTAR EL EXPLOIT!
+//   mv /tmp/passwd.bak /etc/passwd
+//
 
 
 
@@ -9905,6 +10066,22 @@ Mientras que la sesión de 32 bits te proporciona el acceso inicial necesario pa
   <p> :radio_button: <b> Privilegios de Servicio:</b> Una vez que el servicio se ejecuta, generalmente lo hace con los privilegios del usuario autenticado o, en muchos casos, logra escalar a NT AUTHORITY\SYSTEM, lo que te otorga control total sobre el sistema operativo.</p>
 
 <p> :pushpin: <b> Persistencia y Estabilidad</b> </p>
+
+
+
+
+<h2> :arrow_right: Persistencia </h2>
+
+<h2> :arrow_right: Recolección de datos </h2>
+
+
+
+
+
+
+
+
+
 
 
 
