@@ -8613,303 +8613,36 @@ definición de función maliciosa. </p>
 <h1> :warning: Ataques basados en red</h1>
 
 
-<p> Los ataques basados en el sistema/host tienen como objetivo el sistema operativo subyacente o los hosts individuales dentro de una red para comprometer su seguridad. Estos ataques explotan vulnerabilidades en la configuración, el software o el hardware del sistema para obtener acceso no autorizado, escalar privilegios o interrumpir el funcionamiento normal del host. Las técnicas comunes incluyen la explotación de vulnerabilidades de software sin parches, configuraciones incorrectas, contraseñas débiles e infecciones de malware. Los atacantes pueden intentar obtener privilegios de root o administrador para manipular o robar datos confidenciales, instalar puertas traseras o provocar fallas en el sistema. Los ataques basados en el sistema o el host pueden provocar infracciones importantes si no se detectan y mitigan rápidamente, por lo que es esencial que las organizaciones actualicen periódicamente el software e implementen políticas de seguridad sólidasy monitorear cualquier actividad sospechosa para proteger sus sistemas de estas amenazas. </p>
+<p>  los ataques basados en red (o network-based attacks) son aquellos que explotan la infraestructura de comunicación, los protocolos de red o los dispositivos de red para comprometer sistemas, robar datos o interrumpir servicios
 
+ </p>
 
 
 
+<!--------------------------------------------------## Ataque (DoS/DDoS) --------------------------------------------------------------------------->
 
 
+<p><b> Tipos de ataque</b></p>
 
 
+<h2> :boom: Ataques de Denegación de Servicio (DoS/DDoS)</h2>
 
 
+<p>Estos ataques buscan agotar recursos críticos del objetivo (CPU, RAM, ancho de banda, conexiones TCP).</p>
 
 
 
+<h3> :white_check_mark: DoS (Denial of Service): </h3>
 
 
+<p>Un atacante satura un recurso (CPU, memoria, ancho de banda) con tráfico masivo desde una única fuente.</p>
 
 
+<h3> :white_check_mark: DDoS (Distributed DoS)</h3>
 
 
+<p>El tráfico proviene de múltiples fuentes (botnet), lo que hace más difícil mitigarlo.</p>
 
-
-
-<!--------------------------------------------------##  MitM  --------------------------------------------------------------------------->
-
-
-<h2> :arrow_right:  Ataques basados en red </h2>
-
-
-
-
-<h2>:white_check_mark:  Ataques Man-in-the-Middle (MitM)</h2> 
-
-
-
-
-<p> Un ataque MITM ocurre cuando un atacante se interpone entre dos partes comunicándose, interceptando y potencialmente modificando la comunicación. El objetivo es robar información sensible (credenciales, tokens, etc.) o alterar los datos transmitidos. </p>
-
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/3xghnVqC/MITM.png" alt="Descripción de la imagen">
-
-</p>
-
-
-
-
-<p> Este ataque es relativamente sencillo de llevar a cabo si las dos partes no confirman la autenticidad e integridad de cada mensaje. En algunos casos, el protocolo elegido no proporciona autenticación segura o integridad. Algunos protocolos tienen inseguridades inherentes que los hacen susceptibles a este tipo de ataques. </p>
-
-
-
-
-<h3> &nbsp; Técnicas (MiTM) </h3>
-
-<p><b>:radio_button:   Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
-<p><b>:radio_button:   Ataque gemelo malvado :</b> configuración de un punto de acceso Wi-Fi falso para interceptar el tráfico a través del sistema del atacante.</p>
-<p><b>:radio_button:   Envenenamiento de caché ARP :</b> envío de mensajes ARP falsos para vincular su dirección MAC con la dirección IP de otro host.</p>
-<p><b>:radio_button:   Envenenamiento LLMNR/NBT-NS :</b> explotación de protocolos de red para interceptar y retransmitir tráfico de autenticación.</p>
-<p><b>:radio_button:   Suplantacion DNS/ DNS Spoofing  </b>  implica proporcionar información falsa respuestas DNS para redirigir a las víctimas a servidores controlados por el atacante. Esto puede suceder a través de un compromiso de servidores DNS, envenenamiento de caché, o respondiendo a consultas DNS más rápidas que el servidor legítimo.</p>
-<p><b>:radio_button:   BGP Hijacking </b>   a nivel de enrutamiento de Internet, donde los atacantes anuncian rutas BGP falsas para redirigir el tráfico a través de su infraestructura. Se trata de un ataque más sofisticado, normalmente dirigido a organizaciones o regiones específicas.</p>
-
-
-
-<p> Una vez que nos hemos posicionado en el medio, podemos empezar a rastrear el tráfico en busca de información confidencial. Si el tráfico está cifrado, podemos emplear técnicas como: </p>
-
-<p><b>:radio_button:  Debilitar el cifrado :</b> comprometer las capacidades de cifrado de un dispositivo de red</p>
-<p><b>:radio_button:  Certificados falsos :</b> implican que el atacante presente su propio certificado y establezca conexiones cifradas separadas con ambas partes. Esto funciona si la víctima acepta una advertencia de certificado no válido o si el atacante ha comprometido una autoridad de certificación (CA).</p>
-<p><b>:radio_button:  Ataque de degradación / SSL Stripping  </b> aprovecha la compatibilidad con versiones anteriores de un sistema para obligarlo a utilizar una versión menos segura.</p>
-
-
-<h3> &nbsp; Herramientas para ataques MITM </h3>
-
-</br>
-
-<p><b> :radio_button: SSLstrip+ :</b> Realizar ataques de degradación de HTTPS a HTTP.</p>
-<p><b> :radio_button: Bettercap :</b> es el sucesor moderno de Ettercap. Admite suplantación de ARP, suplantación de DNS, proxy HTTP/HTTPS y tiene una arquitectura modular para varios escenarios de ataque.</p>
-<p><b> :radio_button: Ettercap :</b> es una herramienta clásica para ataques MITM en LAN. </p>
-<p><b> :radio_button: Cain y abel :</b> </p>
-<p><b> :radio_button: Mitmframwork :</b> Envenenar consultas LLMNR, NBT-NS y mDNS</p>
-<p><b> :radio_button: mitmproxy :</b> proxy HTTPS interactivo que permite la inspección y modificación del tráfico. Es particularmente útil para analizar y manipular comunicaciones HTTP/HTTPS.</p>
-<p><b> :radio_button: Arpspoof :</b> Ataques de envenenamiento de caché ARP.</p>
-<p><b> :radio_button: Aircrack-ng :</b> Conjunto de herramientas para atacar redes Wi-Fi.</p>
-<p><b> :radio_button: Airgeddon :</b> Framework para atacar redes WiFi. Incluye ataques de gemelo malvado.</p>
-<p><b> :radio_button: Fluxion :</b> Ataques MiTM contra redes Wi-Fi.</p>
-
-
-
-<p> MITM puede afectar a otros protocolos de texto claro como FTP, SMTP, y POP3. La mitigación fundamental requiere el uso de criptografía. La solución radica en una autenticación adecuada junto con el cifrado o la firma de los mensajes intercambiados. Con la ayuda de la Infraestructura de Clave Pública (PKI) y certificados raíz confiables, seguridad de la capa de transporte (TLS) protege contra MITMataques cuando se implementan correctamente..</p>
-
-
-<h3> &nbsp; Técnicas de mitigación </h3>
-
-
-<p><b> :radio_button: Validación de certificados :</b> Verificar que el certificado sea válido antes de conectar</p>
-<p><b> :radio_button: DHCP Snooping </b> Evita IPs falsas en la red local.</p>
-<p><b> :radio_button: TLS Pinning :</b> Fija el certificado esperado para evitar impersonación</p>
-
-
-
-
-
-
-<p> Tecnicas</p>
-<p><b> • Descifrado de contraseñas:</b> </p>
-
-
-  <p><b> &nbsp; Ataques no electronicos:</b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ingenieria social </b> </p>
- 
-<p><b> &nbsp;&nbsp;🛠 &nbsp; Setoolkit</b></p>
-<p><b> &nbsp;&nbsp;🛠 &nbsp; BeEF</b></p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Espiar la contraseña </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Buscar en la basura</b> </p>
-
-  <p><b> &nbsp; Ataques activos en linea:</b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Contraseñas por defecto </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Password Cracking  </b> </p>
-
-
-<p><b> Intentar explotar las posibles debilidades de contraseñas asignadas en el servidor web </b> </p>
-<p> Objetivos del ataque</p>
-
-<p> Servidores de SMTP y FTP</p>
-<p> Tunelkes SSH</p>
-<p> Formularios de autenticacion web</p>
-
-<p> Tecnicas</p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de fuerza bruta </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de diccionario </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de tabla arcoiris </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Uso de Troyanos, Spyware, Keyloggers </b> </p>
-
-
-
-
-
-
-
-
-
-
- <p><b> &nbsp; Ataques pasivos en linea::</b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de tabla de arcoiris, tecnica de criptoanalitica almacenada en memoria</b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Ataque de red distribuido</b> </p>
-
-
-
-<p><b> • Explotacion de desbordamiento de Bufer:</b> </p>
-
-
-  <p><b> &nbsp; Vulnerabilidad de las aplicaciones de Bufer:</b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Inyectar codigo malicioso en el bufer para dañar archivos </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Modificar datos del program</b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Acceder a informacion critica </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Obtener acceso al Shell </b> </p>
-
-
-
-
-<p><b> • Explotacion de vulnerabilidades :</b> </p>
-
-  <p><b> &nbsp; Determinar la capacidad de la vulnerabilidad </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Desarrollar el exploit </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Seleccionar el metodo de entrega (Local o remoto)</b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Generar y entregar el payload </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 &nbsp;&nbsp; Obtener acceso al Shell remoto </b> </p>
-
-
-
-
-<p> Paso 2:  &nbsp; Elevar privilegios - Privilege Escalation &nbsp; TA0004 </p>
-
-<p> Tipos</p>
-
-<p><b> Horizontal</b> &nbsp; Acceder a recursos, funciones y otros privilegios que pertenecen a un usuario autorizado con un permiso de acceso similar </p>
-<p><b> Vertical </b> &nbsp; Acceder a los recursos y funciones de un usuario con privilegios superiores </p>
-
-
-<p> Tecnicas</p>
-
-<p><b> • Explotacion de vulnerabilidades </b> &nbsp; para obtener mayores privilegios </p>
-
-<p><b> • Secuestro de DLLs</b></p>
-  <p><b> &nbsp; Reemplazar Dlls legitimas por maliciosas</b> &nbsp; Powersploit puede identificar los DLLs secuentrables y ejecutar el cambio en el sistema</p>
-
-<p><b> • Ataques a vulnerabilidades spectre y meltdown </b> &nbsp;"Procesadores AMD - ARM - INTEL" </p>
-
-<p><b> • Explotacion de servicios mal configurados:</b> </p>
-  <p><b> &nbsp; Identificar servicios mal configurados </b> &nbsp; Powersploit </p>
-
- 
-
-
-<p> Paso 3:  &nbsp; Mantener altos niveles de acceso - Persistencia &nbsp; TA0003 </p>
-
-<p> 1.&nbsp; Ejecutar remotamente aplicaciones maliciosas para robar informacion critica </p>
-    <p><b> &nbsp;&nbsp;🛠 Backdoors &nbsp;&nbsp; Denegar o interrumpir la operacion, tomando informacion para la perdida de privacidad y obtener acceso no autorizado a los recursos del sistema </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 Crackers &nbsp;&nbsp; Software diseñado para decifrar un codigo o contraseña </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 Keyloggers &nbsp;&nbsp; Grabar las pulsaciones del teclados </b> </p>
-    <p><b> &nbsp;&nbsp;🛠 Spyware &nbsp;&nbsp; Tomar captura de la pantalla y enviarlas a un destino definido </b> </p>
-
-
-
-<p> 2.&nbsp; Esconder los programas o archivos maliciosos</p>
-    <p><b> &nbsp;🛠 Rootkits &nbsp;&nbsp; Malware sofisticado diseñado específicamente para ocultar su presencia en un sistema mientras otorga acceso privilegiado a atacantes no autorizados </b> </p>
-        <p>&nbsp;&nbsp;🛠 • Lojas </p>
-        <p>&nbsp;&nbsp;🛠 • Scranos </p>
-        <p>&nbsp;&nbsp;🛠 • Horse pill </p>
-        <p>&nbsp;&nbsp;🛠 • Necurs </p>
-    <p><b> &nbsp;🛠 Streams de datos NTFS &nbsp;&nbsp; Permite al atacante ocultar codigo malicioso</b> </p>
-    <p><b> &nbsp;🛠 Esteganografia &nbsp;&nbsp; Ocultar informacion detras de otros datos sin el consentimiento de la victima </b> </p>
-  
-
-
-<p> Paso 4:  &nbsp; Limpiar el rastro - Defense Evasion  &nbsp; TA0005 </p>
-
-<p><b> &nbsp; • Desactivar la auditoria del sistema</b> </p>
-<p><b> &nbsp; • Borrar los registros del sistema</b> </p>
-<p><b> &nbsp; • Manipular los registros del sistema</b> </p>
-<p><b> &nbsp; • Cubrir las huellas en la red</b> </p>
-<p><b> &nbsp; • Borrados de archivos </b> </p>
-
-
-<p>&nbsp;&nbsp; Herramientas </p>
-        <p>&nbsp;&nbsp;🛠 • CCleaner </p>
-        <p>&nbsp;&nbsp;🛠 • DBAN &nbsp; Es una herramienta para para aplicar un borrado seguro a cualquier disco, HDD o SSD. </p>
-        <p>&nbsp;&nbsp;🛠 • Privacy Eraser </p>
-        <p>&nbsp;&nbsp;🛠 • Wipe </p>
-        <p>&nbsp;&nbsp;🛠 • ClearProg </p>
-
-
-
-p>&nbsp;&nbsp;<h3>Ataques a servidores WEB<h3></p>
-
-  <p> Daños dentro de la origanizacion</p>
-
-<p><b> &nbsp; • Comprometer cuentas de usuario</b> </p>
-<p><b> &nbsp; • Realizar cambios en el contenido del sitio web</b> </p>
-<p><b> &nbsp; • Realizar ataques secundarios desde el servidor web</b> </p>
-<p><b> &nbsp; • Acceder como administrador a otras aplicaciones o al servidor </b> </p>
-<p><b> &nbsp; • Manipular los datos de la organizacion para comprometer a los usuarios que se conecten al servidor</b> </p>
-<p><b> &nbsp; • Robar datos sensibles de la origanizacion </b> </p>
-
-<p> Riesgos </p>
-
-<p><b> &nbsp; • Establecer permisos inadecuados de archivos y directorios </b> </p>
-<p><b> &nbsp; • Realizar la instalacion del servidor con la configuracion por defecto </b> </p>
-<p><b> &nbsp; • Dejar habilitados servicios innecesarios </b> </p>
-<p><b> &nbsp; • Problemas con la configuracion de cuentas con contraseñas por defecto </b> </p>
-<p><b> &nbsp; • Configuraciones erroneas en el servidor web el sistema operaativo o las redes </b> </p>
-<p><b> &nbsp; • Fallos en el software del servidor, sistema operativo o aplicaciones web </b> </p>
-<p><b> &nbsp; • Problemsa con los certificaados </b> </p>
-
-<p>Recopilar informacion</p>
-
-<p><b> &nbsp; • Whois </b> </p>
-  <p>&nbsp;&nbsp;🛠 https://www.whois.com </p>
-  <p>&nbsp;&nbsp;🛠 https://whois.domaintools.com </p>
-
-<p><b> &nbsp; • Dosier del dominio </b> </p>
-  <p>&nbsp;&nbsp;🛠 https://centralops.net/co </p>
-
-<p><b> &nbsp; • Encontrar subdominios </b> </p>
-<p>&nbsp;&nbsp;🛠 https://pentest-tools.com/information-gathering/find-subdomains-of-domain </p>
-
-<p><b> &nbsp; • Robots.txt </b> Este archivo es para evitar el rastreo y la indexación de ciertas partes de tu sitio por rastreadores web y arañas administrados por sitios como Yahoo! y Google.</p>
-  <p>&nbsp;&nbsp;🛠 URL/robots.txt o https://seranking.com/free-tools/robots-txt-tester.html</p>
-
-<p><b> &nbsp; • Captura de Banners</b> </p>
-  <p>&nbsp;&nbsp;🛠 Netcraft</p>
-  <p>&nbsp;&nbsp;🛠 Netcat</p>
-  <p>&nbsp;&nbsp;🛠 Telnet</p>
-  <p>&nbsp;&nbsp;🛠 Httprecon</p>
-  <p>&nbsp;&nbsp;🛠 ID Serve</p>
-  <p>&nbsp;&nbsp;🛠 Nmap</p>
-
-
-<p><b> &nbsp; Explotar vulnerbilidades</b> </p>
-  <p>&nbsp;&nbsp;🛠 Acunetix</p>
-  <p>&nbsp;&nbsp;🛠 Arachni</p>
-  <p>&nbsp;&nbsp;🛠 Burp Suite</p>
-  <p>&nbsp;&nbsp;🛠 Nessus</p>
-  <p>&nbsp;&nbsp;🛠 Nikto</p>
-
-
-<p><b> &nbsp; Vulnerabilidades explotables</b> </p>
-  <p>&nbsp;&nbsp;🛠 Exploit dtabase</p>
-  <p>&nbsp;&nbsp;🛠 Rapid7</p>
-  <p>&nbsp;&nbsp;🛠 Security focus</p>
-  <p>&nbsp;&nbsp;🛠 Nessus</p>
-  <p>&nbsp;&nbsp;🛠 Zero day</p>
-
-
-
-
-<p><b> &nbsp; Ataques mas frecuentes a los servidores WEB</b> </p>
 
 
 ### &nbsp;  Ataques de denegación de servicio (DoS y DDoS)
@@ -9007,6 +8740,151 @@ El resultado final es que la máquina de la víctima se ve inundada por paquetes
 
 
 
+
+<!--------------------------------------------------## Ataque (MitM) --------------------------------------------------------------------------->
+
+
+<h2> :boom: Ataques de Man-in-the-Middle (MitM)</h2>
+
+
+
+<p> Un ataque MITM ocurre cuando un atacante se interpone entre dos partes comunicándose, interceptando y potencialmente modificando la comunicación. El objetivo es robar información sensible (credenciales, tokens, etc.) o alterar los datos transmitidos. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/3xghnVqC/MITM.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p> Este ataque es relativamente sencillo de llevar a cabo si las dos partes no confirman la autenticidad e integridad de cada mensaje. En algunos casos, el protocolo elegido no proporciona autenticación segura o integridad. Algunos protocolos tienen inseguridades inherentes que los hacen susceptibles a este tipo de ataques. </p>
+
+
+
+
+<h3> &nbsp; Técnicas (MiTM) </h3>
+
+<p><b>:radio_button:   Suplantación de DHCP :</b> envío de respuestas DHCP falsas para redirigir el tráfico de red.</p>
+<p><b>:radio_button:   Ataque gemelo malvado :</b> configuración de un punto de acceso Wi-Fi falso para interceptar el tráfico a través del sistema del atacante.</p>
+<p><b>:radio_button:   Envenenamiento de caché ARP :</b> envío de mensajes ARP falsos para vincular su dirección MAC con la dirección IP de otro host.</p>
+<p><b>:radio_button:   Envenenamiento LLMNR/NBT-NS :</b> explotación de protocolos de red para interceptar y retransmitir tráfico de autenticación.</p>
+<p><b>:radio_button:   Suplantacion DNS/ DNS Spoofing  </b>  implica proporcionar información falsa respuestas DNS para redirigir a las víctimas a servidores controlados por el atacante. Esto puede suceder a través de un compromiso de servidores DNS, envenenamiento de caché, o respondiendo a consultas DNS más rápidas que el servidor legítimo.</p>
+<p><b>:radio_button:   BGP Hijacking </b>   a nivel de enrutamiento de Internet, donde los atacantes anuncian rutas BGP falsas para redirigir el tráfico a través de su infraestructura. Se trata de un ataque más sofisticado, normalmente dirigido a organizaciones o regiones específicas.</p>
+
+
+
+<p> Una vez que nos hemos posicionado en el medio, podemos empezar a rastrear el tráfico en busca de información confidencial. Si el tráfico está cifrado, podemos emplear técnicas como: </p>
+
+<p><b>:radio_button:  Debilitar el cifrado :</b> comprometer las capacidades de cifrado de un dispositivo de red</p>
+<p><b>:radio_button:  Certificados falsos :</b> implican que el atacante presente su propio certificado y establezca conexiones cifradas separadas con ambas partes. Esto funciona si la víctima acepta una advertencia de certificado no válido o si el atacante ha comprometido una autoridad de certificación (CA).</p>
+<p><b>:radio_button:  Ataque de degradación / SSL Stripping  </b> aprovecha la compatibilidad con versiones anteriores de un sistema para obligarlo a utilizar una versión menos segura.</p>
+
+
+<h3> &nbsp; Herramientas para ataques MITM </h3>
+
+</br>
+
+<p><b> :radio_button: SSLstrip+ :</b> Realizar ataques de degradación de HTTPS a HTTP.</p>
+<p><b> :radio_button: Bettercap :</b> es el sucesor moderno de Ettercap. Admite suplantación de ARP, suplantación de DNS, proxy HTTP/HTTPS y tiene una arquitectura modular para varios escenarios de ataque.</p>
+<p><b> :radio_button: Ettercap :</b> es una herramienta clásica para ataques MITM en LAN. </p>
+<p><b> :radio_button: Cain y abel :</b> </p>
+<p><b> :radio_button: Mitmframwork :</b> Envenenar consultas LLMNR, NBT-NS y mDNS</p>
+<p><b> :radio_button: mitmproxy :</b> proxy HTTPS interactivo que permite la inspección y modificación del tráfico. Es particularmente útil para analizar y manipular comunicaciones HTTP/HTTPS.</p>
+<p><b> :radio_button: Arpspoof :</b> Ataques de envenenamiento de caché ARP.</p>
+<p><b> :radio_button: Aircrack-ng :</b> Conjunto de herramientas para atacar redes Wi-Fi.</p>
+<p><b> :radio_button: Airgeddon :</b> Framework para atacar redes WiFi. Incluye ataques de gemelo malvado.</p>
+<p><b> :radio_button: Fluxion :</b> Ataques MiTM contra redes Wi-Fi.</p>
+
+
+
+<p> MITM puede afectar a otros protocolos de texto claro como FTP, SMTP, y POP3. La mitigación fundamental requiere el uso de criptografía. La solución radica en una autenticación adecuada junto con el cifrado o la firma de los mensajes intercambiados. Con la ayuda de la Infraestructura de Clave Pública (PKI) y certificados raíz confiables, seguridad de la capa de transporte (TLS) protege contra MITMataques cuando se implementan correctamente..</p>
+
+
+<h3> &nbsp; Técnicas de mitigación </h3>
+
+
+<p><b> :radio_button: Validación de certificados :</b> Verificar que el certificado sea válido antes de conectar</p>
+<p><b> :radio_button: DHCP Snooping </b> Evita IPs falsas en la red local.</p>
+<p><b> :radio_button: TLS Pinning :</b> Fija el certificado esperado para evitar impersonación</p>
+
+
+
+
+<!--------------------------------------------------## Ataque (Niveles de Red (OSI) --------------------------------------------------------------------------->
+
+
+<h2> :boom: Ataques a Niveles de Red (OSI)</h2>
+
+<!--------------------------------------------------## Ataque (Ataques a Protocolos Específicos) --------------------------------------------------------------------------->
+
+
+<h2> :boom: Ataques a Protocolos Específicos</h2>
+
+
+
+
+
+
+
+<h2> :boom: Ataques Basados en WAF/IDS Evasión</h2>
+<h2> :boom: Ataques a Infraestructura de Red</h2>
+<h2> :boom: Ataques de Lateral Movement</h2>
+<h2> :boom: Ataques de Exfiltración de Datos</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### &nbsp;  Ataques de acceso a directorios del servidor web
 
 
@@ -9060,102 +8938,6 @@ archivos y directorios almacenados en los sistemas de archivos incluyendo el cod
 
 
 
-<p> ----------------------------------- Pendiente actualizar con el OWASP TOP 10 2025------------------------------------------</p>
-
-
-
-<p>&nbsp;&nbsp;<h3>Ataques de red pasivos vs. activos<h3></p>
-
-
-### 👨🏻‍💻 &nbsp; Ataques pasivos
-
-
-<p> implican la monitorización o interceptación del tráfico de red sin alterar ni interferir con los datos transmitidos. El objetivo principal es recopilar información sobre la red o sus usuarios </p>
-
-<p><b>&nbsp;&nbsp;&nbsp; • Network Sniffing</b> Captura y análisis de paquetes de datos a medida que viajan a través de la red para extraer información útil. </p>
-<p><b>&nbsp;&nbsp;&nbsp; • Análisis de tráfico</b> Observación de patrones y volúmenes de tráfico para inferir información sensible, como los hábitos de comunicación de 
-los usuarios o la estructura de la red.</p>
-
-<p> En los ataques pasivos, el atacante pasa desapercibido, ya que no modifica ni interrumpe el tráfico de la red, como si se espiara una conversación. 
-"Cuanto más silencioso te vuelves, más puedes oír." - Ram Dass</p>
-
-
-### 🛠 &nbsp;Herramientas
-
-</br>
-
-<p><b> • Above :</b> Identifica los protocolos en uso en una red y cualquier vulnerabilidad obvia.</p>
-<p><b> • Pcredz :</b> Identifica y extrae información confidencial del tráfico de red.</p>
-<p><b> • Wireshark :</b> La herramienta de rastreo y análisis de paquetes. Si no la conoces, familiarízate con ella</p>
-<p><b> • tcpdump :</b> Herramienta de captura de paquetes de línea de comandos. </p>
-<p><b> • Kismet  :</b> Rastreador pasivo para varias redes inalámbricas (Wi-Fi, Bluetooth, etc.).</p>
-
-
-
-### 👨🏻‍💻 &nbsp; Ataques de red activos
-
-</br>
-
-### &nbsp; Tipos de ataque
-
-</br>
-
-<p> Implican la modificación, interrupción o manipulación deliberada del tráfico o las comunicaciones de la red para lograr objetivos maliciosos. </p>
-
-
-
-
-
-
-### &nbsp;Vulnerabilidades y las explotaciones basados en la red
-
-
-<p> • Ataques y explotaciones basados en la resolución de nombres de Windows</p>
-<p> • Ataque de envenenamiento de caché DNS</p>
-<p> • Ataques y explotaciones contra implementaciones de Server Message Block (SMB)</p>
-<p> • Vulnerabilidades y explotaciones del Protocolo simple de administración de red (SNMP)</p>
-<p> • Vulnerabilidades y explotaciones del Protocolo simple de transferencia de correo (SMTP)</p>
-<p> • Vulnerabilidades y explotaciones del Protocolo de transferencia de archivos (FTP)</p>
-<p> • Ataques de transferencia de hash</p>
-<p> • Ataques en ruta (antes conocidos como ataques de intermediario [MITM])</p>
-<p> • Ataques de eliminación de SSL</p>
-<p> • Ataques de denegación de servicio (DoS) y de denegación de servicio distribuido (DDoS)</p>
-<p> • Omisión del control de acceso a la red (NAC)</p>
-<p> • Ataques de salto a la red de área local virtual (VLAN)</p>
-
-### &nbsp;Ataques a redes WI-FI
-
-### &nbsp;Ataques contra WEP
-
-</br>
-
-<p> WEP es susceptible a muchos ataques diferentes, se considera un protocolo inalámbrico obsoleto. ha sido derrotado durante décadas. WEP usa RC4 de una manera que permite a un atacante 
-descifrar la PSK con poco esfuerzo. El problema está relacionado con cómo WEP utiliza los IV en cada paquete. Cuando WEP usa RC4 para cifrar un paquete, anteponga el IV a la clave secreta 
-antes de incluir la clave en RC4. Posteriormente, un atacante tiene los primeros 3 bytes de una clave supuestamente “secreta” utilizada en cada paquete. Para recuperar el PSK, el atacante 
-solo necesita recopilar suficientes datos del aire. Un atacante puede acelerar este tipo de ataque inyectando paquetes ARP (porque la longitud es predecible), lo que permite que el atacante 
-recupere el PSK mucho más rápido. Después de recuperar la clave WEP, el atacante puede usarla para acceder a la red inalámbrica.</p>
-
-### &nbsp;Ataques contra WPA
-
-</br>
-
-<p> Todas las versiones de WPA admiten diferentes métodos de autenticación, incluido PSK. WPA no es susceptible a los ataques IV que afectan a WEP; Sin embargo, es posible capturar el protocolo 
-de enlace de cuatro vías WPA entre un cliente y un dispositivo de infraestructura inalámbrica y luego aplicar la fuerza bruta a la PSK de WPA.</p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/DZhK6SGF/1.png" alt="Descripción de la imagen">
-
-</p>
-
-<p><b>&nbsp;&nbsp;&nbsp; • Paso 1. </b> Un atacante monitorea la red Wi-Fi y encuentra clientes inalámbricos conectados al SSID de la red corporativa. </p>
-<p><b>&nbsp;&nbsp;&nbsp; • Paso 2. </b> El atacante envía paquetes DeAuth para desautenticar al cliente inalámbrico. </p>
-<p><b>&nbsp;&nbsp;&nbsp; • Paso 3. </b> El atacante captura el protocolo de enlace de cuatro vías WPA y descifra la PSK de WPA. (Es posible usar listas de palabras y herramientas como Aircrack-ng para realizar este ataque. </p>
-
-
-### &nbsp;Vulnerabilidades que afectan a WPA y WPA2
-
-### &nbsp;&nbsp; Estas vulnerabilidades, también denominadas KRACK (ataque de reinstalación de claves ) (https://www.krackattacks.com/)
 
 
 
