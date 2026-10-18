@@ -8601,6 +8601,7 @@ definición de función maliciosa. </p>
 </p>
 
 
+</br>
 
 
 
@@ -8613,22 +8614,21 @@ definición de función maliciosa. </p>
 <h1> :warning: Ataques basados en red</h1>
 
 
-<p>  los ataques basados en red (o network-based attacks) son aquellos que explotan la infraestructura de comunicación, los protocolos de red o los dispositivos de red para comprometer sistemas, robar datos o interrumpir servicios
-
- </p>
-
-
 
 <!--------------------------------------------------## Ataque (DoS/DDoS) --------------------------------------------------------------------------->
 
-
-<p><b> Tipos de ataque</b></p>
 
 
 <h2> :boom: Ataques de Denegación de Servicio (DoS/DDoS)</h2>
 
 
-<p>Estos ataques buscan agotar recursos críticos del objetivo (CPU, RAM, ancho de banda, conexiones TCP).</p>
+<p>Saturar una red o un servicio con tráfico excesivo para que no esté disponible para usuarios legítimos. La mayoría de los ataques DoS implican inundación, lo que significa saturar al objetivo con solicitudes. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/FzpJHJBF/5.png" alt="Descripción de la imagen">
+</p>
 
 
 
@@ -8645,16 +8645,6 @@ definición de función maliciosa. </p>
 
 
 
-### &nbsp;  Ataques de denegación de servicio (DoS y DDoS)
-
-</b> 
-
-<p>Saturar una red o un servicio con tráfico excesivo para que no esté disponible para usuarios legítimos.La mayoría de los ataques DoS implican inundación, lo que significa saturar al objetivo con solicitudes. </p>
-
-<p align="center">
-
-  <img src="https://i.postimg.cc/FzpJHJBF/5.png" alt="Descripción de la imagen">
-</p>
 
 ### 👨🏻‍💻 &nbsp;Tipos
 
@@ -8724,19 +8714,18 @@ El resultado final es que la máquina de la víctima se ve inundada por paquetes
 
 </br>
 
-
-<p><b> • Low orbit ion cannon </b></p>
-<p><b> • High orbit ion cannon</b></p>
-<p><b> • R-u-dead-yet:</b></p>
-<p><b> • Exploit lanzado desde metasploit</b></p>
 <p><b> • SlowLoris :</b> realiza ataques DoS lentos y de baja intensidad.</p>
 <p><b> • Hping3 :</b> una herramienta para crear y enviar paquetes TCP/UDP personalizados y ver respuestas.</p>
 <p><b> • DHCPig :</b> agota todas las direcciones en el grupo DHCP.</p>
 <p><b> • Yersinia  :</b> Un marco de ataque de capa 2.</p>
 
-
 <p><b>&nbsp;&nbsp;&nbsp;• Secuestro de sesión</b>: Tomar el control de una sesión activa entre dos partes para obtener acceso no autorizado a información o servicios.</p>
 <p><b>&nbsp;&nbsp;&nbsp;• Ataques de repetición</b>: Captura y retransmisión de datos válidos para crear efectos no autorizados u obtener acceso a los sistemas.</p>
+
+<p><b> • Low orbit ion cannon </b></p>
+<p><b> • High orbit ion cannon</b></p>
+<p><b> • R-u-dead-yet:</b></p>
+<p><b> • Exploit lanzado desde metasploit</b></p>
 
 
 
