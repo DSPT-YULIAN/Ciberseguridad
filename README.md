@@ -5359,8 +5359,101 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 <p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
 
 
-<p><h2> 2.&nbsp; Enumeración SNMP </h2> Extracción de información de dispositivos que utilizan el Protocolo Simple de Administración de Red (SNMP). 
-      Permite extraer configuraciones de red, interfaces, direcciones IP y procesos en ejecución</p>
+<h2> :white_check_mark: Enumeración SNMP </h2> 
+
+
+<h3> :radio_button: Puerto predeterminado 161 (UDP) Se usa para consultas  </h3> 
+<h3> :radio_button: Puerto predeterminado 162 (UDP) Se usa para las notificaciones </h3> 
+
+
+<p>(Protocolo de gestion de Red simple), es un protocolo ampliamente utilizado para monitorear y administrar redes </p>
+
+<p> Es un protocolo de capa de aplicacion (7) que normalmente utiliza UDP para el transporte </p>
+
+</p><b> Componentes principales </b></p>
+
+
+</p>c Es el sistema responsable de consultar e interactuar con los agentes SNMP de los dispositivos de red</p>
+</p><b> :pushpin: Agentes SNMP </b>Sofware que se ejecuta en los dispositivos de red y que responde a la consulta SNMP</p>
+</p><b> :pushpin: Base de informacion de gestion (MIB) </b> Define la estructura de los datos disponibles a traves de SNMP. Cada dato tiene un identificador de objeto (OID) unico</p>
+
+
+</p><b> Versiones SNMP </b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/kXYkY8Tz/Designer.png" alt="Descripción de la imagen">
+
+</p>
+
+
+</p><b> Pasos </b></p>
+
+
+<p> 1. Realizar un escaneo para validar si el puerto UDP 161 se encuentra abierto</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/85tGbCsw/491.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 2. Realizar un ataque de fuerza bruta con el SCRIPT <b> snmp-brute.nse </b> se usa para adivinar o descubrir las community strings (claves de autenticación) de un dispositivo que usa el protocolo SNMP (Simple Network Management Protocol).</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/wB14rTf9/492.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> El resultado muestra que se encontraron varias cadenas de comunidad validas</p>
+
+<p> las community strings funcionan como una especie de contraseña.</p>
+
+
+</p><b> Las más comunes son: </b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/x8fKW6fK/493.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> 3. Utilizar la herramienta <b> snmpwalk </b> se usa para consultar de forma masiva y secuencial la base de datos de gestión de un dispositivo de red (router, switch, servidor) a través del protocolo SNMP (Simple Network Management Protocol). </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/bY46GhwH/494.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p> Este comando le le pedirá al dispositivo en 10.4.17.202 que devuelva toda la información disponible en su base de datos MIB (Management Information Base) completa, de forma secuencial, usando la versión 1 de SNMP y la comunidad de solo lectura public </p>
+
+
+<p> Se recomienda usar <b> nmap -sU -p 161 --script=snmp-* 10.4.17.202 > snmp_info </b> el script Ejecuta todos los scripts de Nmap que comienzan con el prefijo snmp, > snmp_info (Redirección): Guarda toda la salida en un archivo de texto para su posterior análisis. </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/bY46GhwH/494.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/bY46GhwH/494.png" alt="Descripción de la imagen">
+
+</p>
+
 
 
 <p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
@@ -5390,7 +5483,7 @@ Dentro de los entornos macOS, los adversarios pueden usar la aplicación nativa 
 
 
 
-<!----------------------------------------------------------------------------- ## Enumeracion de servicios de Recursos compartidos ------------------------------------------------------------------------------------------------------------------>
+<!----------------------------------- ## Enumeracion de servicios de Recursos compartidos ------------------------------------->
 
 
 
@@ -5445,7 +5538,7 @@ El intercambio de archivos a través de una red Windows se realiza mediante el p
  </p>
 
 
-<p><b>(Server Message Block)</b> Es un protocolo de intercabio de archivos en red que se utiliza para facilitar el intercambio de archivos entre computadores de una red local (Carpeta compartida), acceso a impresoras que estan conectadas en el PC </p>
+<p><b>(Server Message Block)</b> es un protocolo de intercambio de archivos de red que permite que las aplicaciones de una computadora lean y escriban archivos y soliciten servicios de programas de servidor en una red informática. El protocolo SMB se puede utilizar además de su protocolo TCP/IP u otros protocolos de red. Utilizando el protocolo SMB, una aplicación (o el usuario de una aplicación) puede acceder a archivos u otros recursos en un servidor remoto. Esto permite que las aplicaciones lean, creen y actualicen archivos en el servidor remoto. SMB también puede comunicarse con cualquier programa de servidor que esté configurado para recibir una solicitud de cliente SMB.</p>
 
 
 <p> • Windows: Puertos predeterminado: 445/tcp (SMB sobre TCP/IP) versiones anteriores 139/tcp (NetBIOS).</p>
@@ -5682,6 +5775,54 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
 
 
+
+<p> ----------------------------------- Enumeración NetBIOS-------------------------------------------</p>
+
+
+<h2> :white_check_mark: Enumeración NetBIOS  </h2> 
+
+
+<h3> :radio_button: Puerto predeterminado 139  </h3> 
+
+
+<p><b>Funciones principales de NetBIOS</b></p>
+
+
+
+<p>:pushpin: <b>Servicio de nombres (Puerto 137)</b> Permite que las computadoreas registren, anulen el registros y resulvan nombres en una red local </p>
+<p>:pushpin: <b>Servicio de datagrama (Puerto 138)</b> admite la comununicacion sin conexion y la difusion</p>
+<p>:pushpin: <b>Servicio de sesion (Puerto 139) a traves de UDP y TCP </b> Admite la comunicacion orientada a la conexion para tranferencia de datos mas confiables </p>
+
+
+
+<p><b>Pasos</b></p>
+
+
+<p>1. Validacion de servicios </p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/T3z7DcPS/490.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>Se puede observar que en el puerto 139 está abierto y activo en el host. <b>netbios-ssn</b> SSN - Abreviatura de Session Service (Servicio de Sesión).</p>
+
+
+
+<p>2. Utilizar la herramienta <b>nbtscan</b>es una herramienta de línea de comandos (CLI) para Linux/Unix diseñada específicamente para descubrir y analizar dispositivos Intel NBT (Network Block Transceiver), que son los chips de gestión de red integrados en las tarjetas de red Intel (como las series Pro/1000, X520, X710, E810, etc.).</p>
+
+
+
+
+
+
+
+
+
+
 <p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
 
 
@@ -5695,7 +5836,6 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 <p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
 
 
-<p><h2> 2.&nbsp; Enumeración NetBIOS </h2> recopilación de información sobre recursos compartidos, cuentas de usuario y servicios en redes de Windows</p>
 
 
 <p> ----------------------------------- Pendiente documentar-------------------------------------------</p>
@@ -5726,7 +5866,7 @@ y los hosts para que pueda realizar un seguimiento de su acceso.)</p>
 
  <img src="https://i.postimg.cc/kgQPdmHK/257.png" alt="Descripción de la imagen">
 
-
+</p>
 
 
 <p>  Los adversarios pueden intentar obtener una lista de cuentas, nombres de usuario o direcciones de correo electrónico válidas en un sistema o dentro de un entorno comprometido. Esta información puede ayudar a los adversarios a determinar qué cuentas existen, lo que puede ayudar en comportamientos posteriores como fuerza bruta, ataques de phishing o apropiaciones de cuentas (por ejemplo, cuentas válidas).
@@ -6737,7 +6877,7 @@ En las operaciones de seguridad del mundo real, las bases de datos de vulnerabil
 <h2> :warning: Ataques basados en sistema/host </h2>
 
 
-<p> Un ataque basado en host es un ataque dirigido a un sistema especifico o host que ejecuta un sitema operativo especifico (Windows - Linux). Se centran principalmente en la explotacion de vulnerabilidades o configuraciones erroneas en el objetivo. En esta etapa se convierten las vulnerabilidades identificadas durante el escaneo y enumeración en acceso real a los sistemas </p>
+<p> Los ataques basados en el sistema/host tienen como objetivo el sistema operativo subyacente o los hosts individuales dentro de una red para comprometer su seguridad. Estos ataques explotan vulnerabilidades en la configuración, el software o el hardware del sistema para obtener acceso no autorizado, escalar privilegios o interrumpir el funcionamiento normal del host. Las técnicas comunes incluyen la explotación de vulnerabilidades de software sin parches, configuraciones incorrectas, contraseñas débiles e infecciones de malware. Los atacantes pueden intentar obtener privilegios de root o administrador para manipular o robar datos confidenciales, instalar puertas traseras o provocar fallas en el sistema. Los ataques basados en el sistema o el host pueden provocar infracciones importantes si no se detectan y mitigan rápidamente, por lo que es esencial que las organizaciones actualicen periódicamente el software e implementen políticas de seguridad sólidasy monitorear cualquier actividad sospechosa para proteger sus sistemas de estas amenazas. </p>
 
 
 </br>
@@ -7899,7 +8039,7 @@ Cuando el servidor RDP procesa ciertos paquetes del protocolo de enlace inicial 
 
 
 
-<p>2. Utilizar un modulo de Metasploit o un SCRIPT de NMAP para confirmar que el serevidor es vulnerable a Shellshock </p>
+<p>2. Utilizar un modulo de Metasploit o un SCRIPT de NMAP para confirmar que el servidor es vulnerable a Shellshock </p>
 
 
 <p>Metasploit </p>
@@ -7916,7 +8056,7 @@ definición de función maliciosa. </p>
 </p>
 
 
-<p>La captura muestra el resultado de ejecutar el módulo, lo que ignifica que el módulo logró ejecutar un comando en el servidor remoto y obtuvo como respuesta la salida del comando id. En sistemas Linux: esa salida suele indicar que el objetivo es vulnerable a Shellshock (CVE-2014-6271 o relacionada) y que fue posible ejecutar comandos de forma remota a través de mod_cgi.</p>
+<p>La captura muestra el resultado de ejecutar el módulo, lo que significa que el módulo logró ejecutar un comando en el servidor remoto y obtuvo como respuesta la salida del comando id. En sistemas Linux: esa salida suele indicar que el objetivo es vulnerable a Shellshock (CVE-2014-6271 o relacionada) y que fue posible ejecutar comandos de forma remota a través de mod_cgi.</p>
 
 
 <p>Nmap </p>
@@ -7939,7 +8079,7 @@ definición de función maliciosa. </p>
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/ncbwrMMF/443.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/hvrCN1ns/444.png" alt="Descripción de la imagen">
   
 </p>
 
@@ -7947,16 +8087,27 @@ definición de función maliciosa. </p>
 <p>Enviar la solicitud al repetidor y remplazar la informacion del User-Agent con nuestros caracteres especiales </p>
 
 
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/ncbwrMMF/443.png" alt="Descripción de la imagen">
+  
+</p>
+
+
+
 <p>Ejemplo: Intentar mostrar el contenido del archivo de contraseñas en el sistema linux</p>
+
 
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/kg14TZpW/445.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/VN2N8t1P/446.png" alt="Descripción de la imagen">
   
 </p>
 
-<p> Se puede observar que el comndo fue ejecutado con exito</p>
+
+<p> Se puede observar que el comando fue ejecutado con exito</p>
 
 
 
@@ -7968,7 +8119,7 @@ definición de función maliciosa. </p>
 
 <p align="center">
 
-  <img src="https://i.postimg.cc/VN2N8t1P/446.png" alt="Descripción de la imagen">
+  <img src="https://i.postimg.cc/kg14TZpW/445.png" alt="Descripción de la imagen">
   
 </p>
 
@@ -8303,9 +8454,187 @@ definición de función maliciosa. </p>
 
 
 
+<!--------------------------------------------------##  CTF EXPLOTACION LINUX  --------------------------------------------------------------------------->
 
 
-<!--------------------------------------------------##  Ataques basados en red  --------------------------------------------------------------------------->
+
+</br>
+
+<h2> :boom: CTF EXPLOTACION LINUX</h2>
+
+</br>
+
+<p><b> Respuesta 1. </b></p>
+
+<p><b> Identificacion de servicio y vulnerabilidades</b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/Hsgh9VPf/CTF-1.png" alt="Descripción de la imagen">
+
+</p>
+
+<p><b> Validacion del .cgi "archivos ejecutables que contienen scripts escritos en cierto lenguaje de programación."</b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/1RHpbXzS/CTF-2.png" alt="Descripción de la imagen">
+
+</p>
+
+<p><b> utilizar modulo de Metasploit que permita explotar .cgi</b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fTqYTPX2/CTF-3.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b> Utilizar Burp Suite, para inyectar caracteres en el encabezado http del agente del usuario</b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fyJTH8L0/CTF-4.png" alt="Descripción de la imagen">
+
+</p>
+
+<p><b> Configurar el oyente y establecer una sesion shell que permita interacturar con los directorios de la victima </b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/CKh0PcrY/CTF-5.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<p><b> Respuesta 2. </b></p>
+
+<p><b> Continuar validando informacion valiosa en el directorio de la victima</b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/5trxXwgZ/CTF-6.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b> Respuesta 3 </b></p>
+
+
+<p><b> Identificacion de servicio y vulnerabilidades</b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/BnQsNhVJ/CTF-7.png" alt="Descripción de la imagen">
+
+</p>
+
+<p><b> Opcion 1</b></p>
+
+<p><b> Descargar exploit disponibles en searchsploit</b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/J7NL8Vwt/CTF-8.png" alt="Descripción de la imagen">
+
+</p>
+
+<p><b> Validar el exploit y ejecutar </b></p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/fyBqbvjK/CTF-9.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b> Opcion 2</b></p>
+
+
+<p><b> Utilizar modulo de metasploit que permita explotar la version de SSH disponible en el servidor de la victima </b></p>
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/JhMXTWWZ/CTF-10.png" alt="Descripción de la imagen">
+
+</p>
+
+<p><b> Establecer una sesion de shell para navegar por los directorios de la victima</b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/gjXLwzvd/CTF-11.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+<p><b> Respuesta 4 </b></p>
+
+
+<p><b> Una vez que se establezca la sesion de shell continuar con la tecnica de post-explotacion "binarios SUID" </b></p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/xd6XtJ5r/CTF-12.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+ <img src="https://i.postimg.cc/hjwfRkHq/CTF-13.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+
+
+<!--------------------------------------------------## Ataques basados en Red  --------------------------------------------------------------------------->
+
+
+</br>
+
+
+<h1> :warning: Ataques basados en red</h1>
+
+
+<p> Los ataques basados en el sistema/host tienen como objetivo el sistema operativo subyacente o los hosts individuales dentro de una red para comprometer su seguridad. Estos ataques explotan vulnerabilidades en la configuración, el software o el hardware del sistema para obtener acceso no autorizado, escalar privilegios o interrumpir el funcionamiento normal del host. Las técnicas comunes incluyen la explotación de vulnerabilidades de software sin parches, configuraciones incorrectas, contraseñas débiles e infecciones de malware. Los atacantes pueden intentar obtener privilegios de root o administrador para manipular o robar datos confidenciales, instalar puertas traseras o provocar fallas en el sistema. Los ataques basados en el sistema o el host pueden provocar infracciones importantes si no se detectan y mitigan rápidamente, por lo que es esencial que las organizaciones actualicen periódicamente el software e implementen políticas de seguridad sólidasy monitorear cualquier actividad sospechosa para proteger sus sistemas de estas amenazas. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--------------------------------------------------##  MitM  --------------------------------------------------------------------------->
 
@@ -9847,11 +10176,6 @@ Es la implementación (basada en el protocolo de comunicación de Windows) de la
 <!--------------------------------------------------##  Dumping Hashes With Mimikatz --------------------------------------------------------------------------->
 
 
-<h2> :arrow_right: Movimiento lateral en windows </h2>
-
-
-
-
 
 <h2> :no_entry:  Dumping Hashes With Mimikatz / Volcando hashes con Mimikatz  </h2>
 
@@ -10134,7 +10458,7 @@ Es la implementación (basada en el protocolo de comunicación de Windows) de la
 <p><b> /etc/shadow</b>  es legible solo por root (y a veces por grupos específicos como shadow </p>
 
 
-<p> El archivo passwd y shadow proporciona informacion sobre el algoritmo de hash que se esta utilzando el cual se puede determinar observando el numero que aparece despues del nombre de ususario con el simbolo del dolar ($) </p>
+<p> El archivo passwd y shadow proporciona informacion sobre el algoritmo de hash que se esta utilzando el cual se puede determinar observando el numero que aparece despues del nombre de usuario con el simbolo del dolar ($) </p>
 
 
 <p align="center">
@@ -10182,10 +10506,10 @@ Es la implementación (basada en el protocolo de comunicación de Windows) de la
 
 <p> 4. utilizar el modulo <b>unix/ftp/proftpd_133c_backdoor</b> Este módulo aprovecha una puerta trasera maliciosa que se añadió al archivo de descarga de ProFTPD.</p>
 
-<p> Configurar los parametros necesarios para su funcionamiento: Direccion IP de la victima y del atacante. Adicionalmente se requiere agregar el payload para este caso usaremos <b>payload/cmd/unix/reverse</b></p>
+<p> :pushpin:  Configurar los parametros necesarios para su funcionamiento: Direccion IP de la victima y del atacante. Adicionalmente se requiere agregar el payload para este caso usaremos <b>payload/cmd/unix/reverse</b></p>
 
 
-<p> Utilizar el parametro <b>/bin/bash -i</b> para iniciar una shell interactiva con privilegios elevados</p>
+<p> :pushpin:  Utilizar el parametro <b>/bin/bash -i</b> para iniciar una shell interactiva con privilegios elevados</p>
 
 
 
@@ -10201,6 +10525,7 @@ Es la implementación (basada en el protocolo de comunicación de Windows) de la
 
 <p> El hash comienza con $6$ Por lo tanto, la contraseña de root está almacenada mediante SHA-512.</p>
 
+<p> Desglose de lo que estamos observando</p>
 
 <p align="center">
 
@@ -10209,20 +10534,30 @@ Es la implementación (basada en el protocolo de comunicación de Windows) de la
 </p>
 
 
-<p> Colocar la sesion en segundo plano </p>
-<p> Enumerar las sesiones </p>
-<p> Actulizar la sesion a una de Meterpreter con el parametro <b>sessions -u</b> y colocar el identificador de la sesion</p>
-
-
 <p align="center">
 
   <img src="https://i.postimg.cc/NGz1rfwv/486.png" alt="Descripción de la imagen">
   
 </p>
 
+
+
+<p> Es posible convertir la sesion actual en una sesion meterpreter de la siguiente forma </p>
+
+<p> :pushpin:  Colocar la sesion en segundo plano </p>
+<p> :pushpin:  Enumerar las sesiones </p>
+<p> :pushpin:  Actualizar la sesion a una de Meterpreter con el parametro <b>sessions -u</b> y colocar el identificador de la sesion</p>
+
+
+<p> Aunque tanto una Shell como Meterpreter permiten obtener acceso a un sistema comprometido, Meterpreter es generalmente la opción más completa para tareas de post-explotación, ya que ofrece herramientas integradas para la recopilación de información, transferencia de archivos, escalamiento de privilegios y pivoting. Por otro lado, una Shell proporciona un acceso más básico y ligero, siendo útil cuando se requiere simplicidad, estabilidad o menor huella en el sistema.</p>
+
+
+
+
+
 <p> Una vez comprobada la sesion de meterpreter (opcional) colocarla en segundo plano para proceder con el volcado de Hash</p>
 
-<p> Utilizar el modulo <b>post/linux/gather/hashdump</b>Módulo Post para extraer los hash de las contraseñas de todos los usuarios de un sistema Linux</p>
+<p> 5. Utilizar el modulo <b>post/linux/gather/hashdump</b> Módulo Post para extraer los hash de las contraseñas de todos los usuarios de un sistema Linux</p>
 
 
 
@@ -10237,7 +10572,7 @@ Es la implementación (basada en el protocolo de comunicación de Windows) de la
 <p> Hemos explotado el servidor FTP de destino. Usaremos un módulo posterior a la explotación para volcar los hashes de los usuarios del sistema.</p>
 
 
-<p> Utilizar el modulo <b>auxiliary/analyze/crack_linux</b>Este módulo utiliza John the Ripper o Hashcat para identificar contraseñas débiles que se han obtenido de archivos «passwd» sin enmascarar de sistemas Unix/Linux.</p>
+<p> 6. Utilizar el modulo <b>auxiliary/analyze/crack_linux</b>Este módulo utiliza John the Ripper o Hashcat para identificar contraseñas débiles que se han obtenido de archivos «passwd» sin enmascarar de sistemas Unix/Linux.</p>
 
 
 
