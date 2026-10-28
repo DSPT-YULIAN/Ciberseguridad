@@ -8614,10 +8614,11 @@ definición de función maliciosa. </p>
 <h1> :warning: Ataques basados en red</h1>
 
 
+</br>
 
 <!--------------------------------------------------## Ataque (DoS/DDoS) --------------------------------------------------------------------------->
 
-
+</br>
 
 <h2> :boom: Ataques de Denegación de Servicio (DoS/DDoS)</h2>
 
@@ -8727,11 +8728,12 @@ El resultado final es que la máquina de la víctima se ve inundada por paquetes
 <p><b> • R-u-dead-yet:</b></p>
 <p><b> • Exploit lanzado desde metasploit</b></p>
 
-
+</br>
 
 
 <!--------------------------------------------------## Ataque (MitM) --------------------------------------------------------------------------->
 
+</br>
 
 <h2> :boom: Ataques de Man-in-the-Middle (MitM)</h2>
 
@@ -8829,51 +8831,6 @@ El resultado final es que la máquina de la víctima se ve inundada por paquetes
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### &nbsp;  Ataques de acceso a directorios del servidor web
 
 
@@ -8924,11 +8881,224 @@ archivos y directorios almacenados en los sistemas de archivos incluyendo el cod
   </br>
 
 
+<!-------------------------------------------------- Host & Network Penetration Testing: Social Engineering --------------------------------------------------------------------------->
 
 
 
 
+<h2> :no_entry: Pruebas de penetración de host y red: ingeniería social</h2>
 
+
+</br>
+
+
+<p><p> La ingeniería social en el contexto de las pruebas de penetración (pentesting) se refiere a la práctica de manipular a las personas para que divulguen información confidencial o realicen acciones que comprometan la seguridad. Desempeña un papel crucial en las pruebas de penetración al identificar vulnerabilidades en el elemento humano de una organización, a menudo considerado el eslabón más débil de la seguridad. Las personas o los empleados son la parte más difícil de proteger de una red empresarial. Incluso con la mejor tecnología y defensas, un atacante aún puede comprometer un sistema mediante malas prácticas o errores accidentales. Los actores maliciosos explotan esta debilidad, lo que la convierte en una de las formas más efectivas de infiltrarse en una organización. La ingeniería social explota aspectos psicológicos como la confianza, el miedo, la curiosidad y la voluntad inherente de los empleados de ayudar. Las técnicas incluyen phishing, pretextos,cebo y tailgating, con el objetivo de engañar a los empleados para que revelen contraseñas, hagan clic en enlaces maliciosos o otorguen acceso no autorizado. Estas pruebas ayudan a las organizaciones a comprender su susceptibilidad a ataques humanos y a desarrollar medidas de capacitación y seguridad más efectivas. </p>
+
+<p><b>Tipos de ingenieria social</b></p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/y8zPSvDm/501.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p><b>Subcategorías:</b></p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/hjxvxbzd/502.png" alt="Descripción de la imagen">
+
+</p>
+
+
+
+<h3> :wrench: Gophish</h3>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/D0W5C7m1/maxresdefault.jpg" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>Es un framework de simulación de phishing de código abierto y gratuito diseñado para que empresas, profesionales de la ciberseguridad y equipos de hacking ético evalúen la exposición al riesgo del factor humano. Su objetivo principal es realizar entrenamientos y auditorías de concienciación en seguridad de forma controlada.</p>
+
+
+<p>Lo ideal es alojar a Go Fish en un VPS "Servidor Privado Virtua"</p>
+
+
+<p><b>Caracteristicas</b></p>
+
+
+<p> :pushpin: <b>Simulación realista:</b> Permite crear correos y páginas de phishing idénticas a las reales para evaluar la vulnerabilidad de los empleados.</p>
+
+<p> :pushpin: <b>Gestión centralizada:</b> Interfaz web para administrar campañas, usuarios, plantillas y dominios.</p>
+
+<p> :pushpin: <b>Métricas detalladas:</b> Registra quién abrió el correo, hizo clic en el enlace, completó el formulario, etc.</p>
+
+<p> :pushpin: <b>Integraciones:</b> Compatible con APIs de correo (SMTP), SSO, y exportación a CSV/JSON.</p>
+
+<p> :pushpin: <b>Seguridad:</b> Funciona localmente, sin exponer datos corporativos a servicios externos.</p>
+
+
+
+<p><b>Practica</b></p>
+
+<p>1. Iniciar el servidor Gophish </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/q7Lmqm9B/503.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/d1V5y2Yj/504.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/qRXz0hq3/505.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>2. <b>Sending Profiles</b> Configurar los perfiles de envío. Define qué servidor SMTP, cuenta de correo o método se utilizará para enviar los correos de la campaña. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wM182ZSr/506.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>Tras configurar el perfil de envío correctamente, podemos probar la configuración haciendo clic en el botón "Enviar correo electrónico de prueba", como se muestra en la siguiente captura de pantalla.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/8zR8Zhn9/507.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>Guardar el perfil de envio</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/HLzqgTm3/508.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>3. <b>Landing Pages</b> Crear una página web falsas que simulan portales legítimos (login corporativo, Office 365, bancos, etc.) para medir el nivel de concienciación de los usuarios. </p>
+
+
+<p>Dar click en Import site donde podremos especificar el sitio que deseamos emular o clonar para la campaña de phishing. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/9fxcBdDW/509.png" alt="Descripción de la imagen">
+
+</p>
+
+<p>Tras importar el sitio web, podrá modificar su apariencia y los datos que se recopilan. </p>
+
+
+<p>4. <b>Email templates </b> Crear una página web falsas que simulan portales legítimos (login corporativo, Office 365, bancos, etc.) para medir el nivel de concienciación de los usuarios. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/V6dmZJt2/510.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/GtDrr6qH/511.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>5. <b>Users & Groups</b> crear grupos de destinatarios e importar listas desde archivos CSV para utilizarlas en campañas. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/wMztC5km/512.png" alt="Descripción de la imagen">
+
+</p>
+
+<p>6. <b>Campaigns</b> Permite crear, ejecutar y monitorear campañas de phishing simuladas. Desde aquí se seleccionan las plantillas, destinatarios y páginas de destino.</p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/LXKhPkwT/513.png" alt="Descripción de la imagen">
+
+</p>
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/DfcmWXg6/514.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>lanzar la campaña </p>
+
+<p>Podemos comprobar los correos electrónicos enviados a la dirección de correo electrónico de destino abriendo el cliente de correo electrónico Thunderbird. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/PJ6tS13F/515.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>Al iniciar la campaña, se le redirigirá al panel de control de la campaña, donde encontrará un resumen de las estadísticas pertinentes a la campaña de phishing. </p>
+
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/1zc1Wp4M/517.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>Probar la página de phishing haciendo clic en el enlace "Restablecer contraseña" </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/WzfvGTzf/516.png" alt="Descripción de la imagen">
+
+</p>
+
+
+<p>Tras hacer clic en el enlace de phishing, podemos consultar el panel de control de Gophish para confirmar que se hizo clic en el enlace y se abrió. </p>
+
+
+<p align="center">
+
+  <img src="https://i.postimg.cc/N0xZ8Bzw/518.png" alt="Descripción de la imagen">
+
+</p>
 
 
 <!-------------------------------------------------- Fase 4 Post Explotacion --------------------------------------------------------------------------->
@@ -10367,8 +10537,6 @@ Es la implementación (basada en el protocolo de comunicación de Windows) de la
 
 
 
-
-
 <h2> :arrow_right:  Ataques de contraseñas </h2>
 
 
@@ -10434,6 +10602,44 @@ El uso de una combinación de los enfoques anteriores proporciona una defensa pr
 
 
 </br>
+
+
+<!-------------------------------------------------- Ataque SMB Relay Attack--------------------------------------------------------------------------->
+
+
+
+<h2> :arrow_right: SMB Relay Attack </h2>
+
+
+
+<p> (Ataque de Reenvío SMB) es una técnica de ataque en red que explota la falta de validación de la identidad del servidor en el protocolo SMB (Server Message Block). Permite a un atacante posicionarse como un intermediario (man-in-the-middle) entre un cliente y un servidor para reenviar (relay) credenciales autenticadas a otro destino, logrando ejecutar comandos, crear usuarios o acceder a recursos privilegiados.</p>
+
+
+<p> El SMB Relay es uno de los ataques más efectivos en entornos Active Directory debido a la dependencia histórica de NTLM y la falta de firma en muchas configuraciones legacy. La mitigación clave es forzar SMB Signing en todos los clientes y servidores, y migrar a Kerberos con Channel Binding. </p>
+
+
+
+<p><b> Pasos </b></p>
+
+
+<p> Utilizar el modulo <b> search smb_relay</b>  Este módulo reenviará las solicitudes de autenticación SMB a otro host, obteniendo acceso a una sesión SMB autenticada si la operación tiene éxito. Si el usuario que se conecta es un administrador y se permiten los inicios de sesión de red en la máquina de destino, este módulo ejecutará una carga útil arbitraria. Para aprovechar esta vulnerabilidad, el sistema de destino debe intentar autenticarse ante este módulo. La forma más sencilla de forzar un intento de autenticación SMB es incrustar una ruta UNC (\\SERVER\SHARE) en una página web o en un mensaje de correo electrónico. Cuando la víctima vea la página web o el correo electrónico, su sistema se conectará automáticamente al servidor especificado en el recurso compartido UNC (la dirección IP del sistema que ejecuta este módulo) e intentará autenticarse. Por desgracia, este módulo no es capaz de borrar 
+sus propios rastros. El servicio y el archivo de carga útil que aparecen en la salida deberán eliminarse manualmente una vez que se haya obtenido acceso. El servicio creado por esta herramienta utiliza un nombre y una descripción elegidos al azar, por lo que la lista de servicios puede saturarse tras una explotación repetida. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
