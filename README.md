@@ -9104,7 +9104,11 @@ archivos y directorios almacenados en los sistemas de archivos incluyendo el cod
 
 <!-------------------------------------------------- Offensive AI: Generative AI for Pentesters --------------------------------------------------------------------------->
 
+<br>
 
+
+
+<h2> :arrow_right: AI (Inteligencia Artificial): </h2>
 
 
 <p align="center">
@@ -9113,9 +9117,6 @@ archivos y directorios almacenados en los sistemas de archivos incluyendo el cod
 
 </p>
 
-
-
-<h3> :white_check_mark: AI (Inteligencia Artificial): </h3>
 
 
 <p> Es el campo de la ingeniería de software que busca crear sistemas capaces de realizar tareas que requieren inteligencia humana. No se trata de que la máquina "piense" como un humano, sino de que resuelva problemas de manera óptima o eficiente dentro de un dominio específico</p>
@@ -9175,7 +9176,7 @@ archivos y directorios almacenados en los sistemas de archivos incluyendo el cod
 <p> Un LLM es un modelo de DL (específicamente un Transformer) entrenado en corpus masivos de texto (libros, webs, papers) para capturar la estructura, el significado y la coherencia del lenguaje humano. </p>
 
 
-<p>Representacion jerarquica de la Inteligencia Artificial <b>  AI > ML > DL > LLM <b></p>
+<p>Representacion jerarquica de la Inteligencia Artificial <b>  AI > ML > DL > LLM </b></p>
 
  
 <p> :radio_button: AI es el objetivo. </p>
